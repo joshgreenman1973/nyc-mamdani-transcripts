@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mayor Mamdani transcript search</title>
+  <meta name="description" content="Search every speech, press conference, prepared remark, and statement Mayor Zohran Mamdani has made on the record since taking office on January 1, 2026." />
+
+  <link rel="stylesheet" href="https://use.typekit.net/qqk2vto.css" />
+  <link rel="stylesheet" href="https://vital-city-nyc.github.io/vital-city-design-system/tokens/tokens.css" />
+  <link rel="stylesheet" href="https://vital-city-nyc.github.io/vital-city-design-system/fonts/fonts.css" />
+  <link rel="stylesheet" href="https://vital-city-nyc.github.io/vital-city-design-system/components/components.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="page-header">
+    <div class="wrap">
+      <p class="kicker">On the record &middot; New York City</p>
+      <h1 class="vc-gascogne">Mayor Mamdani transcript search</h1>
+      <p class="lede">
+        Every speech, press conference, prepared remark, and on-the-record statement from
+        Mayor Zohran Mamdani since he took office on January&nbsp;1,&nbsp;2026. Type a word
+        or topic to find exactly what he said about it and when.
+      </p>
+      <p class="meta" id="meta">Loading archive&hellip;</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="controls" aria-label="Search and filters">
+      <div class="search-row">
+        <label class="visually-hidden" for="q">Search</label>
+        <input id="q" type="search" placeholder="Search for a word or topic — try “rent” or “child care”" autocomplete="off" />
+        <button id="clear" type="button" aria-label="Clear search">&times;</button>
+      </div>
+
+      <div class="filters">
+        <fieldset class="chips" aria-label="Type">
+          <legend>Type</legend>
+          <label><input type="checkbox" name="type" value="speech" checked /> Speeches &amp; prepared remarks <span class="count" data-count="speech"></span></label>
+          <label><input type="checkbox" name="type" value="press_conference" checked /> Press conferences <span class="count" data-count="press_conference"></span></label>
+          <label><input type="checkbox" name="type" value="media_appearance" checked /> Media appearances <span class="count" data-count="media_appearance"></span></label>
+          <label><input type="checkbox" name="type" value="statement" checked /> Statements <span class="count" data-count="statement"></span></label>
+          <label><input type="checkbox" name="type" value="ceremony" checked /> Ceremonies &amp; events <span class="count" data-count="ceremony"></span></label>
+          <label><input type="checkbox" name="type" value="other" /> Press releases <span class="count" data-count="other"></span></label>
+          <label><input type="checkbox" name="type" value="executive_order" /> Executive orders <span class="count" data-count="executive_order"></span></label>
+        </fieldset>
+
+        <fieldset class="dates" aria-label="Date range">
+          <legend>Date range</legend>
+          <label>From <input type="date" id="from" /></label>
+          <label>To <input type="date" id="to" /></label>
+        </fieldset>
+
+        <fieldset class="sort" aria-label="Sort">
+          <legend>Sort by</legend>
+          <label><input type="radio" name="sort" value="date" checked /> Date (newest first)</label>
+          <label><input type="radio" name="sort" value="relevance" /> Relevance</label>
+        </fieldset>
+      </div>
+    </section>
+
+    <p class="result-summary" id="summary" aria-live="polite"></p>
+
+    <ol id="results" class="results" aria-live="polite"></ol>
+
+    <p id="empty" class="empty hidden">
+      No matches. Try a different word, broaden the type filters, or expand the date range.
+    </p>
+  </main>
+
+  <footer class="page-footer">
+    <div class="wrap">
+      <p>
+        Source: <a href="https://www.nyc.gov/mayors-office/news/" target="_blank" rel="noopener">nyc.gov/mayors-office/news</a>.
+        Independent project &mdash; not affiliated with the Mayor&rsquo;s Office.
+      </p>
+      <p>
+        <a href="METHODOLOGY.md">Methodology &amp; limitations</a>
+        &middot; <a href="https://github.com/joshgreenman1973/nyc-mamdani-transcripts">Source code</a>
+        &middot; Archive refreshed daily.
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.0/dist/umd/index.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

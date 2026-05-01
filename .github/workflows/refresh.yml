@@ -1,0 +1,35 @@
+name: Refresh corpus
+
+on:
+  schedule:
+    # 11:00 UTC ≈ 7:00 a.m. ET (EDT) / 6:00 a.m. ET (EST).
+    - cron: "0 11 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run scraper
+        run: python3 scrape.py
+
+      - name: Commit changes if any
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet data/corpus.json; then
+            echo "No changes."
+            exit 0
+          fi
+          git add data/corpus.json
+          git commit -m "Refresh corpus: $(date -u +%Y-%m-%d)"
+          git push
