@@ -113,6 +113,43 @@
         }))
         .filter(({ item }) => enabledTypes.has(item.type))
         .filter(({ item }) => withinDate(item.iso_date, fromIso, toIso));
+
+      // Substring fallback. Tokenized search misses queries that appear inside
+      // larger words (e.g. "FHEPS" inside "CityFHEPS", "MTA" inside
+      // "MTA-related"). For each query token >= 3 chars that the index missed,
+      // scan the corpus and add any documents that contain it as a substring.
+      const queryTokens = q
+        .toLowerCase()
+        .split(/\s+/)
+        .map((t) => t.replace(/[^\p{L}\p{N}-]/gu, ""))
+        .filter((t) => t.length >= 3);
+      if (queryTokens.length) {
+        const matchedIds = new Set(rows.map((r) => r.item._id));
+        const tokensRe = new RegExp(
+          queryTokens.map(escapeRegex).join("|"),
+          "iu"
+        );
+        const allTokensRe = queryTokens.map(
+          (t) => new RegExp(escapeRegex(t), "iu")
+        );
+        for (const it of CORPUS.items) {
+          if (matchedIds.has(it._id)) continue;
+          if (!enabledTypes.has(it.type)) continue;
+          if (!withinDate(it.iso_date, fromIso, toIso)) continue;
+          const hay = it.title + "\n" + (it.text || "");
+          // Require ALL query tokens to appear as substrings (matches the
+          // AND combineWith of the main index).
+          if (allTokensRe.every((re) => re.test(hay))) {
+            rows.push({
+              item: it,
+              score: 0.5, // below tokenized matches when sorting by relevance
+              terms: queryTokens,
+              substring: true,
+            });
+            matchedIds.add(it._id);
+          }
+        }
+      }
     }
 
     if (sortMode === "date" || q.length === 0) {
