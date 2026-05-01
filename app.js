@@ -9,6 +9,7 @@
     media_appearance: "Media",
     statement: "Statement",
     ceremony: "Ceremony",
+    video: "Video",
     executive_order: "Executive order",
     other: "Press release",
   };
@@ -219,7 +220,7 @@
     if (state.mayorOnly) p.set("mayor_only", "1");
     // Only write `types` if it's not the default set.
     const enabled = [...state.enabledTypes].sort();
-    const defaults = ["ceremony", "media_appearance", "press_conference", "speech", "statement"];
+    const defaults = ["ceremony", "media_appearance", "press_conference", "speech", "statement", "video"];
     if (JSON.stringify(enabled) !== JSON.stringify(defaults)) {
       p.set("types", enabled.join(","));
     }
@@ -532,6 +533,14 @@
       qm.textContent = `${item.mayor_quotes.length} mayor quote${item.mayor_quotes.length === 1 ? "" : "s"}`;
       meta.append(qm);
     }
+    if (item.type === "video" && item.caption_source) {
+      const cs = document.createElement("span");
+      cs.className = "caption-source";
+      cs.textContent = item.caption_source === "manual"
+        ? "manual captions"
+        : "auto-captions (may contain errors)";
+      meta.append(cs);
+    }
 
     const title = document.createElement("h2");
     title.className = "result-title";
@@ -553,12 +562,32 @@
       e.stopPropagation();
       toggleExpand(li, item, re, toggle, mayorOnly);
     });
-    const ext = document.createElement("a");
-    ext.href = item.url;
-    ext.target = "_blank";
-    ext.rel = "noopener";
-    ext.textContent = "View on nyc.gov ↗";
-    actions.append(toggle, ext);
+    actions.append(toggle);
+    if (item.type === "video") {
+      // Video items: only YouTube link, with timestamp jump if a match was found.
+      const yt = document.createElement("a");
+      yt.href = ytUrlWithTimestamp(item, re);
+      yt.target = "_blank";
+      yt.rel = "noopener";
+      yt.textContent = re ? "Watch on YouTube at first match ↗" : "Watch on YouTube ↗";
+      actions.append(yt);
+    } else {
+      const ext = document.createElement("a");
+      ext.href = item.url;
+      ext.target = "_blank";
+      ext.rel = "noopener";
+      ext.textContent = "View on nyc.gov ↗";
+      actions.append(ext);
+      // If this nyc.gov event also has a YouTube video, expose it.
+      if (item.youtube_url) {
+        const yt = document.createElement("a");
+        yt.href = item.youtube_url;
+        yt.target = "_blank";
+        yt.rel = "noopener";
+        yt.textContent = "Watch on YouTube ↗";
+        actions.append(yt);
+      }
+    }
 
     row.append(meta, title, snip, actions);
     row.addEventListener("click", () => toggleExpand(li, item, re, toggle, mayorOnly));
@@ -669,6 +698,21 @@
     }
     out += escapeHtml(s.slice(last));
     return out;
+  }
+
+  function ytUrlWithTimestamp(item, re) {
+    const base = item.youtube_url || item.url;
+    if (!re || !item.video_segments || !item.video_segments.length) return base;
+    // Find first segment whose text matches the highlight regex.
+    const r = new RegExp(re.source, re.flags);
+    for (const seg of item.video_segments) {
+      r.lastIndex = 0;
+      if (r.test(seg.text || "")) {
+        const t = Math.max(0, Math.floor(seg.t || 0) - 2);
+        return base + (base.includes("?") ? "&" : "?") + "t=" + t;
+      }
+    }
+    return base;
   }
 
   function escapeHtml(s) {

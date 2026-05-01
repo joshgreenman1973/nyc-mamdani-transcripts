@@ -334,8 +334,19 @@ legend {
 .badge.media_appearance  { background: var(--vc-cerulean); }
 .badge.statement         { background: var(--vc-magenta); }
 .badge.ceremony          { background: var(--vc-rose); color: var(--vc-black); }
+.badge.video             { background: var(--vc-magenta); }
 .badge.executive_order   { background: var(--vc-black); }
 .badge.other             { background: var(--vc-charcoal); }
+
+.caption-source {
+  font-family: var(--vc-font-sans);
+  font-size: var(--vc-size-micro);
+  font-weight: var(--vc-weight-book);
+  color: var(--vc-charcoal);
+  text-transform: none;
+  letter-spacing: 0;
+  font-style: italic;
+}
 
 .result-title {
   font-family: var(--vc-font-serif);

@@ -19,8 +19,17 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Run scraper
+      - name: Install YouTube deps
+        run: pip install yt-dlp youtube-transcript-api
+
+      - name: Scrape nyc.gov news
         run: python3 scrape.py
+
+      - name: Scrape NYC Mayor's Office YouTube channel
+        run: python3 scrape_youtube.py
+        # YouTube can rate-limit; treat per-video failures as non-fatal so
+        # the daily refresh still commits the nyc.gov scrape.
+        continue-on-error: true
 
       - name: Commit changes if any
         run: |
