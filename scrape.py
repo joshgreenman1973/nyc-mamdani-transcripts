@@ -216,10 +216,13 @@ def classify(title: str) -> str:
 # --- speaker parsing & quote extraction --------------------------------------
 
 # A speaker line starts a paragraph (after \n\n or at text start) and follows
-# the pattern "Speaker Name:" — letters / spaces / commas / dots / brackets,
-# bounded length, no sentence-ending punctuation in the prefix.
+# the pattern "Speaker Name:". The label must NOT contain sentence-ending
+# punctuation — that filters out things like "...4 a.m. Imagine that:" which
+# would otherwise be wrongly read as a sub-speaker. Honorific dots like "Dr."
+# fall out of the corpus this way; the cost is acceptable since the official
+# transcripts use forms like "Police Commissioner Tisch", not "Dr. Tisch".
 SPEAKER_PARA_RE = re.compile(
-    r"(?:^|\n\n)([A-Z][\w .,‘’'—\-\[\](){}]{1,80}):\s+",
+    r"(?:^|\n\n)([A-Z][\w ,‘’'—\-\[\](){}/&]{1,80}):\s+",
     re.UNICODE,
 )
 
@@ -406,6 +409,16 @@ def main() -> int:
         if i % 10 == 0 or new_count <= 5:
             print(f"  [{i}/{len(articles)}] {item['iso_date']} {item['type']:18s} {title[:80]}")
         time.sleep(SLEEP)
+
+    # Preserve any non-nyc.gov items the YouTube scraper may have appended
+    # — they have `type: "video"` and a synthetic `/youtube/<id>` link, so
+    # they don't appear in the nyc.gov listing.
+    seen_links = {it["link"] for it in out}
+    for link, it in existing.items():
+        if link in seen_links:
+            continue
+        if it.get("type") == "video" or link.startswith("/youtube/"):
+            out.append(it)
 
     # Sort newest first.
     out.sort(key=lambda x: x.get("iso_date", ""), reverse=True)

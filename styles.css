@@ -280,12 +280,47 @@ legend {
 
 /* ---------- Results ---------- */
 
-.result-summary {
-  color: var(--vc-text-muted);
-  font-size: var(--vc-size-small);
+.result-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--vc-space-3);
   margin: var(--vc-space-2) 0 var(--vc-space-4);
   border-bottom: var(--vc-rule-thin) solid var(--vc-cloud);
   padding-bottom: var(--vc-space-3);
+}
+
+.result-summary {
+  color: var(--vc-text-muted);
+  font-size: var(--vc-size-small);
+  margin: 0;
+  flex: 1;
+}
+
+.share-btn {
+  background: var(--vc-white);
+  border: var(--vc-rule-thin) solid var(--vc-black);
+  border-radius: 0;
+  padding: 0.3rem 0.7rem;
+  font-family: var(--vc-font-sans);
+  font-weight: var(--vc-weight-bold);
+  font-size: var(--vc-size-micro);
+  letter-spacing: var(--vc-track-kicker);
+  text-transform: uppercase;
+  color: var(--vc-black);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.share-btn:hover {
+  background: var(--vc-black);
+  color: var(--vc-white);
+}
+
+.share-btn.copied {
+  background: var(--vc-chartreuse);
+  color: var(--vc-black);
+  border-color: var(--vc-chartreuse);
 }
 
 .results {

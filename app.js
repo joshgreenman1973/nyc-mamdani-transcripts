@@ -180,10 +180,38 @@
     $("#from").addEventListener("change", runSearch);
     $("#to").addEventListener("change", runSearch);
     $("#mayor-only").addEventListener("change", runSearch);
+    $("#share").addEventListener("click", copyShareLink);
     window.addEventListener("popstate", () => {
       restoreFromURL();
       runSearch();
     });
+  }
+
+  async function copyShareLink() {
+    const btn = $("#share");
+    const url = window.location.href;
+    let ok = false;
+    if (navigator.clipboard && window.isSecureContext) {
+      try {
+        await navigator.clipboard.writeText(url);
+        ok = true;
+      } catch {}
+    }
+    if (!ok) {
+      // Fallback: select a temporary input and execCommand copy.
+      const tmp = document.createElement("input");
+      tmp.value = url;
+      document.body.appendChild(tmp);
+      tmp.select();
+      try { document.execCommand("copy"); ok = true; } catch {}
+      document.body.removeChild(tmp);
+    }
+    btn.textContent = ok ? "Link copied!" : "Press Cmd+C to copy";
+    btn.classList.add("copied");
+    setTimeout(() => {
+      btn.textContent = "Copy share link";
+      btn.classList.remove("copied");
+    }, 2000);
   }
 
   // ---- URL params ----
@@ -366,9 +394,13 @@
 
   function itemPasses(it, enabledTypes, mayorOnly) {
     if (mayorOnly) {
-      // Mayor-only: only include items where there's some Mayor text.
+      // Strict: only include items where there's text we know the Mayor
+      // himself said (transcript turns where he was the speaker, the entire
+      // body of his speeches/statements/ceremonies, or his attributed
+      // quotes inside press releases).
       if (!it.mayor_text) return false;
-      // And: pull press releases with quotes in even if chip is off.
+      // Press releases sneak in regardless of the type chip when they
+      // contain a Mamdani quote.
       if (it.type === "other") return !!it.has_mayor_quotes;
     }
     return enabledTypes.has(it.type);
@@ -529,10 +561,21 @@
     wc.textContent = `${item.word_count.toLocaleString()} words`;
     meta.append(badge, date, wc);
     if (item.type === "other" && item.mayor_quotes && item.mayor_quotes.length) {
-      const qm = document.createElement("span");
-      qm.className = "quote-flag";
-      qm.textContent = `${item.mayor_quotes.length} mayor quote${item.mayor_quotes.length === 1 ? "" : "s"}`;
-      meta.append(qm);
+      // Only flag "Mamdani quoted" when the search match is actually inside
+      // one of the Mamdani quotes — otherwise the press release matched on
+      // some third-party quote and the flag would be misleading.
+      const matchInQuote = !re || item.mayor_quotes.some((q) => {
+        const r = new RegExp(re.source, re.flags);
+        return r.test(q);
+      });
+      if (matchInQuote) {
+        const qm = document.createElement("span");
+        qm.className = "quote-flag";
+        qm.textContent = re
+          ? "Mamdani quoted on this"
+          : `${item.mayor_quotes.length} Mamdani quote${item.mayor_quotes.length === 1 ? "" : "s"}`;
+        meta.append(qm);
+      }
     }
     if (item.type === "video" && item.caption_source) {
       const cs = document.createElement("span");
@@ -549,9 +592,26 @@
 
     const snip = document.createElement("p");
     snip.className = "result-snippet";
-    const snipText = mayorOnly
-      ? (item.mayor_text || item.text || "")
-      : (item.text || "");
+    let snipText;
+    if (mayorOnly) {
+      snipText = item.mayor_text || item.text || "";
+    } else if (
+      item.type === "other"
+      && item.mayor_quotes
+      && item.mayor_quotes.length
+      && re
+    ) {
+      // Press release in default mode: prefer a Mamdani-quote-bearing snippet
+      // when the term appears in one of his quotes; otherwise fall through to
+      // full-text snippet (we won't pretend it's his words).
+      const quoteMatch = item.mayor_quotes.find((q) => {
+        const r = new RegExp(re.source, re.flags);
+        return r.test(q);
+      });
+      snipText = quoteMatch ? `"${quoteMatch}"` : (item.text || "");
+    } else {
+      snipText = item.text || "";
+    }
     snip.innerHTML = makeSnippet(snipText, re);
 
     const actions = document.createElement("div");
