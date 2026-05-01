@@ -92,13 +92,70 @@
       const b = document.createElement("button");
       b.type = "button";
       b.className = "topic-chip";
-      b.textContent = topic;
-      b.addEventListener("click", () => {
-        $("#q").value = topic;
-        runSearch();
-        $("#q").focus();
-      });
+      b.dataset.topic = topic;
+      b.innerHTML = `<span class="topic-label">${escapeHtml(topic)}</span><span class="topic-count" data-topic-count></span>`;
+      b.addEventListener("click", () => toggleTopic(topic));
       wrap.appendChild(b);
+    });
+  }
+
+  // Topic chip clicks toggle a token (or quoted phrase) in/out of the query.
+  // Multi-word topics like "child care" become "child care" (a quoted phrase).
+  function toggleTopic(topic) {
+    const inp = $("#q");
+    const current = inp.value;
+    const wantTok = topic.includes(" ") ? `"${topic}"` : topic;
+    // See whether wantTok is already in the query.
+    const re = new RegExp(
+      "(^|\\s)" + escapeRegex(wantTok) + "(\\s|$)",
+      "i"
+    );
+    let next;
+    if (re.test(current)) {
+      next = current.replace(re, " ").replace(/\s+/g, " ").trim();
+    } else {
+      next = (current.trim() + " " + wantTok).trim();
+    }
+    inp.value = next;
+    runSearch();
+    inp.focus();
+  }
+
+  function refreshChipState() {
+    const q = $("#q").value;
+    $$(".topic-chip").forEach((chip) => {
+      const topic = chip.dataset.topic;
+      const tok = topic.includes(" ") ? `"${topic}"` : topic;
+      const re = new RegExp("(^|\\s)" + escapeRegex(tok) + "(\\s|$)", "i");
+      chip.classList.toggle("active", re.test(q));
+    });
+  }
+
+  function refreshChipCounts(currentRows, currentQuery) {
+    // Show count of how many of the current-result items would survive
+    // ALSO matching this topic chip — i.e. how much each chip narrows.
+    if (!currentQuery) {
+      $$(".topic-count[data-topic-count]").forEach((el) => (el.textContent = ""));
+      return;
+    }
+    const allTopics = $$(".topic-chip");
+    allTopics.forEach((chip) => {
+      const topic = chip.dataset.topic;
+      const tok = topic.includes(" ") ? `"${topic}"` : topic;
+      const queryRe = new RegExp("(^|\\s)" + escapeRegex(tok) + "(\\s|$)", "i");
+      const cntEl = chip.querySelector("[data-topic-count]");
+      if (queryRe.test(currentQuery)) {
+        cntEl.textContent = "";
+        return;
+      }
+      // Count rows that ALSO contain the topic substring.
+      const sub = new RegExp(escapeRegex(topic), "iu");
+      let n = 0;
+      for (const { item } of currentRows) {
+        const hay = item.title + "\n" + (item.text || "");
+        if (sub.test(hay)) n++;
+      }
+      cntEl.textContent = n > 0 ? `+${n}` : "";
     });
   }
 
@@ -172,6 +229,31 @@
   }
 
   // ---- search ----
+  // Parse a query into bare tokens and quoted phrases. `"rent freeze" Albany`
+  // becomes {phrases: ["rent freeze"], tokens: ["Albany"], all: ["rent freeze", "Albany"]}.
+  function parseQuery(q) {
+    const phrases = [];
+    let stripped = q;
+    // Pull out double-quoted phrases first.
+    stripped = stripped.replace(/[“"]([^”"]+)[”"]/g, (_, p) => {
+      const phrase = p.trim();
+      if (phrase) phrases.push(phrase);
+      return " ";
+    });
+    const tokens = stripped
+      .split(/\s+/)
+      .map((s) => s.trim())
+      .filter((s) => s.length >= 2);
+    const all = [...phrases, ...tokens];
+    // For MiniSearch we still want a token-style query (it doesn't natively
+    // support phrase queries). The phrase will be re-checked as a substring
+    // after the tokenized search runs.
+    const minisearchQuery = [...phrases.flatMap((p) => p.split(/\s+/)), ...tokens]
+      .filter((s) => s.length >= 2)
+      .join(" ");
+    return { phrases, tokens, all, minisearchQuery };
+  }
+
   function runSearch() {
     const q = $("#q").value.trim();
     const enabledTypes = new Set(
@@ -181,6 +263,8 @@
     const toIso = $("#to").value || "";
     const sortMode = $$("input[name=sort]:checked")[0]?.value || "date";
     const mayorOnly = $("#mayor-only").checked;
+    const parsed = parseQuery(q);
+    refreshChipState();
 
     // When "Only the Mayor's words" is on, pull press releases that have
     // Mayor quotes into the result set even if the chip isn't checked —
@@ -195,7 +279,10 @@
         .filter((it) => withinDate(it.iso_date, fromIso, toIso))
         .map((it) => ({ item: it, score: 0, terms: [] }));
     } else {
-      const hits = MS.search(q);
+      // Use the tokenized version of the query for MiniSearch.
+      const hits = parsed.minisearchQuery
+        ? MS.search(parsed.minisearchQuery)
+        : [];
       rows = hits
         .map((h) => ({
           item: CORPUS.items[h.id],
@@ -205,13 +292,31 @@
         .filter(({ item }) => itemPasses(item, enabledTypes, mayorOnly))
         .filter(({ item }) => withinDate(item.iso_date, fromIso, toIso));
 
-      // Substring fallback (catches e.g. "FHEPS" in "CityFHEPS").
-      const queryTokens = tokenizeQuery(q);
-      if (queryTokens.length) {
+      // Build the substring/phrase regex set. Every entry in parsed.all must
+      // appear (AND semantics). Quoted phrases are matched as substrings; bare
+      // tokens are matched word-bounded so "rent" doesn't pick up "different".
+      const allRequirements = parsed.all
+        .filter((s) => s.length >= 2)
+        .map((s) => {
+          if (s.includes(" ")) {
+            // Phrase: collapse internal whitespace, match any whitespace.
+            const pat = s
+              .split(/\s+/)
+              .map(escapeRegex)
+              .join("\\s+");
+            return new RegExp(pat, "iu");
+          }
+          // Token: substring-match if it's <=4 chars (acronyms like ICE,
+          // FHEPS); otherwise allow it inside larger words too (matches
+          // MiniSearch's prefix behavior).
+          return new RegExp(escapeRegex(s), "iu");
+        });
+
+      // Substring/phrase fallback: pull in any docs that contain ALL phrases
+      // and tokens but were missed by the tokenized index (mainly: items
+      // with phrases that don't appear as separate tokens).
+      if (allRequirements.length) {
         const matchedIds = new Set(rows.map((r) => r.item._id));
-        const tokenRes = queryTokens.map(
-          (t) => new RegExp(escapeRegex(t), "iu")
-        );
         for (const it of CORPUS.items) {
           if (matchedIds.has(it._id)) continue;
           if (!itemPasses(it, enabledTypes, mayorOnly)) continue;
@@ -219,11 +324,11 @@
           const hay = mayorOnly
             ? (it.title + "\n" + (it.mayor_text || ""))
             : (it.title + "\n" + (it.text || ""));
-          if (tokenRes.every((re) => re.test(hay))) {
+          if (allRequirements.every((re) => re.test(hay))) {
             rows.push({
               item: it,
               score: 0.5,
-              terms: queryTokens,
+              terms: parsed.all,
               substring: true,
             });
             matchedIds.add(it._id);
@@ -231,17 +336,17 @@
         }
       }
 
-      // When "Only the Mayor's words" is on, drop docs where the query
-      // doesn't actually appear in the mayor's words — even if MiniSearch
-      // matched something elsewhere in the doc.
-      if (mayorOnly) {
-        const tokenRes = queryTokens.map(
-          (t) => new RegExp(escapeRegex(t), "iu")
-        );
+      // Strict requirement check: every doc in rows must contain every
+      // phrase/token (in mayor_text if mayor-only is on, else full text).
+      // This prunes MiniSearch hits that matched some terms but not all
+      // phrases.
+      if (allRequirements.length) {
         rows = rows.filter(({ item }) => {
-          const hay = (item.mayor_text || "");
-          if (!hay) return false;
-          return tokenRes.every((re) => re.test(hay));
+          const hay = mayorOnly
+            ? (item.mayor_text || "")
+            : (item.title + "\n" + (item.text || ""));
+          if (mayorOnly && !hay) return false;
+          return allRequirements.every((re) => re.test(hay));
         });
       }
     }
@@ -255,6 +360,7 @@
     writeURL({ q, fromIso, toIso, sortMode, mayorOnly, enabledTypes });
     render(rows, q, mayorOnly);
     renderFrequency(rows, q);
+    refreshChipCounts(rows, q);
   }
 
   function itemPasses(it, enabledTypes, mayorOnly) {

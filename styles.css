@@ -166,6 +166,27 @@ a:hover { color: var(--vc-orange); }
   border-color: var(--vc-orange);
 }
 
+.topic-chip.active {
+  background: var(--vc-black);
+  color: var(--vc-white);
+  border-color: var(--vc-black);
+}
+
+.topic-chip.active::after {
+  content: " ×";
+  color: var(--vc-orange);
+  margin-left: 0.15rem;
+}
+
+.topic-count {
+  margin-left: 0.35rem;
+  color: var(--vc-charcoal);
+  font-size: 0.7rem;
+}
+
+.topic-chip.active .topic-count { color: var(--vc-cloud); }
+.topic-chip:hover .topic-count { color: var(--vc-black); }
+
 /* ---------- Frequency sparkline ---------- */
 
 .frequency {
