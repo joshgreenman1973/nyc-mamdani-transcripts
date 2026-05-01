@@ -412,28 +412,29 @@
     const counts = months.map((m) => buckets.get(m) || 0);
     const max = Math.max(...counts, 1);
 
-    const w = 320;
+    const w = 480;
     const h = 36;
-    const barW = w / months.length;
+    const slotW = w / months.length;
+    const barW = Math.max(4, slotW * 0.55);
     const svg = $("#frequency-chart");
     svg.setAttribute("viewBox", `0 0 ${w} ${h + 14}`);
     svg.setAttribute("width", "100%");
-    svg.setAttribute("preserveAspectRatio", "none");
+    svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
 
     let html = "";
     counts.forEach((c, i) => {
       const bh = c === 0 ? 1 : Math.max(2, (c / max) * h);
-      const x = i * barW + 0.5;
+      const x = i * slotW + (slotW - barW) / 2;
       const y = h - bh;
       const fill = c === 0 ? "var(--vc-cloud)" : "var(--vc-orange)";
-      html += `<rect x="${x.toFixed(2)}" y="${y.toFixed(2)}" width="${(barW - 1).toFixed(2)}" height="${bh.toFixed(2)}" fill="${fill}"><title>${months[i]}: ${c}</title></rect>`;
+      html += `<rect x="${x.toFixed(2)}" y="${y.toFixed(2)}" width="${barW.toFixed(2)}" height="${bh.toFixed(2)}" fill="${fill}"><title>${months[i]}: ${c}</title></rect>`;
     });
     // Month labels — first, last, and any peak.
     const labelIdxs = new Set([0, months.length - 1]);
     const peakIdx = counts.indexOf(max);
     if (peakIdx > 0 && peakIdx < months.length - 1) labelIdxs.add(peakIdx);
     labelIdxs.forEach((i) => {
-      const x = i * barW + barW / 2;
+      const x = i * slotW + slotW / 2;
       const m = months[i];
       const lbl = formatMonthShort(m);
       html += `<text x="${x.toFixed(2)}" y="${h + 11}" text-anchor="middle" font-size="9" font-family="halyard-text, sans-serif" fill="var(--vc-charcoal)">${lbl}${counts[i] === max && max > 1 ? ` · ${max}` : ""}</text>`;
