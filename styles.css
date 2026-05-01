@@ -66,6 +66,13 @@ a:hover { color: var(--vc-orange); }
   line-height: 1.5;
 }
 
+.lede--small {
+  font-size: var(--vc-size-small);
+  color: var(--vc-text-muted);
+}
+
+.lede--small strong { color: var(--vc-black); }
+
 .meta {
   color: var(--vc-text-muted);
   font-size: var(--vc-size-small);
@@ -120,6 +127,78 @@ a:hover { color: var(--vc-orange); }
   line-height: 1;
 }
 #clear:hover { background: var(--vc-orange); color: var(--vc-white); border-color: var(--vc-orange); }
+
+/* ---------- Topic chips ---------- */
+
+.topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--vc-space-2);
+  align-items: baseline;
+  margin-bottom: var(--vc-space-3);
+  font-size: var(--vc-size-small);
+}
+
+.topics-label {
+  font-family: var(--vc-font-sans);
+  font-weight: var(--vc-weight-bold);
+  font-size: var(--vc-size-micro);
+  letter-spacing: var(--vc-track-kicker);
+  text-transform: uppercase;
+  color: var(--vc-charcoal);
+  margin-right: var(--vc-space-2);
+}
+
+.topic-chip {
+  background: var(--vc-white);
+  border: var(--vc-rule-thin) solid var(--vc-black);
+  border-radius: 0;
+  padding: 0.2rem 0.6rem;
+  font-family: var(--vc-font-sans);
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: var(--vc-black);
+}
+
+.topic-chip:hover {
+  background: var(--vc-orange);
+  color: var(--vc-black);
+  border-color: var(--vc-orange);
+}
+
+/* ---------- Frequency sparkline ---------- */
+
+.frequency {
+  margin-bottom: var(--vc-space-3);
+  padding: var(--vc-space-3) var(--vc-space-4);
+  border: var(--vc-rule-thin) solid var(--vc-cloud);
+  border-left: 3px solid var(--vc-orange);
+  background: var(--vc-white);
+}
+
+.frequency-title {
+  font-family: var(--vc-font-sans);
+  font-size: var(--vc-size-micro);
+  font-weight: var(--vc-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--vc-track-kicker);
+  color: var(--vc-charcoal);
+  margin: 0 0 var(--vc-space-2);
+}
+
+.frequency-title #frequency-term {
+  color: var(--vc-black);
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: var(--vc-weight-bold);
+}
+
+#frequency-chart {
+  display: block;
+  height: 50px;
+}
+
+/* ---------- Filters ---------- */
 
 .filters {
   display: flex;
@@ -311,6 +390,40 @@ mark {
 
 .expanded p { margin: 0 0 1em; }
 .expanded p:last-child { margin: 0; }
+
+.turn {
+  border-left: 3px solid var(--vc-cloud);
+  padding-left: var(--vc-space-3);
+  margin-bottom: var(--vc-space-3);
+}
+
+.turn--mayor {
+  border-left-color: var(--vc-orange);
+}
+
+.turn-speaker {
+  font-family: var(--vc-font-sans);
+  font-size: var(--vc-size-micro);
+  font-weight: var(--vc-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--vc-track-kicker);
+  color: var(--vc-charcoal);
+  margin: 0 0 0.4rem !important;
+}
+
+.turn--mayor .turn-speaker { color: var(--vc-orange); }
+
+.turn--quote p { font-style: italic; }
+
+.quote-flag {
+  background: var(--vc-chartreuse);
+  color: var(--vc-black);
+  padding: 0.1rem 0.5rem;
+  font-size: var(--vc-size-micro);
+  font-weight: var(--vc-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--vc-track-kicker);
+}
 
 .match-count {
   color: var(--vc-charcoal);

@@ -213,6 +213,108 @@ def classify(title: str) -> str:
     return "other"
 
 
+# --- speaker parsing & quote extraction --------------------------------------
+
+# A speaker line starts a paragraph (after \n\n or at text start) and follows
+# the pattern "Speaker Name:" — letters / spaces / commas / dots / brackets,
+# bounded length, no sentence-ending punctuation in the prefix.
+SPEAKER_PARA_RE = re.compile(
+    r"(?:^|\n\n)([A-Z][\w .,‘’'—\-\[\](){}]{1,80}):\s+",
+    re.UNICODE,
+)
+
+# Mamdani-attribution patterns. Either order:
+#  "...quote...," said Mayor (Zohran Kwame) Mamdani
+#  Mayor Mamdani said, "...quote..."
+QUOTE_AFTER_RE = re.compile(
+    r"[“\"]([^“”\"]{30,1200})[”\"]\s*[,\.]?\s*"
+    r"said\s+(?:New York City\s+)?Mayor\s+(?:Zohran(?:\s+Kwame)?\s+)?Mamdani",
+    re.IGNORECASE,
+)
+QUOTE_BEFORE_RE = re.compile(
+    r"Mayor\s+(?:Zohran(?:\s+Kwame)?\s+)?Mamdani\s+said[,]?\s*"
+    r"[“\"]([^“”\"]{30,1200})[”\"]",
+    re.IGNORECASE,
+)
+
+
+def _is_mayor_speaker(name: str) -> bool:
+    n = name.strip().lower()
+    return "mamdani" in n and (
+        n.startswith("mayor")
+        or n.startswith("zohran")
+        or n.startswith("nyc mayor")
+        or n.startswith("new york city mayor")
+    )
+
+
+def parse_speakers(text: str) -> list[dict]:
+    """Split a transcript into speaker turns. Returns [{speaker, text, is_mayor}].
+
+    Returns an empty list when the transcript doesn't have parseable speaker
+    labels (which means the caller should treat the full text as ambiguous).
+    """
+    if not text:
+        return []
+    # Normalize line endings — the AEM extraction can leave \n\r\n mixes.
+    text = text.replace("\r\n", "\n").replace("\r", "\n")
+    matches = list(SPEAKER_PARA_RE.finditer(text))
+    if len(matches) < 2:
+        return []
+    segments: list[dict] = []
+    for i, m in enumerate(matches):
+        speaker = m.group(1).strip()
+        body_start = m.end()
+        body_end = matches[i + 1].start() if i + 1 < len(matches) else len(text)
+        body = text[body_start:body_end].strip()
+        if not body:
+            continue
+        segments.append(
+            {
+                "speaker": speaker,
+                "text": body,
+                "is_mayor": _is_mayor_speaker(speaker),
+            }
+        )
+    return segments
+
+
+def extract_mayor_quotes(text: str) -> list[str]:
+    """Pull out every block of text directly attributed to the Mayor."""
+    if not text:
+        return []
+    seen: set[str] = set()
+    out: list[str] = []
+    for rx in (QUOTE_AFTER_RE, QUOTE_BEFORE_RE):
+        for m in rx.finditer(text):
+            q = m.group(1).strip()
+            # Collapse internal whitespace.
+            q = re.sub(r"\s+", " ", q)
+            if q in seen:
+                continue
+            seen.add(q)
+            out.append(q)
+    return out
+
+
+def derive_mayor_text(item: dict) -> str:
+    """Return the substring of an item that's specifically the Mayor's words."""
+    speakers = item.get("speakers") or []
+    if speakers:
+        mayor_bits = [s["text"] for s in speakers if s.get("is_mayor")]
+        if mayor_bits:
+            return "\n\n".join(mayor_bits)
+    quotes = item.get("mayor_quotes") or []
+    if quotes:
+        return "\n\n".join(quotes)
+    # For speeches, prepared remarks, statements, and ceremonies the entire
+    # text is Mamdani's own words.
+    if item.get("type") in ("speech", "statement", "ceremony"):
+        return item.get("text", "")
+    # Fallback: empty (we don't know what was his)
+    return ""
+
+
 # --- date parsing ------------------------------------------------------------
 
 MONTHS = {m: i for i, m in enumerate(
@@ -230,6 +332,26 @@ def to_iso(date_str: str) -> str:
 
 
 # --- main --------------------------------------------------------------------
+
+def enrich(item: dict) -> dict:
+    """Add derived fields: speakers, mayor_quotes, mayor_text."""
+    text = item.get("text", "")
+    typ = item.get("type", "")
+    # Speaker parsing applies to event transcripts.
+    if typ in ("press_conference", "media_appearance", "speech", "ceremony"):
+        item["speakers"] = parse_speakers(text)
+    else:
+        item["speakers"] = []
+    # Quote extraction applies to staff-written press releases.
+    if typ == "other":
+        item["mayor_quotes"] = extract_mayor_quotes(text)
+    else:
+        item["mayor_quotes"] = []
+    item["mayor_text"] = derive_mayor_text(item)
+    item["mayor_word_count"] = len(item["mayor_text"].split())
+    item["has_mayor_quotes"] = bool(item.get("mayor_quotes"))
+    return item
+
 
 def load_existing() -> dict[str, dict]:
     if not CORPUS.exists():
@@ -252,9 +374,10 @@ def main() -> int:
         link = a["link"]
         if link in existing and existing[link].get("text"):
             cached = dict(existing[link])
-            # Re-classify each run so improvements to the rules apply without
-            # re-downloading. (Title is already in the cached entry.)
+            # Re-classify and re-derive every run so improvements to the rules
+            # apply without re-downloading. (Title is in the cached entry.)
             cached["type"] = classify(cached.get("title", ""))
+            cached = enrich(cached)
             out.append(cached)
             continue
         try:
@@ -277,6 +400,7 @@ def main() -> int:
             "text": text,
             "word_count": len(text.split()),
         }
+        item = enrich(item)
         out.append(item)
         new_count += 1
         if i % 10 == 0 or new_count <= 5:

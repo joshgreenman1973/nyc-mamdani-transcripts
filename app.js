@@ -13,33 +13,55 @@
     other: "Press release",
   };
 
-  let CORPUS = null;          // {items, type_counts, generated_at, ...}
-  let MS = null;              // MiniSearch instance
-  let LAST_QUERY = "";
-  let LAST_RESULTS = [];      // current rendering: array of {item, score?, terms?}
+  // Hand-picked starter topics. These map to common substrings the user is
+  // likely to want to find his position on — they're not exhaustive.
+  const TOPICS = [
+    "rent",
+    "child care",
+    "housing",
+    "police",
+    "subway",
+    "ICE",
+    "schools",
+    "Albany",
+    "Trump",
+    "Cuomo",
+    "FHEPS",
+    "budget",
+    "homelessness",
+    "Israel",
+    "Gaza",
+  ];
+
+  let CORPUS = null;
+  let MS = null;
+  let LAST_RESULTS = [];
   let DEBOUNCE_T = null;
+  let URL_RESTORING = false; // suppress URL writes while loading params
 
   // ---- boot ----
-  fetch("data/corpus.json")
+  // Cache-bust by the daily-refresh date so the browser re-fetches when a
+  // new corpus is committed. The `generated_at` field changes daily.
+  fetch("data/corpus.json?v=" + new Date().toISOString().slice(0, 10))
     .then((r) => r.json())
     .then((data) => {
       CORPUS = data;
       $("#meta").textContent =
         `${data.total} items from ${formatRange(data.items)}. ` +
         `Last refreshed ${formatGenerated(data.generated_at)}.`;
-      // Populate counts under each chip.
       Object.entries(data.type_counts || {}).forEach(([t, n]) => {
         const el = document.querySelector(`.count[data-count="${t}"]`);
         if (el) el.textContent = `(${n})`;
       });
-      // Default date range = full archive.
       const dates = data.items.map((i) => i.iso_date).filter(Boolean).sort();
       if (dates.length) {
         $("#from").min = $("#to").min = dates[0];
         $("#from").max = $("#to").max = dates[dates.length - 1];
       }
       buildIndex();
+      buildTopics();
       attachHandlers();
+      restoreFromURL();
       runSearch();
     })
     .catch((err) => {
@@ -64,6 +86,22 @@
     });
   }
 
+  function buildTopics() {
+    const wrap = $("#topics");
+    TOPICS.forEach((topic) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "topic-chip";
+      b.textContent = topic;
+      b.addEventListener("click", () => {
+        $("#q").value = topic;
+        runSearch();
+        $("#q").focus();
+      });
+      wrap.appendChild(b);
+    });
+  }
+
   // ---- handlers ----
   function attachHandlers() {
     $("#q").addEventListener("input", () => {
@@ -83,26 +121,79 @@
     );
     $("#from").addEventListener("change", runSearch);
     $("#to").addEventListener("change", runSearch);
+    $("#mayor-only").addEventListener("change", runSearch);
+    window.addEventListener("popstate", () => {
+      restoreFromURL();
+      runSearch();
+    });
+  }
+
+  // ---- URL params ----
+  function restoreFromURL() {
+    URL_RESTORING = true;
+    const p = new URLSearchParams(window.location.search);
+    if (p.has("q")) $("#q").value = p.get("q");
+    if (p.has("from")) $("#from").value = p.get("from");
+    if (p.has("to")) $("#to").value = p.get("to");
+    if (p.has("sort")) {
+      const s = p.get("sort");
+      const radio = document.querySelector(`input[name=sort][value="${s}"]`);
+      if (radio) radio.checked = true;
+    }
+    if (p.has("mayor_only")) {
+      $("#mayor-only").checked = p.get("mayor_only") === "1";
+    }
+    if (p.has("types")) {
+      const types = new Set(p.get("types").split(","));
+      $$("input[name=type]").forEach((el) => {
+        el.checked = types.has(el.value);
+      });
+    }
+    URL_RESTORING = false;
+  }
+
+  function writeURL(state) {
+    if (URL_RESTORING) return;
+    const p = new URLSearchParams();
+    if (state.q) p.set("q", state.q);
+    if (state.fromIso) p.set("from", state.fromIso);
+    if (state.toIso) p.set("to", state.toIso);
+    if (state.sortMode && state.sortMode !== "date") p.set("sort", state.sortMode);
+    if (state.mayorOnly) p.set("mayor_only", "1");
+    // Only write `types` if it's not the default set.
+    const enabled = [...state.enabledTypes].sort();
+    const defaults = ["ceremony", "media_appearance", "press_conference", "speech", "statement"];
+    if (JSON.stringify(enabled) !== JSON.stringify(defaults)) {
+      p.set("types", enabled.join(","));
+    }
+    const qs = p.toString();
+    const newUrl = qs ? "?" + qs : window.location.pathname;
+    history.replaceState(null, "", newUrl);
   }
 
   // ---- search ----
   function runSearch() {
     const q = $("#q").value.trim();
-    LAST_QUERY = q;
     const enabledTypes = new Set(
       $$("input[name=type]:checked").map((el) => el.value)
     );
     const fromIso = $("#from").value || "";
     const toIso = $("#to").value || "";
     const sortMode = $$("input[name=sort]:checked")[0]?.value || "date";
+    const mayorOnly = $("#mayor-only").checked;
+
+    // When "Only the Mayor's words" is on, pull press releases that have
+    // Mayor quotes into the result set even if the chip isn't checked —
+    // those quotes are exactly what the user is asking to see.
+    const effectiveTypes = new Set(enabledTypes);
+    if (mayorOnly) effectiveTypes.add("other_with_quotes");
 
     let rows;
     if (q.length === 0) {
       rows = CORPUS.items
-        .filter((it) => enabledTypes.has(it.type))
+        .filter((it) => itemPasses(it, enabledTypes, mayorOnly))
         .filter((it) => withinDate(it.iso_date, fromIso, toIso))
         .map((it) => ({ item: it, score: 0, terms: [] }));
-      // already sorted desc by date.
     } else {
       const hits = MS.search(q);
       rows = hits
@@ -111,38 +202,27 @@
           score: h.score,
           terms: h.terms,
         }))
-        .filter(({ item }) => enabledTypes.has(item.type))
+        .filter(({ item }) => itemPasses(item, enabledTypes, mayorOnly))
         .filter(({ item }) => withinDate(item.iso_date, fromIso, toIso));
 
-      // Substring fallback. Tokenized search misses queries that appear inside
-      // larger words (e.g. "FHEPS" inside "CityFHEPS", "MTA" inside
-      // "MTA-related"). For each query token >= 3 chars that the index missed,
-      // scan the corpus and add any documents that contain it as a substring.
-      const queryTokens = q
-        .toLowerCase()
-        .split(/\s+/)
-        .map((t) => t.replace(/[^\p{L}\p{N}-]/gu, ""))
-        .filter((t) => t.length >= 3);
+      // Substring fallback (catches e.g. "FHEPS" in "CityFHEPS").
+      const queryTokens = tokenizeQuery(q);
       if (queryTokens.length) {
         const matchedIds = new Set(rows.map((r) => r.item._id));
-        const tokensRe = new RegExp(
-          queryTokens.map(escapeRegex).join("|"),
-          "iu"
-        );
-        const allTokensRe = queryTokens.map(
+        const tokenRes = queryTokens.map(
           (t) => new RegExp(escapeRegex(t), "iu")
         );
         for (const it of CORPUS.items) {
           if (matchedIds.has(it._id)) continue;
-          if (!enabledTypes.has(it.type)) continue;
+          if (!itemPasses(it, enabledTypes, mayorOnly)) continue;
           if (!withinDate(it.iso_date, fromIso, toIso)) continue;
-          const hay = it.title + "\n" + (it.text || "");
-          // Require ALL query tokens to appear as substrings (matches the
-          // AND combineWith of the main index).
-          if (allTokensRe.every((re) => re.test(hay))) {
+          const hay = mayorOnly
+            ? (it.title + "\n" + (it.mayor_text || ""))
+            : (it.title + "\n" + (it.text || ""));
+          if (tokenRes.every((re) => re.test(hay))) {
             rows.push({
               item: it,
-              score: 0.5, // below tokenized matches when sorting by relevance
+              score: 0.5,
               terms: queryTokens,
               substring: true,
             });
@@ -150,13 +230,49 @@
           }
         }
       }
+
+      // When "Only the Mayor's words" is on, drop docs where the query
+      // doesn't actually appear in the mayor's words — even if MiniSearch
+      // matched something elsewhere in the doc.
+      if (mayorOnly) {
+        const tokenRes = queryTokens.map(
+          (t) => new RegExp(escapeRegex(t), "iu")
+        );
+        rows = rows.filter(({ item }) => {
+          const hay = (item.mayor_text || "");
+          if (!hay) return false;
+          return tokenRes.every((re) => re.test(hay));
+        });
+      }
     }
 
     if (sortMode === "date" || q.length === 0) {
-      rows.sort((a, b) => (b.item.iso_date || "").localeCompare(a.item.iso_date || ""));
+      rows.sort((a, b) =>
+        (b.item.iso_date || "").localeCompare(a.item.iso_date || "")
+      );
     }
     LAST_RESULTS = rows;
-    render(rows, q);
+    writeURL({ q, fromIso, toIso, sortMode, mayorOnly, enabledTypes });
+    render(rows, q, mayorOnly);
+    renderFrequency(rows, q);
+  }
+
+  function itemPasses(it, enabledTypes, mayorOnly) {
+    if (mayorOnly) {
+      // Mayor-only: only include items where there's some Mayor text.
+      if (!it.mayor_text) return false;
+      // And: pull press releases with quotes in even if chip is off.
+      if (it.type === "other") return !!it.has_mayor_quotes;
+    }
+    return enabledTypes.has(it.type);
+  }
+
+  function tokenizeQuery(q) {
+    return q
+      .toLowerCase()
+      .split(/\s+/)
+      .map((s) => s.replace(/[^\p{L}\p{N}-]/gu, ""))
+      .filter((s) => s.length >= 3);
   }
 
   function withinDate(iso, from, to) {
@@ -166,8 +282,81 @@
     return true;
   }
 
+  // ---- frequency sparkline ----
+  function renderFrequency(rows, q) {
+    const wrap = $("#frequency");
+    if (!q || rows.length === 0) {
+      wrap.classList.add("hidden");
+      return;
+    }
+    // Bucket rows by month.
+    const buckets = new Map();
+    rows.forEach(({ item }) => {
+      if (!item.iso_date) return;
+      const ym = item.iso_date.slice(0, 7);
+      buckets.set(ym, (buckets.get(ym) || 0) + 1);
+    });
+    // Build full month range from corpus min/max so empty months show.
+    const allDates = CORPUS.items.map((i) => i.iso_date).filter(Boolean).sort();
+    if (allDates.length === 0) return;
+    const start = allDates[0].slice(0, 7);
+    const end = allDates[allDates.length - 1].slice(0, 7);
+    const months = monthRange(start, end);
+    const counts = months.map((m) => buckets.get(m) || 0);
+    const max = Math.max(...counts, 1);
+
+    const w = 320;
+    const h = 36;
+    const barW = w / months.length;
+    const svg = $("#frequency-chart");
+    svg.setAttribute("viewBox", `0 0 ${w} ${h + 14}`);
+    svg.setAttribute("width", "100%");
+    svg.setAttribute("preserveAspectRatio", "none");
+
+    let html = "";
+    counts.forEach((c, i) => {
+      const bh = c === 0 ? 1 : Math.max(2, (c / max) * h);
+      const x = i * barW + 0.5;
+      const y = h - bh;
+      const fill = c === 0 ? "var(--vc-cloud)" : "var(--vc-orange)";
+      html += `<rect x="${x.toFixed(2)}" y="${y.toFixed(2)}" width="${(barW - 1).toFixed(2)}" height="${bh.toFixed(2)}" fill="${fill}"><title>${months[i]}: ${c}</title></rect>`;
+    });
+    // Month labels — first, last, and any peak.
+    const labelIdxs = new Set([0, months.length - 1]);
+    const peakIdx = counts.indexOf(max);
+    if (peakIdx > 0 && peakIdx < months.length - 1) labelIdxs.add(peakIdx);
+    labelIdxs.forEach((i) => {
+      const x = i * barW + barW / 2;
+      const m = months[i];
+      const lbl = formatMonthShort(m);
+      html += `<text x="${x.toFixed(2)}" y="${h + 11}" text-anchor="middle" font-size="9" font-family="halyard-text, sans-serif" fill="var(--vc-charcoal)">${lbl}${counts[i] === max && max > 1 ? ` · ${max}` : ""}</text>`;
+    });
+    svg.innerHTML = html;
+    $("#frequency-term").textContent = `“${q}”`;
+    wrap.classList.remove("hidden");
+  }
+
+  function monthRange(startYM, endYM) {
+    const out = [];
+    const [sy, sm] = startYM.split("-").map(Number);
+    const [ey, em] = endYM.split("-").map(Number);
+    let y = sy, m = sm;
+    while (y < ey || (y === ey && m <= em)) {
+      out.push(`${y}-${String(m).padStart(2, "0")}`);
+      m++;
+      if (m > 12) { m = 1; y++; }
+    }
+    return out;
+  }
+
+  function formatMonthShort(ym) {
+    const [y, m] = ym.split("-").map(Number);
+    const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    return `${months[m - 1]} ${String(y).slice(2)}`;
+  }
+
   // ---- render ----
-  function render(rows, q) {
+  function render(rows, q, mayorOnly) {
     const list = $("#results");
     list.innerHTML = "";
     const empty = $("#empty");
@@ -176,35 +365,31 @@
     if (rows.length === 0) {
       empty.classList.remove("hidden");
       summary.textContent = q
-        ? `No matches for “${q}”.`
+        ? `No matches for “${q}”${mayorOnly ? " in the Mayor's words" : ""}.`
         : "No items match your filters.";
       return;
     }
     empty.classList.add("hidden");
+    const scopeNote = mayorOnly ? " in the Mayor's words" : "";
     summary.textContent = q
-      ? `${rows.length} item${rows.length === 1 ? "" : "s"} matching “${q}”.`
-      : `Showing ${rows.length} item${rows.length === 1 ? "" : "s"}.`;
+      ? `${rows.length} item${rows.length === 1 ? "" : "s"} matching “${q}”${scopeNote}.`
+      : `Showing ${rows.length} item${rows.length === 1 ? "" : "s"}${mayorOnly ? " (Mayor's words only)" : ""}.`;
 
     const terms = q ? extractTerms(q, rows) : [];
     const re = terms.length ? buildHighlightRe(terms) : null;
 
     const frag = document.createDocumentFragment();
     rows.forEach((row, i) => {
-      frag.appendChild(buildRow(row, i, re));
+      frag.appendChild(buildRow(row, i, re, mayorOnly));
     });
     list.appendChild(frag);
   }
 
   function extractTerms(q, rows) {
-    // Use MiniSearch-matched terms when available, fall back to query split.
     const set = new Set();
     rows.forEach((r) => (r.terms || []).forEach((t) => set.add(t.toLowerCase())));
     if (set.size === 0) {
-      q.toLowerCase()
-        .split(/\s+/)
-        .map((s) => s.replace(/[^\p{L}\p{N}-]/gu, ""))
-        .filter((s) => s.length >= 2)
-        .forEach((t) => set.add(t));
+      tokenizeQuery(q).forEach((t) => set.add(t));
     }
     return Array.from(set);
   }
@@ -218,7 +403,7 @@
     return new RegExp("(" + sorted.map(escapeRegex).join("|") + ")", "giu");
   }
 
-  function buildRow({ item }, idx, re) {
+  function buildRow({ item }, idx, re, mayorOnly) {
     const li = document.createElement("li");
     li.dataset.idx = idx;
 
@@ -235,6 +420,12 @@
     const wc = document.createElement("span");
     wc.textContent = `${item.word_count.toLocaleString()} words`;
     meta.append(badge, date, wc);
+    if (item.type === "other" && item.mayor_quotes && item.mayor_quotes.length) {
+      const qm = document.createElement("span");
+      qm.className = "quote-flag";
+      qm.textContent = `${item.mayor_quotes.length} mayor quote${item.mayor_quotes.length === 1 ? "" : "s"}`;
+      meta.append(qm);
+    }
 
     const title = document.createElement("h2");
     title.className = "result-title";
@@ -242,16 +433,19 @@
 
     const snip = document.createElement("p");
     snip.className = "result-snippet";
-    snip.innerHTML = makeSnippet(item.text || "", re);
+    const snipText = mayorOnly
+      ? (item.mayor_text || item.text || "")
+      : (item.text || "");
+    snip.innerHTML = makeSnippet(snipText, re);
 
     const actions = document.createElement("div");
     actions.className = "result-actions";
     const toggle = document.createElement("button");
     toggle.type = "button";
-    toggle.textContent = "Read full text";
+    toggle.textContent = mayorOnly ? "Read Mayor's words" : "Read full text";
     toggle.addEventListener("click", (e) => {
       e.stopPropagation();
-      toggleExpand(li, item, re, toggle);
+      toggleExpand(li, item, re, toggle, mayorOnly);
     });
     const ext = document.createElement("a");
     ext.href = item.url;
@@ -261,45 +455,78 @@
     actions.append(toggle, ext);
 
     row.append(meta, title, snip, actions);
-    row.addEventListener("click", () => toggleExpand(li, item, re, toggle));
+    row.addEventListener("click", () => toggleExpand(li, item, re, toggle, mayorOnly));
     li.appendChild(row);
     return li;
   }
 
-  function toggleExpand(li, item, re, toggle) {
+  function toggleExpand(li, item, re, toggle, mayorOnly) {
     const existing = li.querySelector(".expanded");
     if (existing) {
       existing.remove();
-      toggle.textContent = "Read full text";
+      toggle.textContent = mayorOnly ? "Read Mayor's words" : "Read full text";
       return;
     }
     const div = document.createElement("div");
     div.className = "expanded";
-    let body = item.text || "(No body text was extracted for this item.)";
+
     let count = 0;
-    if (re) {
-      body = body.replace(re, (m) => {
-        count++;
-        return `<mark>${escapeHtml(m)}</mark>`;
+    const seg = (text) => {
+      let body = text || "";
+      if (re) {
+        body = body.replace(re, (m) => {
+          count++;
+          return `<mark>${escapeHtml(m)}</mark>`;
+        });
+      } else {
+        body = escapeHtml(body);
+      }
+      return body
+        .split(/\n{2,}/)
+        .map((p) => `<p>${p.replace(/\n/g, "<br />")}</p>`)
+        .join("");
+    };
+
+    let html = "";
+
+    if (mayorOnly) {
+      // Render only the Mayor's lines (or his quotes from a press release).
+      if (item.speakers && item.speakers.length) {
+        const mayorLines = item.speakers.filter((s) => s.is_mayor);
+        if (mayorLines.length === 0) {
+          html += seg(item.mayor_text || "");
+        } else {
+          mayorLines.forEach((s) => {
+            html += `<div class="turn turn--mayor"><p class="turn-speaker">${escapeHtml(s.speaker)}</p>${seg(s.text)}</div>`;
+          });
+        }
+      } else if (item.mayor_quotes && item.mayor_quotes.length) {
+        item.mayor_quotes.forEach((q) => {
+          html += `<div class="turn turn--mayor turn--quote">${seg("“" + q + "”")}</div>`;
+        });
+      } else {
+        html += seg(item.mayor_text || item.text || "");
+      }
+    } else if (item.speakers && item.speakers.length) {
+      // Full transcript with speaker labels per turn.
+      item.speakers.forEach((s) => {
+        const cls = "turn" + (s.is_mayor ? " turn--mayor" : "");
+        html += `<div class="${cls}"><p class="turn-speaker">${escapeHtml(s.speaker)}</p>${seg(s.text)}</div>`;
       });
     } else {
-      body = escapeHtml(body);
+      html += seg(item.text || "(No body text was extracted for this item.)");
     }
-    body = body
-      .split(/\n{2,}/)
-      .map((p) => `<p>${p.replace(/\n/g, "<br />")}</p>`)
-      .join("");
-    div.innerHTML = body;
+
+    div.innerHTML = html;
 
     if (re && count > 0) {
       const cnt = document.createElement("div");
       cnt.className = "match-count";
-      cnt.style.marginBottom = ".75rem";
-      cnt.textContent = `${count} match${count === 1 ? "" : "es"} highlighted.`;
+      cnt.textContent = `${count} match${count === 1 ? "" : "es"} highlighted${mayorOnly ? " in Mayor's words" : ""}.`;
       div.prepend(cnt);
     }
     li.appendChild(div);
-    toggle.textContent = "Hide full text";
+    toggle.textContent = "Hide";
   }
 
   function makeSnippet(text, re) {
@@ -308,22 +535,18 @@
       const s = text.slice(0, 240).replace(/\s+/g, " ").trim();
       return escapeHtml(s) + (text.length > 240 ? "<span class='ellipsis'>…</span>" : "");
     }
-    const m = re.exec(text);
-    re.lastIndex = 0;
     const flat = text.replace(/\s+/g, " ");
-    if (!m) {
-      return escapeHtml(flat.slice(0, 240)) + "<span class='ellipsis'>…</span>";
-    }
-    // Re-find on the flattened version so offsets line up.
     const flatRe = new RegExp(re.source, re.flags);
     const fm = flatRe.exec(flat);
-    const idx = fm ? fm.index : 0;
+    if (!fm) {
+      return escapeHtml(flat.slice(0, 240)) + "<span class='ellipsis'>…</span>";
+    }
+    const idx = fm.index;
     const start = Math.max(0, idx - 120);
     const end = Math.min(flat.length, idx + 200);
     const before = start > 0 ? "<span class='ellipsis'>…</span>" : "";
     const after = end < flat.length ? "<span class='ellipsis'>…</span>" : "";
-    const slice = flat.slice(start, end);
-    return before + highlight(slice, re) + after;
+    return before + highlight(flat.slice(start, end), re) + after;
   }
 
   function highlight(s, re) {

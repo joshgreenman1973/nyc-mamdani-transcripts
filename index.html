@@ -18,11 +18,18 @@
       <p class="kicker">On the record &middot; New York City</p>
       <h1 class="vc-gascogne">Mayor Mamdani transcript search</h1>
       <p class="lede">
-        Every speech, press conference, prepared remark, and statement from Mayor
-        Zohran Mamdani <em>as catalogued on nyc.gov</em> since he took office on
-        January&nbsp;1,&nbsp;2026. Type a word or topic to find exactly what he said
-        about it and when. (Off-the-cuff remarks, gaggles, and social-media posts
-        aren&rsquo;t included &mdash; only what the Mayor&rsquo;s Office publishes.)
+        Everything said at Mayor Zohran Mamdani&rsquo;s official events
+        &mdash; speeches, press conferences, prepared remarks, statements, and his
+        quotes inside press releases &mdash; <em>as catalogued on nyc.gov</em> since
+        he took office on January&nbsp;1,&nbsp;2026. Search for a word or topic to
+        find what was said about it and when.
+      </p>
+      <p class="lede lede--small">
+        Transcripts include reporters&rsquo; questions and other officials at the
+        same event. Toggle <strong>Only the Mayor&rsquo;s words</strong> below to
+        narrow to lines spoken or quoted by him. Off-the-cuff remarks, gaggles,
+        and social-media posts aren&rsquo;t included &mdash; only what the
+        Mayor&rsquo;s Office publishes.
       </p>
       <p class="meta" id="meta">Loading archive&hellip;</p>
     </div>
@@ -34,6 +41,15 @@
         <label class="visually-hidden" for="q">Search</label>
         <input id="q" type="search" placeholder="Search for a word or topic — try “rent” or “child care”" autocomplete="off" />
         <button id="clear" type="button" aria-label="Clear search">&times;</button>
+      </div>
+
+      <div class="topics" id="topics" aria-label="Suggested topics">
+        <span class="topics-label">Try:</span>
+      </div>
+
+      <div class="frequency hidden" id="frequency" aria-label="Frequency over time">
+        <p class="frequency-title"><span id="frequency-term"></span> by month</p>
+        <svg id="frequency-chart" role="img" aria-label="Sparkline of search-term frequency by month"></svg>
       </div>
 
       <div class="filters">
@@ -58,6 +74,11 @@
           <legend>Sort by</legend>
           <label><input type="radio" name="sort" value="date" checked /> Date (newest first)</label>
           <label><input type="radio" name="sort" value="relevance" /> Relevance</label>
+        </fieldset>
+
+        <fieldset class="scope" aria-label="Scope">
+          <legend>Scope</legend>
+          <label><input type="checkbox" id="mayor-only" /> Only the Mayor&rsquo;s words</label>
         </fieldset>
       </div>
     </section>
