@@ -387,7 +387,7 @@
     }
     LAST_RESULTS = rows;
     writeURL({ q, fromIso, toIso, sortMode, mayorOnly, enabledTypes });
-    render(rows, q, mayorOnly);
+    render(rows, q, mayorOnly, parsed);
     renderFrequency(rows, q);
     refreshChipCounts(rows, q);
   }
@@ -496,7 +496,7 @@
   }
 
   // ---- render ----
-  function render(rows, q, mayorOnly) {
+  function render(rows, q, mayorOnly, parsed) {
     const list = $("#results");
     list.innerHTML = "";
     const empty = $("#empty");
@@ -515,8 +515,11 @@
       ? `${rows.length} item${rows.length === 1 ? "" : "s"} matching “${q}”${scopeNote}.`
       : `Showing ${rows.length} item${rows.length === 1 ? "" : "s"}${mayorOnly ? " (Mayor's words only)" : ""}.`;
 
-    const terms = q ? extractTerms(q, rows) : [];
-    const re = terms.length ? buildHighlightRe(terms) : null;
+    // Build the highlight regex straight from the parsed query so phrases
+    // get highlighted as units (and outrank their constituent words).
+    const re = parsed && parsed.all && parsed.all.length
+      ? buildHighlightReFromParsed(parsed)
+      : null;
 
     const frag = document.createDocumentFragment();
     rows.forEach((row, i) => {
@@ -525,22 +528,25 @@
     list.appendChild(frag);
   }
 
-  function extractTerms(q, rows) {
-    const set = new Set();
-    rows.forEach((r) => (r.terms || []).forEach((t) => set.add(t.toLowerCase())));
-    if (set.size === 0) {
-      tokenizeQuery(q).forEach((t) => set.add(t));
-    }
-    return Array.from(set);
-  }
-
   function escapeRegex(s) {
     return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   }
 
-  function buildHighlightRe(terms) {
-    const sorted = [...terms].sort((a, b) => b.length - a.length);
-    return new RegExp("(" + sorted.map(escapeRegex).join("|") + ")", "giu");
+  function buildHighlightReFromParsed(parsed) {
+    // Each phrase becomes word-with-flexible-whitespace; each token stays
+    // bare. Sort by length descending so the regex engine prefers longer
+    // (phrase) matches over shorter (token) ones at the same position.
+    const parts = parsed.all
+      .filter((s) => s && s.length >= 2)
+      .map((s) => {
+        if (s.includes(" ")) {
+          return s.split(/\s+/).map(escapeRegex).join("\\s+");
+        }
+        return escapeRegex(s);
+      })
+      .sort((a, b) => b.length - a.length);
+    if (!parts.length) return null;
+    return new RegExp("(" + parts.join("|") + ")", "giu");
   }
 
   function buildRow({ item }, idx, re, mayorOnly) {
@@ -732,12 +738,22 @@
       return escapeHtml(s) + (text.length > 240 ? "<span class='ellipsis'>…</span>" : "");
     }
     const flat = text.replace(/\s+/g, " ");
+    // Scan all matches and pick the LONGEST one to center on. This means
+    // a phrase like "vital city" wins over a standalone "city" appearing
+    // earlier in the same document.
     const flatRe = new RegExp(re.source, re.flags);
-    const fm = flatRe.exec(flat);
-    if (!fm) {
+    let best = null;
+    let m;
+    let scanned = 0;
+    while ((m = flatRe.exec(flat)) !== null) {
+      if (!best || m[0].length > best[0].length) best = m;
+      if (++scanned > 200) break;
+      if (m[0].length === 0) flatRe.lastIndex++;
+    }
+    if (!best) {
       return escapeHtml(flat.slice(0, 240)) + "<span class='ellipsis'>…</span>";
     }
-    const idx = fm.index;
+    const idx = best.index;
     const start = Math.max(0, idx - 120);
     const end = Math.min(flat.length, idx + 200);
     const before = start > 0 ? "<span class='ellipsis'>…</span>" : "";
