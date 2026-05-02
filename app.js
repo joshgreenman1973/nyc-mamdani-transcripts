@@ -490,9 +490,11 @@
   }
 
   function formatMonthShort(ym) {
-    const [y, m] = ym.split("-").map(Number);
+    // The archive is single-year for now; show just the month name to
+    // avoid users reading "Jan 26" as January 26th.
+    const [, m] = ym.split("-").map(Number);
     const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-    return `${months[m - 1]} ${String(y).slice(2)}`;
+    return months[m - 1];
   }
 
   // ---- render ----
