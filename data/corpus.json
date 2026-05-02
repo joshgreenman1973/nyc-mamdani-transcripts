@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-05-02T11:41:59Z",
+ "generated_at": "2026-05-01T21:37:50Z",
  "from_date": "2026-01-01",
  "source": "https://www.nyc.gov/mayors-office/news/",
  "total": 394,
@@ -41357,6 +41357,5 @@
    "mayor_word_count": 0,
    "has_mayor_quotes": false
   }
- ],
- "youtube_last_run": "2026-05-02T11:42:35Z"
+ ]
 }

@@ -490,11 +490,9 @@
   }
 
   function formatMonthShort(ym) {
-    // The archive is single-year for now; show just the month name to
-    // avoid users reading "Jan 26" as January 26th.
-    const [, m] = ym.split("-").map(Number);
+    const [y, m] = ym.split("-").map(Number);
     const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-    return months[m - 1];
+    return `${months[m - 1]} ${String(y).slice(2)}`;
   }
 
   // ---- render ----
@@ -517,11 +515,22 @@
       ? `${rows.length} item${rows.length === 1 ? "" : "s"} matching “${q}”${scopeNote}.`
       : `Showing ${rows.length} item${rows.length === 1 ? "" : "s"}${mayorOnly ? " (Mayor's words only)" : ""}.`;
 
-    // Build the highlight regex straight from the parsed query so phrases
-    // get highlighted as units (and outrank their constituent words).
-    const re = parsed && parsed.all && parsed.all.length
-      ? buildHighlightReFromParsed(parsed)
-      : null;
+    // Build highlight regex from parsed query: phrases highlight as
+    // whole units (longest-first so "vital city" wins over "vital" / "city").
+    let re = null;
+    if (parsed && parsed.all && parsed.all.length) {
+      const sorted = [...parsed.all].sort((a, b) => b.length - a.length);
+      const alts = sorted.map((s) => {
+        if (s.includes(" ")) {
+          return s.split(/\s+/).map(escapeRegex).join("\\s+");
+        }
+        return escapeRegex(s);
+      });
+      re = new RegExp("(" + alts.join("|") + ")", "giu");
+    } else if (q) {
+      const terms = extractTerms(q, rows);
+      if (terms.length) re = buildHighlightRe(terms);
+    }
 
     const frag = document.createDocumentFragment();
     rows.forEach((row, i) => {
@@ -530,25 +539,22 @@
     list.appendChild(frag);
   }
 
+  function extractTerms(q, rows) {
+    const set = new Set();
+    rows.forEach((r) => (r.terms || []).forEach((t) => set.add(t.toLowerCase())));
+    if (set.size === 0) {
+      tokenizeQuery(q).forEach((t) => set.add(t));
+    }
+    return Array.from(set);
+  }
+
   function escapeRegex(s) {
     return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   }
 
-  function buildHighlightReFromParsed(parsed) {
-    // Each phrase becomes word-with-flexible-whitespace; each token stays
-    // bare. Sort by length descending so the regex engine prefers longer
-    // (phrase) matches over shorter (token) ones at the same position.
-    const parts = parsed.all
-      .filter((s) => s && s.length >= 2)
-      .map((s) => {
-        if (s.includes(" ")) {
-          return s.split(/\s+/).map(escapeRegex).join("\\s+");
-        }
-        return escapeRegex(s);
-      })
-      .sort((a, b) => b.length - a.length);
-    if (!parts.length) return null;
-    return new RegExp("(" + parts.join("|") + ")", "giu");
+  function buildHighlightRe(terms) {
+    const sorted = [...terms].sort((a, b) => b.length - a.length);
+    return new RegExp("(" + sorted.map(escapeRegex).join("|") + ")", "giu");
   }
 
   function buildRow({ item }, idx, re, mayorOnly) {
@@ -740,22 +746,21 @@
       return escapeHtml(s) + (text.length > 240 ? "<span class='ellipsis'>…</span>" : "");
     }
     const flat = text.replace(/\s+/g, " ");
-    // Scan all matches and pick the LONGEST one to center on. This means
-    // a phrase like "vital city" wins over a standalone "city" appearing
-    // earlier in the same document.
+    // Prefer the longest match (phrases beat single tokens) so the snippet
+    // centers on "vital city" rather than the first standalone "city".
     const flatRe = new RegExp(re.source, re.flags);
-    let best = null;
+    let bestMatch = null;
     let m;
-    let scanned = 0;
     while ((m = flatRe.exec(flat)) !== null) {
-      if (!best || m[0].length > best[0].length) best = m;
-      if (++scanned > 200) break;
+      if (!bestMatch || m[0].length > bestMatch[0].length) bestMatch = m;
       if (m[0].length === 0) flatRe.lastIndex++;
+      // Cap iterations so we don't scan a 50K-word body forever.
+      if (flatRe.lastIndex > 30000) break;
     }
-    if (!best) {
+    if (!bestMatch) {
       return escapeHtml(flat.slice(0, 240)) + "<span class='ellipsis'>…</span>";
     }
-    const idx = best.index;
+    const idx = bestMatch.index;
     const start = Math.max(0, idx - 120);
     const end = Math.min(flat.length, idx + 200);
     const before = start > 0 ? "<span class='ellipsis'>…</span>" : "";
