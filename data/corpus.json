@@ -1,19 +1,49 @@
 {
- "generated_at": "2026-05-10T11:48:46Z",
+ "generated_at": "2026-05-11T13:46:09Z",
  "from_date": "2026-01-01",
  "source": "https://www.nyc.gov/mayors-office/news/",
- "total": 412,
+ "total": 414,
  "type_counts": {
+  "executive_order": 78,
   "other": 172,
   "press_conference": 79,
   "media_appearance": 24,
-  "executive_order": 76,
   "speech": 14,
   "video": 32,
   "ceremony": 3,
   "statement": 12
  },
  "items": [
+  {
+   "link": "/mayors-office/news/2026/05/emergency-executive-order-no--1-25.html",
+   "url": "https://www.nyc.gov/mayors-office/news/2026/05/emergency-executive-order-no--1-25.html",
+   "title": "Emergency Executive Order No. 1.25",
+   "date": "May 10, 2026",
+   "iso_date": "2026-05-10",
+   "type": "executive_order",
+   "text": "Download Emergency Executive Order No. 1.25\n\r\nWHEREAS, pursuant to a state of emergency first declared by Emergency Executive Order No. 241, dated September 15, 2021, and subsequent orders extending such state of emergency, compliance by the Department of Correction (DOC) with various laws and regulations has not been required; and\n\r\nWHEREAS, such orders issued prior to January 5, 2026 did not provide or require a plan for actions that would enable DOC to come into compliance with applicable laws and regulations for which compliance is not required as a result of such orders; and\n\r\nWHEREAS, the state of emergency first declared in 2021 continues for the present pending the expedited development and implementation of such plan;\n\r\nNOW, THEREFORE, pursuant to the powers vested in me as Mayor of the City of New York, by the laws of the State of New York and the City of New York, including but not limited to the New York Executive Law, the New York City Charter and the Administrative Code of the City of New York, and the common law authority to protect the public in the event of an emergency, it is hereby ordered:\n\r\nSection 1. Section 1 of Emergency Executive Order No. 1.24, dated May 5, 2026, is hereby extended for five (5) days.\n\r\n§ 2. DOC, in consultation with the Law Department, shall regularly update the Mayor regarding additional suspensions that can be lapsed to comply with the implementation action plan developed pursuant to Section 2 of Emergency Executive Order 1, dated January 5, 2026, and with applicable laws and regulations that presently do not apply pursuant to Emergency Executive Orders.\n\r\n§ 3. This Emergency Executive Order shall take effect immediately and shall remain in effect for five (5) days unless it is terminated or modified at an earlier date.\n\r\n \n\r\n_________________________\n\r\n Zohran Kwame Mamdani\n\r\n Mayor",
+   "word_count": 305,
+   "speakers": [],
+   "mayor_quotes": [],
+   "mayor_text": "",
+   "mayor_word_count": 0,
+   "has_mayor_quotes": false
+  },
+  {
+   "link": "/mayors-office/news/2026/05/emergency-executive-order-no--2-25.html",
+   "url": "https://www.nyc.gov/mayors-office/news/2026/05/emergency-executive-order-no--2-25.html",
+   "title": "Emergency Executive Order No. 2.25",
+   "date": "May 10, 2026",
+   "iso_date": "2026-05-10",
+   "type": "executive_order",
+   "text": "Download Emergency Executive Order No. 2.25\n\r\nWHEREAS, pursuant to a state of emergency first declared by Emergency Executive Order No. 224, dated October 7, 2022, and subsequent orders extending such state of emergency, the City has operated Humanitarian Emergency Response and Relief Centers to provide temporary housing in response to the substantial increase in new arrivals during recent years; and\n\r\n\n\r\nWHEREAS, such orders issued prior to January 5, 2026 did not provide or require a plan for actions that would be taken to eliminate the need for the suspensions and modifications of laws and rules effected by the orders; and\n\r\nWHEREAS, such state of emergency continues for the present pending the expedited development and implementation of such plan;\n\r\nNOW, THEREFORE, pursuant to the powers vested in me as Mayor of the City of New York, by the laws of the State of New York and the City of New York, including but not limited to the New York Executive Law, the New York City Charter and the Administrative Code of the City of New York, and the common law authority to protect the public in the event of an emergency:\n\r\nSection 1. Section 1 of Emergency Executive Order No. 2.24, dated May 5, 2026, is hereby extended for five (5) days.\n\r\n§ 2. The Department of Social Services and the Department of Homeless Services, in consultation with the Law Department, shall regularly update the Mayor on the implementation action plan and efforts to phase out the continued use of facilities that have been operated in reliance on the suspensions and modifications of laws and rules.\n\r\n§ 3. This Emergency Executive Order shall take effect immediately and shall remain in effect for five (5) days unless it is terminated or modified at an earlier date.\n\r\n \n\r\n_________________________\n\r\nZohran Kwame Mamdani\n\r\nMayor\n\r\n \n\r\n\r\n\r\nAPPENDIX\n\r\nList of laws and regulations for which suspension continues for any facility subject to this order, including any operated by or on behalf of DSS or DHS, and any other facility existing on the effective date of this order:\n\r\n1.      Sections 21-309 and 21-312 of the Administrative Code. (EEO No. 886, dated November 19, 2025, § 3, para. (d) and (g))\n\r\n2.      Sections 21-124. (EEO No. 886, dated November 19, 2025, § 3, para. (h)(i))",
+   "word_count": 375,
+   "speakers": [],
+   "mayor_quotes": [],
+   "mayor_text": "",
+   "mayor_word_count": 0,
+   "has_mayor_quotes": false
+  },
   {
    "link": "/mayors-office/news/2026/05/mayor-mamdani-designates-may-as-child-care-educator-appreciation.html",
    "url": "https://www.nyc.gov/mayors-office/news/2026/05/mayor-mamdani-designates-may-as-child-care-educator-appreciation.html",
@@ -42187,5 +42217,5 @@
    "has_mayor_quotes": false
   }
  ],
- "youtube_last_run": "2026-05-10T11:49:27Z"
+ "youtube_last_run": "2026-05-11T13:46:49Z"
 }
