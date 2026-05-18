@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-05-17T11:58:13Z",
+ "generated_at": "2026-05-18T14:28:44Z",
  "from_date": "2026-01-01",
  "source": "https://www.nyc.gov/mayors-office/news/",
- "total": 431,
+ "total": 432,
  "type_counts": {
-  "other": 182,
+  "other": 183,
   "press_conference": 82,
   "media_appearance": 25,
   "executive_order": 80,
@@ -14,6 +14,23 @@
   "statement": 12
  },
  "items": [
+  {
+   "link": "/mayors-office/news/2026/05/mayor-mamdani-doubles-number-of-3-k-seats-to-be-added-across-all.html",
+   "url": "https://www.nyc.gov/mayors-office/news/2026/05/mayor-mamdani-doubles-number-of-3-k-seats-to-be-added-across-all.html",
+   "title": "Mayor Mamdani Doubles Number of 3-K Seats To be Added Across All Five Boroughs",
+   "date": "May 18, 2026",
+   "iso_date": "2026-05-18",
+   "type": "other",
+   "text": "What you should know\n\n\r\nCity will now add 2,000 new 3-K seats, doubling earlier expansion plan across 56 ZIP codes\n\r\nEquitable waitlist process will allow families to express interest in newly added sites\n\r\nAdministration also announces opening of previously vacant child care center at 129 Van Brunt St.\n\r\n\r\n\nNEW YORK – Mayor Zohran Kwame Mamdani today announced that New York City will add 2,000 new 3-K seats for families across all five boroughs, building on the administration’s commitment to strengthen and stabilize the City’s early childhood education system.\n\r\nThe expansion deepens the City’s partnership with community-based child care providers, which will house a majority of the new seats. As part of the rollout, the City will launch an equitable waitlist process allowing families to express interest in newly added sites while prioritizing family choice, sibling preference and proximity to programs.\n\r\nThe administration also announced the opening of a new early childhood education center in Brooklyn’s Columbia Waterfront neighborhood, adding 63 new 3-K and Pre-K seats. After years of community demand and demonstrated need for additional child care capacity, the Mamdani administration is moving forward with opening the center after the previous administration left the building vacant.\n\r\n“On day eight of this administration, we made a promise to New Yorkers: we would fix the 3-K system and build a city where every family can count on affordable, high-quality child care. Today, we’re delivering on that promise,” said Mayor Mamdani. “Over the past few months, we have opened nine previously vacant child care centers, added thousands of 3-K seats where families need them most and started rebuilding trust with working families across this city. And we’re just getting started.”\n\r\n“We are excited to continue strengthening and expanding 3-K so that more children across all five boroughs can benefit from the joyful, engaging learning experiences these programs provide,” said New York City Public Schools Chancellor Kamar H. Samuels. “By adding seats and opening new centers, we are building on our commitment to making early childhood education more accessible for New York City families and giving our youngest learners a strong start from day one.”\n\r\nTo ensure the new seats are distributed equitably and to empower families to make the choices that work best for them, roughly 700 seats added after the application update period closed on April 24 will be filled through the waitlist process. Families can continue adding themselves to waitlists for all programs, and seats will be offered based on availability.\n\r\nWhile all families who applied to 3-K will receive an offer tomorrow, May 19, the waitlist process will allow families to express interest in newly available sites and potentially receive an offer at a preferred program closer to home.\n\r\nThe opening of the child care center at 129 Van Brunt St. marks the ninth previously vacant child care center opened by Mayor Mamdani and Chancellor Samuels to meet demand for affordable child care. The site will contribute 45 3-K seats to the administration’s total 2,000 newly added seats.\n\r\nIn February, Mayor Mamdani announced the opening of an Upper East Side early childhood education center after delays under the previous administration. The Mamdani administration later opened seven vacant centers across Brooklyn, the Bronx, and Queens.\n\r\n“Expanding access to high-quality early childhood education starts with creating safe, welcoming, and developmentally appropriate spaces where our youngest learners can thrive. The School Construction Authority is proud to partner with Mayor Mamdani and New York City Public Schools to prepare Pre-K and early childhood sites for students and families across the five boroughs,” said SCA President and CEO Nina Kubota. “The $200 million investment for Early Education in the current SCA Capital Plan reflects our continued commitment to ensure Pre-K spaces are ready to serve communities for years to come.”\n\r\n“After years of advocacy from parents, caregivers, local schools, and community members, I’m thrilled that the Mamdani administration is opening the 129 Van Brunt location as a childcare site serving families in the Columbia Waterfront,” said Council Member Shahana Hanif. “This fully built, publicly funded facility should never have sat empty while families searched for childcare seats close to home, but that is exactly what the previous administration allowed to happen. Parents organized, spoke out, and pushed for the resources their community needed. We are finally delivering long-overdue early childhood education seats for neighborhood families and making an important investment in the future of this community.”\n\r\nIn January, Mayor Mamdani and Governor Kathy Hochul announced a historic investment in universal 3-K, Pre-K and 2-K. Since then, the administration has continued expanding child care capacity in communities facing the highest excess demand. Earlier this year, the Mayor announced an expansion of more than 1,000 new 3-K seats across 56 zip codes – now doubled – as well as the City’s first free child care pilot program for municipal workers.\n\r\nThe Mayor also announced that the primary model for 2-K programming will be full-day and full-year. This fall, New York City will launch the first 2,000 free 2-K seats in the City’s history. Applications for 2-K enrollment open June 2.\n\r\n###",
+   "word_count": 844,
+   "speakers": [],
+   "mayor_quotes": [
+    "On day eight of this administration, we made a promise to New Yorkers: we would fix the 3-K system and build a city where every family can count on affordable, high-quality child care. Today, we’re delivering on that promise,"
+   ],
+   "mayor_text": "On day eight of this administration, we made a promise to New Yorkers: we would fix the 3-K system and build a city where every family can count on affordable, high-quality child care. Today, we’re delivering on that promise,",
+   "mayor_word_count": 39,
+   "has_mayor_quotes": true
+  },
   {
    "link": "/mayors-office/news/2026/05/mamdani-administration-begins-work-on-lexington-avenue-bus-lane-.html",
    "url": "https://www.nyc.gov/mayors-office/news/2026/05/mamdani-administration-begins-work-on-lexington-avenue-bus-lane-.html",
@@ -43164,5 +43181,5 @@
    "has_mayor_quotes": false
   }
  ],
- "youtube_last_run": "2026-05-17T11:58:53Z"
+ "youtube_last_run": "2026-05-18T14:29:31Z"
 }
