@@ -1,0 +1,11 @@
+{
+  "name": "nyc-mamdani-transcripts",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "embeddings": "node build_embeddings.mjs"
+  },
+  "devDependencies": {
+    "@huggingface/transformers": "^3.0.0"
+  }
+}

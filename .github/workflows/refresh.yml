@@ -31,6 +31,19 @@ jobs:
         # the daily refresh still commits the nyc.gov scrape.
         continue-on-error: true
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Rebuild plain-language search vectors if corpus changed
+        run: |
+          if git diff --quiet data/corpus.json; then
+            echo "Corpus unchanged — skipping embeddings."
+            exit 0
+          fi
+          npm install --no-audit --no-fund
+          node build_embeddings.mjs
+
       - name: Commit changes if any
         run: |
           git config user.name "github-actions[bot]"
@@ -39,6 +52,6 @@ jobs:
             echo "No changes."
             exit 0
           fi
-          git add data/corpus.json
+          git add data/corpus.json data/embeddings.json
           git commit -m "Refresh corpus: $(date -u +%Y-%m-%d)"
           git push

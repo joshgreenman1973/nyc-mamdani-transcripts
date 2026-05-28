@@ -65,6 +65,10 @@ executive orders.
 
 ## Search
 
+There are two search modes, toggled at the top of the page.
+
+### Keyword (default)
+
 - Full-text index built client-side with [MiniSearch](https://github.com/lucaong/minisearch).
 - Query terms are matched against title (boosted &times;3) and body text.
 - Multiple words are combined with AND.
@@ -72,6 +76,34 @@ executive orders.
 - Fuzzy matching tolerates one-character typos on longer terms.
 - Results are sorted by date (newest first) by default; toggle to relevance to
   rank by match strength.
+
+### Plain language (semantic)
+
+This mode lets you ask a question in ordinary words and ranks passages by
+**meaning** rather than exact wording, so "how will buses become free?" can
+surface relevant remarks even when they never use those words.
+
+- Each item's body is split into passages of roughly 900 characters (paragraph
+  boundaries first, with very long paragraphs split on sentence boundaries).
+- Every passage is converted to a 384-number vector ("embedding") using the
+  open-source [gte-small](https://huggingface.co/Xenova/gte-small) model. These
+  vectors are precomputed once (see `build_embeddings.mjs`), quantized to 8-bit
+  integers to keep the file small, and stored in `data/embeddings.json` alongside
+  each passage's location in the source text and the corpus's average vector.
+- When you type a question, the **same model runs in your browser** (loaded once
+  from a public CDN, about 35&nbsp;MB, then cached) and converts your question to
+  a vector. We subtract the corpus average from every vector first &mdash; without
+  that step, all of these speech passages look similar to each other and the
+  topical signal is lost. Passages are then ranked by cosine similarity; the
+  best-matching passage per document is shown.
+- Everything runs on your device. **No query ever leaves your browser**, there is
+  no server, no external search API, and no cost &mdash; the same reason the
+  archive can stay a free, static page.
+- The type, date, and "only the Mayor's words" filters still apply. Results below
+  a minimum similarity are dropped, and the top 50 are shown, ranked by relevance.
+- Limitation: semantic relevance is approximate. It is good at finding passages
+  that are *about* a topic, but for exact phrases or names, keyword mode is more
+  precise.
 
 ## Data fields stored per item
 
@@ -91,7 +123,11 @@ The scraper, frontend, and this document are all in
 [the project repository](https://github.com/joshgreenman1973/nyc-mamdani-transcripts).
 Anyone can re-run `python3 scrape.py` to regenerate `data/corpus.json` from
 scratch. The script uses only the Python standard library &mdash; no scraping
-dependencies, no API keys.
+dependencies, no API keys. To regenerate the plain-language search vectors,
+run `npm install` then `node build_embeddings.mjs`, which writes
+`data/embeddings.json`. The embedding model downloads from a public model hub;
+no API key or paid service is involved. The daily refresh job rebuilds the
+vectors automatically whenever the corpus changes.
 
 ## Independence
 

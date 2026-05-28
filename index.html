@@ -37,11 +37,22 @@
 
   <main class="wrap">
     <section class="controls" aria-label="Search and filters">
+      <div class="mode-toggle" role="tablist" aria-label="Search mode">
+        <button id="mode-keyword" class="mode-btn active" type="button" role="tab" aria-selected="true">Keyword</button>
+        <button id="mode-semantic" class="mode-btn" type="button" role="tab" aria-selected="false">Ask in plain language</button>
+      </div>
+
       <div class="search-row">
         <label class="visually-hidden" for="q">Search</label>
         <input id="q" type="search" placeholder="Search — multiple words narrow (AND); use quotes for an exact phrase, e.g. &ldquo;rent freeze&rdquo;" autocomplete="off" />
         <button id="clear" type="button" aria-label="Clear search">&times;</button>
       </div>
+
+      <p class="mode-hint hidden" id="mode-hint">
+        Ask a question in your own words &mdash; results are ranked by meaning, not
+        exact wording. The first search loads a small language model in your
+        browser (about 35&nbsp;MB, cached afterward); everything runs on your device.
+      </p>
 
       <div class="topics" id="topics" aria-label="Suggested topics">
         <span class="topics-label">Try:</span>

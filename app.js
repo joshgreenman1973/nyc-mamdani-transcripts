@@ -40,6 +40,18 @@
   let DEBOUNCE_T = null;
   let URL_RESTORING = false; // suppress URL writes while loading params
 
+  // ---- plain-language (semantic) search ----
+  const SEM_CDN = "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1";
+  const SEM_MIN_COS = 0.22; // absolute floor on centered cosine
+  const SEM_MARGIN = 0.22; // also drop anything this far below the top hit
+  const SEM_MAX_ROWS = 50;
+  let MODE = "keyword"; // "keyword" | "semantic"
+  let EMB = null; // {dims, count, chunks:[{i,s,e}], vecs:Int8Array}
+  let EXTRACTOR = null; // transformers.js feature-extraction pipeline
+  let SEM_READY = false;
+  let SEM_LOADING = null; // in-flight load promise
+  let SEM_SEQ = 0; // guards against out-of-order async results
+
   // ---- boot ----
   // Cache-bust by the daily-refresh date so the browser re-fetches when a
   // new corpus is committed. The `generated_at` field changes daily.
@@ -63,6 +75,8 @@
       buildTopics();
       attachHandlers();
       restoreFromURL();
+      applyMode();
+      if (MODE === "semantic") ensureSemantic();
       runSearch();
     })
     .catch((err) => {
@@ -181,10 +195,156 @@
     $("#to").addEventListener("change", runSearch);
     $("#mayor-only").addEventListener("change", runSearch);
     $("#share").addEventListener("click", copyShareLink);
+    $("#mode-keyword").addEventListener("click", () => setMode("keyword"));
+    $("#mode-semantic").addEventListener("click", () => setMode("semantic"));
     window.addEventListener("popstate", () => {
       restoreFromURL();
+      applyMode();
       runSearch();
     });
+  }
+
+  function setMode(m) {
+    if (m === MODE) return;
+    MODE = m;
+    applyMode();
+    if (m === "semantic") ensureSemantic(); // warm up the model
+    runSearch();
+    $("#q").focus();
+  }
+
+  // Reflect MODE in the controls (button state, placeholder, hint).
+  function applyMode() {
+    const semantic = MODE === "semantic";
+    const kb = $("#mode-keyword");
+    const sb = $("#mode-semantic");
+    kb.classList.toggle("active", !semantic);
+    sb.classList.toggle("active", semantic);
+    kb.setAttribute("aria-selected", String(!semantic));
+    sb.setAttribute("aria-selected", String(semantic));
+    $("#mode-hint").classList.toggle("hidden", !semantic);
+    $("#q").placeholder = semantic
+      ? "Ask in plain language, e.g. how will buses become free?"
+      : "Search — multiple words narrow (AND); use quotes for an exact phrase, e.g. “rent freeze”";
+  }
+
+  // Lazy-load transformers.js (from CDN) and the precomputed passage vectors.
+  // Nothing here runs unless the user switches to plain-language mode, so
+  // keyword users never download the model.
+  function ensureSemantic() {
+    if (SEM_READY) return Promise.resolve();
+    if (SEM_LOADING) return SEM_LOADING;
+    SEM_LOADING = (async () => {
+      const [{ pipeline }, embData] = await Promise.all([
+        import(SEM_CDN),
+        fetch("data/embeddings.json?v=" + new Date().toISOString().slice(0, 10)).then((r) => {
+          if (!r.ok) throw new Error("embeddings " + r.status);
+          return r.json();
+        }),
+      ]);
+      const bytes = Uint8Array.from(atob(embData.vectors), (c) => c.charCodeAt(0));
+      const raw = new Int8Array(bytes.buffer);
+      const dims = embData.dims;
+      const count = embData.count;
+      const mean = Float32Array.from(embData.mean);
+      // Pre-center every passage vector against the corpus mean and renormalise
+      // to unit length, so a query dot-product is a true cosine on the centered
+      // vectors. This is what gives plain-language search its discrimination.
+      const cvecs = new Float32Array(count * dims);
+      for (let c = 0; c < count; c++) {
+        const base = c * dims;
+        let norm = 0;
+        for (let d = 0; d < dims; d++) {
+          const v = raw[base + d] / 127 - mean[d];
+          cvecs[base + d] = v;
+          norm += v * v;
+        }
+        norm = Math.sqrt(norm) || 1;
+        for (let d = 0; d < dims; d++) cvecs[base + d] /= norm;
+      }
+      EMB = { dims, count, chunks: embData.chunks, mean, cvecs };
+      EXTRACTOR = await pipeline("feature-extraction", embData.model);
+      SEM_READY = true;
+    })();
+    return SEM_LOADING;
+  }
+
+  // Embed the query, score every passage by cosine similarity, and keep the
+  // best-scoring passage per document.
+  async function semanticRank(q) {
+    await ensureSemantic();
+    const out = await EXTRACTOR(q, { pooling: "mean", normalize: true });
+    const { dims, count, chunks, cvecs, mean } = EMB;
+    // Center the query against the same corpus mean, then renormalise.
+    const qv = new Float32Array(dims);
+    let qn = 0;
+    for (let d = 0; d < dims; d++) {
+      const v = out.data[d] - mean[d];
+      qv[d] = v;
+      qn += v * v;
+    }
+    qn = Math.sqrt(qn) || 1;
+    for (let d = 0; d < dims; d++) qv[d] /= qn;
+
+    const best = new Map(); // itemIndex -> {cos, s, e}
+    for (let c = 0; c < count; c++) {
+      const base = c * dims;
+      let cos = 0;
+      for (let d = 0; d < dims; d++) cos += qv[d] * cvecs[base + d];
+      const ch = chunks[c];
+      const cur = best.get(ch.i);
+      if (!cur || cos > cur.cos) best.set(ch.i, { cos, s: ch.s, e: ch.e });
+    }
+    return best;
+  }
+
+  async function runSemanticSearch() {
+    const myseq = ++SEM_SEQ;
+    const q = $("#q").value.trim();
+    const enabledTypes = new Set($$("input[name=type]:checked").map((el) => el.value));
+    const fromIso = $("#from").value || "";
+    const toIso = $("#to").value || "";
+    const sortMode = $$("input[name=sort]:checked")[0]?.value || "relevance";
+    const mayorOnly = $("#mayor-only").checked;
+    refreshChipState();
+
+    $("#empty").classList.add("hidden");
+    $("#summary").textContent = SEM_READY
+      ? "Searching by meaning…"
+      : "Loading the language model (first time only, ~35 MB)…";
+
+    let best;
+    try {
+      best = await semanticRank(q);
+    } catch (err) {
+      $("#summary").textContent = "Could not load plain-language search: " + err.message;
+      return;
+    }
+    if (myseq !== SEM_SEQ) return; // a newer query superseded this one
+
+    let rows = [];
+    for (const [i, info] of best) {
+      const item = CORPUS.items[i];
+      if (!itemPasses(item, enabledTypes, mayorOnly)) continue;
+      if (!withinDate(item.iso_date, fromIso, toIso)) continue;
+      rows.push({ item, score: info.cos, terms: [], passage: { s: info.s, e: info.e } });
+    }
+    // Rank by relevance, then keep the cluster near the top: above an absolute
+    // floor and within a margin of the best hit. This adapts to each query so a
+    // sharp query returns a tight set and a vague one returns more.
+    rows.sort((a, b) => b.score - a.score);
+    const top = rows.length ? rows[0].score : 0;
+    const floor = Math.max(SEM_MIN_COS, top - SEM_MARGIN);
+    rows = rows.filter((r) => r.score >= floor).slice(0, SEM_MAX_ROWS);
+    if (sortMode === "date") {
+      rows.sort((a, b) => (b.item.iso_date || "").localeCompare(a.item.iso_date || ""));
+    }
+
+    LAST_RESULTS = rows;
+    writeURL({ q, fromIso, toIso, sortMode, mayorOnly, enabledTypes });
+    render(rows, q, mayorOnly, { all: [] }, true);
+    renderFrequency(rows, q);
+    refreshChipCounts(rows, q);
   }
 
   async function copyShareLink() {
@@ -218,6 +378,7 @@
   function restoreFromURL() {
     URL_RESTORING = true;
     const p = new URLSearchParams(window.location.search);
+    MODE = p.get("mode") === "semantic" ? "semantic" : "keyword";
     if (p.has("q")) $("#q").value = p.get("q");
     if (p.has("from")) $("#from").value = p.get("from");
     if (p.has("to")) $("#to").value = p.get("to");
@@ -241,6 +402,7 @@
   function writeURL(state) {
     if (URL_RESTORING) return;
     const p = new URLSearchParams();
+    if (MODE === "semantic") p.set("mode", "semantic");
     if (state.q) p.set("q", state.q);
     if (state.fromIso) p.set("from", state.fromIso);
     if (state.toIso) p.set("to", state.toIso);
@@ -285,6 +447,13 @@
 
   function runSearch() {
     const q = $("#q").value.trim();
+    // Plain-language mode handles a non-empty query asynchronously. With an
+    // empty query there's nothing to rank, so fall through to the shared
+    // date-sorted listing below.
+    if (MODE === "semantic" && q) {
+      runSemanticSearch();
+      return;
+    }
     const enabledTypes = new Set(
       $$("input[name=type]:checked").map((el) => el.value)
     );
@@ -496,7 +665,7 @@
   }
 
   // ---- render ----
-  function render(rows, q, mayorOnly, parsed) {
+  function render(rows, q, mayorOnly, parsed, semantic) {
     const list = $("#results");
     list.innerHTML = "";
     const empty = $("#empty");
@@ -505,15 +674,22 @@
     if (rows.length === 0) {
       empty.classList.remove("hidden");
       summary.textContent = q
-        ? `No matches for “${q}”${mayorOnly ? " in the Mayor's words" : ""}.`
+        ? semantic
+          ? `Nothing closely related to “${q}”${mayorOnly ? " in the Mayor's words" : ""}. Try rephrasing.`
+          : `No matches for “${q}”${mayorOnly ? " in the Mayor's words" : ""}.`
         : "No items match your filters.";
       return;
     }
     empty.classList.add("hidden");
     const scopeNote = mayorOnly ? " in the Mayor's words" : "";
-    summary.textContent = q
-      ? `${rows.length} item${rows.length === 1 ? "" : "s"} matching “${q}”${scopeNote}.`
-      : `Showing ${rows.length} item${rows.length === 1 ? "" : "s"}${mayorOnly ? " (Mayor's words only)" : ""}.`;
+    if (semantic) {
+      summary.textContent =
+        `${rows.length} item${rows.length === 1 ? "" : "s"} most related to “${q}”${scopeNote}, ranked by relevance.`;
+    } else {
+      summary.textContent = q
+        ? `${rows.length} item${rows.length === 1 ? "" : "s"} matching “${q}”${scopeNote}.`
+        : `Showing ${rows.length} item${rows.length === 1 ? "" : "s"}${mayorOnly ? " (Mayor's words only)" : ""}.`;
+    }
 
     // Build highlight regex from parsed query: phrases highlight as
     // whole units (longest-first so "vital city" wins over "vital" / "city").
@@ -539,6 +715,16 @@
     list.appendChild(frag);
   }
 
+  // Pull the matched passage out of an item's body for the semantic snippet.
+  function passageText(item, passage) {
+    const body = item.text || "";
+    let s = passage.s, e = passage.e;
+    const seg = body.slice(s, e).replace(/\s+/g, " ").trim();
+    const before = s > 0 ? "<span class='ellipsis'>…</span>" : "";
+    const after = e < body.length ? "<span class='ellipsis'>…</span>" : "";
+    return before + escapeHtml(seg) + after;
+  }
+
   function extractTerms(q, rows) {
     const set = new Set();
     rows.forEach((r) => (r.terms || []).forEach((t) => set.add(t.toLowerCase())));
@@ -557,12 +743,13 @@
     return new RegExp("(" + sorted.map(escapeRegex).join("|") + ")", "giu");
   }
 
-  function buildRow({ item }, idx, re, mayorOnly) {
+  function buildRow(row, idx, re, mayorOnly) {
+    const { item, passage } = row;
     const li = document.createElement("li");
     li.dataset.idx = idx;
 
-    const row = document.createElement("div");
-    row.className = "result-row";
+    const rowEl = document.createElement("div");
+    rowEl.className = "result-row";
 
     const meta = document.createElement("div");
     meta.className = "result-meta";
@@ -606,6 +793,11 @@
 
     const snip = document.createElement("p");
     snip.className = "result-snippet";
+    // Semantic results carry the best-matching passage; show it directly
+    // (there's no keyword regex to highlight in plain-language mode).
+    if (passage) {
+      snip.innerHTML = passageText(item, passage);
+    } else {
     let snipText;
     if (mayorOnly) {
       snipText = item.mayor_text || item.text || "";
@@ -627,6 +819,7 @@
       snipText = item.text || "";
     }
     snip.innerHTML = makeSnippet(snipText, re);
+    }
 
     const actions = document.createElement("div");
     actions.className = "result-actions";
@@ -664,9 +857,9 @@
       }
     }
 
-    row.append(meta, title, snip, actions);
-    row.addEventListener("click", () => toggleExpand(li, item, re, toggle, mayorOnly));
-    li.appendChild(row);
+    rowEl.append(meta, title, snip, actions);
+    rowEl.addEventListener("click", () => toggleExpand(li, item, re, toggle, mayorOnly));
+    li.appendChild(rowEl);
     return li;
   }
 
