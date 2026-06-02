@@ -35,6 +35,9 @@
   ];
 
   let CORPUS = null;
+  let THEMES = null; // data/topics.json: {taxonomy, months, monthly, totals, itemTopics, digest}
+  let TOPIC_FILTER = null; // active theme id restricting the result set, or null
+  let VIEW = "search"; // "search" | "trends"
   let MS = null;
   let LAST_RESULTS = [];
   let DEBOUNCE_T = null;
@@ -74,10 +77,24 @@
       buildIndex();
       buildTopics();
       attachHandlers();
-      restoreFromURL();
-      applyMode();
-      if (MODE === "semantic") ensureSemantic();
-      runSearch();
+      return fetch("data/topics.json?v=" + new Date().toISOString().slice(0, 10))
+        .then((r) => (r.ok ? r.json() : null))
+        .catch(() => null)
+        .then((t) => {
+          if (t) {
+            THEMES = t;
+            // Attach each item's tagged themes by index for the topic filter.
+            (t.itemTopics || []).forEach((ids, i) => {
+              if (CORPUS.items[i]) CORPUS.items[i]._topics = ids;
+            });
+            buildTrends();
+          }
+          restoreFromURL();
+          applyMode();
+          applyView();
+          if (MODE === "semantic") ensureSemantic();
+          runSearch();
+        });
     })
     .catch((err) => {
       $("#meta").textContent = "Could not load archive: " + err.message;
@@ -112,6 +129,131 @@
       b.addEventListener("click", () => toggleTopic(topic));
       wrap.appendChild(b);
     });
+  }
+
+  // ---- trends view (themes over time + monthly digest) ----
+  function buildTrends() {
+    if (!THEMES) return;
+    renderTrendLegend();
+    renderTrendChart();
+    renderDigest();
+  }
+
+  // Themes ordered by overall volume; clicking one filters the archive to it.
+  function topicsByVolume() {
+    return [...THEMES.taxonomy].sort(
+      (a, b) => (THEMES.totals[b.id] || 0) - (THEMES.totals[a.id] || 0)
+    );
+  }
+
+  function renderTrendLegend() {
+    const wrap = $("#trend-legend");
+    wrap.innerHTML = "";
+    topicsByVolume().forEach((t) => {
+      const n = THEMES.totals[t.id] || 0;
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "legend-chip";
+      b.dataset.topic = t.id;
+      b.innerHTML =
+        `<span class="legend-swatch" style="background:${t.color}"></span>` +
+        `<span class="legend-name">${escapeHtml(t.label)}</span>` +
+        `<span class="legend-count">${n}</span>`;
+      b.addEventListener("click", () => filterByTopic(t.id));
+      wrap.appendChild(b);
+    });
+  }
+
+  function renderTrendChart() {
+    const svg = $("#trend-chart");
+    const months = THEMES.months;
+    const order = topicsByVolume(); // legend order = stack order (biggest at base)
+    const totalsPerMonth = months.map((m) =>
+      order.reduce((s, t) => s + (THEMES.monthly[m]?.[t.id] || 0), 0)
+    );
+    const maxTotal = Math.max(...totalsPerMonth, 1);
+
+    const W = 760, H = 300, padL = 8, padR = 8, padT = 18, padB = 34;
+    const plotW = W - padL - padR;
+    const plotH = H - padT - padB;
+    const slot = plotW / months.length;
+    const barW = Math.min(74, slot * 0.66);
+
+    svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+    svg.setAttribute("width", "100%");
+    svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
+
+    let html = "";
+    months.forEach((m, mi) => {
+      const x = padL + mi * slot + (slot - barW) / 2;
+      let yCursor = padT + plotH; // start at baseline, stack upward
+      order.forEach((t) => {
+        const c = THEMES.monthly[m]?.[t.id] || 0;
+        if (!c) return;
+        const segH = (c / maxTotal) * plotH;
+        yCursor -= segH;
+        html +=
+          `<rect class="trend-seg" data-topic="${t.id}" data-month="${m}" ` +
+          `x="${x.toFixed(1)}" y="${yCursor.toFixed(1)}" width="${barW.toFixed(1)}" height="${segH.toFixed(1)}" ` +
+          `fill="${t.color}"><title>${formatMonthLong(m)} — ${escapeHtml(t.label)}: ${c} item${c === 1 ? "" : "s"}</title></rect>`;
+      });
+      // Month label.
+      const cx = x + barW / 2;
+      html += `<text x="${cx.toFixed(1)}" y="${H - 16}" text-anchor="middle" class="trend-xlabel">${formatMonthShort(m)}</text>`;
+      // Partial-month note for the most recent month if it has few days.
+      html += `<text x="${cx.toFixed(1)}" y="${(padT - 5).toFixed(1)}" text-anchor="middle" class="trend-total">${totalsPerMonth[mi]}</text>`;
+    });
+    svg.innerHTML = html;
+
+    // Clicking a segment filters to that theme.
+    svg.querySelectorAll(".trend-seg").forEach((seg) => {
+      seg.style.cursor = "pointer";
+      seg.addEventListener("click", () => filterByTopic(seg.dataset.topic));
+    });
+    $("#trend-caption").textContent =
+      `Items tagged per theme, by month (an item can carry up to three themes). Number above each column is that month's total tags. Click a segment to read those items.`;
+  }
+
+  function renderDigest() {
+    const wrap = $("#digest");
+    wrap.innerHTML = "";
+    // Most recent month first.
+    const months = [...THEMES.digest].reverse();
+    months.forEach((dg) => {
+      if (!dg.topTopics.length) return;
+      const card = document.createElement("article");
+      card.className = "digest-card";
+      const themeList = dg.topTopics
+        .map((t) => `<button type="button" class="digest-theme" data-topic="${t.id}">${escapeHtml(t.label)} <span>${t.count}</span></button>`)
+        .join("");
+      let quotesHtml = "";
+      dg.topTopics.forEach((tt) => {
+        const qs = dg.quotes[tt.id] || [];
+        qs.forEach((q) => {
+          quotesHtml +=
+            `<blockquote class="digest-quote">` +
+            `<span class="digest-quote-theme" style="color:${(THEMES.taxonomy.find((x) => x.id === tt.id) || {}).color || ""}">${escapeHtml(tt.label)}</span>` +
+            `&ldquo;${escapeHtml(q.text)}&rdquo;` +
+            `<cite><a href="${q.url}" target="_blank" rel="noopener">${escapeHtml(q.title)} ↗</a></cite>` +
+            `</blockquote>`;
+        });
+      });
+      card.innerHTML =
+        `<h4 class="digest-month vc-gascogne">${formatMonthLong(dg.month)}</h4>` +
+        `<p class="digest-meta">${dg.items} item${dg.items === 1 ? "" : "s"} · leading themes:</p>` +
+        `<div class="digest-themes">${themeList}</div>` +
+        `<div class="digest-quotes">${quotesHtml}</div>`;
+      card.querySelectorAll(".digest-theme").forEach((b) => {
+        b.addEventListener("click", () => filterByTopic(b.dataset.topic));
+      });
+      wrap.appendChild(card);
+    });
+  }
+
+  function formatMonthLong(ym) {
+    const [y, m] = ym.split("-").map(Number);
+    const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    return `${months[m - 1]} ${y}`;
   }
 
   // Topic chip clicks toggle a token (or quoted phrase) in/out of the query.
@@ -197,6 +339,8 @@
     $("#share").addEventListener("click", copyShareLink);
     $("#mode-keyword").addEventListener("click", () => setMode("keyword"));
     $("#mode-semantic").addEventListener("click", () => setMode("semantic"));
+    $("#view-search").addEventListener("click", () => setView("search"));
+    $("#view-trends").addEventListener("click", () => setView("trends"));
     window.addEventListener("popstate", () => {
       restoreFromURL();
       applyMode();
@@ -226,6 +370,64 @@
     $("#q").placeholder = semantic
       ? "Ask in plain language, e.g. how will buses become free?"
       : "Search — multiple words narrow (AND); use quotes for an exact phrase, e.g. “rent freeze”";
+  }
+
+  // ---- views (search vs. trends) ----
+  function setView(v) {
+    if (v === VIEW) return;
+    VIEW = v;
+    applyView();
+  }
+
+  function applyView() {
+    const trends = VIEW === "trends";
+    const sv = $("#view-search");
+    const tv = $("#view-trends");
+    sv.classList.toggle("active", !trends);
+    tv.classList.toggle("active", trends);
+    sv.setAttribute("aria-selected", String(!trends));
+    tv.setAttribute("aria-selected", String(trends));
+    $("#search-view").classList.toggle("hidden", trends);
+    $("#trends-view").classList.toggle("hidden", !trends);
+    // Hide the Trends tab entirely if topics didn't load.
+    tv.classList.toggle("hidden", !THEMES);
+    if (trends) window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  // Restrict the result set to a tagged theme, jump to search, and show a pill.
+  function filterByTopic(id) {
+    TOPIC_FILTER = id || null;
+    renderActiveTopic();
+    setView("search");
+    runSearch();
+  }
+
+  function topicLabel(id) {
+    const t = (THEMES && THEMES.taxonomy) ? THEMES.taxonomy.find((x) => x.id === id) : null;
+    return t ? t.label : id;
+  }
+
+  function renderActiveTopic() {
+    const el = $("#active-topic");
+    if (!TOPIC_FILTER) {
+      el.classList.add("hidden");
+      el.innerHTML = "";
+      return;
+    }
+    el.classList.remove("hidden");
+    el.innerHTML =
+      `<span class="active-topic-label">Theme: <strong>${escapeHtml(topicLabel(TOPIC_FILTER))}</strong></span>` +
+      `<button type="button" class="active-topic-clear" aria-label="Clear theme filter">Clear &times;</button>`;
+    el.querySelector(".active-topic-clear").addEventListener("click", () => {
+      TOPIC_FILTER = null;
+      renderActiveTopic();
+      runSearch();
+    });
+  }
+
+  function topicPasses(item) {
+    if (!TOPIC_FILTER) return true;
+    return Array.isArray(item._topics) && item._topics.includes(TOPIC_FILTER);
   }
 
   // Lazy-load transformers.js (from CDN) and the precomputed passage vectors.
@@ -327,6 +529,7 @@
       const item = CORPUS.items[i];
       if (!itemPasses(item, enabledTypes, mayorOnly)) continue;
       if (!withinDate(item.iso_date, fromIso, toIso)) continue;
+      if (!topicPasses(item)) continue;
       rows.push({ item, score: info.cos, terms: [], passage: { s: info.s, e: info.e } });
     }
     // Rank by relevance, then keep the cluster near the top: above an absolute
@@ -548,6 +751,8 @@
         });
       }
     }
+
+    if (TOPIC_FILTER) rows = rows.filter(({ item }) => topicPasses(item));
 
     if (sortMode === "date" || q.length === 0) {
       rows.sort((a, b) =>

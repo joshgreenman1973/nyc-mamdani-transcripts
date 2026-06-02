@@ -35,14 +35,16 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Rebuild plain-language search vectors if corpus changed
+      - name: Rebuild search vectors and topic trends if corpus changed
         run: |
           if git diff --quiet data/corpus.json; then
-            echo "Corpus unchanged — skipping embeddings."
+            echo "Corpus unchanged — skipping rebuild."
             exit 0
           fi
           npm install --no-audit --no-fund
           node build_embeddings.mjs
+          # Topic tagging + trend matrix + extractive digest. No deps, no API.
+          node build_topics.mjs
 
       - name: Commit changes if any
         run: |
@@ -52,6 +54,6 @@ jobs:
             echo "No changes."
             exit 0
           fi
-          git add data/corpus.json data/embeddings.json
+          git add data/corpus.json data/embeddings.json data/topics.json
           git commit -m "Refresh corpus: $(date -u +%Y-%m-%d)"
           git push

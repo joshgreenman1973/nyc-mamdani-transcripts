@@ -36,7 +36,14 @@
   </header>
 
   <main class="wrap">
+    <nav class="view-tabs" role="tablist" aria-label="View">
+      <button id="view-search" class="view-tab active" type="button" role="tab" aria-selected="true">Search the archive</button>
+      <button id="view-trends" class="view-tab" type="button" role="tab" aria-selected="false">Trends &amp; themes</button>
+    </nav>
+
+    <div id="search-view">
     <section class="controls" aria-label="Search and filters">
+      <div class="active-topic hidden" id="active-topic" aria-live="polite"></div>
       <div class="mode-toggle" role="tablist" aria-label="Search mode">
         <button id="mode-keyword" class="mode-btn active" type="button" role="tab" aria-selected="true">Keyword</button>
         <button id="mode-semantic" class="mode-btn" type="button" role="tab" aria-selected="false">Ask in plain language</button>
@@ -105,6 +112,34 @@
     <p id="empty" class="empty hidden">
       No matches. Try a different word, broaden the type filters, or expand the date range.
     </p>
+    </div><!-- /#search-view -->
+
+    <section id="trends-view" class="trends hidden" aria-label="Trends and themes">
+      <div class="trends-intro">
+        <h2 class="vc-gascogne">What the Mayor talks about</h2>
+        <p class="trends-lede">
+          Every item is sorted into policy themes from a published keyword list.
+          Each bar shows how many items touched a theme that month &mdash; an item
+          can count toward more than one. Click any theme to read those items, or
+          pick a month below to see representative quotes in the Mayor&rsquo;s own
+          words. <a href="METHODOLOGY.md">How themes are assigned &amp; their limits</a>.
+        </p>
+      </div>
+
+      <div class="trend-legend" id="trend-legend" aria-label="Themes — click to filter"></div>
+
+      <figure class="trend-figure">
+        <svg id="trend-chart" role="img" aria-label="Items by theme and month"></svg>
+        <figcaption id="trend-caption">Items tagged per theme, by month.</figcaption>
+      </figure>
+
+      <h3 class="digest-heading vc-gascogne">Monthly digest</h3>
+      <p class="digest-note">
+        The leading themes each month, with verbatim quotes from the Mayor &mdash;
+        selected automatically by theme keyword, not paraphrased. Each links to its source.
+      </p>
+      <div class="digest" id="digest"></div>
+    </section>
   </main>
 
   <footer class="page-footer">

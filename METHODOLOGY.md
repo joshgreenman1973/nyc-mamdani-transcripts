@@ -105,6 +105,73 @@ surface relevant remarks even when they never use those words.
   that are *about* a topic, but for exact phrases or names, keyword mode is more
   precise.
 
+## Trends &amp; themes
+
+The **Trends &amp; themes** tab summarizes *what* the Mayor talks about and how
+that changes month to month. Like everything else here, the method is simple and
+fully published &mdash; no machine-learning model, no API, and nothing hidden.
+
+### How items are tagged
+
+- Each item is scanned for the keywords listed below. A keyword counts only as a
+  **whole word**, case-insensitively, so "rent" does not match "different" and
+  "ICE" does not match "price".
+- An item is tagged with a theme when that theme is hit **three or more times**,
+  **or** when **two or more different keywords** from its list appear. A single
+  passing mention is not enough &mdash; this stops a wide-ranging press conference
+  from being tagged with every theme it grazes.
+- We then keep only an item's **top three** themes (by number of hits), so the
+  chart reflects what an event was mainly about. About one in five items match no
+  theme strongly and are left untagged.
+- A bar's height is the **count of items** tagged with each theme that month; an
+  item can count toward up to three themes, so columns can total more than the
+  number of items that month. The most recent month is partial (month-to-date).
+
+### The full keyword list
+
+This is the entire lexicon. It is editorial, not exhaustive &mdash; it covers the
+recurring policy themes of this administration, and it can be extended. The live
+version is in `build_topics.mjs` and `data/topics.json`.
+
+| Theme | Keywords (whole-word, case-insensitive) |
+|-------|------------------------------------------|
+| Housing & rent | rent, rent freeze, rent-stabilized, rent stabilized, housing, affordable housing, NYCHA, public housing, CityFHEPS, FHEPS, eviction, evicted, landlord, tenant, tenants, Section 8, housing voucher, homeless, homelessness, shelter |
+| Transit & buses | subway, subways, bus, buses, free buses, fare, fares, MTA, transit, congestion pricing, straphangers, commute, commuters |
+| Public safety | police, NYPD, officers, crime, shooting, shootings, gun, guns, public safety, precinct, violence, violent, homicide, subway safety, police commissioner |
+| Immigration | ICE, immigrant, immigrants, immigration, deportation, deport, deported, asylum, sanctuary, migrant, migrants, undocumented |
+| Child care & schools | child care, childcare, universal childcare, day care, daycare, pre-K, 3-K, schools, public schools, students, teachers, CUNY, education, DOE, Department of Education |
+| Cost of living | affordability, affordable, cost of living, groceries, grocery, city-owned grocery, prices, working-class, working class, minimum wage, living wage, wages, cost-of-living |
+| Jobs & labor | union, unions, labor, workers, worker, prevailing wage, jobs, hiring, apprenticeship, collective bargaining, DC 37, unionized |
+| Health & food | health, hospital, hospitals, mental health, Medicaid, Medicare, SNAP, food assistance, food stamps, public health, health care, healthcare, overdose |
+| Federal & Trump | Trump, federal government, Washington, White House, the administration, federal funding, federal cuts, DOJ, Department of Justice, tariffs, Congress |
+| Albany & the state | Albany, Hochul, Governor, state legislature, New York State, state budget, state lawmakers, the legislature, assembly, state senate |
+| Budget & taxes | budget, taxes, tax, revenue, fiscal, deficit, millionaire, millionaires, spending, comptroller, tax the rich |
+| Climate & environment | climate, environment, emissions, clean energy, renewable, extreme heat, flooding, resilience, green, solar, Local Law 97 |
+
+### The monthly digest
+
+For each month, the digest lists that month's leading themes and shows **verbatim
+quotes from the Mayor** under each. Quote selection is deterministic and
+extractive &mdash; we never paraphrase, summarize, or generate text:
+
+- Candidates are the Mayor's attributed quotes inside press releases plus his own
+  transcript turns, split into sentences and limited to a readable length
+  (roughly 60&ndash;320 characters).
+- Each candidate is scored by how many of the theme's keywords it contains; the
+  highest-scoring, then shortest, one or two are shown, with near-duplicates
+  removed. Every quote links to its source on nyc.gov.
+
+### What this misses
+
+- Keyword tagging catches a theme only when one of the listed words appears. A
+  remark about housing that never uses a housing keyword will be missed, and a
+  theme outside the list is not tracked at all.
+- A keyword can occasionally land in an unrelated context (for example, "green"
+  meaning a color rather than the environment). The multi-hit threshold reduces
+  but does not eliminate this.
+- The digest surfaces *representative* quotes by keyword density, not the single
+  most newsworthy line; treat it as a starting point, then read the full items.
+
 ## Data fields stored per item
 
 | Field         | Description                                              |
@@ -126,8 +193,11 @@ scratch. The script uses only the Python standard library &mdash; no scraping
 dependencies, no API keys. To regenerate the plain-language search vectors,
 run `npm install` then `node build_embeddings.mjs`, which writes
 `data/embeddings.json`. The embedding model downloads from a public model hub;
-no API key or paid service is involved. The daily refresh job rebuilds the
-vectors automatically whenever the corpus changes.
+no API key or paid service is involved. To regenerate the theme tags, trend
+matrix, and monthly digest, run `node build_topics.mjs`, which writes
+`data/topics.json` using only the Node standard library (no dependencies, no
+model, no API). The daily refresh job rebuilds the vectors and the topic trends
+automatically whenever the corpus changes.
 
 ## Independence
 

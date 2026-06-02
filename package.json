@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "embeddings": "node build_embeddings.mjs"
+    "embeddings": "node build_embeddings.mjs",
+    "topics": "node build_topics.mjs"
   },
   "devDependencies": {
     "@huggingface/transformers": "^3.0.0"
