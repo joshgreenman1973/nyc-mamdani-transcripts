@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-06-13T11:37:57Z",
+ "generated_at": "2026-06-14T11:42:29Z",
  "from_date": "2026-01-01",
  "source": "https://www.nyc.gov/mayors-office/news/",
- "total": 542,
+ "total": 543,
  "type_counts": {
+  "ceremony": 9,
   "other": 243,
-  "ceremony": 8,
   "media_appearance": 37,
   "press_conference": 98,
   "executive_order": 91,
@@ -14,6 +14,21 @@
   "statement": 12
  },
  "items": [
+  {
+   "link": "/mayors-office/news/2026/06/mayor-mamdani-announces-ticker-tape-parade-and-city-hall-ceremon.html",
+   "url": "https://www.nyc.gov/mayors-office/news/2026/06/mayor-mamdani-announces-ticker-tape-parade-and-city-hall-ceremon.html",
+   "title": "Mayor Mamdani Announces Ticker-Tape Parade and City Hall Ceremony to Celebrate Knicks Championship",
+   "date": "June 13, 2026",
+   "iso_date": "2026-06-13",
+   "type": "ceremony",
+   "text": "What you should know\n\n\r\nNew York Knicks take down San Antonio Spurs in Game 5 to win team’s first NBA championship since 1973\n\r\nCity Hall and municipal buildings across New York City will shine blue and orange\n\r\nCity to release further details and media RSVP information for ticker-tape parade and City Hall ceremony on Sunday, June 14\n\r\n\r\n\nNEW YORK – After the New York Knicks clinched the National Basketball Association (NBA) Championship tonight, Mayor Zohran Kwame Mamdani announced that New York City will host a ticker-tape parade and City Hall ceremony honoring the team and awarding Keys to the City on Thursday, June 18.\n\r\nThe celebration will mark the first ticker-tape parade in Knicks history and honor a team that delivered an NBA championship to a city that has waited generations for this moment.\n\r\nAdditional details — including parade logistics, ceremony information and media RSVP instructions — will be released tomorrow, Sunday, June 14.\n\r\n“For more than 50 years, New Yorkers have waited for this moment. Through near misses, heartbreak and a hope that every year could be our year, this city never stopped believing in the Knicks. And this team fulfilled that hope with grit, resilience and heart — just like the five boroughs itself,” said Mayor Mamdani. “New Yorkers have cheered for our team from packed living rooms in the Bronx to watch parties in Brooklyn, from bars in Queens to Staten Island to Manhattan, and Madison Square Garden itself. Now it’s time for our city to celebrate together. Bing bong.”\n\r\nMayor Mamdani also announced that City Hall and municipal buildings across the city will be illuminated in blue and orange on Thursday, June 18 to celebrate the victory.\n\r\nIn addition to City Hall, the following City buildings will also be illuminated in blue and orange on the night of Thursday, June 18 in honor of the New York Knicks:  \n\r\n\r\nThe David N. Dinkins Manhattan Municipal Building: 1 Centre Street, New York, NY 10007 \n\r\nBrooklyn Borough Hall: 209 Joralemon Street, Brooklyn, NY 11201 \n\r\n\r\nAdditional buildings may be lit as well.\n\r\n###",
+   "word_count": 343,
+   "speakers": [],
+   "mayor_quotes": [],
+   "mayor_text": "What you should know\n\n\r\nNew York Knicks take down San Antonio Spurs in Game 5 to win team’s first NBA championship since 1973\n\r\nCity Hall and municipal buildings across New York City will shine blue and orange\n\r\nCity to release further details and media RSVP information for ticker-tape parade and City Hall ceremony on Sunday, June 14\n\r\n\r\n\nNEW YORK – After the New York Knicks clinched the National Basketball Association (NBA) Championship tonight, Mayor Zohran Kwame Mamdani announced that New York City will host a ticker-tape parade and City Hall ceremony honoring the team and awarding Keys to the City on Thursday, June 18.\n\r\nThe celebration will mark the first ticker-tape parade in Knicks history and honor a team that delivered an NBA championship to a city that has waited generations for this moment.\n\r\nAdditional details — including parade logistics, ceremony information and media RSVP instructions — will be released tomorrow, Sunday, June 14.\n\r\n“For more than 50 years, New Yorkers have waited for this moment. Through near misses, heartbreak and a hope that every year could be our year, this city never stopped believing in the Knicks. And this team fulfilled that hope with grit, resilience and heart — just like the five boroughs itself,” said Mayor Mamdani. “New Yorkers have cheered for our team from packed living rooms in the Bronx to watch parties in Brooklyn, from bars in Queens to Staten Island to Manhattan, and Madison Square Garden itself. Now it’s time for our city to celebrate together. Bing bong.”\n\r\nMayor Mamdani also announced that City Hall and municipal buildings across the city will be illuminated in blue and orange on Thursday, June 18 to celebrate the victory.\n\r\nIn addition to City Hall, the following City buildings will also be illuminated in blue and orange on the night of Thursday, June 18 in honor of the New York Knicks:  \n\r\n\r\nThe David N. Dinkins Manhattan Municipal Building: 1 Centre Street, New York, NY 10007 \n\r\nBrooklyn Borough Hall: 209 Joralemon Street, Brooklyn, NY 11201 \n\r\n\r\nAdditional buildings may be lit as well.\n\r\n###",
+   "mayor_word_count": 343,
+   "has_mayor_quotes": false
+  },
   {
    "link": "/mayors-office/news/2026/06/mayor-mamdani-announceswinner-of-nyc-2-k-jingle-contest.html",
    "url": "https://www.nyc.gov/mayors-office/news/2026/06/mayor-mamdani-announceswinner-of-nyc-2-k-jingle-contest.html",
@@ -50085,5 +50100,5 @@
    "has_mayor_quotes": false
   }
  ],
- "youtube_last_run": "2026-06-13T11:38:50Z"
+ "youtube_last_run": "2026-06-14T11:43:17Z"
 }
