@@ -13,7 +13,9 @@ from __future__ import annotations
 
 import html
 import json
+import os
 import re
+import subprocess
 import sys
 import time
 from pathlib import Path
@@ -456,7 +458,30 @@ def main() -> int:
     CORPUS.write_text(json.dumps(bundle, ensure_ascii=False, indent=1))
     print(f"\nWrote {CORPUS} — {len(out)} items ({new_count} newly fetched).")
     print("Type counts:", type_counts)
+
+    _run_chained_scrapers()
     return 0
+
+
+def _run_chained_scrapers() -> None:
+    """In CI, run the external + Council scrapers after the nyc.gov scrape.
+
+    The daily GitHub Actions workflow already runs this script, but editing the
+    workflow file to add steps requires an OAuth token with `workflow` scope we
+    don't have. Chaining here lets the existing workflow pick up the new sources
+    without any workflow-file change. Gated to CI (GITHUB_ACTIONS) so a local
+    `python3 scrape.py` stays a pure nyc.gov scrape. Fully guarded: a failure in
+    a chained scraper never fails this one.
+    """
+    if not os.environ.get("GITHUB_ACTIONS"):
+        return
+    for script in ("scrape_external.py", "scrape_council.py"):
+        path = Path(__file__).parent / script
+        try:
+            print(f"\n[chained] running {script} …", flush=True)
+            subprocess.run([sys.executable, str(path)], check=False, timeout=2400)
+        except Exception as e:  # noqa: BLE001 — must never sink the main scrape
+            print(f"[chained] {script} failed (non-fatal): {e}", file=sys.stderr)
 
 
 if __name__ == "__main__":

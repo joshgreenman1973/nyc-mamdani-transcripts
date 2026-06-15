@@ -90,14 +90,33 @@ def event_transcript_attachments(event_id: int) -> list[dict]:
     return out
 
 
-def pdf_to_text(data: bytes) -> str:
+def _ensure_pdfminer():
+    """Import pdfminer's extract_text, installing pdfminer.six on the fly if
+    needed. Self-installing avoids requiring a workflow-file edit (which needs an
+    OAuth `workflow` scope we don't have) just to add a pip dependency."""
     try:
-        from io import BytesIO
         from pdfminer.high_level import extract_text
+        return extract_text
     except ImportError:
-        print("  pdfminer.six not installed — cannot extract hearing PDFs.", file=sys.stderr)
+        pass
+    try:
+        import subprocess
+        print("  installing pdfminer.six …", file=sys.stderr)
+        subprocess.run([sys.executable, "-m", "pip", "install", "--quiet", "pdfminer.six"],
+                       check=False, timeout=300)
+        from pdfminer.high_level import extract_text
+        return extract_text
+    except Exception as e:  # noqa: BLE001
+        print(f"  pdfminer.six unavailable — cannot extract hearing PDFs: {e}", file=sys.stderr)
+        return None
+
+
+def pdf_to_text(data: bytes) -> str:
+    extract_text = _ensure_pdfminer()
+    if extract_text is None:
         return ""
     try:
+        from io import BytesIO
         return extract_text(BytesIO(data)) or ""
     except Exception as e:  # noqa: BLE001 — pdfminer raises a zoo of errors
         print(f"  PDF extract failed: {e}", file=sys.stderr)
