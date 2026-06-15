@@ -1,19 +1,518 @@
 {
- "generated_at": "2026-06-14T11:42:29Z",
+ "generated_at": "2026-06-15T13:05:00Z",
  "from_date": "2026-01-01",
  "source": "https://www.nyc.gov/mayors-office/news/",
- "total": 543,
+ "total": 549,
  "type_counts": {
+  "media_appearance": 41,
+  "executive_order": 93,
   "ceremony": 9,
   "other": 243,
-  "media_appearance": 37,
   "press_conference": 98,
-  "executive_order": 91,
   "speech": 21,
   "video": 32,
   "statement": 12
  },
  "items": [
+  {
+   "link": "/mayors-office/news/2026/06/transcript--mayor-mamdani-appears-live-on-1010-wins--92-3-fm-.html",
+   "url": "https://www.nyc.gov/mayors-office/news/2026/06/transcript--mayor-mamdani-appears-live-on-1010-wins--92-3-fm-.html",
+   "title": "Transcript: Mayor Mamdani Appears Live on 1010 Wins (92.3 FM)",
+   "date": "June 14, 2026",
+   "iso_date": "2026-06-14",
+   "type": "media_appearance",
+   "text": "Kathleen Marple Kaleb: Yeah, the nail-biter of a Game Five ended in victory and a championship and quite the celebration — and some trouble — in the city. Joining us now live to talk about exactly how things are going and about what we can expect to see next is Mayor Mamdani. Good morning, sir.\n\r\nMayor Zohran Kwame Mamdani: Good morning. How's it going?\n\r\nKaleb: Good, how about you? How late a night for you?\n\r\nMayor Mamdani: You know, I went to sleep at 3:45 and I woke up asking myself: “Is this real”?\n\r\nKaleb: Okay, so how has the city done with security so far? You've heard some of the same things we have, that there have been some arrests and there was some violence and such. Are you pleased with how things have turned out, how things gone overall?\n\r\nMayor Mamdani: Well, I think first and foremost, [I have] just deep appreciation for the men and women of the NYPD who have helped to keep our city safe, not just last night, but frankly, over the course of the Finals and in general. And what we saw is the vast majority of Knicks fans who were celebrating responsibly, who've been waiting an entire lifetime for this moment. And as you said, there were a few New Yorkers who behaved in a manner that was unacceptable and we've said time and again, there's no tolerance for attacking individuals on the street, for violence — whether it be in general or against police officers. And I'm appreciative to the NYPD for the work they did last night to keep everyone safe.\n\r\nKaleb: Okay, so let's get some details on the big party that's coming up on Thursday. We understand there's going to be the parade through the Canyon of Heroes and the keys to the city, the whole traditional doodah. Tell us a little bit about that.\n\r\nMayor Mamdani: It's as you said, and it'll be the first time in Knicks' history that we have a ticker-tape parade, and it's going to be a moment where we give the first keys of the city of our administration to the Knicks. And we will be releasing additional details to New Yorkers over the next few days of how everyone can be a part of this moment, because I know, you know, we've been waiting for this for 53 years and it is one moment that none of us will ever forget.\n\r\nKaleb: Right, is it going to be the same route that it usually is? Are they planning on expanding the route or making any changes in order to include more folks so that more people can get involved if they want to?\n\r\nMayor Mamdani: So, those are going to be some of the details that we'll release in the next few days. But what I can tell you is we know the interest from New Yorkers and frankly, people across the country, is immense, in part because of how long people have been waiting and how incredible this team has been playing.\n\r\nKaleb: One more quick question: In the wake of last night and some of the things that happened last night, are you reevaluating some of this security and traffic plans to tighten up a little bit and prevent some of the stuff that happened last night?\n\r\nMayor Mamdani: You know, I think that what we saw is the NYPD able to perform the work that was needed across the city. And as you said, it's coming at a time when we have an overlap with the World Cup, as well as last night, there were overlaps with preplanned concerts as well. And we're going to continue to evaluate everything coming out of this, but I do think a lot of the circumstances from yesterday evening were specific and unique and we are looking forward to Thursday.\n\r\nKaleb: Thank you very much for joining us this morning to talk about it. Mayor Mamdani, good morning, sir. Thank you.\n\r\nMayor Mamdani: Real pleasure. Thank you for having me. All the best.\n\r\nKaleb: Go Knicks.\n\r\n###",
+   "word_count": 685,
+   "speakers": [
+    {
+     "speaker": "Kathleen Marple Kaleb",
+     "text": "Yeah, the nail-biter of a Game Five ended in victory and a championship and quite the celebration — and some trouble — in the city. Joining us now live to talk about exactly how things are going and about what we can expect to see next is Mayor Mamdani. Good morning, sir.",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Zohran Kwame Mamdani",
+     "text": "Good morning. How's it going?",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Kaleb",
+     "text": "Good, how about you? How late a night for you?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "You know, I went to sleep at 3:45 and I woke up asking myself: “Is this real”?",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Kaleb",
+     "text": "Okay, so how has the city done with security so far? You've heard some of the same things we have, that there have been some arrests and there was some violence and such. Are you pleased with how things have turned out, how things gone overall?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "Well, I think first and foremost, [I have] just deep appreciation for the men and women of the NYPD who have helped to keep our city safe, not just last night, but frankly, over the course of the Finals and in general. And what we saw is the vast majority of Knicks fans who were celebrating responsibly, who've been waiting an entire lifetime for this moment. And as you said, there were a few New Yorkers who behaved in a manner that was unacceptable and we've said time and again, there's no tolerance for attacking individuals on the street, for violence — whether it be in general or against police officers. And I'm appreciative to the NYPD for the work they did last night to keep everyone safe.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Kaleb",
+     "text": "Okay, so let's get some details on the big party that's coming up on Thursday. We understand there's going to be the parade through the Canyon of Heroes and the keys to the city, the whole traditional doodah. Tell us a little bit about that.",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "It's as you said, and it'll be the first time in Knicks' history that we have a ticker-tape parade, and it's going to be a moment where we give the first keys of the city of our administration to the Knicks. And we will be releasing additional details to New Yorkers over the next few days of how everyone can be a part of this moment, because I know, you know, we've been waiting for this for 53 years and it is one moment that none of us will ever forget.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Kaleb",
+     "text": "Right, is it going to be the same route that it usually is? Are they planning on expanding the route or making any changes in order to include more folks so that more people can get involved if they want to?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "So, those are going to be some of the details that we'll release in the next few days. But what I can tell you is we know the interest from New Yorkers and frankly, people across the country, is immense, in part because of how long people have been waiting and how incredible this team has been playing.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Kaleb",
+     "text": "One more quick question: In the wake of last night and some of the things that happened last night, are you reevaluating some of this security and traffic plans to tighten up a little bit and prevent some of the stuff that happened last night?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "You know, I think that what we saw is the NYPD able to perform the work that was needed across the city. And as you said, it's coming at a time when we have an overlap with the World Cup, as well as last night, there were overlaps with preplanned concerts as well. And we're going to continue to evaluate everything coming out of this, but I do think a lot of the circumstances from yesterday evening were specific and unique and we are looking forward to Thursday.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Kaleb",
+     "text": "Thank you very much for joining us this morning to talk about it. Mayor Mamdani, good morning, sir. Thank you.",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "Real pleasure. Thank you for having me. All the best.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Kaleb",
+     "text": "Go Knicks.\n\n###",
+     "is_mayor": false
+    }
+   ],
+   "mayor_quotes": [],
+   "mayor_text": "Good morning. How's it going?\n\nYou know, I went to sleep at 3:45 and I woke up asking myself: “Is this real”?\n\nWell, I think first and foremost, [I have] just deep appreciation for the men and women of the NYPD who have helped to keep our city safe, not just last night, but frankly, over the course of the Finals and in general. And what we saw is the vast majority of Knicks fans who were celebrating responsibly, who've been waiting an entire lifetime for this moment. And as you said, there were a few New Yorkers who behaved in a manner that was unacceptable and we've said time and again, there's no tolerance for attacking individuals on the street, for violence — whether it be in general or against police officers. And I'm appreciative to the NYPD for the work they did last night to keep everyone safe.\n\nIt's as you said, and it'll be the first time in Knicks' history that we have a ticker-tape parade, and it's going to be a moment where we give the first keys of the city of our administration to the Knicks. And we will be releasing additional details to New Yorkers over the next few days of how everyone can be a part of this moment, because I know, you know, we've been waiting for this for 53 years and it is one moment that none of us will ever forget.\n\nSo, those are going to be some of the details that we'll release in the next few days. But what I can tell you is we know the interest from New Yorkers and frankly, people across the country, is immense, in part because of how long people have been waiting and how incredible this team has been playing.\n\nYou know, I think that what we saw is the NYPD able to perform the work that was needed across the city. And as you said, it's coming at a time when we have an overlap with the World Cup, as well as last night, there were overlaps with preplanned concerts as well. And we're going to continue to evaluate everything coming out of this, but I do think a lot of the circumstances from yesterday evening were specific and unique and we are looking forward to Thursday.\n\nReal pleasure. Thank you for having me. All the best.",
+   "mayor_word_count": 397,
+   "has_mayor_quotes": false
+  },
+  {
+   "link": "/mayors-office/news/2026/06/mayor-mamdani-appears-on-ms-now-s-connect-with-jacob-soboroff.html",
+   "url": "https://www.nyc.gov/mayors-office/news/2026/06/mayor-mamdani-appears-on-ms-now-s-connect-with-jacob-soboroff.html",
+   "title": "Transcript: Mayor Mamdani Appears on MS NOW’s Connect With Jacob Soboroff",
+   "date": "June 14, 2026",
+   "iso_date": "2026-06-14",
+   "type": "media_appearance",
+   "text": "Jacob Soboroff: Joining me now is New York City Mayor Zohran Mamdani. Mr. Mayor, it's great to see you. How you doing?\n\r\nMayor Zohran Kwame Mamdani: You know, what an incredible night. What an incredible morning. I'm doing great. How are you?\n\r\nSoboroff: I'm good. It's good to see you again. Did you get any sleep?\n\r\nMayor Mamdani: You know? I went to sleep at 3.45 a.m. And like most New Yorkers woke up asking myself: “Did that really happen”?\n\r\nSoboroff: And it did happen. I can confirm. I saw it at a bar in the Lower East Side. You are such a diehard Knicks fan. It has been so fun to watch you go through this playoff run. I saw a video of you celebrating in the streets a few hours ago. I think you were in the West Village. Is that where you were?\n\r\nMayor Mamdani: Yes, yes. That's where I was and I think it was the same thing no matter what part of the city you were in. People have been waiting for this for 53 years and there have been so many heartbreaks, so many near-misses, so many years, every year, where we've told ourselves it's the year and for it to actually happen now? I mean, there's nothing more we can ask for as New Yorkers.\n\r\n \n\r\nSoboroff: Talk to me about the energy in this city right now, with the World Cup going on, with the Knicks winning the championship. Have you ever felt this way in New York City before, seen New York city so united before?\n\r\n \n\r\nMayor Mamdani: It's honestly a beautiful thing. And I think I was reading a piece this morning that really wrote about it quite beautifully, where it said that oftentimes, this kind of unity comes in moments of tragedy. And to see it coming now in a moment of joy, it's something that I've never seen before across our city, where the nation's largest city has become what feels like the world's smallest town, where everyone is thinking and hoping and praying for the same thing. And now, here we are, and we're just pinching ourselves and asking: “Is it real”?\n\r\n \n\r\nSoboroff: I feel like the parade announcement dropped in the seconds after the championship being clinched. What can you tell us about what we can expect for Thursday?\n\r\n \n\r\nMayor Mamdani: Well, first and foremost, as a fan, I'm always hesitant not to jinx anything, but as the mayor, we do have to prepare for all the logistics. So, thanks to the team and partners at MSG as well as at the NYPD. This work has been happening behind the scenes just in case we were to win Game Five. And we're going to have a parade on Thursday. And it's going to be a parade that has a ceremony at City Hall. We'll be presenting keys to the city to the Knicks team. And then it will be the first ticker-tape parade in Knicks’ history, where New Yorkers will be able to celebrate a moment that has feels like we waited an entire lifetime for, because when it comes to people my age and a little bit older, we have.\n\r\n \n\r\nSoboroff: I just got the chills with you saying that. And in fact, [there is] no reason you'd know this, but this show is gonna be originating from my hometown of Los Angeles, but I happen to be here in New York with our team in Times Square to launch the show. There has not — I couldn't have picked a better time to be in the city for all of this. And it was the most unbelievable experience I think I've ever had, including in my years at NYU 20 years ago. I wanna play you, Mr. Mayor, something that has gone viral since the Knicks made the finals. I am positive, 100 percent positive you've seen it, but I just wanna get your reaction. Watch this.\n\r\n \n\r\n[Video plays.]\n\r\n \n\r\nMD Ahnaf Hossain: My mayor's still Muslim. My bagel's still Jewish. Even the Pope's on our side! Knicks in five!\n\r\n \n\r\n[Video ends.]\n\r\n \n\r\nSoboroff: He was right. He was — he was right. Did you get to meet him? Do you know anything about him? Have you reached out to him?\n\r\n \n\r\nMayor Mamdani: I haven't met him, but he is a New Yorker whose words have really stayed with all of us. Thanks to him, there are a lot of people who have just been running up to me over the last few weeks, just shouting at me: “My mayor's Muslim!” I said: “It's true. I am.”\n\r\n \n\r\nSoboroff: And my bagel is Jewish, and so is this news anchor. And it's a beautiful thing, New York City. Mayor, I want to tell you—\n\r\n \n\r\nMayor Mamdani: It truly is. I think it speaks to just what this city is and even this team. It's not just a cookie cut out of the same thing again and again. It's every single player having a role, bringing together all of the five boroughs for this moment. It's truly a joy.\n\r\n \n\r\nSoboroff: I wish my Christian was Dior. Well, we got to talk World Cup, mayor. You were in the stands.\n\r\n \n\r\nMayor Mamdani: Yeah, I know.\n\r\n \n\r\nSoboroff: I saw you in the stand with New Yorkers who won that 1,000-affordable-ticket giveaway. What was it like for you to be out there with everybody? They seemed so pumped to see you.\n\r\n \n\r\nMayor Mamdani: It was amazing. We were able to deliver 1,000 tickets at the cost of $50 each with free round-trip travel, and to sit next to so many New Yorkers who had dreamed of this day. I was sitting next to a woman who showed me that she had posted on Facebook eight years ago that her dream was to go to the World Cup, and thanks to this raffle, she was able to do so. And I think that's just — it speaks to what we want sports to be. I mean, even when we're talking about the Knicks. We don't want sports to be a luxury commodity. We want it to be something that every person can see themselves in and be a part of. And to sit next to those New Yorkers who have long been waiting for this moment, it was one of the best moments that I've ever had.\n\r\n \n\r\nSoboroff: It was so cool to see, and it is such a celebratory atmosphere in the city right now, but just to make it turn: A lot of New Yorkers are worried about what Tom Homan said about sending all these ICE officers to New York City. You and I talked about this when I saw you during the transition, when we walked from your office over to City Hall in between the Tweed Courthouse. Do you think New Yorkers should be afraid of a surge of ICE agents here? Have you talked to the administration at all about this surge, and what is New York city gonna do about it if it happens?\n\r\n \n\r\nMayor Mamdani: You know, I think it's actually not too unrelated from the conversation we were just having. This is a moment of such excitement and joy as part of a reflection of the city as being a place where everyone is welcome, everyone is a part of it. There's a room for everyone to see themselves not only in the past or the present of the city, but also the future of the city. And these kinds of threats, as you've said from Tom Homan and the federal administration, they're not new and neither will our response be. We continue to be proud of being a sanctuary city. We continue to be ready to stand up for our immigrant neighbors and we continue to be ready to use every single tool at our disposal. And I've said to the president directly that I believe that ICE raids are cruel, and they do nothing to serve in the interest of public safety. And I do believe it's a rogue agency that should be abolished, because we need an approach to immigration in this country that has more humanity at the heart of it. And right now, in this city, humanity is what we are showing, by and large, across the five boroughs. And it's something that we're going to keep showing in our response to the federal government as well.\n\r\n \n\r\nSoboroff: Do you believe this? Is this a real threat or is it just bluster? Have you gotten any indication they're serious about this?\n\r\n \n\r\nMayor Mamdani: You know, we've heard threats time and again, I'm sure we'll hear more of them. We treat every single one of these as real things to be responded to, but we will not be backing down from our laws or from our values.\n\r\n \n\r\nSoboroff: On your midterm endorsements, these three that you have made, and you're going out actively campaigning for everybody, I would love for you to talk a little bit about this, because a Democratic strategist who worked with you during your 2025 run called these endorsements of these progressive candidates “high risk, but also high reward.” Do you think — I mean, it could expand the power of democratic socialists in Washington. It could also backfire. How did you level that decision?\n\r\nMayor Mamdani: Well, I think at the heart of it was a recognition of the fact that the affordability agenda cannot be won alone. If we are serious about transforming the nation's most expensive city into one that's affordable for the people who build it each and every day, we're going to need partners at every level of government. And when I looked at these three candidates — Brad Lander, Claire Valdez, Darializa Avila Chevalier — in each of them, I saw someone who would champion the working person that is often left out of these conversations entirely. And what I'm seeing in the campaigns that they're building is the kind of conviction and the kind of clarity that is oftentimes missing in not just our politics, but even in our party. You look at Brad's campaign and how he's building one to make it clear that, no, we're not going to let a billionaire buy an election. When you look at Darializa Avila Chevalier's campaign, [she has] a track record of having freed New Yorkers unjustly detained by ICE. And when you look at Claire Valdez — [at] a moment where working people are being pushed out of our city to have someone who rose up through the union whose focal point and focus is on the working person — to have that as a champion in Congress. It's more than any New Yorker could ask for.\n\r\nSoboroff: There's a similar thing playing out in my hometown of Los Angeles. We have a democratic socialist, Nithya Raman, running against the democratic mayor of L.A., Karen Bass. Are you gonna endorse Nithya Raman?\n\r\nMayor Mamdani: I gotta tell you, most of my focus is right here across the five boroughs. That's where I've kept it with my endorsements thus far and beyond that, all I'm really thinking about is the ticker-tape parade on Thursday.\n\r\nSoboroff: I don't blame you, Mr. Mayor. It is an exciting time in New York. I'm honored to have you on the broadcast on our inaugural weekend, New York City Mayor Zohran Mamdani. It's a pleasure to have you here. Great to see you.\n\r\nMayor Mamdani: Thank you my friend. Great to see you as well.\n\r\n###",
+   "word_count": 1930,
+   "speakers": [
+    {
+     "speaker": "Jacob Soboroff",
+     "text": "Joining me now is New York City Mayor Zohran Mamdani. Mr. Mayor, it's great to see you. How you doing?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Zohran Kwame Mamdani",
+     "text": "You know, what an incredible night. What an incredible morning. I'm doing great. How are you?",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Soboroff",
+     "text": "I'm good. It's good to see you again. Did you get any sleep?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "You know? I went to sleep at 3.45 a.m. And like most New Yorkers woke up asking myself: “Did that really happen”?",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Soboroff",
+     "text": "And it did happen. I can confirm. I saw it at a bar in the Lower East Side. You are such a diehard Knicks fan. It has been so fun to watch you go through this playoff run. I saw a video of you celebrating in the streets a few hours ago. I think you were in the West Village. Is that where you were?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "Yes, yes. That's where I was and I think it was the same thing no matter what part of the city you were in. People have been waiting for this for 53 years and there have been so many heartbreaks, so many near-misses, so many years, every year, where we've told ourselves it's the year and for it to actually happen now? I mean, there's nothing more we can ask for as New Yorkers.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Soboroff",
+     "text": "Talk to me about the energy in this city right now, with the World Cup going on, with the Knicks winning the championship. Have you ever felt this way in New York City before, seen New York city so united before?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "It's honestly a beautiful thing. And I think I was reading a piece this morning that really wrote about it quite beautifully, where it said that oftentimes, this kind of unity comes in moments of tragedy. And to see it coming now in a moment of joy, it's something that I've never seen before across our city, where the nation's largest city has become what feels like the world's smallest town, where everyone is thinking and hoping and praying for the same thing. And now, here we are, and we're just pinching ourselves and asking: “Is it real”?",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Soboroff",
+     "text": "I feel like the parade announcement dropped in the seconds after the championship being clinched. What can you tell us about what we can expect for Thursday?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "Well, first and foremost, as a fan, I'm always hesitant not to jinx anything, but as the mayor, we do have to prepare for all the logistics. So, thanks to the team and partners at MSG as well as at the NYPD. This work has been happening behind the scenes just in case we were to win Game Five. And we're going to have a parade on Thursday. And it's going to be a parade that has a ceremony at City Hall. We'll be presenting keys to the city to the Knicks team. And then it will be the first ticker-tape parade in Knicks’ history, where New Yorkers will be able to celebrate a moment that has feels like we waited an entire lifetime for, because when it comes to people my age and a little bit older, we have.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Soboroff",
+     "text": "I just got the chills with you saying that. And in fact, [there is] no reason you'd know this, but this show is gonna be originating from my hometown of Los Angeles, but I happen to be here in New York with our team in Times Square to launch the show. There has not — I couldn't have picked a better time to be in the city for all of this. And it was the most unbelievable experience I think I've ever had, including in my years at NYU 20 years ago. I wanna play you, Mr. Mayor, something that has gone viral since the Knicks made the finals. I am positive, 100 percent positive you've seen it, but I just wanna get your reaction. Watch this.\n\n \n\n[Video plays.]",
+     "is_mayor": false
+    },
+    {
+     "speaker": "MD Ahnaf Hossain",
+     "text": "My mayor's still Muslim. My bagel's still Jewish. Even the Pope's on our side! Knicks in five!\n\n \n\n[Video ends.]",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Soboroff",
+     "text": "He was right. He was — he was right. Did you get to meet him? Do you know anything about him? Have you reached out to him?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "I haven't met him, but he is a New Yorker whose words have really stayed with all of us. Thanks to him, there are a lot of people who have just been running up to me over the last few weeks, just shouting at me: “My mayor's Muslim!” I said: “It's true. I am.”",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Soboroff",
+     "text": "And my bagel is Jewish, and so is this news anchor. And it's a beautiful thing, New York City. Mayor, I want to tell you—",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "It truly is. I think it speaks to just what this city is and even this team. It's not just a cookie cut out of the same thing again and again. It's every single player having a role, bringing together all of the five boroughs for this moment. It's truly a joy.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Soboroff",
+     "text": "I wish my Christian was Dior. Well, we got to talk World Cup, mayor. You were in the stands.",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "Yeah, I know.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Soboroff",
+     "text": "I saw you in the stand with New Yorkers who won that 1,000-affordable-ticket giveaway. What was it like for you to be out there with everybody? They seemed so pumped to see you.",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "It was amazing. We were able to deliver 1,000 tickets at the cost of $50 each with free round-trip travel, and to sit next to so many New Yorkers who had dreamed of this day. I was sitting next to a woman who showed me that she had posted on Facebook eight years ago that her dream was to go to the World Cup, and thanks to this raffle, she was able to do so. And I think that's just — it speaks to what we want sports to be. I mean, even when we're talking about the Knicks. We don't want sports to be a luxury commodity. We want it to be something that every person can see themselves in and be a part of. And to sit next to those New Yorkers who have long been waiting for this moment, it was one of the best moments that I've ever had.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Soboroff",
+     "text": "It was so cool to see, and it is such a celebratory atmosphere in the city right now, but just to make it turn: A lot of New Yorkers are worried about what Tom Homan said about sending all these ICE officers to New York City. You and I talked about this when I saw you during the transition, when we walked from your office over to City Hall in between the Tweed Courthouse. Do you think New Yorkers should be afraid of a surge of ICE agents here? Have you talked to the administration at all about this surge, and what is New York city gonna do about it if it happens?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "You know, I think it's actually not too unrelated from the conversation we were just having. This is a moment of such excitement and joy as part of a reflection of the city as being a place where everyone is welcome, everyone is a part of it. There's a room for everyone to see themselves not only in the past or the present of the city, but also the future of the city. And these kinds of threats, as you've said from Tom Homan and the federal administration, they're not new and neither will our response be. We continue to be proud of being a sanctuary city. We continue to be ready to stand up for our immigrant neighbors and we continue to be ready to use every single tool at our disposal. And I've said to the president directly that I believe that ICE raids are cruel, and they do nothing to serve in the interest of public safety. And I do believe it's a rogue agency that should be abolished, because we need an approach to immigration in this country that has more humanity at the heart of it. And right now, in this city, humanity is what we are showing, by and large, across the five boroughs. And it's something that we're going to keep showing in our response to the federal government as well.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Soboroff",
+     "text": "Do you believe this? Is this a real threat or is it just bluster? Have you gotten any indication they're serious about this?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "You know, we've heard threats time and again, I'm sure we'll hear more of them. We treat every single one of these as real things to be responded to, but we will not be backing down from our laws or from our values.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Soboroff",
+     "text": "On your midterm endorsements, these three that you have made, and you're going out actively campaigning for everybody, I would love for you to talk a little bit about this, because a Democratic strategist who worked with you during your 2025 run called these endorsements of these progressive candidates “high risk, but also high reward.” Do you think — I mean, it could expand the power of democratic socialists in Washington. It could also backfire. How did you level that decision?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "Well, I think at the heart of it was a recognition of the fact that the affordability agenda cannot be won alone. If we are serious about transforming the nation's most expensive city into one that's affordable for the people who build it each and every day, we're going to need partners at every level of government. And when I looked at these three candidates — Brad Lander, Claire Valdez, Darializa Avila Chevalier — in each of them, I saw someone who would champion the working person that is often left out of these conversations entirely. And what I'm seeing in the campaigns that they're building is the kind of conviction and the kind of clarity that is oftentimes missing in not just our politics, but even in our party. You look at Brad's campaign and how he's building one to make it clear that, no, we're not going to let a billionaire buy an election. When you look at Darializa Avila Chevalier's campaign, [she has] a track record of having freed New Yorkers unjustly detained by ICE. And when you look at Claire Valdez — [at] a moment where working people are being pushed out of our city to have someone who rose up through the union whose focal point and focus is on the working person — to have that as a champion in Congress. It's more than any New Yorker could ask for.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Soboroff",
+     "text": "There's a similar thing playing out in my hometown of Los Angeles. We have a democratic socialist, Nithya Raman, running against the democratic mayor of L.A., Karen Bass. Are you gonna endorse Nithya Raman?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "I gotta tell you, most of my focus is right here across the five boroughs. That's where I've kept it with my endorsements thus far and beyond that, all I'm really thinking about is the ticker-tape parade on Thursday.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Soboroff",
+     "text": "I don't blame you, Mr. Mayor. It is an exciting time in New York. I'm honored to have you on the broadcast on our inaugural weekend, New York City Mayor Zohran Mamdani. It's a pleasure to have you here. Great to see you.",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "Thank you my friend. Great to see you as well.\n\n###",
+     "is_mayor": true
+    }
+   ],
+   "mayor_quotes": [],
+   "mayor_text": "You know, what an incredible night. What an incredible morning. I'm doing great. How are you?\n\nYou know? I went to sleep at 3.45 a.m. And like most New Yorkers woke up asking myself: “Did that really happen”?\n\nYes, yes. That's where I was and I think it was the same thing no matter what part of the city you were in. People have been waiting for this for 53 years and there have been so many heartbreaks, so many near-misses, so many years, every year, where we've told ourselves it's the year and for it to actually happen now? I mean, there's nothing more we can ask for as New Yorkers.\n\nIt's honestly a beautiful thing. And I think I was reading a piece this morning that really wrote about it quite beautifully, where it said that oftentimes, this kind of unity comes in moments of tragedy. And to see it coming now in a moment of joy, it's something that I've never seen before across our city, where the nation's largest city has become what feels like the world's smallest town, where everyone is thinking and hoping and praying for the same thing. And now, here we are, and we're just pinching ourselves and asking: “Is it real”?\n\nWell, first and foremost, as a fan, I'm always hesitant not to jinx anything, but as the mayor, we do have to prepare for all the logistics. So, thanks to the team and partners at MSG as well as at the NYPD. This work has been happening behind the scenes just in case we were to win Game Five. And we're going to have a parade on Thursday. And it's going to be a parade that has a ceremony at City Hall. We'll be presenting keys to the city to the Knicks team. And then it will be the first ticker-tape parade in Knicks’ history, where New Yorkers will be able to celebrate a moment that has feels like we waited an entire lifetime for, because when it comes to people my age and a little bit older, we have.\n\nI haven't met him, but he is a New Yorker whose words have really stayed with all of us. Thanks to him, there are a lot of people who have just been running up to me over the last few weeks, just shouting at me: “My mayor's Muslim!” I said: “It's true. I am.”\n\nIt truly is. I think it speaks to just what this city is and even this team. It's not just a cookie cut out of the same thing again and again. It's every single player having a role, bringing together all of the five boroughs for this moment. It's truly a joy.\n\nYeah, I know.\n\nIt was amazing. We were able to deliver 1,000 tickets at the cost of $50 each with free round-trip travel, and to sit next to so many New Yorkers who had dreamed of this day. I was sitting next to a woman who showed me that she had posted on Facebook eight years ago that her dream was to go to the World Cup, and thanks to this raffle, she was able to do so. And I think that's just — it speaks to what we want sports to be. I mean, even when we're talking about the Knicks. We don't want sports to be a luxury commodity. We want it to be something that every person can see themselves in and be a part of. And to sit next to those New Yorkers who have long been waiting for this moment, it was one of the best moments that I've ever had.\n\nYou know, I think it's actually not too unrelated from the conversation we were just having. This is a moment of such excitement and joy as part of a reflection of the city as being a place where everyone is welcome, everyone is a part of it. There's a room for everyone to see themselves not only in the past or the present of the city, but also the future of the city. And these kinds of threats, as you've said from Tom Homan and the federal administration, they're not new and neither will our response be. We continue to be proud of being a sanctuary city. We continue to be ready to stand up for our immigrant neighbors and we continue to be ready to use every single tool at our disposal. And I've said to the president directly that I believe that ICE raids are cruel, and they do nothing to serve in the interest of public safety. And I do believe it's a rogue agency that should be abolished, because we need an approach to immigration in this country that has more humanity at the heart of it. And right now, in this city, humanity is what we are showing, by and large, across the five boroughs. And it's something that we're going to keep showing in our response to the federal government as well.\n\nYou know, we've heard threats time and again, I'm sure we'll hear more of them. We treat every single one of these as real things to be responded to, but we will not be backing down from our laws or from our values.\n\nWell, I think at the heart of it was a recognition of the fact that the affordability agenda cannot be won alone. If we are serious about transforming the nation's most expensive city into one that's affordable for the people who build it each and every day, we're going to need partners at every level of government. And when I looked at these three candidates — Brad Lander, Claire Valdez, Darializa Avila Chevalier — in each of them, I saw someone who would champion the working person that is often left out of these conversations entirely. And what I'm seeing in the campaigns that they're building is the kind of conviction and the kind of clarity that is oftentimes missing in not just our politics, but even in our party. You look at Brad's campaign and how he's building one to make it clear that, no, we're not going to let a billionaire buy an election. When you look at Darializa Avila Chevalier's campaign, [she has] a track record of having freed New Yorkers unjustly detained by ICE. And when you look at Claire Valdez — [at] a moment where working people are being pushed out of our city to have someone who rose up through the union whose focal point and focus is on the working person — to have that as a champion in Congress. It's more than any New Yorker could ask for.\n\nI gotta tell you, most of my focus is right here across the five boroughs. That's where I've kept it with my endorsements thus far and beyond that, all I'm really thinking about is the ticker-tape parade on Thursday.\n\nThank you my friend. Great to see you as well.\n\n###",
+   "mayor_word_count": 1169,
+   "has_mayor_quotes": false
+  },
+  {
+   "link": "/mayors-office/news/2026/06/transcript--mayor-mamdani-appears-live-on-wfan--101-9-fm-.html",
+   "url": "https://www.nyc.gov/mayors-office/news/2026/06/transcript--mayor-mamdani-appears-live-on-wfan--101-9-fm-.html",
+   "title": "Transcript: Mayor Mamdani Appears Live on WFAN (101.9 FM)",
+   "date": "June 14, 2026",
+   "iso_date": "2026-06-14",
+   "type": "media_appearance",
+   "text": "Evan Roberts: And joining us right now, the mayor of New York City, Mayor Mamdani. Mr. Mayor, congratulations, you've only been in office for a few months, and now you get to reside over at championships. So, congratulations, sir.\n\r\nMayor Zohran Kwame Mamdani: I can take very little credit for this, but it's an incredible moment for the city. And I mean, we've been waiting for this for more than 50 years. It'll be the first ticker-tape parade in history for the Knicks.\n\r\nTiki Barber: Well, mayor, it's a pleasure to talk to you under the circumstances. But we have one question. We started something a couple of years ago. We kind of dug it out of the corner. You weren't mayor at the time. Dug it out the corner of one of the recesses of your, of your office. There is a king of New York, and we anointed it to be Aaron Judge. Aaron Judge has been the king. Can you on air declare Jalen Brunson the king of New York right now?\n\r\nMayor Mamdani: Absolutely. There is no question in my mind or in the minds of any New Yorker: Jalen Brunson is the king of New York.\n\r\nRoberts: There you go. I love it. Mr. Mayor, how did you watch the game? I think that's going to be one of the stories everybody tells themselves for you. How did you consume this game and what were your emotions while watching this comeback?\n\r\nMayor Mamdani: You know, I watched the first half of this game streaming on the way back from watching Brazil-Morocco at the New York-Jersey Stadium for the World Cup and got in in time for the second half at a bar in lower Manhattan with a bunch of friends, and Congresswoman Ocasio-Cortez also joined in. It was incredible to both be inside the bar watching the game and then right outside, it was being projected on a screen on like a five-second tape delay. So, you got to enjoy every shot twice.\n\r\nBarber: No, that's, that's actually a cool way to see this, especially in New York, which had to be chaos. So, I'm in Georgia. As soon as the game is over, I'm like: “Honey, let's go get the kids. It's midnight. Let's go to bed.” I went to bed. I don't think New York went to bed. What happened in New York after the Knicks won this?\n\r\nMayor Mamdani: Brother, I went to sleep at 3:45 in the morning, and that's on the earlier side, I think for most New Yorkers. And, you know, I think, [for] the vast majority of New York, [it] was just pure ecstasy and joy. There were people just out in the streets, in their neighborhoods. I mean, look, you, you guys know this better than most, but there's been so much heartbreak, so many near misses, so many what-ifs every year thinking it's the year, and then for it to actually happen? I mean, people were crying out in the streets, and it's a moment none of us will ever, ever forget.\n\r\nRoberts: I don't know what to believe any more on social media. Was there violence? How were the streets overall of New York City after they won?\n\r\nMayor Mamdani: I would say for the vast majority of New Yorkers, they celebrated responsibly and appropriately. There were a few incidents that we saw where people behaved in an unacceptable manner. This is not the kind of conduct we want to see in our city. And I've said time and again that as we want New York to celebrate, to do so responsibly is critical because there's no tolerance for violence. There were few instances we saw of that. And I'm thankful to the men and women of our Police Department for keeping New Yorkers safe.\n\r\nBarber: Yeah, they always do a fantastic job in New York, and you gotta be thankful for those men in blue. Now to the big, the important part. Tell us about the parade. We were speculating, is it gonna be on Tuesdays, is it going to be Wednesday? We now know it's gonna be Thursday, but give us the details and what can we expect? It's been a long time since my Giants won it back in 2011, since we've had a parade with one of the major four sports.\n\r\nMayor Mamdani: It really has. I mean, we're going to be hosting a ticker-tape parade, as you said, as well as the City Hall ceremony, honoring the team and awarding keys to the city on Thursday, as you said. It is, you know, as we talked about the first ticker-tape parade in Knicks’ history, and frankly, it's a moment to honor a team that has brought the city together in a way that I think many of us have not seen in a long time, if ever. And we're to be releasing additional details, including how people can join the parade, the ceremony, over the next few days. But this is something that we truly cannot wait for to bring our city together along the Canyon of Heroes to celebrate this team, to celebrate their drive and to celebrate this moment.\n\r\nRoberts: Any idea on how many people you expect to show up?\n\r\nMayor Mamdani: I would be a fool if I gave you a number. I can tell you that there are so many people that are thinking about this, people across the city and people who used to live in this city that wanna come back to the city. But we're hopeful of having numbers as we get closer to the date, but I can tell you the phone is ringing off the hook.\n\r\nRoberts: I'm sure. We're talking to Mayor Mamdani. Are you and the owner of the Knicks, James Dolan, okay? Because you had the public squabble a few days ago on closing the area around Madison Square Garden. He was annoyed. You retorted. Have you guys spoken since? How is that relationship?\n\r\nMayor Mamdani: We have, and I would say that, you know, the focus is not on litigating the past, but on celebrating the present and giving New Yorkers a chance to do so for the future. And I think that it really just speaks to this team. This team is bringing people across the city together, and I don't think that there's anything that's going to stop a moment of joy and celebration this coming Thursday.\n\r\nBarber: Another political question for you, because look. When you got elected mayor, President Trump was not — it didn't seem like he was one of your favorites, and he was — you were one of his.\n\r\nRoberts: They're best friends now, T. Come on, man.\n\r\nBarber: And then they go see him and it's like, all right, you guys are kind of cool with each other. And then you guys appear at Game Three and are not together, but you were both there. It feels like this relationship is, it's, it's political. It's complicated. It is what it is. It is kind of like any relationship. Did he reach out at all and is he planning on coming back at any point?\n\r\nMayor Mamdani: I'll keep the conversation to be the president and myself between the two of us. What I will say is, you know, among the many political differences that we do have, we are both New Yorkers. We both wanted to see the Knicks win the championship, and I think it speaks to the story of this team. They can bring people together that you'd never imagine. But it's truly been a pleasure, my friends, and I look forward to chatting with you soon, especially as more and more New Yorkers wake up today and realize that in fact last night, we were not dreaming.\n\r\nRoberts: Is it true that you guys texted each other complaining about the officials? He thought it was rigged. You agreed with him. Like, take me through those private convos. Like, I kind of have a lot of confidence that that happened, Mr. Mayor.\n\r\nMayor Mamdani: I gotta be honest, that's a little more fantasy than fact.\n\r\nRoberts: Come on, now!\n\r\nMayor Mamdani: I'm sorry, brother.\n\r\nRoberts: So, the parade is Thursday. The parade is [on] Thursday. No details on time, yet? Or are we assuming — I'm a veteran of parades with the Giant and Yankee parades. I figured it was like at 11 a.m. Are we looking at that kind of mid-morning start time for this parade on Thursday?\n\r\nMayor Mamdani: That's still something that we're going to release as soon as we have that information, we're gonna send that directly over to you as well.\n\r\nRoberts: The other question I have — last one — is, why Thursday? Was the World Cup a factor in this? Was it giving guys maybe a couple of days? Because like Tiki mentioned at the top, we were all speculating about it. What led to the Thursday day as being the decision for you guys?\n\r\nMayor Mamdani: You know, one of the key parts of this was that we wanted to make sure that not only are the players here, but also their families are here. This is a moment that people have, they have been waiting for, and these players have been fighting for. And we don't want anyone to miss out on it because of a quick turnaround. And I can tell you both, you know, as a fan, you don't wanna jinx it as the mayor. You’ve got to prepare for the logistics, and we're excited for Thursday. I'm sorry my friends. I do have to jump, but it's been a real, real pleasure.\n\r\nBarber: Appreciate you, Mayor Mamdani.\n\r\n###",
+   "word_count": 1634,
+   "speakers": [
+    {
+     "speaker": "Evan Roberts",
+     "text": "And joining us right now, the mayor of New York City, Mayor Mamdani. Mr. Mayor, congratulations, you've only been in office for a few months, and now you get to reside over at championships. So, congratulations, sir.",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Zohran Kwame Mamdani",
+     "text": "I can take very little credit for this, but it's an incredible moment for the city. And I mean, we've been waiting for this for more than 50 years. It'll be the first ticker-tape parade in history for the Knicks.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Tiki Barber",
+     "text": "Well, mayor, it's a pleasure to talk to you under the circumstances. But we have one question. We started something a couple of years ago. We kind of dug it out of the corner. You weren't mayor at the time. Dug it out the corner of one of the recesses of your, of your office. There is a king of New York, and we anointed it to be Aaron Judge. Aaron Judge has been the king. Can you on air declare Jalen Brunson the king of New York right now?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "Absolutely. There is no question in my mind or in the minds of any New Yorker: Jalen Brunson is the king of New York.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Roberts",
+     "text": "There you go. I love it. Mr. Mayor, how did you watch the game? I think that's going to be one of the stories everybody tells themselves for you. How did you consume this game and what were your emotions while watching this comeback?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "You know, I watched the first half of this game streaming on the way back from watching Brazil-Morocco at the New York-Jersey Stadium for the World Cup and got in in time for the second half at a bar in lower Manhattan with a bunch of friends, and Congresswoman Ocasio-Cortez also joined in. It was incredible to both be inside the bar watching the game and then right outside, it was being projected on a screen on like a five-second tape delay. So, you got to enjoy every shot twice.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Barber",
+     "text": "No, that's, that's actually a cool way to see this, especially in New York, which had to be chaos. So, I'm in Georgia. As soon as the game is over, I'm like: “Honey, let's go get the kids. It's midnight. Let's go to bed.” I went to bed. I don't think New York went to bed. What happened in New York after the Knicks won this?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "Brother, I went to sleep at 3:45 in the morning, and that's on the earlier side, I think for most New Yorkers. And, you know, I think, [for] the vast majority of New York, [it] was just pure ecstasy and joy. There were people just out in the streets, in their neighborhoods. I mean, look, you, you guys know this better than most, but there's been so much heartbreak, so many near misses, so many what-ifs every year thinking it's the year, and then for it to actually happen? I mean, people were crying out in the streets, and it's a moment none of us will ever, ever forget.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Roberts",
+     "text": "I don't know what to believe any more on social media. Was there violence? How were the streets overall of New York City after they won?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "I would say for the vast majority of New Yorkers, they celebrated responsibly and appropriately. There were a few incidents that we saw where people behaved in an unacceptable manner. This is not the kind of conduct we want to see in our city. And I've said time and again that as we want New York to celebrate, to do so responsibly is critical because there's no tolerance for violence. There were few instances we saw of that. And I'm thankful to the men and women of our Police Department for keeping New Yorkers safe.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Barber",
+     "text": "Yeah, they always do a fantastic job in New York, and you gotta be thankful for those men in blue. Now to the big, the important part. Tell us about the parade. We were speculating, is it gonna be on Tuesdays, is it going to be Wednesday? We now know it's gonna be Thursday, but give us the details and what can we expect? It's been a long time since my Giants won it back in 2011, since we've had a parade with one of the major four sports.",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "It really has. I mean, we're going to be hosting a ticker-tape parade, as you said, as well as the City Hall ceremony, honoring the team and awarding keys to the city on Thursday, as you said. It is, you know, as we talked about the first ticker-tape parade in Knicks’ history, and frankly, it's a moment to honor a team that has brought the city together in a way that I think many of us have not seen in a long time, if ever. And we're to be releasing additional details, including how people can join the parade, the ceremony, over the next few days. But this is something that we truly cannot wait for to bring our city together along the Canyon of Heroes to celebrate this team, to celebrate their drive and to celebrate this moment.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Roberts",
+     "text": "Any idea on how many people you expect to show up?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "I would be a fool if I gave you a number. I can tell you that there are so many people that are thinking about this, people across the city and people who used to live in this city that wanna come back to the city. But we're hopeful of having numbers as we get closer to the date, but I can tell you the phone is ringing off the hook.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Roberts",
+     "text": "I'm sure. We're talking to Mayor Mamdani. Are you and the owner of the Knicks, James Dolan, okay? Because you had the public squabble a few days ago on closing the area around Madison Square Garden. He was annoyed. You retorted. Have you guys spoken since? How is that relationship?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "We have, and I would say that, you know, the focus is not on litigating the past, but on celebrating the present and giving New Yorkers a chance to do so for the future. And I think that it really just speaks to this team. This team is bringing people across the city together, and I don't think that there's anything that's going to stop a moment of joy and celebration this coming Thursday.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Barber",
+     "text": "Another political question for you, because look. When you got elected mayor, President Trump was not — it didn't seem like he was one of your favorites, and he was — you were one of his.",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Roberts",
+     "text": "They're best friends now, T. Come on, man.",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Barber",
+     "text": "And then they go see him and it's like, all right, you guys are kind of cool with each other. And then you guys appear at Game Three and are not together, but you were both there. It feels like this relationship is, it's, it's political. It's complicated. It is what it is. It is kind of like any relationship. Did he reach out at all and is he planning on coming back at any point?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "I'll keep the conversation to be the president and myself between the two of us. What I will say is, you know, among the many political differences that we do have, we are both New Yorkers. We both wanted to see the Knicks win the championship, and I think it speaks to the story of this team. They can bring people together that you'd never imagine. But it's truly been a pleasure, my friends, and I look forward to chatting with you soon, especially as more and more New Yorkers wake up today and realize that in fact last night, we were not dreaming.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Roberts",
+     "text": "Is it true that you guys texted each other complaining about the officials? He thought it was rigged. You agreed with him. Like, take me through those private convos. Like, I kind of have a lot of confidence that that happened, Mr. Mayor.",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "I gotta be honest, that's a little more fantasy than fact.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Roberts",
+     "text": "Come on, now!",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "I'm sorry, brother.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Roberts",
+     "text": "So, the parade is Thursday. The parade is [on] Thursday. No details on time, yet? Or are we assuming — I'm a veteran of parades with the Giant and Yankee parades. I figured it was like at 11 a.m. Are we looking at that kind of mid-morning start time for this parade on Thursday?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "That's still something that we're going to release as soon as we have that information, we're gonna send that directly over to you as well.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Roberts",
+     "text": "The other question I have — last one — is, why Thursday? Was the World Cup a factor in this? Was it giving guys maybe a couple of days? Because like Tiki mentioned at the top, we were all speculating about it. What led to the Thursday day as being the decision for you guys?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "You know, one of the key parts of this was that we wanted to make sure that not only are the players here, but also their families are here. This is a moment that people have, they have been waiting for, and these players have been fighting for. And we don't want anyone to miss out on it because of a quick turnaround. And I can tell you both, you know, as a fan, you don't wanna jinx it as the mayor. You’ve got to prepare for the logistics, and we're excited for Thursday. I'm sorry my friends. I do have to jump, but it's been a real, real pleasure.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Barber",
+     "text": "Appreciate you, Mayor Mamdani.\n\n###",
+     "is_mayor": false
+    }
+   ],
+   "mayor_quotes": [],
+   "mayor_text": "I can take very little credit for this, but it's an incredible moment for the city. And I mean, we've been waiting for this for more than 50 years. It'll be the first ticker-tape parade in history for the Knicks.\n\nAbsolutely. There is no question in my mind or in the minds of any New Yorker: Jalen Brunson is the king of New York.\n\nYou know, I watched the first half of this game streaming on the way back from watching Brazil-Morocco at the New York-Jersey Stadium for the World Cup and got in in time for the second half at a bar in lower Manhattan with a bunch of friends, and Congresswoman Ocasio-Cortez also joined in. It was incredible to both be inside the bar watching the game and then right outside, it was being projected on a screen on like a five-second tape delay. So, you got to enjoy every shot twice.\n\nBrother, I went to sleep at 3:45 in the morning, and that's on the earlier side, I think for most New Yorkers. And, you know, I think, [for] the vast majority of New York, [it] was just pure ecstasy and joy. There were people just out in the streets, in their neighborhoods. I mean, look, you, you guys know this better than most, but there's been so much heartbreak, so many near misses, so many what-ifs every year thinking it's the year, and then for it to actually happen? I mean, people were crying out in the streets, and it's a moment none of us will ever, ever forget.\n\nI would say for the vast majority of New Yorkers, they celebrated responsibly and appropriately. There were a few incidents that we saw where people behaved in an unacceptable manner. This is not the kind of conduct we want to see in our city. And I've said time and again that as we want New York to celebrate, to do so responsibly is critical because there's no tolerance for violence. There were few instances we saw of that. And I'm thankful to the men and women of our Police Department for keeping New Yorkers safe.\n\nIt really has. I mean, we're going to be hosting a ticker-tape parade, as you said, as well as the City Hall ceremony, honoring the team and awarding keys to the city on Thursday, as you said. It is, you know, as we talked about the first ticker-tape parade in Knicks’ history, and frankly, it's a moment to honor a team that has brought the city together in a way that I think many of us have not seen in a long time, if ever. And we're to be releasing additional details, including how people can join the parade, the ceremony, over the next few days. But this is something that we truly cannot wait for to bring our city together along the Canyon of Heroes to celebrate this team, to celebrate their drive and to celebrate this moment.\n\nI would be a fool if I gave you a number. I can tell you that there are so many people that are thinking about this, people across the city and people who used to live in this city that wanna come back to the city. But we're hopeful of having numbers as we get closer to the date, but I can tell you the phone is ringing off the hook.\n\nWe have, and I would say that, you know, the focus is not on litigating the past, but on celebrating the present and giving New Yorkers a chance to do so for the future. And I think that it really just speaks to this team. This team is bringing people across the city together, and I don't think that there's anything that's going to stop a moment of joy and celebration this coming Thursday.\n\nI'll keep the conversation to be the president and myself between the two of us. What I will say is, you know, among the many political differences that we do have, we are both New Yorkers. We both wanted to see the Knicks win the championship, and I think it speaks to the story of this team. They can bring people together that you'd never imagine. But it's truly been a pleasure, my friends, and I look forward to chatting with you soon, especially as more and more New Yorkers wake up today and realize that in fact last night, we were not dreaming.\n\nI gotta be honest, that's a little more fantasy than fact.\n\nI'm sorry, brother.\n\nThat's still something that we're going to release as soon as we have that information, we're gonna send that directly over to you as well.\n\nYou know, one of the key parts of this was that we wanted to make sure that not only are the players here, but also their families are here. This is a moment that people have, they have been waiting for, and these players have been fighting for. And we don't want anyone to miss out on it because of a quick turnaround. And I can tell you both, you know, as a fan, you don't wanna jinx it as the mayor. You’ve got to prepare for the logistics, and we're excited for Thursday. I'm sorry my friends. I do have to jump, but it's been a real, real pleasure.",
+   "mayor_word_count": 895,
+   "has_mayor_quotes": false
+  },
+  {
+   "link": "/mayors-office/news/2026/06/emergency-executive-order-no--2-32.html",
+   "url": "https://www.nyc.gov/mayors-office/news/2026/06/emergency-executive-order-no--2-32.html",
+   "title": "Emergency Executive Order No. 2.32",
+   "date": "June 14, 2026",
+   "iso_date": "2026-06-14",
+   "type": "executive_order",
+   "text": "Download Emergency Executive Order No. 2.32\n\r\nWHEREAS, pursuant to a state of emergency first declared by Emergency Executive Order No. 224, dated October 7, 2022, and subsequent orders extending such state of emergency, the City has operated Humanitarian Emergency Response and Relief Centers to provide temporary housing in response to the substantial increase in new arrivals during recent years; and\n\r\nWHEREAS, such orders issued prior to January 5, 2026 did not provide or require a plan for actions that would be taken to eliminate the need for the suspensions and modifications of laws and rules effected by the orders; and\n\r\nWHEREAS, such state of emergency continues for the present pending the expedited development and implementation of such plan;\n\r\nNOW, THEREFORE, pursuant to the powers vested in me as Mayor of the City of New York, by the laws of the State of New York and the City of New York, including but not limited to the New York Executive Law, the New York City Charter and the Administrative Code of the City of New York, and the common law authority to protect the public in the event of an emergency:\n\r\nSection 1. Section 1 of Emergency Executive Order No. 2.31, dated June 9, 2026, is hereby extended for five (5) days.\n\r\n§ 2. The Department of Social Services and the Department of Homeless Services, in consultation with the Law Department, shall regularly update the Mayor on the implementation action plan and efforts to phase out the continued use of facilities that have been operated in reliance on the suspensions and modifications of laws and rules.\n\r\n§ 3. This Emergency Executive Order shall take effect immediately and shall remain in effect for five (5) days unless it is terminated or modified at an earlier date.\n\r\n_________________________\n\r\nZohran Kwame Mamdani\n\r\nMayor\n\r\n \n\r\n\r\n\r\nAPPENDIX\n\r\nList of laws and regulations for which suspension continues for any facility subject to this order, including any operated by or on behalf of DSS or DHS, and any other facility existing on the effective date of this order:\n\r\n1.      Sections 21-309 and 21-312 of the Administrative Code. (EEO No. 886, dated November 19, 2025, § 3, para. (d) and (g))\n\r\n2.      Sections 21-124. (EEO No. 886, dated November 19, 2025, § 3, para. (h)(i))",
+   "word_count": 375,
+   "speakers": [],
+   "mayor_quotes": [],
+   "mayor_text": "",
+   "mayor_word_count": 0,
+   "has_mayor_quotes": false
+  },
+  {
+   "link": "/mayors-office/news/2026/06/emergency-executive-order-no--1-32.html",
+   "url": "https://www.nyc.gov/mayors-office/news/2026/06/emergency-executive-order-no--1-32.html",
+   "title": "Emergency Executive Order No. 1.32",
+   "date": "June 14, 2026",
+   "iso_date": "2026-06-14",
+   "type": "executive_order",
+   "text": "Download Emergency Executive Order No. 1.32\n\r\nWHEREAS, pursuant to a state of emergency first declared by Emergency Executive Order No. 241, dated September 15, 2021, and subsequent orders extending such state of emergency, compliance by the Department of Correction (DOC) with various laws and regulations has not been required; and\n\r\nWHEREAS, such orders issued prior to January 5, 2026 did not provide or require a plan for actions that would enable DOC to come into compliance with applicable laws and regulations for which compliance is not required as a result of such orders; and\n\r\nWHEREAS, the state of emergency first declared in 2021 continues for the present pending the expedited development and implementation of such plan;\n\r\nNOW, THEREFORE, pursuant to the powers vested in me as Mayor of the City of New York, by the laws of the State of New York and the City of New York, including but not limited to the New York Executive Law, the New York City Charter and the Administrative Code of the City of New York, and the common law authority to protect the public in the event of an emergency, it is hereby ordered:\n\r\nSection 1. Section 1 of Emergency Executive Order No. 1.31, dated June 9, 2026, is hereby extended for five (5) days.\n\r\n§ 2. DOC, in consultation with the Law Department, shall regularly update the Mayor regarding additional suspensions that can be lapsed to comply with the implementation action plan developed pursuant to Section 2 of Emergency Executive Order 1, dated January 5, 2026, and with applicable laws and regulations that presently do not apply pursuant to Emergency Executive Orders.\n\r\n§ 3. This Emergency Executive Order shall take effect immediately and shall remain in effect for five (5) days unless it is terminated or modified at an earlier date.\n\r\n_________________________\n\r\nZohran Kwame Mamdani\n\r\nMayor",
+   "word_count": 305,
+   "speakers": [],
+   "mayor_quotes": [],
+   "mayor_text": "",
+   "mayor_word_count": 0,
+   "has_mayor_quotes": false
+  },
+  {
+   "link": "/mayors-office/news/2026/06/mamdani-appears-live-on-abc7.html",
+   "url": "https://www.nyc.gov/mayors-office/news/2026/06/mamdani-appears-live-on-abc7.html",
+   "title": "Transcript: Mamdani Appears Live on ABC7",
+   "date": "June 14, 2026",
+   "iso_date": "2026-06-14",
+   "type": "media_appearance",
+   "text": "Mayor Zohran Kwame Mamdani: I mean this team — it's incredible. And to be in the Finals for the first time since ‘99, for it to be Jalen Brunson who led us last night — [who] has been leading us all season,  Captain Clutch — the son of Rick Brunson, who was in the last Knicks team who lost to the Spurs four-one, and now we beat the Spurs four-one. It just feels like this beautiful full-circle moment, not just for the Brunsons, but for the entire city. And you know, it is a beautiful thing that the city feels like the nation's largest city has become the world's smallest town — all of us thinking about the same thing.\n\r\nJaysha Patel: I've been — when I'm talking to people, you know, I ask them: “Have you ever seen anything like this unite the city”? Because it seems like it just brought literally everyone together. What are your thoughts seeing everyone together celebrating, kind of coming together to cheer the Knicks on?\n\r\nMayor Mamdani: It's one of the most beautiful things I've ever seen as a New Yorker. And, you know, I was reading a piece this morning that wrote about how oftentimes in our city's history, this kind of unity comes in a moment of tragedy, and it's so beautiful that this unity is coming in a moment of joy, and that we are coming together not only of our hopes of this team but our hopes of the city. And the team frankly reflects the city, the relentlessness, the drive, the hustle, the never-give-up, and you look at the stories of each of these individual players — so many of them were overlooked at different points in their careers and Mike Brown built a team where every single player had a role. And even over the course of the Finals, we saw different players show up for this team — show up for the city — and as a city, we can't wait to show up for all of them now.\n\r\nPatel: Anything you can tell us about the parade on Thursday? I mean, how's the planning process? Do you know when we're gonna learn about the timing of it all?\n\r\nMayor Mamdani: So, we're going to be sharing some additional details over the next few days, but it is going to be on Thursday. There's going to be a ceremony at City Hall, then there's going to be a ticker-tape parade — the first time in Knicks' history. And we're also going to be presenting keys to the city to the team.\n\r\nPatel: And I imagine it's going to be a big operation. Everyone in town with the World Cup as well. Thousands and thousands of fans [are] here to see the parades. I'm sure it'll be a big plan, security plan, right, going into that?\n\r\nMayor Mamdani: Absolutely, and I do want to just say thank you to the men and women of the NYPD, who've been such a critical part of not only keeping New Yorkers safe over the course of this Finals run, but also are going to be an integral part of our preparations for the parade. And I can tell you that as a fan, I haven't wanted to jinx it, but as the mayor, we've been preparing for all these logistics.\n\r\n###",
+   "word_count": 561,
+   "speakers": [
+    {
+     "speaker": "Mayor Zohran Kwame Mamdani",
+     "text": "I mean this team — it's incredible. And to be in the Finals for the first time since ‘99, for it to be Jalen Brunson who led us last night — [who] has been leading us all season,  Captain Clutch — the son of Rick Brunson, who was in the last Knicks team who lost to the Spurs four-one, and now we beat the Spurs four-one. It just feels like this beautiful full-circle moment, not just for the Brunsons, but for the entire city. And you know, it is a beautiful thing that the city feels like the nation's largest city has become the world's smallest town — all of us thinking about the same thing.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Jaysha Patel",
+     "text": "I've been — when I'm talking to people, you know, I ask them: “Have you ever seen anything like this unite the city”? Because it seems like it just brought literally everyone together. What are your thoughts seeing everyone together celebrating, kind of coming together to cheer the Knicks on?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "It's one of the most beautiful things I've ever seen as a New Yorker. And, you know, I was reading a piece this morning that wrote about how oftentimes in our city's history, this kind of unity comes in a moment of tragedy, and it's so beautiful that this unity is coming in a moment of joy, and that we are coming together not only of our hopes of this team but our hopes of the city. And the team frankly reflects the city, the relentlessness, the drive, the hustle, the never-give-up, and you look at the stories of each of these individual players — so many of them were overlooked at different points in their careers and Mike Brown built a team where every single player had a role. And even over the course of the Finals, we saw different players show up for this team — show up for the city — and as a city, we can't wait to show up for all of them now.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Patel",
+     "text": "Anything you can tell us about the parade on Thursday? I mean, how's the planning process? Do you know when we're gonna learn about the timing of it all?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "So, we're going to be sharing some additional details over the next few days, but it is going to be on Thursday. There's going to be a ceremony at City Hall, then there's going to be a ticker-tape parade — the first time in Knicks' history. And we're also going to be presenting keys to the city to the team.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Patel",
+     "text": "And I imagine it's going to be a big operation. Everyone in town with the World Cup as well. Thousands and thousands of fans [are] here to see the parades. I'm sure it'll be a big plan, security plan, right, going into that?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "Absolutely, and I do want to just say thank you to the men and women of the NYPD, who've been such a critical part of not only keeping New Yorkers safe over the course of this Finals run, but also are going to be an integral part of our preparations for the parade. And I can tell you that as a fan, I haven't wanted to jinx it, but as the mayor, we've been preparing for all these logistics.\n\n###",
+     "is_mayor": true
+    }
+   ],
+   "mayor_quotes": [],
+   "mayor_text": "I mean this team — it's incredible. And to be in the Finals for the first time since ‘99, for it to be Jalen Brunson who led us last night — [who] has been leading us all season,  Captain Clutch — the son of Rick Brunson, who was in the last Knicks team who lost to the Spurs four-one, and now we beat the Spurs four-one. It just feels like this beautiful full-circle moment, not just for the Brunsons, but for the entire city. And you know, it is a beautiful thing that the city feels like the nation's largest city has become the world's smallest town — all of us thinking about the same thing.\n\nIt's one of the most beautiful things I've ever seen as a New Yorker. And, you know, I was reading a piece this morning that wrote about how oftentimes in our city's history, this kind of unity comes in a moment of tragedy, and it's so beautiful that this unity is coming in a moment of joy, and that we are coming together not only of our hopes of this team but our hopes of the city. And the team frankly reflects the city, the relentlessness, the drive, the hustle, the never-give-up, and you look at the stories of each of these individual players — so many of them were overlooked at different points in their careers and Mike Brown built a team where every single player had a role. And even over the course of the Finals, we saw different players show up for this team — show up for the city — and as a city, we can't wait to show up for all of them now.\n\nSo, we're going to be sharing some additional details over the next few days, but it is going to be on Thursday. There's going to be a ceremony at City Hall, then there's going to be a ticker-tape parade — the first time in Knicks' history. And we're also going to be presenting keys to the city to the team.\n\nAbsolutely, and I do want to just say thank you to the men and women of the NYPD, who've been such a critical part of not only keeping New Yorkers safe over the course of this Finals run, but also are going to be an integral part of our preparations for the parade. And I can tell you that as a fan, I haven't wanted to jinx it, but as the mayor, we've been preparing for all these logistics.\n\n###",
+   "mayor_word_count": 425,
+   "has_mayor_quotes": false
+  },
   {
    "link": "/mayors-office/news/2026/06/mayor-mamdani-announces-ticker-tape-parade-and-city-hall-ceremon.html",
    "url": "https://www.nyc.gov/mayors-office/news/2026/06/mayor-mamdani-announces-ticker-tape-parade-and-city-hall-ceremon.html",
@@ -146,6 +645,21 @@
    "has_mayor_quotes": true
   },
   {
+   "link": "/mayors-office/news/2026/06/match-one-at-nynj-stadium--what-new-yorkers-need-to-know.html",
+   "url": "https://www.nyc.gov/mayors-office/news/2026/06/match-one-at-nynj-stadium--what-new-yorkers-need-to-know.html",
+   "title": "Match One at NYNJ Stadium: What New Yorkers Need to Know",
+   "date": "June 12, 2026",
+   "iso_date": "2026-06-12",
+   "type": "other",
+   "text": "aem-GridColumn aem-GridColumn--default--12\n\nWhat you should know\n\n\r\nTune into Mayor’s “Morning Pitch” briefing tomorrow at 8:45 a.m. for the latest weather and transportation updates\n\r\nStream available on YouTube, X, Instagram and Facebook\n\r\n\r\n\nNEW YORK – Tomorrow at 6 p.m., Brazil and Morocco will go head-to-head at the first FIFA World Cup 2026™ match hosted at NYNJ Stadium. At 8:30 p.m., the Knicks and Spurs will face off at an away game in San Antonio, Texas.\n\r\nWith a busy day expected across all five boroughs, here’s what New Yorkers and visitors need to know to stay safe and plan ahead.\n\r\nThe Mayor will be providing updates directly to New Yorkers tomorrow morning at 8:45 a.m. through the “Morning Pitch,” a regular livestream he will host the morning of every World Cup game held in the tristate area.\n\r\nWeather\n\r\nTemperatures will approach 90 degrees, with possible thunderstorms and strong wind gusts later in the day.\n\r\nNew Yorkers are encouraged to stay cool, stay hydrated and be vigilant for signs of heat illness – including dizziness, confusion and fatigue. If storms hit, go indoors and exercise caution while traveling.\n\r\nText the keyword SUMMER26, SUMMER26ESP or SUMMER26FRE to 692-692 to receive alerts and updates on events in English, Spanish and French, respectively.\n\r\nVisit nyc.gov/beready for more emergency preparedness tips.\n\r\nTransportation and Traffic\n\r\nAs part of Mayor Mamdani’s Midtown Transportation Plan, all local World Cup match days, including tomorrow, will be declared a Gridlock Alert Day in anticipation of heavy traffic.\n\r\nNew Yorkers should plan for heavy traffic and travel delays in and around Midtown. Walk, bike or take public transportation instead of driving when possible.\n\r\nPublic transportation is the easiest way to get to NYNJ Stadium.\n\r\nMatchgoers should explore transit options and purchase tickets ahead of time at nynjfwc26.com/getting-to-nynj-stadium/.\n\r\nShuttle and bus corridors will activate at 12 p.m. and remain in effect until 11 p.m.\n\r\nAccess on the following corridors and lanes will be limited to NYNJ Stadium shuttle buses, MTA local buses, Official World Cup affiliate vehicles and emergency vehicles:\n\r\n\r\n42nd Street from First Avenue to Twelfth Avenue.\n\r\nTwo lanes along Sixth Avenue from 42nd Street to 59th Street.\n\r\nTwo lanes along Fifth Avenue from 42nd Street to 59th Street.\n\r\nWest 40th Street between 8th Avenue and 11th Avenue.\n\r\n\r\nWest 41st Street between 8th Avenue and 10th Avenue.\n\r\n\nSelect streets around Penn Station will close no later than 12 p.m. to accommodate street-level queues.\n\r\n33rd Street between 7th Avenue and 8th Avenue and 32nd Street between 6th Avenue and 7th Avenue will reopen after 6 p.m. 33rd Street between 6th and 7th Avenue will reopen after 11 p.m.\n\r\n\nAdditionally, truck deliveries in Midtown will be restricted between 12 p.m. and 11 p.m. between 30th Street and 60th Street.\n\r\nRestrictions apply only to trucks. Smaller delivery vehicles such as cars, vans and cargo bikes are exempt. Emergency vehicles, service vehicles and essential delivery providers operating within the zone are also exempt.\n\r\nMore information is available within Mayor Mamdani’s Midtown Transportation Plan.\n\r\n###",
+   "word_count": 497,
+   "speakers": [],
+   "mayor_quotes": [],
+   "mayor_text": "",
+   "mayor_word_count": 0,
+   "has_mayor_quotes": false
+  },
+  {
    "link": "/mayors-office/news/2026/06/mayor-mamdani-announces-130-linknyc-kiosks-will-stream-game-5-of.html",
    "url": "https://www.nyc.gov/mayors-office/news/2026/06/mayor-mamdani-announces-130-linknyc-kiosks-will-stream-game-5-of.html",
    "title": "Mayor Mamdani Announces 130 LinkNYC Kiosks Will Stream Game 5 of the NBA Finals",
@@ -161,21 +675,6 @@
    "mayor_text": "The Knicks belong to all New Yorkers, whether you’re watching from the Garden or not,",
    "mayor_word_count": 15,
    "has_mayor_quotes": true
-  },
-  {
-   "link": "/mayors-office/news/2026/06/match-one-at-nynj-stadium--what-new-yorkers-need-to-know.html",
-   "url": "https://www.nyc.gov/mayors-office/news/2026/06/match-one-at-nynj-stadium--what-new-yorkers-need-to-know.html",
-   "title": "Match One at NYNJ Stadium: What New Yorkers Need to Know",
-   "date": "June 12, 2026",
-   "iso_date": "2026-06-12",
-   "type": "other",
-   "text": "aem-GridColumn aem-GridColumn--default--12\n\nWhat you should know\n\n\r\nTune into Mayor’s “Morning Pitch” briefing tomorrow at 8:45 a.m. for the latest weather and transportation updates\n\r\nStream available on YouTube, X, Instagram and Facebook\n\r\n\r\n\nNEW YORK – Tomorrow at 6 p.m., Brazil and Morocco will go head-to-head at the first FIFA World Cup 2026™ match hosted at NYNJ Stadium. At 8:30 p.m., the Knicks and Spurs will face off at an away game in San Antonio, Texas.\n\r\nWith a busy day expected across all five boroughs, here’s what New Yorkers and visitors need to know to stay safe and plan ahead.\n\r\nThe Mayor will be providing updates directly to New Yorkers tomorrow morning at 8:45 a.m. through the “Morning Pitch,” a regular livestream he will host the morning of every World Cup game held in the tristate area.\n\r\nWeather\n\r\nTemperatures will approach 90 degrees, with possible thunderstorms and strong wind gusts later in the day.\n\r\nNew Yorkers are encouraged to stay cool, stay hydrated and be vigilant for signs of heat illness – including dizziness, confusion and fatigue. If storms hit, go indoors and exercise caution while traveling.\n\r\nText the keyword SUMMER26, SUMMER26ESP or SUMMER26FRE to 692-692 to receive alerts and updates on events in English, Spanish and French, respectively.\n\r\nVisit nyc.gov/beready for more emergency preparedness tips.\n\r\nTransportation and Traffic\n\r\nAs part of Mayor Mamdani’s Midtown Transportation Plan, all local World Cup match days, including tomorrow, will be declared a Gridlock Alert Day in anticipation of heavy traffic.\n\r\nNew Yorkers should plan for heavy traffic and travel delays in and around Midtown. Walk, bike or take public transportation instead of driving when possible.\n\r\nPublic transportation is the easiest way to get to NYNJ Stadium.\n\r\nMatchgoers should explore transit options and purchase tickets ahead of time at nynjfwc26.com/getting-to-nynj-stadium/.\n\r\nShuttle and bus corridors will activate at 12 p.m. and remain in effect until 11 p.m.\n\r\nAccess on the following corridors and lanes will be limited to NYNJ Stadium shuttle buses, MTA local buses, Official World Cup affiliate vehicles and emergency vehicles:\n\r\n\r\n42nd Street from First Avenue to Twelfth Avenue.\n\r\nTwo lanes along Sixth Avenue from 42nd Street to 59th Street.\n\r\nTwo lanes along Fifth Avenue from 42nd Street to 59th Street.\n\r\nWest 40th Street between 8th Avenue and 11th Avenue.\n\r\n\r\nWest 41st Street between 8th Avenue and 10th Avenue.\n\r\n\nSelect streets around Penn Station will close no later than 12 p.m. to accommodate street-level queues.\n\r\n33rd Street between 7th Avenue and 8th Avenue and 32nd Street between 6th Avenue and 7th Avenue will reopen after 6 p.m. 33rd Street between 6th and 7th Avenue will reopen after 11 p.m.\n\r\n\nAdditionally, truck deliveries in Midtown will be restricted between 12 p.m. and 11 p.m. between 30th Street and 60th Street.\n\r\nRestrictions apply only to trucks. Smaller delivery vehicles such as cars, vans and cargo bikes are exempt. Emergency vehicles, service vehicles and essential delivery providers operating within the zone are also exempt.\n\r\nMore information is available within Mayor Mamdani’s Midtown Transportation Plan.\n\r\n###",
-   "word_count": 497,
-   "speakers": [],
-   "mayor_quotes": [],
-   "mayor_text": "",
-   "mayor_word_count": 0,
-   "has_mayor_quotes": false
   },
   {
    "link": "/mayors-office/news/2026/06/-newest-new-yorkers--report-highlights-new-york-city-s-immigrant.html",
@@ -50100,5 +50599,5 @@
    "has_mayor_quotes": false
   }
  ],
- "youtube_last_run": "2026-06-14T11:43:17Z"
+ "youtube_last_run": "2026-06-15T13:06:08Z"
 }
