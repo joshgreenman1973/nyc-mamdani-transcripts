@@ -27,9 +27,12 @@
       <p class="lede lede--small">
         Transcripts include reporters&rsquo; questions and other officials at the
         same event. Toggle <strong>Only the Mayor&rsquo;s words</strong> below to
-        narrow to lines spoken or quoted by him. Off-the-cuff remarks, gaggles,
-        and social-media posts aren&rsquo;t included &mdash; only what the
-        Mayor&rsquo;s Office publishes.
+        narrow to lines spoken or quoted by him. Most items are official
+        transcripts the Mayor&rsquo;s Office publishes; the archive also pulls in
+        outside transcripts of his interviews (NPR, WNYC&rsquo;s
+        &ldquo;Ask the Mayor,&rdquo; C-SPAN) and City Council hearings where his
+        administration testifies. Each item is labeled by source and how reliable
+        its transcript is &mdash; filter by <strong>reliability</strong> below.
       </p>
       <p class="meta" id="meta">Loading archive&hellip;</p>
     </div>
@@ -79,6 +82,7 @@
           <label><input type="checkbox" name="type" value="statement" checked /> Statements <span class="count" data-count="statement"></span></label>
           <label><input type="checkbox" name="type" value="ceremony" checked /> Ceremonies &amp; events <span class="count" data-count="ceremony"></span></label>
           <label><input type="checkbox" name="type" value="video" checked /> Videos <span class="count" data-count="video"></span></label>
+          <label><input type="checkbox" name="type" value="hearing" checked /> Council hearings <span class="count" data-count="hearing"></span></label>
           <label><input type="checkbox" name="type" value="other" /> Press releases <span class="count" data-count="other"></span></label>
           <label><input type="checkbox" name="type" value="executive_order" /> Executive orders <span class="count" data-count="executive_order"></span></label>
         </fieldset>
@@ -93,6 +97,13 @@
           <legend>Sort by</legend>
           <label><input type="radio" name="sort" value="date" checked /> Date (newest first)</label>
           <label><input type="radio" name="sort" value="relevance" /> Relevance</label>
+        </fieldset>
+
+        <fieldset class="chips" aria-label="Reliability">
+          <legend>Reliability</legend>
+          <label><input type="checkbox" name="reliability" value="official" checked /> Official transcript <span class="count" data-rcount="official"></span></label>
+          <label><input type="checkbox" name="reliability" value="verified" checked /> Published transcript <span class="count" data-rcount="verified"></span></label>
+          <label><input type="checkbox" name="reliability" value="auto" checked /> Auto-caption <span class="count" data-rcount="auto"></span></label>
         </fieldset>
 
         <fieldset class="scope" aria-label="Scope">
@@ -145,7 +156,9 @@
   <footer class="page-footer">
     <div class="wrap">
       <p>
-        Source: <a href="https://www.nyc.gov/mayors-office/news/" target="_blank" rel="noopener">nyc.gov/mayors-office/news</a>.
+        Sources: <a href="https://www.nyc.gov/mayors-office/news/" target="_blank" rel="noopener">nyc.gov/mayors-office/news</a>
+        (official transcripts), the Mayor&rsquo;s Office YouTube channel, NPR, WNYC,
+        C-SPAN, and NYC Council hearing records. Each item is labeled by source.
         Independent project &mdash; not affiliated with the Mayor&rsquo;s Office.
       </p>
       <p>

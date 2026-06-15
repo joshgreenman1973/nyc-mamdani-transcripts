@@ -10,9 +10,40 @@
     statement: "Statement",
     ceremony: "Ceremony",
     video: "Video",
+    hearing: "Council hearing",
     executive_order: "Executive order",
     other: "Press release",
   };
+
+  // Where a transcript came from (shown only when it's not the default nyc.gov).
+  const SOURCE_LABEL = {
+    npr: "NPR",
+    wnyc: "WNYC",
+    cspan: "C-SPAN",
+    council: "NYC Council",
+    youtube: "YouTube",
+    podcast: "Podcast",
+  };
+
+  // How trustworthy the transcript text is.
+  const RELIABILITY_LABEL = {
+    official: "official transcript",
+    verified: "published transcript",
+    auto: "auto-caption — may contain errors",
+  };
+
+  // The "View on …" link label per source.
+  const SOURCE_LINK_LABEL = {
+    "nyc.gov": "View on nyc.gov",
+    npr: "Read on NPR",
+    wnyc: "Listen on WNYC",
+    cspan: "Watch on C-SPAN",
+    council: "Open hearing transcript (PDF)",
+    podcast: "Open transcript",
+  };
+
+  // Active reliability filter (Set of values), refreshed at each search.
+  let RELIABILITY_ON = null;
 
   // Hand-picked starter topics. These map to common substrings the user is
   // likely to want to find his position on — they're not exhaustive.
@@ -67,6 +98,16 @@
         `Last refreshed ${formatGenerated(data.generated_at)}.`;
       Object.entries(data.type_counts || {}).forEach(([t, n]) => {
         const el = document.querySelector(`.count[data-count="${t}"]`);
+        if (el) el.textContent = `(${n})`;
+      });
+      // Reliability counts (computed client-side; default missing → official).
+      const relCounts = {};
+      data.items.forEach((i) => {
+        const r = i.reliability || "official";
+        relCounts[r] = (relCounts[r] || 0) + 1;
+      });
+      Object.entries(relCounts).forEach(([r, n]) => {
+        const el = document.querySelector(`.count[data-rcount="${r}"]`);
         if (el) el.textContent = `(${n})`;
       });
       const dates = data.items.map((i) => i.iso_date).filter(Boolean).sort();
@@ -330,6 +371,9 @@
     $$("input[name=type]").forEach((el) =>
       el.addEventListener("change", runSearch)
     );
+    $$("input[name=reliability]").forEach((el) =>
+      el.addEventListener("change", runSearch)
+    );
     $$("input[name=sort]").forEach((el) =>
       el.addEventListener("change", runSearch)
     );
@@ -508,6 +552,7 @@
     const toIso = $("#to").value || "";
     const sortMode = $$("input[name=sort]:checked")[0]?.value || "relevance";
     const mayorOnly = $("#mayor-only").checked;
+    RELIABILITY_ON = currentReliability();
     refreshChipState();
 
     $("#empty").classList.add("hidden");
@@ -613,7 +658,7 @@
     if (state.mayorOnly) p.set("mayor_only", "1");
     // Only write `types` if it's not the default set.
     const enabled = [...state.enabledTypes].sort();
-    const defaults = ["ceremony", "media_appearance", "press_conference", "speech", "statement", "video"];
+    const defaults = ["ceremony", "hearing", "media_appearance", "press_conference", "speech", "statement", "video"];
     if (JSON.stringify(enabled) !== JSON.stringify(defaults)) {
       p.set("types", enabled.join(","));
     }
@@ -665,6 +710,7 @@
     const sortMode = $$("input[name=sort]:checked")[0]?.value || "date";
     const mayorOnly = $("#mayor-only").checked;
     const parsed = parseQuery(q);
+    RELIABILITY_ON = currentReliability();
     refreshChipState();
 
     // When "Only the Mayor's words" is on, pull press releases that have
@@ -766,7 +812,18 @@
     refreshChipCounts(rows, q);
   }
 
+  // Read the reliability checkboxes; null means "no filter" (all pass).
+  function currentReliability() {
+    const boxes = $$("input[name=reliability]");
+    if (!boxes.length) return null;
+    const on = new Set(boxes.filter((b) => b.checked).map((b) => b.value));
+    return on.size === boxes.length ? null : on;
+  }
+
   function itemPasses(it, enabledTypes, mayorOnly) {
+    if (RELIABILITY_ON && !RELIABILITY_ON.has(it.reliability || "official")) {
+      return false;
+    }
     if (mayorOnly) {
       // Strict: only include items where there's text we know the Mayor
       // himself said (transcript turns where he was the speaker, the entire
@@ -966,6 +1023,16 @@
     const wc = document.createElement("span");
     wc.textContent = `${item.word_count.toLocaleString()} words`;
     meta.append(badge, date, wc);
+    // Provenance: flag the source + transcript reliability for anything that
+    // isn't a default official nyc.gov transcript.
+    const src = item.source || "nyc.gov";
+    if (src !== "nyc.gov") {
+      const prov = document.createElement("span");
+      prov.className = "provenance " + (item.reliability || "verified");
+      const rl = RELIABILITY_LABEL[item.reliability] || "";
+      prov.textContent = (SOURCE_LABEL[src] || src) + (rl ? " · " + rl : "");
+      meta.append(prov);
+    }
     if (item.type === "other" && item.mayor_quotes && item.mayor_quotes.length) {
       // Only flag "Mamdani quoted" when the search match is actually inside
       // one of the Mamdani quotes — otherwise the press release matched on
@@ -983,7 +1050,9 @@
         meta.append(qm);
       }
     }
-    if (item.type === "video" && item.caption_source) {
+    // Legacy video items (captured before the source/reliability schema) still
+    // carry their caption-source note; newer ones use the provenance chip above.
+    if (item.type === "video" && item.caption_source && !item.source) {
       const cs = document.createElement("span");
       cs.className = "caption-source";
       cs.textContent = item.caption_source === "manual"
@@ -1049,7 +1118,8 @@
       ext.href = item.url;
       ext.target = "_blank";
       ext.rel = "noopener";
-      ext.textContent = "View on nyc.gov ↗";
+      const srcKey = item.source || "nyc.gov";
+      ext.textContent = (SOURCE_LINK_LABEL[srcKey] || "View source") + " ↗";
       actions.append(ext);
       // If this nyc.gov event also has a YouTube video, expose it.
       if (item.youtube_url) {

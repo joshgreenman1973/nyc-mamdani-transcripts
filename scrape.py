@@ -353,6 +353,10 @@ def enrich(item: dict) -> dict:
     item["mayor_text"] = derive_mayor_text(item)
     item["mayor_word_count"] = len(item["mayor_text"].split())
     item["has_mayor_quotes"] = bool(item.get("mayor_quotes"))
+    # Provenance: everything this scraper produces is an official, self-published
+    # transcript from the Mayor's Office. External scrapers stamp their own.
+    item.setdefault("source", "nyc.gov")
+    item.setdefault("reliability", "official")
     return item
 
 
@@ -402,6 +406,8 @@ def main() -> int:
             "type": classify(title),
             "text": text,
             "word_count": len(text.split()),
+            "source": "nyc.gov",
+            "reliability": "official",
         }
         item = enrich(item)
         out.append(item)
@@ -410,14 +416,26 @@ def main() -> int:
             print(f"  [{i}/{len(articles)}] {item['iso_date']} {item['type']:18s} {title[:80]}")
         time.sleep(SLEEP)
 
-    # Preserve any non-nyc.gov items the YouTube scraper may have appended
-    # — they have `type: "video"` and a synthetic `/youtube/<id>` link, so
-    # they don't appear in the nyc.gov listing.
+    # Preserve any non-nyc.gov items appended by the other scrapers — YouTube
+    # videos (`/youtube/<id>`) and external/Council transcripts (`/cspan/…`,
+    # `/npr/…`, `/wnyc/…`, `/podcast/…`, `/council/…`). They don't appear in the
+    # nyc.gov listing, so anything whose link isn't a Mayor's-Office article and
+    # isn't already in `out` is carried forward untouched.
     seen_links = {it["link"] for it in out}
     for link, it in existing.items():
         if link in seen_links:
             continue
-        if it.get("type") == "video" or link.startswith("/youtube/"):
+        if not link.startswith("/mayors-office/"):
+            # Backfill provenance on legacy items captured before the
+            # source/reliability schema existed (mainly older YouTube videos).
+            if "source" not in it or "reliability" not in it:
+                if it.get("type") == "video" or link.startswith("/youtube/"):
+                    it.setdefault("source", "youtube")
+                    it.setdefault("reliability",
+                                  "verified" if it.get("caption_source") == "manual" else "auto")
+                else:
+                    it.setdefault("source", "nyc.gov")
+                    it.setdefault("reliability", "official")
             out.append(it)
 
     # Sort newest first.

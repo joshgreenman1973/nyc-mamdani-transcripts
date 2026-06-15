@@ -1,0 +1,22 @@
+{
+  "_README": "Human-editable seed list of Mayor Mamdani's on-the-record appearances on sources OTHER than nyc.gov and the Mayor's Office YouTube channel. scrape_external.py reads this, fetches each item's published transcript, and adds it to the corpus. Discovery on these sources can't be fully automated (search pages are JavaScript-rendered and bot-gated), so this curated list is the reliable backbone. Add an entry and the next refresh ingests it. Fields: source (npr|wnyc|cspan|podcast), id (the source-specific identifier the fetcher needs), and optional title/date/note used only if the page doesn't supply them.",
+
+  "npr": [
+    { "id": "nx-s1-5785163", "note": "Newsmakers interview, City Hall Blue Room (Apr 2026)" }
+  ],
+
+  "wnyc": [
+    { "id": "14404a62-793e-4346-8851-335cc748ae5e", "note": "Brian Lehrer Show — Ask the Mayor recap" }
+  ],
+
+  "cspan": [
+    { "id": "674221", "title": "C-SPAN: NYC Mayor Mamdani news conference after meeting President Trump", "date": "2026-02-27", "note": "C-SPAN program pages are bot-gated, so title/date here are the fallback when the page can't be read." },
+    { "id": "671117", "title": "C-SPAN: Mayor Mamdani holds press conference", "date": "2026-01-02" },
+    { "id": "670976", "title": "C-SPAN: Mayor Zohran Mamdani inauguration ceremony", "date": "2026-01-01" }
+  ],
+
+  "podcast": [
+    { "id": "https://feeds.fireside.fm/faqnyc/rss", "match": "mamdani", "note": "FAQ NYC (THE CITY). No published transcripts as of last check — kept here so the passive transcript-tag scan picks them up if the show ever adds them." },
+    { "id": "https://feeds.megaphone.fm/PDR2572281095", "match": "mamdani", "note": "The MeidasTouch Podcast. Same — no <podcast:transcript> tags at last check." }
+  ]
+}

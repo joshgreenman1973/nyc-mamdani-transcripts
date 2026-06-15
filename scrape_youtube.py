@@ -259,6 +259,9 @@ def main() -> int:
                 "date": date_pretty(v["upload_date"]),
                 "iso_date": iso,
                 "type": "video",
+                "source": "youtube",
+                # Manual captions are human-typed; auto are machine-generated.
+                "reliability": "verified" if source == "manual" else "auto",
                 "text": text,
                 "word_count": len(text.split()),
                 "speakers": [],

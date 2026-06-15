@@ -12,14 +12,54 @@ is included.
 
 ## Source
 
-- **All content comes from** `https://www.nyc.gov/mayors-office/news/`, the
-  Mayor's Office news page run by the City of New York.
-- The site does not publish a public RSS feed, but its news listing is backed
-  by a JSON endpoint at `/bin/nyc/articlesearch.json`. We page through that
-  endpoint with `fromDate=2026-01-01` and fetch each article's full body via
-  its component model JSON (`<path>.model.json`).
-- We do not modify article text. Punctuation, spelling, and capitalization
-  match what the Mayor's Office published.
+The archive draws from several sources. The bulk is the Mayor's Office's own
+published record; the rest are outside transcripts of the Mayor's interviews and
+City Council hearings where his administration testifies. **Every item is tagged
+with its `source` and a `reliability` level**, and the page lets you filter by
+reliability.
+
+### Reliability levels
+
+| Level | Meaning | Sources |
+|-------|---------|---------|
+| **Official transcript** | A transcript the producing institution published as an official record. | nyc.gov; NYC Council hearing transcripts |
+| **Published transcript** | A human-prepared transcript published by a news outlet (rush-deadline radio transcripts, NPR's posted transcripts, human YouTube captions). | NPR, WNYC, manually-captioned videos |
+| **Auto-caption** | Machine-generated closed captions. May contain errors. | C-SPAN closed captions, auto-captioned videos |
+
+### Per-source detail
+
+- **nyc.gov** (official) — `https://www.nyc.gov/mayors-office/news/`, the Mayor's
+  Office news page. No public RSS, but the listing is backed by a JSON endpoint
+  at `/bin/nyc/articlesearch.json`; we page through it with `fromDate=2026-01-01`
+  and fetch each article's full body via its component model JSON
+  (`<path>.model.json`). This includes transcripts the office *reposts* of
+  friendly media hits (e.g. WNYC, "The View").
+- **YouTube** — the Mayor's Office channel (`@NYCMayorsOffice`). Videos with an
+  nyc.gov twin get a "Watch" link; produced clips with no twin are added with
+  their captions (human → published, auto-generated → auto-caption).
+- **NPR** (published) — interview transcripts at `npr.org/transcripts/<id>`,
+  parsed into speaker turns.
+- **WNYC** (published) — the Brian Lehrer Show's "Ask the Mayor" and related
+  segments. These are the *raw* rush-deadline radio transcripts (with caller and
+  host framing), distinct from the cleaned versions the Mayor's Office reposts.
+  Discovered both from a curated seed list and the show's RSS feed.
+- **C-SPAN** (auto-caption) — closed-caption transcripts from the C-SPAN Video
+  Library. C-SPAN's search is JavaScript-rendered and its servers bot-block
+  aggressively, so coverage here is opportunistic and seeded by hand; a blocked
+  fetch is skipped, never recorded as an empty transcript.
+- **NYC Council** (official) — verbatim stenographic hearing transcripts from the
+  Council's Legistar Web API. To keep the archive on-subject, we only ingest a
+  hearing transcript whose text mentions "Mamdani" — surfacing administration
+  testimony about the Mayor's agenda without dumping unrelated council business.
+  Requires a free Legistar API token; absent the token this source is skipped.
+- **Curated seeds** — outside sources can't be fully auto-discovered (their
+  search pages are JavaScript-rendered and bot-gated), so known appearances are
+  listed in `external_sources.json`. Adding an entry there ingests it on the next
+  refresh.
+
+We do not modify transcript text. Punctuation, spelling, and capitalization match
+what each source published; auto-captions are labeled as such because they can
+contain transcription errors.
 
 ## Refresh cadence
 
@@ -44,7 +84,12 @@ as a speech, not a press conference.
 | Statement                     | Title begins with "Statement from", "Statement by", or contains "Mamdani Statement" |
 | Ceremony / public event       | Title contains "Ceremony", "Memorial", "Wreath Laying", "Ribbon Cutting", "Groundbreaking" |
 | Executive order               | Title contains "Executive Order"                                  |
+| Council hearing               | A Council hearing transcript (assigned by the Council scraper, not by title) |
+| Video                         | A YouTube clip with no nyc.gov twin (assigned by the YouTube scraper) |
 | Press release (other)         | Everything else &mdash; staff-written announcements               |
+
+Interviews captured from outside outlets (NPR, WNYC, C-SPAN) are filed as
+**Media appearances**.
 
 The default search scope is **Speeches + Press conferences + Media appearances
 + Statements + Ceremonies**: the closest approximation of "what the Mayor said
@@ -180,17 +225,26 @@ extractive &mdash; we never paraphrase, summarize, or generate text:
 | `date`        | Publication date as written by the Mayor's Office        |
 | `iso_date`    | ISO format (YYYY-MM-DD) of the publication date          |
 | `type`        | Classification (see above)                               |
-| `text`        | Plain-text body extracted from the article's component tree, paragraph breaks preserved |
+| `source`      | Where it came from: `nyc.gov`, `youtube`, `npr`, `wnyc`, `cspan`, `council` |
+| `reliability` | `official`, `verified` (published), or `auto` (auto-caption) |
+| `text`        | Plain-text body, paragraph breaks preserved              |
+| `mayor_text`  | The subset of `text` attributable to the Mayor himself (his speaker turns or attributed quotes); empty when he isn't a speaker |
 | `word_count`  | Token count of `text`                                    |
-| `url`         | Canonical nyc.gov URL                                    |
+| `url`         | Canonical URL at the source                              |
 
 ## Reproducibility
 
 The scraper, frontend, and this document are all in
 [the project repository](https://github.com/joshgreenman1973/nyc-mamdani-transcripts).
-Anyone can re-run `python3 scrape.py` to regenerate `data/corpus.json` from
-scratch. The script uses only the Python standard library &mdash; no scraping
-dependencies, no API keys. To regenerate the plain-language search vectors,
+Anyone can re-run `python3 scrape.py` to regenerate the nyc.gov portion of
+`data/corpus.json` from scratch, using only the Python standard library &mdash;
+no scraping dependencies, no API keys. The outside sources are added by
+`python3 scrape_youtube.py` (Mayor's Office channel), `python3 scrape_external.py`
+(NPR, WNYC, C-SPAN, podcasts &mdash; seeded by `external_sources.json`), and
+`python3 scrape_council.py` (Council hearings; needs a free `LEGISTAR_TOKEN` and
+`pdfminer.six`, and is a no-op without the token). Each appends to the same
+corpus and is non-fatal, so a blocked source never breaks the others. To
+regenerate the plain-language search vectors,
 run `npm install` then `node build_embeddings.mjs`, which writes
 `data/embeddings.json`. The embedding model downloads from a public model hub;
 no API key or paid service is involved. To regenerate the theme tags, trend
