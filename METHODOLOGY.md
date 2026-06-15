@@ -48,9 +48,21 @@ reliability.
   aggressively, so coverage here is opportunistic and seeded by hand; a blocked
   fetch is skipped, never recorded as an empty transcript.
 - **NYC Council** (official) — verbatim stenographic hearing transcripts from the
-  Council's Legistar Web API. To keep the archive on-subject, we only ingest a
-  hearing transcript whose text mentions "Mamdani" — surfacing administration
-  testimony about the Mayor's agenda without dumping unrelated council business.
+  Council's Legistar Web API, filtered to **oversight hearings where the Mayor's
+  administration testifies**. The filtering is deliberately strict, because the
+  raw data is messy:
+  - *Stated-meeting* transcripts (the Council's own legislative voting sessions)
+    are excluded — they're council members, not administration testimony.
+  - The same transcript is often cross-linked to many committees' agendas. We
+    keep only files referenced by a **single** committee event (a genuine
+    single-committee hearing), and additionally drop **content-duplicates** (a
+    joint hearing uploaded separately under each committee) by comparing text.
+  - We keep a hearing only when it shows agency testimony — the transcript
+    references a "Commissioner" several times **and** someone "testifies."
+  Because the Mayor himself rarely testifies, these items usually have no
+  "Mayor's words" and the mayor-only filter skips them. They're also very long
+  (tens of thousands of words), so they're keyword-searchable and topic-tagged
+  but kept out of the plain-language (semantic) index to keep its download small.
   Requires a free Legistar API token; absent the token this source is skipped.
 - **Curated seeds** — outside sources can't be fully auto-discovered (their
   search pages are JavaScript-rendered and bot-gated), so known appearances are

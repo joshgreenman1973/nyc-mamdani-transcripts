@@ -1033,6 +1033,12 @@
       prov.textContent = (SOURCE_LABEL[src] || src) + (rl ? " · " + rl : "");
       meta.append(prov);
     }
+    if (item.type === "hearing" && item.is_excerpt) {
+      const ex = document.createElement("span");
+      ex.className = "caption-source";
+      ex.textContent = `excerpt of ${item.full_word_count.toLocaleString()} words — full transcript in linked PDF`;
+      meta.append(ex);
+    }
     if (item.type === "other" && item.mayor_quotes && item.mayor_quotes.length) {
       // Only flag "Mamdani quoted" when the search match is actually inside
       // one of the Mamdani quotes — otherwise the press release matched on
@@ -1099,7 +1105,9 @@
     actions.className = "result-actions";
     const toggle = document.createElement("button");
     toggle.type = "button";
-    toggle.textContent = mayorOnly ? "Read Mayor's words" : "Read full text";
+    toggle.textContent = mayorOnly
+      ? "Read Mayor's words"
+      : (item.type === "hearing" && item.is_excerpt ? "Read excerpt" : "Read full text");
     toggle.addEventListener("click", (e) => {
       e.stopPropagation();
       toggleExpand(li, item, re, toggle, mayorOnly);
@@ -1142,7 +1150,9 @@
     const existing = li.querySelector(".expanded");
     if (existing) {
       existing.remove();
-      toggle.textContent = mayorOnly ? "Read Mayor's words" : "Read full text";
+      toggle.textContent = mayorOnly
+      ? "Read Mayor's words"
+      : (item.type === "hearing" && item.is_excerpt ? "Read excerpt" : "Read full text");
       return;
     }
     const div = document.createElement("div");

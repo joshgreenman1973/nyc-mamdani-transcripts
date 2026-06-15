@@ -43,7 +43,8 @@ TOKEN = os.environ.get("LEGISTAR_TOKEN", "").strip()
 UA = "Mozilla/5.0 (mamdani-transcript-archive; josh.greenman@gmail.com)"
 SLEEP = 0.4
 # Re-scan a trailing window each run so late-posted transcripts get picked up.
-SCAN_FROM = "2026-01-01"
+# Override with COUNCIL_SCAN_FROM (YYYY-MM-DD) — handy for quick test runs.
+SCAN_FROM = os.environ.get("COUNCIL_SCAN_FROM", "2026-01-01")
 RELEVANCE = re.compile(r"\bmamdani\b", re.I)
 TRANSCRIPT_NAME = re.compile(r"transcript", re.I)
 
@@ -71,7 +72,13 @@ def list_events() -> list[dict]:
 
 
 def event_transcript_attachments(event_id: int) -> list[dict]:
-    """Return [{name, url}] for attachments on an event that look like transcripts."""
+    """Return [{id, name, url}] for transcript attachments on an event.
+
+    Excludes "Stated Meeting" transcripts — those are the Council's own
+    legislative voting sessions (council members, not administration testimony),
+    and they're cross-linked to every committee's matter, so they'd flood the
+    archive with dozens of copies of one document.
+    """
     try:
         items = api_get(f"events/{event_id}/eventitems", "Attachments=1")
     except (HTTPError, URLError, OSError) as e:
@@ -85,8 +92,12 @@ def event_transcript_attachments(event_id: int) -> list[dict]:
         for att in atts:
             name = att.get("MatterAttachmentName") or ""
             link = att.get("MatterAttachmentHyperlink") or ""
-            if name and link and TRANSCRIPT_NAME.search(name):
-                out.append({"name": name, "url": link})
+            aid = att.get("MatterAttachmentId")
+            if not (name and link and aid and TRANSCRIPT_NAME.search(name)):
+                continue
+            if "stated meeting" in name.lower():
+                continue
+            out.append({"id": aid, "name": name, "url": link})
     return out
 
 
@@ -123,28 +134,51 @@ def pdf_to_text(data: bytes) -> str:
         return ""
 
 
-def build_item(event: dict, att: dict, text: str) -> dict:
+# Administration testimony: a commissioner (or deputy) appears AND someone
+# testifies. This targets oversight hearings where the Mayor's agencies are
+# questioned — what we actually want — and excludes bill markups, land-use
+# items, and procedural hearings with no agency witness.
+COMMISSIONER_RE = re.compile(r"\bcommissioner\b", re.I)
+TESTIFY_RE = re.compile(r"\btestif(?:y|ies|ied|ying|ony)\b", re.I)
+MONTHS = ["January", "February", "March", "April", "May", "June", "July",
+          "August", "September", "October", "November", "December"]
+
+
+def has_admin_testimony(text: str) -> bool:
+    return len(COMMISSIONER_RE.findall(text)) >= 5 and bool(TESTIFY_RE.search(text))
+
+
+def _sig(text: str) -> str:
+    """Content signature for dedup: word count + hash of normalized text.
+    Catches the same hearing uploaded under several committees as distinct files."""
+    import hashlib
+    norm = re.sub(r"\s+", " ", text).strip().lower()
+    return f"{len(norm.split())}:{hashlib.sha1(norm.encode('utf-8', 'replace')).hexdigest()}"
+
+
+# Hearing transcripts run 30k–90k words. Storing them whole (plus speaker splits)
+# bloats the browser-downloaded corpus.json into the tens of MB. We store a
+# substantial opening excerpt — which holds the witnesses' prepared testimony and
+# the early Q&A, i.e. the administration's actual answers — and link the full
+# verbatim PDF for the rest.
+EXCERPT_WORDS = 6000
+
+
+def build_item(aid, committee: str, iso: str, name: str, url: str, text: str) -> dict:
     text = re.sub(r"[ \t]+", " ", text)
     text = re.sub(r"\n{3,}", "\n\n", text).strip()
-    iso = ""
-    m = re.match(r"(\d{4}-\d{2}-\d{2})", event.get("EventDate", "") or "")
-    if m:
-        iso = m.group(1)
-    committee = event.get("EventBodyName", "Council hearing")
-    title = f"{committee} — {att['name']}"
-    speakers = scrape.parse_speakers(text)
-    for s in speakers:
-        s["is_mayor"] = "mamdani" in s["speaker"].lower() and "mayor" in s["speaker"].lower()
-    mayor_bits = [s["text"] for s in speakers if s["is_mayor"]]
-    months = ["January", "February", "March", "April", "May", "June", "July",
-              "August", "September", "October", "November", "December"]
+    full_words = len(text.split())
+    is_excerpt = full_words > EXCERPT_WORDS
+    if is_excerpt:
+        text = " ".join(text.split()[:EXCERPT_WORDS])
+    title = f"{committee} — {name}"
     pretty = ""
     if iso:
         y, mo, d = iso.split("-")
-        pretty = f"{months[int(mo) - 1]} {int(d):02d}, {y}"
+        pretty = f"{MONTHS[int(mo) - 1]} {int(d):02d}, {y}"
     return {
-        "link": f"/council/{event['EventId']}",
-        "url": att["url"],
+        "link": f"/council/{aid}",
+        "url": url,
         "title": title,
         "date": pretty,
         "iso_date": iso,
@@ -153,13 +187,22 @@ def build_item(event: dict, att: dict, text: str) -> dict:
         "reliability": "official",
         "text": text,
         "word_count": len(text.split()),
-        "speakers": speakers,
+        "full_word_count": full_words,
+        "is_excerpt": is_excerpt,
+        # The Mayor doesn't testify at these; keep them out of "Mayor's words"
+        # and skip the speaker split (it would re-duplicate the excerpt text).
+        "speakers": [],
         "mayor_quotes": [],
-        "mayor_text": "\n\n".join(mayor_bits),
-        "mayor_word_count": len("\n\n".join(mayor_bits).split()),
+        "mayor_text": "",
+        "mayor_word_count": 0,
         "has_mayor_quotes": False,
         "committee": committee,
     }
+
+
+# Cap new hearings per run so a first run can't dump hundreds at once; if hit,
+# we log it (no silent truncation) and the next run picks up where this left off.
+MAX_NEW_PER_RUN = 40
 
 
 def main() -> int:
@@ -177,32 +220,66 @@ def main() -> int:
 
     events = list_events()
     print(f"Legistar: {len(events)} events since {SCAN_FROM}.")
-    added = 0
+
+    # Pass 1: map each transcript FILE to the distinct events that reference it.
+    # A genuine single-committee hearing transcript is referenced by exactly one
+    # event; files cross-linked to many events are omnibus/stated documents.
+    file_refs: dict = {}
     for ev in events:
-        link = f"/council/{ev['EventId']}"
+        for att in event_transcript_attachments(ev["EventId"]):
+            ref = file_refs.setdefault(att["id"], {"name": att["name"], "url": att["url"], "events": {}})
+            iso = (re.match(r"(\d{4}-\d{2}-\d{2})", ev.get("EventDate", "") or "") or [None, ""])[1]
+            ref["events"][ev["EventId"]] = (ev.get("EventBodyName", "Council hearing"), iso)
+        time.sleep(SLEEP)
+
+    single = [(aid, r) for aid, r in file_refs.items() if len(r["events"]) == 1]
+    multi = len(file_refs) - len(single)
+    # Newest hearings first, so the per-run cap keeps the most recent.
+    single.sort(key=lambda kr: next(iter(kr[1]["events"].values()))[1], reverse=True)
+    print(f"  {len(file_refs)} transcript files; {len(single)} single-committee, "
+          f"{multi} cross-linked (skipped).")
+
+    # Content signatures of transcripts already in the corpus, so a joint hearing
+    # uploaded separately under each committee (identical text, different file id)
+    # isn't ingested twice.
+    seen_sig = {_sig(it.get("text", "")) for it in items if it.get("source") == "council"}
+
+    # Pass 2: download each unique single-committee transcript once, keep those
+    # with administration testimony and not a content-duplicate.
+    added = 0
+    capped = False
+    for aid, ref in single:
+        link = f"/council/{aid}"
         if link in have:
             continue
-        atts = event_transcript_attachments(ev["EventId"])
+        if added >= MAX_NEW_PER_RUN:
+            capped = True
+            break
+        committee, iso = next(iter(ref["events"].values()))
+        try:
+            pdf = fetch(ref["url"])
+        except (HTTPError, URLError, OSError) as e:
+            print(f"  download failed {ref['url']}: {e}", file=sys.stderr)
+            continue
         time.sleep(SLEEP)
-        for att in atts:
-            try:
-                pdf = fetch(att["url"])
-            except (HTTPError, URLError, OSError) as e:
-                print(f"  download failed {att['url']}: {e}", file=sys.stderr)
-                continue
-            text = pdf_to_text(pdf)
-            if not RELEVANCE.search(text):
-                continue  # not about the administration — out of scope
-            item = build_item(ev, att, text)
-            if item["word_count"] < 200:
-                continue
-            items.append(item)
-            have.add(link)
-            added += 1
-            print(f"  + [council/official] {item['iso_date']} {item['title'][:70]} "
-                  f"({item['word_count']}w)")
-            break  # one transcript item per event
-        time.sleep(SLEEP)
+        text = pdf_to_text(pdf)
+        if len(text.split()) < 200:
+            continue
+        if not has_admin_testimony(text):
+            continue  # no agency commissioner testimony — not our target
+        sig = _sig(text)
+        if sig in seen_sig:
+            print(f"  ~ dup (joint hearing already kept): {committee[:40]}", file=sys.stderr)
+            continue
+        seen_sig.add(sig)
+        item = build_item(aid, committee, iso, ref["name"], ref["url"], text)
+        items.append(item)
+        have.add(link)
+        added += 1
+        print(f"  + [council/official] {item['iso_date'] or '????-??-??'} "
+              f"{item['title'][:70]} ({item['word_count']}w)")
+    if capped:
+        print(f"  (hit per-run cap of {MAX_NEW_PER_RUN}; remaining hearings ingest next run.)")
 
     items.sort(key=lambda x: x.get("iso_date", ""), reverse=True)
     type_counts: dict[str, int] = {}

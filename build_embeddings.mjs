@@ -114,6 +114,11 @@ const texts = [];
 items.forEach((it, i) => {
   const body = it.text || "";
   if (!body.trim()) return;
+  // Council hearing transcripts are enormous (30k–90k words each); embedding
+  // them would balloon the client-side vector download for little gain — you
+  // keyword-search a hearing for a topic, not semantically. They stay fully
+  // keyword-searchable and topic-tagged, just out of the semantic index.
+  if (it.type === "hearing") return;
   for (const c of chunk(body)) {
     meta.push({ i, s: c.start, e: c.end });
     texts.push(c.text);
