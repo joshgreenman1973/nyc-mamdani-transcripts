@@ -1,20 +1,266 @@
 {
- "generated_at": "2026-06-20T11:39:14Z",
+ "generated_at": "2026-06-21T11:54:30Z",
  "from_date": "2026-01-01",
  "source": "https://www.nyc.gov/mayors-office/news/",
- "total": 596,
+ "total": 598,
  "type_counts": {
+  "media_appearance": 49,
   "other": 249,
   "press_conference": 101,
   "speech": 22,
   "ceremony": 11,
-  "media_appearance": 47,
   "executive_order": 93,
   "hearing": 29,
   "video": 32,
   "statement": 12
  },
  "items": [
+  {
+   "link": "/mayors-office/news/2026/06/transcript--mayor-mamdani-appears-on-black-information-network--.html",
+   "url": "https://www.nyc.gov/mayors-office/news/2026/06/transcript--mayor-mamdani-appears-on-black-information-network--.html",
+   "title": "Transcript: Mayor Mamdani Appears on Black Information Network (1600 AM)",
+   "date": "June 20, 2026",
+   "iso_date": "2026-06-20",
+   "type": "media_appearance",
+   "text": "Mike Stevens: Well, joining us now is New York City Mayor Zohran Mamdani. Thank you for being with us once again on the BIN.\n\r\nMayor Zohran Kwame Mamdani: It is such a pleasure to be back. Thank you for having me.\n\r\nStevens: What is your Juneteenth message to the city?\n\r\nMayor Mamdani: First and foremost, it's a day of celebrating freedom and also the dedication to freedom that we've seen so many Black Americans and Black New Yorkers be at the forefront of. And it is a special day in that it marks 161 years specifically since Union General Gordon Granger arrived in Galveston and enforced the Emancipation Proclamation.\n\r\nBut we also know that Juneteenth is not just a celebration of laws being enforced; it's also a celebration of joy, of determination, of resilience of Black Americans over centuries of delayed freedom, of withheld rights [and] of restricted opportunities. And I'm so excited to be celebrating this incredible day with New Yorkers across the five boroughs.\n\r\nStevens: There was pushback of even getting Juneteenth to become a national holiday, and perhaps there are some in New York City of various ethnic groups who don't really see its importance. What is your broader message to all of New York, to everybody of different backgrounds?\n\r\nMayor Mamdani: That we cannot tell the story of this city without also telling the story of Black New Yorkers. That so much of what we love and pride ourselves on are in fact the results of not just years or decades but frankly centuries of Black New Yorkers writing not just Black history but New York history and American history. And we know that to be the case across this country.\n\r\nStevens: Switching gears a little bit here, I've been hearing about a new childcare program that you have going on, a collaboration between New York City and the State of New York, and it's something that many African Americans or Black people will potentially benefit from. Tell us about that.\n\r\nMayor Mamdani: You know, it's exactly as you say; we were so excited on just the eighth day of our administration to secure a $1.2 billion source of funding from Governor Hochul at the state level to deliver free childcare for two-year-olds for the first time in New York City history. And we've seen that for far too long in moments of significant investment, Black New Yorkers are faced with the choice of either being last in line or not at all. And we are seeking to rectify that with this program.\n\r\nAnd so, in this first year where we deliver 2,000 seats, we made the decision that we would deliver those seats in neighborhoods that are often left behind. Like Brownsville, Canarsie [and] East New York in Brooklyn or the Rockaways in Queens or Fordham in the Bronx or Washington Heights in Uptown Manhattan. We are looking to finally relieve that stress of paying at least $20,000 a year for childcare that so many working families are facing in this city.\n\r\nStevens: So, this would be free childcare?\n\r\nMayor Mamdani: Yes, free, high-quality childcare. 2,000 seats this year, 12,000 seats next year, and then a seat for every two-year-old by the end of four years. And right now, the applications are open. We're almost in the final third of the application period. It closes on June 26th, and if anyone listening is interested and lives in these neighborhoods, please go to myschools.nyc.\n\r\nStevens: Well, thank you for being with us. We're glad to have you today.  \n\r\nMayor Mamdani: Truly thankful for the opportunity to share this with your listeners. \n\r\n\n\r\n###",
+   "word_count": 606,
+   "source": "nyc.gov",
+   "reliability": "official",
+   "speakers": [
+    {
+     "speaker": "Mike Stevens",
+     "text": "Well, joining us now is New York City Mayor Zohran Mamdani. Thank you for being with us once again on the BIN.",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Zohran Kwame Mamdani",
+     "text": "It is such a pleasure to be back. Thank you for having me.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Stevens",
+     "text": "What is your Juneteenth message to the city?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "First and foremost, it's a day of celebrating freedom and also the dedication to freedom that we've seen so many Black Americans and Black New Yorkers be at the forefront of. And it is a special day in that it marks 161 years specifically since Union General Gordon Granger arrived in Galveston and enforced the Emancipation Proclamation.\n\nBut we also know that Juneteenth is not just a celebration of laws being enforced; it's also a celebration of joy, of determination, of resilience of Black Americans over centuries of delayed freedom, of withheld rights [and] of restricted opportunities. And I'm so excited to be celebrating this incredible day with New Yorkers across the five boroughs.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Stevens",
+     "text": "There was pushback of even getting Juneteenth to become a national holiday, and perhaps there are some in New York City of various ethnic groups who don't really see its importance. What is your broader message to all of New York, to everybody of different backgrounds?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "That we cannot tell the story of this city without also telling the story of Black New Yorkers. That so much of what we love and pride ourselves on are in fact the results of not just years or decades but frankly centuries of Black New Yorkers writing not just Black history but New York history and American history. And we know that to be the case across this country.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Stevens",
+     "text": "Switching gears a little bit here, I've been hearing about a new childcare program that you have going on, a collaboration between New York City and the State of New York, and it's something that many African Americans or Black people will potentially benefit from. Tell us about that.",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "You know, it's exactly as you say; we were so excited on just the eighth day of our administration to secure a $1.2 billion source of funding from Governor Hochul at the state level to deliver free childcare for two-year-olds for the first time in New York City history. And we've seen that for far too long in moments of significant investment, Black New Yorkers are faced with the choice of either being last in line or not at all. And we are seeking to rectify that with this program.\n\nAnd so, in this first year where we deliver 2,000 seats, we made the decision that we would deliver those seats in neighborhoods that are often left behind. Like Brownsville, Canarsie [and] East New York in Brooklyn or the Rockaways in Queens or Fordham in the Bronx or Washington Heights in Uptown Manhattan. We are looking to finally relieve that stress of paying at least $20,000 a year for childcare that so many working families are facing in this city.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Stevens",
+     "text": "So, this would be free childcare?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "Yes, free, high-quality childcare. 2,000 seats this year, 12,000 seats next year, and then a seat for every two-year-old by the end of four years. And right now, the applications are open. We're almost in the final third of the application period. It closes on June 26th, and if anyone listening is interested and lives in these neighborhoods, please go to myschools.nyc.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Stevens",
+     "text": "Well, thank you for being with us. We're glad to have you today.",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "Truly thankful for the opportunity to share this with your listeners. \n\n\n\n###",
+     "is_mayor": true
+    }
+   ],
+   "mayor_quotes": [],
+   "mayor_text": "It is such a pleasure to be back. Thank you for having me.\n\nFirst and foremost, it's a day of celebrating freedom and also the dedication to freedom that we've seen so many Black Americans and Black New Yorkers be at the forefront of. And it is a special day in that it marks 161 years specifically since Union General Gordon Granger arrived in Galveston and enforced the Emancipation Proclamation.\n\nBut we also know that Juneteenth is not just a celebration of laws being enforced; it's also a celebration of joy, of determination, of resilience of Black Americans over centuries of delayed freedom, of withheld rights [and] of restricted opportunities. And I'm so excited to be celebrating this incredible day with New Yorkers across the five boroughs.\n\nThat we cannot tell the story of this city without also telling the story of Black New Yorkers. That so much of what we love and pride ourselves on are in fact the results of not just years or decades but frankly centuries of Black New Yorkers writing not just Black history but New York history and American history. And we know that to be the case across this country.\n\nYou know, it's exactly as you say; we were so excited on just the eighth day of our administration to secure a $1.2 billion source of funding from Governor Hochul at the state level to deliver free childcare for two-year-olds for the first time in New York City history. And we've seen that for far too long in moments of significant investment, Black New Yorkers are faced with the choice of either being last in line or not at all. And we are seeking to rectify that with this program.\n\nAnd so, in this first year where we deliver 2,000 seats, we made the decision that we would deliver those seats in neighborhoods that are often left behind. Like Brownsville, Canarsie [and] East New York in Brooklyn or the Rockaways in Queens or Fordham in the Bronx or Washington Heights in Uptown Manhattan. We are looking to finally relieve that stress of paying at least $20,000 a year for childcare that so many working families are facing in this city.\n\nYes, free, high-quality childcare. 2,000 seats this year, 12,000 seats next year, and then a seat for every two-year-old by the end of four years. And right now, the applications are open. We're almost in the final third of the application period. It closes on June 26th, and if anyone listening is interested and lives in these neighborhoods, please go to myschools.nyc.\n\nTruly thankful for the opportunity to share this with your listeners. \n\n\n\n###",
+   "mayor_word_count": 441,
+   "has_mayor_quotes": false
+  },
+  {
+   "link": "/mayors-office/news/2026/06/transcript--mayor-mamdani-appears-on-the-reecie-colbert-show--ur.html",
+   "url": "https://www.nyc.gov/mayors-office/news/2026/06/transcript--mayor-mamdani-appears-on-the-reecie-colbert-show--ur.html",
+   "title": "Transcript: Mayor Mamdani Appears on The Reecie Colbert Show, Urban Views (Channel 126 on SiriusXM)",
+   "date": "June 20, 2026",
+   "iso_date": "2026-06-20",
+   "type": "media_appearance",
+   "text": "Reecie Colbert: All right, y'all, I gotta bring in my very special guest for the Reecie Colbert Show. It is a big week for the City of New York, and so who else better to come to the day party other than the one and only mayor of New York, Mayor Zohran Mamdani. Welcome to the Reecie Colbert Show.\n\r\nMayor Zohran Kwame Mamdani: Thank you so much, Reecie. It's such a pleasure to be on. Thank you for having me.\n\r\nColbert: Thank you for being here. Happy Juneteenth.\n\r\nMayor Mamdani: Happy Juneteenth. How's yours going?\n\r\nColbert: Mine is good. Is yours “Blackity Black?” I can say that. [Inaudible]. \n\r\nMayor Mamdani: I can confirm it.\n\r\nColbert: Okay, okay, okay. This time last year, mayor, you were running to be the mayor. Now, you have been in the seat, you have done big things. What message do you take to the Black community? Because I know you were everywhere this Juneteenth. What message do you take back to the community that helped put you across the finish line? Because we know that you won a majority of Black voters in the election. What did you have to say this Juneteenth?\n\r\nMayor Mamdani: I think the first thing is today is a day of celebration. Today is also a day of recognition of the enormity of the contributions of Black New Yorkers and Black Americans to the story of this city and this country. And also, a recognition of all that is still to be done. Because we know that as we celebrate, that should not also be an excuse to absolve ourselves of the responsibility, especially in government, for all that is still to be done to make that freedom truly felt by each and every person in the city.\n\r\nAnd for me, it also has a special resonance, because I'm speaking to you right now, just after having spoken to the congregation at Greater Allen A.M.E. Church out here in Queens. And this is the church that — like many churches over the course, as you said, Reecie, of my primary campaign [and] my general campaign — that gave me a chance. When I said my name, people would typically say, “Who?” Because they had never heard of me. Understandably so — I began the race polling at one percent.\n\r\nAnd still without having to give me that opportunity, they still gave me a platform time and time again to introduce myself. And it is such a — it is a real decision when you choose to give someone your time. And it is a beautiful thing that I get to come back and say, “Thank you for having done so.” And now to deliver on that belief that I shared more than a year ago.\n\r\nColbert: Right, right. And I think it's so important to, like you said, to recognize, especially when we're looking at what the Trump administration is doing — still in court trying to sue to remove exhibits about slavery in different cities across this country. And you, you posted on your Instagram and on your social media; you commissioned a special project for Juneteenth. Can you tell folks real quick about that?\n\r\nMayor Mamdani: You know, Juneteenth is a day that has a national resonance. It's also a day that has a local resonance here in our city. And we want to shine a light on that. You know, I'll give you just one example. There's the project as a whole. There's also one story that has really stayed with me today about Weeksville. And Weeksville is this incredible testament. It was one of the largest neighborhoods of freed Black New Yorkers before the Civil War.\n\r\nAnd what it did was invest in freedom through the creation of its own newspaper, the creation of its own schools [and] its own homes. And part of what we are trying to really share with New Yorkers is the fact that Black history is New York City history. The two cannot be disentangled. As we celebrate Juneteenth, we are also celebrating this city. And it's an opportunity to recognize and appreciate all those contributions.\n\r\nColbert: Right. And we have to talk about the contributions to [the] Black community in your cabinet, in your leadership. You recently appointed a deputy mayor that I was very, very happy about. Shout out to Deputy Mayor Renita Francois. And you've got really, really good people throughout your team. But one of the things — it's not just what I call a “neon Black” kind of policy — [is] universal 2-K, a promise kept from your campaign.\n\r\nAnd there's a critical deadline coming up about that, right? And I want you to tell people about that because my husband is a mayor, too, and I see often how people, you know, they want programs, but then they don't necessarily tap into the programs when those programs become a thing.\n\r\nMayor Mamdani: You know, it is such a good point that the worth of a service you provide is only as much as people know about it. And we know that here in the most expensive city in the United States of America, after housing, childcare is the number one cost for a working family. And so, as you said, we ran a campaign about universal childcare. We are now delivering universal childcare for two-year-olds for the first time in New York City history. And we are maybe two-thirds through the application process; we have until June 26th. So, if anyone is listening to this show and has a child that is turning two years old or is already two years old, then this is the time to go to myschools.nyc., apply for what is high-quality, free childcare that will save you at least $20,000 a year.\n\r\nAnd, you know, it's actually not a separate conversation from the one that we're having about Juneteenth, because we know that at the end of four years, we're going to deliver free childcare to every two-year-old. But we have to build that up and phase it in. So, our first year, we're doing it to 2,000 seats. The next year, 12,000 seats. And in this first year, we had a choice of where do we want to begin. And we made the choice that we wanted to start with the places that are often last, the places that are often facing a choice of [being] last in line or not at all.\n\r\nAnd a lot of these neighborhoods — neighborhoods like Brownsville, East New York, Canarsie, the Rockaways, Fordham [and] Washington Heights — these are neighborhoods that have been disproportionately hit by the cost-of-living crisis and also neighborhoods that Black New Yorkers have helped to build over generations. And it's time that they see a City Hall that is looking to them first, as opposed to even questioning whether it's looking to them at all.\n\r\nColbert: That's a very, very important point. I do want to ask, though, what do you say to people who hear 2,000 seats or 12,000 seats and think, [inaudible]. Like, “Why should I even bother to reply? It's too many people. I'm not going to get it.” What do you say to those folks who maybe do need the service, but they haven't applied yet because they're skeptical that they will be eligible or skeptical that there is even room for them in the program?\n\r\nMayor Mamdani: What I would say is this is a program for each and every New Yorker, no matter what their story is, no matter how much money they have in their bank account, no matter their immigration status. And it is an opportunity for them to save tens of thousands of dollars. And to someone who may apply and not get it in the first year, all you will lose is what you are already in today, which is an opportunity that you could save all that money. \n\r\nAnd if not, then the next year there will be 12,000 seats. And I think that I understand people's — their skepticism, because it's a skepticism that reflects their experience with government thus far. And we know we have to earn their trust. We have to earn their faith. But the beautiful thing is that every time we successfully do so, it gives them a reason to keep believing. And that's what we see in this program.\n\r\nColbert: Absolutely. And let me just add that the data that you can collect and say, “Well, we had 2,000 slots, but 200,000 people signed up” — I’m just making up a number — then that makes a stronger case to expand those services quicker. So, people got to apply so that people know the demand.\n\r\nMayor Mamdani: Yes, ma'am.\n\r\nColbert: All right. Before you go — I know you got to run — I got to say, go Knicks.\n\r\nMayor Mamdani: Come on. Come on.\n\r\nColbert: I got on blue. I don’t know if you can see me —\n\r\nMayor Mamdani: I see you. You got on blue. I have a little orange around where I am. So, together we make it work.\n\r\nColbert: There we go. So, I got to put you on the spot. What do you think if people had a superstition for the next go-round? What do you think people need to tap into more? The fact that you're the mayor as the good luck charm or Jordyn Woods — who is Karl-Anthony Towns’ fiancée — her lucky bag. Which one do you think deserves the most credit? \n\r\nMayor Mamdani: It's got to be Jordyn Woods and the lucky bag.\n\r\nColbert: Okay.\n\r\nMayor Mamdani: Come on. I mean, I had the privilege of meeting Karl-Anthony Towns and Jordyn Woods and their families. And, you know, even when I saw that bag, I just said, “Thank you,” because we needed everything to get us over the line. And, you know, I'm happy to be the mayor, but it's not my credit to take.\n\r\nColbert: There you go. That's a nice, humble answer. Well, thank you, mayor, for taking the time out.\n\r\nMayor Mamdani: Such a pleasure, Reecie.\n\r\nColbert: Thank you. Such a pleasure. You're welcome to come back. You are now officially a friend of the show.\n\r\nMayor Mamdani: Thank you. I really appreciate that. I'll talk to you soon.\n\r\nColbert: All right. You be well. \n\r\nMayor Mamdani: Bye-bye.\n\r\n###",
+   "word_count": 1742,
+   "source": "nyc.gov",
+   "reliability": "official",
+   "speakers": [
+    {
+     "speaker": "Reecie Colbert",
+     "text": "All right, y'all, I gotta bring in my very special guest for the Reecie Colbert Show. It is a big week for the City of New York, and so who else better to come to the day party other than the one and only mayor of New York, Mayor Zohran Mamdani. Welcome to the Reecie Colbert Show.",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Zohran Kwame Mamdani",
+     "text": "Thank you so much, Reecie. It's such a pleasure to be on. Thank you for having me.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Colbert",
+     "text": "Thank you for being here. Happy Juneteenth.",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "Happy Juneteenth. How's yours going?",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Colbert",
+     "text": "Mine is good. Is yours “Blackity Black?” I can say that. [Inaudible].",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "I can confirm it.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Colbert",
+     "text": "Okay, okay, okay. This time last year, mayor, you were running to be the mayor. Now, you have been in the seat, you have done big things. What message do you take to the Black community? Because I know you were everywhere this Juneteenth. What message do you take back to the community that helped put you across the finish line? Because we know that you won a majority of Black voters in the election. What did you have to say this Juneteenth?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "I think the first thing is today is a day of celebration. Today is also a day of recognition of the enormity of the contributions of Black New Yorkers and Black Americans to the story of this city and this country. And also, a recognition of all that is still to be done. Because we know that as we celebrate, that should not also be an excuse to absolve ourselves of the responsibility, especially in government, for all that is still to be done to make that freedom truly felt by each and every person in the city.\n\nAnd for me, it also has a special resonance, because I'm speaking to you right now, just after having spoken to the congregation at Greater Allen A.M.E. Church out here in Queens. And this is the church that — like many churches over the course, as you said, Reecie, of my primary campaign [and] my general campaign — that gave me a chance. When I said my name, people would typically say, “Who?” Because they had never heard of me. Understandably so — I began the race polling at one percent.\n\nAnd still without having to give me that opportunity, they still gave me a platform time and time again to introduce myself. And it is such a — it is a real decision when you choose to give someone your time. And it is a beautiful thing that I get to come back and say, “Thank you for having done so.” And now to deliver on that belief that I shared more than a year ago.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Colbert",
+     "text": "Right, right. And I think it's so important to, like you said, to recognize, especially when we're looking at what the Trump administration is doing — still in court trying to sue to remove exhibits about slavery in different cities across this country. And you, you posted on your Instagram and on your social media; you commissioned a special project for Juneteenth. Can you tell folks real quick about that?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "You know, Juneteenth is a day that has a national resonance. It's also a day that has a local resonance here in our city. And we want to shine a light on that. You know, I'll give you just one example. There's the project as a whole. There's also one story that has really stayed with me today about Weeksville. And Weeksville is this incredible testament. It was one of the largest neighborhoods of freed Black New Yorkers before the Civil War.\n\nAnd what it did was invest in freedom through the creation of its own newspaper, the creation of its own schools [and] its own homes. And part of what we are trying to really share with New Yorkers is the fact that Black history is New York City history. The two cannot be disentangled. As we celebrate Juneteenth, we are also celebrating this city. And it's an opportunity to recognize and appreciate all those contributions.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Colbert",
+     "text": "Right. And we have to talk about the contributions to [the] Black community in your cabinet, in your leadership. You recently appointed a deputy mayor that I was very, very happy about. Shout out to Deputy Mayor Renita Francois. And you've got really, really good people throughout your team. But one of the things — it's not just what I call a “neon Black” kind of policy — [is] universal 2-K, a promise kept from your campaign.\n\nAnd there's a critical deadline coming up about that, right? And I want you to tell people about that because my husband is a mayor, too, and I see often how people, you know, they want programs, but then they don't necessarily tap into the programs when those programs become a thing.",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "You know, it is such a good point that the worth of a service you provide is only as much as people know about it. And we know that here in the most expensive city in the United States of America, after housing, childcare is the number one cost for a working family. And so, as you said, we ran a campaign about universal childcare. We are now delivering universal childcare for two-year-olds for the first time in New York City history. And we are maybe two-thirds through the application process; we have until June 26th. So, if anyone is listening to this show and has a child that is turning two years old or is already two years old, then this is the time to go to myschools.nyc., apply for what is high-quality, free childcare that will save you at least $20,000 a year.\n\nAnd, you know, it's actually not a separate conversation from the one that we're having about Juneteenth, because we know that at the end of four years, we're going to deliver free childcare to every two-year-old. But we have to build that up and phase it in. So, our first year, we're doing it to 2,000 seats. The next year, 12,000 seats. And in this first year, we had a choice of where do we want to begin. And we made the choice that we wanted to start with the places that are often last, the places that are often facing a choice of [being] last in line or not at all.\n\nAnd a lot of these neighborhoods — neighborhoods like Brownsville, East New York, Canarsie, the Rockaways, Fordham [and] Washington Heights — these are neighborhoods that have been disproportionately hit by the cost-of-living crisis and also neighborhoods that Black New Yorkers have helped to build over generations. And it's time that they see a City Hall that is looking to them first, as opposed to even questioning whether it's looking to them at all.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Colbert",
+     "text": "That's a very, very important point. I do want to ask, though, what do you say to people who hear 2,000 seats or 12,000 seats and think, [inaudible]. Like, “Why should I even bother to reply? It's too many people. I'm not going to get it.” What do you say to those folks who maybe do need the service, but they haven't applied yet because they're skeptical that they will be eligible or skeptical that there is even room for them in the program?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "What I would say is this is a program for each and every New Yorker, no matter what their story is, no matter how much money they have in their bank account, no matter their immigration status. And it is an opportunity for them to save tens of thousands of dollars. And to someone who may apply and not get it in the first year, all you will lose is what you are already in today, which is an opportunity that you could save all that money. \n\nAnd if not, then the next year there will be 12,000 seats. And I think that I understand people's — their skepticism, because it's a skepticism that reflects their experience with government thus far. And we know we have to earn their trust. We have to earn their faith. But the beautiful thing is that every time we successfully do so, it gives them a reason to keep believing. And that's what we see in this program.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Colbert",
+     "text": "Absolutely. And let me just add that the data that you can collect and say, “Well, we had 2,000 slots, but 200,000 people signed up” — I’m just making up a number — then that makes a stronger case to expand those services quicker. So, people got to apply so that people know the demand.",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "Yes, ma'am.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Colbert",
+     "text": "All right. Before you go — I know you got to run — I got to say, go Knicks.",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "Come on. Come on.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Colbert",
+     "text": "I got on blue. I don’t know if you can see me —",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "I see you. You got on blue. I have a little orange around where I am. So, together we make it work.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Colbert",
+     "text": "There we go. So, I got to put you on the spot. What do you think if people had a superstition for the next go-round? What do you think people need to tap into more? The fact that you're the mayor as the good luck charm or Jordyn Woods — who is Karl-Anthony Towns’ fiancée — her lucky bag. Which one do you think deserves the most credit?",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "It's got to be Jordyn Woods and the lucky bag.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Colbert",
+     "text": "Okay.",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "Come on. I mean, I had the privilege of meeting Karl-Anthony Towns and Jordyn Woods and their families. And, you know, even when I saw that bag, I just said, “Thank you,” because we needed everything to get us over the line. And, you know, I'm happy to be the mayor, but it's not my credit to take.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Colbert",
+     "text": "There you go. That's a nice, humble answer. Well, thank you, mayor, for taking the time out.",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "Such a pleasure, Reecie.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Colbert",
+     "text": "Thank you. Such a pleasure. You're welcome to come back. You are now officially a friend of the show.",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "Thank you. I really appreciate that. I'll talk to you soon.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Colbert",
+     "text": "All right. You be well.",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "Bye-bye.\n\n###",
+     "is_mayor": true
+    }
+   ],
+   "mayor_quotes": [],
+   "mayor_text": "Thank you so much, Reecie. It's such a pleasure to be on. Thank you for having me.\n\nHappy Juneteenth. How's yours going?\n\nI can confirm it.\n\nI think the first thing is today is a day of celebration. Today is also a day of recognition of the enormity of the contributions of Black New Yorkers and Black Americans to the story of this city and this country. And also, a recognition of all that is still to be done. Because we know that as we celebrate, that should not also be an excuse to absolve ourselves of the responsibility, especially in government, for all that is still to be done to make that freedom truly felt by each and every person in the city.\n\nAnd for me, it also has a special resonance, because I'm speaking to you right now, just after having spoken to the congregation at Greater Allen A.M.E. Church out here in Queens. And this is the church that — like many churches over the course, as you said, Reecie, of my primary campaign [and] my general campaign — that gave me a chance. When I said my name, people would typically say, “Who?” Because they had never heard of me. Understandably so — I began the race polling at one percent.\n\nAnd still without having to give me that opportunity, they still gave me a platform time and time again to introduce myself. And it is such a — it is a real decision when you choose to give someone your time. And it is a beautiful thing that I get to come back and say, “Thank you for having done so.” And now to deliver on that belief that I shared more than a year ago.\n\nYou know, Juneteenth is a day that has a national resonance. It's also a day that has a local resonance here in our city. And we want to shine a light on that. You know, I'll give you just one example. There's the project as a whole. There's also one story that has really stayed with me today about Weeksville. And Weeksville is this incredible testament. It was one of the largest neighborhoods of freed Black New Yorkers before the Civil War.\n\nAnd what it did was invest in freedom through the creation of its own newspaper, the creation of its own schools [and] its own homes. And part of what we are trying to really share with New Yorkers is the fact that Black history is New York City history. The two cannot be disentangled. As we celebrate Juneteenth, we are also celebrating this city. And it's an opportunity to recognize and appreciate all those contributions.\n\nYou know, it is such a good point that the worth of a service you provide is only as much as people know about it. And we know that here in the most expensive city in the United States of America, after housing, childcare is the number one cost for a working family. And so, as you said, we ran a campaign about universal childcare. We are now delivering universal childcare for two-year-olds for the first time in New York City history. And we are maybe two-thirds through the application process; we have until June 26th. So, if anyone is listening to this show and has a child that is turning two years old or is already two years old, then this is the time to go to myschools.nyc., apply for what is high-quality, free childcare that will save you at least $20,000 a year.\n\nAnd, you know, it's actually not a separate conversation from the one that we're having about Juneteenth, because we know that at the end of four years, we're going to deliver free childcare to every two-year-old. But we have to build that up and phase it in. So, our first year, we're doing it to 2,000 seats. The next year, 12,000 seats. And in this first year, we had a choice of where do we want to begin. And we made the choice that we wanted to start with the places that are often last, the places that are often facing a choice of [being] last in line or not at all.\n\nAnd a lot of these neighborhoods — neighborhoods like Brownsville, East New York, Canarsie, the Rockaways, Fordham [and] Washington Heights — these are neighborhoods that have been disproportionately hit by the cost-of-living crisis and also neighborhoods that Black New Yorkers have helped to build over generations. And it's time that they see a City Hall that is looking to them first, as opposed to even questioning whether it's looking to them at all.\n\nWhat I would say is this is a program for each and every New Yorker, no matter what their story is, no matter how much money they have in their bank account, no matter their immigration status. And it is an opportunity for them to save tens of thousands of dollars. And to someone who may apply and not get it in the first year, all you will lose is what you are already in today, which is an opportunity that you could save all that money. \n\nAnd if not, then the next year there will be 12,000 seats. And I think that I understand people's — their skepticism, because it's a skepticism that reflects their experience with government thus far. And we know we have to earn their trust. We have to earn their faith. But the beautiful thing is that every time we successfully do so, it gives them a reason to keep believing. And that's what we see in this program.\n\nYes, ma'am.\n\nCome on. Come on.\n\nI see you. You got on blue. I have a little orange around where I am. So, together we make it work.\n\nIt's got to be Jordyn Woods and the lucky bag.\n\nCome on. I mean, I had the privilege of meeting Karl-Anthony Towns and Jordyn Woods and their families. And, you know, even when I saw that bag, I just said, “Thank you,” because we needed everything to get us over the line. And, you know, I'm happy to be the mayor, but it's not my credit to take.\n\nSuch a pleasure, Reecie.\n\nThank you. I really appreciate that. I'll talk to you soon.\n\nBye-bye.\n\n###",
+   "mayor_word_count": 1055,
+   "has_mayor_quotes": false
+  },
   {
    "link": "/mayors-office/news/2026/06/mayor-mamdani-announces-telemundo-will-livestream-spanish-langua.html",
    "url": "https://www.nyc.gov/mayors-office/news/2026/06/mayor-mamdani-announces-telemundo-will-livestream-spanish-langua.html",
@@ -54013,13 +54259,13 @@
   }
  ],
  "source_counts": {
-  "nyc.gov": 531,
+  "nyc.gov": 533,
   "wnyc": 1,
   "council": 29,
   "youtube": 32,
   "npr": 1,
   "cspan": 2
  },
- "external_last_run": "2026-06-20T11:39:46Z",
- "youtube_last_run": "2026-06-20T11:40:31Z"
+ "external_last_run": "2026-06-21T11:55:03Z",
+ "youtube_last_run": "2026-06-21T11:55:54Z"
 }
