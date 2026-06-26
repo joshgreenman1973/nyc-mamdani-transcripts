@@ -68,6 +68,8 @@
   let CORPUS = null;
   let THEMES = null; // data/topics.json: {taxonomy, months, monthly, totals, itemTopics, digest}
   let TOPIC_FILTER = null; // active theme id restricting the result set, or null
+  let SPOTLIGHT_ON = false; // "appeared together" filter: Mayor + Commissioner Tisch
+  let SPOTLIGHT_COUNT = 0; // how many items that co-appearance filter matches
   let VIEW = "search"; // "search" | "trends"
   let MS = null;
   let LAST_RESULTS = [];
@@ -116,6 +118,7 @@
         $("#from").max = $("#to").max = dates[dates.length - 1];
       }
       buildIndex();
+      tagCoAppearances();
       buildTopics();
       attachHandlers();
       return fetch("data/topics.json?v=" + new Date().toISOString().slice(0, 10))
@@ -156,6 +159,56 @@
     CORPUS.items.forEach((it, idx) => {
       it._id = idx;
       MS.add({ id: idx, title: it.title, text: it.text || "" });
+    });
+  }
+
+  // ---- "appeared together" spotlight (Mayor + Police Commissioner Tisch) ----
+  // Flags transcripts where the Mayor and Police Commissioner Jessica Tisch were
+  // demonstrably at the same event. The test is deliberately conservative: a
+  // passing mention of Tisch — a reporter's question, "I speak with her daily" —
+  // does NOT count. An item qualifies only when (1) Tisch has her own speaking
+  // turn, (2) the headline pairs the two or it's a joint statement, or (3) the
+  // Mayor is present and his remarks place her at the podium. Council hearings
+  // are excluded because the Mayor doesn't testify. Recomputed in the browser
+  // from corpus.json, so it tracks the daily refresh. See METHODOLOGY.md.
+  const TISCH_RE = /\bTisch\b/i;
+  const MAMDANI_RE = /\bMamdani\b/i;
+  function isTischCoAppearance(it) {
+    const txt = it.text || "";
+    const title = it.title || "";
+    if (!TISCH_RE.test(txt) && !TISCH_RE.test(title)) return false;
+    // Council hearings are committee testimony — the Mayor isn't there.
+    if (it.type === "hearing") return false;
+    const names = (it.speakers || []).map((s) => s.speaker || "");
+    // (1) Tisch has her own speaking turn in the transcript.
+    if (names.some((n) => TISCH_RE.test(n))) return true;
+    // (2) The headline pairs the two, or it's a joint statement.
+    if (/joint statement/i.test(title)) return true;
+    if (/(mamdani|mayor)\b[^.]*\b(and|joins?|with|&)\b[^.]*\btisch/i.test(title)) return true;
+    if (/\btisch\b[^.]*\b(and|joins?|with|&)\b[^.]*(mamdani|mayor)/i.test(title)) return true;
+    // (3) The Mayor is present and his remarks place Tisch at the event.
+    const mamPresent =
+      names.some((n) => MAMDANI_RE.test(n)) ||
+      it.mayor_word_count > 0 ||
+      it.type === "press_conference" ||
+      it.type === "ceremony" ||
+      it.type === "statement";
+    if (!mamPresent) return false;
+    const low = txt.toLowerCase();
+    let i = -1;
+    while ((i = low.indexOf("tisch", i + 1)) !== -1) {
+      const win = txt.slice(Math.max(0, i - 90), i + 90);
+      if (/joining me|join me|with us|with me|here today|here with|joined by|alongside|standing|thank(?:s| you)?[^.]{0,40}tisch|tisch[^.]{0,40}(joining|join|thank)/i.test(win)) {
+        return true;
+      }
+    }
+    return false;
+  }
+  function tagCoAppearances() {
+    SPOTLIGHT_COUNT = 0;
+    CORPUS.items.forEach((it) => {
+      it._withTisch = isTischCoAppearance(it);
+      if (it._withTisch) SPOTLIGHT_COUNT++;
     });
   }
 
@@ -380,6 +433,7 @@
     $("#from").addEventListener("change", runSearch);
     $("#to").addEventListener("change", runSearch);
     $("#mayor-only").addEventListener("change", runSearch);
+    $("#spotlight-tisch").addEventListener("click", toggleSpotlight);
     $("#share").addEventListener("click", copyShareLink);
     $("#mode-keyword").addEventListener("click", () => setMode("keyword"));
     $("#mode-semantic").addEventListener("click", () => setMode("semantic"));
@@ -444,6 +498,23 @@
     renderActiveTopic();
     setView("search");
     runSearch();
+  }
+
+  // Toggle the "Mayor + Commissioner Tisch together" spotlight filter.
+  function toggleSpotlight() {
+    SPOTLIGHT_ON = !SPOTLIGHT_ON;
+    renderSpotlight();
+    setView("search");
+    runSearch();
+  }
+
+  function renderSpotlight() {
+    const btn = $("#spotlight-tisch");
+    if (!btn) return;
+    btn.setAttribute("aria-pressed", SPOTLIGHT_ON ? "true" : "false");
+    btn.classList.toggle("active", SPOTLIGHT_ON);
+    const c = btn.querySelector(".spotlight-count");
+    if (c) c.textContent = SPOTLIGHT_COUNT ? `(${SPOTLIGHT_COUNT})` : "";
   }
 
   function topicLabel(id) {
@@ -575,6 +646,7 @@
       if (!itemPasses(item, enabledTypes, mayorOnly)) continue;
       if (!withinDate(item.iso_date, fromIso, toIso)) continue;
       if (!topicPasses(item)) continue;
+      if (SPOTLIGHT_ON && !item._withTisch) continue;
       rows.push({ item, score: info.cos, terms: [], passage: { s: info.s, e: info.e } });
     }
     // Rank by relevance, then keep the cluster near the top: above an absolute
@@ -644,6 +716,8 @@
         el.checked = types.has(el.value);
       });
     }
+    SPOTLIGHT_ON = p.get("with") === "tisch";
+    renderSpotlight();
     URL_RESTORING = false;
   }
 
@@ -656,6 +730,7 @@
     if (state.toIso) p.set("to", state.toIso);
     if (state.sortMode && state.sortMode !== "date") p.set("sort", state.sortMode);
     if (state.mayorOnly) p.set("mayor_only", "1");
+    if (SPOTLIGHT_ON) p.set("with", "tisch");
     // Only write `types` if it's not the default set.
     const enabled = [...state.enabledTypes].sort();
     const defaults = ["ceremony", "hearing", "media_appearance", "press_conference", "speech", "statement", "video"];
@@ -799,6 +874,7 @@
     }
 
     if (TOPIC_FILTER) rows = rows.filter(({ item }) => topicPasses(item));
+    if (SPOTLIGHT_ON) rows = rows.filter(({ item }) => item._withTisch);
 
     if (sortMode === "date" || q.length === 0) {
       rows.sort((a, b) =>
@@ -834,6 +910,10 @@
       // contain a Mamdani quote.
       if (it.type === "other") return !!it.has_mayor_quotes;
     }
+    // The featured co-appearance filter is authoritative over the type chips:
+    // when it's on, show every Mayor + Commissioner Tisch event (e.g. the joint
+    // press release) regardless of which type boxes are checked.
+    if (SPOTLIGHT_ON && it._withTisch) return true;
     return enabledTypes.has(it.type);
   }
 

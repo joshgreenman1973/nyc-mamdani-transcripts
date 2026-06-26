@@ -224,6 +224,70 @@ a:hover { color: var(--vc-orange); }
 .topic-chip.active .topic-count { color: var(--vc-cloud); }
 .topic-chip:hover .topic-count { color: var(--vc-black); }
 
+/* ---------- Featured (spotlight) filter ---------- */
+
+.spotlight {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--vc-space-2);
+  margin-bottom: var(--vc-space-3);
+}
+
+.spotlight-label {
+  font-family: var(--vc-font-sans);
+  font-weight: var(--vc-weight-bold);
+  font-size: var(--vc-size-micro);
+  letter-spacing: var(--vc-track-kicker);
+  text-transform: uppercase;
+  color: var(--vc-charcoal);
+  margin-right: var(--vc-space-2);
+}
+
+.spotlight-chip {
+  background: var(--vc-white);
+  border: var(--vc-rule-thin) solid var(--vc-black);
+  border-radius: 0;
+  padding: 0.3rem 0.7rem;
+  font-family: var(--vc-font-sans);
+  font-weight: var(--vc-weight-bold);
+  font-size: 0.82rem;
+  cursor: pointer;
+  color: var(--vc-black);
+}
+
+.spotlight-chip:hover {
+  background: var(--vc-orange);
+  border-color: var(--vc-orange);
+}
+
+.spotlight-chip.active {
+  background: var(--vc-black);
+  color: var(--vc-white);
+  border-color: var(--vc-black);
+}
+
+.spotlight-chip.active::after {
+  content: " ×";
+  color: var(--vc-orange);
+  margin-left: 0.15rem;
+}
+
+.spotlight-count {
+  margin-left: 0.3rem;
+  font-weight: var(--vc-weight-book);
+  color: var(--vc-charcoal);
+}
+.spotlight-chip.active .spotlight-count { color: var(--vc-cloud); }
+.spotlight-chip:hover .spotlight-count { color: var(--vc-black); }
+
+.spotlight-note {
+  font-family: var(--vc-font-sans);
+  font-size: var(--vc-size-micro);
+  color: var(--vc-charcoal);
+}
+.spotlight-note a { color: var(--vc-charcoal); }
+
 /* ---------- Frequency sparkline ---------- */
 
 .frequency {

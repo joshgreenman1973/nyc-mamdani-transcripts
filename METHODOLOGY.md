@@ -162,6 +162,41 @@ surface relevant remarks even when they never use those words.
   that are *about* a topic, but for exact phrases or names, keyword mode is more
   precise.
 
+## Featured filters
+
+<a name="appeared-together"></a>
+
+### Mayor &amp; Police Commissioner Tisch together
+
+The **Featured** chip under the search box restricts the archive to events where
+Mayor Mamdani and Police Commissioner Jessica Tisch *appeared together* &mdash;
+not merely items where her name comes up. It is recomputed in your browser from
+the day's corpus, so the count tracks the daily refresh.
+
+An item qualifies if any one of these is true:
+
+1. **Tisch has her own speaking turn** in the transcript (the parsed speaker list
+   includes a "Commissioner Tisch" / "Police Commissioner Jessica Tisch" turn).
+2. **The headline pairs the two**, e.g. "Mayor Mamdani and Commissioner Tisch
+   Announce&hellip;" or "Mayor Mamdani Joins NYPD Commissioner Jessica S. Tisch&hellip;",
+   or the item is a **joint statement**.
+3. **The Mayor is present and his remarks place her at the event** &mdash; a
+   mention of Tisch within about 90 characters of language such as "joining me,"
+   "with us today," "joined by," or a thank-you to her for being there.
+
+To avoid false positives, the filter **excludes**:
+
+- **Council hearings** (committee testimony &mdash; the Mayor doesn't testify).
+- **Passing references**: a reporter's question about Tisch, "I'm in constant
+  communication with Commissioner Tisch," news recaps discussing something she
+  said elsewhere, or appointment press releases that merely name her.
+
+Limitation: this is a transparent rule, not human curation. It can miss an event
+where she was present but unnamed in the text, and the boundary between "present"
+and "discussed" is occasionally a judgment call. Each match links to its full
+source so you can confirm. As of the latest refresh it flags roughly a dozen
+events from January 2026 onward.
+
 ## Trends &amp; themes
 
 The **Trends &amp; themes** tab summarizes *what* the Mayor talks about and how
