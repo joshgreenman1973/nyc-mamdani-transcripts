@@ -1185,20 +1185,20 @@
       empty.classList.remove("hidden");
       summary.textContent = q
         ? semantic
-          ? `Nothing closely related to “${q}”${mayorOnly ? " in the Mayor's words" : ""}. Try rephrasing.`
-          : `No matches for “${q}”${mayorOnly ? " in the Mayor's words" : ""}.`
+          ? `Nothing closely related to “${q}”${mayorOnly ? " in the mayor's words" : ""}. Try rephrasing.`
+          : `No matches for “${q}”${mayorOnly ? " in the mayor's words" : ""}.`
         : "No items match your filters.";
       return;
     }
     empty.classList.add("hidden");
-    const scopeNote = mayorOnly ? " in the Mayor's words" : "";
+    const scopeNote = mayorOnly ? " in the mayor's words" : "";
     if (semantic) {
       summary.textContent =
         `${rows.length} item${rows.length === 1 ? "" : "s"} most related to “${q}”${scopeNote}, ranked by relevance.`;
     } else {
       summary.textContent = q
         ? `${rows.length} item${rows.length === 1 ? "" : "s"} matching “${q}”${scopeNote}.`
-        : `Showing ${rows.length} item${rows.length === 1 ? "" : "s"}${mayorOnly ? " (Mayor's words only)" : ""}.`;
+        : `Showing ${rows.length} item${rows.length === 1 ? "" : "s"}${mayorOnly ? " (mayor's words only)" : ""}.`;
     }
 
     // Build highlight regex from parsed query: phrases highlight as
@@ -1354,7 +1354,7 @@
     const toggle = document.createElement("button");
     toggle.type = "button";
     toggle.textContent = mayorOnly
-      ? "Read Mayor's words"
+      ? "Read mayor's words"
       : (item.type === "hearing" && item.is_excerpt ? "Read excerpt" : "Read full text");
     toggle.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -1419,7 +1419,7 @@
     if (existing) {
       existing.remove();
       toggle.textContent = mayorOnly
-      ? "Read Mayor's words"
+      ? "Read mayor's words"
       : (item.type === "hearing" && item.is_excerpt ? "Read excerpt" : "Read full text");
       return;
     }
@@ -1478,7 +1478,7 @@
     if (re && count > 0) {
       const cnt = document.createElement("div");
       cnt.className = "match-count";
-      cnt.textContent = `${count} match${count === 1 ? "" : "es"} highlighted${mayorOnly ? " in Mayor's words" : ""}.`;
+      cnt.textContent = `${count} match${count === 1 ? "" : "es"} highlighted${mayorOnly ? " in mayor's words" : ""}.`;
       div.prepend(cnt);
     }
     li.appendChild(div);
