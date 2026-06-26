@@ -72,8 +72,9 @@
   let CORPUS = null;
   let THEMES = null; // data/topics.json: {taxonomy, months, monthly, totals, itemTopics, digest}
   let TOPIC_FILTER = null; // active theme id restricting the result set, or null
-  let SPOTLIGHT_ON = false; // "appeared together" filter: Mayor + Commissioner Tisch
-  let SPOTLIGHT_COUNT = 0; // how many items that co-appearance filter matches
+  let FEATURED = null; // active featured filter: null | "tisch" | "nypd"
+  let SPOTLIGHT_COUNT = 0; // # of Mayor + Commissioner Tisch co-appearances
+  let BRIEFINGS_COUNT = 0; // # of NYPD crime briefings
   let VIEW = "search"; // "search" | "trends"
   let MS = null;
   let LAST_RESULTS = [];
@@ -214,9 +215,11 @@
   }
   function tagCoAppearances() {
     SPOTLIGHT_COUNT = 0;
+    BRIEFINGS_COUNT = 0;
     CORPUS.items.forEach((it) => {
       it._withTisch = isTischCoAppearance(it);
       if (it._withTisch) SPOTLIGHT_COUNT++;
+      if (it.type === "crime_briefing") BRIEFINGS_COUNT++;
     });
   }
 
@@ -441,7 +444,8 @@
     $("#from").addEventListener("change", runSearch);
     $("#to").addEventListener("change", runSearch);
     $("#mayor-only").addEventListener("change", runSearch);
-    $("#spotlight-tisch").addEventListener("click", toggleSpotlight);
+    $("#spotlight-tisch").addEventListener("click", () => toggleFeatured("tisch"));
+    $("#spotlight-nypd").addEventListener("click", () => toggleFeatured("nypd"));
     $("#share").addEventListener("click", copyShareLink);
     $("#mode-keyword").addEventListener("click", () => setMode("keyword"));
     $("#mode-semantic").addEventListener("click", () => setMode("semantic"));
@@ -508,21 +512,35 @@
     runSearch();
   }
 
-  // Toggle the "Mayor + Commissioner Tisch together" spotlight filter.
-  function toggleSpotlight() {
-    SPOTLIGHT_ON = !SPOTLIGHT_ON;
-    renderSpotlight();
+  // Toggle a featured filter ("tisch" or "nypd"). Mutually exclusive — clicking
+  // an active chip clears it; clicking the other switches to it.
+  function toggleFeatured(kind) {
+    FEATURED = FEATURED === kind ? null : kind;
+    // NYPD crime briefings aren't in the semantic index, so isolate them in
+    // keyword mode to avoid an empty plain-language result set.
+    if (FEATURED === "nypd" && MODE === "semantic") setMode("keyword");
+    renderFeatured();
     setView("search");
     runSearch();
   }
 
-  function renderSpotlight() {
-    const btn = $("#spotlight-tisch");
-    if (!btn) return;
-    btn.setAttribute("aria-pressed", SPOTLIGHT_ON ? "true" : "false");
-    btn.classList.toggle("active", SPOTLIGHT_ON);
-    const c = btn.querySelector(".spotlight-count");
-    if (c) c.textContent = SPOTLIGHT_COUNT ? `(${SPOTLIGHT_COUNT})` : "";
+  function renderFeatured() {
+    const chips = [
+      { id: "#spotlight-tisch", kind: "tisch", count: SPOTLIGHT_COUNT },
+      { id: "#spotlight-nypd", kind: "nypd", count: BRIEFINGS_COUNT },
+    ];
+    chips.forEach(({ id, kind, count }) => {
+      const btn = $(id);
+      if (!btn) return;
+      const on = FEATURED === kind;
+      btn.setAttribute("aria-pressed", on ? "true" : "false");
+      btn.classList.toggle("active", on);
+      const c = btn.querySelector(".spotlight-count");
+      if (c) c.textContent = count ? `(${count})` : "";
+    });
+    // Show the note for whichever filter is active.
+    const note = $("#spotlight-note");
+    if (note) note.dataset.active = FEATURED || "";
   }
 
   function topicLabel(id) {
@@ -654,7 +672,8 @@
       if (!itemPasses(item, enabledTypes, mayorOnly)) continue;
       if (!withinDate(item.iso_date, fromIso, toIso)) continue;
       if (!topicPasses(item)) continue;
-      if (SPOTLIGHT_ON && !item._withTisch) continue;
+      if (FEATURED === "tisch" && !item._withTisch) continue;
+      if (FEATURED === "nypd" && item.type !== "crime_briefing") continue;
       rows.push({ item, score: info.cos, terms: [], passage: { s: info.s, e: info.e } });
     }
     // Rank by relevance, then keep the cluster near the top: above an absolute
@@ -724,8 +743,9 @@
         el.checked = types.has(el.value);
       });
     }
-    SPOTLIGHT_ON = p.get("with") === "tisch";
-    renderSpotlight();
+    FEATURED = p.get("with") === "tisch" ? "tisch"
+      : (p.get("show") === "nypd-briefings" ? "nypd" : null);
+    renderFeatured();
     URL_RESTORING = false;
   }
 
@@ -738,7 +758,8 @@
     if (state.toIso) p.set("to", state.toIso);
     if (state.sortMode && state.sortMode !== "date") p.set("sort", state.sortMode);
     if (state.mayorOnly) p.set("mayor_only", "1");
-    if (SPOTLIGHT_ON) p.set("with", "tisch");
+    if (FEATURED === "tisch") p.set("with", "tisch");
+    if (FEATURED === "nypd") p.set("show", "nypd-briefings");
     // Only write `types` if it's not the default set.
     const enabled = [...state.enabledTypes].sort();
     const defaults = ["ceremony", "crime_briefing", "hearing", "media_appearance", "press_conference", "speech", "statement", "video"];
@@ -882,7 +903,8 @@
     }
 
     if (TOPIC_FILTER) rows = rows.filter(({ item }) => topicPasses(item));
-    if (SPOTLIGHT_ON) rows = rows.filter(({ item }) => item._withTisch);
+    if (FEATURED === "tisch") rows = rows.filter(({ item }) => item._withTisch);
+    if (FEATURED === "nypd") rows = rows.filter(({ item }) => item.type === "crime_briefing");
 
     if (sortMode === "date" || q.length === 0) {
       rows.sort((a, b) =>
@@ -921,7 +943,8 @@
     // The featured co-appearance filter is authoritative over the type chips:
     // when it's on, show every Mayor + Commissioner Tisch event (e.g. the joint
     // press release) regardless of which type boxes are checked.
-    if (SPOTLIGHT_ON && it._withTisch) return true;
+    if (FEATURED === "tisch" && it._withTisch) return true;
+    if (FEATURED === "nypd" && it.type === "crime_briefing") return true;
     return enabledTypes.has(it.type);
   }
 

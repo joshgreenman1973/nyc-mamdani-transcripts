@@ -72,12 +72,18 @@
         <span class="topics-label">Try:</span>
       </div>
 
-      <div class="spotlight" aria-label="Featured filter">
+      <div class="spotlight" aria-label="Featured filters">
         <span class="spotlight-label">Featured:</span>
         <button id="spotlight-tisch" type="button" class="spotlight-chip" aria-pressed="false">
           Mayor &amp; Police Commissioner Tisch together <span class="spotlight-count"></span>
         </button>
-        <span class="spotlight-note">Events where both appeared &mdash; <a href="METHODOLOGY.md#appeared-together">how this is determined</a></span>
+        <button id="spotlight-nypd" type="button" class="spotlight-chip" aria-pressed="false">
+          NYPD crime briefings <span class="spotlight-count"></span>
+        </button>
+        <span class="spotlight-note" id="spotlight-note" data-active="">
+          <span class="note-for-tisch">Events where both appeared &mdash; <a href="METHODOLOGY.md#appeared-together">how this is determined</a></span>
+          <span class="note-for-nypd">The NYPD&rsquo;s monthly crime-statistics briefings &mdash; press releases, not verbatim transcripts. <a href="METHODOLOGY.md">Methodology</a></span>
+        </span>
       </div>
 
       <div class="frequency hidden" id="frequency" aria-label="Frequency over time">

@@ -287,6 +287,11 @@ a:hover { color: var(--vc-orange); }
   color: var(--vc-charcoal);
 }
 .spotlight-note a { color: var(--vc-charcoal); }
+/* Show only the note for the active featured filter (none when idle). */
+.spotlight-note .note-for-tisch,
+.spotlight-note .note-for-nypd { display: none; }
+.spotlight-note[data-active="tisch"] .note-for-tisch { display: inline; }
+.spotlight-note[data-active="nypd"] .note-for-nypd { display: inline; }
 
 /* ---------- Frequency sparkline ---------- */
 
