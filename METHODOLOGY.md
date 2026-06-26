@@ -25,7 +25,7 @@ reliability.
 | **Official transcript** | A transcript the producing institution published as an official record. | nyc.gov; NYC Council hearing transcripts |
 | **Published transcript** | A human-prepared transcript published by a news outlet (rush-deadline radio transcripts, NPR's posted transcripts, human YouTube captions). | NPR, WNYC, manually-captioned videos |
 | **Auto-caption** | Machine-generated closed captions. May contain errors. | C-SPAN closed captions, auto-captioned videos |
-| **Press release** | A press release published by an agency &mdash; a written summary plus attributed quotes, **not** a verbatim transcript of an event. | NYPD crime-statistics briefings |
+| **Press release** | A press release published by an agency &mdash; a written summary plus attributed quotes, **not** a verbatim transcript of an event. | City-agency press releases; NYPD crime-statistics briefings |
 
 ### Per-source detail
 
@@ -87,6 +87,34 @@ reliability.
   plain-language (semantic) index. They are also **excluded from the "Mayor &amp;
   Police Commissioner Tisch together" featured filter**, because a press release
   is not evidence the two were at the same event.
+- **City agencies** (press release) — the press releases of New York City's
+  *agencies* (as distinct from City Hall), so the archive is a citywide search,
+  not only the Mayor's own events. The Mayor's words remain the center: every
+  agency release is scanned for quotes attributed to him, which surface under
+  "Only the Mayor's words," and the default views and featured filters stay
+  Mayor-focused. Agency releases are labeled **"press release — not a verbatim
+  transcript,"** filterable individually under **Source / agency**, and (like
+  Council hearings) kept out of the plain-language semantic index.
+
+  *How they're crawled.* Agency newsrooms run on an older CMS whose listing feed
+  resists headless scraping, but each release has a numeric, year-scoped URL id,
+  and requesting `/site/<agency>/news/<id>/x` redirects to the canonical article.
+  So `scrape_agencies.py` walks each agency's ids upward until a run of misses,
+  following the redirects. Agencies and their id formats are configured in
+  `agencies.json`; the highest id seen per agency is remembered in the corpus so
+  daily refreshes are incremental. Thin "in the news" stubs (a headline plus an
+  external media link, no body) are skipped. ALL-CAPS headlines are shown in
+  sentence case; wording and body are otherwise unchanged.
+
+  *Agencies currently included* (numeric-id newsrooms sharing the standard
+  article template): **NYPD, Sanitation (DSNY), Housing Preservation &amp;
+  Development (HPD), Environmental Protection (DEP), Consumer &amp; Worker
+  Protection (DCWP), Children's Services (ACS), and Citywide Administrative
+  Services (DCAS).** This is an expanding set. Some agencies publish on different
+  page templates — Health (`/site/doh/.../press/`) and DOT (a legacy `/html/`
+  site) use slug-based URLs and different markup, and FDNY uses several
+  irregular id prefixes — so they need their own parsers and are a planned next
+  wave rather than a limit of the design.
 - **Curated seeds** — outside sources can't be fully auto-discovered (their
   search pages are JavaScript-rendered and bot-gated), so known appearances are
   listed in `external_sources.json`. Adding an entry there ingests it on the next
@@ -122,7 +150,8 @@ as a speech, not a press conference.
 | Council hearing               | A Council hearing transcript (assigned by the Council scraper, not by title) |
 | Video                         | A YouTube clip with no nyc.gov twin (assigned by the YouTube scraper) |
 | NYPD crime briefing           | An NYPD crime-statistics press release (assigned by the NYPD scraper, not by title) |
-| Press release (other)         | Everything else &mdash; staff-written announcements               |
+| Agency press release          | A city-agency press release (assigned by the agency crawler, not by title) |
+| Press release (other)         | Everything else &mdash; Mayor's Office staff-written announcements |
 
 Interviews captured from outside outlets (NPR, WNYC, C-SPAN) are filed as
 **Media appearances**.

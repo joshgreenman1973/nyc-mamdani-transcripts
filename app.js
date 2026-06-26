@@ -14,18 +14,33 @@
     executive_order: "Executive order",
     other: "Press release",
     crime_briefing: "NYPD crime briefing",
+    agency_release: "Agency press release",
   };
+
 
   // Where a transcript came from (shown only when it's not the default nyc.gov).
   const SOURCE_LABEL = {
+    "nyc.gov": "Mayor's Office",
     npr: "NPR",
     wnyc: "WNYC",
     cspan: "C-SPAN",
     council: "NYC Council",
     youtube: "YouTube",
     podcast: "Podcast",
+    // City agencies
     nypd: "NYPD",
+    dsny: "Sanitation (DSNY)",
+    hpd: "Housing Preservation & Development",
+    dep: "Environmental Protection (DEP)",
+    dca: "Consumer & Worker Protection (DCWP)",
+    acs: "Children's Services (ACS)",
+    dcas: "Citywide Administrative Services",
   };
+  function sourceLabel(src) {
+    return SOURCE_LABEL[src] || (src || "").toUpperCase();
+  }
+  // Sources that are city agencies (press releases), for grouping the filter.
+  const AGENCY_SOURCES = ["nypd", "dsny", "hpd", "dep", "dca", "acs", "dcas"];
 
   // How trustworthy the transcript text is.
   const RELIABILITY_LABEL = {
@@ -48,6 +63,8 @@
 
   // Active reliability filter (Set of values), refreshed at each search.
   let RELIABILITY_ON = null;
+  // Active source/agency filter (Set of source keys), refreshed at each search.
+  let SOURCE_ON = null;
 
   // Hand-picked starter topics. These map to common substrings the user is
   // likely to want to find his position on — they're not exhaustive.
@@ -125,6 +142,7 @@
       buildIndex();
       tagCoAppearances();
       buildTopics();
+      buildSourceFilter();
       attachHandlers();
       return fetch("data/topics.json?v=" + new Date().toISOString().slice(0, 10))
         .then((r) => (r.ok ? r.json() : null))
@@ -650,6 +668,7 @@
     const sortMode = $$("input[name=sort]:checked")[0]?.value || "relevance";
     const mayorOnly = $("#mayor-only").checked;
     RELIABILITY_ON = currentReliability();
+    SOURCE_ON = currentSources();
     refreshChipState();
 
     $("#empty").classList.add("hidden");
@@ -743,6 +762,12 @@
         el.checked = types.has(el.value);
       });
     }
+    if (p.has("sources")) {
+      const srcs = new Set(p.get("sources").split(","));
+      $$("input[name=source]").forEach((el) => {
+        el.checked = srcs.has(el.value);
+      });
+    }
     FEATURED = p.get("with") === "tisch" ? "tisch"
       : (p.get("show") === "nypd-briefings" ? "nypd" : null);
     renderFeatured();
@@ -762,9 +787,15 @@
     if (FEATURED === "nypd") p.set("show", "nypd-briefings");
     // Only write `types` if it's not the default set.
     const enabled = [...state.enabledTypes].sort();
-    const defaults = ["ceremony", "crime_briefing", "hearing", "media_appearance", "press_conference", "speech", "statement", "video"];
+    const defaults = ["agency_release", "ceremony", "crime_briefing", "hearing", "media_appearance", "press_conference", "speech", "statement", "video"];
     if (JSON.stringify(enabled) !== JSON.stringify(defaults)) {
       p.set("types", enabled.join(","));
+    }
+    // Source/agency filter (only written when not all sources are selected).
+    const srcBoxes = $$("input[name=source]");
+    const onSrc = srcBoxes.filter((b) => b.checked).map((b) => b.value);
+    if (srcBoxes.length && onSrc.length !== srcBoxes.length) {
+      p.set("sources", onSrc.sort().join(","));
     }
     const qs = p.toString();
     const newUrl = qs ? "?" + qs : window.location.pathname;
@@ -815,6 +846,7 @@
     const mayorOnly = $("#mayor-only").checked;
     const parsed = parseQuery(q);
     RELIABILITY_ON = currentReliability();
+    SOURCE_ON = currentSources();
     refreshChipState();
 
     // When "Only the Mayor's words" is on, pull press releases that have
@@ -926,7 +958,38 @@
     return on.size === boxes.length ? null : on;
   }
 
+  // Read the source/agency checkboxes; null means "no filter" (all pass).
+  function currentSources() {
+    const boxes = $$("input[name=source]");
+    if (!boxes.length) return null;
+    const on = new Set(boxes.filter((b) => b.checked).map((b) => b.value));
+    return on.size === boxes.length ? null : on;
+  }
+
+  // Build the source/agency filter from the corpus's source counts. Dynamic so
+  // newly-added agencies appear automatically. Mayor's Office first, then other
+  // transcript sources, then city agencies; by volume within each group.
+  function buildSourceFilter() {
+    const wrap = $("#sources");
+    if (!wrap) return;
+    const counts = (CORPUS && CORPUS.source_counts) || {};
+    const rank = (s) => (s === "nyc.gov" ? 0 : AGENCY_SOURCES.includes(s) ? 2 : 1);
+    const order = Object.keys(counts).sort(
+      (a, b) => rank(a) - rank(b) || (counts[b] - counts[a])
+    );
+    wrap.innerHTML = "";
+    order.forEach((src) => {
+      const label = document.createElement("label");
+      label.innerHTML =
+        `<input type="checkbox" name="source" value="${escapeHtml(src)}" checked /> ` +
+        `${escapeHtml(sourceLabel(src))} <span class="count">(${counts[src]})</span>`;
+      wrap.appendChild(label);
+    });
+    $$("input[name=source]").forEach((el) => el.addEventListener("change", runSearch));
+  }
+
   function itemPasses(it, enabledTypes, mayorOnly) {
+    if (SOURCE_ON && !SOURCE_ON.has(it.source || "nyc.gov")) return false;
     if (RELIABILITY_ON && !RELIABILITY_ON.has(it.reliability || "official")) {
       return false;
     }
@@ -1141,7 +1204,7 @@
       const prov = document.createElement("span");
       prov.className = "provenance " + (item.reliability || "verified");
       const rl = RELIABILITY_LABEL[item.reliability] || "";
-      prov.textContent = (SOURCE_LABEL[src] || src) + (rl ? " · " + rl : "");
+      prov.textContent = sourceLabel(src) + (rl ? " · " + rl : "");
       meta.append(prov);
     }
     if (item.type === "hearing" && item.is_excerpt) {
@@ -1238,7 +1301,9 @@
       ext.target = "_blank";
       ext.rel = "noopener";
       const srcKey = item.source || "nyc.gov";
-      ext.textContent = (SOURCE_LINK_LABEL[srcKey] || "View source") + " ↗";
+      const linkLabel = SOURCE_LINK_LABEL[srcKey]
+        || (AGENCY_SOURCES.includes(srcKey) ? "Read release" : "View source");
+      ext.textContent = linkLabel + " ↗";
       actions.append(ext);
       // If this nyc.gov event also has a YouTube video, expose it.
       if (item.youtube_url) {

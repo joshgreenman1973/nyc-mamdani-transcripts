@@ -123,6 +123,9 @@ items.forEach((it, i) => {
   // transcripts — they're keyword/stat lookups, not "ask in plain language"
   // material. Keep them out of the semantic index (still keyword-searchable).
   if (it.type === "crime_briefing") return;
+  // Agency press releases: written summaries, keyword/agency-filter territory,
+  // not "ask in plain language" material — keep them out of the semantic index.
+  if (it.type === "agency_release") return;
   for (const c of chunk(body)) {
     meta.push({ i, s: c.start, e: c.end });
     texts.push(c.text);

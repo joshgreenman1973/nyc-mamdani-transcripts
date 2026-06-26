@@ -20,9 +20,11 @@
       <p class="lede">
         Everything said at Mayor Zohran Mamdani&rsquo;s official events
         &mdash; speeches, press conferences, prepared remarks, statements, and his
-        quotes inside press releases &mdash; as catalogued on nyc.gov since
-        he took office on January&nbsp;1,&nbsp;2026. Search for a word or topic to
-        find what was said about it and when.
+        quotes inside press releases &mdash; plus the press releases of New York
+        City&rsquo;s agencies, all catalogued since he took office on
+        January&nbsp;1,&nbsp;2026. The Mayor&rsquo;s words stay the center of it;
+        the agency releases widen it into a citywide search. Look for a word or
+        topic, and <strong>filter by agency</strong> to see who said it.
       </p>
       <p class="lede lede--small">
         Transcripts include reporters&rsquo; questions and other officials at the
@@ -102,7 +104,8 @@
           <label><input type="checkbox" name="type" value="video" checked /> Videos <span class="count" data-count="video"></span></label>
           <label><input type="checkbox" name="type" value="hearing" checked /> Council hearings <span class="count" data-count="hearing"></span></label>
           <label><input type="checkbox" name="type" value="crime_briefing" checked /> NYPD crime briefings <span class="count" data-count="crime_briefing"></span></label>
-          <label><input type="checkbox" name="type" value="other" /> Press releases <span class="count" data-count="other"></span></label>
+          <label><input type="checkbox" name="type" value="agency_release" checked /> Agency press releases <span class="count" data-count="agency_release"></span></label>
+          <label><input type="checkbox" name="type" value="other" /> Mayor&rsquo;s Office releases <span class="count" data-count="other"></span></label>
           <label><input type="checkbox" name="type" value="executive_order" /> Executive orders <span class="count" data-count="executive_order"></span></label>
         </fieldset>
 
@@ -116,6 +119,11 @@
           <legend>Sort by</legend>
           <label><input type="radio" name="sort" value="date" checked /> Date (newest first)</label>
           <label><input type="radio" name="sort" value="relevance" /> Relevance</label>
+        </fieldset>
+
+        <fieldset class="chips sources" aria-label="Source / agency">
+          <legend>Source / agency</legend>
+          <div id="sources" class="source-list"></div>
         </fieldset>
 
         <fieldset class="chips" aria-label="Reliability">

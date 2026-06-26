@@ -444,8 +444,19 @@ def main() -> int:
     out.sort(key=lambda x: x.get("iso_date", ""), reverse=True)
 
     type_counts: dict[str, int] = {}
+    source_counts: dict[str, int] = {}
     for it in out:
         type_counts[it["type"]] = type_counts.get(it["type"], 0) + 1
+        source_counts[it.get("source", "nyc.gov")] = source_counts.get(it.get("source", "nyc.gov"), 0) + 1
+
+    # Preserve the chained agency crawler's incremental state across runs — it
+    # lives at the top level of the corpus, so a naive rebuild would wipe it and
+    # force scrape_agencies.py to re-crawl every agency from scratch each day.
+    prior_state = {}
+    try:
+        prior_state = json.loads(CORPUS.read_text()).get("agency_state", {})
+    except Exception:  # noqa: BLE001 — first run / unreadable: just start empty
+        prior_state = {}
 
     bundle = {
         "generated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
@@ -453,6 +464,8 @@ def main() -> int:
         "source": "https://www.nyc.gov/mayors-office/news/",
         "total": len(out),
         "type_counts": type_counts,
+        "source_counts": source_counts,
+        "agency_state": prior_state,
         "items": out,
     }
     CORPUS.write_text(json.dumps(bundle, ensure_ascii=False, indent=1))
@@ -475,7 +488,7 @@ def _run_chained_scrapers() -> None:
     """
     if not os.environ.get("GITHUB_ACTIONS"):
         return
-    for script in ("scrape_external.py", "scrape_council.py", "scrape_nypd.py"):
+    for script in ("scrape_external.py", "scrape_council.py", "scrape_nypd.py", "scrape_agencies.py"):
         path = Path(__file__).parent / script
         try:
             print(f"\n[chained] running {script} …", flush=True)
