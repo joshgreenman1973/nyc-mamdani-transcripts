@@ -35,6 +35,7 @@ from __future__ import annotations
 
 import html
 import json
+import os
 import re
 import sys
 import time
@@ -87,6 +88,36 @@ def fetch(url: str) -> str:
     raise RuntimeError(f"fetch failed for {url}: {last}")
 
 
+def _cell_text(cell_html: str) -> str:
+    """Plain text of one table cell: drop tags, unescape, collapse whitespace."""
+    t = re.sub(r"<[^>]+>", " ", cell_html)
+    t = html.unescape(t).replace("\xa0", " ")
+    return re.sub(r"\s+", " ", t).strip()
+
+
+def tables_to_text(frag: str) -> str:
+    """Turn each <table> into pipe-delimited rows so the crime-stat grids stay
+    legible. Without this, html_to_text drops every cell onto its own line and
+    the row/column structure (category vs month vs change) is lost. Each row
+    becomes one line ("Murder | 22 | 21 | 1 | 4.8%"); the block is fenced by
+    blank lines so the front-end renders it as a contiguous table.
+    """
+    def repl(m: "re.Match") -> str:
+        rows_out: list[str] = []
+        for ri, tr in enumerate(re.findall(r"<tr\b.*?</tr>", m.group(0), re.S | re.I)):
+            cells = [_cell_text(c) for c in
+                     re.findall(r"<t[dh]\b[^>]*>(.*?)</t[dh]>", tr, re.S | re.I)]
+            if not any(cells):
+                continue
+            # Label a blank top-left header cell so the column reads cleanly.
+            if ri == 0 and cells and not cells[0]:
+                cells[0] = "Category"
+            rows_out.append(" | ".join(cells))
+        return "\n\n" + "\n".join(rows_out) + "\n\n" if rows_out else "\n\n"
+
+    return re.sub(r"<table\b.*?</table>", repl, frag, flags=re.S | re.I)
+
+
 def _balanced_div(htmltext: str, open_idx: int) -> str:
     """Return the inner HTML of the <div> whose opening tag starts at open_idx."""
     i = htmltext.find(">", open_idx) + 1
@@ -137,6 +168,7 @@ def parse_release(url: str, htmltext: str) -> dict | None:
     if not rm:
         return None
     inner = _balanced_div(htmltext, rm.start())
+    inner = tables_to_text(inner)  # convert crime-stat grids to pipe rows first
     text = scrape.html_to_text(inner)
 
     # Date: a <span class="date">Month DD, YYYY</span> leads the body.
@@ -203,6 +235,28 @@ def main() -> int:
     items = data["items"]
     have = {it.get("url") for it in items}
 
+    # Re-parse mode: refresh already-stored NYPD items in place (same array
+    # position, so embedding indices are preserved). Use after a parser change;
+    # off by default so the daily cron stays a cheap, no-refetch append.
+    reparse = bool(os.environ.get("NYPD_REPARSE")) or "--reparse" in sys.argv
+    updated = 0
+    if reparse:
+        seeded = {e.get("url") for e in releases if e.get("url")}
+        for idx, it in enumerate(items):
+            if it.get("source") != "nypd" or it.get("url") not in seeded:
+                continue
+            try:
+                fresh = parse_release(it["url"], fetch(it["url"]))
+            except Exception as e:  # noqa: BLE001
+                print(f"  reparse skip {it['url']}: {e}", file=sys.stderr)
+                time.sleep(SLEEP)
+                continue
+            if fresh and fresh["text"]:
+                items[idx] = fresh
+                updated += 1
+                print(f"  ~ reparsed {fresh['iso_date']}  {fresh['title'][:60]}")
+            time.sleep(SLEEP)
+
     added = 0
     for entry in releases:
         url = entry.get("url")
@@ -224,7 +278,7 @@ def main() -> int:
         print(f"  + {item['iso_date']} crime_briefing  {item['title'][:70]}")
         time.sleep(SLEEP)
 
-    if added:
+    if added or updated:
         # Refresh the summary counters.
         data["total"] = len(items)
         type_counts: dict[str, int] = {}
@@ -237,7 +291,7 @@ def main() -> int:
         data["nypd_last_run"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
         CORPUS.write_text(json.dumps(data, ensure_ascii=False))
 
-    print(f"NYPD crime briefings: added {added}, corpus now {len(items)} items.")
+    print(f"NYPD crime briefings: added {added}, reparsed {updated}, corpus now {len(items)} items.")
     return 0
 
 

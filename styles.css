@@ -582,6 +582,31 @@ mark {
 .expanded p { margin: 0 0 1em; }
 .expanded p:last-child { margin: 0; }
 
+/* Crime-statistics grids (NYPD briefings): rendered from the scraper's
+   pipe-delimited rows into a real table so columns line up. */
+.expanded .stat-table {
+  border-collapse: collapse;
+  margin: 0 0 1.2em;
+  font-family: var(--vc-font-sans);
+  font-size: 0.82rem;
+  line-height: 1.3;
+}
+.expanded .stat-table th,
+.expanded .stat-table td {
+  border: var(--vc-rule-thin) solid var(--vc-cloud);
+  padding: 0.25rem 0.6rem;
+  text-align: right;
+  white-space: nowrap;
+}
+/* First column is the row label (crime category) — left-align it. */
+.expanded .stat-table th:first-child,
+.expanded .stat-table td:first-child { text-align: left; }
+.expanded .stat-table th {
+  background: var(--vc-paper, #f4f1ea);
+  font-weight: var(--vc-weight-bold);
+}
+.expanded .stat-table mark { white-space: nowrap; }
+
 .turn {
   border-left: 3px solid var(--vc-cloud);
   padding-left: var(--vc-space-3);

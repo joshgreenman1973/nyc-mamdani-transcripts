@@ -1234,6 +1234,24 @@
     return li;
   }
 
+  // Render one paragraph-block of body text. A block whose lines are mostly
+  // " | "-delimited (the pipe-row form the NYPD scraper emits for crime-stat
+  // grids) becomes a real <table>; everything else stays a <p>. Input is
+  // already escaped/highlighted, so cell contents are inserted as-is.
+  function blockToHtml(block) {
+    const lines = block.split(/\n/);
+    const pipeLines = lines.filter((l) => l.includes(" | "));
+    if (lines.length >= 2 && pipeLines.length >= 2 && pipeLines.length >= lines.length - 1) {
+      const trs = pipeLines.map((l, idx) => {
+        const tag = idx === 0 ? "th" : "td";
+        const cells = l.split(" | ").map((c) => `<${tag}>${c.trim()}</${tag}>`).join("");
+        return `<tr>${cells}</tr>`;
+      });
+      return `<table class="stat-table">${trs.join("")}</table>`;
+    }
+    return `<p>${block.replace(/\n/g, "<br />")}</p>`;
+  }
+
   function toggleExpand(li, item, re, toggle, mayorOnly) {
     const existing = li.querySelector(".expanded");
     if (existing) {
@@ -1259,7 +1277,7 @@
       }
       return body
         .split(/\n{2,}/)
-        .map((p) => `<p>${p.replace(/\n/g, "<br />")}</p>`)
+        .map(blockToHtml)
         .join("");
     };
 
