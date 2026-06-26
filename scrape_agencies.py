@@ -31,6 +31,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import sys
 import time
 from pathlib import Path
@@ -121,6 +122,104 @@ def parse_release(url: str, htmltext: str, source: str) -> dict | None:
     }
 
 
+# Some agency newsrooms use a different LiveSite template (`ls-col-body`) with
+# slug URLs instead of numeric ids. The body sits between the date and the page
+# footer with no clean wrapper, so we bound it by the date and a footer marker.
+_LS_FOOTER = re.compile(
+    r"(\#\#\#|Your government|Website feedback|Privacy policy|Terms of use|"
+    r"About nyc\.gov content|©\s*City of New York|Was this information helpful|"
+    r"nyc\.gov\s*home)", re.I)
+_LS_DATE = re.compile(r"([A-Z][a-z]+ \d{1,2}, 20\d\d)")
+
+
+def parse_release_ls(url: str, htmltext: str, source: str) -> dict | None:
+    import html as _html
+    m = re.search(r'<div[^>]*class="[^"]*ls-col-body[^"]*"', htmltext, re.I)
+    if not m:
+        return None
+    inner = sn.tables_to_text(sn._balanced_div(htmltext, m.start()))
+    text = scrape.html_to_text(inner)
+
+    # Title: the <title> tag is the most uniform headline source here; strip the
+    # trailing " - <Agency>" / " | City of New York" site suffix.
+    tt = re.search(r"<title>(.*?)</title>", htmltext, re.S | re.I)
+    title = _html.unescape(re.sub("<[^>]+>", "", tt.group(1))).strip() if tt else ""
+    title = re.sub(r"\s*[|–-]\s*(City of New York|[A-Z][A-Za-z&'.\s]{1,40})$", "", title).strip()
+
+    dm = _LS_DATE.search(text)
+    date = dm.group(1) if dm else ""
+    iso = scrape.to_iso(date)
+    if not iso or iso < FROM_ISO:
+        return None
+    start = text.find(date)
+    fm = _LS_FOOTER.search(text, start + len(date))
+    body = text[start:(fm.start() if fm else len(text))].strip()
+    body = re.sub(r"^[A-Z][a-z]+ \d{1,2}, 20\d\d\s*[—–-]?\s*", "", body).strip()
+    if len(body.split()) < MIN_WORDS:
+        return None
+
+    link = url.split("nyc.gov", 1)[1] if "nyc.gov" in url else url
+    mayor_quotes = scrape.extract_mayor_quotes(body)
+    return {
+        "link": link, "url": url, "title": title, "date": date, "iso_date": iso,
+        "type": "agency_release", "text": body, "word_count": len(body.split()),
+        "source": source, "reliability": "release", "is_press_release": True,
+        "speakers": [], "mayor_quotes": mayor_quotes,
+        "mayor_text": "\n\n".join(mayor_quotes),
+        "mayor_word_count": len("\n\n".join(mayor_quotes).split()),
+        "has_mayor_quotes": bool(mayor_quotes),
+    }
+
+
+_LS_NAV = re.compile(
+    r"(/index\.page|/contact|/about\.page|press-releases\.page|recent-press-releases|"
+    r"/news\.page|/faq|/help|find-a-partner|cultural-funding|/sheriff|public-reports|"
+    r"frequently-asked)", re.I)
+
+
+def crawl_index_agency(ag, items, have, probes, budget):
+    """Index strategy: scrape an agency's press-release index for release links,
+    then fetch + parse each with the ls-col-body parser. Returns (added, probes)."""
+    slug, name = ag["slug"], ag.get("name", ag["slug"])
+    res = fetch_redirect(BASE + ag["index_url"])
+    probes += 1
+    time.sleep(SLEEP)
+    if not res:
+        print(f"  [{slug}] {name}: index unreachable", file=sys.stderr)
+        return 0, probes
+    links = set(re.findall(rf'/site/{slug}/[^"#\s]+?\.page', res[1]))
+    rel = []
+    for l in links:
+        if l == ag["index_url"] or _LS_NAV.search(l):
+            continue
+        if ag.get("require_2026") and "2026" not in l:
+            continue
+        rel.append(l)
+    added = 0
+    for l in sorted(rel):
+        if probes >= budget:
+            break
+        url = BASE + l
+        if url in have:
+            continue
+        r = fetch_redirect(url)
+        probes += 1
+        time.sleep(SLEEP)
+        if not r or r[0] in have:
+            continue
+        try:
+            item = parse_release_ls(r[0], r[1], slug)
+        except Exception as e:  # noqa: BLE001
+            print(f"  [{slug}] parse error {r[0]}: {e}", file=sys.stderr)
+            continue
+        if item and item["text"]:
+            items.append(item)
+            have.add(r[0])
+            added += 1
+    print(f"  [{slug}] {name}: +{added} (index)", flush=True)
+    return added, probes
+
+
 def main() -> int:
     cfg = json.loads(CONFIG.read_text())
     agencies = cfg.get("agencies", [])
@@ -169,6 +268,13 @@ def main() -> int:
         if probes >= BUDGET:
             print(f"  budget {BUDGET} reached — stopping; resume next run.", file=sys.stderr)
             break
+
+    # Index-strategy agencies (slug-URL newsrooms on the ls-col-body template).
+    for ag in cfg.get("index_agencies", []):
+        if probes >= BUDGET:
+            break
+        ad, probes = crawl_index_agency(ag, items, have, probes, BUDGET)
+        added += ad
 
     # Always persist advanced state (so re-crawls resume) and recompute counts.
     data["agency_state"] = state

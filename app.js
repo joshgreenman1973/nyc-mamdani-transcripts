@@ -29,18 +29,26 @@
     podcast: "Podcast",
     // City agencies
     nypd: "NYPD",
+    fdny: "Fire (FDNY)",
     dsny: "Sanitation (DSNY)",
     hpd: "Housing Preservation & Development",
     dep: "Environmental Protection (DEP)",
     dca: "Consumer & Worker Protection (DCWP)",
     acs: "Children's Services (ACS)",
     dcas: "Citywide Administrative Services",
+    doh: "Health (DOHMH)",
+    dhs: "Homeless Services (DHS)",
+    sbs: "Small Business Services (SBS)",
+    tlc: "Taxi & Limousine (TLC)",
+    immigrants: "Immigrant Affairs (MOIA)",
+    mome: "Media & Entertainment (MOME)",
   };
   function sourceLabel(src) {
     return SOURCE_LABEL[src] || (src || "").toUpperCase();
   }
   // Sources that are city agencies (press releases), for grouping the filter.
-  const AGENCY_SOURCES = ["nypd", "dsny", "hpd", "dep", "dca", "acs", "dcas"];
+  const AGENCY_SOURCES = ["nypd", "fdny", "dsny", "hpd", "dep", "dca", "acs", "dcas",
+    "doh", "dhs", "sbs", "tlc", "immigrants", "mome"];
   // "City Hall" = the Mayor's own universe: his events + interviews + the Council
   // hearings where his administration testifies. Everything not a city agency.
   function isCityHall(src) {

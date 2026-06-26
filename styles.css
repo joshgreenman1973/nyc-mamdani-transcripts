@@ -832,7 +832,11 @@ mark {
 /* ---------- Trends view ---------- */
 
 .trends-intro { margin-bottom: var(--vc-space-5); }
-.trends-intro h2 { font-size: var(--vc-size-display); margin: 0 0 var(--vc-space-3); }
+.trends-intro h2 {
+  font-size: var(--vc-size-display);
+  line-height: var(--vc-lh-tight);
+  margin: 0 0 var(--vc-space-3);
+}
 .trends-lede {
   font-family: var(--vc-font-sans);
   font-weight: var(--vc-weight-book);

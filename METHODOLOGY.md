@@ -97,24 +97,36 @@ reliability.
   Council hearings) kept out of the plain-language semantic index.
 
   *How they're crawled.* Agency newsrooms run on an older CMS whose listing feed
-  resists headless scraping, but each release has a numeric, year-scoped URL id,
-  and requesting `/site/<agency>/news/<id>/x` redirects to the canonical article.
-  So `scrape_agencies.py` walks each agency's ids upward until a run of misses,
-  following the redirects. Agencies and their id formats are configured in
-  `agencies.json`; the highest id seen per agency is remembered in the corpus so
-  daily refreshes are incremental. Thin "in the news" stubs (a headline plus an
-  external media link, no body) are skipped. ALL-CAPS headlines are shown in
+  resists headless scraping. `scrape_agencies.py` uses two strategies, configured
+  in `agencies.json`:
+  - **Numeric:** most newsrooms give each release a numeric, year-scoped URL id,
+    and requesting `/site/<agency>/news/<id>/x` redirects to the canonical
+    article — so the crawler walks each agency's ids upward until a run of
+    misses. The highest id seen per agency is remembered in the corpus so daily
+    refreshes are incremental.
+  - **Index:** a second group uses slug URLs (no numeric id) on a different page
+    template (`ls-col-body`). For these the crawler scrapes the agency's
+    press-release **index page** for release links and parses each; the article
+    body, which has no clean wrapper there, is bounded by the dateline and the
+    page footer, and the headline is taken from the page `<title>`.
+
+  Thin "in the news" stubs (a headline plus an external media link, no body) are
+  skipped, as are releases under 25 words. ALL-CAPS headlines are shown in
   sentence case; wording and body are otherwise unchanged.
 
-  *Agencies currently included* (numeric-id newsrooms sharing the standard
-  article template): **NYPD, Sanitation (DSNY), Housing Preservation &amp;
-  Development (HPD), Environmental Protection (DEP), Consumer &amp; Worker
-  Protection (DCWP), Children's Services (ACS), and Citywide Administrative
-  Services (DCAS).** This is an expanding set. Some agencies publish on different
-  page templates — Health (`/site/doh/.../press/`) and DOT (a legacy `/html/`
-  site) use slug-based URLs and different markup, and FDNY uses several
-  irregular id prefixes — so they need their own parsers and are a planned next
-  wave rather than a limit of the design.
+  *Agencies currently included:* **NYPD, Fire (FDNY), Sanitation (DSNY), Housing
+  Preservation &amp; Development (HPD), Environmental Protection (DEP), Consumer
+  &amp; Worker Protection (DCWP), Children's Services (ACS), Citywide
+  Administrative Services (DCAS)** (numeric), plus **Health (DOHMH), Homeless
+  Services (DHS), Small Business Services (SBS), Taxi &amp; Limousine (TLC),
+  Immigrant Affairs (MOIA), and Media &amp; Entertainment (MOME)** (index). This
+  is an expanding set determined by a one-time discovery sweep of every city
+  agency. Still out: a few agencies whose index pages are themselves
+  JavaScript-rendered (e.g. HRA, Law, Investigation), DOT (a legacy `/html/`
+  static site needing its own parser), and agencies on separate websites
+  (Parks, Schools, NYCHA, Health + Hospitals) or outside the mayoral
+  administration (Comptroller, Public Advocate) — all noted rather than silently
+  omitted.
 - **Curated seeds** — outside sources can't be fully auto-discovered (their
   search pages are JavaScript-rendered and bot-gated), so known appearances are
   listed in `external_sources.json`. Adding an entry there ingests it on the next

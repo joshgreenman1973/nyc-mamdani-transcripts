@@ -2,11 +2,21 @@
   "_comment": "City-agency newsrooms crawled by scrape_agencies.py. These are the NYC agencies on the LiveSite CMS whose press releases use a numeric, year-scoped URL id (so they can be enumerated by incrementing) AND share the standard article template the shared parser handles. id_format is a Python format string for the release id; the crawler fetches /site/<slug>/news/<id>/x (any slug works — the site redirects to the canonical URL) and walks ids upward until a run of misses. Display names map to SOURCE_LABEL in app.js. Agencies on other templates (Health /site/doh .page, DOT /html .shtml, FDNY's mixed prefixes) use different page structures and are a separate wave — see METHODOLOGY.md. City Hall (the Mayor's Office) is covered by scrape.py, not here.",
   "agencies": [
     { "slug": "nypd", "name": "NYPD",                                  "id_format": "PR{:03d}" },
+    { "slug": "fdny", "name": "Fire (FDNY)",                           "id_format": "{:02d}-26" },
     { "slug": "dsny", "name": "Sanitation (DSNY)",                     "id_format": "26-{:03d}" },
     { "slug": "hpd",  "name": "Housing Preservation & Development",    "id_format": "{:03d}-26" },
     { "slug": "dep",  "name": "Environmental Protection (DEP)",        "id_format": "26-{:03d}" },
     { "slug": "dca",  "name": "Consumer & Worker Protection (DCWP)",   "id_format": "{:03d}-26" },
     { "slug": "acs",  "name": "Children's Services (ACS)",             "id_format": "i{:02d}-26" },
     { "slug": "dcas", "name": "Citywide Administrative Services",      "id_format": "{:03d}-26" }
+  ],
+  "_index_comment": "Agencies on the slug-URL LiveSite template (ls-col-body) — no numeric ids, so crawled by scraping their press-release index page for links. require_2026 limits fetches to URLs containing the year (their indexes list releases back many years).",
+  "index_agencies": [
+    { "slug": "doh",        "name": "Health (DOHMH)",                "index_url": "/site/doh/about/press/recent-press-releases.page", "require_2026": true },
+    { "slug": "dhs",        "name": "Homeless Services (DHS)",       "index_url": "/site/dhs/about/press-releases.page",              "require_2026": false },
+    { "slug": "sbs",        "name": "Small Business Services (SBS)", "index_url": "/site/sbs/about/press-releases.page",              "require_2026": true },
+    { "slug": "tlc",        "name": "Taxi & Limousine (TLC)",        "index_url": "/site/tlc/about/press-releases.page",              "require_2026": false },
+    { "slug": "immigrants", "name": "Immigrant Affairs (MOIA)",      "index_url": "/site/immigrants/about/press-releases.page",       "require_2026": true },
+    { "slug": "mome",       "name": "Media & Entertainment (MOME)",  "index_url": "/site/mome/about/press-releases.page",             "require_2026": true }
   ]
 }
