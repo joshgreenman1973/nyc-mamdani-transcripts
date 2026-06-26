@@ -119,6 +119,10 @@ items.forEach((it, i) => {
   // keyword-search a hearing for a topic, not semantically. They stay fully
   // keyword-searchable and topic-tagged, just out of the semantic index.
   if (it.type === "hearing") return;
+  // NYPD crime-statistics press releases are statistical write-ups, not spoken
+  // transcripts — they're keyword/stat lookups, not "ask in plain language"
+  // material. Keep them out of the semantic index (still keyword-searchable).
+  if (it.type === "crime_briefing") return;
   for (const c of chunk(body)) {
     meta.push({ i, s: c.start, e: c.end });
     texts.push(c.text);

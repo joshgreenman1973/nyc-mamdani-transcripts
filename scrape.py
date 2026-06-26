@@ -475,7 +475,7 @@ def _run_chained_scrapers() -> None:
     """
     if not os.environ.get("GITHUB_ACTIONS"):
         return
-    for script in ("scrape_external.py", "scrape_council.py"):
+    for script in ("scrape_external.py", "scrape_council.py", "scrape_nypd.py"):
         path = Path(__file__).parent / script
         try:
             print(f"\n[chained] running {script} …", flush=True)

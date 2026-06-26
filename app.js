@@ -13,6 +13,7 @@
     hearing: "Council hearing",
     executive_order: "Executive order",
     other: "Press release",
+    crime_briefing: "NYPD crime briefing",
   };
 
   // Where a transcript came from (shown only when it's not the default nyc.gov).
@@ -23,6 +24,7 @@
     council: "NYC Council",
     youtube: "YouTube",
     podcast: "Podcast",
+    nypd: "NYPD",
   };
 
   // How trustworthy the transcript text is.
@@ -30,6 +32,7 @@
     official: "official transcript",
     verified: "published transcript",
     auto: "auto-caption — may contain errors",
+    release: "press release — not a verbatim transcript",
   };
 
   // The "View on …" link label per source.
@@ -40,6 +43,7 @@
     cspan: "Watch on C-SPAN",
     council: "Open hearing transcript (PDF)",
     podcast: "Open transcript",
+    nypd: "Read NYPD release",
   };
 
   // Active reliability filter (Set of values), refreshed at each search.
@@ -179,6 +183,10 @@
     if (!TISCH_RE.test(txt) && !TISCH_RE.test(title)) return false;
     // Council hearings are committee testimony — the Mayor isn't there.
     if (it.type === "hearing") return false;
+    // Press releases (incl. NYPD crime briefings) are written documents, not
+    // evidence the two were at the same event — keep them out of "appeared
+    // together" even when both are quoted in the release.
+    if (it.is_press_release || it.type === "crime_briefing") return false;
     const names = (it.speakers || []).map((s) => s.speaker || "");
     // (1) Tisch has her own speaking turn in the transcript.
     if (names.some((n) => TISCH_RE.test(n))) return true;
@@ -733,7 +741,7 @@
     if (SPOTLIGHT_ON) p.set("with", "tisch");
     // Only write `types` if it's not the default set.
     const enabled = [...state.enabledTypes].sort();
-    const defaults = ["ceremony", "hearing", "media_appearance", "press_conference", "speech", "statement", "video"];
+    const defaults = ["ceremony", "crime_briefing", "hearing", "media_appearance", "press_conference", "speech", "statement", "video"];
     if (JSON.stringify(enabled) !== JSON.stringify(defaults)) {
       p.set("types", enabled.join(","));
     }
@@ -1119,7 +1127,7 @@
       ex.textContent = `excerpt of ${item.full_word_count.toLocaleString()} words — full transcript in linked PDF`;
       meta.append(ex);
     }
-    if (item.type === "other" && item.mayor_quotes && item.mayor_quotes.length) {
+    if ((item.type === "other" || item.type === "crime_briefing") && item.mayor_quotes && item.mayor_quotes.length) {
       // Only flag "Mamdani quoted" when the search match is actually inside
       // one of the Mamdani quotes — otherwise the press release matched on
       // some third-party quote and the flag would be misleading.
@@ -1162,7 +1170,7 @@
     if (mayorOnly) {
       snipText = item.mayor_text || item.text || "";
     } else if (
-      item.type === "other"
+      (item.type === "other" || item.type === "crime_briefing")
       && item.mayor_quotes
       && item.mayor_quotes.length
       && re

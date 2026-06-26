@@ -1,0 +1,10 @@
+{
+  "_comment": "Human-editable seed for scrape_nypd.py. Each entry is an NYPD newsroom press release for a MONTHLY / QUARTERLY / YEAR-END crime-statistics briefing (the CompStat-style crime-numbers releases). These are official NYPD press releases, NOT verbatim transcripts — there is no public transcript of the briefings the Mayor doesn't attend (the NYPD's own briefing videos carry no captions). Add the next month's release URL here as it is published; the scraper fetches, parses and tags each one. Scope: crime-statistics briefings only (per the editorial decision) — do NOT add gun-removal, strategy or other public-safety announcements. See METHODOLOGY.md.",
+  "releases": [
+    { "url": "https://www.nyc.gov/site/nypd/news/PR002/nypd-fewest-shooting-incidents-shooting-victims-murders-january", "period": "January 2026" },
+    { "url": "https://www.nyc.gov/site/nypd/news/PR004/nypd-fewest-shooting-incidents-shooting-victims-murders-recorded-history-the", "period": "February 2026 (first two months)" },
+    { "url": "https://www.nyc.gov/site/nypd/news/PR006/nypd-fewest-murders-shooting-incidents-recorded-history-first-three-months-the", "period": "Q1 2026 (first three months)" },
+    { "url": "https://www.nyc.gov/site/nypd/news/PR007/nypd-fewest-murders-recorded-history-the-first-four-months-the-year-in-april", "period": "April 2026 (first four months)" },
+    { "url": "https://www.nyc.gov/site/nypd/news/PR009/nypd-fewest-murders-shooting-incidents-shooting-victims-recorded-history-the", "period": "May 2026 (first five months)" }
+  ]
+}

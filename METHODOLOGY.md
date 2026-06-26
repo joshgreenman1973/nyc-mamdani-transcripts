@@ -25,6 +25,7 @@ reliability.
 | **Official transcript** | A transcript the producing institution published as an official record. | nyc.gov; NYC Council hearing transcripts |
 | **Published transcript** | A human-prepared transcript published by a news outlet (rush-deadline radio transcripts, NPR's posted transcripts, human YouTube captions). | NPR, WNYC, manually-captioned videos |
 | **Auto-caption** | Machine-generated closed captions. May contain errors. | C-SPAN closed captions, auto-captioned videos |
+| **Press release** | A press release published by an agency &mdash; a written summary plus attributed quotes, **not** a verbatim transcript of an event. | NYPD crime-statistics briefings |
 
 ### Per-source detail
 
@@ -64,6 +65,28 @@ reliability.
   (tens of thousands of words), so they're keyword-searchable and topic-tagged
   but kept out of the plain-language (semantic) index to keep its download small.
   Requires a free Legistar API token; absent the token this source is skipped.
+- **NYPD** (press release) — the NYPD's monthly, quarterly and year-end
+  **crime-statistics briefings**, from the department's newsroom
+  (`nyc.gov/site/nypd/news/`). These are included because the Mayor attends only
+  some of these briefings; the ones he attends are transcribed on the Mayor's
+  Office site (and are already in this archive), but for the rest **there is no
+  public transcript** — the NYPD's own briefing videos carry no captions. What
+  the NYPD publishes for every briefing is a press release: a statistical
+  write-up plus attributed quotes from Police Commissioner Jessica Tisch (and
+  sometimes the Mayor). So these items are clearly labeled **"press release &mdash;
+  not a verbatim transcript,"** and they carry no speaker turns. The headline is
+  shown in sentence case (the source publishes them in all-caps); the wording and
+  body text are otherwise unchanged. Scope is **crime-statistics briefings only** —
+  gun-removal, strategy and other public-safety announcements are not included.
+  The newsroom listing is a session-gated JavaScript widget that can't be fetched
+  headless, so briefing URLs are seeded by hand in `nypd_sources.json` (same
+  pattern as the curated seeds below); add the next month's release there and it
+  is ingested on the next refresh. Any genuine Mayor quote inside a release is
+  still extracted, so it surfaces under "Only the Mayor's words." Like Council
+  hearings, these are keyword-searchable and topic-tagged but kept out of the
+  plain-language (semantic) index. They are also **excluded from the "Mayor &amp;
+  Police Commissioner Tisch together" featured filter**, because a press release
+  is not evidence the two were at the same event.
 - **Curated seeds** — outside sources can't be fully auto-discovered (their
   search pages are JavaScript-rendered and bot-gated), so known appearances are
   listed in `external_sources.json`. Adding an entry there ingests it on the next
@@ -98,15 +121,16 @@ as a speech, not a press conference.
 | Executive order               | Title contains "Executive Order"                                  |
 | Council hearing               | A Council hearing transcript (assigned by the Council scraper, not by title) |
 | Video                         | A YouTube clip with no nyc.gov twin (assigned by the YouTube scraper) |
+| NYPD crime briefing           | An NYPD crime-statistics press release (assigned by the NYPD scraper, not by title) |
 | Press release (other)         | Everything else &mdash; staff-written announcements               |
 
 Interviews captured from outside outlets (NPR, WNYC, C-SPAN) are filed as
 **Media appearances**.
 
-The default search scope is **Speeches + Press conferences + Media appearances
-+ Statements + Ceremonies**: the closest approximation of "what the Mayor said
-on the record." Toggles expand the search to staff-written press releases and
-executive orders.
+By default the search covers everything except staff-written press releases and
+executive orders: speeches, press conferences, media appearances, statements,
+ceremonies, videos, Council hearings and NYPD crime briefings. Toggles add the
+press releases and executive orders, or narrow to any subset.
 
 ### What this misses
 

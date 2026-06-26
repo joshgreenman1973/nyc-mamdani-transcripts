@@ -476,6 +476,7 @@ legend {
 .badge.executive_order   { background: var(--vc-black); }
 .badge.other             { background: var(--vc-charcoal); }
 .badge.hearing           { background: var(--vc-orange); color: var(--vc-black); }
+.badge.crime_briefing    { background: var(--vc-cerulean); }
 
 /* Provenance chip: source + transcript reliability for non-nyc.gov items.
    A left border keys the colour to how reliable the transcript is. */
@@ -494,6 +495,7 @@ legend {
 .provenance.official { border-left-color: var(--vc-indigo); }
 .provenance.verified { border-left-color: var(--vc-cerulean); }
 .provenance.auto     { border-left-color: var(--vc-orange); font-style: italic; }
+.provenance.release  { border-left-color: var(--vc-magenta); font-style: italic; }
 
 .caption-source {
   font-family: var(--vc-font-sans);
