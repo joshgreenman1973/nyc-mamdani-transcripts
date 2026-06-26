@@ -70,22 +70,38 @@
         browser (about 35&nbsp;MB, cached afterward); everything runs on your device.
       </p>
 
-      <div class="topics" id="topics" aria-label="Suggested topics">
-        <span class="topics-label">Try:</span>
+      <div class="scope-control" role="group" aria-label="How wide to search">
+        <span class="scope-label">Search</span>
+        <div class="scope-seg">
+          <button id="scope-cityhall" type="button" class="scope-btn active" aria-pressed="true">
+            Mayor &amp; City Hall <span class="scope-count" data-scope-count="cityhall"></span>
+          </button>
+          <button id="scope-nypd" type="button" class="scope-btn" aria-pressed="false">
+            + NYPD <span class="scope-count" data-scope-count="nypd"></span>
+          </button>
+          <button id="scope-admin" type="button" class="scope-btn" aria-pressed="false">
+            Whole administration <span class="scope-count" data-scope-count="admin"></span>
+          </button>
+        </div>
       </div>
 
-      <div class="spotlight" aria-label="Featured filters">
-        <span class="spotlight-label">Featured:</span>
+      <div class="spotlight" aria-label="Highlights and lenses">
+        <span class="spotlight-label">Highlight</span>
         <button id="spotlight-tisch" type="button" class="spotlight-chip" aria-pressed="false">
           Mayor &amp; Police Commissioner Tisch together <span class="spotlight-count"></span>
         </button>
         <button id="spotlight-nypd" type="button" class="spotlight-chip" aria-pressed="false">
           NYPD crime briefings <span class="spotlight-count"></span>
         </button>
+        <label class="mayor-only-toggle"><input type="checkbox" id="mayor-only" /> Only the Mayor&rsquo;s words</label>
         <span class="spotlight-note" id="spotlight-note" data-active="">
           <span class="note-for-tisch">Events where both appeared &mdash; <a href="METHODOLOGY.md#appeared-together">how this is determined</a></span>
           <span class="note-for-nypd">The NYPD&rsquo;s monthly crime-statistics briefings &mdash; press releases, not verbatim transcripts. <a href="METHODOLOGY.md">Methodology</a></span>
         </span>
+      </div>
+
+      <div class="topics" id="topics" aria-label="Suggested topics">
+        <span class="topics-label">Try:</span>
       </div>
 
       <div class="frequency hidden" id="frequency" aria-label="Frequency over time">
@@ -93,6 +109,8 @@
         <svg id="frequency-chart" role="img" aria-label="Sparkline of search-term frequency by month"></svg>
       </div>
 
+      <details class="refine">
+        <summary>More filters &mdash; type, source, dates, reliability</summary>
       <div class="filters">
         <fieldset class="chips" aria-label="Type">
           <legend>Type</legend>
@@ -133,12 +151,8 @@
           <label><input type="checkbox" name="reliability" value="auto" checked /> Auto-caption <span class="count" data-rcount="auto"></span></label>
           <label><input type="checkbox" name="reliability" value="release" checked /> Press release <span class="count" data-rcount="release"></span></label>
         </fieldset>
-
-        <fieldset class="scope" aria-label="Scope">
-          <legend>Scope</legend>
-          <label><input type="checkbox" id="mayor-only" /> Only the Mayor&rsquo;s words</label>
-        </fieldset>
       </div>
+      </details>
     </section>
 
     <div class="result-bar">

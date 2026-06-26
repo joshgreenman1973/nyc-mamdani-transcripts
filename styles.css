@@ -224,6 +224,79 @@ a:hover { color: var(--vc-orange); }
 .topic-chip.active .topic-count { color: var(--vc-cloud); }
 .topic-chip:hover .topic-count { color: var(--vc-black); }
 
+/* ---------- Search scope (primary breadth control) ---------- */
+
+.scope-control {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--vc-space-2) var(--vc-space-3);
+  margin-bottom: var(--vc-space-3);
+}
+.scope-label {
+  font-family: var(--vc-font-sans);
+  font-weight: var(--vc-weight-bold);
+  font-size: var(--vc-size-micro);
+  letter-spacing: var(--vc-track-kicker);
+  text-transform: uppercase;
+  color: var(--vc-charcoal);
+}
+.scope-seg {
+  display: inline-flex;
+  flex-wrap: wrap;
+  border: var(--vc-rule-bold) solid var(--vc-black);
+}
+.scope-btn {
+  font-family: var(--vc-font-sans);
+  font-weight: var(--vc-weight-bold);
+  font-size: 0.9rem;
+  padding: 0.45rem 1rem;
+  background: var(--vc-white);
+  color: var(--vc-black);
+  border: none;
+  cursor: pointer;
+  line-height: 1.1;
+}
+.scope-btn + .scope-btn { border-left: var(--vc-rule-thin) solid var(--vc-black); }
+.scope-btn:hover { color: var(--vc-orange); }
+.scope-btn.active { background: var(--vc-black); color: var(--vc-white); }
+.scope-btn.active:hover { color: var(--vc-white); }
+.scope-count { font-weight: var(--vc-weight-book); opacity: 0.7; margin-left: 0.2rem; }
+
+/* "Only the Mayor's words" lens, sat alongside the highlight chips. */
+.mayor-only-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--vc-font-sans);
+  font-size: 0.82rem;
+  font-weight: var(--vc-weight-bold);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* ---------- Refine drawer (granular filters) ---------- */
+.refine {
+  margin-bottom: var(--vc-space-3);
+  border-top: var(--vc-rule-thin) solid var(--vc-cloud);
+  padding-top: var(--vc-space-2);
+}
+.refine > summary {
+  font-family: var(--vc-font-sans);
+  font-weight: var(--vc-weight-bold);
+  font-size: var(--vc-size-micro);
+  letter-spacing: var(--vc-track-kicker);
+  text-transform: uppercase;
+  color: var(--vc-charcoal);
+  cursor: pointer;
+  list-style: none;
+  padding: 0.3rem 0;
+}
+.refine > summary::-webkit-details-marker { display: none; }
+.refine > summary::before { content: "▸ "; color: var(--vc-orange); }
+.refine[open] > summary::before { content: "▾ "; }
+.refine[open] > summary { margin-bottom: var(--vc-space-3); }
+
 /* ---------- Featured (spotlight) filter ---------- */
 
 .spotlight {

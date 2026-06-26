@@ -41,6 +41,18 @@
   }
   // Sources that are city agencies (press releases), for grouping the filter.
   const AGENCY_SOURCES = ["nypd", "dsny", "hpd", "dep", "dca", "acs", "dcas"];
+  // "City Hall" = the Mayor's own universe: his events + interviews + the Council
+  // hearings where his administration testifies. Everything not a city agency.
+  function isCityHall(src) {
+    return !AGENCY_SOURCES.includes(src);
+  }
+  // Which sources each scope preset turns on.
+  function scopeSources(scope) {
+    const all = (CORPUS && CORPUS.source_counts) ? Object.keys(CORPUS.source_counts) : [];
+    if (scope === "admin") return all;
+    if (scope === "nypd") return all.filter((s) => isCityHall(s) || s === "nypd");
+    return all.filter(isCityHall); // cityhall
+  }
 
   // How trustworthy the transcript text is.
   const RELIABILITY_LABEL = {
@@ -143,6 +155,7 @@
       tagCoAppearances();
       buildTopics();
       buildSourceFilter();
+      renderScopeCounts();
       attachHandlers();
       return fetch("data/topics.json?v=" + new Date().toISOString().slice(0, 10))
         .then((r) => (r.ok ? r.json() : null))
@@ -464,6 +477,9 @@
     $("#mayor-only").addEventListener("change", runSearch);
     $("#spotlight-tisch").addEventListener("click", () => toggleFeatured("tisch"));
     $("#spotlight-nypd").addEventListener("click", () => toggleFeatured("nypd"));
+    $("#scope-cityhall").addEventListener("click", () => applyScope("cityhall"));
+    $("#scope-nypd").addEventListener("click", () => applyScope("nypd"));
+    $("#scope-admin").addEventListener("click", () => applyScope("admin"));
     $("#share").addEventListener("click", copyShareLink);
     $("#mode-keyword").addEventListener("click", () => setMode("keyword"));
     $("#mode-semantic").addEventListener("click", () => setMode("semantic"));
@@ -762,12 +778,17 @@
         el.checked = types.has(el.value);
       });
     }
-    if (p.has("sources")) {
+    // Scope/source: ?scope= preset, ?sources= custom, else default to City Hall
+    // so the Mayor stays front and center.
+    if (p.has("scope")) {
+      setScopeCheckboxes(p.get("scope") === "admin" ? "admin" : p.get("scope") === "nypd" ? "nypd" : "cityhall");
+    } else if (p.has("sources")) {
       const srcs = new Set(p.get("sources").split(","));
-      $$("input[name=source]").forEach((el) => {
-        el.checked = srcs.has(el.value);
-      });
+      $$("input[name=source]").forEach((el) => { el.checked = srcs.has(el.value); });
+    } else {
+      setScopeCheckboxes("cityhall");
     }
+    renderScope();
     FEATURED = p.get("with") === "tisch" ? "tisch"
       : (p.get("show") === "nypd-briefings" ? "nypd" : null);
     renderFeatured();
@@ -791,11 +812,14 @@
     if (JSON.stringify(enabled) !== JSON.stringify(defaults)) {
       p.set("types", enabled.join(","));
     }
-    // Source/agency filter (only written when not all sources are selected).
-    const srcBoxes = $$("input[name=source]");
-    const onSrc = srcBoxes.filter((b) => b.checked).map((b) => b.value);
-    if (srcBoxes.length && onSrc.length !== srcBoxes.length) {
-      p.set("sources", onSrc.sort().join(","));
+    // Scope/source: a recognised scope preset is written as ?scope= (City Hall
+    // is the default, so it gets no param); a custom source selection as ?sources=.
+    const scope = currentScope();
+    if (scope === "nypd" || scope === "admin") {
+      p.set("scope", scope);
+    } else if (scope === null) {
+      const onSrc = $$("input[name=source]").filter((b) => b.checked).map((b) => b.value);
+      if (onSrc.length) p.set("sources", onSrc.sort().join(","));
     }
     const qs = p.toString();
     const newUrl = qs ? "?" + qs : window.location.pathname;
@@ -985,14 +1009,60 @@
         `${escapeHtml(sourceLabel(src))} <span class="count">(${counts[src]})</span>`;
       wrap.appendChild(label);
     });
-    $$("input[name=source]").forEach((el) => el.addEventListener("change", runSearch));
+    $$("input[name=source]").forEach((el) =>
+      el.addEventListener("change", () => { renderScope(); runSearch(); })
+    );
+  }
+
+  // ---- search scope (City Hall / + NYPD / whole administration) -------------
+  // A fast preset over the granular source checkboxes: keeps the Mayor front and
+  // center by default, with the rest of the administration one click away.
+  function setScopeCheckboxes(scope) {
+    const on = new Set(scopeSources(scope));
+    $$("input[name=source]").forEach((b) => { b.checked = on.has(b.value); });
+  }
+  function currentScope() {
+    const checked = new Set(
+      $$("input[name=source]").filter((b) => b.checked).map((b) => b.value)
+    );
+    for (const s of ["cityhall", "nypd", "admin"]) {
+      const want = new Set(scopeSources(s));
+      if (checked.size === want.size && [...checked].every((v) => want.has(v))) return s;
+    }
+    return null; // a custom source selection — no preset is highlighted
+  }
+  function applyScope(scope) {
+    setScopeCheckboxes(scope);
+    renderScope();
+    runSearch();
+  }
+  function renderScope() {
+    const active = currentScope();
+    [["cityhall", "#scope-cityhall"], ["nypd", "#scope-nypd"], ["admin", "#scope-admin"]]
+      .forEach(([s, id]) => {
+        const b = $(id);
+        if (!b) return;
+        b.classList.toggle("active", s === active);
+        b.setAttribute("aria-pressed", s === active ? "true" : "false");
+      });
+  }
+  function renderScopeCounts() {
+    const counts = (CORPUS && CORPUS.source_counts) || {};
+    const sum = (srcs) => srcs.reduce((n, s) => n + (counts[s] || 0), 0);
+    const map = {
+      cityhall: sum(scopeSources("cityhall")),
+      nypd: sum(scopeSources("nypd")),
+      admin: sum(scopeSources("admin")),
+    };
+    Object.entries(map).forEach(([k, n]) => {
+      const el = document.querySelector(`[data-scope-count="${k}"]`);
+      if (el) el.textContent = n ? `(${n})` : "";
+    });
   }
 
   function itemPasses(it, enabledTypes, mayorOnly) {
-    if (SOURCE_ON && !SOURCE_ON.has(it.source || "nyc.gov")) return false;
-    if (RELIABILITY_ON && !RELIABILITY_ON.has(it.reliability || "official")) {
-      return false;
-    }
+    // "Only the Mayor's words" is a deliberate lens — it always applies, even to
+    // a featured set.
     if (mayorOnly) {
       // Strict: only include items where there's text we know the Mayor
       // himself said (transcript turns where he was the speaker, the entire
@@ -1003,11 +1073,15 @@
       // contain a Mamdani quote.
       if (it.type === "other") return !!it.has_mayor_quotes;
     }
-    // The featured co-appearance filter is authoritative over the type chips:
-    // when it's on, show every Mayor + Commissioner Tisch event (e.g. the joint
-    // press release) regardless of which type boxes are checked.
+    // Featured chips ("Tisch together", "NYPD crime briefings") are an explicit
+    // selection — authoritative over the scope/source, reliability and type
+    // filters, so the highlighted set shows even from a narrower scope.
     if (FEATURED === "tisch" && it._withTisch) return true;
     if (FEATURED === "nypd" && it.type === "crime_briefing") return true;
+    if (SOURCE_ON && !SOURCE_ON.has(it.source || "nyc.gov")) return false;
+    if (RELIABILITY_ON && !RELIABILITY_ON.has(it.reliability || "official")) {
+      return false;
+    }
     return enabledTypes.has(it.type);
   }
 
