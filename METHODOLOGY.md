@@ -5,10 +5,14 @@ filter, and classification rule is described here.
 
 ## What this is
 
-A searchable archive of Mayor Zohran Kwame Mamdani's on-the-record public
-statements since taking office on January 1, 2026. Every item published by the
-New York City mayor's office news page and dated on or after January 1, 2026
-is included.
+A searchable archive of the Mamdani administration on the record since he took
+office on January 1, 2026. At its center is Mayor Zohran Kwame Mamdani's own
+public record — speeches, press conferences, prepared remarks and statements
+from the mayor's office, his interviews, and the City Council hearings where his
+administration testifies. Around that it adds the **press releases of New York
+City's agencies**, so the same box searches the whole administration, not only
+the mayor's own events. Every item is dated on or after January 1, 2026, and is
+labeled by source, type and reliability.
 
 ## Source
 
