@@ -109,6 +109,11 @@ reliability.
     press-release **index page** for release links and parses each; the article
     body, which has no clean wrapper there, is bounded by the dateline and the
     page footer, and the headline is taken from the page `<title>`.
+  - **Legacy /html:** a few agencies (notably DOT) are on an older static
+    `/html/.../pr2026/*.shtml` site with different markup again. The crawler
+    scrapes their static press-release index for links and parses the
+    `agency-content` body (headline from the page subtitle, ending at the
+    `###` release marker).
 
   Thin "in the news" stubs (a headline plus an external media link, no body) are
   skipped, as are releases under 25 words. ALL-CAPS headlines are shown in
@@ -119,14 +124,13 @@ reliability.
   &amp; Worker Protection (DCWP), Children's Services (ACS), Citywide
   Administrative Services (DCAS)** (numeric), plus **Health (DOHMH), Homeless
   Services (DHS), Small Business Services (SBS), Taxi &amp; Limousine (TLC),
-  Immigrant Affairs (MOIA), and Media &amp; Entertainment (MOME)** (index). This
-  is an expanding set determined by a one-time discovery sweep of every city
-  agency. Still out: a few agencies whose index pages are themselves
-  JavaScript-rendered (e.g. HRA, Law, Investigation), DOT (a legacy `/html/`
-  static site needing its own parser), and agencies on separate websites
-  (Parks, Schools, NYCHA, Health + Hospitals) or outside the mayoral
-  administration (Comptroller, Public Advocate) — all noted rather than silently
-  omitted.
+  Immigrant Affairs (MOIA), and Media &amp; Entertainment (MOME)** (index), plus
+  **Transportation (DOT)** (legacy /html). This is an expanding set determined by
+  a one-time discovery sweep of every city agency. Still out: a few agencies
+  whose index pages are themselves JavaScript-rendered (e.g. HRA, Law, Finance,
+  Investigation) and agencies on separate websites (Parks, Schools, NYCHA,
+  Health + Hospitals) or outside the mayoral administration (Comptroller, Public
+  Advocate) — all noted rather than silently omitted.
 - **Curated seeds** — outside sources can't be fully auto-discovered (their
   search pages are JavaScript-rendered and bot-gated), so known appearances are
   listed in `external_sources.json`. Adding an entry there ingests it on the next

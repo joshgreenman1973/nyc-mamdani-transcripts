@@ -18,5 +18,9 @@
     { "slug": "tlc",        "name": "Taxi & Limousine (TLC)",        "index_url": "/site/tlc/about/press-releases.page",              "require_2026": false },
     { "slug": "immigrants", "name": "Immigrant Affairs (MOIA)",      "index_url": "/site/immigrants/about/press-releases.page",       "require_2026": true },
     { "slug": "mome",       "name": "Media & Entertainment (MOME)",  "index_url": "/site/mome/about/press-releases.page",             "require_2026": true }
+  ],
+  "_html_comment": "Legacy /html static-site agencies (different markup, .shtml). Crawled by scraping a static index for release links. DOT is the main one.",
+  "html_agencies": [
+    { "slug": "dot", "name": "Transportation (DOT)", "html_index": "/html/dot/html/about/pr_main.shtml", "link_base": "/html/dot/html/", "link_re": "pr2026/[a-z0-9-]+\\.shtml" }
   ]
 }

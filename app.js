@@ -42,13 +42,14 @@
     tlc: "Taxi & Limousine (TLC)",
     immigrants: "Immigrant Affairs (MOIA)",
     mome: "Media & Entertainment (MOME)",
+    dot: "Transportation (DOT)",
   };
   function sourceLabel(src) {
     return SOURCE_LABEL[src] || (src || "").toUpperCase();
   }
   // Sources that are city agencies (press releases), for grouping the filter.
   const AGENCY_SOURCES = ["nypd", "fdny", "dsny", "hpd", "dep", "dca", "acs", "dcas",
-    "doh", "dhs", "sbs", "tlc", "immigrants", "mome"];
+    "doh", "dhs", "sbs", "tlc", "immigrants", "mome", "dot"];
   // "City Hall" = the Mayor's own universe: his events + interviews + the Council
   // hearings where his administration testifies. Everything not a city agency.
   function isCityHall(src) {

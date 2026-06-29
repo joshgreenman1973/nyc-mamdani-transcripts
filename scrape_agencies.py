@@ -177,6 +177,80 @@ _LS_NAV = re.compile(
     r"frequently-asked)", re.I)
 
 
+def parse_release_dot(url: str, htmltext: str, source: str) -> dict | None:
+    """Parse a DOT-style legacy /html release (.shtml, `agency-content` body)."""
+    import html as _html
+    m = re.search(r'<div[^>]*class="[^"]*agency-content[^"]*"', htmltext, re.I)
+    if not m:
+        return None
+    text = scrape.html_to_text(sn.tables_to_text(sn._balanced_div(htmltext, m.start())))
+    st = (re.search(r'<h2[^>]*id="page_subtitle"[^>]*>(.*?)</h2>', htmltext, re.S | re.I)
+          or re.search(r"<title>(.*?)</title>", htmltext, re.S | re.I))
+    title = _html.unescape(re.sub("<[^>]+>", "", st.group(1))).strip() if st else ""
+    title = re.sub(r"\s*\|\s*City of New York$", "", title).strip()
+    dm = _LS_DATE.search(text)
+    date = dm.group(1) if dm else ""
+    iso = scrape.to_iso(date)
+    if not iso or iso < FROM_ISO:
+        return None
+    # Body begins after the headline echo; ends at the "###" release marker.
+    bstart = 0
+    if title:
+        i = text.find(title)
+        if i >= 0:
+            bstart = i + len(title)
+    cut = text.find("###", bstart)
+    body = text[bstart:(cut if cut > 0 else len(text))].strip()
+    if len(body.split()) < MIN_WORDS:
+        return None
+    link = url.split("nyc.gov", 1)[1] if "nyc.gov" in url else url
+    mayor_quotes = scrape.extract_mayor_quotes(body)
+    return {
+        "link": link, "url": url, "title": title, "date": date, "iso_date": iso,
+        "type": "agency_release", "text": body, "word_count": len(body.split()),
+        "source": source, "reliability": "release", "is_press_release": True,
+        "speakers": [], "mayor_quotes": mayor_quotes,
+        "mayor_text": "\n\n".join(mayor_quotes),
+        "mayor_word_count": len("\n\n".join(mayor_quotes).split()),
+        "has_mayor_quotes": bool(mayor_quotes),
+    }
+
+
+def crawl_html_agency(ag, items, have, probes, budget):
+    """Legacy /html strategy: scrape a static index (.shtml) for release links."""
+    slug, name = ag["slug"], ag.get("name", ag["slug"])
+    res = fetch_redirect(BASE + ag["html_index"])
+    probes += 1
+    time.sleep(SLEEP)
+    if not res:
+        print(f"  [{slug}] {name}: index unreachable", file=sys.stderr)
+        return 0, probes
+    links = set(re.findall(ag["link_re"], res[1]))
+    added = 0
+    for rel in sorted(links):
+        if probes >= budget:
+            break
+        url = BASE + ag.get("link_base", "/") + rel
+        if url in have:
+            continue
+        r = fetch_redirect(url)
+        probes += 1
+        time.sleep(SLEEP)
+        if not r or r[0] in have:
+            continue
+        try:
+            item = parse_release_dot(r[0], r[1], slug)
+        except Exception as e:  # noqa: BLE001
+            print(f"  [{slug}] parse error {r[0]}: {e}", file=sys.stderr)
+            continue
+        if item and item["text"]:
+            items.append(item)
+            have.add(r[0])
+            added += 1
+    print(f"  [{slug}] {name}: +{added} (/html)", flush=True)
+    return added, probes
+
+
 def crawl_index_agency(ag, items, have, probes, budget):
     """Index strategy: scrape an agency's press-release index for release links,
     then fetch + parse each with the ls-col-body parser. Returns (added, probes)."""
@@ -274,6 +348,13 @@ def main() -> int:
         if probes >= BUDGET:
             break
         ad, probes = crawl_index_agency(ag, items, have, probes, BUDGET)
+        added += ad
+
+    # Legacy /html agencies (static .shtml index + agency-content body).
+    for ag in cfg.get("html_agencies", []):
+        if probes >= BUDGET:
+            break
+        ad, probes = crawl_html_agency(ag, items, have, probes, BUDGET)
         added += ad
 
     # Always persist advanced state (so re-crawls resume) and recompute counts.
