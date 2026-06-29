@@ -165,6 +165,7 @@ as a speech, not a press conference.
 | Press conference              | Title contains "Holds Press Conference", "Holds Media Availability", "Press Briefing", or any other `Transcript:` item that didn't match a more specific rule |
 | Media appearance              | Title contains "Appears on", "Appears Live on", "Hosts Town Hall", or "Interview" |
 | Statement                     | Title begins with "Statement from", "Statement by", or contains "Mamdani Statement" |
+| Op-ed                          | The body shows the Mayor's Office reposting an outside opinion piece ("in a new opinion piece," "read the full piece in&hellip;"). **Only the summary + a link are captured** — the verbatim op-ed lives at the outlet (copyright). Detected from the body, not the title. |
 | Ceremony / public event       | Title contains "Ceremony", "Memorial", "Wreath Laying", "Ribbon Cutting", "Groundbreaking" |
 | Executive order               | Title contains "Executive Order"                                  |
 | Council hearing               | A Council hearing transcript (assigned by the Council scraper, not by title) |

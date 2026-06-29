@@ -15,6 +15,7 @@
     other: "Press release",
     crime_briefing: "NYPD crime briefing",
     agency_release: "Agency press release",
+    op_ed: "Op-ed",
   };
 
 
@@ -817,7 +818,7 @@
     if (FEATURED === "nypd") p.set("show", "nypd-briefings");
     // Only write `types` if it's not the default set.
     const enabled = [...state.enabledTypes].sort();
-    const defaults = ["agency_release", "ceremony", "crime_briefing", "hearing", "media_appearance", "press_conference", "speech", "statement", "video"];
+    const defaults = ["agency_release", "ceremony", "crime_briefing", "hearing", "media_appearance", "op_ed", "press_conference", "speech", "statement", "video"];
     if (JSON.stringify(enabled) !== JSON.stringify(defaults)) {
       p.set("types", enabled.join(","));
     }

@@ -338,17 +338,36 @@ def to_iso(date_str: str) -> str:
 
 # --- main --------------------------------------------------------------------
 
+# Reposted op-eds: the Mayor's Office summarizes an outside opinion piece (by the
+# Mayor or an official) and links the full text. Detected from the body so they
+# can be filtered as their own type rather than buried under press conferences.
+OPED_RE = re.compile(
+    r"in (?:a |an )?(?:new |recent |joint )?opinion piece"
+    r"|read the full (?:piece|op-?ed)"
+    r"|(?:published|penned) an op-?ed",
+    re.IGNORECASE)
+
+
+def looks_like_oped(item: dict) -> bool:
+    if (item.get("title", "") or "").lower().startswith("transcript:"):
+        return False  # a transcript that mentions an op-ed is not the op-ed
+    return bool(OPED_RE.search(item.get("text", "") or ""))
+
+
 def enrich(item: dict) -> dict:
     """Add derived fields: speakers, mayor_quotes, mayor_text."""
     text = item.get("text", "")
+    # Retype reposted op-eds before the type-dependent logic below.
+    if looks_like_oped(item):
+        item["type"] = "op_ed"
     typ = item.get("type", "")
     # Speaker parsing applies to event transcripts.
     if typ in ("press_conference", "media_appearance", "speech", "ceremony"):
         item["speakers"] = parse_speakers(text)
     else:
         item["speakers"] = []
-    # Quote extraction applies to staff-written press releases.
-    if typ == "other":
+    # Quote extraction applies to staff-written press releases and op-ed reposts.
+    if typ in ("other", "op_ed"):
         item["mayor_quotes"] = extract_mayor_quotes(text)
     else:
         item["mayor_quotes"] = []

@@ -570,6 +570,7 @@ legend {
 .badge.hearing           { background: var(--vc-orange); color: var(--vc-black); }
 .badge.crime_briefing    { background: var(--vc-cerulean); }
 .badge.agency_release    { background: var(--vc-charcoal); }
+.badge.op_ed             { background: var(--vc-rose); color: var(--vc-black); }
 
 /* Provenance chip: source + transcript reliability for non-nyc.gov items.
    A left border keys the colour to how reliable the transcript is. */
