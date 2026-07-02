@@ -4,6 +4,8 @@ on:
   schedule:
     # 11:00 UTC ≈ 7:00 a.m. ET (EDT) / 6:00 a.m. ET (EST).
     - cron: "0 11 * * *"
+    # 20:00 UTC ≈ 4:00 p.m. ET (EDT) / 3:00 p.m. ET (EST) — afternoon catch-up.
+    - cron: "0 20 * * *"
   workflow_dispatch:
 
 permissions:
