@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-02T20:26:16Z",
+ "generated_at": "2026-07-02T21:02:40Z",
  "from_date": "2026-01-01",
  "source": "https://www.nyc.gov/mayors-office/news/",
  "total": 940,
@@ -19,16 +19,16 @@
  },
  "source_counts": {
   "nyc.gov": 596,
-  "dsny": 28,
-  "dcas": 16,
-  "dot": 57,
-  "dca": 42,
+  "nypd": 11,
+  "dep": 17,
+  "doh": 33,
   "fdny": 15,
+  "dsny": 28,
+  "dca": 42,
+  "dot": 57,
+  "dcas": 16,
   "hpd": 33,
   "tlc": 6,
-  "doh": 33,
-  "dep": 17,
-  "nypd": 11,
   "mome": 11,
   "acs": 2,
   "wnyc": 1,
@@ -63120,7 +63120,6 @@
    "mayor_word_count": 3288
   }
  ],
- "external_last_run": "2026-07-02T20:26:47Z",
- "agencies_last_run": "2026-07-02T20:31:14Z",
- "youtube_last_run": "2026-07-02T20:32:44Z"
+ "external_last_run": "2026-07-02T21:03:13Z",
+ "youtube_last_run": "2026-07-02T21:09:02Z"
 }
