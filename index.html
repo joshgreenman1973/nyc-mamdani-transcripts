@@ -187,6 +187,28 @@
         <figcaption id="trend-caption">Items tagged per theme, by month.</figcaption>
       </figure>
 
+      <section class="speech" id="speech" aria-label="The mayor&rsquo;s language" hidden>
+        <h3 class="speech-heading vc-gascogne">How the mayor speaks</h3>
+        <p class="speech-note" id="speech-note">
+          Drawn only from the mayor&rsquo;s own words &mdash; his transcript turns
+          and the quotes attributed to him in press releases, never reporters&rsquo;
+          questions or other speakers. Click any word or phrase to read it in
+          context. <a href="METHODOLOGY.md#language">How this is built &amp; its limits</a>.
+        </p>
+        <div class="speech-grid">
+          <div class="speech-col">
+            <h4 class="speech-subhead">Words he uses most</h4>
+            <p class="speech-sub">The 110 most-used words in his own remarks, sized by frequency (common filler words removed).</p>
+            <div id="wordcloud" class="wordcloud" aria-label="Most-used words"></div>
+          </div>
+          <div class="speech-col">
+            <h4 class="speech-subhead">Phrases he returns to</h4>
+            <p class="speech-sub">Recurring expressions, ranked by how many separate events he used them in.</p>
+            <ol id="signature-phrases" class="phrases"></ol>
+          </div>
+        </div>
+      </section>
+
       <h3 class="digest-heading vc-gascogne">Monthly digest</h3>
       <p class="digest-note">
         The leading themes each month, with verbatim quotes from the mayor &mdash;

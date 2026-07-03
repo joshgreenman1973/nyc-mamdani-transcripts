@@ -276,6 +276,142 @@ const digest = monthList.map((ym) => {
   };
 });
 
+// ---- the mayor's language: word cloud + signature phrases ------------------
+// Both are computed ONLY over the mayor's own words — the `mayor_text` field,
+// which holds his transcript turns and his attributed press-release quotes,
+// never reporters' questions or other speakers. Fully deterministic, no model.
+
+// Function words and low-content fillers removed before the word count. This is
+// a published list so the cloud is reproducible and nothing is a black box.
+const LANG_STOP = new Set(
+  `a about above after again against all also am an and any are aren't as at
+   be because been before being below between both but by can can't cannot could
+   couldn't did didn't do does doesn't doing don't down during each few for from
+   further get gets getting go goes going gone got had hadn't has hasn't have
+   haven't having he he'd he'll he's her here here's hers herself him himself his
+   how how's i i'd i'll i'm i've if in into is isn't it it's its itself just let
+   let's me more most mustn't my myself no nor not of off on once only or other
+   ought our ours ourselves out over own really said same say says see seen shan't
+   she she'd she'll she's should shouldn't so some such than that that's the their
+   theirs them themselves then there there's these they they'd they'll they're
+   they've this those through to too under until up upon very want wants was wasn't
+   way ways we we'd we'll we're we've well were weren't what what's when when's
+   where where's which while who who's whom why why's will with won't would
+   wouldn't you you'd you'll you're you've your yours yourself yourselves
+   gonna gotta wanna kinda sorta lotta dunno cannot
+   able across actually already always another any anymore anyone anything around
+   back become becomes becoming came come comes coming done enough even ever every
+   everybody everyone everything far give given gives giving good great happen
+   happens keep kept know known knows lot lots made make makes making many maybe
+   might much need needs never new next often okay part parts perhaps put puts
+   quite rather right seem seems seen simply since something sometimes soon still
+   sure take takes taking tell tells thing things think thinks thought today
+   together took toward towards understand use used uses using whatever whatever's
+   whether within without york yeah thank thanks number kind sort lot bit
+   one two three four five six seven eight nine ten first second third now
+   like look looks looking looked`.split(
+    /\s+/,
+  ),
+);
+
+function langTokens(text) {
+  return (text || "")
+    .replace(/ /g, " ")
+    .toLowerCase()
+    .replace(/[’]/g, "'")
+    .split(/[^a-z']+/)
+    .map((w) => w.replace(/^'+|'+$/g, ""))
+    .filter(Boolean);
+}
+
+const wordFreq = {};
+let mayorWordTotal = 0;
+let mayorItemCount = 0;
+for (const it of items) {
+  if (!it.mayor_text) continue;
+  mayorItemCount++;
+  const toks = langTokens(it.mayor_text);
+  mayorWordTotal += toks.length;
+  for (const w of toks) {
+    if (w.length < 3 || LANG_STOP.has(w)) continue;
+    wordFreq[w] = (wordFreq[w] || 0) + 1;
+  }
+}
+const wordcloud = Object.entries(wordFreq)
+  .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+  .slice(0, 110)
+  .map(([word, count]) => ({ word, count }));
+
+// Signature phrases: a *published* candidate list of recurring expressions,
+// seeded from the top 2–4-word sequences in the mayor's words plus his known
+// refrains. For each we count exact occurrences and — more tellingly — how many
+// separate events he used it in, then keep only those he returns to across many
+// events (so it's a habit, not one speech). Every count is exact; every example
+// is a verbatim sentence from his own words. Ordered by event spread.
+const PHRASE_CANDIDATES = [
+  "across the five boroughs", "working people", "working-class", "a city where",
+  "far too long", "at the heart of", "universal childcare", "public safety",
+  "city government", "every single", "deliver for", "the world cup",
+  "the wealthiest city", "affordability crisis", "quality of life",
+  "mental health", "the greatest city in the world", "young people",
+  "cost of living", "our children", "tax the rich", "rent freeze",
+];
+const PHRASE_MIN_EVENTS = 8; // must recur across at least this many events
+const PHRASE_MIN_TOTAL = 10;
+
+function normFlat(s) {
+  return (s || "").replace(/ /g, " ").replace(/[’]/g, "'").replace(/\s+/g, " ");
+}
+function phraseRegex(p) {
+  const pat = p
+    .replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    .replace(/\s+/g, "\\s+");
+  return new RegExp("(?<![\\w-])" + pat + "(?![\\w-])", "gi");
+}
+function firstSentence(raw, re, phrase) {
+  const flat = normFlat(raw);
+  const idx = flat.search(re);
+  if (idx < 0) return null;
+  let a = flat.lastIndexOf(".", idx);
+  a = a < 0 ? 0 : a + 1;
+  let b = flat.indexOf(".", idx + phrase.length);
+  b = b < 0 ? Math.min(flat.length, idx + 160) : b + 1;
+  let s = flat.slice(a, b).trim();
+  if (s.length > 240) s = s.slice(0, 237).trimEnd() + "…";
+  return s;
+}
+
+const signaturePhrases = [];
+for (const phrase of PHRASE_CANDIDATES) {
+  let total = 0;
+  let events = 0;
+  let example = null;
+  let exampleUrl = null;
+  let exampleTitle = null;
+  for (const it of items) {
+    if (!it.mayor_text) continue;
+    const re = phraseRegex(phrase);
+    const hits = normFlat(it.mayor_text).match(re);
+    if (!hits || !hits.length) continue;
+    total += hits.length;
+    events++;
+    if (!example) {
+      example = firstSentence(it.mayor_text, phraseRegex(phrase), phrase);
+      exampleUrl = it.url || it.link || null;
+      exampleTitle = it.title || null;
+    }
+  }
+  if (events >= PHRASE_MIN_EVENTS && total >= PHRASE_MIN_TOTAL) {
+    signaturePhrases.push({ phrase, total, events, example, exampleUrl, exampleTitle });
+  }
+}
+signaturePhrases.sort((a, b) => b.events - a.events || b.total - a.total);
+
+console.log(
+  `\nLanguage: ${mayorItemCount} items, ${mayorWordTotal.toLocaleString()} mayor words, ` +
+    `${wordcloud.length} cloud words, ${signaturePhrases.length}/${PHRASE_CANDIDATES.length} phrases kept.`,
+);
+
 // ---- write -----------------------------------------------------------------
 const out = {
   generated_at: new Date().toISOString(),
@@ -289,6 +425,22 @@ const out = {
   totals,
   itemTopics,
   digest,
+  language: {
+    method:
+      "Computed only over the mayor's own words (his transcript turns and his " +
+      "attributed quotes inside press releases), never reporters' questions or " +
+      "other speakers. Word cloud: word frequency after removing a published " +
+      "stop-word list. Signature phrases: exact counts of a published candidate " +
+      "list of recurring expressions, kept only when he used them across at " +
+      "least " + PHRASE_MIN_EVENTS + " separate events. Not a distinctiveness " +
+      "(TF-IDF) measure — just how often he says them.",
+    mayor_items: mayorItemCount,
+    mayor_words: mayorWordTotal,
+    phrase_candidates: PHRASE_CANDIDATES,
+    phrase_min_events: PHRASE_MIN_EVENTS,
+  },
+  wordcloud,
+  signaturePhrases,
 };
 
 writeFileSync("data/topics.json", JSON.stringify(out));

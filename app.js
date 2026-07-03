@@ -282,7 +282,110 @@
     if (!THEMES) return;
     renderTrendLegend();
     renderTrendChart();
+    renderSpeech();
     renderDigest();
+  }
+
+  // ---- the mayor's language (word cloud + signature phrases) ----
+  function renderSpeech() {
+    const section = $("#speech");
+    if (!section) return;
+    const cloud = THEMES.wordcloud || [];
+    const phrases = THEMES.signaturePhrases || [];
+    // Older topics.json (before this feature) won't have the fields — hide.
+    if (!cloud.length && !phrases.length) {
+      section.hidden = true;
+      return;
+    }
+    section.hidden = false;
+
+    const lang = THEMES.language || {};
+    if (lang.mayor_words && lang.mayor_items) {
+      const note = $("#speech-note");
+      if (note && !note.dataset.counted) {
+        const words = Math.round(lang.mayor_words / 1000) + ",000";
+        note.insertAdjacentHTML(
+          "beforeend",
+          ` <span class="speech-basis">Based on about ${words} words across ${lang.mayor_items} items.</span>`
+        );
+        note.dataset.counted = "1";
+      }
+    }
+
+    // Word cloud: font size scales with the square root of frequency (so the
+    // biggest word doesn't dwarf everything), colour deepens with rank.
+    const cwrap = $("#wordcloud");
+    if (cwrap) {
+      cwrap.innerHTML = "";
+      const counts = cloud.map((w) => w.count);
+      const min = Math.min(...counts), max = Math.max(...counts);
+      const lo = Math.sqrt(min), hi = Math.sqrt(max);
+      cloud.forEach((w) => {
+        const t = hi > lo ? (Math.sqrt(w.count) - lo) / (hi - lo) : 1; // 0..1
+        const size = (0.8 + t * 2.0).toFixed(2); // rem
+        const weight = t > 0.66 ? 700 : t > 0.33 ? 600 : 500;
+        const color = t > 0.66 ? "var(--vc-orange)" : t > 0.33 ? "var(--vc-black)" : "var(--vc-charcoal)";
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "cloud-word";
+        b.style.fontSize = size + "rem";
+        b.style.fontWeight = weight;
+        b.style.color = color;
+        b.textContent = w.word;
+        b.title = `“${w.word}” — ${w.count.toLocaleString()} times`;
+        b.setAttribute("aria-label", `${w.word}, said ${w.count} times`);
+        b.addEventListener("click", () => searchMayorPhrase(w.word));
+        cwrap.appendChild(b);
+      });
+    }
+
+    // Signature phrases.
+    const pwrap = $("#signature-phrases");
+    if (pwrap) {
+      pwrap.innerHTML = "";
+      phrases.forEach((p) => {
+        const li = document.createElement("li");
+        li.className = "phrase-item";
+        const example = p.example
+          ? `<p class="phrase-example">&ldquo;${escapeHtml(p.example)}&rdquo;` +
+            (p.exampleUrl
+              ? ` <a class="phrase-src" href="${escapeHtml(p.exampleUrl)}" target="_blank" rel="noopener" title="${escapeHtml(p.exampleTitle || "Source")}">↗</a>`
+              : "") +
+            `</p>`
+          : "";
+        li.innerHTML =
+          `<button type="button" class="phrase-btn">` +
+          `<span class="phrase-text">&ldquo;${escapeHtml(p.phrase)}&rdquo;</span>` +
+          `<span class="phrase-stat">${p.events} events &middot; ${p.total}&times;</span>` +
+          `</button>` +
+          example;
+        li.querySelector(".phrase-btn").addEventListener("click", () => searchMayorPhrase(p.phrase));
+        pwrap.appendChild(li);
+      });
+    }
+  }
+
+  // Jump from a word/phrase to a live, mayor-only keyword search for it.
+  function searchMayorPhrase(phrase) {
+    TOPIC_FILTER = null;
+    renderActiveTopic();
+    FEATURED = null;
+    renderFeatured();
+    if (MODE === "semantic") setMode("keyword");
+    const mo = $("#mayor-only");
+    if (mo) mo.checked = true;
+    // Show every item — the mayor-only filter does the narrowing to his words,
+    // so enabling all types and widening scope to every agency surfaces his
+    // complete usage (his quotes inside agency press releases are his words too,
+    // but agencies are hidden in the default "Mayor & City Hall" scope).
+    $$('input[name="type"]').forEach((c) => (c.checked = true));
+    setScopeCheckboxes("admin");
+    renderScope();
+    const inp = $("#q");
+    inp.value = /\s/.test(phrase) ? `"${phrase}"` : phrase;
+    setView("search");
+    runSearch();
+    inp.focus();
   }
 
   // Themes ordered by overall volume; clicking one filters the archive to it.

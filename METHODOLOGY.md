@@ -338,6 +338,56 @@ extractive &mdash; we never paraphrase, summarize, or generate text:
 - The digest surfaces *representative* quotes by keyword density, not the single
   most newsworthy line; treat it as a starting point, then read the full items.
 
+<a name="language"></a>
+
+## How the mayor speaks: word cloud &amp; signature phrases
+
+The "How the mayor speaks" panel on the Trends &amp; themes page is built by
+`build_topics.mjs` and refreshed on the same daily schedule. Both halves are
+computed **only over the mayor's own words** &mdash; the `mayor_text` field,
+which holds his transcript turns and the quotes attributed to him inside press
+releases, and **never** reporters' questions or other speakers. As of the last
+build that is roughly 410,000 words across about 550 items. Nothing here uses a
+model or any paid service; it is plain word-counting you can reproduce.
+
+### Words he uses most (word cloud)
+
+- We tokenize the mayor's words, lowercase them, and count how often each word
+  appears. The 110 most frequent are shown, sized by the **square root** of
+  their count (so the single most common word doesn't dwarf the rest) and shaded
+  in three tiers by rank.
+- Before counting we remove a **published stop-word list** &mdash; common
+  function words ("the," "and," "to"), filler ("really," "actually," "like"),
+  bare numbers, and a few artifacts such as "york" (which only ever appears
+  inside "New York"). The full list is in `build_topics.mjs`.
+- This is raw frequency, **not** a distinctiveness measure: it shows what he says
+  a lot, not what he says more than other politicians. A word can also carry more
+  than one meaning.
+
+### Phrases he returns to (signature phrases)
+
+- We start from a **published candidate list** of recurring expressions (in
+  `build_topics.mjs`, and echoed in `topics.json` as `language.phrase_candidates`),
+  seeded from the most common two-to-four-word sequences in his remarks plus his
+  known refrains.
+- For each phrase we count its exact occurrences and, more tellingly, the number
+  of **separate events** he used it in. A phrase is shown only if he used it
+  across at least **8 different events** (and at least 10 times total), so the
+  list reflects habits, not one memorable speech. Phrases are ordered by event
+  spread.
+- Each phrase shows a **verbatim example sentence** from his own words, linked to
+  its source. Nothing is paraphrased.
+
+### Matching the counts on screen
+
+Clicking any word or phrase runs a live "only the mayor's words" search for it
+across the whole administration (all types, all agencies). Because his quotes
+inside agency press releases count as his words, that search returns the same
+total shown on the card &mdash; e.g. "far too long" reads *44 events* and the
+search returns 44 items. The candidate list is deliberately conservative: a phrase
+he repeats that we didn't list simply won't appear, so treat the panel as a
+transparent sample of his rhetoric, not an exhaustive ranking.
+
 ## Data fields stored per item
 
 | Field         | Description                                              |

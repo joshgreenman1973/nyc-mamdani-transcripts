@@ -979,6 +979,110 @@ mark {
 .digest-quote cite a { color: var(--vc-text-muted); }
 .digest-quote cite a:hover { color: var(--vc-orange); }
 
+/* ---------- The mayor's language (word cloud + phrases) ---------- */
+
+.speech {
+  margin: 0 0 var(--vc-space-7);
+  padding-top: var(--vc-space-5);
+  border-top: var(--vc-rule-bold) solid var(--vc-black);
+}
+.speech-heading { font-size: 1.6rem; margin: 0 0 var(--vc-space-2); }
+.speech-note {
+  font-family: var(--vc-font-sans);
+  font-size: var(--vc-size-small);
+  color: var(--vc-text-muted);
+  margin: 0 0 var(--vc-space-5);
+  max-width: 68ch;
+  line-height: 1.5;
+}
+.speech-basis { display: inline; }
+.speech-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--vc-space-6);
+  align-items: start;
+}
+.speech-subhead {
+  font-family: var(--vc-font-sans);
+  font-weight: var(--vc-weight-bold);
+  font-size: var(--vc-size-body);
+  margin: 0 0 var(--vc-space-1);
+  color: var(--vc-black);
+}
+.speech-sub {
+  font-family: var(--vc-font-sans);
+  font-size: var(--vc-size-small);
+  color: var(--vc-text-muted);
+  margin: 0 0 var(--vc-space-4);
+  line-height: 1.45;
+}
+
+.wordcloud {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.15rem 0.7rem;
+  line-height: 1.15;
+}
+.cloud-word {
+  font-family: var(--vc-font-sans);
+  background: none;
+  border: 0;
+  padding: 0.05rem 0.1rem;
+  cursor: pointer;
+  color: var(--vc-charcoal);
+  line-height: 1;
+  transition: color 0.12s ease;
+}
+.cloud-word:hover { color: var(--vc-orange); text-decoration: underline; text-underline-offset: 3px; }
+
+.phrases { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--vc-space-3); }
+.phrase-item {
+  border-top: var(--vc-rule-thin) solid var(--vc-cloud);
+  padding-top: var(--vc-space-3);
+}
+.phrase-item:first-child { border-top: 0; padding-top: 0; }
+.phrase-btn {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--vc-space-3);
+  width: 100%;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+}
+.phrase-text {
+  font-family: var(--vc-font-serif);
+  font-size: 1.15rem;
+  color: var(--vc-black);
+  line-height: 1.3;
+}
+.phrase-btn:hover .phrase-text { color: var(--vc-orange); text-decoration: underline; text-underline-offset: 2px; }
+.phrase-stat {
+  font-family: var(--vc-font-sans);
+  font-size: 0.75rem;
+  font-weight: var(--vc-weight-bold);
+  color: var(--vc-text-muted);
+  white-space: nowrap;
+  flex: none;
+}
+.phrase-example {
+  font-family: var(--vc-font-serif);
+  font-size: 0.95rem;
+  color: var(--vc-text-muted);
+  line-height: 1.4;
+  margin: 0.3rem 0 0;
+}
+.phrase-src { color: var(--vc-text-muted); text-decoration: none; font-size: 0.85rem; }
+.phrase-src:hover { color: var(--vc-orange); }
+
+@media (max-width: 720px) {
+  .speech-grid { grid-template-columns: 1fr; gap: var(--vc-space-6); }
+}
+
 @media (max-width: 600px) {
   .view-tab { font-size: 0.85rem; padding: 0.5rem 0.7rem; }
   .digest-quote { font-size: 1.05rem; }
