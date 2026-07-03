@@ -37,7 +37,7 @@ a:hover { color: var(--vc-orange); }
 
 .page-header {
   border-bottom: var(--vc-rule-bold) solid var(--vc-black);
-  padding: var(--vc-space-7) 0 var(--vc-space-5);
+  padding: var(--vc-space-5) 0 var(--vc-space-4);
 }
 
 .kicker {
@@ -47,14 +47,14 @@ a:hover { color: var(--vc-orange); }
   letter-spacing: var(--vc-track-kicker);
   text-transform: uppercase;
   color: var(--vc-orange);
-  margin: 0 0 var(--vc-space-3);
+  margin: 0 0 var(--vc-space-2);
 }
 
 .page-header h1 {
-  font-size: var(--vc-size-display);
+  font-size: clamp(1.75rem, 4.2vw, 2.6rem);
   line-height: var(--vc-lh-tight);
   letter-spacing: -0.01em;
-  margin: 0 0 var(--vc-space-4);
+  margin: 0 0 var(--vc-space-3);
   color: var(--vc-black);
 }
 
@@ -62,21 +62,51 @@ a:hover { color: var(--vc-orange); }
   font-size: 1.0625rem;
   color: var(--vc-text);
   margin: 0 0 var(--vc-space-3);
-  max-width: 60ch;
-  line-height: 1.5;
+  max-width: 62ch;
+  line-height: 1.45;
 }
 
 .lede--small {
   font-size: var(--vc-size-small);
   color: var(--vc-text-muted);
+  margin: var(--vc-space-2) 0 0;
 }
 
 .lede--small strong { color: var(--vc-black); }
 
+/* Collapsible "About this archive" disclosure — keeps the detailed sourcing
+   note available without letting it push the search results below the fold. */
+.about {
+  margin: 0 0 var(--vc-space-3);
+  max-width: 62ch;
+}
+.about > summary {
+  font-family: var(--vc-font-sans);
+  font-size: var(--vc-size-small);
+  font-weight: var(--vc-weight-bold);
+  color: var(--vc-black);
+  cursor: pointer;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.1rem 0;
+}
+.about > summary::-webkit-details-marker { display: none; }
+.about > summary::before {
+  content: "+";
+  font-weight: var(--vc-weight-bold);
+  color: var(--vc-orange);
+  font-size: 1.05em;
+  line-height: 1;
+}
+.about[open] > summary::before { content: "\2013"; }
+.about > summary:hover { color: var(--vc-orange); }
+
 .meta {
   color: var(--vc-text-muted);
   font-size: var(--vc-size-small);
-  margin: 0;
+  margin: var(--vc-space-3) 0 0;
 }
 
 /* ---------- Controls ---------- */
