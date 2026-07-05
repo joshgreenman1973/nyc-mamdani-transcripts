@@ -51,6 +51,7 @@
     <nav class="view-tabs" role="tablist" aria-label="View">
       <button id="view-search" class="view-tab active" type="button" role="tab" aria-selected="true">Search the archive</button>
       <button id="view-trends" class="view-tab" type="button" role="tab" aria-selected="false">Trends &amp; themes</button>
+      <button id="view-schedule" class="view-tab" type="button" role="tab" aria-selected="false">Public schedule</button>
     </nav>
 
     <div id="search-view">
@@ -218,6 +219,30 @@
         selected automatically by theme keyword, not paraphrased. Each links to its source.
       </p>
       <div class="digest" id="digest"></div>
+    </section>
+
+    <section id="schedule-view" class="schedule hidden" aria-label="Public schedule">
+      <div class="trends-intro">
+        <h2 class="vc-gascogne">The mayor&rsquo;s public days</h2>
+        <p class="trends-lede">
+          What the mayor does in public, built from the daily
+          &ldquo;Mayor&rsquo;s Public Schedule&rdquo; advisories his press office
+          sends to reporters. Each is marked <strong>&ldquo;for planning purposes
+          only&rdquo;</strong> &mdash; these are announced plans, not an
+          attendance-confirmed record. <a href="METHODOLOGY.md#schedule">How this is built &amp; its limits</a>.
+        </p>
+        <p class="schedule-coverage" id="schedule-coverage"></p>
+      </div>
+
+      <div class="stat-grid" id="schedule-stats"></div>
+
+      <h3 class="digest-heading vc-gascogne">What kind of events</h3>
+      <p class="digest-note">Every public event on those days, grouped by type from a published keyword list.</p>
+      <div class="type-bars" id="schedule-types"></div>
+
+      <h3 class="digest-heading vc-gascogne">Day by day</h3>
+      <p class="digest-note">Most recent first. Times are as announced; &ldquo;approx.&rdquo; is the office&rsquo;s own label.</p>
+      <div class="sched-days" id="schedule-days"></div>
     </section>
   </main>
 

@@ -1109,6 +1109,73 @@ mark {
 .phrase-src { color: var(--vc-text-muted); text-decoration: none; font-size: 0.85rem; }
 .phrase-src:hover { color: var(--vc-orange); }
 
+/* ---------- Public schedule ---------- */
+
+.schedule-coverage {
+  font-family: var(--vc-font-sans);
+  font-size: var(--vc-size-small);
+  color: var(--vc-text);
+  background: var(--vc-cloud);
+  border-left: 3px solid var(--vc-orange);
+  padding: var(--vc-space-3) var(--vc-space-4);
+  margin: var(--vc-space-3) 0 0;
+  line-height: 1.5;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--vc-space-3);
+  margin: var(--vc-space-5) 0 var(--vc-space-7);
+}
+.stat-card {
+  border: var(--vc-rule-bold) solid var(--vc-black);
+  padding: var(--vc-space-4);
+  background: var(--vc-white);
+}
+.stat-num {
+  font-size: 2.2rem;
+  line-height: 1;
+  color: var(--vc-black);
+  margin-bottom: var(--vc-space-2);
+}
+.stat-label {
+  font-family: var(--vc-font-sans);
+  font-size: var(--vc-size-small);
+  color: var(--vc-text-muted);
+  line-height: 1.3;
+}
+
+.type-bars { display: grid; gap: 0.4rem; margin-bottom: var(--vc-space-7); }
+.type-row { display: grid; grid-template-columns: 15rem 1fr 2.5rem; align-items: center; gap: var(--vc-space-3); }
+.type-name { font-family: var(--vc-font-sans); font-size: 0.9rem; }
+.type-bar { background: var(--vc-cloud); height: 1.1rem; position: relative; }
+.type-fill { position: absolute; inset: 0 auto 0 0; background: var(--vc-orange); }
+.type-count { font-family: var(--vc-font-sans); font-weight: var(--vc-weight-bold); font-size: 0.85rem; text-align: right; color: var(--vc-text-muted); }
+
+.sched-days { display: grid; gap: var(--vc-space-5); }
+.sched-day { border-top: var(--vc-rule-bold) solid var(--vc-black); padding-top: var(--vc-space-3); }
+.sched-date { font-size: 1.25rem; margin: 0 0 var(--vc-space-3); display: flex; align-items: baseline; gap: var(--vc-space-3); }
+.sched-weekday { font-family: var(--vc-font-sans); font-size: 0.8rem; font-weight: var(--vc-weight-bold); text-transform: uppercase; letter-spacing: 0.05em; color: var(--vc-text-muted); }
+
+.ev-list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--vc-space-3); }
+.ev { display: grid; grid-template-columns: 6rem 1fr; gap: var(--vc-space-3); }
+.ev-time { font-family: var(--vc-font-sans); font-weight: var(--vc-weight-bold); font-size: 0.9rem; color: var(--vc-black); }
+.ev-approx { display: block; font-weight: var(--vc-weight-book); font-size: 0.7rem; color: var(--vc-text-muted); text-transform: uppercase; }
+.ev-title { font-family: var(--vc-font-serif); font-size: 1.05rem; line-height: 1.35; color: var(--vc-text); display: block; }
+.ev-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin-top: 0.25rem; font-family: var(--vc-font-sans); font-size: 0.78rem; color: var(--vc-text-muted); }
+.ev-type { font-weight: var(--vc-weight-bold); color: var(--vc-charcoal); }
+.ev-flag { border: 1px solid var(--vc-text-muted); border-radius: 2px; padding: 0.05rem 0.35rem; font-size: 0.72rem; line-height: 1.3; }
+.ev-open { border-color: var(--vc-orange); color: var(--vc-orange); }
+.ev-closed { color: var(--vc-text-muted); }
+
+@media (max-width: 640px) {
+  .stat-grid { grid-template-columns: repeat(2, 1fr); }
+  .type-row { grid-template-columns: 9rem 1fr 2rem; }
+  .type-name { font-size: 0.8rem; }
+  .ev { grid-template-columns: 5rem 1fr; }
+}
+
 @media (max-width: 720px) {
   .speech-grid { grid-template-columns: 1fr; gap: var(--vc-space-6); }
 }

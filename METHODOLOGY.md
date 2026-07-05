@@ -388,6 +388,41 @@ search returns 44 items. The candidate list is deliberately conservative: a phra
 he repeats that we didn't list simply won't appear, so treat the panel as a
 transparent sample of his rhetoric, not an exhaustive ranking.
 
+<a name="schedule"></a>
+
+## The mayor's public days (public-schedule analysis)
+
+The "Public schedule" tab summarizes the mayor's announced public events.
+
+- **Source.** The daily *"PUBLIC SCHEDULE FOR MAYOR ZOHRAN KWAME MAMDANI"*
+  advisories the Mayor's Press Office emails to the press
+  (`NYCMayorsPressOffice@updates.cityhall.nyc.gov`). These are not posted on
+  nyc.gov in a machine-readable form, so the data is drawn from the emails
+  themselves. `parse_schedules.py` strips each email, isolates the itemized
+  "Press Schedule" block, and extracts one record per event: time, title, a
+  keyword-based event type, location (when an address is given), whether it is
+  open or closed to press, whether the mayor takes questions, and whether it is
+  streamed.
+- **These are plans, not attendance.** Every advisory is headed *"FOR PLANNING
+  PURPOSES ONLY."* It is what the office *announced*, issued the day before or
+  morning of. Events can move or be cancelled; the mayor may add stops not on the
+  public schedule. Treat this as the planned public calendar, not a confirmed log
+  of what happened.
+- **Coverage is a growing sample, not a census.** The office does not issue an
+  advisory every day, and this archive currently holds the subset that have been
+  processed — **not every day of the administration.** The on-page banner always
+  states the exact date range and day count. Percentages (open to press, takes
+  questions, streamed) are shares of the events in that sample. Because coverage
+  is uneven across time, we do **not** chart events-per-week trends, which gaps
+  would distort.
+- **Known limits.** Event-type tags come from a keyword list and can misfile an
+  unusual event. Location parsing is best-effort — many events list only a venue
+  name or no address, so location/borough are shown only when clearly given.
+  When the office sends an "UPDATED" schedule for a day, we use the updated one.
+- **Refresh.** Unlike the rest of the site (which a GitHub Action rebuilds from
+  public web sources), this dataset comes from email and is updated separately as
+  new advisories are added.
+
 ## Data fields stored per item
 
 | Field         | Description                                              |

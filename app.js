@@ -110,6 +110,7 @@
 
   let CORPUS = null;
   let THEMES = null; // data/topics.json: {taxonomy, months, monthly, totals, itemTopics, digest}
+  let SCHED = null; // data/schedule.json: {source, caveat, stats, days}
   let TOPIC_FILTER = null; // active theme id restricting the result set, or null
   let FEATURED = null; // active featured filter: null | "tisch" | "nypd"
   let SPOTLIGHT_COUNT = 0; // # of Mayor + Commissioner Tisch co-appearances
@@ -179,11 +180,20 @@
             });
             buildTrends();
           }
-          restoreFromURL();
-          applyMode();
-          applyView();
-          if (MODE === "semantic") ensureSemantic();
-          runSearch();
+          return fetch("data/schedule.json?v=" + new Date().toISOString().slice(0, 10))
+            .then((r) => (r.ok ? r.json() : null))
+            .catch(() => null)
+            .then((s) => {
+              if (s && s.days && s.days.length) {
+                SCHED = s;
+                renderSchedule();
+              }
+              restoreFromURL();
+              applyMode();
+              applyView();
+              if (MODE === "semantic") ensureSemantic();
+              runSearch();
+            });
         });
     })
     .catch((err) => {
@@ -598,6 +608,7 @@
     $("#mode-semantic").addEventListener("click", () => setMode("semantic"));
     $("#view-search").addEventListener("click", () => setView("search"));
     $("#view-trends").addEventListener("click", () => setView("trends"));
+    $("#view-schedule").addEventListener("click", () => setView("schedule"));
     window.addEventListener("popstate", () => {
       restoreFromURL();
       applyMode();
@@ -629,6 +640,86 @@
       : "Search — multiple words narrow (AND); use quotes for an exact phrase, e.g. “rent freeze”";
   }
 
+  // ---- public schedule view ----
+  function fmtHour(h) {
+    if (h == null) return "";
+    let hr = Math.floor(h), min = Math.round((h - hr) * 60);
+    if (min === 60) { hr += 1; min = 0; }
+    const ap = hr >= 12 ? "PM" : "AM";
+    let h12 = hr % 12; if (h12 === 0) h12 = 12;
+    return `${h12}:${String(min).padStart(2, "0")} ${ap}`;
+  }
+
+  function renderSchedule() {
+    if (!SCHED) return;
+    const s = SCHED.stats || {};
+    const cov = $("#schedule-coverage");
+    if (cov) {
+      cov.innerHTML =
+        `<strong>${s.days}</strong> schedule days on file (${formatDayLong(s.date_min)} – ${formatDayLong(s.date_max)}), ` +
+        `<strong>${s.events}</strong> public events. This is a sample of the days the press office issued an advisory, not every day in office &mdash; the archive is growing as more are added.`;
+    }
+    const cards = [
+      ["Public events", s.events],
+      ["Per day, on average", s.avg_events_per_day],
+      ["Open to press", pct(s.access_open, s.events)],
+      ["Takes questions", pct(s.takes_questions, s.events)],
+      ["Streamed / online", pct(s.streamed, s.events)],
+      ["Public day runs", s.earliest_start != null ? `${fmtHour(s.earliest_start)}–${fmtHour(s.latest_end)}` : "—"],
+    ];
+    const sg = $("#schedule-stats");
+    if (sg) {
+      sg.innerHTML = cards.map(([label, val]) =>
+        `<div class="stat-card"><div class="stat-num vc-gascogne">${val}</div><div class="stat-label">${label}</div></div>`
+      ).join("");
+    }
+    // Type bars.
+    const types = Object.entries(s.type_counts || {}).sort((a, b) => b[1] - a[1]);
+    const maxT = Math.max(1, ...types.map((t) => t[1]));
+    const tb = $("#schedule-types");
+    if (tb) {
+      tb.innerHTML = types.map(([label, n]) =>
+        `<div class="type-row">` +
+        `<span class="type-name">${escapeHtml(label)}</span>` +
+        `<span class="type-bar"><span class="type-fill" style="width:${(n / maxT * 100).toFixed(1)}%"></span></span>` +
+        `<span class="type-count">${n}</span>` +
+        `</div>`
+      ).join("");
+    }
+    // Day-by-day, most recent first.
+    const dd = $("#schedule-days");
+    if (dd) {
+      dd.innerHTML = [...SCHED.days].reverse().map((d) => {
+        const events = d.events.map((e) => {
+          const flags = [];
+          if (e.access === "Open") flags.push(`<span class="ev-flag ev-open">open press</span>`);
+          else if (e.access === "Closed") flags.push(`<span class="ev-flag ev-closed">closed press</span>`);
+          if (e.takes_questions) flags.push(`<span class="ev-flag">takes questions</span>`);
+          if (e.streamed) flags.push(`<span class="ev-flag">streamed</span>`);
+          return `<li class="ev">` +
+            `<span class="ev-time">${escapeHtml(e.time)}${e.approx ? " <span class='ev-approx'>approx.</span>" : ""}</span>` +
+            `<span class="ev-body"><span class="ev-title">${escapeHtml(e.title)}</span>` +
+            `<span class="ev-meta"><span class="ev-type">${escapeHtml(e.type)}</span>` +
+            (e.location ? ` &middot; <span class="ev-loc">${escapeHtml(e.location)}</span>` : "") +
+            flags.join("") + `</span></span></li>`;
+        }).join("");
+        return `<article class="sched-day">` +
+          `<h4 class="sched-date vc-gascogne">${formatDayLong(d.date)}` +
+          `<span class="sched-weekday">${escapeHtml(d.weekday || "")}</span></h4>` +
+          `<ol class="ev-list">${events}</ol></article>`;
+      }).join("");
+    }
+  }
+
+  function pct(n, d) { return d ? Math.round((n / d) * 100) + "%" : "—"; }
+
+  function formatDayLong(iso) {
+    if (!iso) return "";
+    const [y, m, d] = iso.split("-").map(Number);
+    const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    return `${months[m - 1]} ${d}, ${y}`;
+  }
+
   // ---- views (search vs. trends) ----
   function setView(v) {
     if (v === VIEW) return;
@@ -637,18 +728,21 @@
   }
 
   function applyView() {
-    const trends = VIEW === "trends";
-    const sv = $("#view-search");
-    const tv = $("#view-trends");
-    sv.classList.toggle("active", !trends);
-    tv.classList.toggle("active", trends);
-    sv.setAttribute("aria-selected", String(!trends));
-    tv.setAttribute("aria-selected", String(trends));
-    $("#search-view").classList.toggle("hidden", trends);
-    $("#trends-view").classList.toggle("hidden", !trends);
-    // Hide the Trends tab entirely if topics didn't load.
-    tv.classList.toggle("hidden", !THEMES);
-    if (trends) window.scrollTo({ top: 0, behavior: "smooth" });
+    const tabs = {
+      search: { tab: "#view-search", panel: "#search-view", show: true },
+      trends: { tab: "#view-trends", panel: "#trends-view", show: !!THEMES },
+      schedule: { tab: "#view-schedule", panel: "#schedule-view", show: !!SCHED },
+    };
+    Object.entries(tabs).forEach(([name, o]) => {
+      const tab = $(o.tab);
+      const active = VIEW === name;
+      $(o.panel).classList.toggle("hidden", !active);
+      if (!tab) return;
+      tab.classList.toggle("active", active);
+      tab.setAttribute("aria-selected", String(active));
+      tab.classList.toggle("hidden", !o.show); // hide tab if its data didn't load
+    });
+    if (VIEW !== "search") window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   // Restrict the result set to a tagged theme, jump to search, and show a pill.
