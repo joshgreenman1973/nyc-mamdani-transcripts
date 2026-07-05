@@ -403,6 +403,16 @@ The "Public schedule" tab summarizes the mayor's announced public events.
   keyword-based event type, location (when an address is given), whether it is
   open or closed to press, whether the mayor takes questions, and whether it is
   streamed.
+- **Press access is read from the advisory's exact wording**, not lumped into
+  "open/closed." Each event is placed in one bucket by the strongest signal:
+  *Open to all press* ("open to press" with no caveat); *RSVP / press-office
+  clearance* ("media interested in attending must RSVP / register"); *Limited —
+  space-constrained* ("space constraints," "does not guarantee entry," "cameras
+  will not be permitted"); *Footage provided* ("footage will be pooled / sent");
+  *Closed to press*; *Broadcast / remote* (a TV or radio hit or livestream, where
+  in-person access does not apply); or *Not specified* (no press note given). A
+  closed/footage note outranks a space limit, which outranks a plain RSVP, which
+  outranks a plain "open." The keyword rules are in `parse_schedules.py`.
 - **These are plans, not attendance.** Every advisory is headed *"FOR PLANNING
   PURPOSES ONLY."* It is what the office *announced*, issued the day before or
   morning of. Events can move or be cancelled; the mayor may add stops not on the

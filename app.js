@@ -662,7 +662,7 @@
     const cards = [
       ["Public events", s.events],
       ["Per day, on average", s.avg_events_per_day],
-      ["Open to press", pct(s.access_open, s.events)],
+      ["Open to all press", (s.access_counts || {})["Open to all press"] || 0],
       ["Takes questions", pct(s.takes_questions, s.events)],
       ["Streamed / online", pct(s.streamed, s.events)],
       ["Public day runs", s.earliest_start != null ? `${fmtHour(s.earliest_start)}–${fmtHour(s.latest_end)}` : "—"],
@@ -686,14 +686,30 @@
         `</div>`
       ).join("");
     }
+    // Press-access breakdown.
+    const access = Object.entries(s.access_counts || {});
+    const maxA = Math.max(1, ...access.map((a) => a[1]));
+    const ab = $("#schedule-access");
+    if (ab) {
+      ab.innerHTML = access.map(([label, n]) =>
+        `<div class="type-row">` +
+        `<span class="type-name">${escapeHtml(label)}</span>` +
+        `<span class="type-bar"><span class="type-fill" style="width:${(n / maxA * 100).toFixed(1)}%"></span></span>` +
+        `<span class="type-count">${n}</span>` +
+        `</div>`
+      ).join("");
+    }
     // Day-by-day, most recent first.
     const dd = $("#schedule-days");
     if (dd) {
       dd.innerHTML = [...SCHED.days].reverse().map((d) => {
         const events = d.events.map((e) => {
           const flags = [];
-          if (e.access === "Open") flags.push(`<span class="ev-flag ev-open">open press</span>`);
-          else if (e.access === "Closed") flags.push(`<span class="ev-flag ev-closed">closed press</span>`);
+          if (e.access) {
+            const open = e.access === "Open to all press";
+            const dim = e.access === "Closed to press" || e.access === "Broadcast / remote";
+            flags.push(`<span class="ev-flag ${open ? "ev-open" : dim ? "ev-closed" : ""}">${escapeHtml(e.access)}</span>`);
+          }
           if (e.takes_questions) flags.push(`<span class="ev-flag">takes questions</span>`);
           if (e.streamed) flags.push(`<span class="ev-flag">streamed</span>`);
           return `<li class="ev">` +

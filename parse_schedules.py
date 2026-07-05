@@ -138,6 +138,28 @@ def plain_to_text(pb: str) -> str:
     return t
 
 
+def classify_access(low: str):
+    """Categorize an event's press access from the advisory's own wording.
+    Priority: a closed/footage note overrides a space limit, which overrides a
+    plain RSVP, which overrides a plain 'open to press'."""
+    if "closed to press" in low or "closed press" in low:
+        return "Closed to press"
+    if "footage" in low and ("pool" in low or "will be sent" in low
+            or "sent following" in low or "distributed after" in low):
+        return "Footage provided"
+    if ("space constraint" in low or "does not guarantee entry" in low
+            or "will not be permitted" in low or "limited press" in low
+            or "limited space" in low):
+        return "Limited — space-constrained"
+    if ("must rsvp" in low or "interested in attending must" in low
+            or "rsvp by" in low or "rsvp to" in low or "rsvp at" in low
+            or "must register" in low or "register here" in low):
+        return "RSVP / press-office clearance"
+    if "open to press" in low:
+        return "Open to all press"
+    return None
+
+
 def parse_email(subject: str, text: str) -> dict:
     iso, weekday = parse_subject_date(subject)
     text = fix_times(text)
@@ -177,16 +199,21 @@ def parse_email(subject: str, text: str) -> dict:
         if addr:
             loc = re.sub(r'\s+', ' ', addr.group(1)).strip(" .;")
         low = part.lower()
-        access = ("Open" if "open to press" in low else
-                  "Closed" if ("closed press" in low or "closed to press" in low) else
-                  "Limited" if "limited press" in low else None)
+        ev_type = classify(title)
+        access = classify_access(low)
+        # Broadcast/remote events (TV/radio hits, livestreams) have no in-person
+        # press access by nature — label them so they don't read as "unspecified".
+        if not access and ev_type in ("Media appearance",
+                                      "“Talk With the People” livestream",
+                                      "Livestream / online"):
+            access = "Broadcast / remote"
         takes_q = "take questions" in low or "takes questions" in low
         streamed = any(p in part for p in ["Twitch", "YouTube", "streamed live", "live stream", "Livestream", "Encompass"])
         events.append({
             "time": time_s,
             "approx": approx,
             "title": re.sub(r'\s+', ' ', title),
-            "type": classify(title),
+            "type": ev_type,
             "location": loc,
             "borough": borough_of(loc) if loc else None,
             "access": access,
@@ -250,6 +277,11 @@ if __name__ == "__main__":
         evs = [e for r in recs for e in r["events"]]
         types = Counter(e["type"] for e in evs)
         wk = Counter(r["weekday"] for r in recs)
+        ACCESS_ORDER = ["Open to all press", "RSVP / press-office clearance",
+                        "Limited — space-constrained", "Footage provided",
+                        "Closed to press", "Broadcast / remote", "Not specified"]
+        acc = Counter(e["access"] or "Not specified" for e in evs)
+        access_counts = {k: acc[k] for k in ACCESS_ORDER if acc[k]}
         def hour(t):
             m = re.match(r"(\d{1,2}):(\d{2})\s*(AM|PM)", t)
             if not m: return None
@@ -263,8 +295,7 @@ if __name__ == "__main__":
             "avg_events_per_day": round(len(evs) / len(recs), 2) if recs else 0,
             "type_counts": dict(types.most_common()),
             "weekday_counts": dict(wk),
-            "access_open": sum(1 for e in evs if e["access"] == "Open"),
-            "access_closed": sum(1 for e in evs if e["access"] == "Closed"),
+            "access_counts": access_counts,
             "takes_questions": sum(1 for e in evs if e["takes_questions"]),
             "streamed": sum(1 for e in evs if e["streamed"]),
             "earliest_start": min(starts) if starts else None,
