@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-07-04T20:18:02Z",
+ "generated_at": "2026-07-05T11:31:56Z",
  "from_date": "2026-01-01",
  "source": "https://www.nyc.gov/mayors-office/news/",
- "total": 949,
+ "total": 950,
  "type_counts": {
-  "other": 276,
+  "other": 277,
   "speech": 24,
   "press_conference": 114,
   "agency_release": 276,
@@ -18,7 +18,7 @@
   "op_ed": 2
  },
  "source_counts": {
-  "nyc.gov": 603,
+  "nyc.gov": 604,
   "dca": 43,
   "nypd": 11,
   "dep": 17,
@@ -51,6 +51,23 @@
   "fdny": 20
  },
  "items": [
+  {
+   "link": "/mayors-office/news/2026/07/match-seven-at-nynj-stadium--what-new-yorkers-need-to-know-.html",
+   "url": "https://www.nyc.gov/mayors-office/news/2026/07/match-seven-at-nynj-stadium--what-new-yorkers-need-to-know-.html",
+   "title": "Match Seven at NYNJ Stadium: What New Yorkers Need to Know ",
+   "date": "July 04, 2026",
+   "iso_date": "2026-07-04",
+   "type": "other",
+   "text": "aem-GridColumn aem-GridColumn--default--12\n\nWhat you should know\n\n\r\nTune in to the Mayor’s “Morning Pitch” briefing tomorrow at 8:45 a.m. for the latest weather and transportation updates  \n\r\nMorning Pitch is available on YouTube, X, Instagram and Facebook\n\r\n\r\n\nThe city may feel as hot as 93 degrees, and there’s a high chance of rain and periodic thunderstorms Sunday evening.\n\r\nOur Heat Emergency Plan remains activated, and cooling centers will be open across the city. New Yorkers are urged to assess their heat risk and put their health and safety above any event or activity. Visit nyc.gov/beattheheat for heat safety guidance.\n\r\nNew Yorkers should be alert for heavy rain and strong winds. If storms hit, wait out the dangerous conditions indoors. Exercise caution while traveling.\n\r\nNew Yorkers and visitors can stay informed by texting SUMMER26, SUMMER26ESP or SUMMER26FRE to 692-692 to receive updates in English, Spanish and French.\n\r\nVisit nyc.gov/beread for emergency preparedness information.\n\r\nTransportation and Traffic\n\r\nTomorrow will be a Gridlock Alert Day.\n\r\nNew Yorkers should expect heavy traffic and travel delays throughout the day and are encouraged to walk, bike or take public transportation whenever possible.\n\r\nPublic transit remains the easiest and fastest way to get to NYNJ Stadium.\n\r\nMatchgoers are encouraged to explore their transit options and purchase tickets in advance at nynjfwc26.com/getting-to-nynj-stadium/\n\r\nShuttle and bus priority corridors will be in effect from 10 a.m. to 10 p.m.\n\r\nAccess on the following corridors and lanes will be limited to NYNJ Stadium shuttle buses, MTA local buses, Official World Cup affiliate vehicles and emergency vehicles: \n\r\n\r\n42nd Street from First Avenue to Twelfth Avenue.   \n\r\nTwo lanes on Sixth Avenue from 42nd Street to 59th Street.   \n\r\nTwo lanes on Fifth Avenue from 42nd Street to 59th Street.   \n\r\nWest 40th Street between 8th Avenue and 11th Avenue.   \n\r\nWest 41st Street between 8th Avenue and 10th Avenue.   \n\r\n\r\n\nSelect streets around Penn Station will close by 10 a.m. to accommodate street-level queues.   \n\r\n\r\n33rd Street between 7th Avenue and 8th Avenue and 32nd Street between 6th Avenue and 7th Avenue will reopen after 4 p.m.   \n\r\n33rd Street between 6th and 7th Avenue will reopen after 10 p.m.\n\r\n\r\n\nTruck deliveries in Midtown will be restricted from 10 a.m. to 10 p.m. within the area bounded by 30th Street and 60th Street.\n\r\nThe restrictions apply only to trucks. Smaller delivery vehicles including cars, vans and cargo bikes are exempt, as are emergency vehicles, service vehicles and essential delivery providers operating within the zone.\n\r\nAdditional information is available in Mayor Mamdani’s Midtown Transportation Plan.",
+   "word_count": 413,
+   "source": "nyc.gov",
+   "reliability": "official",
+   "speakers": [],
+   "mayor_quotes": [],
+   "mayor_text": "",
+   "mayor_word_count": 0,
+   "has_mayor_quotes": false
+  },
   {
    "link": "/mayors-office/news/2026/07/transcripcion--malcalde-mamdani-discurso-por-los-250-anos-de-est.html",
    "url": "https://www.nyc.gov/mayors-office/news/2026/07/transcripcion--malcalde-mamdani-discurso-por-los-250-anos-de-est.html",
@@ -63560,6 +63577,6 @@
    "mayor_word_count": 3288
   }
  ],
- "external_last_run": "2026-07-04T20:18:39Z",
- "youtube_last_run": "2026-07-04T20:24:27Z"
+ "external_last_run": "2026-07-05T11:32:27Z",
+ "youtube_last_run": "2026-07-05T11:37:53Z"
 }
