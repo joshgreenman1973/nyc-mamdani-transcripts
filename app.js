@@ -703,10 +703,13 @@
             (e.location ? ` &middot; <span class="ev-loc">${escapeHtml(e.location)}</span>` : "") +
             flags.join("") + `</span></span></li>`;
         }).join("");
+        const body = d.events.length
+          ? `<ol class="ev-list">${events}</ol>`
+          : `<p class="ev-none">No public events scheduled.</p>`;
         return `<article class="sched-day">` +
           `<h4 class="sched-date vc-gascogne">${formatDayLong(d.date)}` +
           `<span class="sched-weekday">${escapeHtml(d.weekday || "")}</span></h4>` +
-          `<ol class="ev-list">${events}</ol></article>`;
+          body + `</article>`;
       }).join("");
     }
   }

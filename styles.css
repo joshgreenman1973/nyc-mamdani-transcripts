@@ -1168,6 +1168,7 @@ mark {
 .ev-flag { border: 1px solid var(--vc-text-muted); border-radius: 2px; padding: 0.05rem 0.35rem; font-size: 0.72rem; line-height: 1.3; }
 .ev-open { border-color: var(--vc-orange); color: var(--vc-orange); }
 .ev-closed { color: var(--vc-text-muted); }
+.ev-none { font-family: var(--vc-font-sans); font-size: var(--vc-size-small); color: var(--vc-text-muted); font-style: italic; margin: 0; }
 
 @media (max-width: 640px) {
   .stat-grid { grid-template-columns: repeat(2, 1fr); }
