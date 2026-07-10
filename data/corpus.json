@@ -1,16 +1,16 @@
 {
- "generated_at": "2026-07-09T20:31:19Z",
+ "generated_at": "2026-07-10T12:00:36Z",
  "from_date": "2026-01-01",
  "source": "https://www.nyc.gov/mayors-office/news/",
- "total": 979,
+ "total": 981,
  "type_counts": {
   "other": 290,
   "press_conference": 119,
+  "executive_order": 106,
   "agency_release": 280,
   "ceremony": 20,
   "media_appearance": 59,
   "speech": 25,
-  "executive_order": 104,
   "statement": 14,
   "crime_briefing": 5,
   "hearing": 29,
@@ -18,16 +18,16 @@
   "op_ed": 2
  },
  "source_counts": {
-  "nyc.gov": 629,
-  "hpd": 34,
+  "nyc.gov": 631,
   "dca": 45,
+  "dcas": 17,
+  "hpd": 34,
   "nypd": 11,
   "dep": 17,
   "doh": 34,
   "fdny": 15,
   "dsny": 28,
   "dot": 57,
-  "dcas": 17,
   "tlc": 6,
   "mome": 11,
   "acs": 2,
@@ -115,6 +115,40 @@
    "mayor_quotes": [],
    "mayor_text": "Good morning, everyone. What a pleasure it is to be here together today as we mark an incredibly exciting day, not only for Lower Manhattan and for the future of business in this neighborhood, but frankly for our entire city. I want to just say thank you to everyone involved in this project and all of the hard work to get to this point. For Denise Pickett, the president of Enterprise Shared Services and American Express; Lisa Silverstein, CEO at Silverstein Properties; Kathryn Garcia, our executive director of the Port Authority in New York and New Jersey; as well as Kevin O'Toole, our commissioner for Port Authority. I want to echo the acknowledgments as well to Gary LaBarbera, the president for the Building and Construction Trades Council in Greater New York. We have Janno Lieber, who is here with us who leads our MTA. And I want to acknowledge as well leaders from within our own administration, Deputy Mayor Julie Su who joins us. As well as all of our partners at the elected level: in our City Council, Speaker Julie Menin, who is here with us, as well as Comptroller Mark Levine, Manhattan Borough President Brad Hoylman-Sigal, State Senator Brian Kavanagh and Assembly Member Grace Lee.\n\nYou can tell a lot about a city from the buildings that rise highest; which industries call it home; how many workers and colleagues are proud to build their careers there; and how many construction workers and architects and welders collaborated to build engineering marvels that reach into the clouds. Today, as we gather here to break ground on the new 2 World Trade Center, we are telling a new chapter of the story of New York City. One that will be immediately understood by whoever sees this film. Whether it is from the street, before their first day of work, or from dozens of miles away, as they look towards the greatness of our skyline. It will be a story of jobs: as steel girders are laid and concrete is poured, this project will create more than 3,200 direct and indirect construction jobs, investing in New York City's economy with nearly $6 billion. Once it is completed, this building will support approximately 21,250 jobs in our city.",
    "mayor_word_count": 375,
+   "has_mayor_quotes": false
+  },
+  {
+   "link": "/mayors-office/news/2026/07/emergency-executive-order-no--1-37.html",
+   "url": "https://www.nyc.gov/mayors-office/news/2026/07/emergency-executive-order-no--1-37.html",
+   "title": "Emergency Executive Order No. 1.37",
+   "date": "July 09, 2026",
+   "iso_date": "2026-07-09",
+   "type": "executive_order",
+   "text": "Download Emergency Executive Order No. 1.37\n\r\nWHEREAS, pursuant to a state of emergency first declared by Emergency Executive Order No. 241, dated September 15, 2021, and subsequent orders extending such state of emergency, compliance by the Department of Correction (DOC) with various laws and regulations has not been required; and\n\r\nWHEREAS, such orders issued prior to January 5, 2026 did not provide or require a plan for actions that would enable DOC to come into compliance with applicable laws and regulations for which compliance is not required as a result of such orders; and\n\r\nWHEREAS, the state of emergency first declared in 2021 continues for the present pending the expedited development and implementation of such plan;\n\r\nNOW, THEREFORE, pursuant to the powers vested in me as Mayor of the City of New York, by the laws of the State of New York and the City of New York, including but not limited to the New York Executive Law, the New York City Charter and the Administrative Code of the City of New York, and the common law authority to protect the public in the event of an emergency, it is hereby ordered:\n\r\nSection 1. Section 1 of Emergency Executive Order No. 1.36, dated July 4, 2026, is hereby extended for five (5) days.\n\r\n§ 2. DOC, in consultation with the Law Department, shall regularly update the Mayor regarding additional suspensions that can be lapsed to comply with the implementation action plan developed pursuant to Section 2 of Emergency Executive Order 1, dated January 5, 2026, and with applicable laws and regulations that presently do not apply pursuant to Emergency Executive Orders.\n\r\n§ 3. This Emergency Executive Order shall take effect immediately and shall remain in effect for five (5) days unless it is terminated or modified at an earlier date.\n\r\n_________________________\n\r\nZohran Kwame Mamdani\n\r\nMayor",
+   "word_count": 305,
+   "source": "nyc.gov",
+   "reliability": "official",
+   "speakers": [],
+   "mayor_quotes": [],
+   "mayor_text": "",
+   "mayor_word_count": 0,
+   "has_mayor_quotes": false
+  },
+  {
+   "link": "/mayors-office/news/2026/07/emergency-executive-order-no--2-37.html",
+   "url": "https://www.nyc.gov/mayors-office/news/2026/07/emergency-executive-order-no--2-37.html",
+   "title": "Emergency Executive Order No. 2.37",
+   "date": "July 09, 2026",
+   "iso_date": "2026-07-09",
+   "type": "executive_order",
+   "text": "Download Emergency Executive Order No. 2.37\n\r\nWHEREAS, pursuant to a state of emergency first declared by Emergency Executive Order No. 224, dated October 7, 2022, and subsequent orders extending such state of emergency, the City has operated Humanitarian Emergency Response and Relief Centers to provide temporary housing in response to the substantial increase in new arrivals during recent years; and\n\r\nWHEREAS, such orders issued prior to January 5, 2026 did not provide or require a plan for actions that would be taken to eliminate the need for the suspensions and modifications of laws and rules effected by the orders; and\n\r\nWHEREAS, such state of emergency continues for the present pending the expedited development and implementation of such plan;\n\r\nNOW, THEREFORE, pursuant to the powers vested in me as Mayor of the City of New York, by the laws of the State of New York and the City of New York, including but not limited to the New York Executive Law, the New York City Charter and the Administrative Code of the City of New York, and the common law authority to protect the public in the event of an emergency:\n\r\nSection 1. Section 1 of Emergency Executive Order No. 2.36, dated July 4, 2026, is hereby extended for five (5) days.\n\r\n§ 2. The Department of Social Services and the Department of Homeless Services, in consultation with the Law Department, shall regularly update the Mayor on the implementation action plan and efforts to phase out the continued use of facilities that have been operated in reliance on the suspensions and modifications of laws and rules.\n\r\n§ 3. This Emergency Executive Order shall take effect immediately and shall remain in effect for five (5) days unless it is terminated or modified at an earlier date.\n\r\n_________________________\n\r\nZohran Kwame Mamdani\n\r\nMayor\n\r\nAPPENDIX\n\r\n \n\r\nList of laws and regulations for which suspension continues for any facility subject to this order, including any operated by or on behalf of DSS or DHS, and any other facility existing on the effective date of this order:\n\r\n\r\nSections 21-309 and 21-312 of the Administrative Code. (EEO No. 886, dated November 19, 2025, § 3, para. (d) and (g))\n\r\nSections 21-124. (EEO No. 886, dated November 19, 2025, § 3, para. (h)(i))",
+   "word_count": 373,
+   "source": "nyc.gov",
+   "reliability": "official",
+   "speakers": [],
+   "mayor_quotes": [],
+   "mayor_text": "",
+   "mayor_word_count": 0,
    "has_mayor_quotes": false
   },
   {
@@ -64772,7 +64806,6 @@
    "mayor_word_count": 3288
   }
  ],
- "external_last_run": "2026-07-09T20:31:52Z",
- "agencies_last_run": "2026-07-09T20:36:34Z",
- "youtube_last_run": "2026-07-09T20:37:38Z"
+ "external_last_run": "2026-07-10T12:01:08Z",
+ "youtube_last_run": "2026-07-10T12:07:03Z"
 }
