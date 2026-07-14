@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-07-13T20:24:00Z",
+ "generated_at": "2026-07-14T11:30:39Z",
  "from_date": "2026-01-01",
  "source": "https://www.nyc.gov/mayors-office/news/",
- "total": 997,
+ "total": 998,
  "type_counts": {
-  "other": 295,
+  "other": 296,
   "press_conference": 121,
   "agency_release": 287,
   "media_appearance": 60,
@@ -18,13 +18,13 @@
   "op_ed": 2
  },
  "source_counts": {
-  "nyc.gov": 640,
+  "nyc.gov": 641,
+  "hpd": 35,
   "dca": 47,
   "sbs": 5,
   "dot": 59,
   "doh": 35,
   "dcas": 17,
-  "hpd": 35,
   "nypd": 11,
   "dep": 17,
   "fdny": 15,
@@ -323,6 +323,25 @@
    ],
    "mayor_text": "New York City government is working across agencies and around the clock to deliver the safe summer that New Yorkers deserve,",
    "mayor_word_count": 21,
+   "has_mayor_quotes": true
+  },
+  {
+   "link": "/mayors-office/news/2026/07/mayor-mamdani-activates-heat-emergency-plan-as-city-prepares-for.html",
+   "url": "https://www.nyc.gov/mayors-office/news/2026/07/mayor-mamdani-activates-heat-emergency-plan-as-city-prepares-for.html",
+   "title": "Mayor Mamdani Activates Heat Emergency Plan as City Prepares for Midweek Heat ",
+   "date": "July 13, 2026",
+   "iso_date": "2026-07-13",
+   "type": "other",
+   "text": "What you should know\n\n\r\nHundreds of cooling centers will open Tuesday and Wednesday — find the nearest location at finder.nyc.gov/coolingcenters/ \n\r\nStreet outreach will intensify under Code Red, with 21 COOL vans deployed to support vulnerable neighbors\n\r\n\r\n\nNEW YORK —  Mayor Zohran Kwame Mamdani and New York City Emergency Management (NYCEM) today urged New Yorkers to prepare for dangerous heat expected Tuesday and Wednesday. \n\r\nTemperatures are expected to feel like the upper 90s Tuesday, with the heat index climbing into the low 100s Wednesday before cooler weather arrives later this week. While this stretch of heat is expected to be less severe and shorter than the historic heat wave earlier this month, the National Weather Service has issued a Heat Advisory from 11 a.m. Tuesday through 9 p.m. Wednesday. \n\r\nNew Yorkers are encouraged to stay hydrated, limit outdoor activity during the hottest parts of the day and spend time in air-conditioned spaces whenever possible. Residents should check on vulnerable neighbors — especially older adults, people with disabilities and people with chronic health conditions — and learn to recognize the warning signs of heat illness. Anyone experiencing hot, dry skin, difficult breathing, a rapid heartbeat, confusion, disorientation, dizziness, nausea or vomiting should call 911 immediately. \n\r\n\"This heat may not reach the levels we experienced earlier this month, but it can still be deadly,\" said Mayor Mamdani. \"Every New Yorker should make a plan today. If you have air conditioning, turn it on. If you don't, head to one of the hundreds of cooling centers opening across the city, visit a pool or cool off at a spray shower. And look out for your neighbors, especially seniors. If you see someone outside who appears to be in distress, call 311 so we can get help to them.\" \n\r\n\"As we stressed just two weeks ago during our city's record-breaking temperatures, high heat can be life threatening,\" said NYCEM Commissioner Christina Farrell. \"Temperatures forecasted this week will feel above 100 degrees, so New Yorkers should be vigilant about staying safe and cool. Make sure that you drink lots of water, use air conditioning or get to an air-conditioned space and check on vulnerable neighbors.\" \n\r\n\"Extreme heat doesn't affect everyone equally, and that's why our COOL vans meet New Yorkers most at risk directly where they are,\" said Dr. Ted Long, Senior Vice President and System Chief Medical Officer for Clinical Services and Population Health at NYC Health + Hospitals. \"COOL's clinical teams bring cooling supplies directly to you, and can then immediately transport you somewhere safe. Whether you are an unhoused New Yorker on the street or an older adult that needs help at home, the COOL initiative shows that New York City will do everything in its power to help you.\" \n\r\nCooling Centers and Cool Options  \n\r\nThe City will activate hundreds of cooling centers Tuesday and Wednesday, providing free, air-conditioned spaces across the five boroughs. New Yorkers can find locations, including accessible and pet-friendly options, at finder.nyc.gov/coolingcenters/ or by calling 311. Service animals are always welcome.  \n\r\nThousands of LinkNYC kiosks will provide real-time walking directions to the nearest cooling center within a 10-minute walk.  \n\r\nNew Yorkers can also find relief at spray showers and other cooling location by visiting on.nyc.gov/CoolItNYC.\n\r\nThe City's roughly 50 outdoor pools are free and open daily from 11 a.m. to 7 p.m. On Tuesday and Wednesday, Olympic- and intermediate-sized pools will remain open until 8:30 p.m. \n\r\nPublic beaches are free and open daily with lifeguards on duty from 10 a.m. to 6 p.m. Swimming outside designated areas or when lifeguards are off duty is prohibited and extremely dangerous.  \n\r\nAdults 18 and older can also pick up free spray caps at local firehouses to safely convert fire hydrants into sprinklers.  \n\r\nOutreach to Vulnerable New Yorkers\n\r\nThe City will activate Code Red outreach from noon to 8 p.m. Tuesday and Wednesday, expanding street canvassing to connect homeless New Yorkers with shelter, cooling centers and essential services. Shelter is available to anyone experiencing homelessness, and walk-ins are welcome. Anyone concerned about a person who may need assistance is encouraged to call 311. \n\r\nTwenty-one COOL vans will provide New Yorkers with wellness checks, medical care, electrolytes, sunscreen, meal — including vegetarian, kosher and halal options, transportation to cooling centers or health care facilities and visits to older adults in their homes to help them stay safe during the heat.  \n\r\nNew Yorkers can stay informed by signing up for Notify NYC, the City's free emergency communications program, by texting NOTIFYNYC to 692-692 and visiting nyc.gov/beattheheat for more health and safety guidance.  \n\r\n \n\r\n###",
+   "word_count": 758,
+   "source": "nyc.gov",
+   "reliability": "official",
+   "speakers": [],
+   "mayor_quotes": [
+    "This heat may not reach the levels we experienced earlier this month, but it can still be deadly,"
+   ],
+   "mayor_text": "This heat may not reach the levels we experienced earlier this month, but it can still be deadly,",
+   "mayor_word_count": 18,
    "has_mayor_quotes": true
   },
   {
@@ -66878,7 +66897,6 @@
    "mayor_word_count": 3288
   }
  ],
- "external_last_run": "2026-07-13T20:24:34Z",
- "agencies_last_run": "2026-07-13T20:29:08Z",
- "youtube_last_run": "2026-07-13T20:30:14Z"
+ "external_last_run": "2026-07-14T11:31:12Z",
+ "youtube_last_run": "2026-07-14T11:36:55Z"
 }
