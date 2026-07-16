@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-07-15T20:19:34Z",
+ "generated_at": "2026-07-16T11:32:26Z",
  "from_date": "2026-01-01",
  "source": "https://www.nyc.gov/mayors-office/news/",
- "total": 1006,
+ "total": 1007,
  "type_counts": {
-  "other": 300,
+  "other": 301,
   "executive_order": 108,
   "press_conference": 122,
   "media_appearance": 61,
@@ -18,7 +18,7 @@
   "op_ed": 2
  },
  "source_counts": {
-  "nyc.gov": 649,
+  "nyc.gov": 650,
   "hpd": 35,
   "dca": 47,
   "sbs": 5,
@@ -87,6 +87,25 @@
    ],
    "mayor_text": "Gas and electricity are not luxuries — they are basic necessities. But too many New Yorkers are struggling to afford the energy they need to keep the lights on, stay cool in the summer and heat their homes in the winter,",
    "mayor_word_count": 41,
+   "has_mayor_quotes": true
+  },
+  {
+   "link": "/mayors-office/news/2026/07/---mayor-mamdani-expands-city-response-to-dangerous-heat--worsen.html",
+   "url": "https://www.nyc.gov/mayors-office/news/2026/07/---mayor-mamdani-expands-city-response-to-dangerous-heat--worsen.html",
+   "title": "   Mayor Mamdani Expands City Response to Dangerous Heat, Worsening Air Quality",
+   "date": "July 15, 2026",
+   "iso_date": "2026-07-15",
+   "type": "other",
+   "text": "What you should know\n\n\r\nHundreds of cooling centers will remain open Thursday \n\r\n Free KN95 masks available at hundreds of locations, including library branches, police precincts, firehouses and major transit hubs \n\r\n Outreach workers intensify canvassing efforts under both Code Red and Code Grey \n\r\n\r\n\nNEW YORK – Mayor Zohran Kwame Mamdani today expanded the City’s response as dangerous heat continues through Thursday and smoke from Canadian wildfires worsens air quality across New York City. \n\r\nThursday’s heat index is forecast to reach the low 90s, while air quality is expected to fall into the “Unhealthy” category. New Yorkers are urged to stay in air-conditioned spaces whenever possible, limit time outdoors, stay hydrated and check on neighbors. Older adults, people with heart or lung conditions, pregnant people, children and infants face the greatest risks.   \n\r\n“The combination of dangerous heat and unhealthy air is a serious threat to New Yorkers’ health,” said Mayor Mamdani. “If you can, stay somewhere cool with air conditioning, limit your time outdoors, drink plenty of water and check on your neighbors — especially older New Yorkers and anyone with a health condition. Our administration is opening cooling centers, distributing free masks and expanding outreach across the five boroughs. We’ll get through this the same way we always do: together.” \n\r\n“Outreach workers, librarians, firefighters and police officers are handing out masks in every borough, and cooling center staff are opening doors to anyone who needs relief. That’s the City’s emergency management system at work,” said NYCEM Commissioner Christina Farrell. “Everyday New Yorkers are part of that system too. Limit your time outdoors, check on your neighbors, especially anyone having trouble breathing or managing a health condition, and text NOTIFYNYC to 692-692 so you know the moment conditions change.” \n\r\nPreparing for Dangerous Heat \n\r\nMayor Mamdani is extending the City’s Heat Emergency Plan through Thursday. Hundreds of cooling centers will remain open, and outreach teams will continue intensified efforts under Code Red to connect homeless New Yorkers with safe, air-conditioned spaces. \n\r\nNew Yorkers can find cooling centers, including accessible and pet-friendly locations, at finder.nyc.gov/coolingcenters/ or by calling 311. Service animals are always welcome.   \n\r\nProtecting New Yorkers From Poor Air Quality \n\r\nSmoke from wildfires in Canada is bringing elevated levels of particulate matter into New York City. Air quality reached levels classified as “Unhealthy” in parts of the city Wednesday and is expected to remain poor Thursday. \n\r\nFree KN95 masks are available at more than 200 New York Public Library, Queens Public Library and Brooklyn Public Library locations, all NYPD precincts, nine FDNY firehouses, four major transit hubs and through partnerships with the New York City Department of Transportation (NYC DOT), Economic Development Corporation (EDC), Department for the Aging (NYC Aging) and local council members.  \n\r\nThe City’s mask distribution network will expand Thursday to every New York Public Library branch and additional outdoor summer events.  \n\r\nNew Yorkers can find pickup locations using the City’s Mask Distribution Site map. \n\r\nThe Department of Social Services (DSS) will activate Code Grey on Thursday alongside Code Red. Outreach teams will increase canvassing to distribute masks and connect homeless New Yorkers with cool, air-conditioned spaces. COOL vans will be deployed to support homeless New Yorkers, check on older adults and distribute masks and other essential supplies. Shelter is available to anyone experiencing homelessness, and walk-ins are welcome. Anyone concerned about someone who may need assistance should call 311. \n\r\nCity agencies are adjusting operations to protect New Yorkers during the heat and poor air quality. \n\r\nNew York City Public Schools (NYCPS) has directed principals to significantly limit outdoor activities. Schools are rescheduling outdoor field trips and ensuring ventilation and air conditioning systems are operating effectively. \n\r\nNYC Parks is canceling many of its outdoor programs, including swim programs for children and infants, and moving camp activities indoors where possible. The agency will continue to monitor air quality and visibility and adjust programming, including beach and pool operations, as conditions warrant. \n\r\nThe New York City Department of Health and Mental Hygiene (DOHMH), Department of Citywide Administrative Services (DCAS), NYCEM and the New York Committee for Occupational Safety and Health (NYCOSH) are coordinating closely to protect outdoor workers. DCAS has also issued guidance to City agencies on remote work. \n\r\nNew Yorkers are encouraged to sign up for emergency alerts by texting NOTIFYNYC to 692-692. \n\r\nMore information on staying safe during extreme heat is available at nyc.gov/beattheheat, and guidance on wildfire smoke is available at on.nyc.gov/firesmoke.  \n\r\n###",
+   "word_count": 733,
+   "source": "nyc.gov",
+   "reliability": "official",
+   "speakers": [],
+   "mayor_quotes": [
+    "The combination of dangerous heat and unhealthy air is a serious threat to New Yorkers’ health,"
+   ],
+   "mayor_text": "The combination of dangerous heat and unhealthy air is a serious threat to New Yorkers’ health,",
+   "mayor_word_count": 16,
    "has_mayor_quotes": true
   },
   {
@@ -67373,6 +67392,6 @@
    "mayor_word_count": 3288
   }
  ],
- "external_last_run": "2026-07-15T20:20:06Z",
- "youtube_last_run": "2026-07-15T20:25:59Z"
+ "external_last_run": "2026-07-16T11:33:00Z",
+ "youtube_last_run": "2026-07-16T11:39:10Z"
 }
