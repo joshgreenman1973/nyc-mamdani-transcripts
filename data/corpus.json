@@ -1,14 +1,14 @@
 {
- "generated_at": "2026-07-19T11:24:31Z",
+ "generated_at": "2026-07-19T20:14:33Z",
  "from_date": "2026-01-01",
  "source": "https://www.nyc.gov/mayors-office/news/",
- "total": 1016,
+ "total": 1017,
  "type_counts": {
+  "agency_release": 290,
   "other": 304,
   "media_appearance": 62,
   "speech": 27,
   "press_conference": 123,
-  "agency_release": 289,
   "executive_order": 108,
   "ceremony": 21,
   "statement": 14,
@@ -24,7 +24,7 @@
   "hpd": 35,
   "sbs": 5,
   "dot": 59,
-  "doh": 35,
+  "doh": 36,
   "dcas": 17,
   "nypd": 11,
   "dep": 17,
@@ -51,6 +51,24 @@
   "fdny": 20
  },
  "items": [
+  {
+   "link": "/site/doh/about/press/pr2026/second-death-in-ues-legionnaires-disease-cluster.page",
+   "url": "https://www.nyc.gov/site/doh/about/press/pr2026/second-death-in-ues-legionnaires-disease-cluster.page",
+   "title": "second-death-in-ues-legionnaires-disease-cluster",
+   "date": "July 18, 2026",
+   "iso_date": "2026-07-18",
+   "type": "agency_release",
+   "text": "The New York City Health Department announced today that a second person has died in connection with the Legionnaires’ disease community cluster on the Upper East Side.\n\nAt the same time, Health Department data continues to show a sustained decline in newly diagnosed cases, indicating that the source of exposure to Legionella bacteria has likely been eliminated. \n\n“We are heartbroken to learn that another New Yorker has lost their life to Legionnaires’ disease on the Upper East Side. Our deepest condolences are with their loved ones as they grieve,” said NYC Health Commissioner Dr. Alister F. Martin. “While we mourn this loss, the data are also encouraging. Our aggressive strategy of testing, enforcement, and remediation appears to have stopped the source of exposure. We directed every building with an initial positive test result to immediately clean and disinfect its cooling tower, and every one has completed that work. We have also reminded cooling tower operators across the city of their summertime requirement to increase use of biocides that kill Legionella bacteria. We will continue inspecting every cooling tower that tested positive and will hold accountable any owner who fails to comply with our public health laws.” \n\nAs of July 18, the Health Department has identified 72 cases of Legionnaires’ disease associated with the cluster, nine people remain hospitalized, 50 have been discharged from the hospital, and two people have died. \nFrom July 10 through July 17, the Health Department confirmed an average of fewer than one new case per day. During the first week of the investigation, from July 2 through July 8, the Health Department confirmed an average of more than eight new cases per day. These figures may change as new cases are investigated and confirmed. \n\nCase investigations also show a sharp decline in illnesses beginning after July 8. People whose cases have only recently been confirmed began experiencing symptoms more than a week ago, indicating there has not been recent exposure. The Health Department is also not seeing concerning trends in hospital emergency department data, which can identify potential cases before they are formally diagnosed. \n \n\nTaken together, these findings indicate that the City’s aggressive remediation and enforcement efforts have likely eliminated the source of the Legionella bacteria exposure.\n\nThe Health Department continues to advise anyone who has spent time in the three affected ZIP codes — 10028, 10075, 10128 — to seek medical evaluation if they develop flu-like symptoms, as Legionnaires’ disease symptoms can appear up to 14 days after exposure.\n \n\nAggressive Remediation \n\nOn July 14, the Health Department ordered 76 buildings with cooling towers that returned positive initial PCR screening results to clean and disinfect their systems as part of the Upper East Side investigation. \n\nBy July 16, all 76 confirmed they completed the required remediation. \n\nThis was the first time the City has taken this approach. In previous community cluster investigations, buildings with positive PCR results were initially required to boost chemical disinfectant levels while awaiting confirmatory culture testing, a process that can take up to two weeks. Full cleaning and disinfection was generally required only after a positive culture result. \n\nThe Health Department collected samples from 183 cooling tower systems across the affected area and has completed all initial PCR screening tests for Legionella bacteria. There are no outstanding PCR test results.\n \nEnforcement\n\nNew York City has some of the nation’s strongest laws governing cooling tower maintenance and Legionella prevention. Building owners are required to properly maintain cooling towers and regularly monitor them for bacterial growth, and the Health Department enforces those requirements.\n \nTo promote compliance, the Health Department aims to inspect every registered cooling tower each year. During the first six months of 2026, inspectors completed nearly 1,600 cooling tower inspections, a 35% increase over the same period in 2025.\n \nWhen inspectors identify violations, the Health Department issues summonses and may impose financial penalties. In Fiscal Year 2025, the Health Department collected approximately $680,000 in cooling tower-related fines and issued 1,337 violations, including:\n\n253 public health hazards\n\n 810 critical violations\n \n 274 general violations\n\nIn May, Health Department regulations took effect requiring cooling tower operators to test for Legionella every 31 days while systems are operating — three times more frequently than previously required. Operators must submit testing information to the Health Department after each test. \n\nAlthough the requirement has been in place for two months, compliance has been strong. Citywide, 77% of operators have already submitted the required testing information. Some cooling towers that have not yet reported may not currently be operating or may not yet have started seasonal operations. Compliance is verified during annual inspections, and failure to comply may result in enforcement action and fines. \n\nNext Steps \n \nAs part of the Upper East Side investigation, the Health Department is inspecting every cooling tower that tested positive for the presence of Legionella, as well as an unregistered cooling tower identified during the investigation. Violations and penalties will be issued where inspectors identify non-compliance with City laws or regulations. \n\nThe Health Department is conducting culture testing on samples from all 183 cooling towers. Unlike PCR testing, culture testing determines whether live Legionella bacteria capable of causing disease are were present.\n \n\nRather than waiting for culture results, the Health Department took the more proactive approach of requiring every building with an initial positive PCR test result to immediately clean and disinfect its cooling towers.\n \n\nIn addition, the Health Department has directed cooling tower operators citywide to complete their required summertime increase in biocide treatment to help control Legionella growth, regardless of individual test results.",
+   "word_count": 921,
+   "source": "doh",
+   "reliability": "release",
+   "is_press_release": true,
+   "speakers": [],
+   "mayor_quotes": [],
+   "mayor_text": "",
+   "mayor_word_count": 0,
+   "has_mayor_quotes": false
+  },
   {
    "link": "/mayors-office/news/2026/07/mayor-mamdani--the-world-cup-belonged-to-new-yorkers.html",
    "url": "https://www.nyc.gov/mayors-office/news/2026/07/mayor-mamdani--the-world-cup-belonged-to-new-yorkers.html",
@@ -67988,6 +68006,7 @@
    "mayor_word_count": 3288
   }
  ],
- "external_last_run": "2026-07-19T11:25:05Z",
- "youtube_last_run": "2026-07-19T11:30:43Z"
+ "external_last_run": "2026-07-19T20:15:13Z",
+ "agencies_last_run": "2026-07-19T20:19:49Z",
+ "youtube_last_run": "2026-07-19T20:20:52Z"
 }
