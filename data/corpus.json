@@ -1,16 +1,16 @@
 {
- "generated_at": "2026-07-19T20:14:33Z",
+ "generated_at": "2026-07-20T11:55:41Z",
  "from_date": "2026-01-01",
  "source": "https://www.nyc.gov/mayors-office/news/",
- "total": 1017,
+ "total": 1020,
  "type_counts": {
+  "ceremony": 22,
+  "executive_order": 110,
   "agency_release": 290,
   "other": 304,
   "media_appearance": 62,
   "speech": 27,
   "press_conference": 123,
-  "executive_order": 108,
-  "ceremony": 21,
   "statement": 14,
   "crime_briefing": 5,
   "hearing": 29,
@@ -18,13 +18,13 @@
   "op_ed": 2
  },
  "source_counts": {
-  "nyc.gov": 657,
+  "nyc.gov": 660,
+  "doh": 36,
   "dca": 48,
   "mome": 12,
   "hpd": 35,
   "sbs": 5,
   "dot": 59,
-  "doh": 36,
   "dcas": 17,
   "nypd": 11,
   "dep": 17,
@@ -51,6 +51,168 @@
   "fdny": 20
  },
  "items": [
+  {
+   "link": "/mayors-office/news/2026/07/transcript--mayor-mamdani-hosts--the-morning-pitch--to-provide-t0.html",
+   "url": "https://www.nyc.gov/mayors-office/news/2026/07/transcript--mayor-mamdani-hosts--the-morning-pitch--to-provide-t0.html",
+   "title": "Transcript: Mayor Mamdani Hosts “The Morning Pitch” to Provide Traffic and Weather Updates Ahead of World Cup",
+   "date": "July 19, 2026",
+   "iso_date": "2026-07-19",
+   "type": "ceremony",
+   "text": "Mayor Zohran Kwame Mamdani: Hello New York City, and welcome back to the Morning Pitch. You give us five minutes; we’ll give you the World Cup. \n\r\nThis afternoon, for the eighth and final time this World Cup, a whistle will blow just across the Hudson and 22 men will chase a football around the pitch. This is no ordinary football match. This is the World Cup final — the greatest sporting event in the world. The eyes of the planet will turn towards New York-New Jersey Stadium. On the line is nothing less than immortality. \n\r\nSpain versus Argentina. Messi versus Yamal. Can the future overcome the past? Or will the greatest player to ever play the greatest game send his Barcelona successor back to the bath? \n\r\nIt will all be decided right here, just a few miles from our city. Here’s what those planning to attend the game in person need to know. \n\r\nFirst, the weather.  \n\r\nI know these past few weeks have been rough. Smoke in the air. Temperatures in the high nineties. Today should be a little nicer, with high temperatures in the mid 80s and lows in the mid 60s. \n\r\nThe storms we saw yesterday have cleared up overnight — and we’re hopeful the dry skies will stick around for kickoff. \n\r\nI know I say it before every match, but I can’t emphasize it enough today: plan extra time to get to the stadium and make sure that you are relying on public transportation to get there. Shuttle service has been expanded and is beginning operations at 9:30AM, which is even earlier than usual, so book a ticket at nynjfwc26.com. If you would rather take the train, buy a ticket on New Jersey Transit by going to njtworldcup.com. \n\r\nThe match might start at 3 p.m., but you’re going to want to arrive at the stadium a whole lot earlier than that. The stadium fan experience will open at 11 a.m. and the closing ceremony, which will feature a performance by Mr. White Iverson himself, Post Malone, starts at 1:30. As Post sings: “I’m smiling, bet you see me from the nosebleeds.” If you truly want to see him from the nosebleeds, plan to leave early and get there early. \n\r\nWe’ve seen heavy traffic and significant travel delays before every World Cup match — but we’re expecting it to be even more intense before the final, especially in Midtown. \n\r\nI want to encourage New Yorkers to leave the car at home and use public transit, bike or walk. \n\r\nBus and shuttle corridors and lanes will begin at 8 a.m. and remain in effect until 11 p.m. Fifth and Sixth Avenues from 42nd Street to 59th Street will be dedicated to buses and shuttles, as will 42nd Street from First to 12th Avenue, West 40th Street between Eighth and 11th Avenues and West 41st Street between Eighth and 10th Avenues.  \n\r\nNew Yorkers will be watching this match across the city. Families will gather in living rooms, friends will shout at projectors in bars and backyards, strangers will become best friends as we hold our breath and wait for VAR to issue its verdicts. Tens of thousands will shout and celebrate together at our free watch party in Central Park.  \n\r\nWe will be taking a number of steps to ensure that every New Yorker can enjoy the day safely. As of 8 a.m., commercial vehicle traffic will be restricted along the length of Central Park on both Fifth Avenue and Central Park West, from 110th Street to 59th Street. Commercial vehicles will also be limited on Fifth and Eighth Avenues from 59th Street to 42nd Streets. \n\r\nAnd as always, if you are looking for somewhere to take in this momentous occasion, make sure to take advantage of the $26 dollar drink and meal deal program being offered by more than 900 restaurants and bars. Go to nyctourism.com and scroll down to the “Five Borough Winners Special” to find the full list. Today is the last day of this deal — so go check it out! \n\r\nAs we look forward to Argentina versus Spain — as Argentina seeks to become only the third team to ever win back-to-back World Cups — I can’t help but think back to forty years ago, when Argentina won their second ever World Cup in 1986. \n\r\nAnd yet I am not thinking about the final. I am thinking about the quarter final, when an Argentinian side led by Diego Maradona, El Pibe De Oro, defeated England 2-1 fair and square— \n\r\n[Gary Lineker enters the room.] \n\r\nGary Lineker: Excuse me. Excuse me. I don’t know if I would call it fair and square. \n\r\nMayor Mamdani: I’m sorry, are you Gary Lineker? \n\r\nLineker: Yes. \n\r\nMayor Mamdani: One of the greatest strikers in football history? \n\r\nLineker: Not for me to say, but I scored a few. \n\r\nMayor Mamdani: You played more than 650 matches for club and country and never received a yellow or red card? \n\r\nLineker: I was a good boy. \n\r\nMayor Mamdani: The man who scored the only goal for England in that 1986 quarterfinal before Maradona knocked out the Three Lions? \n\r\nLineker: I’ll have you know that I was top scorer in that tournament. \n\r\nMayor Mamdani: Well, Gary, it’s a privilege to have you with us today as we look forward to the final. Could you tell New York City a little bit about what it’s like to play and score in a World Cup? \n\r\nLineker: There’s nothing quite like it. Your entire country is watching. Everyone you know, everyone you competed with on the schoolyard or who stood you up on a date — plenty of those. And when you score, well, it’s just an explosion of emotion. I imagine that it must feel like hearing that the independent Rent Guidelines Board has decided to freeze the rent for rent-stabilized tenants for two years. \n\r\nMayor Mamdani: Oh wow. I can’t imagine anything better. Now, could you tell us a little bit about what it was like to play against Maradona — what the Spanish players preparing to compete against Messi must be feeling? \n\r\nLineker: Listen, there’s a reason that Maradona is so revered to this day. He had such an incredible passion for the game — and I never thought in my lifetime that I would see anyone play with the same creativity, the same genius, the same magic as him. The way the ball clung to his feet, the way that he kept his balance, the way that he juggled— \n\r\nMayor Mamdani: Gary, that’s— \n\r\nLineker: Yes, yes, one second. You know, I once said that I’ve never seen anyone have such a beautiful affection with a football. And when I think back to that match in 1986, I don’t really remember the “Hand of God,” I remember the other goal he scored— \n\r\nMayor Mamdani: Gary, unfortunately, we’re running up on time. \n\r\nLineker: Yes, yes, but stay with me here — the Azteca pitch that day. I mean, honestly, it was terrible. It was a total mess. Shambles. And still, he floated and glided, and still, he danced through the midfield, and still he pulled away from Peter Reid, and still he beat the entire team. It was one of the most majestic things I’ve ever seen, and frankly, if I’m a Spanish defender today, I am terrified because Messi— \n\r\n[Mayor Mamdani blows whistle.] \n\r\nMayor Mamdani: Gary, I’m so sorry to do this to you for the first time, but this is flagrant timewasting. \n\r\n[Mayor Mamdani presents Lineker with a yellow card.] \n\r\nLineker: Fair enough. It’s been a long time coming. \n\r\nMayor Mamdani and Lineker: New York City: enjoy the match.  \n\r\n###",
+   "word_count": 1277,
+   "source": "nyc.gov",
+   "reliability": "official",
+   "speakers": [
+    {
+     "speaker": "Mayor Zohran Kwame Mamdani",
+     "text": "Hello New York City, and welcome back to the Morning Pitch. You give us five minutes; we’ll give you the World Cup. \n\nThis afternoon, for the eighth and final time this World Cup, a whistle will blow just across the Hudson and 22 men will chase a football around the pitch. This is no ordinary football match. This is the World Cup final — the greatest sporting event in the world. The eyes of the planet will turn towards New York-New Jersey Stadium. On the line is nothing less than immortality. \n\nSpain versus Argentina. Messi versus Yamal. Can the future overcome the past? Or will the greatest player to ever play the greatest game send his Barcelona successor back to the bath? \n\nIt will all be decided right here, just a few miles from our city. Here’s what those planning to attend the game in person need to know. \n\nFirst, the weather.  \n\nI know these past few weeks have been rough. Smoke in the air. Temperatures in the high nineties. Today should be a little nicer, with high temperatures in the mid 80s and lows in the mid 60s. \n\nThe storms we saw yesterday have cleared up overnight — and we’re hopeful the dry skies will stick around for kickoff.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "I know I say it before every match, but I can’t emphasize it enough today",
+     "text": "plan extra time to get to the stadium and make sure that you are relying on public transportation to get there. Shuttle service has been expanded and is beginning operations at 9:30AM, which is even earlier than usual, so book a ticket at nynjfwc26.com. If you would rather take the train, buy a ticket on New Jersey Transit by going to njtworldcup.com. \n\nThe match might start at 3 p.m., but you’re going to want to arrive at the stadium a whole lot earlier than that. The stadium fan experience will open at 11 a.m. and the closing ceremony, which will feature a performance by Mr. White Iverson himself, Post Malone, starts at 1:30. As Post sings: “I’m smiling, bet you see me from the nosebleeds.” If you truly want to see him from the nosebleeds, plan to leave early and get there early. \n\nWe’ve seen heavy traffic and significant travel delays before every World Cup match — but we’re expecting it to be even more intense before the final, especially in Midtown. \n\nI want to encourage New Yorkers to leave the car at home and use public transit, bike or walk. \n\nBus and shuttle corridors and lanes will begin at 8 a.m. and remain in effect until 11 p.m. Fifth and Sixth Avenues from 42nd Street to 59th Street will be dedicated to buses and shuttles, as will 42nd Street from First to 12th Avenue, West 40th Street between Eighth and 11th Avenues and West 41st Street between Eighth and 10th Avenues.  \n\nNew Yorkers will be watching this match across the city. Families will gather in living rooms, friends will shout at projectors in bars and backyards, strangers will become best friends as we hold our breath and wait for VAR to issue its verdicts. Tens of thousands will shout and celebrate together at our free watch party in Central Park.  \n\nWe will be taking a number of steps to ensure that every New Yorker can enjoy the day safely. As of 8 a.m., commercial vehicle traffic will be restricted along the length of Central Park on both Fifth Avenue and Central Park West, from 110th Street to 59th Street. Commercial vehicles will also be limited on Fifth and Eighth Avenues from 59th Street to 42nd Streets. \n\nAnd as always, if you are looking for somewhere to take in this momentous occasion, make sure to take advantage of the $26 dollar drink and meal deal program being offered by more than 900 restaurants and bars. Go to nyctourism.com and scroll down to the “Five Borough Winners Special” to find the full list. Today is the last day of this deal — so go check it out! \n\nAs we look forward to Argentina versus Spain — as Argentina seeks to become only the third team to ever win back-to-back World Cups — I can’t help but think back to forty years ago, when Argentina won their second ever World Cup in 1986. \n\nAnd yet I am not thinking about the final. I am thinking about the quarter final, when an Argentinian side led by Diego Maradona, El Pibe De Oro, defeated England 2-1 fair and square— \n\n[Gary Lineker enters the room.]",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Gary Lineker",
+     "text": "Excuse me. Excuse me. I don’t know if I would call it fair and square.",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "I’m sorry, are you Gary Lineker?",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Lineker",
+     "text": "Yes.",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "One of the greatest strikers in football history?",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Lineker",
+     "text": "Not for me to say, but I scored a few.",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "You played more than 650 matches for club and country and never received a yellow or red card?",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Lineker",
+     "text": "I was a good boy.",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "The man who scored the only goal for England in that 1986 quarterfinal before Maradona knocked out the Three Lions?",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Lineker",
+     "text": "I’ll have you know that I was top scorer in that tournament.",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "Well, Gary, it’s a privilege to have you with us today as we look forward to the final. Could you tell New York City a little bit about what it’s like to play and score in a World Cup?",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Lineker",
+     "text": "There’s nothing quite like it. Your entire country is watching. Everyone you know, everyone you competed with on the schoolyard or who stood you up on a date — plenty of those. And when you score, well, it’s just an explosion of emotion. I imagine that it must feel like hearing that the independent Rent Guidelines Board has decided to freeze the rent for rent-stabilized tenants for two years.",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "Oh wow. I can’t imagine anything better. Now, could you tell us a little bit about what it was like to play against Maradona — what the Spanish players preparing to compete against Messi must be feeling?",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Lineker",
+     "text": "Listen, there’s a reason that Maradona is so revered to this day. He had such an incredible passion for the game — and I never thought in my lifetime that I would see anyone play with the same creativity, the same genius, the same magic as him. The way the ball clung to his feet, the way that he kept his balance, the way that he juggled—",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "Gary, that’s—",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Lineker",
+     "text": "Yes, yes, one second. You know, I once said that I’ve never seen anyone have such a beautiful affection with a football. And when I think back to that match in 1986, I don’t really remember the “Hand of God,” I remember the other goal he scored—",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "Gary, unfortunately, we’re running up on time.",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Lineker",
+     "text": "Yes, yes, but stay with me here — the Azteca pitch that day. I mean, honestly, it was terrible. It was a total mess. Shambles. And still, he floated and glided, and still, he danced through the midfield, and still he pulled away from Peter Reid, and still he beat the entire team. It was one of the most majestic things I’ve ever seen, and frankly, if I’m a Spanish defender today, I am terrified because Messi— \n\n[Mayor Mamdani blows whistle.]",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani",
+     "text": "Gary, I’m so sorry to do this to you for the first time, but this is flagrant timewasting. \n\n[Mayor Mamdani presents Lineker with a yellow card.]",
+     "is_mayor": true
+    },
+    {
+     "speaker": "Lineker",
+     "text": "Fair enough. It’s been a long time coming.",
+     "is_mayor": false
+    },
+    {
+     "speaker": "Mayor Mamdani and Lineker",
+     "text": "New York City: enjoy the match.  \n\n###",
+     "is_mayor": true
+    }
+   ],
+   "mayor_quotes": [],
+   "mayor_text": "Hello New York City, and welcome back to the Morning Pitch. You give us five minutes; we’ll give you the World Cup. \n\nThis afternoon, for the eighth and final time this World Cup, a whistle will blow just across the Hudson and 22 men will chase a football around the pitch. This is no ordinary football match. This is the World Cup final — the greatest sporting event in the world. The eyes of the planet will turn towards New York-New Jersey Stadium. On the line is nothing less than immortality. \n\nSpain versus Argentina. Messi versus Yamal. Can the future overcome the past? Or will the greatest player to ever play the greatest game send his Barcelona successor back to the bath? \n\nIt will all be decided right here, just a few miles from our city. Here’s what those planning to attend the game in person need to know. \n\nFirst, the weather.  \n\nI know these past few weeks have been rough. Smoke in the air. Temperatures in the high nineties. Today should be a little nicer, with high temperatures in the mid 80s and lows in the mid 60s. \n\nThe storms we saw yesterday have cleared up overnight — and we’re hopeful the dry skies will stick around for kickoff.\n\nI’m sorry, are you Gary Lineker?\n\nOne of the greatest strikers in football history?\n\nYou played more than 650 matches for club and country and never received a yellow or red card?\n\nThe man who scored the only goal for England in that 1986 quarterfinal before Maradona knocked out the Three Lions?\n\nWell, Gary, it’s a privilege to have you with us today as we look forward to the final. Could you tell New York City a little bit about what it’s like to play and score in a World Cup?\n\nOh wow. I can’t imagine anything better. Now, could you tell us a little bit about what it was like to play against Maradona — what the Spanish players preparing to compete against Messi must be feeling?\n\nGary, that’s—\n\nGary, unfortunately, we’re running up on time.\n\nGary, I’m so sorry to do this to you for the first time, but this is flagrant timewasting. \n\n[Mayor Mamdani presents Lineker with a yellow card.]\n\nNew York City: enjoy the match.  \n\n###",
+   "mayor_word_count": 380,
+   "has_mayor_quotes": false
+  },
+  {
+   "link": "/mayors-office/news/2026/07/emergency-executive-order-no--1-39.html",
+   "url": "https://www.nyc.gov/mayors-office/news/2026/07/emergency-executive-order-no--1-39.html",
+   "title": "Emergency Executive Order No. 1.39",
+   "date": "July 19, 2026",
+   "iso_date": "2026-07-19",
+   "type": "executive_order",
+   "text": "Download Emergency Executive Order No. 1.39\n\r\nWHEREAS, pursuant to a state of emergency first declared by Emergency Executive Order No. 241, dated September 15, 2021, and subsequent orders extending such state of emergency, compliance by the Department of Correction (DOC) with various laws and regulations has not been required; and\n\r\nWHEREAS, such orders issued prior to January 5, 2026 did not provide or require a plan for actions that would enable DOC to come into compliance with applicable laws and regulations for which compliance is not required as a result of such orders; and\n\r\nWHEREAS, the state of emergency first declared in 2021 continues for the present pending the expedited development and implementation of such plan;\n\r\nNOW, THEREFORE, pursuant to the powers vested in me as Mayor of the City of New York, by the laws of the State of New York and the City of New York, including but not limited to the New York Executive Law, the New York City Charter and the Administrative Code of the City of New York, and the common law authority to protect the public in the event of an emergency, it is hereby ordered:\n\r\nSection 1. Section 1 of Emergency Executive Order No. 1.38, dated July 14, 2026, is hereby extended for five (5) days.\n\r\n§ 2. DOC, in consultation with the Law Department, shall regularly update the Mayor regarding additional suspensions that can be lapsed to comply with the implementation action plan developed pursuant to Section 2 of Emergency Executive Order 1, dated January 5, 2026, and with applicable laws and regulations that presently do not apply pursuant to Emergency Executive Orders.\n\r\n§ 3. This Emergency Executive Order shall take effect immediately and shall remain in effect for five (5) days unless it is terminated or modified at an earlier date.\n\r\n_________________________\n\r\n Zohran Kwame Mamdani\n\r\n Mayor",
+   "word_count": 305,
+   "source": "nyc.gov",
+   "reliability": "official",
+   "speakers": [],
+   "mayor_quotes": [],
+   "mayor_text": "",
+   "mayor_word_count": 0,
+   "has_mayor_quotes": false
+  },
+  {
+   "link": "/mayors-office/news/2026/07/emergency-executive-order-no--2-39.html",
+   "url": "https://www.nyc.gov/mayors-office/news/2026/07/emergency-executive-order-no--2-39.html",
+   "title": "Emergency Executive Order No. 2.39",
+   "date": "July 19, 2026",
+   "iso_date": "2026-07-19",
+   "type": "executive_order",
+   "text": "Download Emergency Executive Order No. 2.39\n\r\nWHEREAS, pursuant to a state of emergency first declared by Emergency Executive Order No. 224, dated October 7, 2022, and subsequent orders extending such state of emergency, the City has operated Humanitarian Emergency Response and Relief Centers to provide temporary housing in response to the substantial increase in new arrivals during recent years; and\n\r\nWHEREAS, such orders issued prior to January 5, 2026 did not provide or require a plan for actions that would be taken to eliminate the need for the suspensions and modifications of laws and rules effected by the orders; and\n\r\nWHEREAS, such state of emergency continues for the present pending the expedited development and implementation of such plan;\n\r\nNOW, THEREFORE, pursuant to the powers vested in me as Mayor of the City of New York, by the laws of the State of New York and the City of New York, including but not limited to the New York Executive Law, the New York City Charter and the Administrative Code of the City of New York, and the common law authority to protect the public in the event of an emergency:\n\r\nSection 1. Section 1 of Emergency Executive Order No. 2.38, dated July 14, 2026, is hereby extended for five (5) days.\n\r\n§ 2. The Department of Social Services and the Department of Homeless Services, in consultation with the Law Department, shall regularly update the Mayor on the implementation action plan and efforts to phase out the continued use of facilities that have been operated in reliance on the suspensions and modifications of laws and rules.\n\r\n§ 3. This Emergency Executive Order shall take effect immediately and shall remain in effect for five (5) days unless it is terminated or modified at an earlier date.\n\r\n_________________________\n\r\nZohran Kwame Mamdani\n\r\nMayor\n\r\n \n\r\n\r\n\r\nAPPENDIX\n\r\nList of laws and regulations for which suspension continues for any facility subject to this order, including any operated by or on behalf of DSS or DHS, and any other facility existing on the effective date of this order:\n\r\n1.      Sections 21-309 and 21-312 of the Administrative Code. (EEO No. 886, dated November 19, 2025, § 3, para. (d) and (g))\n\r\n2.      Sections 21-124. (EEO No. 886, dated November 19, 2025, § 3, para. (h)(i))",
+   "word_count": 375,
+   "source": "nyc.gov",
+   "reliability": "official",
+   "speakers": [],
+   "mayor_quotes": [],
+   "mayor_text": "",
+   "mayor_word_count": 0,
+   "has_mayor_quotes": false
+  },
   {
    "link": "/site/doh/about/press/pr2026/second-death-in-ues-legionnaires-disease-cluster.page",
    "url": "https://www.nyc.gov/site/doh/about/press/pr2026/second-death-in-ues-legionnaires-disease-cluster.page",
@@ -68006,7 +68168,6 @@
    "mayor_word_count": 3288
   }
  ],
- "external_last_run": "2026-07-19T20:15:13Z",
- "agencies_last_run": "2026-07-19T20:19:49Z",
- "youtube_last_run": "2026-07-19T20:20:52Z"
+ "external_last_run": "2026-07-20T11:56:13Z",
+ "youtube_last_run": "2026-07-20T12:01:37Z"
 }
