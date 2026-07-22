@@ -28,11 +28,17 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent
 CORPUS = ROOT / "data" / "corpus.json"
-CHANNEL = "https://www.youtube.com/@NYCMayorsOffice/videos"
+CHANNEL_BASE = "https://www.youtube.com/@NYCMayorsOffice"
+# YouTube splits a channel across tabs and /videos holds none of the others.
+# Livestreams are where the press conferences land, so omitting /streams was
+# hiding the majority of the channel.
+CHANNEL_TABS = ("videos", "streams", "shorts")
 FROM_DATE = "20260101"  # YYYYMMDD format used by yt-dlp
 DATE_PROXIMITY_DAYS = 3
 JACCARD_THRESHOLD = 0.45
 SLEEP_BETWEEN = 0.4
+# How long to wait before retrying once when YouTube throttles caption fetches.
+BLOCKED_BACKOFF = 30
 
 STOPWORDS = {
     "a", "an", "and", "as", "at", "be", "by", "for", "from", "in", "is",
@@ -50,24 +56,37 @@ def list_videos() -> list[dict]:
     listing alone returns NA for upload_date — only the per-video page does.
     """
     print(f"Listing channel video IDs…", file=sys.stderr)
-    flat_cmd = [
-        sys.executable, "-m", "yt_dlp",
-        "--flat-playlist",
-        "--print", "%(id)s|%(title)s",
-        CHANNEL,
-    ]
-    try:
-        flat_out = subprocess.check_output(flat_cmd, stderr=subprocess.DEVNULL, text=True, timeout=180)
-    except subprocess.CalledProcessError as e:
-        print(f"yt-dlp listing failed: {e}", file=sys.stderr)
-        return []
     candidates: list[tuple[str, str]] = []  # (id, title)
-    for line in flat_out.splitlines():
-        if "|" not in line:
+    seen_ids: set[str] = set()
+    tabs_ok = 0
+    for tab in CHANNEL_TABS:
+        flat_cmd = [
+            sys.executable, "-m", "yt_dlp",
+            "--flat-playlist",
+            "--print", "%(id)s|%(title)s",
+            f"{CHANNEL_BASE}/{tab}",
+        ]
+        try:
+            flat_out = subprocess.check_output(flat_cmd, stderr=subprocess.DEVNULL,
+                                               text=True, timeout=300)
+        except (subprocess.CalledProcessError, subprocess.TimeoutExpired) as e:
+            # An empty or missing tab is normal; a broken one shouldn't cost us
+            # the tabs that did work.
+            print(f"  /{tab} listing failed: {e}", file=sys.stderr)
             continue
-        vid, title = line.split("|", 1)
-        if vid:
-            candidates.append((vid, title))
+        tabs_ok += 1
+        n_before = len(candidates)
+        for line in flat_out.splitlines():
+            if "|" not in line:
+                continue
+            vid, title = line.split("|", 1)
+            if vid and vid not in seen_ids:
+                seen_ids.add(vid)
+                candidates.append((vid, title))
+        print(f"  /{tab}: {len(candidates) - n_before} new", file=sys.stderr)
+    if not tabs_ok:
+        print("Every channel tab listing failed.", file=sys.stderr)
+        return []
     print(f"  channel has {len(candidates)} videos; fetching metadata…", file=sys.stderr)
 
     cmd = [
@@ -153,8 +172,23 @@ def find_match(video: dict, items: list[dict]) -> tuple[dict, float] | tuple[Non
     return None, best_score
 
 
+def is_rate_limited(exc: Exception) -> bool:
+    """True when YouTube is throttling us rather than lacking captions.
+
+    These two look identical at the call site but mean opposite things: a
+    throttled video still has a transcript and must be retried, while a
+    caption-less one never will.
+    """
+    name = type(exc).__name__
+    return name in ("IpBlocked", "TooManyRequests", "RequestBlocked")
+
+
 def fetch_captions(video_id: str) -> tuple[str, list[dict], str | None]:
-    """Return (plain_text, segments, source). source = "manual" | "auto" | None."""
+    """Return (plain_text, segments, source).
+
+    source = "manual" | "auto" | None (no captions) | "blocked" (throttled —
+    caller should back off and let the next run retry).
+    """
     try:
         from youtube_transcript_api import YouTubeTranscriptApi  # noqa: WPS433
     except ImportError:
@@ -164,6 +198,8 @@ def fetch_captions(video_id: str) -> tuple[str, list[dict], str | None]:
     try:
         listing = api.list(video_id)
     except Exception as e:
+        if is_rate_limited(e):
+            return "", [], "blocked"
         print(f"  caption listing failed for {video_id}: {e}", file=sys.stderr)
         return "", [], None
     track = None
@@ -181,6 +217,8 @@ def fetch_captions(video_id: str) -> tuple[str, list[dict], str | None]:
     try:
         fetched = track.fetch()
     except Exception as e:
+        if is_rate_limited(e):
+            return "", [], "blocked"
         print(f"  caption fetch failed for {video_id}: {e}", file=sys.stderr)
         return "", [], None
     snippets = fetched.snippets if hasattr(fetched, "snippets") else list(fetched)
@@ -238,6 +276,7 @@ def main() -> int:
     matched = 0
     added = 0
     failed = 0
+    blocked = 0
     for i, v in enumerate(videos, 1):
         if v["id"] in existing_video_ids:
             # Already added as a video corpus item — leave it.
@@ -257,6 +296,19 @@ def main() -> int:
             # Fetch captions and add as a new video corpus item.
             text, segments, source = fetch_captions(v["id"])
             time.sleep(SLEEP_BETWEEN)
+            if source == "blocked":
+                # Throttled, not caption-less. Retry once after a pause; if
+                # we're still blocked, stop — hammering only extends the block,
+                # and these videos are picked up on the next run.
+                print(f"  [{i}/{len(videos)}] rate-limited; pausing {BLOCKED_BACKOFF}s…",
+                      file=sys.stderr)
+                time.sleep(BLOCKED_BACKOFF)
+                text, segments, source = fetch_captions(v["id"])
+                if source == "blocked":
+                    blocked += 1
+                    print(f"  Still rate-limited by YouTube — stopping caption fetches. "
+                          f"{len(videos) - i} video(s) left for the next run.", file=sys.stderr)
+                    break
             if not text:
                 failed += 1
                 print(f"  [{i}/{len(videos)}] no captions: {v['title'][:80]}", file=sys.stderr)
@@ -299,9 +351,25 @@ def main() -> int:
     bundle["type_counts"] = type_counts
     bundle["youtube_last_run"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
 
+    # Reconcile: every listed channel video should now be accounted for, either
+    # as its own corpus item or attached to an nyc.gov item. Anything left over
+    # is a video we are silently missing — name it rather than let it vanish.
+    covered = {it.get("youtube_video_id") for it in items if it.get("youtube_video_id")}
+    unaccounted = [v for v in videos if v["id"] not in covered]
+    bundle["youtube_coverage"] = {
+        "channel_videos": len(videos),
+        "covered": len(videos) - len(unaccounted),
+        "unaccounted": [{"id": v["id"], "title": v["title"], "date": v["upload_date"]}
+                        for v in unaccounted],
+    }
+
     CORPUS.write_text(json.dumps(bundle, ensure_ascii=False, indent=1))
     print(f"\nMatched {matched} videos to existing items; added {added} new video items; {failed} failures.",
           file=sys.stderr)
+    print(f"Coverage: {len(videos) - len(unaccounted)}/{len(videos)} channel videos in the corpus.",
+          file=sys.stderr)
+    for v in unaccounted:
+        print(f"  UNACCOUNTED {v['id']} ({v['upload_date']}): {v['title'][:70]}", file=sys.stderr)
     print("Type counts:", type_counts, file=sys.stderr)
     return 0
 
