@@ -70,18 +70,24 @@ def list_videos() -> list[dict]:
             candidates.append((vid, title))
     print(f"  channel has {len(candidates)} videos; fetching metadata…", file=sys.stderr)
 
-    rows: list[dict] = []
     cmd = [
         sys.executable, "-m", "yt_dlp",
         "--no-download", "--no-warnings",
+        # YouTube rejects yt-dlp's default player-client rotation, which made
+        # every video error out. Name the clients explicitly.
+        "--extractor-args", "youtube:player_client=web,android",
+        # One unplayable video must not sink the whole batch: keep going and
+        # use whatever lines did print (yt-dlp still exits non-zero).
+        "--ignore-errors",
         "--dateafter", FROM_DATE,
         "--print", "%(upload_date)s|%(id)s|%(duration)s|%(title)s",
     ] + [f"https://www.youtube.com/watch?v={vid}" for vid, _ in candidates]
-    try:
-        out = subprocess.check_output(cmd, stderr=subprocess.DEVNULL, text=True, timeout=900)
-    except subprocess.CalledProcessError as e:
-        print(f"yt-dlp metadata fetch failed: {e}", file=sys.stderr)
-        return []
+    proc = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
+                          text=True, timeout=900)
+    out = proc.stdout or ""
+    if proc.returncode != 0:
+        print(f"  yt-dlp exited {proc.returncode}; using the {len(out.splitlines())} "
+              f"lines it did return.", file=sys.stderr)
     rows: list[dict] = []
     for line in out.splitlines():
         if line.count("|") < 3:
@@ -217,6 +223,13 @@ def main() -> int:
 
     videos = list_videos()
     print(f"Found {len(videos)} channel videos since {FROM_DATE}.", file=sys.stderr)
+    if not videos:
+        # The channel always has videos since FROM_DATE, so zero means the
+        # fetch broke, not that there's nothing new. Fail loudly — this
+        # returned 0 silently for three months while CI reported success.
+        print("No videos resolved — treating as a fetch failure, not an empty "
+              "channel. Corpus left unchanged.", file=sys.stderr)
+        return 1
 
     # Index existing video corpus entries to avoid duplication.
     existing_video_ids = {it.get("video_id") for it in items if it.get("type") == "video"}

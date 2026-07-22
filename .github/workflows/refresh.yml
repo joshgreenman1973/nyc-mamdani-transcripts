@@ -28,9 +28,11 @@ jobs:
         run: python3 scrape.py
 
       - name: Scrape NYC Mayor's Office YouTube channel
+        id: youtube
         run: python3 scrape_youtube.py
         # YouTube can rate-limit; treat per-video failures as non-fatal so
-        # the daily refresh still commits the nyc.gov scrape.
+        # the daily refresh still commits the nyc.gov scrape. The guard step
+        # at the end turns the run red so a total failure is never silent.
         continue-on-error: true
 
       - uses: actions/setup-node@v4
@@ -59,3 +61,12 @@ jobs:
           git add data/corpus.json data/embeddings.json data/topics.json
           git commit -m "Refresh corpus: $(date -u +%Y-%m-%d)"
           git push
+
+      # Runs after the commit so nyc.gov results still land, but the run goes
+      # red when the YouTube scrape failed outright. Without this, a broken
+      # scrape reported success daily for three months.
+      - name: Surface a failed YouTube scrape
+        if: steps.youtube.outcome == 'failure'
+        run: |
+          echo "::error::scrape_youtube.py failed — no channel videos ingested."
+          exit 1
