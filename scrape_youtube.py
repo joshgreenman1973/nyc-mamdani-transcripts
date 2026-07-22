@@ -24,6 +24,7 @@ import re
 import subprocess
 import sys
 import time
+from html import unescape
 from pathlib import Path
 
 ROOT = Path(__file__).parent
@@ -33,6 +34,11 @@ CHANNEL_BASE = "https://www.youtube.com/@NYCMayorsOffice"
 # Livestreams are where the press conferences land, so omitting /streams was
 # hiding the majority of the channel.
 CHANNEL_TABS = ("videos", "streams", "shorts")
+# The channel's Atom feed: the 15 most recent uploads with their publish dates.
+# Plain XML, no bot-gating, and it works from datacenter IPs where yt-dlp's
+# metadata fetch gets blocked — so this is what keeps the daily run honest.
+CHANNEL_ID = "UClnI1zhyzv_BPb-VSHEtniw"
+CHANNEL_FEED = f"https://www.youtube.com/feeds/videos.xml?channel_id={CHANNEL_ID}"
 FROM_DATE = "20260101"  # YYYYMMDD format used by yt-dlp
 DATE_PROXIMITY_DAYS = 3
 JACCARD_THRESHOLD = 0.45
@@ -46,6 +52,43 @@ STOPWORDS = {
     "watch", "remarks", "as", "prepared", "delivered", "mayor", "mamdani",
     "zohran", "kwame", "today", "new", "york", "city", "nyc",
 }
+
+
+def fetch_feed_videos() -> list[dict]:
+    """Recent uploads from the channel's Atom feed.
+
+    yt-dlp's per-video metadata fetch is blocked from datacenter IPs (it works
+    locally and fails on CI), which is how three months of video went missing.
+    This feed is served as plain XML to anyone, so it's the backstop that keeps
+    new uploads flowing even when the richer fetch is unavailable. It only
+    carries the latest 15 — enough for a daily run, not for a backfill.
+    """
+    import urllib.request
+
+    try:
+        req = urllib.request.Request(CHANNEL_FEED, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            xml = resp.read().decode("utf-8", "replace")
+    except Exception as e:
+        print(f"  channel feed fetch failed: {e}", file=sys.stderr)
+        return []
+    rows: list[dict] = []
+    for entry in re.findall(r"<entry>(.*?)</entry>", xml, re.S):
+        vid = re.search(r"<yt:videoId>(.*?)</yt:videoId>", entry)
+        title = re.search(r"<title>(.*?)</title>", entry, re.S)
+        pub = re.search(r"<published>(\d{4})-(\d{2})-(\d{2})", entry)
+        if not (vid and title and pub):
+            continue
+        upload_date = pub.group(1) + pub.group(2) + pub.group(3)
+        if upload_date < FROM_DATE:
+            continue
+        rows.append({
+            "id": vid.group(1),
+            "title": unescape(title.group(1)).replace("\n", " ").strip(),
+            "upload_date": upload_date,
+            "duration": 0,  # not in the feed; cosmetic only
+        })
+    return rows
 
 
 def list_videos() -> list[dict]:
@@ -101,12 +144,16 @@ def list_videos() -> list[dict]:
         "--dateafter", FROM_DATE,
         "--print", "%(upload_date)s|%(id)s|%(duration)s|%(title)s",
     ] + [f"https://www.youtube.com/watch?v={vid}" for vid, _ in candidates]
-    proc = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
+    proc = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
                           text=True, timeout=900)
     out = proc.stdout or ""
     if proc.returncode != 0:
         print(f"  yt-dlp exited {proc.returncode}; using the {len(out.splitlines())} "
               f"lines it did return.", file=sys.stderr)
+        # Keep the reason visible. This was swallowed by DEVNULL, which is why
+        # a blocked CI run looked identical to a healthy one.
+        for line in (proc.stderr or "").splitlines()[:5]:
+            print(f"    yt-dlp: {line[:200]}", file=sys.stderr)
     rows: list[dict] = []
     for line in out.splitlines():
         if line.count("|") < 3:
@@ -121,6 +168,16 @@ def list_videos() -> list[dict]:
         except ValueError:
             dur = 0
         rows.append({"id": vid, "title": title, "upload_date": upload_date, "duration": dur})
+
+    # Merge the Atom feed's recent uploads. When yt-dlp is blocked this is the
+    # only thing standing between a new video and another silent gap; when
+    # yt-dlp works it adds nothing, since those ids are already present.
+    known = {r["id"] for r in rows}
+    from_feed = [r for r in fetch_feed_videos() if r["id"] not in known]
+    if from_feed:
+        print(f"  channel feed contributed {len(from_feed)} video(s) yt-dlp "
+              f"didn't return.", file=sys.stderr)
+        rows.extend(from_feed)
     return rows
 
 
