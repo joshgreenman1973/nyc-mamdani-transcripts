@@ -20,6 +20,7 @@ Input/Output: data/corpus.json (modified in place)
 from __future__ import annotations
 
 import json
+import os
 import re
 import subprocess
 import sys
@@ -132,28 +133,45 @@ def list_videos() -> list[dict]:
         return []
     print(f"  channel has {len(candidates)} videos; fetching metadata…", file=sys.stderr)
 
-    cmd = [
-        sys.executable, "-m", "yt_dlp",
-        "--no-download", "--no-warnings",
-        # YouTube rejects yt-dlp's default player-client rotation, which made
-        # every video error out. Name the clients explicitly.
-        "--extractor-args", "youtube:player_client=web,android",
-        # One unplayable video must not sink the whole batch: keep going and
-        # use whatever lines did print (yt-dlp still exits non-zero).
-        "--ignore-errors",
-        "--dateafter", FROM_DATE,
-        "--print", "%(upload_date)s|%(id)s|%(duration)s|%(title)s",
-    ] + [f"https://www.youtube.com/watch?v={vid}" for vid, _ in candidates]
-    proc = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
-                          text=True, timeout=900)
-    out = proc.stdout or ""
-    if proc.returncode != 0:
-        print(f"  yt-dlp exited {proc.returncode}; using the {len(out.splitlines())} "
-              f"lines it did return.", file=sys.stderr)
-        # Keep the reason visible. This was swallowed by DEVNULL, which is why
-        # a blocked CI run looked identical to a healthy one.
-        for line in (proc.stderr or "").splitlines()[:5]:
-            print(f"    yt-dlp: {line[:200]}", file=sys.stderr)
+    # yt-dlp's per-video metadata fetch is blocked from datacenter IPs, where it
+    # doesn't just error — it hangs on every URL until the timeout, then raises
+    # and takes the whole run down BEFORE the feed fallback below can run. On CI
+    # we therefore skip it entirely and rely on the Atom feed (recent uploads,
+    # correctly dated, un-gated). The full-channel backfill runs locally, from a
+    # residential IP, where yt-dlp works.
+    on_ci = os.environ.get("GITHUB_ACTIONS") == "true"
+    out = ""
+    if on_ci:
+        print("  CI environment: skipping IP-blocked yt-dlp metadata fetch; "
+              "using the channel feed for recent uploads.", file=sys.stderr)
+    else:
+        cmd = [
+            sys.executable, "-m", "yt_dlp",
+            "--no-download", "--no-warnings",
+            # YouTube rejects yt-dlp's default player-client rotation, which made
+            # every video error out. Name the clients explicitly.
+            "--extractor-args", "youtube:player_client=web,android",
+            # One unplayable video must not sink the whole batch: keep going and
+            # use whatever lines did print (yt-dlp still exits non-zero).
+            "--ignore-errors",
+            "--dateafter", FROM_DATE,
+            "--print", "%(upload_date)s|%(id)s|%(duration)s|%(title)s",
+        ] + [f"https://www.youtube.com/watch?v={vid}" for vid, _ in candidates]
+        try:
+            proc = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                                  text=True, timeout=600)
+            out = proc.stdout or ""
+            if proc.returncode != 0:
+                print(f"  yt-dlp exited {proc.returncode}; using the {len(out.splitlines())} "
+                      f"lines it did return.", file=sys.stderr)
+                # Keep the reason visible. This was swallowed by DEVNULL, which
+                # is why a blocked run looked identical to a healthy one.
+                for line in (proc.stderr or "").splitlines()[:5]:
+                    print(f"    yt-dlp: {line[:200]}", file=sys.stderr)
+        except subprocess.TimeoutExpired:
+            # Non-fatal: fall through to the feed rather than crash the run.
+            print("  yt-dlp metadata fetch timed out; falling back to the "
+                  "channel feed.", file=sys.stderr)
     rows: list[dict] = []
     for line in out.splitlines():
         if line.count("|") < 3:
