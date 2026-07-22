@@ -39,9 +39,13 @@ reliability.
   and fetch each article's full body via its component model JSON
   (`<path>.model.json`). This includes transcripts the office *reposts* of
   friendly media hits (e.g. WNYC, "The View").
-- **YouTube** — the mayor's office channel (`@NYCMayorsOffice`). Videos with an
-  nyc.gov twin get a "Watch" link; produced clips with no twin are added with
-  their captions (human → published, auto-generated → auto-caption).
+- **YouTube** — the mayor's office channel (`@NYCMayorsOffice`), read across all
+  three of its tabs: `/videos`, `/streams` (livestreamed press conferences and
+  events) and `/shorts`. Videos with an nyc.gov twin get a "Watch" link;
+  produced clips with no twin are added with their captions (human → published,
+  auto-generated → auto-caption). Each run reconciles the channel against the
+  corpus and records the result in `youtube_coverage` (see [Known
+  limits](#youtube-coverage)).
 - **NPR** (published) — interview transcripts at `npr.org/transcripts/<id>`,
   parsed into speaker turns.
 - **WNYC** (published) — the Brian Lehrer Show's "Ask the Mayor" and related
@@ -192,7 +196,36 @@ press releases and executive orders, or narrow to any subset.
   that toggle on will surface his quoted lines along with the surrounding
   staff-written framing.
 - **Embargoed and internal memos** are not published and therefore not here.
-- **Social media posts** are not in scope.
+- **Social media posts** are not in scope. The mayor's X account
+  (`x.com/NYCMayor`) reposts much of the video content, but X's timeline is
+  rendered behind authentication and cannot be read without a paid API tier, so
+  it is not a source here. Video posted there is generally also on the YouTube
+  channel, which is covered in full.
+
+<a id="youtube-coverage"></a>
+### YouTube coverage, and how it is checked
+
+Between April 29 and July 22, 2026, YouTube ingestion silently stopped: YouTube
+began rejecting the video-metadata requests, and the scraper could not tell
+that failure apart from "the channel has nothing new," so the daily refresh
+reported success while adding nothing. Roughly three months of video went
+unindexed. It has been backfilled.
+
+Three checks now make a repeat visible rather than silent:
+
+1. The scraper reads every channel tab, not just `/videos`. `/streams` — where
+   livestreamed press conferences land — holds most of the channel and had
+   never been read.
+2. A run that resolves no videos at all is treated as a failure, not an empty
+   channel, and turns the scheduled build red.
+3. Every run reconciles the channel listing against the corpus and writes
+   `youtube_coverage` into `data/corpus.json`, naming any video that is present
+   on the channel but absent from the archive.
+
+Two limits remain. YouTube rate-limits caption requests, so a large backlog
+drains over several runs rather than one; affected videos are retried, never
+dropped. And videos with captions disabled cannot be transcribed at all — they
+stay listed as unaccounted rather than being quietly forgotten.
 
 ## Search
 
