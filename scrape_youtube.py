@@ -46,6 +46,9 @@ JACCARD_THRESHOLD = 0.45
 SLEEP_BETWEEN = 0.4
 # How long to wait before retrying once when YouTube throttles caption fetches.
 BLOCKED_BACKOFF = 30
+# How long the archive may go without ingesting a single video while videos are
+# known to be missing, before the run is treated as broken rather than quiet.
+STALE_AFTER_DAYS = 3
 
 STOPWORDS = {
     "a", "an", "and", "as", "at", "be", "by", "for", "from", "in", "is",
@@ -312,6 +315,18 @@ def fetch_captions(video_id: str) -> tuple[str, list[dict], str | None]:
     return plain, segments, source
 
 
+def days_between(iso_a: str, iso_b: str) -> int | None:
+    """Whole days from iso_a to iso_b (YYYY-MM-DD), or None if unparseable."""
+    from datetime import date as _date
+
+    try:
+        a = _date(int(iso_a[:4]), int(iso_a[5:7]), int(iso_a[8:10]))
+        b = _date(int(iso_b[:4]), int(iso_b[5:7]), int(iso_b[8:10]))
+    except (ValueError, TypeError, IndexError):
+        return None
+    return (b - a).days
+
+
 def yyyymmdd_to_iso(s: str) -> str:
     if len(s) != 8:
         return ""
@@ -431,9 +446,17 @@ def main() -> int:
     # is a video we are silently missing — name it rather than let it vanish.
     covered = {it.get("youtube_video_id") for it in items if it.get("youtube_video_id")}
     unaccounted = [v for v in videos if v["id"] not in covered]
+    today = time.strftime("%Y-%m-%d", time.gmtime())
+    prev_cov = bundle.get("youtube_coverage") or {}
+    # A run that ingested something proves the pipeline still works end to end.
+    # Carry the date of the last one forward so a long dry spell is measurable.
+    progressed = (added + matched) > 0
+    last_ingest = today if progressed else prev_cov.get("last_ingest")
     bundle["youtube_coverage"] = {
         "channel_videos": len(videos),
         "covered": len(videos) - len(unaccounted),
+        "last_ingest": last_ingest,
+        "rate_limited": blocked > 0,
         "unaccounted": [{"id": v["id"], "title": v["title"], "date": v["upload_date"]}
                         for v in unaccounted],
     }
@@ -446,6 +469,24 @@ def main() -> int:
     for v in unaccounted:
         print(f"  UNACCOUNTED {v['id']} ({v['upload_date']}): {v['title'][:70]}", file=sys.stderr)
     print("Type counts:", type_counts, file=sys.stderr)
+
+    # Staleness watchdog. Being throttled for one run is routine — the videos
+    # are retried, nothing is lost, and failing here would just cry wolf twice a
+    # day. Being throttled for days while videos sit unaccounted is the silent
+    # rot this whole file exists to prevent, so that goes red.
+    if unaccounted and not progressed:
+        stale_days = days_between(last_ingest, today) if last_ingest else None
+        if stale_days is None or stale_days >= STALE_AFTER_DAYS:
+            how_long = ("ever" if stale_days is None
+                        else f"in {stale_days} days (since {last_ingest})")
+            print(f"\nNo video has been ingested {how_long}, and "
+                  f"{len(unaccounted)} channel video(s) are still missing. "
+                  f"Treating this as a broken pipeline, not a quiet channel.",
+                  file=sys.stderr)
+            return 1
+        print(f"\nNothing ingested this run ({len(unaccounted)} video(s) pending, "
+              f"last ingest {last_ingest}). Within the {STALE_AFTER_DAYS}-day "
+              f"grace period — they retry next run.", file=sys.stderr)
     return 0
 
 
