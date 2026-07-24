@@ -27,12 +27,17 @@ jobs:
       - name: Scrape nyc.gov news
         run: python3 scrape.py
 
-      - name: Scrape NYC Mayor's Office YouTube channel
+      - name: List and match NYC Mayor's Office YouTube videos
         id: youtube
+        env:
+          # Caption requests from Actions runners are IpBlocked by YouTube every
+          # time — this job had never once ingested one. Listing and matching
+          # work fine from here; captions come from the launchd job on Josh's
+          # Mac (docs/youtube-captions.md).
+          YT_CAPTIONS: "0"
         run: python3 scrape_youtube.py
-        # YouTube can rate-limit; treat per-video failures as non-fatal so
-        # the daily refresh still commits the nyc.gov scrape. The guard step
-        # at the end turns the run red so a total failure is never silent.
+        # Listing can still break; the guard step below turns the run red so a
+        # total failure is never silent.
         continue-on-error: true
 
       - uses: actions/setup-node@v4
@@ -68,5 +73,5 @@ jobs:
       - name: Surface a failed YouTube scrape
         if: steps.youtube.outcome == 'failure'
         run: |
-          echo "::error::scrape_youtube.py failed — no channel videos ingested."
+          echo "::error::scrape_youtube.py failed — no channel videos listed."
           exit 1

@@ -49,6 +49,12 @@ BLOCKED_BACKOFF = 30
 # How long the archive may go without ingesting a single video while videos are
 # known to be missing, before the run is treated as broken rather than quiet.
 STALE_AFTER_DAYS = 3
+# YouTube blocks caption requests from datacenter IPs outright — every attempt
+# from a GitHub Actions runner comes back IpBlocked, and no amount of backoff
+# changes that. The listing side (Atom feed + yt-dlp flat-playlist) is fine from
+# anywhere, so CI sets YT_CAPTIONS=0 to list and match only, and a launchd job on
+# a residential connection fills in the captions. See docs/youtube-captions.md.
+CAPTIONS_ENABLED = os.environ.get("YT_CAPTIONS", "1") != "0"
 
 STOPWORDS = {
     "a", "an", "and", "as", "at", "be", "by", "for", "from", "in", "is",
@@ -367,6 +373,7 @@ def main() -> int:
     added = 0
     failed = 0
     blocked = 0
+    deferred = 0
     for i, v in enumerate(videos, 1):
         if v["id"] in existing_video_ids:
             # Already added as a video corpus item — leave it.
@@ -383,6 +390,11 @@ def main() -> int:
                 print(f"  [{i}/{len(videos)}] match (j={score:.2f}): {v['title'][:60]}\n"
                       f"     ↔ {match['title'][:60]}", file=sys.stderr)
         else:
+            if not CAPTIONS_ENABLED:
+                # Leave it unaccounted on purpose: the local captions run reads
+                # that list to know what still needs fetching.
+                deferred += 1
+                continue
             # Fetch captions and add as a new video corpus item.
             text, segments, source = fetch_captions(v["id"])
             time.sleep(SLEEP_BETWEEN)
@@ -450,12 +462,16 @@ def main() -> int:
     prev_cov = bundle.get("youtube_coverage") or {}
     # A run that ingested something proves the pipeline still works end to end.
     # Carry the date of the last one forward so a long dry spell is measurable.
-    progressed = (added + matched) > 0
+    # A captions-off run never exercises the part that breaks, so it must not
+    # advance the clock — otherwise CI would keep resetting the staleness the
+    # local job exists to surface.
+    progressed = CAPTIONS_ENABLED and (added + matched) > 0
     last_ingest = today if progressed else prev_cov.get("last_ingest")
     bundle["youtube_coverage"] = {
         "channel_videos": len(videos),
         "covered": len(videos) - len(unaccounted),
         "last_ingest": last_ingest,
+        "captions_enabled": CAPTIONS_ENABLED,
         "rate_limited": blocked > 0,
         "unaccounted": [{"id": v["id"], "title": v["title"], "date": v["upload_date"]}
                         for v in unaccounted],
@@ -474,6 +490,12 @@ def main() -> int:
     # are retried, nothing is lost, and failing here would just cry wolf twice a
     # day. Being throttled for days while videos sit unaccounted is the silent
     # rot this whole file exists to prevent, so that goes red.
+    if not CAPTIONS_ENABLED:
+        print(f"\nCaptions disabled (YT_CAPTIONS=0): {deferred} video(s) left for "
+              f"the local captions run. Matching and coverage still updated.",
+              file=sys.stderr)
+        return 0
+
     if unaccounted and not progressed:
         stale_days = days_between(last_ingest, today) if last_ingest else None
         if stale_days is None or stale_days >= STALE_AFTER_DAYS:

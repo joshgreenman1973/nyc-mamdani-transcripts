@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.joshgreenman.mamdani-captions</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/joshgreenman/Experiments/nyc-mamdani-transcripts/scripts/refresh-captions-local.sh</string>
+    </array>
+
+    <!-- After the 11:00 UTC Actions run has listed the day's videos. -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>8</integer>
+        <key>Minute</key>
+        <integer>10</integer>
+    </dict>
+
+    <!-- The script redirects its own output; these catch anything that escapes
+         before that, such as a missing interpreter. -->
+    <key>StandardOutPath</key>
+    <string>/Users/joshgreenman/Library/Logs/nyc-mamdani-captions.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/joshgreenman/Library/Logs/nyc-mamdani-captions.log</string>
+
+    <key>RunAtLoad</key>
+    <false/>
+</dict>
+</plist>
