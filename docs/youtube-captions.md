@@ -41,6 +41,20 @@ runs the same script with captions enabled from a residential connection, where
 both yt-dlp and the transcript API work. It rebuilds embeddings and topics, then
 commits and pushes.
 
+The local script never rebases. Each attempt does `git reset --hard origin/main`
+and re-scrapes onto that fresh base, because `corpus.json`, `embeddings.json` and
+`topics.json` are generated files: rebasing a local regenerated copy onto CI's
+regenerated copy conflicts on every line. The first version of the script used
+`git pull --rebase --autostash` and wedged itself into a half-finished rebase on
+2026-07-25, after which every subsequent run died at the pull. Resetting and
+re-deriving is also the only *correct* reconciliation — the scraper merges
+several sources, so keeping the local copy wholesale would drop the nyc.gov items
+CI committed while the local run was working. The scrape is idempotent (it skips
+videos already in the corpus), so re-running only re-fetches what is still
+missing. The script also pins `gh auth switch -u joshgreenman1973` before pushing,
+since gh is git's credential helper and its active account silently flips to
+vitalcity-nyc, which 403s on this repo.
+
 A captions-off run deliberately does not advance
 `youtube_coverage.last_ingest`. It never exercises the part that breaks, so
 letting it reset the clock would hide exactly the staleness the watchdog exists
