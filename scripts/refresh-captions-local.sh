@@ -76,8 +76,16 @@ while [ "$attempt" -le "$MAX_ATTEMPTS" ]; do
     exit $scrape_status
   fi
 
-  if git diff --quiet data/corpus.json; then
-    echo "Corpus unchanged — nothing to publish."
+  # scrape_youtube.py always rewrites the youtube_last_run timestamp, so a plain
+  # `git diff --quiet` is never true. Treat a diff that touches ONLY that line as
+  # no change — otherwise the job rebuilds embeddings (~5 min) and commits every
+  # single day even when no new caption was fetched.
+  real_changes=$(git diff -U0 data/corpus.json \
+    | grep -E '^[+-]' | grep -vE '^(\+\+\+|---)' \
+    | grep -v 'youtube_last_run' | grep -c .)
+  if [ "$real_changes" -eq 0 ]; then
+    git checkout -- data/corpus.json
+    echo "Only the run timestamp changed — nothing to publish."
     echo "===== done $(date -u +%Y-%m-%dT%H:%M:%SZ) ====="
     exit 0
   fi
