@@ -207,9 +207,19 @@ MAX_NEW_PER_RUN = 40
 
 def main() -> int:
     if not TOKEN:
-        print("LEGISTAR_TOKEN not set — skipping Council hearings (no-op). "
-              "Request a free token at https://council.nyc.gov/legislation/api/ "
-              "and set it as a secret to enable this source.")
+        msg = ("LEGISTAR_TOKEN not set — Council hearings not scraped. "
+               "Request a free token at https://council.nyc.gov/legislation/api/ "
+               "and set it as a secret to enable this source.")
+        # Locally this is a fine no-op: most runs of scrape.py don't want it.
+        # In CI it is a broken source pretending to be a quiet one. The secret
+        # was set in June but never passed into the workflow step, so this
+        # printed a cheerful skip twice a day for three months while the last
+        # hearing in the corpus stayed at 2026-05-13. A scraper that cannot
+        # distinguish "nothing new" from "not running" has to go red.
+        if os.environ.get("GITHUB_ACTIONS"):
+            print(f"::error::{msg}", file=sys.stderr)
+            return 1
+        print(msg)
         return 0
     if not CORPUS.exists():
         print("corpus.json missing; run scrape.py first.", file=sys.stderr)

@@ -25,6 +25,12 @@ jobs:
         run: pip install yt-dlp youtube-transcript-api
 
       - name: Scrape nyc.gov news
+        env:
+          # scrape.py chains scrape_council.py, which needs this to reach the
+          # Legistar API. The secret existed for months but was never passed
+          # into the step, so the Council scraper no-opped every run and the
+          # last hearing landed 2026-05-13 while the job reported success.
+          LEGISTAR_TOKEN: ${{ secrets.LEGISTAR_TOKEN }}
         run: python3 scrape.py
 
       - name: List and match NYC Mayor's Office YouTube videos
@@ -75,3 +81,16 @@ jobs:
         run: |
           echo "::error::scrape_youtube.py failed — no channel videos listed."
           exit 1
+
+      # Same pattern, for the scrapers scrape.py chains. They must not sink the
+      # nyc.gov commit, so their exit codes are collected and checked here
+      # instead — otherwise a source that stops running looks like a source
+      # with nothing new, which is how Council went three months unnoticed.
+      - name: Surface a failed chained scraper
+        if: always()
+        run: |
+          if [ -f .chained-failures ]; then
+            while read -r line; do echo "::error::chained scraper: $line"; done < .chained-failures
+            exit 1
+          fi
+          echo "All chained scrapers exited clean."

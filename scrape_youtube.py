@@ -467,21 +467,41 @@ def main() -> int:
     # local job exists to surface.
     progressed = CAPTIONS_ENABLED and (added + matched) > 0
     last_ingest = today if progressed else prev_cov.get("last_ingest")
-    bundle["youtube_coverage"] = {
-        "channel_videos": len(videos),
-        "covered": len(videos) - len(unaccounted),
-        "last_ingest": last_ingest,
-        "captions_enabled": CAPTIONS_ENABLED,
-        "rate_limited": blocked > 0,
-        "unaccounted": [{"id": v["id"], "title": v["title"], "date": v["upload_date"]}
-                        for v in unaccounted],
-    }
+
+    # A CI run only sees the 15-entry fallback feed, because yt-dlp's per-video
+    # metadata fetch is IP-blocked from datacenter ranges. Writing that as the
+    # coverage figure overwrote the local job's real 239/216 with 10/15 twice a
+    # day, so the published watchdog described a channel that doesn't exist and
+    # a partial "unaccounted" list. When this run listed fewer videos than we
+    # already knew about, the listing is degraded, not the channel: keep the
+    # better snapshot and record that this run couldn't see all of it.
+    prev_total = prev_cov.get("channel_videos") or 0
+    degraded = len(videos) < prev_total
+    if degraded:
+        coverage = dict(prev_cov)
+        coverage["listing_degraded"] = True
+        coverage["listed_this_run"] = len(videos)
+    else:
+        coverage = {
+            "channel_videos": len(videos),
+            "covered": len(videos) - len(unaccounted),
+            "listing_degraded": False,
+            "unaccounted": [{"id": v["id"], "title": v["title"], "date": v["upload_date"]}
+                            for v in unaccounted],
+        }
+    coverage["last_ingest"] = last_ingest
+    coverage["captions_enabled"] = CAPTIONS_ENABLED
+    coverage["rate_limited"] = blocked > 0
+    bundle["youtube_coverage"] = coverage
 
     CORPUS.write_text(json.dumps(bundle, ensure_ascii=False, indent=1))
     print(f"\nMatched {matched} videos to existing items; added {added} new video items; {failed} failures.",
           file=sys.stderr)
     print(f"Coverage: {len(videos) - len(unaccounted)}/{len(videos)} channel videos in the corpus.",
           file=sys.stderr)
+    if degraded:
+        print(f"  listing degraded: saw {len(videos)} of {prev_total} known videos; "
+              f"kept the previous coverage snapshot.", file=sys.stderr)
     for v in unaccounted:
         print(f"  UNACCOUNTED {v['id']} ({v['upload_date']}): {v['title'][:70]}", file=sys.stderr)
     print("Type counts:", type_counts, file=sys.stderr)

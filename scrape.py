@@ -26,6 +26,8 @@ ROOT = Path(__file__).parent
 DATA = ROOT / "data"
 DATA.mkdir(exist_ok=True)
 CORPUS = DATA / "corpus.json"
+# Chained-scraper failures, read by the workflow guard step after the commit.
+CHAINED_FAILURES = ROOT / ".chained-failures"
 
 BASE = "https://www.nyc.gov"
 LISTING = BASE + "/bin/nyc/articlesearch.json"
@@ -468,14 +470,24 @@ def main() -> int:
         type_counts[it["type"]] = type_counts.get(it["type"], 0) + 1
         source_counts[it.get("source", "nyc.gov")] = source_counts.get(it.get("source", "nyc.gov"), 0) + 1
 
-    # Preserve the chained agency crawler's incremental state across runs — it
-    # lives at the top level of the corpus, so a naive rebuild would wipe it and
-    # force scrape_agencies.py to re-crawl every agency from scratch each day.
-    prior_state = {}
+    # This rebuild replaces the whole bundle, so every top-level key written by
+    # another scraper has to be carried over by hand or it silently vanishes.
+    # agency_state is the crawler's incremental cursor — losing it makes
+    # scrape_agencies.py re-crawl every agency from scratch. youtube_coverage is
+    # the staleness watchdog: the local captions job writes the real numbers
+    # (239 videos / 216 covered / a last_ingest date), and dropping it here made
+    # the next CI run rebuild it from the 15-entry fallback feed with
+    # last_ingest=null — which is exactly what a dead captions job looks like.
+    # The watchdog was reading as tripped twice a day and could no longer tell
+    # the difference. Keep this list in sync with whatever the chained scrapers
+    # store at the top level.
+    CARRY_FORWARD = ("agency_state", "youtube_coverage", "youtube_last_run",
+                     "external_last_run", "agencies_last_run")
+    prior = {}
     try:
-        prior_state = json.loads(CORPUS.read_text()).get("agency_state", {})
+        prior = json.loads(CORPUS.read_text())
     except Exception:  # noqa: BLE001 — first run / unreadable: just start empty
-        prior_state = {}
+        prior = {}
 
     bundle = {
         "generated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
@@ -484,9 +496,12 @@ def main() -> int:
         "total": len(out),
         "type_counts": type_counts,
         "source_counts": source_counts,
-        "agency_state": prior_state,
+        "agency_state": prior.get("agency_state", {}),
         "items": out,
     }
+    for key in CARRY_FORWARD:
+        if key != "agency_state" and key in prior:
+            bundle[key] = prior[key]
     CORPUS.write_text(json.dumps(bundle, ensure_ascii=False, indent=1))
     print(f"\nWrote {CORPUS} — {len(out)} items ({new_count} newly fetched).")
     print("Type counts:", type_counts)
@@ -503,17 +518,28 @@ def _run_chained_scrapers() -> None:
     don't have. Chaining here lets the existing workflow pick up the new sources
     without any workflow-file change. Gated to CI (GITHUB_ACTIONS) so a local
     `python3 scrape.py` stays a pure nyc.gov scrape. Fully guarded: a failure in
-    a chained scraper never fails this one.
+    a chained scraper never fails this one — the nyc.gov corpus still has to
+    land. But swallowing the exit code entirely is how the Council scraper
+    no-opped for three months behind a green check, so failures are written to
+    CHAINED_FAILURES and a workflow step after the commit turns the run red.
     """
     if not os.environ.get("GITHUB_ACTIONS"):
         return
+    failures = []
     for script in ("scrape_external.py", "scrape_council.py", "scrape_nypd.py", "scrape_agencies.py"):
         path = Path(__file__).parent / script
         try:
             print(f"\n[chained] running {script} …", flush=True)
-            subprocess.run([sys.executable, str(path)], check=False, timeout=2400)
+            rc = subprocess.run([sys.executable, str(path)], check=False, timeout=2400).returncode
+            if rc != 0:
+                failures.append(f"{script} exited {rc}")
         except Exception as e:  # noqa: BLE001 — must never sink the main scrape
             print(f"[chained] {script} failed (non-fatal): {e}", file=sys.stderr)
+            failures.append(f"{script} raised {e}")
+    if failures:
+        CHAINED_FAILURES.write_text("\n".join(failures))
+        print(f"[chained] {len(failures)} scraper(s) failed: {'; '.join(failures)}",
+              file=sys.stderr)
 
 
 if __name__ == "__main__":
