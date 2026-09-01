@@ -597,7 +597,6 @@ legend {
 .badge.video             { background: var(--vc-magenta); }
 .badge.executive_order   { background: var(--vc-black); }
 .badge.other             { background: var(--vc-charcoal); }
-.badge.hearing           { background: var(--vc-orange); color: var(--vc-black); }
 .badge.crime_briefing    { background: var(--vc-cerulean); }
 .badge.agency_release    { background: var(--vc-charcoal); }
 .badge.op_ed             { background: var(--vc-rose); color: var(--vc-black); }

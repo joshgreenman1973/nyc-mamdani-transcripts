@@ -440,8 +440,8 @@ def main() -> int:
         time.sleep(SLEEP)
 
     # Preserve any non-nyc.gov items appended by the other scrapers — YouTube
-    # videos (`/youtube/<id>`) and external/Council transcripts (`/cspan/…`,
-    # `/npr/…`, `/wnyc/…`, `/podcast/…`, `/council/…`). They don't appear in the
+    # videos (`/youtube/<id>`) and external transcripts (`/cspan/…`,
+    # `/npr/…`, `/wnyc/…`, `/podcast/…`). They don't appear in the
     # nyc.gov listing, so anything whose link isn't a Mayor's-Office article and
     # isn't already in `out` is carried forward untouched.
     seen_links = {it["link"] for it in out}
@@ -511,7 +511,7 @@ def main() -> int:
 
 
 def _run_chained_scrapers() -> None:
-    """In CI, run the external + Council scrapers after the nyc.gov scrape.
+    """In CI, run the external + agency scrapers after the nyc.gov scrape.
 
     The daily GitHub Actions workflow already runs this script, but editing the
     workflow file to add steps requires an OAuth token with `workflow` scope we
@@ -519,14 +519,14 @@ def _run_chained_scrapers() -> None:
     without any workflow-file change. Gated to CI (GITHUB_ACTIONS) so a local
     `python3 scrape.py` stays a pure nyc.gov scrape. Fully guarded: a failure in
     a chained scraper never fails this one — the nyc.gov corpus still has to
-    land. But swallowing the exit code entirely is how the Council scraper
-    no-opped for three months behind a green check, so failures are written to
+    land. But swallowing the exit code entirely is how a chained scraper can
+    no-op for months behind a green check, so failures are written to
     CHAINED_FAILURES and a workflow step after the commit turns the run red.
     """
     if not os.environ.get("GITHUB_ACTIONS"):
         return
     failures = []
-    for script in ("scrape_external.py", "scrape_council.py", "scrape_nypd.py", "scrape_agencies.py"):
+    for script in ("scrape_external.py", "scrape_nypd.py", "scrape_agencies.py"):
         path = Path(__file__).parent / script
         try:
             print(f"\n[chained] running {script} …", flush=True)

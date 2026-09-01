@@ -10,7 +10,6 @@
     statement: "Statement",
     ceremony: "Ceremony",
     video: "Video",
-    hearing: "Council hearing",
     executive_order: "Executive order",
     other: "Press release",
     crime_briefing: "NYPD crime briefing",
@@ -25,7 +24,6 @@
     npr: "NPR",
     wnyc: "WNYC",
     cspan: "C-SPAN",
-    council: "NYC Council",
     youtube: "YouTube",
     podcast: "Podcast",
     // City agencies
@@ -51,8 +49,8 @@
   // Sources that are city agencies (press releases), for grouping the filter.
   const AGENCY_SOURCES = ["nypd", "fdny", "dsny", "hpd", "dep", "dca", "acs", "dcas",
     "doh", "dhs", "sbs", "tlc", "immigrants", "mome", "dot"];
-  // "City Hall" = the Mayor's own universe: his events + interviews + the Council
-  // hearings where his administration testifies. Everything not a city agency.
+  // "City Hall" = the Mayor's own universe: his events, speeches and
+  // interviews. Everything not a city agency.
   function isCityHall(src) {
     return !AGENCY_SOURCES.includes(src);
   }
@@ -78,7 +76,6 @@
     npr: "Read on NPR",
     wnyc: "Listen on WNYC",
     cspan: "Watch on C-SPAN",
-    council: "Open hearing transcript (PDF)",
     podcast: "Open transcript",
     nypd: "Read NYPD release",
   };
@@ -224,17 +221,14 @@
   // passing mention of Tisch — a reporter's question, "I speak with her daily" —
   // does NOT count. An item qualifies only when (1) Tisch has her own speaking
   // turn, (2) the headline pairs the two or it's a joint statement, or (3) the
-  // Mayor is present and his remarks place her at the podium. Council hearings
-  // are excluded because the Mayor doesn't testify. Recomputed in the browser
-  // from corpus.json, so it tracks the daily refresh. See METHODOLOGY.md.
+  // Mayor is present and his remarks place her at the podium. Recomputed in the
+  // browser from corpus.json, so it tracks the daily refresh. See METHODOLOGY.md.
   const TISCH_RE = /\bTisch\b/i;
   const MAMDANI_RE = /\bMamdani\b/i;
   function isTischCoAppearance(it) {
     const txt = it.text || "";
     const title = it.title || "";
     if (!TISCH_RE.test(txt) && !TISCH_RE.test(title)) return false;
-    // Council hearings are committee testimony — the Mayor isn't there.
-    if (it.type === "hearing") return false;
     // Press releases (incl. NYPD crime briefings) are written documents, not
     // evidence the two were at the same event — keep them out of "appeared
     // together" even when both are quoted in the release.
@@ -1034,7 +1028,7 @@
     if (FEATURED === "nypd") p.set("show", "nypd-briefings");
     // Only write `types` if it's not the default set.
     const enabled = [...state.enabledTypes].sort();
-    const defaults = ["agency_release", "ceremony", "crime_briefing", "hearing", "media_appearance", "op_ed", "press_conference", "speech", "statement", "video"];
+    const defaults = ["agency_release", "ceremony", "crime_briefing", "media_appearance", "op_ed", "press_conference", "speech", "statement", "video"];
     if (JSON.stringify(enabled) !== JSON.stringify(defaults)) {
       p.set("types", enabled.join(","));
     }
@@ -1507,12 +1501,6 @@
       prov.textContent = sourceLabel(src) + (rl ? " · " + rl : "");
       meta.append(prov);
     }
-    if (item.type === "hearing" && item.is_excerpt) {
-      const ex = document.createElement("span");
-      ex.className = "caption-source";
-      ex.textContent = `excerpt of ${item.full_word_count.toLocaleString()} words — full transcript in linked PDF`;
-      meta.append(ex);
-    }
     if ((item.type === "other" || item.type === "crime_briefing") && item.mayor_quotes && item.mayor_quotes.length) {
       // Only flag "Mamdani quoted" when the search match is actually inside
       // one of the Mamdani quotes — otherwise the press release matched on
@@ -1579,9 +1567,7 @@
     actions.className = "result-actions";
     const toggle = document.createElement("button");
     toggle.type = "button";
-    toggle.textContent = mayorOnly
-      ? "Read mayor's words"
-      : (item.type === "hearing" && item.is_excerpt ? "Read excerpt" : "Read full text");
+    toggle.textContent = mayorOnly ? "Read mayor's words" : "Read full text";
     toggle.addEventListener("click", (e) => {
       e.stopPropagation();
       toggleExpand(li, item, re, toggle, mayorOnly);
@@ -1644,9 +1630,7 @@
     const existing = li.querySelector(".expanded");
     if (existing) {
       existing.remove();
-      toggle.textContent = mayorOnly
-      ? "Read mayor's words"
-      : (item.type === "hearing" && item.is_excerpt ? "Read excerpt" : "Read full text");
+      toggle.textContent = mayorOnly ? "Read mayor's words" : "Read full text";
       return;
     }
     const div = document.createElement("div");

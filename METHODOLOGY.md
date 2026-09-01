@@ -8,8 +8,8 @@ filter, and classification rule is described here.
 A searchable archive of the Mamdani administration on the record since he took
 office on January 1, 2026. At its center is Mayor Zohran Kwame Mamdani's own
 public record — speeches, press conferences, prepared remarks and statements
-from the mayor's office, his interviews, and the City Council hearings where his
-administration testifies. Around that it adds the **press releases of New York
+from the mayor's office, and his interviews. Around that it adds the
+**press releases of New York
 City's agencies**, so the same box searches the whole administration, not only
 the mayor's own events. Every item is dated on or after January 1, 2026, and is
 labeled by source, type and reliability.
@@ -17,8 +17,8 @@ labeled by source, type and reliability.
 ## Source
 
 The archive draws from several sources. The bulk is the mayor's office's own
-published record; the rest are outside transcripts of the mayor's interviews and
-City Council hearings where his administration testifies. **Every item is tagged
+published record; the rest are outside transcripts of the mayor's interviews.
+**Every item is tagged
 with its `source` and a `reliability` level**, and the page lets you filter by
 reliability.
 
@@ -26,7 +26,7 @@ reliability.
 
 | Level | Meaning | Sources |
 |-------|---------|---------|
-| **Official transcript** | A transcript the producing institution published as an official record. | nyc.gov; NYC Council hearing transcripts |
+| **Official transcript** | A transcript the producing institution published as an official record. | nyc.gov |
 | **Published transcript** | A human-prepared transcript published by a news outlet (rush-deadline radio transcripts, NPR's posted transcripts, human YouTube captions). | NPR, WNYC, manually-captioned videos |
 | **Auto-caption** | Machine-generated closed captions. May contain errors. | C-SPAN closed captions, auto-captioned videos |
 | **Press release** | A press release published by an agency &mdash; a written summary plus attributed quotes, **not** a verbatim transcript of an event. | City-agency press releases; NYPD crime-statistics briefings |
@@ -56,23 +56,6 @@ reliability.
   Library. C-SPAN's search is JavaScript-rendered and its servers bot-block
   aggressively, so coverage here is opportunistic and seeded by hand; a blocked
   fetch is skipped, never recorded as an empty transcript.
-- **NYC Council** (official) — verbatim stenographic hearing transcripts from the
-  Council's Legistar Web API, filtered to **oversight hearings where the mayor's
-  administration testifies**. The filtering is deliberately strict, because the
-  raw data is messy:
-  - *Stated-meeting* transcripts (the Council's own legislative voting sessions)
-    are excluded — they're council members, not administration testimony.
-  - The same transcript is often cross-linked to many committees' agendas. We
-    keep only files referenced by a **single** committee event (a genuine
-    single-committee hearing), and additionally drop **content-duplicates** (a
-    joint hearing uploaded separately under each committee) by comparing text.
-  - We keep a hearing only when it shows agency testimony — the transcript
-    references a "Commissioner" several times **and** someone "testifies."
-  Because the mayor himself rarely testifies, these items usually have no
-  "mayor's words" and the mayor-only filter skips them. They're also very long
-  (tens of thousands of words), so they're keyword-searchable and topic-tagged
-  but kept out of the plain-language (semantic) index to keep its download small.
-  Requires a free Legistar API token; absent the token this source is skipped.
 - **NYPD** (press release) — the NYPD's monthly, quarterly and year-end
   **crime-statistics briefings**, from the department's newsroom
   (`nyc.gov/site/nypd/news/`). These are included because the mayor attends only
@@ -90,9 +73,9 @@ reliability.
   headless, so briefing URLs are seeded by hand in `nypd_sources.json` (same
   pattern as the curated seeds below); add the next month's release there and it
   is ingested on the next refresh. Any genuine mayor quote inside a release is
-  still extracted, so it surfaces under "Only the mayor's words." Like Council
-  hearings, these are keyword-searchable and topic-tagged but kept out of the
-  plain-language (semantic) index. They are also **excluded from the "Mayor &amp;
+  still extracted, so it surfaces under "Only the mayor's words." These are
+  keyword-searchable and topic-tagged but kept out of the plain-language
+  (semantic) index. They are also **excluded from the "Mayor &amp;
   Police Commissioner Tisch together" featured filter**, because a press release
   is not evidence the two were at the same event.
 - **City agencies** (press release) — the press releases of New York City's
@@ -101,8 +84,8 @@ reliability.
   agency release is scanned for quotes attributed to him, which surface under
   "Only the mayor's words," and the default views and featured filters stay
   mayor-focused. Agency releases are labeled **"press release — not a verbatim
-  transcript,"** filterable individually under **Source / agency**, and (like
-  Council hearings) kept out of the plain-language semantic index.
+  transcript,"** filterable individually under **Source / agency**, and kept
+  out of the plain-language semantic index.
 
   *How they're crawled.* Agency newsrooms run on an older CMS whose listing feed
   resists headless scraping. `scrape_agencies.py` uses two strategies, configured
@@ -172,7 +155,6 @@ as a speech, not a press conference.
 | Op-ed                          | The body shows the Mayor's Office reposting an outside opinion piece ("in a new opinion piece," "read the full piece in&hellip;"). **Only the summary + a link are captured** — the verbatim op-ed lives at the outlet (copyright). Detected from the body, not the title. |
 | Ceremony / public event       | Title contains "Ceremony", "Memorial", "Wreath Laying", "Ribbon Cutting", "Groundbreaking" |
 | Executive order               | Title contains "Executive Order"                                  |
-| Council hearing               | A Council hearing transcript (assigned by the Council scraper, not by title) |
 | Video                         | A YouTube clip with no nyc.gov twin (assigned by the YouTube scraper) |
 | NYPD crime briefing           | An NYPD crime-statistics press release (assigned by the NYPD scraper, not by title) |
 | Agency press release          | A city-agency press release (assigned by the agency crawler, not by title) |
@@ -183,7 +165,7 @@ Interviews captured from outside outlets (NPR, WNYC, C-SPAN) are filed as
 
 By default the search covers everything except staff-written press releases and
 executive orders: speeches, press conferences, media appearances, statements,
-ceremonies, videos, Council hearings and NYPD crime briefings. Toggles add the
+ceremonies, videos and NYPD crime briefings. Toggles add the
 press releases and executive orders, or narrow to any subset.
 
 ### What this misses
@@ -293,7 +275,6 @@ An item qualifies if any one of these is true:
 
 To avoid false positives, the filter **excludes**:
 
-- **Council hearings** (committee testimony &mdash; the mayor doesn't testify).
 - **Passing references**: a reporter's question about Tisch, "I'm in constant
   communication with Commissioner Tisch," news recaps discussing something she
   said elsewhere, or appointment press releases that merely name her.
@@ -474,7 +455,7 @@ The "Public schedule" tab summarizes the mayor's announced public events.
 | `date`        | Publication date as written by the mayor's office        |
 | `iso_date`    | ISO format (YYYY-MM-DD) of the publication date          |
 | `type`        | Classification (see above)                               |
-| `source`      | Where it came from: `nyc.gov`, `youtube`, `npr`, `wnyc`, `cspan`, `council` |
+| `source`      | Where it came from: `nyc.gov`, `youtube`, `npr`, `wnyc`, `cspan` |
 | `reliability` | `official`, `verified` (published), or `auto` (auto-caption) |
 | `text`        | Plain-text body, paragraph breaks preserved              |
 | `mayor_text`  | The subset of `text` attributable to the mayor himself (his speaker turns or attributed quotes); empty when he isn't a speaker |
@@ -488,10 +469,9 @@ The scraper, frontend, and this document are all in
 Anyone can re-run `python3 scrape.py` to regenerate the nyc.gov portion of
 `data/corpus.json` from scratch, using only the Python standard library &mdash;
 no scraping dependencies, no API keys. The outside sources are added by
-`python3 scrape_youtube.py` (mayor's office channel), `python3 scrape_external.py`
-(NPR, WNYC, C-SPAN, podcasts &mdash; seeded by `external_sources.json`), and
-`python3 scrape_council.py` (Council hearings; needs a free `LEGISTAR_TOKEN` and
-`pdfminer.six`, and is a no-op without the token). Each appends to the same
+`python3 scrape_youtube.py` (mayor's office channel), and `python3 scrape_external.py`
+(NPR, WNYC, C-SPAN, podcasts &mdash; seeded by `external_sources.json`).
+Each appends to the same
 corpus and is non-fatal, so a blocked source never breaks the others. To
 regenerate the plain-language search vectors,
 run `npm install` then `node build_embeddings.mjs`, which writes
