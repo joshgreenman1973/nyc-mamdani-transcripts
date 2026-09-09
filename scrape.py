@@ -537,7 +537,10 @@ def _run_chained_scrapers() -> None:
             print(f"[chained] {script} failed (non-fatal): {e}", file=sys.stderr)
             failures.append(f"{script} raised {e}")
     if failures:
-        CHAINED_FAILURES.write_text("\n".join(failures))
+        # Trailing newline matters: the workflow reads this with `while read -r`,
+        # which drops a final line that has no delimiter. Without it the run went
+        # red with the reason printed nowhere.
+        CHAINED_FAILURES.write_text("\n".join(failures) + "\n")
         print(f"[chained] {len(failures)} scraper(s) failed: {'; '.join(failures)}",
               file=sys.stderr)
 

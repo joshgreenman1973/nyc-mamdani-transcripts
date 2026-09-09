@@ -28,6 +28,7 @@ import json
 import re
 import sys
 import time
+from http.client import HTTPException
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
@@ -48,15 +49,33 @@ MONTHS = ["January", "February", "March", "April", "May", "June", "July",
 
 # --- fetch -------------------------------------------------------------------
 
-def fetch(url: str, referer: str | None = None) -> bytes:
+def fetch(url: str, referer: str | None = None, tries: int = 3) -> bytes:
+    """GET a URL, retrying a response that arrives truncated.
+
+    A server that closes the connection mid-body raises http.client.IncompleteRead.
+    That is an HTTPException, not an OSError, so it used to slip past the network
+    handler every caller wraps this in and take the whole scrape down with it —
+    WNYC did exactly that on 2026-09-09 and cost the run every source that comes
+    after it. Truncation is transient, so retry it here; a source that stays
+    broken still raises and is skipped per-source, the same as any HTTP error.
+    """
     headers = {"User-Agent": UA, "Accept-Language": "en-US,en;q=0.9"}
     if referer:
         headers["Referer"] = referer
     req = Request(url, headers=headers)
-    with urlopen(req, timeout=45) as r:
-        if r.status not in (200, None):
-            raise URLError(f"HTTP {r.status}")
-        return r.read()
+    for attempt in range(1, tries + 1):
+        try:
+            with urlopen(req, timeout=45) as r:
+                if r.status not in (200, None):
+                    raise URLError(f"HTTP {r.status}")
+                return r.read()
+        except HTTPException as e:
+            if attempt == tries:
+                raise
+            print(f"  truncated read ({e}); retry {attempt}/{tries - 1}: {url}",
+                  file=sys.stderr)
+            time.sleep(2 * attempt)
+    raise URLError(f"unreachable: {url}")  # pragma: no cover
 
 
 def pretty_date(iso: str) -> str:
@@ -149,7 +168,7 @@ def scrape_npr(story_id: str) -> dict | None:
     url = f"https://www.npr.org/transcripts/{story_id}"
     try:
         page = fetch(url).decode("utf-8", "replace")
-    except (HTTPError, URLError, OSError) as e:
+    except (HTTPError, URLError, OSError, HTTPException) as e:
         print(f"  NPR {story_id}: fetch failed: {e}", file=sys.stderr)
         return None
     m = re.search(r'<div[^>]*class="[^"]*transcript storytext[^"]*"[^>]*>(.*?)</div>\s*(?:<div|<p class="user-actions)',
@@ -227,7 +246,7 @@ def scrape_wnyc(episode_uuid: str) -> dict | None:
             used = url
             if WNYC_MARKER in page:
                 break
-        except (HTTPError, URLError, OSError) as e:
+        except (HTTPError, URLError, OSError, HTTPException) as e:
             print(f"  WNYC {episode_uuid}: {url} failed: {e}", file=sys.stderr)
     if WNYC_MARKER not in page:
         print(f"  WNYC {episode_uuid}: no transcript on page yet — skipping", file=sys.stderr)
@@ -248,7 +267,7 @@ def discover_wnyc_episodes() -> list[str]:
     uuids: list[str] = []
     try:
         xml = fetch(feed_url).decode("utf-8", "replace")
-    except (HTTPError, URLError, OSError) as e:
+    except (HTTPError, URLError, OSError, HTTPException) as e:
         print(f"  WNYC feed discovery failed: {e}", file=sys.stderr)
         return uuids
     items = re.findall(r"<item>(.*?)</item>", xml, re.S)
@@ -273,7 +292,7 @@ def scrape_cspan(program_id: str, seed_title: str = "", seed_iso: str = "") -> d
            f"?videoId={program_id}&videoType=program&transcriptType=cc&transcriptQuery=")
     try:
         raw = fetch(svc, referer=ref)
-    except (HTTPError, URLError, OSError) as e:
+    except (HTTPError, URLError, OSError, HTTPException) as e:
         print(f"  C-SPAN {program_id}: transcript fetch failed (blocked?): {e}", file=sys.stderr)
         return None
     body = raw.decode("utf-8", "replace").strip()
@@ -317,7 +336,7 @@ def scrape_cspan(program_id: str, seed_title: str = "", seed_iso: str = "") -> d
             if scraped and "c-span.org" not in scraped.lower():
                 title = title or scraped
             iso = iso or find_date(page)
-        except (HTTPError, URLError, OSError):
+        except (HTTPError, URLError, OSError, HTTPException):
             pass
     title = title or f"C-SPAN program {program_id}"
     return make_item(link=f"/cspan/{program_id}", url=ref, title=title,
@@ -330,7 +349,7 @@ def scrape_podcast_feed(feed_url: str, match: str) -> list[dict]:
     out: list[dict] = []
     try:
         xml = fetch(feed_url).decode("utf-8", "replace")
-    except (HTTPError, URLError, OSError) as e:
+    except (HTTPError, URLError, OSError, HTTPException) as e:
         print(f"  podcast feed {feed_url}: fetch failed: {e}", file=sys.stderr)
         return out
     items = re.findall(r"<item>(.*?)</item>", xml, re.S)
@@ -347,7 +366,7 @@ def scrape_podcast_feed(feed_url: str, match: str) -> list[dict]:
         turl, ttype = tr.group(1), (tr.group(2) or "")
         try:
             doc = fetch(turl).decode("utf-8", "replace")
-        except (HTTPError, URLError, OSError) as e:
+        except (HTTPError, URLError, OSError, HTTPException) as e:
             print(f"  podcast transcript {turl}: fetch failed: {e}", file=sys.stderr)
             continue
         text = parse_transcript_doc(doc, ttype)
