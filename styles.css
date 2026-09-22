@@ -1326,3 +1326,28 @@ mark {
   .view-tab + .view-tab { border-left: none; }
   .qa-q { padding: var(--vc-space-3); }
 }
+
+/* Sort toggle in the Q&A result bar: always visible, one click. */
+.qa-sort { display: inline-flex; flex-shrink: 0; }
+.qa-sort label { margin: 0; cursor: pointer; }
+.qa-sort input { position: absolute; opacity: 0; pointer-events: none; }
+.qa-sort span {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border: var(--vc-rule-thin) solid var(--vc-black);
+  margin-left: -1px;
+  background: var(--vc-white);
+  font-family: var(--vc-font-sans);
+  font-weight: var(--vc-weight-bold);
+  font-size: var(--vc-size-micro);
+  text-transform: uppercase;
+  letter-spacing: var(--vc-track-kicker);
+  white-space: nowrap;
+}
+.qa-sort label:first-child span { margin-left: 0; }
+.qa-sort input:checked + span { background: var(--vc-black); color: var(--vc-white); }
+.qa-sort input:focus-visible + span { outline: 2px solid var(--vc-black); outline-offset: 2px; }
+.qa-sort input:disabled + span { opacity: 0.4; cursor: default; }
+#qa-view .result-bar { flex-wrap: wrap; align-items: center; }
+#qa-view .result-summary { flex-basis: 100%; }
+@media (max-width: 420px) { .qa-sort span { padding: 0.3rem 0.45rem; } }

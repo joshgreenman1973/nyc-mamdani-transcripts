@@ -292,7 +292,7 @@
         <div class="topics" id="qa-topics" aria-label="Themes"></div>
 
         <details class="refine" id="qa-refine">
-          <summary>More filters &mdash; who asked, event type, dates, sort</summary>
+          <summary>More filters &mdash; who asked, event type, dates</summary>
           <div class="filters">
             <fieldset class="chips" aria-label="Who asked">
               <legend>Who asked</legend>
@@ -315,18 +315,17 @@
               <label>From <input type="date" id="qa-from" /></label>
               <label>To <input type="date" id="qa-to" /></label>
             </fieldset>
-            <fieldset class="sort" aria-label="Sort">
-              <legend>Sort by</legend>
-              <label><input type="radio" name="qa-sort" value="new" checked /> Newest first</label>
-              <label><input type="radio" name="qa-sort" value="old" /> Oldest first</label>
-              <label><input type="radio" name="qa-sort" value="rel" /> Relevance</label>
-            </fieldset>
           </div>
         </details>
       </section>
 
       <div class="result-bar">
         <p class="result-summary" id="qa-summary" aria-live="polite"></p>
+        <div class="qa-sort" role="radiogroup" aria-label="Sort">
+          <label><input type="radio" name="qa-sort" value="new" checked /><span>Newest first</span></label>
+          <label><input type="radio" name="qa-sort" value="old" /><span>Oldest first</span></label>
+          <label><input type="radio" name="qa-sort" value="rel" /><span>Best match</span></label>
+        </div>
         <span class="qa-bar-actions">
           <button id="qa-csv" type="button" class="share-btn">Download CSV</button>
           <button id="qa-share" type="button" class="share-btn">Copy share link</button>

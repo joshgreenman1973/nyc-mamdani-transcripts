@@ -237,9 +237,16 @@
     });
     if (TOPIC) rows = rows.filter((r) => r.x.tp.includes(TOPIC));
 
+    // "Best match" only means something with a search; without one it's newest first.
+    const relBtn = $("input[name=qa-sort][value=rel]");
+    relBtn.disabled = !st.q;
+    relBtn.parentElement.title = st.q ? "" : "Search for something to rank by best match";
+    if (!st.q && relBtn.checked) { $("input[name=qa-sort][value=new]").checked = true; st.sort = "new"; }
     const byDate = (a, b) =>
       a.x.ev.date < b.x.ev.date ? 1 : a.x.ev.date > b.x.ev.date ? -1 : a.x.e !== b.x.e ? b.x.e - a.x.e : a.x.n - b.x.n;
-    if (st.sort === "old") rows.sort((a, b) => -byDate(a, b) || a.x.n - b.x.n);
+    const byDateAsc = (a, b) =>
+      a.x.ev.date < b.x.ev.date ? -1 : a.x.ev.date > b.x.ev.date ? 1 : a.x.e !== b.x.e ? a.x.e - b.x.e : a.x.n - b.x.n;
+    if (st.sort === "old") rows.sort(byDateAsc);
     else if (st.sort === "rel" && st.q) rows.sort((a, b) => b.score - a.score || byDate(a, b));
     else rows.sort(byDate);
 
@@ -471,7 +478,7 @@
     $$("input[name=qa-sort]").forEach((el) => (el.checked = el.value === sort));
     TOPIC = p.get("theme") && TOPIC_BY_ID[p.get("theme")] ? p.get("theme") : null;
     FOCUS = p.get("ex") && EX_BY_ID[p.get("ex")] ? p.get("ex") : null;
-    const anyFilter = p.get("in") || p.get("who") || p.get("kind") || p.get("others") || p.get("qfrom") || p.get("qto") || p.get("qsort");
+    const anyFilter = p.get("in") || p.get("who") || p.get("kind") || p.get("others") || p.get("qfrom") || p.get("qto");
     if (anyFilter) $("#qa-refine").open = true;
     RESTORING = false;
   }
