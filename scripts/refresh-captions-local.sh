@@ -94,8 +94,9 @@ while [ "$attempt" -le "$MAX_ATTEMPTS" ]; do
   npm install --no-audit --no-fund >/dev/null || { echo "FATAL: npm install failed."; exit 1; }
   node build_embeddings.mjs || { echo "FATAL: build_embeddings.mjs failed."; exit 1; }
   node build_topics.mjs      || { echo "FATAL: build_topics.mjs failed."; exit 1; }
+  python3 build_qa.py        || { echo "FATAL: build_qa.py failed."; exit 1; }
 
-  git add data/corpus.json data/embeddings.json data/topics.json
+  git add data/corpus.json data/embeddings.json data/topics.json data/qa.json
   git commit -q -m "Refresh YouTube captions: $(date -u +%Y-%m-%d)" || {
     echo "Nothing staged after rebuild."; exit 0;
   }

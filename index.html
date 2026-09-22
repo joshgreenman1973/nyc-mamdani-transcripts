@@ -51,6 +51,7 @@
       <button id="view-search" class="view-tab active" type="button" role="tab" aria-selected="true">Search the archive</button>
       <button id="view-trends" class="view-tab" type="button" role="tab" aria-selected="false">Trends &amp; themes</button>
       <button id="view-schedule" class="view-tab" type="button" role="tab" aria-selected="false">Public schedule</button>
+      <button id="view-qa" class="view-tab" type="button" role="tab" aria-selected="false">Press Q&amp;A</button>
     </nav>
 
     <div id="search-view">
@@ -252,6 +253,90 @@
       <p class="digest-note">Most recent first. Times are as announced; &ldquo;approx.&rdquo; is the office&rsquo;s own label.</p>
       <div class="sched-days" id="schedule-days"></div>
     </section>
+    <section id="qa-view" class="qa hidden" aria-label="Press questions and the mayor's answers">
+      <div class="trends-intro">
+        <h2 class="vc-gascogne">Every question, every answer</h2>
+        <p class="trends-lede">
+          Each question a reporter or interviewer has put to the mayor at an event
+          City Hall transcribed and published on nyc.gov, paired with what he said
+          back. Official transcripts don&rsquo;t name the reporter, so press-event
+          questions are credited simply to &ldquo;Reporter.&rdquo;
+          <a href="METHODOLOGY.md#press-qa">How exchanges are cut &amp; their limits</a>.
+        </p>
+        <p class="schedule-coverage" id="qa-meta"></p>
+      </div>
+
+      <section class="controls" aria-label="Search questions and answers">
+        <div class="search-row">
+          <label class="visually-hidden" for="qa-q">Search questions and answers</label>
+          <input id="qa-q" type="search" placeholder="Search — words narrow (AND); quotes for an exact phrase, e.g. &ldquo;rent freeze&rdquo;" autocomplete="off" />
+          <button id="qa-clear" type="button" aria-label="Clear search">&times;</button>
+        </div>
+
+        <div class="scope-control qa-field" role="radiogroup" aria-label="Where to look">
+          <span class="scope-label">Look in</span>
+          <label class="qa-radio"><input type="radio" name="qa-field" value="both" checked /> Questions &amp; answers</label>
+          <label class="qa-radio"><input type="radio" name="qa-field" value="q" /> Questions only</label>
+          <label class="qa-radio"><input type="radio" name="qa-field" value="a" /> Answers only</label>
+        </div>
+
+        <p class="qa-examples">Try:
+          <a href="#" data-qa-example="Cuomo">Cuomo</a> &middot;
+          <a href="#" data-qa-example="Tisch">Tisch</a> &middot;
+          <a href="#" data-qa-example="&quot;rent freeze&quot;">&ldquo;rent freeze&rdquo;</a> &middot;
+          <a href="#" data-qa-example="free buses">free buses</a> &middot;
+          <a href="#" data-qa-example="Trump">Trump</a> &middot;
+          <a href="#" data-qa-example="&quot;get back to you&quot;">&ldquo;get back to you&rdquo;</a>
+        </p>
+
+        <div class="topics" id="qa-topics" aria-label="Themes"></div>
+
+        <details class="refine" id="qa-refine">
+          <summary>More filters &mdash; who asked, event type, dates, sort</summary>
+          <div class="filters">
+            <fieldset class="chips" aria-label="Who asked">
+              <legend>Who asked</legend>
+              <label><input type="checkbox" name="qa-who" value="reporter" checked /> Reporters at press events <span class="count" data-qa-wcount="reporter"></span></label>
+              <label><input type="checkbox" name="qa-who" value="host" checked /> Interviewers on air <span class="count" data-qa-wcount="host"></span></label>
+              <label><input type="checkbox" name="qa-who" value="public" /> Callers, audiences &amp; non-press hosts <span class="count" data-qa-wcount="public"></span></label>
+            </fieldset>
+            <fieldset class="chips" aria-label="Event type">
+              <legend>Event</legend>
+              <label><input type="checkbox" name="qa-kind" value="press" checked /> Press conferences &amp; briefings <span class="count" data-qa-kcount="press"></span></label>
+              <label><input type="checkbox" name="qa-kind" value="interview" checked /> TV, radio &amp; podcast interviews <span class="count" data-qa-kcount="interview"></span></label>
+              <label><input type="checkbox" name="qa-kind" value="forum" checked /> City Hall livestreams &amp; forums <span class="count" data-qa-kcount="forum"></span></label>
+            </fieldset>
+            <fieldset class="chips" aria-label="Who answered">
+              <legend>Answered by</legend>
+              <label><input type="checkbox" id="qa-others" /> Include questions only other officials answered <span class="count" data-qa-ocount></span></label>
+            </fieldset>
+            <fieldset class="dates" aria-label="Date range">
+              <legend>Date range</legend>
+              <label>From <input type="date" id="qa-from" /></label>
+              <label>To <input type="date" id="qa-to" /></label>
+            </fieldset>
+            <fieldset class="sort" aria-label="Sort">
+              <legend>Sort by</legend>
+              <label><input type="radio" name="qa-sort" value="new" checked /> Newest first</label>
+              <label><input type="radio" name="qa-sort" value="old" /> Oldest first</label>
+              <label><input type="radio" name="qa-sort" value="rel" /> Relevance</label>
+            </fieldset>
+          </div>
+        </details>
+      </section>
+
+      <div class="result-bar">
+        <p class="result-summary" id="qa-summary" aria-live="polite"></p>
+        <span class="qa-bar-actions">
+          <button id="qa-csv" type="button" class="share-btn">Download CSV</button>
+          <button id="qa-share" type="button" class="share-btn">Copy share link</button>
+        </span>
+      </div>
+
+      <ol id="qa-results" class="results qa-results" aria-live="polite"></ol>
+      <button id="qa-more" type="button" class="qa-more hidden"></button>
+      <p id="qa-empty" class="empty hidden">No matches. Try fewer words, switch &ldquo;Look in&rdquo; to both, or widen the filters.</p>
+    </section>
   </main>
 
   <footer class="page-footer">
@@ -272,5 +357,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.0/dist/umd/index.min.js"></script>
   <script src="app.js"></script>
+  <script src="qa.js"></script>
 </body>
 </html>

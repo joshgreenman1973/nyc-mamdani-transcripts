@@ -112,7 +112,7 @@
   let FEATURED = null; // active featured filter: null | "tisch" | "nypd"
   let SPOTLIGHT_COUNT = 0; // # of Mayor + Commissioner Tisch co-appearances
   let BRIEFINGS_COUNT = 0; // # of NYPD crime briefings
-  let VIEW = "search"; // "search" | "trends"
+  let VIEW = "search"; // "search" | "trends" | "schedule" | "qa"
   let MS = null;
   let LAST_RESULTS = [];
   let DEBOUNCE_T = null;
@@ -603,7 +603,14 @@
     $("#view-search").addEventListener("click", () => setView("search"));
     $("#view-trends").addEventListener("click", () => setView("trends"));
     $("#view-schedule").addEventListener("click", () => setView("schedule"));
+    $("#view-qa").addEventListener("click", () => setView("qa"));
     window.addEventListener("popstate", () => {
+      // The Press Q&A view (qa.js) keeps its own URL state.
+      if (new URLSearchParams(window.location.search).get("view") === "qa") {
+        VIEW = "qa";
+        applyView();
+        return;
+      }
       restoreFromURL();
       applyMode();
       runSearch();
@@ -745,6 +752,7 @@
       search: { tab: "#view-search", panel: "#search-view", show: true },
       trends: { tab: "#view-trends", panel: "#trends-view", show: !!THEMES },
       schedule: { tab: "#view-schedule", panel: "#schedule-view", show: !!SCHED },
+      qa: { tab: "#view-qa", panel: "#qa-view", show: true },
     };
     Object.entries(tabs).forEach(([name, o]) => {
       const tab = $(o.tab);
@@ -755,7 +763,13 @@
       tab.setAttribute("aria-selected", String(active));
       tab.classList.toggle("hidden", !o.show); // hide tab if its data didn't load
     });
-    if (VIEW !== "search") window.scrollTo({ top: 0, behavior: "smooth" });
+    if (VIEW !== "search" && !URL_RESTORING) window.scrollTo({ top: 0, behavior: "smooth" });
+    // Leaving the Q&A view hands the URL back to the archive search.
+    if (VIEW !== "qa" && new URLSearchParams(window.location.search).get("view") === "qa") {
+      history.replaceState(null, "", window.location.pathname);
+      runSearch();
+    }
+    document.dispatchEvent(new CustomEvent("vc:viewchange", { detail: VIEW }));
   }
 
   // Restrict the result set to a tagged theme, jump to search, and show a pill.
@@ -980,6 +994,7 @@
   function restoreFromURL() {
     URL_RESTORING = true;
     const p = new URLSearchParams(window.location.search);
+    if (p.get("view") === "qa") VIEW = "qa";
     MODE = p.get("mode") === "semantic" ? "semantic" : "keyword";
     if (p.has("q")) $("#q").value = p.get("q");
     if (p.has("from")) $("#from").value = p.get("from");
@@ -1016,7 +1031,7 @@
   }
 
   function writeURL(state) {
-    if (URL_RESTORING) return;
+    if (URL_RESTORING || VIEW === "qa") return;
     const p = new URLSearchParams();
     if (MODE === "semantic") p.set("mode", "semantic");
     if (state.q) p.set("q", state.q);

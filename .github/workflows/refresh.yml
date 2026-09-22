@@ -54,6 +54,8 @@ jobs:
           node build_embeddings.mjs
           # Topic tagging + trend matrix + extractive digest. No deps, no API.
           node build_topics.mjs
+          # Press Q&A catalogue (reads topics.json for theme tags). Stdlib only.
+          python3 build_qa.py
 
       - name: Commit changes if any
         run: |
@@ -63,7 +65,7 @@ jobs:
             echo "No changes."
             exit 0
           fi
-          git add data/corpus.json data/embeddings.json data/topics.json
+          git add data/corpus.json data/embeddings.json data/topics.json data/qa.json
           git commit -m "Refresh corpus: $(date -u +%Y-%m-%d)"
           git push
 

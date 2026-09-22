@@ -447,6 +447,70 @@ The "Public schedule" tab summarizes the mayor's announced public events.
   public web sources), this dataset comes from email and is updated separately as
   new advisories are added.
 
+<a name="press-qa"></a>
+
+## Press Q&amp;A: every question and answer
+
+The "Press Q&A" tab lists each question put to the mayor at an event whose
+transcript City Hall published on nyc.gov, paired with the answer that
+followed. It is built by `build_qa.py` from the same `data/corpus.json` the
+rest of the site uses, and written to `data/qa.json`.
+
+- **Scope: official transcripts only.** Items marked *official* (published by
+  the Mayor's Office) and typed as press conferences, media appearances,
+  speeches or ceremonies. Outside transcripts (NPR, WNYC, C-SPAN) and YouTube
+  auto-captions are left out, as are events with no parseable speaker labels.
+  An event counts only if it contains at least one question and at least one
+  turn by the mayor.
+- **How an exchange is cut.** The transcripts label press-event reporters
+  "Question:" and broadcast interviewers by surname. A question turn opens an
+  exchange; consecutive question turns (crosstalk, "two questions" split
+  across lines) merge into one question; every turn after it &mdash; the
+  mayor, a deputy mayor, a commissioner &mdash; is its answer, until the next
+  question. Opening remarks before the first question are not exchanges. On
+  air, a host's brief interjection mid-answer ("Right.", "Absolutely." &mdash;
+  six words or fewer, no question mark) stays inside the answer rather than
+  opening a new exchange.
+- **Follow-ups are separate exchanges.** A reporter's follow-up gets its own
+  entry. Each entry shows its position ("Question 4 of 17") and a *Show the
+  exchanges around it* link that opens the two before and two after.
+- **Who asked.** *Reporter* = a "Question:" turn at a press event. *Interviewer*
+  = the host of a TV, radio or podcast appearance (including hits the scraper
+  typed as press conferences whose titles name a station, e.g. "Mayor Mamdani
+  on Bloomberg TV"). *Caller, audience or non-press host* = call-in listeners,
+  town-hall audiences, and the hosts of City Hall's own "Talk With the People"
+  livestreams and forums (and the viewer questions they relay). These last are
+  **hidden by default**, since they are not members of the press. In
+  interviews the split is inferred: when one host clearly dominates (10+
+  turns), a voice heard only once or twice is treated as a caller or guest.
+  This can misfire on shows with rotating co-hosts.
+- **Reporters are not named.** Official transcripts do not identify the
+  reporter or outlet. Reporters sometimes name themselves at the start of a
+  question, but this happens in well under 1% of questions &mdash; too rarely
+  to support an outlet filter.
+- **Who answered.** By default the tab shows exchanges in which the mayor
+  spoke. Questions answered only by other officials (a deputy mayor, the
+  police commissioner) are included with *Include questions only other
+  officials answered*.
+- **Text is verbatim.** Every question and answer paragraph is copied from the
+  nyc.gov transcript without edits; the build is checked for this. Where City
+  Hall's transcript carries "[inaudible]" or "[crosstalk]," so does the entry.
+  Material after a release's closing "###" is dropped (one transcript carries
+  a forwarded email containing a second copy of itself).
+- **Themes** use the Trends lexicon, plus two themes common in press questions
+  but absent from the Trends chart: *Israel, Gaza &amp; antisemitism* and
+  *Politics &amp; elections*. An exchange gets every theme its question names,
+  plus up to two in all from themes its answer dwells on (3+ hits or 2+
+  distinct terms). About half of exchanges carry no theme; use keyword search
+  for anything the lexicon misses.
+- **Search.** Words narrow (AND) and match as word-beginnings ("evict" finds
+  "evictions"); quoted phrases match exactly. *Look in* restricts matches to
+  the question or the answer. *Download CSV* exports the current result set.
+- **Known limits.** Speaker labels come from the scraper's parse of each
+  transcript; a mislabeled turn in City Hall's transcript carries through.
+  Short conversational turns on air can still surface as "questions." Counts
+  shown on the tab are counts of exchanges, not of distinct reporters.
+
 ## Data fields stored per item
 
 | Field         | Description                                              |

@@ -23,6 +23,7 @@ crawled.
 - `data/corpus.json` &mdash; full text + metadata for every item dated on or after 2026-01-01.
 - `index.html` / `app.js` / `styles.css` &mdash; the static front end. MiniSearch via CDN; no build step.
 - `build_embeddings.mjs` / `build_topics.mjs` &mdash; plain-language search index and the Trends & themes data.
+- `build_qa.py` + `qa.js` &mdash; the Press Q&A tab: every question put to the mayor at an officially transcribed event, paired with his answer (`data/qa.json`).
 - `.github/workflows/refresh.yml` &mdash; daily cron that re-runs the scrapers and commits new items.
 - `METHODOLOGY.md` &mdash; data sources, classification rules, limitations.
 
