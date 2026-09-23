@@ -806,6 +806,12 @@ mark {
   .result-title { font-size: 1.2rem; }
 }
 
+/* On phones the pinned panel fills most of the screen and hides the results
+   beneath it (issue #1), so let it scroll away with the page. */
+@media (max-width: 720px), (max-height: 700px) {
+  .controls { position: static; }
+}
+
 /* ---------- View tabs (Search / Trends) ---------- */
 
 .view-tabs {
