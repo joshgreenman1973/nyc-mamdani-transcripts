@@ -67,7 +67,34 @@ jobs:
           fi
           git add data/corpus.json data/embeddings.json data/topics.json data/qa.json
           git commit -m "Refresh corpus: $(date -u +%Y-%m-%d)"
-          git push
+
+          # The rebuild above takes several minutes, and anything pushed to main
+          # in that window makes this push a non-fast-forward. That is what
+          # killed the 2026-09-30 20:00 UTC run: a one-line footer commit landed
+          # at 20:17 while the embeddings were still building, and the single
+          # unretried `git push` failed with the whole corpus already built.
+          # Replay onto the new tip and try again.
+          for attempt in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push rejected on attempt $attempt — origin moved during the rebuild."
+            git fetch origin
+            if git rebase origin/main; then
+              continue
+            fi
+            # A conflict here means origin's new commit also regenerated
+            # data/*.json (the local captions job — docs/youtube-captions.md).
+            # Those files collide on every line, and keeping our copy wholesale
+            # would drop whatever the other run merged in, so there is nothing
+            # safe to do but stop. The scrape is idempotent and runs twice a
+            # day: the next run re-derives everything from the new base.
+            git rebase --abort
+            echo "::error::origin/main regenerated data/*.json while this run was building. Nothing pushed; the next scheduled run will re-derive on the new base."
+            exit 1
+          done
+          echo "::error::still could not push after 3 attempts."
+          exit 1
 
       # Runs after the commit so nyc.gov results still land, but the run goes
       # red when the YouTube scrape failed outright. Without this, a broken
