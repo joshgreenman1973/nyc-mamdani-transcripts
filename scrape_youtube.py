@@ -75,12 +75,22 @@ def fetch_feed_videos() -> list[dict]:
     """
     import urllib.request
 
-    try:
-        req = urllib.request.Request(CHANNEL_FEED, headers={"User-Agent": "Mozilla/5.0"})
-        with urllib.request.urlopen(req, timeout=60) as resp:
-            xml = resp.read().decode("utf-8", "replace")
-    except Exception as e:
-        print(f"  channel feed fetch failed: {e}", file=sys.stderr)
+    # The feed endpoint intermittently 404s or 5xxs for a few minutes at a
+    # time. On CI it is the only listing source, so one blip used to sink the
+    # whole run (2026-10-06 01:00 UTC). Retry before giving up; if every try
+    # fails, the empty return still trips main()'s fail-loud check.
+    xml = None
+    for attempt in range(1, 5):
+        try:
+            req = urllib.request.Request(CHANNEL_FEED, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                xml = resp.read().decode("utf-8", "replace")
+            break
+        except Exception as e:
+            print(f"  channel feed fetch failed (attempt {attempt}/4): {e}", file=sys.stderr)
+            if attempt < 4:
+                time.sleep(30 * attempt)
+    if xml is None:
         return []
     rows: list[dict] = []
     for entry in re.findall(r"<entry>(.*?)</entry>", xml, re.S):
