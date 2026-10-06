@@ -254,6 +254,14 @@ def find_match(video: dict, items: list[dict]) -> tuple[dict, float] | tuple[Non
         # Only consider event-style items where a video would be relevant.
         if item.get("type") in ("executive_order", "designation_letter"):
             continue
+        # Another channel upload is a different event, however close its title
+        # ("Press Conference to Make a Housing Announcement" vs "... Green Space
+        # Announcement", same day). And an item already showing a different
+        # video keeps it; the newcomer becomes its own item instead.
+        if item.get("source") == "youtube":
+            continue
+        if item.get("youtube_video_id") not in (None, video["id"]):
+            continue
         diff = date_diff_days(video["upload_date"], item.get("iso_date", ""))
         if diff > DATE_PROXIMITY_DAYS:
             continue
@@ -375,9 +383,23 @@ def main() -> int:
               "channel. Corpus left unchanged.", file=sys.stderr)
         return 1
 
-    # Index existing video corpus entries to avoid duplication.
-    existing_video_ids = {it.get("video_id") for it in items if it.get("type") == "video"}
-    existing_video_links = {it.get("video_id"): it for it in items if it.get("type") == "video"}
+    # Index existing video corpus entries to avoid duplication. A video item's
+    # own id lives in its link (/youtube/<id>). This used to read a "video_id"
+    # field no item has, so every video was re-matched on every run, and a
+    # similarly titled upload from the same week could take over another
+    # video's item: its youtube_url then pointed at the wrong video, and the
+    # newer upload was never ingested. Re-pin each item to its own id here so
+    # any item damaged that way heals on the next run.
+    existing_video_ids = set()
+    for it in items:
+        if it.get("source") != "youtube":
+            continue
+        own_id = it.get("link", "").rsplit("/", 1)[-1]
+        if not own_id:
+            continue
+        existing_video_ids.add(own_id)
+        it["youtube_video_id"] = own_id
+        it["youtube_url"] = f"https://www.youtube.com/watch?v={own_id}"
 
     matched = 0
     added = 0
