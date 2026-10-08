@@ -604,6 +604,7 @@
     $("#view-trends").addEventListener("click", () => setView("trends"));
     $("#view-schedule").addEventListener("click", () => setView("schedule"));
     $("#view-qa").addEventListener("click", () => setView("qa"));
+    $("#view-commitments").addEventListener("click", () => setView("commitments"));
     window.addEventListener("popstate", () => {
       // The Press Q&A view (qa.js) keeps its own URL state.
       if (new URLSearchParams(window.location.search).get("view") === "qa") {
@@ -753,6 +754,7 @@
       trends: { tab: "#view-trends", panel: "#trends-view", show: !!THEMES },
       schedule: { tab: "#view-schedule", panel: "#schedule-view", show: !!SCHED },
       qa: { tab: "#view-qa", panel: "#qa-view", show: true },
+      commitments: { tab: "#view-commitments", panel: "#commitments-view", show: true },
     };
     Object.entries(tabs).forEach(([name, o]) => {
       const tab = $(o.tab);
@@ -995,6 +997,7 @@
     URL_RESTORING = true;
     const p = new URLSearchParams(window.location.search);
     if (p.get("view") === "qa") VIEW = "qa";
+    if (p.get("view") === "commitments") VIEW = "commitments";
     MODE = p.get("mode") === "semantic" ? "semantic" : "keyword";
     if (p.has("q")) $("#q").value = p.get("q");
     if (p.has("from")) $("#from").value = p.get("from");
@@ -1031,7 +1034,7 @@
   }
 
   function writeURL(state) {
-    if (URL_RESTORING || VIEW === "qa") return;
+    if (URL_RESTORING || VIEW === "qa" || VIEW === "commitments") return;
     const p = new URLSearchParams();
     if (MODE === "semantic") p.set("mode", "semantic");
     if (state.q) p.set("q", state.q);

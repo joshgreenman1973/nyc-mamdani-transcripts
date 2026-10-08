@@ -1,0 +1,9 @@
+{
+ "batch_id": "msgbatch_01Bxy7sv8BQz8fMyZZCAGwu3",
+ "count": 888,
+ "submitted_at": "2026-10-08T20:29:39.912222+00:00",
+ "status": "collected",
+ "collected": 888,
+ "failed": [],
+ "cost_usd": 3.6216
+}

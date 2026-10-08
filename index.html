@@ -52,6 +52,7 @@
       <button id="view-trends" class="view-tab" type="button" role="tab" aria-selected="false">Trends &amp; themes</button>
       <button id="view-schedule" class="view-tab" type="button" role="tab" aria-selected="false">Public schedule</button>
       <button id="view-qa" class="view-tab" type="button" role="tab" aria-selected="false">Press Q&amp;A</button>
+      <button id="view-commitments" class="view-tab" type="button" role="tab" aria-selected="false">Commitments</button>
     </nav>
 
     <div id="search-view">
@@ -336,6 +337,57 @@
       <button id="qa-more" type="button" class="qa-more hidden"></button>
       <p id="qa-empty" class="empty hidden">No matches. Try fewer words, switch &ldquo;Look in&rdquo; to both, or widen the filters.</p>
     </section>
+    <section id="commitments-view" class="qa cm hidden" aria-label="Commitments ledger">
+      <div class="trends-intro">
+        <h2 class="vc-gascogne">What the mayor has promised</h2>
+        <p class="trends-lede">
+          Specific, checkable commitments made since Jan. 1, 2026, in the mayor&rsquo;s
+          own remarks, City Hall press releases and executive orders. Each is quoted
+          word for word from its source and linked to it. The ledger shows when each
+          one comes due; it does not judge whether a promise was kept.
+          <a href="METHODOLOGY.md#commitments">How this is built &amp; its limits</a>.
+        </p>
+        <p class="schedule-coverage" id="cm-meta"></p>
+      </div>
+
+      <h3 class="digest-heading vc-gascogne">When they come due</h3>
+      <p class="digest-note">Commitments with a date, by quarter. Grey bars are quarters already past; a promise dated only by year counts in that year&rsquo;s last quarter. Click a bar to filter.</p>
+      <div class="cm-timeline" id="cm-timeline" aria-label="Commitments by quarter due"></div>
+
+      <section class="controls" aria-label="Search and filter commitments">
+        <div class="search-row">
+          <label class="visually-hidden" for="cm-q">Search commitments</label>
+          <input id="cm-q" type="search" placeholder="Search &mdash; e.g. buses, child care, NYCHA" autocomplete="off" />
+          <button id="cm-clear" type="button" aria-label="Clear search">&times;</button>
+        </div>
+        <div class="topics" id="cm-topics" aria-label="Themes"></div>
+        <div class="scope-control qa-field" role="radiogroup" aria-label="Status">
+          <span class="scope-label">Show</span>
+          <label class="qa-radio"><input type="radio" name="cm-status" value="all" checked /> All</label>
+          <label class="qa-radio"><input type="radio" name="cm-status" value="upcoming" /> Coming due</label>
+          <label class="qa-radio"><input type="radio" name="cm-status" value="passed" /> Date passed</label>
+          <label class="qa-radio"><input type="radio" name="cm-status" value="none" /> No date given</label>
+        </div>
+        <div class="scope-control qa-field">
+          <label class="qa-radio"><input type="checkbox" id="cm-routine" /> Include short-term and routine items, such as storm operations and event logistics (<span id="cm-routine-n"></span>)</label>
+        </div>
+      </section>
+
+      <div class="result-bar">
+        <p class="result-summary" id="cm-summary" aria-live="polite"></p>
+        <div class="qa-sort" role="radiogroup" aria-label="Sort">
+          <label><input type="radio" name="cm-sort" value="due" checked /><span>By due date</span></label>
+          <label><input type="radio" name="cm-sort" value="new" /><span>Most recently said</span></label>
+        </div>
+        <span class="qa-bar-actions">
+          <button id="cm-csv" type="button" class="share-btn">Download CSV</button>
+        </span>
+      </div>
+
+      <ol id="cm-results" class="results cm-results" aria-live="polite"></ol>
+      <button id="cm-more" type="button" class="qa-more hidden"></button>
+      <p id="cm-empty" class="empty hidden">No commitments match. Try fewer words or clear the filters.</p>
+    </section>
   </main>
 
   <footer class="page-footer">
@@ -350,6 +402,9 @@
         <a href="METHODOLOGY.md">Methodology &amp; limitations</a>
         &middot; <a href="https://github.com/joshgreenman1973/nyc-mamdani-transcripts">Source code</a>
         &middot; Archive refreshed daily.
+        &middot; <details class="ai-caution"><summary>And please read this AI caution.</summary>
+          <span class="ai-caution-body">The concept, the sources and the layout were decided by the author, a human. The coding was done mostly by Anthropic&rsquo;s Claude and Claude Code under close direction, and the Commitments tab is extracted by Claude Sonnet 5.5. Checks actually in place there: every quote is matched word for word against its source, and any that can’t be matched is dropped, every commitment links to its source, and a deadline worked out from a phrase like &ldquo;within six months&rdquo; shows that phrase. The summaries, deadlines and groupings are still the model&rsquo;s reading and can be wrong; the quote and the link are the record. If you spot an error, please flag it.</span>
+        </details>
       </p>
       <p class="byline" style="font-size:.78rem;opacity:.75;margin-top:.9rem">Built by Josh Greenman.</p>
     </div>
@@ -358,5 +413,6 @@
   <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.0/dist/umd/index.min.js"></script>
   <script src="app.js"></script>
   <script src="qa.js"></script>
+  <script src="commitments.js"></script>
 </body>
 </html>

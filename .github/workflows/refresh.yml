@@ -57,15 +57,29 @@ jobs:
           # Press Q&A catalogue (reads topics.json for theme tags). Stdlib only.
           python3 build_qa.py
 
+      # Commitments ledger: new items only (cached in commitments_raw.jsonl).
+      # Uses the Claude API; without the ANTHROPIC_API_KEY secret every script
+      # here skips cleanly and the ledger just stops growing.
+      - name: Extract commitments from new items
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          pip install anthropic==0.84.0
+          python3 extract_commitments.py --incremental --max-items 60
+          python3 build_commitments.py
+          python3 group_commitments.py
+          python3 build_commitments.py
+        continue-on-error: true
+
       - name: Commit changes if any
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet data/corpus.json; then
+          if git diff --quiet data/corpus.json && git diff --quiet -- 'data/commitments*'; then
             echo "No changes."
             exit 0
           fi
-          git add data/corpus.json data/embeddings.json data/topics.json data/qa.json
+          git add data/corpus.json data/embeddings.json data/topics.json data/qa.json data/commitments*
           git commit -m "Refresh corpus: $(date -u +%Y-%m-%d)"
 
           # The rebuild above takes several minutes, and anything pushed to main

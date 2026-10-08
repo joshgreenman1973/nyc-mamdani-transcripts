@@ -511,6 +511,61 @@ rest of the site uses, and written to `data/qa.json`.
   Short conversational turns on air can still surface as "questions." Counts
   shown on the tab are counts of exchanges, not of distinct reporters.
 
+## Commitments
+
+<a id="commitments"></a>The Commitments tab lists specific, checkable promises
+the administration has made on the record: a concrete deliverable that someone
+could later verify happened or didn't, such as a program launching, a rule
+taking effect, a facility opening, a numeric target or a report being issued.
+Goals and values ("make the city affordable") are left out, as is anything
+already done when it was said.
+
+**What is read.** The mayor's own words in press conferences, interviews,
+speeches and event remarks (only his speaker turns, never reporters' or other
+officials'), plus City Hall press releases, mayoral statements, op-eds and
+executive orders. Agency press releases, NYPD crime briefings and video
+captions are left out: the first two are not City Hall's own commitments, and
+captions are not split by speaker, so the mayor's words can't be told apart.
+Auto-caption transcripts are excluded for the same reason.
+
+**How it is extracted.** Anthropic's Claude Sonnet 5.5 reads each item once
+(`extract_commitments.py`) under written rules: include promises with
+deadlines, numeric targets, executive-order directives and dated projects;
+exclude aspirations, outcomes that depend on another government acting,
+hypotheticals and event listings. For each commitment it copies the passage
+that states it, writes a one-sentence summary and resolves the deadline. A
+relative phrase is resolved against the item's date ("by the end of the year"
+in March 2026 is December 2026; a season means its last month) and marked
+"from …" on the page so the reader sees the phrase it came from. The archive
+up to Oct. 8, 2026, was processed in one batch; new items are processed in
+the daily refresh.
+
+**How it is checked.** Every quote must appear word for word in the item it
+came from (`build_commitments.py`). Matching ignores case, curly versus
+straight quotes, dash style and spacing, nothing else, and the page shows the
+passage as it appears in the source. A commitment whose quote can't be found is
+dropped and listed in `data/commitments_rejected.json`; the tab's header gives
+the count.
+
+**Repeats.** The mayor makes the same promise many times. Within each theme,
+the model is asked to group commitments that promise the same deliverable
+(`group_commitments.py`). Every commitment must come back exactly once; one
+that doesn't is kept on its own, so a grouping error can leave a repeat
+unmerged but cannot drop a commitment. The same pass marks short-term
+operations and logistics as routine (steps during a particular storm or heat
+wave, parades and events, application windows, a rule's comment period,
+promises to share details later). Routine items stay in the data
+but are hidden on the page unless the reader asks for them. Each card leads with the most recently
+stated deadline; when the deadline changed over time, the card lists each
+date with the day it was said.
+
+**Limits.** The summary and deadline are the model's reading and can be wrong;
+the quote and the link are the record. A commitment can be missed, especially
+one spread over several sentences or stated in an exchange with a reporter.
+"Date passed" means only that the stated date is behind us. **The ledger does
+not judge whether any promise was kept.** Spanish-language remarks are quoted
+in Spanish with an English summary.
+
 ## Data fields stored per item
 
 | Field         | Description                                              |
