@@ -2,13 +2,13 @@
  "generated_at": "2026-10-10T22:59:29Z",
  "from_date": "2026-01-01",
  "source": "https://www.nyc.gov/mayors-office/news/",
- "total": 1479,
+ "total": 1480,
  "type_counts": {
+  "video": 163,
   "other": 437,
   "press_conference": 157,
   "media_appearance": 83,
   "agency_release": 398,
-  "video": 162,
   "statement": 17,
   "executive_order": 151,
   "ceremony": 30,
@@ -49,6 +49,317 @@
   "fdny": 33
  },
  "items": [
+  {
+   "link": "/youtube/fFSc25XZd5k",
+   "url": "https://www.youtube.com/watch?v=fFSc25XZd5k",
+   "youtube_url": "https://www.youtube.com/watch?v=fFSc25XZd5k",
+   "youtube_video_id": "fFSc25XZd5k",
+   "youtube_duration": 164,
+   "title": "Happy Italian American heritage month, New York City",
+   "date": "October 10, 2026",
+   "iso_date": "2026-10-10",
+   "type": "video",
+   "source": "youtube",
+   "reliability": "auto",
+   "text": "At the turn of the 20th century, thousands of Italians left their homes in towns and villages across Italy and journeyed to New York City. They came with hopes, dreams, and a belief in the promise of our nation. But like so many immigrants before and since, they were met with unrelenting struggle and discrimination. To get by, they took on the most grueling and dangerous work, including digging our city's subway tunnels, building our bridges, and toiling in cramped sweat shops. Italian immigrants formed some of the city's earliest mutual aid societies, forced to rely on each other for a social safety net that government had yet to create. Pope Leo I 13th even dispatched a band of priests and nuns to establish parishes tending to immigrants needs, including Our Lady of Pompei, which still stands in the West Village. Through it all, Italians didn't turn away from New York City. Instead, they organized with the vision of a better future. This organizing was born in many ways in East Harlem, at the time a deeply impoverished neighborhood of nearly a 100,000 Italian New Yorkers. One of them was Veto Mark Antonio, a protege of Mayor Fierella LaGuardia, himself, the son of a poor Italian immigrant. Mark, as he was known, went on to serve seven terms in Congress and became one of the faces of the American left in the 20th century. He fought to expand social security and unemployment insurance for those left out of the New Deal. A lifelong civil rights crusader, he introduced some of the first anti-Jim Crow legislation into Congress. He was a staunch supporter of free speech and free healthcare for poor women and families. He served longer than any other third party legislator of his time. Proof that a different form of politics was not only possible but popular. Veto Mor Antonio's politics were based around the idea, radical at the time, that the working class had the same material interests regardless of their race, religion, or ethnic background. That the fight for a life of dignity was shared just as the struggle was. Italian-Ameans have fed our neighbors, paved the roads we walk on, and built some of the greatest institutions our city has ever known. All that and more. As Italian-Americans made New York home to the people's opera, iconic films like Mean Streets, and yes, the best pizza outside of Naples, we continue to fight for Vito Mar Antonio's vision of a government that works for all working people. We will forever owe him for his courage and for expanding our sense of the possible. Italian-American history is New York City history. Their stories are not simply worth telling, they are worth celebrating all these years later. Happy Italian Heritage Month, New York.",
+   "word_count": 465,
+   "speakers": [],
+   "mayor_quotes": [],
+   "mayor_text": "At the turn of the 20th century, thousands of Italians left their homes in towns and villages across Italy and journeyed to New York City. They came with hopes, dreams, and a belief in the promise of our nation. But like so many immigrants before and since, they were met with unrelenting struggle and discrimination. To get by, they took on the most grueling and dangerous work, including digging our city's subway tunnels, building our bridges, and toiling in cramped sweat shops. Italian immigrants formed some of the city's earliest mutual aid societies, forced to rely on each other for a social safety net that government had yet to create. Pope Leo I 13th even dispatched a band of priests and nuns to establish parishes tending to immigrants needs, including Our Lady of Pompei, which still stands in the West Village. Through it all, Italians didn't turn away from New York City. Instead, they organized with the vision of a better future. This organizing was born in many ways in East Harlem, at the time a deeply impoverished neighborhood of nearly a 100,000 Italian New Yorkers. One of them was Veto Mark Antonio, a protege of Mayor Fierella LaGuardia, himself, the son of a poor Italian immigrant. Mark, as he was known, went on to serve seven terms in Congress and became one of the faces of the American left in the 20th century. He fought to expand social security and unemployment insurance for those left out of the New Deal. A lifelong civil rights crusader, he introduced some of the first anti-Jim Crow legislation into Congress. He was a staunch supporter of free speech and free healthcare for poor women and families. He served longer than any other third party legislator of his time. Proof that a different form of politics was not only possible but popular. Veto Mor Antonio's politics were based around the idea, radical at the time, that the working class had the same material interests regardless of their race, religion, or ethnic background. That the fight for a life of dignity was shared just as the struggle was. Italian-Ameans have fed our neighbors, paved the roads we walk on, and built some of the greatest institutions our city has ever known. All that and more. As Italian-Americans made New York home to the people's opera, iconic films like Mean Streets, and yes, the best pizza outside of Naples, we continue to fight for Vito Mar Antonio's vision of a government that works for all working people. We will forever owe him for his courage and for expanding our sense of the possible. Italian-American history is New York City history. Their stories are not simply worth telling, they are worth celebrating all these years later. Happy Italian Heritage Month, New York.",
+   "mayor_word_count": 465,
+   "has_mayor_quotes": false,
+   "caption_source": "auto",
+   "video_segments": [
+    {
+     "t": 0.0,
+     "text": "At the turn of the 20th century,"
+    },
+    {
+     "t": 1.84,
+     "text": "thousands of Italians left their homes"
+    },
+    {
+     "t": 3.6,
+     "text": "in towns and villages across Italy and"
+    },
+    {
+     "t": 5.92,
+     "text": "journeyed to New York City. They came"
+    },
+    {
+     "t": 8.0,
+     "text": "with hopes, dreams, and a belief in the"
+    },
+    {
+     "t": 11.2,
+     "text": "promise of our nation. But like so many"
+    },
+    {
+     "t": 13.52,
+     "text": "immigrants before and since, they were"
+    },
+    {
+     "t": 15.76,
+     "text": "met with unrelenting struggle and"
+    },
+    {
+     "t": 17.76,
+     "text": "discrimination. To get by, they took on"
+    },
+    {
+     "t": 20.4,
+     "text": "the most grueling and dangerous work,"
+    },
+    {
+     "t": 22.48,
+     "text": "including digging our city's subway"
+    },
+    {
+     "t": 24.0,
+     "text": "tunnels, building our bridges, and"
+    },
+    {
+     "t": 26.16,
+     "text": "toiling in cramped sweat shops. Italian"
+    },
+    {
+     "t": 28.8,
+     "text": "immigrants formed some of the city's"
+    },
+    {
+     "t": 30.4,
+     "text": "earliest mutual aid societies, forced to"
+    },
+    {
+     "t": 32.8,
+     "text": "rely on each other for a social safety"
+    },
+    {
+     "t": 34.8,
+     "text": "net that government had yet to create."
+    },
+    {
+     "t": 37.12,
+     "text": "Pope Leo I 13th even dispatched a band"
+    },
+    {
+     "t": 39.44,
+     "text": "of priests and nuns to establish"
+    },
+    {
+     "t": 41.6,
+     "text": "parishes tending to immigrants needs,"
+    },
+    {
+     "t": 43.84,
+     "text": "including Our Lady of Pompei, which"
+    },
+    {
+     "t": 45.92,
+     "text": "still stands in the West Village."
+    },
+    {
+     "t": 48.08,
+     "text": "Through it all, Italians didn't turn"
+    },
+    {
+     "t": 50.16,
+     "text": "away from New York City. Instead, they"
+    },
+    {
+     "t": 52.88,
+     "text": "organized with the vision of a better"
+    },
+    {
+     "t": 54.4,
+     "text": "future. This organizing was born in many"
+    },
+    {
+     "t": 57.36,
+     "text": "ways in East Harlem, at the time a"
+    },
+    {
+     "t": 59.6,
+     "text": "deeply impoverished neighborhood of"
+    },
+    {
+     "t": 61.44,
+     "text": "nearly a 100,000 Italian New Yorkers."
+    },
+    {
+     "t": 64.08,
+     "text": "One of them was Veto Mark Antonio, a"
+    },
+    {
+     "t": 66.4,
+     "text": "protege of Mayor Fierella LaGuardia,"
+    },
+    {
+     "t": 68.8,
+     "text": "himself, the son of a poor Italian"
+    },
+    {
+     "t": 70.8,
+     "text": "immigrant. Mark, as he was known, went"
+    },
+    {
+     "t": 73.28,
+     "text": "on to serve seven terms in Congress and"
+    },
+    {
+     "t": 75.44,
+     "text": "became one of the faces of the American"
+    },
+    {
+     "t": 77.28,
+     "text": "left in the 20th century. He fought to"
+    },
+    {
+     "t": 79.6,
+     "text": "expand social security and unemployment"
+    },
+    {
+     "t": 82.08,
+     "text": "insurance for those left out of the New"
+    },
+    {
+     "t": 84.08,
+     "text": "Deal. A lifelong civil rights crusader,"
+    },
+    {
+     "t": 86.96,
+     "text": "he introduced some of the first anti-Jim"
+    },
+    {
+     "t": 89.28,
+     "text": "Crow legislation into Congress. He was a"
+    },
+    {
+     "t": 91.84,
+     "text": "staunch supporter of free speech and"
+    },
+    {
+     "t": 94.16,
+     "text": "free healthcare for poor women and"
+    },
+    {
+     "t": 96.32,
+     "text": "families. He served longer than any"
+    },
+    {
+     "t": 98.56,
+     "text": "other third party legislator of his"
+    },
+    {
+     "t": 100.48,
+     "text": "time. Proof that a different form of"
+    },
+    {
+     "t": 102.8,
+     "text": "politics was not only possible but"
+    },
+    {
+     "t": 104.96,
+     "text": "popular. Veto Mor Antonio's politics"
+    },
+    {
+     "t": 107.52,
+     "text": "were based around the idea, radical at"
+    },
+    {
+     "t": 109.84,
+     "text": "the time, that the working class had the"
+    },
+    {
+     "t": 112.24,
+     "text": "same material interests regardless of"
+    },
+    {
+     "t": 114.24,
+     "text": "their race, religion, or ethnic"
+    },
+    {
+     "t": 116.32,
+     "text": "background. That the fight for a life of"
+    },
+    {
+     "t": 118.48,
+     "text": "dignity was shared just as the struggle"
+    },
+    {
+     "t": 121.12,
+     "text": "was. Italian-Ameans have fed our"
+    },
+    {
+     "t": 124.08,
+     "text": "neighbors, paved the roads we walk on,"
+    },
+    {
+     "t": 126.24,
+     "text": "and built some of the greatest"
+    },
+    {
+     "t": 127.52,
+     "text": "institutions our city has ever known."
+    },
+    {
+     "t": 130.56,
+     "text": "All that and more. As Italian-Americans"
+    },
+    {
+     "t": 132.88,
+     "text": "made New York home to the people's"
+    },
+    {
+     "t": 134.72,
+     "text": "opera, iconic films like Mean Streets,"
+    },
+    {
+     "t": 137.44,
+     "text": "and yes, the best pizza outside of"
+    },
+    {
+     "t": 139.6,
+     "text": "Naples, we continue to fight for Vito"
+    },
+    {
+     "t": 142.24,
+     "text": "Mar Antonio's vision of a government"
+    },
+    {
+     "t": 144.0,
+     "text": "that works for all working people. We"
+    },
+    {
+     "t": 146.64,
+     "text": "will forever owe him for his courage and"
+    },
+    {
+     "t": 149.28,
+     "text": "for expanding our sense of the possible."
+    },
+    {
+     "t": 151.44,
+     "text": "Italian-American history is New York"
+    },
+    {
+     "t": 153.52,
+     "text": "City history. Their stories are not"
+    },
+    {
+     "t": 155.6,
+     "text": "simply worth telling, they are worth"
+    },
+    {
+     "t": 157.44,
+     "text": "celebrating all these years later. Happy"
+    },
+    {
+     "t": 160.32,
+     "text": "Italian Heritage Month, New York."
+    }
+   ]
+  },
   {
    "link": "/mayors-office/news/2026/10/mayor-mamdani-reopens-queens--lost-battalion-hall-following--25-.html",
    "url": "https://www.nyc.gov/mayors-office/news/2026/10/mayor-mamdani-reopens-queens--lost-battalion-hall-following--25-.html",
@@ -408358,7 +408669,10 @@
    "mayor_quotes": [],
    "has_mayor_quotes": false,
    "word_count": 10358,
-   "mayor_word_count": 3288
+   "mayor_word_count": 3288,
+   "youtube_url": "https://www.youtube.com/watch?v=iazY_UDQdck",
+   "youtube_video_id": "iazY_UDQdck",
+   "youtube_duration": 6075
   },
   {
    "link": "/youtube/CZc8ONfUuMg",
@@ -411648,9 +411962,9 @@
   }
  ],
  "youtube_coverage": {
-  "channel_videos": 280,
-  "covered": 272,
-  "listing_degraded": true,
+  "channel_videos": 281,
+  "covered": 273,
+  "listing_degraded": false,
   "unaccounted": [
    {
     "id": "fPZJ53lLKiA",
@@ -411693,12 +412007,11 @@
     "date": "20260218"
    }
   ],
-  "last_ingest": "2026-10-10",
-  "captions_enabled": false,
-  "rate_limited": false,
-  "listed_this_run": 15
+  "last_ingest": "2026-10-11",
+  "captions_enabled": true,
+  "rate_limited": false
  },
- "youtube_last_run": "2026-10-10T23:04:43Z",
+ "youtube_last_run": "2026-10-11T12:16:21Z",
  "external_last_run": "2026-10-10T23:00:03Z",
  "agencies_last_run": "2026-10-08T17:46:52Z"
 }
