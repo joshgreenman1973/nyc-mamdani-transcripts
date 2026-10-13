@@ -408688,7 +408688,10 @@
    "mayor_quotes": [],
    "has_mayor_quotes": false,
    "word_count": 10358,
-   "mayor_word_count": 3288
+   "mayor_word_count": 3288,
+   "youtube_url": "https://www.youtube.com/watch?v=iazY_UDQdck",
+   "youtube_video_id": "iazY_UDQdck",
+   "youtube_duration": 6075
   },
   {
    "link": "/youtube/CZc8ONfUuMg",
@@ -411978,9 +411981,9 @@
   }
  ],
  "youtube_coverage": {
-  "channel_videos": 281,
+  "channel_videos": 282,
   "covered": 273,
-  "listing_degraded": true,
+  "listing_degraded": false,
   "unaccounted": [
    {
     "id": "fPZJ53lLKiA",
@@ -412013,6 +412016,11 @@
     "date": "20260224"
    },
    {
+    "id": "6k8T9mmS_aQ",
+    "title": "Cancelling a subscription shouldn't be this hard.",
+    "date": "20261012"
+   },
+   {
     "id": "pT2QvGfabC0",
     "title": "দেখা হবে শো-তে!",
     "date": "20260817"
@@ -412023,12 +412031,11 @@
     "date": "20260218"
    }
   ],
-  "last_ingest": "2026-10-11",
-  "captions_enabled": false,
-  "rate_limited": false,
-  "listed_this_run": 15
+  "last_ingest": "2026-10-13",
+  "captions_enabled": true,
+  "rate_limited": false
  },
- "youtube_last_run": "2026-10-13T01:45:24Z",
+ "youtube_last_run": "2026-10-13T12:33:18Z",
  "external_last_run": "2026-10-13T01:40:40Z",
  "agencies_last_run": "2026-10-08T17:46:52Z"
 }
