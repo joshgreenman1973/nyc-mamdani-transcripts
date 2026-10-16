@@ -302897,7 +302897,7 @@
    "reliability": "official",
    "youtube_url": "https://www.youtube.com/watch?v=OoyGQ-bBt3g",
    "youtube_video_id": "OoyGQ-bBt3g",
-   "youtube_duration": 1275
+   "youtube_duration": 1276
   },
   {
    "link": "/mayors-office/news/2026/04/bringing-universal-child-care-to-new-york-city--mayor-mamdani-de.html",
@@ -414718,7 +414718,10 @@
    "mayor_quotes": [],
    "has_mayor_quotes": false,
    "word_count": 10358,
-   "mayor_word_count": 3288
+   "mayor_word_count": 3288,
+   "youtube_url": "https://www.youtube.com/watch?v=iazY_UDQdck",
+   "youtube_video_id": "iazY_UDQdck",
+   "youtube_duration": 6075
   },
   {
    "link": "/youtube/CZc8ONfUuMg",
@@ -418008,9 +418011,9 @@
   }
  ],
  "youtube_coverage": {
-  "channel_videos": 284,
+  "channel_videos": 285,
   "covered": 275,
-  "listing_degraded": true,
+  "listing_degraded": false,
   "unaccounted": [
    {
     "id": "fPZJ53lLKiA",
@@ -418043,6 +418046,11 @@
     "date": "20260224"
    },
    {
+    "id": "7n-Sfhouzdg",
+    "title": "Mayor Mamdani Cuts the Ribbon on New Affordable Housing",
+    "date": "20261016"
+   },
+   {
     "id": "6k8T9mmS_aQ",
     "title": "Cancelling a subscription shouldn't be this hard.",
     "date": "20261012"
@@ -418058,12 +418066,11 @@
     "date": "20260218"
    }
   ],
-  "last_ingest": "2026-10-15",
-  "captions_enabled": false,
-  "rate_limited": false,
-  "listed_this_run": 15
+  "last_ingest": "2026-10-16",
+  "captions_enabled": true,
+  "rate_limited": false
  },
- "youtube_last_run": "2026-10-15T22:48:17Z",
+ "youtube_last_run": "2026-10-16T13:57:01Z",
  "external_last_run": "2026-10-15T22:43:32Z",
  "agencies_last_run": "2026-10-13T23:33:12Z"
 }
