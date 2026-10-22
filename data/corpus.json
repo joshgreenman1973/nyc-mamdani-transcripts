@@ -431721,7 +431721,10 @@
    "mayor_quotes": [],
    "has_mayor_quotes": false,
    "word_count": 10358,
-   "mayor_word_count": 3288
+   "mayor_word_count": 3288,
+   "youtube_url": "https://www.youtube.com/watch?v=iazY_UDQdck",
+   "youtube_video_id": "iazY_UDQdck",
+   "youtube_duration": 6075
   },
   {
    "link": "/youtube/CZc8ONfUuMg",
@@ -435013,7 +435016,7 @@
  "youtube_coverage": {
   "channel_videos": 290,
   "covered": 280,
-  "listing_degraded": true,
+  "listing_degraded": false,
   "unaccounted": [
    {
     "id": "sBUNuNmVGbs",
@@ -435066,12 +435069,11 @@
     "date": "20260218"
    }
   ],
-  "last_ingest": "2026-10-21",
-  "captions_enabled": false,
-  "rate_limited": false,
-  "listed_this_run": 15
+  "last_ingest": "2026-10-22",
+  "captions_enabled": true,
+  "rate_limited": false
  },
- "youtube_last_run": "2026-10-21T22:54:49Z",
+ "youtube_last_run": "2026-10-22T12:28:54Z",
  "external_last_run": "2026-10-21T22:50:11Z",
  "agencies_last_run": "2026-10-21T22:54:43Z"
 }
