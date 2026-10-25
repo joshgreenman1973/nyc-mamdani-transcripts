@@ -2,9 +2,9 @@
  "generated_at": "2026-10-24T22:00:59Z",
  "from_date": "2026-01-01",
  "source": "https://www.nyc.gov/mayors-office/news/",
- "total": 1540,
+ "total": 1541,
  "type_counts": {
-  "video": 174,
+  "video": 175,
   "press_conference": 162,
   "agency_release": 409,
   "other": 462,
@@ -2961,6 +2961,73 @@
     {
      "t": 1754.08,
      "text": "Thank"
+    }
+   ]
+  },
+  {
+   "link": "/youtube/BR-zfvjgwXI",
+   "url": "https://www.youtube.com/watch?v=BR-zfvjgwXI",
+   "youtube_url": "https://www.youtube.com/watch?v=BR-zfvjgwXI",
+   "youtube_video_id": "BR-zfvjgwXI",
+   "youtube_duration": 23,
+   "title": "Early Voting starts today!",
+   "date": "October 24, 2026",
+   "iso_date": "2026-10-24",
+   "type": "video",
+   "source": "youtube",
+   "reliability": "auto",
+   "text": "Polls are open. Early voting has started. Go to vote.nyc to find out your polling site. Polls are open. It's time to vote. >> Early voting starts today. Continues until November 1st. >> And remember to turn your ballot over to vote on five questions on making government run faster. Polls are open, everyone. Time to vote. >> Yep. Yep. Yeah. Here she is.",
+   "word_count": 64,
+   "speakers": [],
+   "mayor_quotes": [],
+   "mayor_text": "Polls are open. Early voting has started. Go to vote.nyc to find out your polling site. Polls are open. It's time to vote. >> Early voting starts today. Continues until November 1st. >> And remember to turn your ballot over to vote on five questions on making government run faster. Polls are open, everyone. Time to vote. >> Yep. Yep. Yeah. Here she is.",
+   "mayor_word_count": 64,
+   "has_mayor_quotes": false,
+   "caption_source": "auto",
+   "video_segments": [
+    {
+     "t": 2.24,
+     "text": "Polls are open. Early voting has"
+    },
+    {
+     "t": 4.16,
+     "text": "started. Go to vote.nyc to find out your"
+    },
+    {
+     "t": 6.16,
+     "text": "polling site. Polls are open. It's time"
+    },
+    {
+     "t": 7.92,
+     "text": "to vote."
+    },
+    {
+     "t": 9.12,
+     "text": ">> Early voting starts today. Continues"
+    },
+    {
+     "t": 10.88,
+     "text": "until November 1st."
+    },
+    {
+     "t": 12.0,
+     "text": ">> And remember to turn your ballot over to"
+    },
+    {
+     "t": 14.0,
+     "text": "vote on five questions on making"
+    },
+    {
+     "t": 15.76,
+     "text": "government run faster. Polls are open,"
+    },
+    {
+     "t": 17.6,
+     "text": "everyone. Time to vote."
+    },
+    {
+     "t": 19.52,
+     "text": ">> Yep. Yep. Yeah. Here she is."
     }
    ]
   },
@@ -440330,7 +440397,10 @@
    "mayor_quotes": [],
    "has_mayor_quotes": false,
    "word_count": 10371,
-   "mayor_word_count": 5169
+   "mayor_word_count": 5169,
+   "youtube_url": "https://www.youtube.com/watch?v=iazY_UDQdck",
+   "youtube_video_id": "iazY_UDQdck",
+   "youtube_duration": 6075
   },
   {
    "link": "/youtube/CZc8ONfUuMg",
@@ -443620,9 +443690,9 @@
   }
  ],
  "youtube_coverage": {
-  "channel_videos": 294,
-  "covered": 284,
-  "listing_degraded": true,
+  "channel_videos": 295,
+  "covered": 285,
+  "listing_degraded": false,
   "unaccounted": [
    {
     "id": "sBUNuNmVGbs",
@@ -443675,12 +443745,11 @@
     "date": "20260218"
    }
   ],
-  "last_ingest": "2026-10-24",
-  "captions_enabled": false,
-  "rate_limited": false,
-  "listed_this_run": 15
+  "last_ingest": "2026-10-25",
+  "captions_enabled": true,
+  "rate_limited": false
  },
- "youtube_last_run": "2026-10-24T22:06:23Z",
+ "youtube_last_run": "2026-10-25T12:17:09Z",
  "external_last_run": "2026-10-24T22:01:33Z",
  "agencies_last_run": "2026-10-23T15:42:07Z"
 }
