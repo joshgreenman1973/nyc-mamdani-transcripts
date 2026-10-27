@@ -2,11 +2,11 @@
  "generated_at": "2026-10-26T23:24:23Z",
  "from_date": "2026-01-01",
  "source": "https://www.nyc.gov/mayors-office/news/",
- "total": 1543,
+ "total": 1545,
  "type_counts": {
   "ceremony": 31,
   "agency_release": 410,
-  "video": 175,
+  "video": 177,
   "press_conference": 162,
   "other": 462,
   "executive_order": 157,
@@ -83,6 +83,3984 @@
    "mayor_text": "",
    "mayor_word_count": 0,
    "has_mayor_quotes": false
+  },
+  {
+   "link": "/youtube/vj1HgpnslHw",
+   "url": "https://www.youtube.com/watch?v=vj1HgpnslHw",
+   "youtube_url": "https://www.youtube.com/watch?v=vj1HgpnslHw",
+   "youtube_video_id": "vj1HgpnslHw",
+   "youtube_duration": 68,
+   "title": "Nothing should stop New Yorkers from voting  -- especially not the government.",
+   "date": "October 26, 2026",
+   "iso_date": "2026-10-26",
+   "type": "video",
+   "source": "youtube",
+   "reliability": "verified",
+   "text": "Only in New York City can you vote in places like the Metropolitan Museum of Art. I just voted here on the first day of early voting. It only took five minutes. Have you voted yet? He’s going to get back to me. With so much misinformation about our elections this year, here's what every New Yorker should know. Voting is easy and safe. In New York City, you don't need to bring anything with you to cast your vote at the polls. We'll even give you a pen. Our city's elections are secure. Thousands of poll watchers and poll workers across the five boroughs make sure of it. Armed federal agents, including ICE, cannot be at New York polling places without a judicial warrant signed by a judge. If you see anything unusual at or near your polling site, or witness voter intimidation, stay calm and tell a poll worker. You can also call the Attorney General's hotline at this number. Early voting goes from now until November 1st. And election day is Tuesday, November 3rd. Visit: to check your registration, find your polling place and see your sample ballot. And if you're on line when the polls closed, stay on line. You can still cast your ballot. Voting is your fundamental right. No one, especially not the government, should stand in the way of New Yorkers exercising it. See you at the polls.",
+   "word_count": 235,
+   "speakers": [],
+   "mayor_quotes": [],
+   "mayor_text": "Only in New York City can you vote in places like the Metropolitan Museum of Art. I just voted here on the first day of early voting. It only took five minutes. Have you voted yet? He’s going to get back to me. With so much misinformation about our elections this year, here's what every New Yorker should know. Voting is easy and safe. In New York City, you don't need to bring anything with you to cast your vote at the polls. We'll even give you a pen. Our city's elections are secure. Thousands of poll watchers and poll workers across the five boroughs make sure of it. Armed federal agents, including ICE, cannot be at New York polling places without a judicial warrant signed by a judge. If you see anything unusual at or near your polling site, or witness voter intimidation, stay calm and tell a poll worker. You can also call the Attorney General's hotline at this number. Early voting goes from now until November 1st. And election day is Tuesday, November 3rd. Visit: to check your registration, find your polling place and see your sample ballot. And if you're on line when the polls closed, stay on line. You can still cast your ballot. Voting is your fundamental right. No one, especially not the government, should stand in the way of New Yorkers exercising it. See you at the polls.",
+   "mayor_word_count": 235,
+   "has_mayor_quotes": false,
+   "caption_source": "manual",
+   "video_segments": [
+    {
+     "t": 0.29,
+     "text": "Only in New York City"
+    },
+    {
+     "t": 1.33,
+     "text": "can you vote in places like the Metropolitan Museum of Art."
+    },
+    {
+     "t": 3.92,
+     "text": "I just voted here on the first day of early voting."
+    },
+    {
+     "t": 6.09,
+     "text": "It only took five minutes."
+    },
+    {
+     "t": 7.67,
+     "text": "Have you voted yet?"
+    },
+    {
+     "t": 9.38,
+     "text": "He’s going to get back to me."
+    },
+    {
+     "t": 10.55,
+     "text": "With so much misinformation about our elections this year,"
+    },
+    {
+     "t": 13.01,
+     "text": "here's what every New Yorker should know."
+    },
+    {
+     "t": 14.51,
+     "text": "Voting is easy and safe."
+    },
+    {
+     "t": 16.02,
+     "text": "In New York City,"
+    },
+    {
+     "t": 16.73,
+     "text": "you don't need to bring anything with you to cast your vote at the polls."
+    },
+    {
+     "t": 19.56,
+     "text": "We'll even give you a pen."
+    },
+    {
+     "t": 20.81,
+     "text": "Our city's elections are secure."
+    },
+    {
+     "t": 22.48,
+     "text": "Thousands of poll watchers"
+    },
+    {
+     "t": 23.82,
+     "text": "and poll workers across the five boroughs"
+    },
+    {
+     "t": 25.23,
+     "text": "make sure of it."
+    },
+    {
+     "t": 26.07,
+     "text": "Armed federal agents, including ICE,"
+    },
+    {
+     "t": 27.82,
+     "text": "cannot be at New York"
+    },
+    {
+     "t": 29.15,
+     "text": "polling places without a judicial warrant"
+    },
+    {
+     "t": 30.99,
+     "text": "signed by a judge."
+    },
+    {
+     "t": 32.24,
+     "text": "If you see anything unusual at or near your polling site,"
+    },
+    {
+     "t": 35.2,
+     "text": "or witness voter intimidation,"
+    },
+    {
+     "t": 36.95,
+     "text": "stay calm and tell a poll worker."
+    },
+    {
+     "t": 38.54,
+     "text": "You can also call the Attorney General's hotline at this number."
+    },
+    {
+     "t": 42.46,
+     "text": "Early voting goes from now until November 1st."
+    },
+    {
+     "t": 44.79,
+     "text": "And election day is Tuesday, November 3rd."
+    },
+    {
+     "t": 47.17,
+     "text": "Visit:"
+    },
+    {
+     "t": 48.51,
+     "text": "to check your registration,"
+    },
+    {
+     "t": 49.84,
+     "text": "find your polling place and see your sample ballot."
+    },
+    {
+     "t": 52.13,
+     "text": "And if you're on line  when the polls closed, stay on line."
+    },
+    {
+     "t": 54.64,
+     "text": "You can still cast your ballot."
+    },
+    {
+     "t": 55.97,
+     "text": "Voting is your fundamental right."
+    },
+    {
+     "t": 57.97,
+     "text": "No one, especially not the government,"
+    },
+    {
+     "t": 59.68,
+     "text": "should stand in the way of New Yorkers exercising it."
+    },
+    {
+     "t": 62.02,
+     "text": "See you at the polls."
+    }
+   ]
+  },
+  {
+   "link": "/youtube/GMiAchLMNdk",
+   "url": "https://www.youtube.com/watch?v=GMiAchLMNdk",
+   "youtube_url": "https://www.youtube.com/watch?v=GMiAchLMNdk",
+   "youtube_video_id": "GMiAchLMNdk",
+   "youtube_duration": 2240,
+   "title": "Mayor Mamdani Holds Press Conference to Make Stormwater Management & Water Conservation Announcement",
+   "date": "October 26, 2026",
+   "iso_date": "2026-10-26",
+   "type": "video",
+   "source": "youtube",
+   "reliability": "auto",
+   "text": "Good morning, Central Park. >> Morning. >> It is a pleasure to join so many friends and partners as we mark a new chapter for clean water here in New York City. I want to acknowledge we have a lot of leaders from inside and outside of our administration with us. We have our DAP commissioner, Lisa Garcia, who will be our MC for the day. We have our parks commissioner, Trisha Mamura. We have the New York State Environmental Facilities Corporation President and CEO, Moren Coleman. We have our city council speaker Julie Menon. We have Central Park Conservancy President Betsy Smith. We have our Manhattan Burough President Brad Hyman Seagull. We have our council member Gail Brewer. We also want to acknowledge alongside all of the elected officials, the private donors who helped to fund this project. We want to also acknowledge council member Ysef Salam who is here with us as well as all of the Central Park Conservatory staff who worked on this incredible project. If we can have a round of applause for all of them. THANK YOU. NOW, in season 1, episode 16 of Avatar the Last Airbender, Jung Jung of The Order of the White Lotus teaches us water brings healing and life. While we may lack the magic powers of water bending here in New York City, incredible feats of engineering throughout our history have gotten us pretty close. Year after year, generation after generation, New Yorkers have found ways to bring water, healing, and life to every corner of the five burrows. In 1837, we began to build the Croin Aqueduct, an innovative system that used gravity to carry drinking water 41 miles from the Croin River into Manhattan. At the turn of the 20th century, we constructed a maze of underground sewers designed to make our city cleaner, safer, and healthier. In the 1980s, updates to the North River and Red Hook treatment plants allowed us to keep polluted water out of our rivers. Today I am so proud to announce that New York City has engineered yet another feat of civic water bending. A cuttingedge water recirculation system for Central Park's pool lock and mir water bodies. The benefits of the system are twofold. First, as it stands now, we are forced to use our precious drinking water supplies to keep these bodies of water at the right level. This recirculation system will allow us to reuse the same water supply again and again and direct the flow of clean water into the homes of New Yorkers instead. Second, when storms hit, the pool and mirror can overflow, overwhelming our sewer systems and forcing storm water onto the street. But when this project is done, we will have the ability to lower the water levels in Central Park when we know a major storm is coming, creating room for expected rainfall and bringing down the risk of a flood. This landmark project, made possible by $35 million in city, state, and private funding, will save our city more than 175 million gallons of clean water every year. That is 2.8 billion glasses from the tap, 131 million chances to wash your hands after a bodega sandwich on the run gets a little bit too messy, or 3 million baths before bedtime. And it will mean that when extreme storms hit, New Yorkers who live near the park can rest a bit easier, knowing that we have one more tool at our disposal to protect them from flooding. This project will mean less water wasted, more storm water out of sight, and countless pant legs saved from an unforeseen ocean on the sidewalk. As we confront climate change and devise new strategies to keep New Yorkers safe from extreme storms and heavy rainfall, we are pursuing the innovative solutions that this moment demands. We are working across city government with state partners and nonprofit leadership to deliver the public excellence that will improve New Yorkers lives. So today we will break ground here in Central Park preparing to lay the engines, the valves, the levers, and the pipes needed to build this recirculation system. And then come the fall of 2028 sooner than we realize, a New Yorker will sit where we stand today, enjoying the reflection of the clear water on a fall morning and taking in a moment of quiet underneath them, deep in the ground. This system will be hard at work doing its part to keep water and life flowing through our city. Thank you. >> And with that, I'm going to pass it over to our MC for the day, DP Commissioner Lisa Garcia. >> Great. Thank you so much. Thank you, Mayor Montani. Thank you so much. It's great to be here to celebrate and announce this uh great partnership collaboration with all our partners and of course the investment to make sure that we're conserving water and also minimizing storm water um managing storm water runoff and of course protecting the communities from flooding. To tell you more about this innovative project we are announcing, uh please join me in welcoming city council speaker Julie Menon to share a few remarks. Thank you so much, Commissioner Garcia. And I really want to thank the mayor for his commitment to this project. I want to thank my colleagues in government, uh, city council speaker Gail Brewer, who has pushed really hard for this project. Uh, Council Member Yousef Salam for his leadership here. And, uh, Betsy, I really want to thank you for your incredible stewardship of this magnificent park. We so appreciate, uh, your leadership. Central Park is truly a marvel of green majesty in the heart of the concrete jungle. As the years have passed, the city has changed and our park has naturally changed with it. Since it was completed in 1876, we've added dozens of playgrounds, of baseball fields. What was once a pen to hold sheep overnight is now actually Tavern on the Green. Uh, and while we have long run, and in my case now, sometimes walked and talked around the reservoir, we no longer drink from it because our big city outgrew its small supply. And today, in that incredible spirit of change, we are proud to announce another one, breaking ground on the brand new North End Recirculation System. Instead of diverting water to flow out of the park, this new system, as the mayor said, will pump the water across the north meadow ball fields to flow into the pool, keeping a significant amount of water out of the city's sewer systems. It will allow the park to turn off the supply of city drinking water, conserving 175 million gallons, as you heard, of water each and every year. We are also introducing a filtration system to improve water quality and mitigate algae growth. These changes of course might not be visible to the tourist eye or to most New Yorkers, but they will certainly make a big difference. With the new system in place, heavy rain will not flood platforms at the 116th Street Station or devastate basement apartments in East Harlem. our fresh water can go towards hydrating thirsty locals and tourists alike rather than sustaining the park's bodies of water. It's also a difference that city council is so proud to support. We allocated nearly $3 million for this project to be spearheaded by the conservancy. The conservancy is deeply dedicated to the maintenance of this historic and iconic piece of land and their constant stewardship enriches the lives of the nearly 42 million people who come to enjoy this park each and every year. So, in closing, I want to thank all of the leaders in government for their incredible partnership on this very, very important project. And I want to thank um all of the colleagues uh at the city council for supporting it. And the mayor, thank you for your partnership. Thank you. Great. Thank you so much, Speaker Mannon. Um, and now we'll hear from Betsy Smith, president and CEO of Central Park Conservancy, a very important partner to this great feat. Thank you very, very much. Good morning, everyone, and thank you for joining us here at the Harlem Mirror. Uh, Mr. Mayor, our elected partners, donors, friends, welcome. We are so pleased to celebrate this tremendous project together. My name is Betsy Smith. As you've heard, I'm the president and chief executive of the Central Park Conservancy. And we are so proud to be the nonprofit nonfor-profit partner entrusted by the city of New York with the complete care of the 843 acres of Central Park. We cherish this responsibility to keep Central Park a place worthy of every New Yorker 365 days a year. But our work extends far beyond the daily maintenance of this landmarked public space. We are focused on long-term sustainability and on excellence in every aspect of our commitment to the park and to the city. We have made that commitment so that this beloved place powerfully connects future generations of New Yorkers to beauty and to nature. This project, the largest water recirculation and storm water management system of its kind in New York City, exemplifies that. It is the kind of work most people will never see, but its impact will be felt for decades. It is part of our broader commitment to sustainability, protecting the park's landscapes and water resources, building climate resilience, and ensuring that every investment we make help Central Park thrive for the long term. Our work here builds on years of listening to and working alongside the North End community. Today you entered this event through the gate of the exonerated which we renamed in partnership with Harlem residents and council member Salam. That effort grew out of our community feedback, creating meaningful tribute to the Central Park 5. The Davis Center built on that commitment, reconnecting the park with its surrounding neighborhoods and creating a welcoming destination shaped by its neighbors. And now with this project and its related shoreline restoration, we are continuing to vest invest in a vital part of the park and the communities that it serves. None of this would be possible without our extraordinary nearly 50-year relationship between the conservancy and the city of New York. And we are grateful to the mayor, our city and state partners, and our elected officials for their leadership and trust. And we thank our philanthropic partners. another dedicated cohort of New Yorkers for helping make this ambitious project possible. I also want to thank our dedicated capital projects team, the conservancy staff along with our design and engineering partners whose expertise and hard work have brought us to this day. As one of New York City's most important civic spaces, Central Park is no ordinary park. Which means we at the conservancy must think beyond ordinary work. We must always be a model for how the public realm can evolve to meet the needs of a changing city. In doing so, we honor and protect the original purpose of this magnificent space, a sanctuary for all New Yorkers, free from the pace and pressures of urban life. Thank you all for being part of this important announcement. Thank you so much, Faith Betsy. And now it's my pleasure to welcome Morin Coleman, president and CEO of the New York State Environmental Facilities Corporation. Come on. Good morning, everyone. It's so uh great to be at uh this beautiful park on a beautiful morning and I can't think of a better way to start a Monday morning than to be here with uh everybody that's joined us today. So I'm uh also very proud to be here on behalf of Governor Kathy Hokll. Today we're celebrating the tangible impacts of the governor's nationleading water investments and New York's historic $4.2 $2 billion environmental bond act right here in Harlem. This is what environmental leadership looks like. Strengthening our infrastructure, protecting our communities, and delivering real results for New Yorkers. As storms continue to be more intense and more frequent, we've come to understand we can no longer afford to be reactive. We must be proactive and take action today to safeguard our future. This project will mitigate local localized flood risk. But it's also going to improve water quality and help manage harmful algo blooms, restore vital habitats, conserve ga millions of gallons of portable water, and help keep millions of gallons of polluted storm water out of the Harlem River. Projects of this scale, they don't happen without careful planning and the right investment. and go govern Governor Hokll is making sure that significant environmental projects can move from the planning stage to progress on the ground. The governor championed the Clean Water, Clean Air and Green Jobs Environmental Bond Act of 2022 to help communities make the investments needed to confront the impacts of intense storms, protect clean air and water, and build a more resilient future. EFC has awarded more than $50 million dollars in environmental bond act funding through the green resiliency grants to five projects in New York City, including the project we're celebrating today. And a week ago, last Monday, as the first installment of our $3.75 billion clean water investment plan, Governor Hokll announced 500 million, half a billion dollars in state water grants across the state, including a $25 million grant uh to New York City for a water infrastructure uh project that will help protect the Hudson River. This funding matters. It closes critical funding gaps so that ambitious projects are more affordable and it makes transformative projects possible. Here in Central Park, the state's $10 million grant is helping to protect a treasured public space while strengthening flood resilience and safeguarding the waters that connect us all. And I want to thank all of you that are here today that made this pop uh possible. And thank you to Mayor Mdani, Commissioner Garcia and DP, the um Commissioner Shamura and New York City Parks and the um Park Conservancy, Central Park Conservancy, and all the partners, city council that are here today again and help to make this project possible. Thank you. >> All right. Thank you so much, Moren, and of course to Governor Hokll. It's great to have a great state partner. Um, next, please join me in bringing up Manhattan B president Brad Hyman Seagull. >> Thank you. >> Thank you. Good morning. Good morning, Brad Hman, Seagull, Manhattan B. Thank you, Mr. Mayor, Madam Speaker, commissioners, council members. Uh, I'd like to shout out Shadik Mitchell, first vice chair of community board 10, who is here. Please give him a round of applause. Um, and I know he and Council Member Salam agree that investing in the northern portion of Central Park is crucial. And I'm very proud to have committed a half million dollars toward that effort. It's not just the water that we're clearing up, but it's also protecting some cultural institutions across the street, including the Museum of the City of New York and Musea Delbario, which will be protected their uh artifacts uh from this new storm water uh resilience system. And the enormity of this project is tremendous. And to help you visualize that, 200 Olympic size pools of water diverted from sewers per year. Imagine our mayor fully clothed jumping into 200 swimming pools. It's significant. And I want to I want to thank all of our partners in government because um water is truly the essence of life and making it clear and clean and safe um is really a fundamental role of government. So, thank you so much. >> Thank you so much, Brad. We'll look forward to the mayor jumping into 200 new pools. Um, okay. And now we have Council Member Gail Brewer. Please come to the podium. Thank you so much for your leadership. Thank you very much, Mr. Mayor. Luckily, this is a non-controversial project. Congratulations. And I also definitely want to thank uh Betsy Smith and everybody at the conservancy, Satique Mitchell, David Saltenstall, former intern, Mr. Mayor, just so you know, to add to the list. I want to be clear on that. Um, so I am ecstatic. I don't understand one bit of the engineering but it sounds very exciting. Um obviously we want to reduce the sewer over overflows in the park. We want uh not to have filtration systems for quoting but definitely here. We want to make sure that this doesn't look like I hate to say some other places where there's a lot of sedimentation not will will not be here and it will link water courses. It will make historic efforts and ongoing enhancements to make the system more sustainable, resilient, and healthier. Is it really to me it's very exciting to have this relationship between parks uh the uh uh CPC and DP and the issue is obviously by redoing the amazing work that was done to redo the Dana center and then to redo obviously D the Davis center that was controversial got through it and the fact of the matter is this will be adding to the amazing support for the northern part of the park. Um, we will have the new pumping, the filtration, the connecting piping, and that will reduce the need for fresh city water in the pool, the lock, and the mirror system. And so, I'm just here like everybody else to say, uh, other parts of the city are still dealing with the CSO, the combined sewage overflow, but that will not be a problem here. And maybe we can learn how it can be done elsewhere. Um, stabilize the shoreline edges to prevent erosion. The only issue when I came over, somebody was feeding the ducks. I don't know how you're going to stop that, Betsy. Thank you very much. Thank you, council member. All right, we'll deal with uh this project for now and worry about the ducks in the future, but as we've heard from our distinguished speakers, thank you so much everyone. This project will deliver benefits to Central Park far beyond the work taking place underground. From DP's perspective, yes, this project is certainly about infrastructure, but it's also about people. It's about ensuring future generations can enjoy these spaces while making our city more resilient to climate change. By better managing water use and levels, we can capture storm water, ease pressure on local sewers, reduce combined sewer overflows, as mentioned, lower flood risk to the community, and of course, conserve clean drinking water. What makes this effort inspiring um to many of us especially as the daughter of an engineer is that it works with the landscape and vision by the visionary by Olmstead and Vox from years ago but it's adapting it to meet today's challenges and that's really what we need to do is keep adapting and delivering protections for future New Yorkers. This is the best kind of infrastructure unseen but still improving lives before major storms. Water levels in Harlem Mir will be lowered to create storage capacity. During storms, that space will absorb the rainfall instead of sending it into our sewers, easing the strain on the local communities. Equally important, the project reduces Central Park's reliance on the best water in the world, New York City's portable water supply. The closed loop circulation, as you've heard, that system will also move among uh water among the mirror, the lock, and the pool, enhancing water quality and reducing algae blooms in hot weather. D is equally proud to contribute more than $14 million towards this $35 million investment, which will keep about $132 million gallons of storm water out of local sewers while conserving an estimated 175 million gallons of water depicted more visually over here by our posters. Um, today's groundbreaking is a commitment to resiliency, sustainability, and stewardship, and to preserving one of New York City's most beloved public spaces for generations to come. I especially want to thank DP's team um, who helped with this partnership and their vision and some of the engineering. I really look forward to seeing the benefits of this project for many years ahead. Again, thank you to everyone, all of our partners, and all of you. Uh, thank you so much again. Congratulations to everyone. Um, and I will turn it back to the mayor now. Thank you everyone. >> Thank you. >> Thank you to our speakers. >> The mayor will now take questions. >> One minute. >> Start with on topics and then we'll have time for off topics as well. Do you have any on topic questions about today's announcement? >> None. General city and state if you could just wait for the mic. >> Hi, how you doing? >> How's it going? >> Um, first question, how long will this project take to implement? And second question, uh I'm sure I don't know if you saw FEMA announced um over the next 6 months they will start shifting financial responsibility for uh disaster relief onto states. Uh what does that mean for New York City and does that kind of put pressure uh on projects such as this to accelerate or or to implement more projects? >> Just the last part of the question one more time. >> Yeah. Does that put pressure on the city to implement more projects such as this um because of that shift of financial responsibility onto states? So, I'll I'll answer your first question and go into your second one. On on the first question, the estimated completion date is fall 2028 and we are incredibly excited about this project. Not only for all the reasons that you've heard, but also just to say very explicitly that the amount of rainfall the city is facing has only increased year after year. And that is something that's intensifying with the climate crisis. And we know that our sewage system is built at best to be able to accommodate about 1.75 in of rainfall per hour. And what this kind of an innovation allows us to do is to keep a lot of what would otherwise be uh overflow water that would have to be managed by streets outside of Central Park to keep that from happening by lowering the amount of water here in in in these specific sets of of water bodies. Uh, and that's going to have a not only a significant impact for anyone who loves and comes through Central Park, but also those who happen to live around Central Park, especially in Harlem, East Harlem, um, and and the northernmost parts of the Upper East Side. To to your second question, this should be work that unites every level of government. And we are here today because of the generosity and the commitment of city, state, and private donors. We would love to see a future where the federal government is a partner in these kinds of works because this is what it means to take care of people who call this city home, call this country home. And any actions by FEMA looking to offload responsibility uh to to the state level is frankly something that is looking to offload the very responsibility that comes with with leading and uh FEMA as well as leading federal agencies as a whole. >> Any other questions about today's announcement? Yes, Juliet, >> if you could just wait for the mic. Thank you. Good morning, Mr. Mayor. >> Morning. >> So, uh, to Gail Brewer's point, where else could this work? You know, there's flooding in the Rockaways every time across Cross Island Parkway, Northern Queens. These are areas that are perpetually flooding. Uh, does something like this work in those locations? >> So, we are excited about this project. We're also excited about the prospect of bringing this kind of an approach elsewhere. We're going to be looking to see if there are any other opportunities to apply a similar model elsewhere across the the five buraus. What I will say is that the even if it is not the exact approach of this project, there are other projects that have similar intents. So for example, cloud burst technology is a technology that can absorb excess rainfall, hold it for 24 to 48 hours, allow the sewage system to get to a place where it can handle that, and then release that rainfall. Permeable pavement is something else that we're looking at. Uh basically any kind of an approach that can absorb excess rainfall and allow the city a moment to breathe. in Staten Island, blue belts have been incredibly uh effective at at combating some of this rainfall. So, we're going to be taking this approach across the city. >> I think we're looking at anywhere where there is excess flooding that we can have an impact. And as you know, there is no shortage across our city. Um now that means in what's so exciting about this, I think outside you'll see a map that shows exactly where the flooding typically affects. We're talking about, I think, north of, I don't know, 90, 95th Street on the east side going up to maybe about 120th or so over many different avenues. That's flooding that for too long people have just been forced to accept as if it's a part of life. But we can take these kind of approaches. And we know that, you know, these are approaches that were proposed hundreds of years ago. It's exciting that we are now the partners that are able to de deliver and implement this. >> We'll take off topics, too. We'll go to Andrew from MC. >> Mayor, good morning. How you doing? Two election related questions. One is so far turnout is not only way ahead of the 2022 midterms, but even ahead of the mayoral election in New York City. I'm wondering what you ascribe that to. What is your sense from having voted and talked to people what you ascribe that to? And my second question is, are you surprised that at least thus far you haven't been used by Republicans beyond Bruce Blakeman? uh as more of a sort of boogeyman in the election that they've either decided not to do it, it's not working or or are you seeing it pretty much the way you expected there? So on the first, what I've heard from New Yorkers is an excitement to vote for something and when they're looking at this gubernatorial election, what they're seeing is that the governor has a clear record and a clear vision of making life more affordable in the nation's most expensive city. And Bruce Blakeman's vision is to work closer with ICE and to create a private militia in Nassau County. His vision is to look at HR1 cuts that could devastate up to 900,000 New Yorkers and take them off their health insurance and say, \"I'll cut Medicaid by half and then say that on television and then go on to say that he never said it.\" So, it's it's a little bit of a confusing campaign uh in in terms of what Blakeman is putting forward. But New Yorkers across the five buraus, I've heard both in person with the governor, are excited about 2K. They're excited about us finally working together where they haven't seen mayors and governors do that often in the past and to be able to deliver on common sense things even just like right here in Central Park. And to your second question, I think one of the reasons is that Republicans would prefer to not have to bring up a record of delivering free child care for 2-year-olds. They would prefer to not have to talk about holding Door Dash to account for $130 million and underpaying more than 260,000 uh employees. They would prefer to not have to talk about our ability to deliver on an ambitious agenda while also paving over 220,000 potholes at the same time. And that's the choice that they've made. And I don't blame them. >> Okay, we'll go next to Bobby. >> Hey, Mr. Mayor. >> How's it going, Bobby? >> Good. Um, one one election related question, one non-election. Uh you've been spending a lot of time the last few days with Governor Hokll. Um I wonder if you think some of your supporters here in the city who are maybe DSA, maybe more left-leaning might come out and vote for the governor who maybe they've been skeptical of in the past because of her reluctance to raise taxes and some other issues. Do you think they might turn out and vote for her because of your urging where they may not have otherwise? And then um secondly, I just want to get your response to the rape in Central Park the other night, whether you think um that's part of the pattern, whether New Yorkers should feel unsafe in the park, um especially at night. >> So, I think first and foremost, what happened to this survivor is horrific. This is something that no one should have to endure. We know that every New Yorker should be able to walk anywhere in our city at any time of day and they should be safe. And anything less than that is not something that I will ever justify or accept. And so when it comes to this specific case, the NYPD is conducting an investigation into it. And our administration is working to ensure that the survivor has the support that she needs to navigate the next steps. We are going to continue to work with survivors at large as well as providers and city partners to strengthen prevention and address gaps in support and to also hold perpetrators of sexual assault accountable and to ensure that this is a city that puts survivors needs first. you should feel unsafe. >> We are both proud of the fact that we are driving down crime overall across these five burrows and we will always say that any instance of crime is one too many and we have to be unrelenting in combating it. And to your first question, I think what what I've heard from many New Yorkers is an excitable excitement about the tangible things that the governor has delivered. A lot of times it feels like politics is something that has to be translated. Sometimes it feels as if it's a hobby only some people can afford. And when the governor and I have walked together across the streets of of our city, what we hear time and again is excitement about 2K, excitement about child care. We hear people who come up to us, we met uh a mother who told us that her son AJ being enrolled into 2K saved them $2,300 a month. that before this program existed that they were sending their son to another state with their grandmother at 4:00 a.m. every morning so that they could find a deal that they could afford. That is what this kind of a politics has delivered for people. And that's why I think there's so much excitement about voting for not just the maintenance of this program, but rather as the governor has said it, the expansion of this program so that is universal child care for every single 2-year-old across the city. >> Okay, we have time for a few more. We'll go next to Josie. Hi, Mayor. >> Hi, Josie. >> Um, I'm wondering similar early voting numbers. Do you see that as proof that your affordable agenda items are super popular and is that um fuel to push hope goal for tax hikes next year? And then I also have a question. In your remarks yesterday, you said that um unlike or let me find the quote. Sometimes there are political events that we have to go to and it's a little more difficult for me to be up on that stage. What exactly were you talking about there? >> Stream of consciousness comes at you fast. you know, um, like I I think what what I was referring to is is there are times where you you have to make a case and you know that you're going to have to really work to get people to that point. When it comes to the governor, when it comes to child care, you don't really have to make so much of a case because it makes itself. And that's what's been so exciting about working with the governor is that these are things that people can feel in their lives. The governor spoke about the fact that she was in the Bronx recently and uh a young man came up to her and said that he was going to move to Philadelphia until 2K was introduced and now his family is going to stay in the Bronx. And to me, that's that's what it's a reference to is that sometimes it's going stage by stage explaining how something relates to somebody's life. And with this work, it really explains itself. Uh and and to your first question, I think that what we're seeing is there's often been a politics of opposition, a politics of rejecting, you know, let's say the the the cruelty that we're seeing come out of a lot of federal policies. We also need to have an affirmative vision alongside that. It's not enough to just be an oppositional vision. And what I think is exciting so many New Yorkers is that they also have something to vote for. And whether that's child care, whether that's actually a working relationship between the city and the state, or whether it's the fact that we are taking all the kinds of steps to make a difference on problems that have long just been accepted as New York City issues. I mean, just think about today's announcement. For too long, there's been a sense of it floods. That's what happens. And we don't want to accept that any longer. We want to have a relentless ambition in this city for how we can deliver the best possible city for New Yorkers. Part of that is taking aim at the very kinds of issues that have been rationalized and justified for far too long. >> Victory too in Brazil. Does that mean uh you have more in this city or state? Uh, I'll tell you that yesterday when I was coming home, we we just got off the bridge and a number of New Yorkers streamed out of a bar and they were just chanting Lula's name. And I think it is indication of the fact that New Yorkers are excited. across the five buraus. I can tell you that when I had the opportunity to sit down with President Lulu when he came for the UN General Assembly, I shared how much he has meant to so many across this city, across this country, across the world, frankly, and a real admiration for the tangible things that he has been able to deliver for working people. And we've seen in the time since that meeting, he's gone on to reduce the work week from 44 hours to 40 hours, to guarantee two days of rest for Brazilians without a pay cut. These are the kinds of things that working people everywhere uh are looking for. A life with more dignity, a life with more rest, a life with a little bit more room to breathe. And I think I've I I congratulate the president. And I think that it is a sign that the people united will never be defeated. >> Okay, we have time for just one more. We're going to go to Morgan >> just >> Hi, Mr. Mayor. >> Hi, Morgan. How are you? >> I'm good, thank you. Um, so Politico has a story out today saying that uh some of your allies seem to expect something from this relationship with you and Governor Kathy Hokll, you helping her campaign and state senator Julia Salazar uh said, quote, \"It would be really reasonable for him to expect clear commitments from the governor, including a new commitment on new taxes for the rich.\" Do you agree with this? And are you expecting something from this relationship from the governor? And do you think your allies are expecting something from this? Thank you. I >> I'm expecting a continuation of a positive and productive working relationship with the governor. And it's a relationship that has been critical in delivering $1.2 billion to making universal childcare a reality on just the eth day of our administration. It's also a relationship that was critical where we saw the governor uh make clear just how much of a partner she is to our city when we were facing uh a 12 billion fiscal deficit and she made the kinds of moves and measures to really put our city back on firm financial footing and I'm excited for that relationship to continue. It's been one that's delivered for working-class New Yorkers and I'm confident it's going to keep delivering. >> Thank you all. >> Thank you everyone.",
+   "word_count": 6252,
+   "speakers": [],
+   "mayor_quotes": [],
+   "mayor_text": "Good morning, Central Park. >> Morning. >> It is a pleasure to join so many friends and partners as we mark a new chapter for clean water here in New York City. I want to acknowledge we have a lot of leaders from inside and outside of our administration with us. We have our DAP commissioner, Lisa Garcia, who will be our MC for the day. We have our parks commissioner, Trisha Mamura. We have the New York State Environmental Facilities Corporation President and CEO, Moren Coleman. We have our city council speaker Julie Menon. We have Central Park Conservancy President Betsy Smith. We have our Manhattan Burough President Brad Hyman Seagull. We have our council member Gail Brewer. We also want to acknowledge alongside all of the elected officials, the private donors who helped to fund this project. We want to also acknowledge council member Ysef Salam who is here with us as well as all of the Central Park Conservatory staff who worked on this incredible project. If we can have a round of applause for all of them. THANK YOU. NOW, in season 1, episode 16 of Avatar the Last Airbender, Jung Jung of The Order of the White Lotus teaches us water brings healing and life. While we may lack the magic powers of water bending here in New York City, incredible feats of engineering throughout our history have gotten us pretty close. Year after year, generation after generation, New Yorkers have found ways to bring water, healing, and life to every corner of the five burrows. In 1837, we began to build the Croin Aqueduct, an innovative system that used gravity to carry drinking water 41 miles from the Croin River into Manhattan. At the turn of the 20th century, we constructed a maze of underground sewers designed to make our city cleaner, safer, and healthier. In the 1980s, updates to the North River and Red Hook treatment plants allowed us to keep polluted water out of our rivers. Today I am so proud to announce that New York City has engineered yet another feat of civic water bending. A cuttingedge water recirculation system for Central Park's pool lock and mir water bodies. The benefits of the system are twofold. First, as it stands now, we are forced to use our precious drinking water supplies to keep these bodies of water at the right level. This recirculation system will allow us to reuse the same water supply again and again and direct the flow of clean water into the homes of New Yorkers instead. Second, when storms hit, the pool and mirror can overflow, overwhelming our sewer systems and forcing storm water onto the street. But when this project is done, we will have the ability to lower the water levels in Central Park when we know a major storm is coming, creating room for expected rainfall and bringing down the risk of a flood. This landmark project, made possible by $35 million in city, state, and private funding, will save our city more than 175 million gallons of clean water every year. That is 2.8 billion glasses from the tap, 131 million chances to wash your hands after a bodega sandwich on the run gets a little bit too messy, or 3 million baths before bedtime. And it will mean that when extreme storms hit, New Yorkers who live near the park can rest a bit easier, knowing that we have one more tool at our disposal to protect them from flooding. This project will mean less water wasted, more storm water out of sight, and countless pant legs saved from an unforeseen ocean on the sidewalk. As we confront climate change and devise new strategies to keep New Yorkers safe from extreme storms and heavy rainfall, we are pursuing the innovative solutions that this moment demands. We are working across city government with state partners and nonprofit leadership to deliver the public excellence that will improve New Yorkers lives. So today we will break ground here in Central Park preparing to lay the engines, the valves, the levers, and the pipes needed to build this recirculation system. And then come the fall of 2028 sooner than we realize, a New Yorker will sit where we stand today, enjoying the reflection of the clear water on a fall morning and taking in a moment of quiet underneath them, deep in the ground. This system will be hard at work doing its part to keep water and life flowing through our city. Thank you. >> And with that, I'm going to pass it over to our MC for the day, DP Commissioner Lisa Garcia. >> Great. Thank you so much. Thank you, Mayor Montani. Thank you so much. It's great to be here to celebrate and announce this uh great partnership collaboration with all our partners and of course the investment to make sure that we're conserving water and also minimizing storm water um managing storm water runoff and of course protecting the communities from flooding. To tell you more about this innovative project we are announcing, uh please join me in welcoming city council speaker Julie Menon to share a few remarks. Thank you so much, Commissioner Garcia. And I really want to thank the mayor for his commitment to this project. I want to thank my colleagues in government, uh, city council speaker Gail Brewer, who has pushed really hard for this project. Uh, Council Member Yousef Salam for his leadership here. And, uh, Betsy, I really want to thank you for your incredible stewardship of this magnificent park. We so appreciate, uh, your leadership. Central Park is truly a marvel of green majesty in the heart of the concrete jungle. As the years have passed, the city has changed and our park has naturally changed with it. Since it was completed in 1876, we've added dozens of playgrounds, of baseball fields. What was once a pen to hold sheep overnight is now actually Tavern on the Green. Uh, and while we have long run, and in my case now, sometimes walked and talked around the reservoir, we no longer drink from it because our big city outgrew its small supply. And today, in that incredible spirit of change, we are proud to announce another one, breaking ground on the brand new North End Recirculation System. Instead of diverting water to flow out of the park, this new system, as the mayor said, will pump the water across the north meadow ball fields to flow into the pool, keeping a significant amount of water out of the city's sewer systems. It will allow the park to turn off the supply of city drinking water, conserving 175 million gallons, as you heard, of water each and every year. We are also introducing a filtration system to improve water quality and mitigate algae growth. These changes of course might not be visible to the tourist eye or to most New Yorkers, but they will certainly make a big difference. With the new system in place, heavy rain will not flood platforms at the 116th Street Station or devastate basement apartments in East Harlem. our fresh water can go towards hydrating thirsty locals and tourists alike rather than sustaining the park's bodies of water. It's also a difference that city council is so proud to support. We allocated nearly $3 million for this project to be spearheaded by the conservancy. The conservancy is deeply dedicated to the maintenance of this historic and iconic piece of land and their constant stewardship enriches the lives of the nearly 42 million people who come to enjoy this park each and every year. So, in closing, I want to thank all of the leaders in government for their incredible partnership on this very, very important project. And I want to thank um all of the colleagues uh at the city council for supporting it. And the mayor, thank you for your partnership. Thank you. Great. Thank you so much, Speaker Mannon. Um, and now we'll hear from Betsy Smith, president and CEO of Central Park Conservancy, a very important partner to this great feat. Thank you very, very much. Good morning, everyone, and thank you for joining us here at the Harlem Mirror. Uh, Mr. Mayor, our elected partners, donors, friends, welcome. We are so pleased to celebrate this tremendous project together. My name is Betsy Smith. As you've heard, I'm the president and chief executive of the Central Park Conservancy. And we are so proud to be the nonprofit nonfor-profit partner entrusted by the city of New York with the complete care of the 843 acres of Central Park. We cherish this responsibility to keep Central Park a place worthy of every New Yorker 365 days a year. But our work extends far beyond the daily maintenance of this landmarked public space. We are focused on long-term sustainability and on excellence in every aspect of our commitment to the park and to the city. We have made that commitment so that this beloved place powerfully connects future generations of New Yorkers to beauty and to nature. This project, the largest water recirculation and storm water management system of its kind in New York City, exemplifies that. It is the kind of work most people will never see, but its impact will be felt for decades. It is part of our broader commitment to sustainability, protecting the park's landscapes and water resources, building climate resilience, and ensuring that every investment we make help Central Park thrive for the long term. Our work here builds on years of listening to and working alongside the North End community. Today you entered this event through the gate of the exonerated which we renamed in partnership with Harlem residents and council member Salam. That effort grew out of our community feedback, creating meaningful tribute to the Central Park 5. The Davis Center built on that commitment, reconnecting the park with its surrounding neighborhoods and creating a welcoming destination shaped by its neighbors. And now with this project and its related shoreline restoration, we are continuing to vest invest in a vital part of the park and the communities that it serves. None of this would be possible without our extraordinary nearly 50-year relationship between the conservancy and the city of New York. And we are grateful to the mayor, our city and state partners, and our elected officials for their leadership and trust. And we thank our philanthropic partners. another dedicated cohort of New Yorkers for helping make this ambitious project possible. I also want to thank our dedicated capital projects team, the conservancy staff along with our design and engineering partners whose expertise and hard work have brought us to this day. As one of New York City's most important civic spaces, Central Park is no ordinary park. Which means we at the conservancy must think beyond ordinary work. We must always be a model for how the public realm can evolve to meet the needs of a changing city. In doing so, we honor and protect the original purpose of this magnificent space, a sanctuary for all New Yorkers, free from the pace and pressures of urban life. Thank you all for being part of this important announcement. Thank you so much, Faith Betsy. And now it's my pleasure to welcome Morin Coleman, president and CEO of the New York State Environmental Facilities Corporation. Come on. Good morning, everyone. It's so uh great to be at uh this beautiful park on a beautiful morning and I can't think of a better way to start a Monday morning than to be here with uh everybody that's joined us today. So I'm uh also very proud to be here on behalf of Governor Kathy Hokll. Today we're celebrating the tangible impacts of the governor's nationleading water investments and New York's historic $4.2 $2 billion environmental bond act right here in Harlem. This is what environmental leadership looks like. Strengthening our infrastructure, protecting our communities, and delivering real results for New Yorkers. As storms continue to be more intense and more frequent, we've come to understand we can no longer afford to be reactive. We must be proactive and take action today to safeguard our future. This project will mitigate local localized flood risk. But it's also going to improve water quality and help manage harmful algo blooms, restore vital habitats, conserve ga millions of gallons of portable water, and help keep millions of gallons of polluted storm water out of the Harlem River. Projects of this scale, they don't happen without careful planning and the right investment. and go govern Governor Hokll is making sure that significant environmental projects can move from the planning stage to progress on the ground. The governor championed the Clean Water, Clean Air and Green Jobs Environmental Bond Act of 2022 to help communities make the investments needed to confront the impacts of intense storms, protect clean air and water, and build a more resilient future. EFC has awarded more than $50 million dollars in environmental bond act funding through the green resiliency grants to five projects in New York City, including the project we're celebrating today. And a week ago, last Monday, as the first installment of our $3.75 billion clean water investment plan, Governor Hokll announced 500 million, half a billion dollars in state water grants across the state, including a $25 million grant uh to New York City for a water infrastructure uh project that will help protect the Hudson River. This funding matters. It closes critical funding gaps so that ambitious projects are more affordable and it makes transformative projects possible. Here in Central Park, the state's $10 million grant is helping to protect a treasured public space while strengthening flood resilience and safeguarding the waters that connect us all. And I want to thank all of you that are here today that made this pop uh possible. And thank you to Mayor Mdani, Commissioner Garcia and DP, the um Commissioner Shamura and New York City Parks and the um Park Conservancy, Central Park Conservancy, and all the partners, city council that are here today again and help to make this project possible. Thank you. >> All right. Thank you so much, Moren, and of course to Governor Hokll. It's great to have a great state partner. Um, next, please join me in bringing up Manhattan B president Brad Hyman Seagull. >> Thank you. >> Thank you. Good morning. Good morning, Brad Hman, Seagull, Manhattan B. Thank you, Mr. Mayor, Madam Speaker, commissioners, council members. Uh, I'd like to shout out Shadik Mitchell, first vice chair of community board 10, who is here. Please give him a round of applause. Um, and I know he and Council Member Salam agree that investing in the northern portion of Central Park is crucial. And I'm very proud to have committed a half million dollars toward that effort. It's not just the water that we're clearing up, but it's also protecting some cultural institutions across the street, including the Museum of the City of New York and Musea Delbario, which will be protected their uh artifacts uh from this new storm water uh resilience system. And the enormity of this project is tremendous. And to help you visualize that, 200 Olympic size pools of water diverted from sewers per year. Imagine our mayor fully clothed jumping into 200 swimming pools. It's significant. And I want to I want to thank all of our partners in government because um water is truly the essence of life and making it clear and clean and safe um is really a fundamental role of government. So, thank you so much. >> Thank you so much, Brad. We'll look forward to the mayor jumping into 200 new pools. Um, okay. And now we have Council Member Gail Brewer. Please come to the podium. Thank you so much for your leadership. Thank you very much, Mr. Mayor. Luckily, this is a non-controversial project. Congratulations. And I also definitely want to thank uh Betsy Smith and everybody at the conservancy, Satique Mitchell, David Saltenstall, former intern, Mr. Mayor, just so you know, to add to the list. I want to be clear on that. Um, so I am ecstatic. I don't understand one bit of the engineering but it sounds very exciting. Um obviously we want to reduce the sewer over overflows in the park. We want uh not to have filtration systems for quoting but definitely here. We want to make sure that this doesn't look like I hate to say some other places where there's a lot of sedimentation not will will not be here and it will link water courses. It will make historic efforts and ongoing enhancements to make the system more sustainable, resilient, and healthier. Is it really to me it's very exciting to have this relationship between parks uh the uh uh CPC and DP and the issue is obviously by redoing the amazing work that was done to redo the Dana center and then to redo obviously D the Davis center that was controversial got through it and the fact of the matter is this will be adding to the amazing support for the northern part of the park. Um, we will have the new pumping, the filtration, the connecting piping, and that will reduce the need for fresh city water in the pool, the lock, and the mirror system. And so, I'm just here like everybody else to say, uh, other parts of the city are still dealing with the CSO, the combined sewage overflow, but that will not be a problem here. And maybe we can learn how it can be done elsewhere. Um, stabilize the shoreline edges to prevent erosion. The only issue when I came over, somebody was feeding the ducks. I don't know how you're going to stop that, Betsy. Thank you very much. Thank you, council member. All right, we'll deal with uh this project for now and worry about the ducks in the future, but as we've heard from our distinguished speakers, thank you so much everyone. This project will deliver benefits to Central Park far beyond the work taking place underground. From DP's perspective, yes, this project is certainly about infrastructure, but it's also about people. It's about ensuring future generations can enjoy these spaces while making our city more resilient to climate change. By better managing water use and levels, we can capture storm water, ease pressure on local sewers, reduce combined sewer overflows, as mentioned, lower flood risk to the community, and of course, conserve clean drinking water. What makes this effort inspiring um to many of us especially as the daughter of an engineer is that it works with the landscape and vision by the visionary by Olmstead and Vox from years ago but it's adapting it to meet today's challenges and that's really what we need to do is keep adapting and delivering protections for future New Yorkers. This is the best kind of infrastructure unseen but still improving lives before major storms. Water levels in Harlem Mir will be lowered to create storage capacity. During storms, that space will absorb the rainfall instead of sending it into our sewers, easing the strain on the local communities. Equally important, the project reduces Central Park's reliance on the best water in the world, New York City's portable water supply. The closed loop circulation, as you've heard, that system will also move among uh water among the mirror, the lock, and the pool, enhancing water quality and reducing algae blooms in hot weather. D is equally proud to contribute more than $14 million towards this $35 million investment, which will keep about $132 million gallons of storm water out of local sewers while conserving an estimated 175 million gallons of water depicted more visually over here by our posters. Um, today's groundbreaking is a commitment to resiliency, sustainability, and stewardship, and to preserving one of New York City's most beloved public spaces for generations to come. I especially want to thank DP's team um, who helped with this partnership and their vision and some of the engineering. I really look forward to seeing the benefits of this project for many years ahead. Again, thank you to everyone, all of our partners, and all of you. Uh, thank you so much again. Congratulations to everyone. Um, and I will turn it back to the mayor now. Thank you everyone. >> Thank you. >> Thank you to our speakers. >> The mayor will now take questions. >> One minute. >> Start with on topics and then we'll have time for off topics as well. Do you have any on topic questions about today's announcement? >> None. General city and state if you could just wait for the mic. >> Hi, how you doing? >> How's it going? >> Um, first question, how long will this project take to implement? And second question, uh I'm sure I don't know if you saw FEMA announced um over the next 6 months they will start shifting financial responsibility for uh disaster relief onto states. Uh what does that mean for New York City and does that kind of put pressure uh on projects such as this to accelerate or or to implement more projects? >> Just the last part of the question one more time. >> Yeah. Does that put pressure on the city to implement more projects such as this um because of that shift of financial responsibility onto states? So, I'll I'll answer your first question and go into your second one. On on the first question, the estimated completion date is fall 2028 and we are incredibly excited about this project. Not only for all the reasons that you've heard, but also just to say very explicitly that the amount of rainfall the city is facing has only increased year after year. And that is something that's intensifying with the climate crisis. And we know that our sewage system is built at best to be able to accommodate about 1.75 in of rainfall per hour. And what this kind of an innovation allows us to do is to keep a lot of what would otherwise be uh overflow water that would have to be managed by streets outside of Central Park to keep that from happening by lowering the amount of water here in in in these specific sets of of water bodies. Uh, and that's going to have a not only a significant impact for anyone who loves and comes through Central Park, but also those who happen to live around Central Park, especially in Harlem, East Harlem, um, and and the northernmost parts of the Upper East Side. To to your second question, this should be work that unites every level of government. And we are here today because of the generosity and the commitment of city, state, and private donors. We would love to see a future where the federal government is a partner in these kinds of works because this is what it means to take care of people who call this city home, call this country home. And any actions by FEMA looking to offload responsibility uh to to the state level is frankly something that is looking to offload the very responsibility that comes with with leading and uh FEMA as well as leading federal agencies as a whole. >> Any other questions about today's announcement? Yes, Juliet, >> if you could just wait for the mic. Thank you. Good morning, Mr. Mayor. >> Morning. >> So, uh, to Gail Brewer's point, where else could this work? You know, there's flooding in the Rockaways every time across Cross Island Parkway, Northern Queens. These are areas that are perpetually flooding. Uh, does something like this work in those locations? >> So, we are excited about this project. We're also excited about the prospect of bringing this kind of an approach elsewhere. We're going to be looking to see if there are any other opportunities to apply a similar model elsewhere across the the five buraus. What I will say is that the even if it is not the exact approach of this project, there are other projects that have similar intents. So for example, cloud burst technology is a technology that can absorb excess rainfall, hold it for 24 to 48 hours, allow the sewage system to get to a place where it can handle that, and then release that rainfall. Permeable pavement is something else that we're looking at. Uh basically any kind of an approach that can absorb excess rainfall and allow the city a moment to breathe. in Staten Island, blue belts have been incredibly uh effective at at combating some of this rainfall. So, we're going to be taking this approach across the city. >> I think we're looking at anywhere where there is excess flooding that we can have an impact. And as you know, there is no shortage across our city. Um now that means in what's so exciting about this, I think outside you'll see a map that shows exactly where the flooding typically affects. We're talking about, I think, north of, I don't know, 90, 95th Street on the east side going up to maybe about 120th or so over many different avenues. That's flooding that for too long people have just been forced to accept as if it's a part of life. But we can take these kind of approaches. And we know that, you know, these are approaches that were proposed hundreds of years ago. It's exciting that we are now the partners that are able to de deliver and implement this. >> We'll take off topics, too. We'll go to Andrew from MC. >> Mayor, good morning. How you doing? Two election related questions. One is so far turnout is not only way ahead of the 2022 midterms, but even ahead of the mayoral election in New York City. I'm wondering what you ascribe that to. What is your sense from having voted and talked to people what you ascribe that to? And my second question is, are you surprised that at least thus far you haven't been used by Republicans beyond Bruce Blakeman? uh as more of a sort of boogeyman in the election that they've either decided not to do it, it's not working or or are you seeing it pretty much the way you expected there? So on the first, what I've heard from New Yorkers is an excitement to vote for something and when they're looking at this gubernatorial election, what they're seeing is that the governor has a clear record and a clear vision of making life more affordable in the nation's most expensive city. And Bruce Blakeman's vision is to work closer with ICE and to create a private militia in Nassau County. His vision is to look at HR1 cuts that could devastate up to 900,000 New Yorkers and take them off their health insurance and say, \"I'll cut Medicaid by half and then say that on television and then go on to say that he never said it.\" So, it's it's a little bit of a confusing campaign uh in in terms of what Blakeman is putting forward. But New Yorkers across the five buraus, I've heard both in person with the governor, are excited about 2K. They're excited about us finally working together where they haven't seen mayors and governors do that often in the past and to be able to deliver on common sense things even just like right here in Central Park. And to your second question, I think one of the reasons is that Republicans would prefer to not have to bring up a record of delivering free child care for 2-year-olds. They would prefer to not have to talk about holding Door Dash to account for $130 million and underpaying more than 260,000 uh employees. They would prefer to not have to talk about our ability to deliver on an ambitious agenda while also paving over 220,000 potholes at the same time. And that's the choice that they've made. And I don't blame them. >> Okay, we'll go next to Bobby. >> Hey, Mr. Mayor. >> How's it going, Bobby? >> Good. Um, one one election related question, one non-election. Uh you've been spending a lot of time the last few days with Governor Hokll. Um I wonder if you think some of your supporters here in the city who are maybe DSA, maybe more left-leaning might come out and vote for the governor who maybe they've been skeptical of in the past because of her reluctance to raise taxes and some other issues. Do you think they might turn out and vote for her because of your urging where they may not have otherwise? And then um secondly, I just want to get your response to the rape in Central Park the other night, whether you think um that's part of the pattern, whether New Yorkers should feel unsafe in the park, um especially at night. >> So, I think first and foremost, what happened to this survivor is horrific. This is something that no one should have to endure. We know that every New Yorker should be able to walk anywhere in our city at any time of day and they should be safe. And anything less than that is not something that I will ever justify or accept. And so when it comes to this specific case, the NYPD is conducting an investigation into it. And our administration is working to ensure that the survivor has the support that she needs to navigate the next steps. We are going to continue to work with survivors at large as well as providers and city partners to strengthen prevention and address gaps in support and to also hold perpetrators of sexual assault accountable and to ensure that this is a city that puts survivors needs first. you should feel unsafe. >> We are both proud of the fact that we are driving down crime overall across these five burrows and we will always say that any instance of crime is one too many and we have to be unrelenting in combating it. And to your first question, I think what what I've heard from many New Yorkers is an excitable excitement about the tangible things that the governor has delivered. A lot of times it feels like politics is something that has to be translated. Sometimes it feels as if it's a hobby only some people can afford. And when the governor and I have walked together across the streets of of our city, what we hear time and again is excitement about 2K, excitement about child care. We hear people who come up to us, we met uh a mother who told us that her son AJ being enrolled into 2K saved them $2,300 a month. that before this program existed that they were sending their son to another state with their grandmother at 4:00 a.m. every morning so that they could find a deal that they could afford. That is what this kind of a politics has delivered for people. And that's why I think there's so much excitement about voting for not just the maintenance of this program, but rather as the governor has said it, the expansion of this program so that is universal child care for every single 2-year-old across the city. >> Okay, we have time for a few more. We'll go next to Josie. Hi, Mayor. >> Hi, Josie. >> Um, I'm wondering similar early voting numbers. Do you see that as proof that your affordable agenda items are super popular and is that um fuel to push hope goal for tax hikes next year? And then I also have a question. In your remarks yesterday, you said that um unlike or let me find the quote. Sometimes there are political events that we have to go to and it's a little more difficult for me to be up on that stage. What exactly were you talking about there? >> Stream of consciousness comes at you fast. you know, um, like I I think what what I was referring to is is there are times where you you have to make a case and you know that you're going to have to really work to get people to that point. When it comes to the governor, when it comes to child care, you don't really have to make so much of a case because it makes itself. And that's what's been so exciting about working with the governor is that these are things that people can feel in their lives. The governor spoke about the fact that she was in the Bronx recently and uh a young man came up to her and said that he was going to move to Philadelphia until 2K was introduced and now his family is going to stay in the Bronx. And to me, that's that's what it's a reference to is that sometimes it's going stage by stage explaining how something relates to somebody's life. And with this work, it really explains itself. Uh and and to your first question, I think that what we're seeing is there's often been a politics of opposition, a politics of rejecting, you know, let's say the the the cruelty that we're seeing come out of a lot of federal policies. We also need to have an affirmative vision alongside that. It's not enough to just be an oppositional vision. And what I think is exciting so many New Yorkers is that they also have something to vote for. And whether that's child care, whether that's actually a working relationship between the city and the state, or whether it's the fact that we are taking all the kinds of steps to make a difference on problems that have long just been accepted as New York City issues. I mean, just think about today's announcement. For too long, there's been a sense of it floods. That's what happens. And we don't want to accept that any longer. We want to have a relentless ambition in this city for how we can deliver the best possible city for New Yorkers. Part of that is taking aim at the very kinds of issues that have been rationalized and justified for far too long. >> Victory too in Brazil. Does that mean uh you have more in this city or state? Uh, I'll tell you that yesterday when I was coming home, we we just got off the bridge and a number of New Yorkers streamed out of a bar and they were just chanting Lula's name. And I think it is indication of the fact that New Yorkers are excited. across the five buraus. I can tell you that when I had the opportunity to sit down with President Lulu when he came for the UN General Assembly, I shared how much he has meant to so many across this city, across this country, across the world, frankly, and a real admiration for the tangible things that he has been able to deliver for working people. And we've seen in the time since that meeting, he's gone on to reduce the work week from 44 hours to 40 hours, to guarantee two days of rest for Brazilians without a pay cut. These are the kinds of things that working people everywhere uh are looking for. A life with more dignity, a life with more rest, a life with a little bit more room to breathe. And I think I've I I congratulate the president. And I think that it is a sign that the people united will never be defeated. >> Okay, we have time for just one more. We're going to go to Morgan >> just >> Hi, Mr. Mayor. >> Hi, Morgan. How are you? >> I'm good, thank you. Um, so Politico has a story out today saying that uh some of your allies seem to expect something from this relationship with you and Governor Kathy Hokll, you helping her campaign and state senator Julia Salazar uh said, quote, \"It would be really reasonable for him to expect clear commitments from the governor, including a new commitment on new taxes for the rich.\" Do you agree with this? And are you expecting something from this relationship from the governor? And do you think your allies are expecting something from this? Thank you. I >> I'm expecting a continuation of a positive and productive working relationship with the governor. And it's a relationship that has been critical in delivering $1.2 billion to making universal childcare a reality on just the eth day of our administration. It's also a relationship that was critical where we saw the governor uh make clear just how much of a partner she is to our city when we were facing uh a 12 billion fiscal deficit and she made the kinds of moves and measures to really put our city back on firm financial footing and I'm excited for that relationship to continue. It's been one that's delivered for working-class New Yorkers and I'm confident it's going to keep delivering. >> Thank you all. >> Thank you everyone.",
+   "mayor_word_count": 6252,
+   "has_mayor_quotes": false,
+   "caption_source": "auto",
+   "video_segments": [
+    {
+     "t": 3.28,
+     "text": "Good morning, Central Park."
+    },
+    {
+     "t": 5.28,
+     "text": ">> Morning."
+    },
+    {
+     "t": 6.08,
+     "text": ">> It is a pleasure to join so many friends"
+    },
+    {
+     "t": 9.04,
+     "text": "and partners as we mark a new chapter"
+    },
+    {
+     "t": 11.44,
+     "text": "for clean water here in New York City. I"
+    },
+    {
+     "t": 13.84,
+     "text": "want to acknowledge we have a lot of"
+    },
+    {
+     "t": 15.04,
+     "text": "leaders from inside and outside of our"
+    },
+    {
+     "t": 16.56,
+     "text": "administration with us. We have our DAP"
+    },
+    {
+     "t": 18.64,
+     "text": "commissioner, Lisa Garcia, who will be"
+    },
+    {
+     "t": 20.0,
+     "text": "our MC for the day. We have our parks"
+    },
+    {
+     "t": 22.08,
+     "text": "commissioner, Trisha Mamura. We have the"
+    },
+    {
+     "t": 24.16,
+     "text": "New York State Environmental Facilities"
+    },
+    {
+     "t": 25.76,
+     "text": "Corporation President and CEO, Moren"
+    },
+    {
+     "t": 27.84,
+     "text": "Coleman. We have our city council"
+    },
+    {
+     "t": 29.44,
+     "text": "speaker Julie Menon. We have Central"
+    },
+    {
+     "t": 31.2,
+     "text": "Park Conservancy President Betsy Smith."
+    },
+    {
+     "t": 33.28,
+     "text": "We have our Manhattan Burough President"
+    },
+    {
+     "t": 34.64,
+     "text": "Brad Hyman Seagull. We have our council"
+    },
+    {
+     "t": 36.48,
+     "text": "member Gail Brewer. We also want to"
+    },
+    {
+     "t": 38.32,
+     "text": "acknowledge alongside all of the elected"
+    },
+    {
+     "t": 40.16,
+     "text": "officials, the private donors who helped"
+    },
+    {
+     "t": 41.84,
+     "text": "to fund this project. We want to also"
+    },
+    {
+     "t": 44.48,
+     "text": "acknowledge council member Ysef Salam"
+    },
+    {
+     "t": 46.48,
+     "text": "who is here with us as well as all of"
+    },
+    {
+     "t": 48.96,
+     "text": "the Central Park Conservatory staff who"
+    },
+    {
+     "t": 50.8,
+     "text": "worked on this incredible project. If we"
+    },
+    {
+     "t": 52.48,
+     "text": "can have a round of applause for all of"
+    },
+    {
+     "t": 54.0,
+     "text": "them. THANK YOU."
+    },
+    {
+     "t": 59.12,
+     "text": "NOW, in season 1, episode 16 of Avatar"
+    },
+    {
+     "t": 62.08,
+     "text": "the Last Airbender, Jung Jung of The"
+    },
+    {
+     "t": 64.48,
+     "text": "Order of the White Lotus teaches us"
+    },
+    {
+     "t": 66.56,
+     "text": "water brings healing and life. While we"
+    },
+    {
+     "t": 69.6,
+     "text": "may lack the magic powers of water"
+    },
+    {
+     "t": 71.6,
+     "text": "bending here in New York City,"
+    },
+    {
+     "t": 72.96,
+     "text": "incredible feats of engineering"
+    },
+    {
+     "t": 74.32,
+     "text": "throughout our history have gotten us"
+    },
+    {
+     "t": 76.16,
+     "text": "pretty close. Year after year,"
+    },
+    {
+     "t": 78.0,
+     "text": "generation after generation, New Yorkers"
+    },
+    {
+     "t": 80.08,
+     "text": "have found ways to bring water, healing,"
+    },
+    {
+     "t": 82.32,
+     "text": "and life to every corner of the five"
+    },
+    {
+     "t": 84.4,
+     "text": "burrows. In 1837, we began to build the"
+    },
+    {
+     "t": 87.28,
+     "text": "Croin Aqueduct, an innovative system"
+    },
+    {
+     "t": 89.28,
+     "text": "that used gravity to carry drinking"
+    },
+    {
+     "t": 90.88,
+     "text": "water 41 miles from the Croin River into"
+    },
+    {
+     "t": 94.32,
+     "text": "Manhattan. At the turn of the 20th"
+    },
+    {
+     "t": 96.08,
+     "text": "century, we constructed a maze of"
+    },
+    {
+     "t": 97.84,
+     "text": "underground sewers designed to make our"
+    },
+    {
+     "t": 99.84,
+     "text": "city cleaner, safer, and healthier. In"
+    },
+    {
+     "t": 102.72,
+     "text": "the 1980s, updates to the North River"
+    },
+    {
+     "t": 104.8,
+     "text": "and Red Hook treatment plants allowed us"
+    },
+    {
+     "t": 106.64,
+     "text": "to keep polluted water out of our"
+    },
+    {
+     "t": 108.72,
+     "text": "rivers. Today I am so proud to announce"
+    },
+    {
+     "t": 111.68,
+     "text": "that New York City has engineered yet"
+    },
+    {
+     "t": 113.52,
+     "text": "another feat of civic water bending. A"
+    },
+    {
+     "t": 115.6,
+     "text": "cuttingedge water recirculation system"
+    },
+    {
+     "t": 117.92,
+     "text": "for Central Park's pool lock and mir"
+    },
+    {
+     "t": 120.48,
+     "text": "water bodies. The benefits of the system"
+    },
+    {
+     "t": 122.8,
+     "text": "are twofold. First, as it stands now, we"
+    },
+    {
+     "t": 125.92,
+     "text": "are forced to use our precious drinking"
+    },
+    {
+     "t": 127.84,
+     "text": "water supplies to keep these bodies of"
+    },
+    {
+     "t": 130.0,
+     "text": "water at the right level. This"
+    },
+    {
+     "t": 132.08,
+     "text": "recirculation system will allow us to"
+    },
+    {
+     "t": 134.24,
+     "text": "reuse the same water supply again and"
+    },
+    {
+     "t": 137.04,
+     "text": "again and direct the flow of clean water"
+    },
+    {
+     "t": 139.36,
+     "text": "into the homes of New Yorkers instead."
+    },
+    {
+     "t": 141.84,
+     "text": "Second, when storms hit, the pool and"
+    },
+    {
+     "t": 144.32,
+     "text": "mirror can overflow, overwhelming our"
+    },
+    {
+     "t": 146.64,
+     "text": "sewer systems and forcing storm water"
+    },
+    {
+     "t": 148.48,
+     "text": "onto the street. But when this project"
+    },
+    {
+     "t": 150.4,
+     "text": "is done, we will have the ability to"
+    },
+    {
+     "t": 152.48,
+     "text": "lower the water levels in Central Park"
+    },
+    {
+     "t": 154.24,
+     "text": "when we know a major storm is coming,"
+    },
+    {
+     "t": 156.48,
+     "text": "creating room for expected rainfall and"
+    },
+    {
+     "t": 159.12,
+     "text": "bringing down the risk of a flood. This"
+    },
+    {
+     "t": 161.36,
+     "text": "landmark project, made possible by $35"
+    },
+    {
+     "t": 164.32,
+     "text": "million in city, state, and private"
+    },
+    {
+     "t": 166.88,
+     "text": "funding, will save our city more than"
+    },
+    {
+     "t": 170.16,
+     "text": "175 million gallons of clean water every"
+    },
+    {
+     "t": 173.2,
+     "text": "year. That is 2.8 billion glasses from"
+    },
+    {
+     "t": 176.56,
+     "text": "the tap,"
+    },
+    {
+     "t": 178.24,
+     "text": "131 million chances to wash your hands"
+    },
+    {
+     "t": 180.56,
+     "text": "after a bodega sandwich on the run gets"
+    },
+    {
+     "t": 182.24,
+     "text": "a little bit too messy, or 3 million"
+    },
+    {
+     "t": 184.64,
+     "text": "baths before bedtime. And it will mean"
+    },
+    {
+     "t": 186.8,
+     "text": "that when extreme storms hit, New"
+    },
+    {
+     "t": 188.88,
+     "text": "Yorkers who live near the park can rest"
+    },
+    {
+     "t": 190.8,
+     "text": "a bit easier, knowing that we have one"
+    },
+    {
+     "t": 192.8,
+     "text": "more tool at our disposal to protect"
+    },
+    {
+     "t": 194.96,
+     "text": "them from flooding. This project will"
+    },
+    {
+     "t": 196.96,
+     "text": "mean less water wasted, more storm water"
+    },
+    {
+     "t": 199.2,
+     "text": "out of sight, and countless pant legs"
+    },
+    {
+     "t": 201.36,
+     "text": "saved from an unforeseen ocean on the"
+    },
+    {
+     "t": 203.52,
+     "text": "sidewalk. As we confront climate change"
+    },
+    {
+     "t": 205.84,
+     "text": "and devise new strategies to keep New"
+    },
+    {
+     "t": 207.6,
+     "text": "Yorkers safe from extreme storms and"
+    },
+    {
+     "t": 209.36,
+     "text": "heavy rainfall, we are pursuing the"
+    },
+    {
+     "t": 211.28,
+     "text": "innovative solutions that this moment"
+    },
+    {
+     "t": 213.28,
+     "text": "demands. We are working across city"
+    },
+    {
+     "t": 215.28,
+     "text": "government with state partners and"
+    },
+    {
+     "t": 216.88,
+     "text": "nonprofit leadership to deliver the"
+    },
+    {
+     "t": 218.72,
+     "text": "public excellence that will improve New"
+    },
+    {
+     "t": 220.64,
+     "text": "Yorkers lives. So today we will break"
+    },
+    {
+     "t": 223.12,
+     "text": "ground here in Central Park preparing to"
+    },
+    {
+     "t": 225.28,
+     "text": "lay the engines, the valves, the levers,"
+    },
+    {
+     "t": 227.04,
+     "text": "and the pipes needed to build this"
+    },
+    {
+     "t": 228.96,
+     "text": "recirculation system. And then come the"
+    },
+    {
+     "t": 231.6,
+     "text": "fall of 2028 sooner than we realize, a"
+    },
+    {
+     "t": 234.32,
+     "text": "New Yorker will sit where we stand"
+    },
+    {
+     "t": 235.76,
+     "text": "today, enjoying the reflection of the"
+    },
+    {
+     "t": 237.68,
+     "text": "clear water on a fall morning and taking"
+    },
+    {
+     "t": 239.84,
+     "text": "in a moment of quiet underneath them,"
+    },
+    {
+     "t": 242.32,
+     "text": "deep in the ground. This system will be"
+    },
+    {
+     "t": 244.4,
+     "text": "hard at work doing its part to keep"
+    },
+    {
+     "t": 246.64,
+     "text": "water and life flowing through our city."
+    },
+    {
+     "t": 248.8,
+     "text": "Thank you."
+    },
+    {
+     "t": 254.48,
+     "text": ">> And with that, I'm going to pass it over"
+    },
+    {
+     "t": 256.0,
+     "text": "to our MC for the day, DP Commissioner"
+    },
+    {
+     "t": 257.68,
+     "text": "Lisa Garcia."
+    },
+    {
+     "t": 260.96,
+     "text": ">> Great. Thank you so much."
+    },
+    {
+     "t": 264.08,
+     "text": "Thank you, Mayor Montani. Thank you so"
+    },
+    {
+     "t": 266.24,
+     "text": "much. It's great to be here to celebrate"
+    },
+    {
+     "t": 268.88,
+     "text": "and announce this uh great partnership"
+    },
+    {
+     "t": 271.44,
+     "text": "collaboration with all our partners and"
+    },
+    {
+     "t": 273.44,
+     "text": "of course the investment to make sure"
+    },
+    {
+     "t": 275.04,
+     "text": "that we're conserving water and also"
+    },
+    {
+     "t": 278.08,
+     "text": "minimizing storm water um managing storm"
+    },
+    {
+     "t": 281.84,
+     "text": "water runoff and of course protecting"
+    },
+    {
+     "t": 283.76,
+     "text": "the communities from flooding. To tell"
+    },
+    {
+     "t": 286.0,
+     "text": "you more about this innovative project"
+    },
+    {
+     "t": 287.92,
+     "text": "we are announcing, uh please join me in"
+    },
+    {
+     "t": 290.56,
+     "text": "welcoming city council speaker Julie"
+    },
+    {
+     "t": 292.96,
+     "text": "Menon to share a few remarks."
+    },
+    {
+     "t": 296.64,
+     "text": "Thank you so much, Commissioner Garcia."
+    },
+    {
+     "t": 298.88,
+     "text": "And I really want to thank the mayor for"
+    },
+    {
+     "t": 301.36,
+     "text": "his commitment to this project. I want"
+    },
+    {
+     "t": 304.08,
+     "text": "to thank my colleagues in government,"
+    },
+    {
+     "t": 306.24,
+     "text": "uh, city council speaker Gail Brewer,"
+    },
+    {
+     "t": 308.24,
+     "text": "who has pushed really hard for this"
+    },
+    {
+     "t": 309.92,
+     "text": "project. Uh, Council Member Yousef Salam"
+    },
+    {
+     "t": 312.72,
+     "text": "for his leadership here. And, uh, Betsy,"
+    },
+    {
+     "t": 315.68,
+     "text": "I really want to thank you for your"
+    },
+    {
+     "t": 317.12,
+     "text": "incredible stewardship of this"
+    },
+    {
+     "t": 319.36,
+     "text": "magnificent park. We so appreciate, uh,"
+    },
+    {
+     "t": 321.92,
+     "text": "your leadership. Central Park is truly a"
+    },
+    {
+     "t": 324.88,
+     "text": "marvel of green majesty in the heart of"
+    },
+    {
+     "t": 327.6,
+     "text": "the concrete jungle. As the years have"
+    },
+    {
+     "t": 330.16,
+     "text": "passed, the city has changed and our"
+    },
+    {
+     "t": 331.92,
+     "text": "park has naturally changed with it."
+    },
+    {
+     "t": 334.56,
+     "text": "Since it was completed in 1876, we've"
+    },
+    {
+     "t": 337.92,
+     "text": "added dozens of playgrounds, of baseball"
+    },
+    {
+     "t": 340.8,
+     "text": "fields. What was once a pen to hold"
+    },
+    {
+     "t": 343.44,
+     "text": "sheep overnight is now actually Tavern"
+    },
+    {
+     "t": 345.92,
+     "text": "on the Green. Uh, and while we have long"
+    },
+    {
+     "t": 349.12,
+     "text": "run, and in my case now, sometimes"
+    },
+    {
+     "t": 351.28,
+     "text": "walked and talked around the reservoir,"
+    },
+    {
+     "t": 353.52,
+     "text": "we no longer drink from it because our"
+    },
+    {
+     "t": 355.76,
+     "text": "big city outgrew its small supply. And"
+    },
+    {
+     "t": 359.6,
+     "text": "today, in that incredible spirit of"
+    },
+    {
+     "t": 361.92,
+     "text": "change, we are proud to announce another"
+    },
+    {
+     "t": 363.68,
+     "text": "one, breaking ground on the brand new"
+    },
+    {
+     "t": 366.08,
+     "text": "North End Recirculation System. Instead"
+    },
+    {
+     "t": 368.96,
+     "text": "of diverting water to flow out of the"
+    },
+    {
+     "t": 371.44,
+     "text": "park, this new system, as the mayor"
+    },
+    {
+     "t": 373.76,
+     "text": "said, will pump the water across the"
+    },
+    {
+     "t": 376.0,
+     "text": "north meadow ball fields to flow into"
+    },
+    {
+     "t": 378.32,
+     "text": "the pool, keeping a significant amount"
+    },
+    {
+     "t": 380.64,
+     "text": "of water out of the city's sewer"
+    },
+    {
+     "t": 382.88,
+     "text": "systems. It will allow the park to turn"
+    },
+    {
+     "t": 385.76,
+     "text": "off the supply of city drinking water,"
+    },
+    {
+     "t": 388.48,
+     "text": "conserving 175 million gallons, as you"
+    },
+    {
+     "t": 391.76,
+     "text": "heard, of water each and every year. We"
+    },
+    {
+     "t": 394.64,
+     "text": "are also introducing a filtration system"
+    },
+    {
+     "t": 397.52,
+     "text": "to improve water quality and mitigate"
+    },
+    {
+     "t": 400.08,
+     "text": "algae growth. These changes of course"
+    },
+    {
+     "t": 402.56,
+     "text": "might not be visible to the tourist eye"
+    },
+    {
+     "t": 404.72,
+     "text": "or to most New Yorkers, but they will"
+    },
+    {
+     "t": 407.2,
+     "text": "certainly make a big difference. With"
+    },
+    {
+     "t": 409.6,
+     "text": "the new system in place, heavy rain will"
+    },
+    {
+     "t": 412.88,
+     "text": "not flood platforms at the 116th Street"
+    },
+    {
+     "t": 415.92,
+     "text": "Station or devastate basement apartments"
+    },
+    {
+     "t": 418.88,
+     "text": "in East Harlem. our fresh water can go"
+    },
+    {
+     "t": 422.48,
+     "text": "towards hydrating thirsty locals and"
+    },
+    {
+     "t": 424.96,
+     "text": "tourists alike rather than sustaining"
+    },
+    {
+     "t": 427.44,
+     "text": "the park's bodies of water. It's also a"
+    },
+    {
+     "t": 430.24,
+     "text": "difference that city council is so proud"
+    },
+    {
+     "t": 432.48,
+     "text": "to support. We allocated nearly $3"
+    },
+    {
+     "t": 434.88,
+     "text": "million for this project to be"
+    },
+    {
+     "t": 436.88,
+     "text": "spearheaded by the conservancy. The"
+    },
+    {
+     "t": 439.36,
+     "text": "conservancy is deeply dedicated to the"
+    },
+    {
+     "t": 441.76,
+     "text": "maintenance of this historic and iconic"
+    },
+    {
+     "t": 444.96,
+     "text": "piece of land and their constant"
+    },
+    {
+     "t": 447.28,
+     "text": "stewardship enriches the lives of the"
+    },
+    {
+     "t": 449.12,
+     "text": "nearly 42 million people who come to"
+    },
+    {
+     "t": 452.0,
+     "text": "enjoy this park each and every year. So,"
+    },
+    {
+     "t": 454.48,
+     "text": "in closing, I want to thank all of the"
+    },
+    {
+     "t": 456.48,
+     "text": "leaders in government for their"
+    },
+    {
+     "t": 457.76,
+     "text": "incredible partnership on this very,"
+    },
+    {
+     "t": 460.08,
+     "text": "very important project. And I want to"
+    },
+    {
+     "t": 462.32,
+     "text": "thank um all of the colleagues uh at the"
+    },
+    {
+     "t": 464.48,
+     "text": "city council for supporting it. And the"
+    },
+    {
+     "t": 466.32,
+     "text": "mayor, thank you for your partnership."
+    },
+    {
+     "t": 468.16,
+     "text": "Thank you."
+    },
+    {
+     "t": 470.96,
+     "text": "Great. Thank you so much, Speaker"
+    },
+    {
+     "t": 472.56,
+     "text": "Mannon. Um, and now we'll hear from"
+    },
+    {
+     "t": 474.56,
+     "text": "Betsy Smith, president and CEO of"
+    },
+    {
+     "t": 476.64,
+     "text": "Central Park Conservancy, a very"
+    },
+    {
+     "t": 478.88,
+     "text": "important partner to this great feat."
+    },
+    {
+     "t": 481.36,
+     "text": "Thank you very, very much. Good morning,"
+    },
+    {
+     "t": 484.08,
+     "text": "everyone, and thank you for joining us"
+    },
+    {
+     "t": 486.32,
+     "text": "here at the Harlem Mirror. Uh, Mr."
+    },
+    {
+     "t": 488.56,
+     "text": "Mayor, our elected partners, donors,"
+    },
+    {
+     "t": 490.96,
+     "text": "friends, welcome. We are so pleased to"
+    },
+    {
+     "t": 493.92,
+     "text": "celebrate this tremendous project"
+    },
+    {
+     "t": 496.0,
+     "text": "together. My name is Betsy Smith. As"
+    },
+    {
+     "t": 498.24,
+     "text": "you've heard, I'm the president and"
+    },
+    {
+     "t": 499.6,
+     "text": "chief executive of the Central Park"
+    },
+    {
+     "t": 501.04,
+     "text": "Conservancy. And we are so proud to be"
+    },
+    {
+     "t": 504.16,
+     "text": "the nonprofit nonfor-profit partner"
+    },
+    {
+     "t": 506.32,
+     "text": "entrusted by the city of New York with"
+    },
+    {
+     "t": 509.04,
+     "text": "the complete care of the 843 acres of"
+    },
+    {
+     "t": 512.08,
+     "text": "Central Park. We cherish this"
+    },
+    {
+     "t": 514.32,
+     "text": "responsibility to keep Central Park a"
+    },
+    {
+     "t": 516.88,
+     "text": "place worthy of every New Yorker 365"
+    },
+    {
+     "t": 520.56,
+     "text": "days a year. But our work extends far"
+    },
+    {
+     "t": 523.84,
+     "text": "beyond the daily maintenance of this"
+    },
+    {
+     "t": 525.92,
+     "text": "landmarked public space. We are focused"
+    },
+    {
+     "t": 528.8,
+     "text": "on long-term sustainability and on"
+    },
+    {
+     "t": 531.6,
+     "text": "excellence in every aspect of our"
+    },
+    {
+     "t": 533.92,
+     "text": "commitment to the park and to the city."
+    },
+    {
+     "t": 537.04,
+     "text": "We have made that commitment so that"
+    },
+    {
+     "t": 538.88,
+     "text": "this beloved place powerfully connects"
+    },
+    {
+     "t": 541.76,
+     "text": "future generations of New Yorkers to"
+    },
+    {
+     "t": 544.4,
+     "text": "beauty and to nature. This project, the"
+    },
+    {
+     "t": 548.4,
+     "text": "largest water recirculation and storm"
+    },
+    {
+     "t": 550.8,
+     "text": "water management system of its kind in"
+    },
+    {
+     "t": 553.2,
+     "text": "New York City, exemplifies that. It is"
+    },
+    {
+     "t": 556.24,
+     "text": "the kind of work most people will never"
+    },
+    {
+     "t": 558.64,
+     "text": "see, but its impact will be felt for"
+    },
+    {
+     "t": 561.36,
+     "text": "decades. It is part of our broader"
+    },
+    {
+     "t": 564.24,
+     "text": "commitment to sustainability, protecting"
+    },
+    {
+     "t": 566.56,
+     "text": "the park's landscapes and water"
+    },
+    {
+     "t": 568.16,
+     "text": "resources, building climate resilience,"
+    },
+    {
+     "t": 570.88,
+     "text": "and ensuring that every investment we"
+    },
+    {
+     "t": 573.52,
+     "text": "make help Central Park thrive for the"
+    },
+    {
+     "t": 576.64,
+     "text": "long term. Our work here builds on years"
+    },
+    {
+     "t": 580.16,
+     "text": "of listening to and working alongside"
+    },
+    {
+     "t": 582.96,
+     "text": "the North End community. Today you"
+    },
+    {
+     "t": 586.56,
+     "text": "entered this event through the gate of"
+    },
+    {
+     "t": 588.8,
+     "text": "the exonerated which we renamed in"
+    },
+    {
+     "t": 591.76,
+     "text": "partnership with Harlem residents and"
+    },
+    {
+     "t": 593.84,
+     "text": "council member Salam. That effort grew"
+    },
+    {
+     "t": 597.36,
+     "text": "out of our community feedback, creating"
+    },
+    {
+     "t": 599.76,
+     "text": "meaningful tribute to the Central Park"
+    },
+    {
+     "t": 602.0,
+     "text": "5. The Davis Center built on that"
+    },
+    {
+     "t": 605.2,
+     "text": "commitment, reconnecting the park with"
+    },
+    {
+     "t": 607.12,
+     "text": "its surrounding neighborhoods and"
+    },
+    {
+     "t": 608.96,
+     "text": "creating a welcoming destination shaped"
+    },
+    {
+     "t": 612.08,
+     "text": "by its neighbors. And now with this"
+    },
+    {
+     "t": 614.56,
+     "text": "project and its related shoreline"
+    },
+    {
+     "t": 616.4,
+     "text": "restoration, we are continuing to vest"
+    },
+    {
+     "t": 619.04,
+     "text": "invest in a vital part of the park and"
+    },
+    {
+     "t": 621.84,
+     "text": "the communities that it serves. None of"
+    },
+    {
+     "t": 624.48,
+     "text": "this would be possible without our"
+    },
+    {
+     "t": 626.56,
+     "text": "extraordinary nearly 50-year"
+    },
+    {
+     "t": 628.72,
+     "text": "relationship between the conservancy and"
+    },
+    {
+     "t": 631.52,
+     "text": "the city of New York. And we are"
+    },
+    {
+     "t": 633.28,
+     "text": "grateful to the mayor, our city and"
+    },
+    {
+     "t": 635.52,
+     "text": "state partners, and our elected"
+    },
+    {
+     "t": 636.96,
+     "text": "officials for their leadership and"
+    },
+    {
+     "t": 639.28,
+     "text": "trust. And we thank our philanthropic"
+    },
+    {
+     "t": 641.6,
+     "text": "partners. another dedicated cohort of"
+    },
+    {
+     "t": 644.96,
+     "text": "New Yorkers for helping make this"
+    },
+    {
+     "t": 646.48,
+     "text": "ambitious project possible. I also want"
+    },
+    {
+     "t": 649.68,
+     "text": "to thank our dedicated capital projects"
+    },
+    {
+     "t": 651.6,
+     "text": "team, the conservancy staff along with"
+    },
+    {
+     "t": 653.84,
+     "text": "our design and engineering partners"
+    },
+    {
+     "t": 655.84,
+     "text": "whose expertise and hard work have"
+    },
+    {
+     "t": 658.16,
+     "text": "brought us to this day. As one of New"
+    },
+    {
+     "t": 660.88,
+     "text": "York City's most important civic spaces,"
+    },
+    {
+     "t": 663.44,
+     "text": "Central Park is no ordinary park. Which"
+    },
+    {
+     "t": 667.12,
+     "text": "means we at the conservancy must think"
+    },
+    {
+     "t": 670.0,
+     "text": "beyond ordinary work. We must always be"
+    },
+    {
+     "t": 673.12,
+     "text": "a model for how the public realm can"
+    },
+    {
+     "t": 675.36,
+     "text": "evolve to meet the needs of a changing"
+    },
+    {
+     "t": 677.76,
+     "text": "city. In doing so, we honor and protect"
+    },
+    {
+     "t": 681.04,
+     "text": "the original purpose of this magnificent"
+    },
+    {
+     "t": 683.6,
+     "text": "space, a sanctuary for all New Yorkers,"
+    },
+    {
+     "t": 687.28,
+     "text": "free from the pace and pressures of"
+    },
+    {
+     "t": 690.72,
+     "text": "urban life. Thank you all for being part"
+    },
+    {
+     "t": 693.12,
+     "text": "of this important announcement."
+    },
+    {
+     "t": 700.48,
+     "text": "Thank you so much, Faith Betsy. And now"
+    },
+    {
+     "t": 702.88,
+     "text": "it's my pleasure to welcome Morin"
+    },
+    {
+     "t": 704.56,
+     "text": "Coleman, president and CEO of the New"
+    },
+    {
+     "t": 706.56,
+     "text": "York State Environmental Facilities"
+    },
+    {
+     "t": 708.64,
+     "text": "Corporation. Come on."
+    },
+    {
+     "t": 715.6,
+     "text": "Good morning, everyone. It's so uh"
+    },
+    {
+     "t": 720.08,
+     "text": "great to be at uh this beautiful park on"
+    },
+    {
+     "t": 723.04,
+     "text": "a beautiful morning and I can't think of"
+    },
+    {
+     "t": 724.72,
+     "text": "a better way to start a Monday morning"
+    },
+    {
+     "t": 726.56,
+     "text": "than to be here with uh everybody that's"
+    },
+    {
+     "t": 728.88,
+     "text": "joined us today. So I'm uh also very"
+    },
+    {
+     "t": 732.24,
+     "text": "proud to be here on behalf of Governor"
+    },
+    {
+     "t": 734.16,
+     "text": "Kathy Hokll."
+    },
+    {
+     "t": 736.56,
+     "text": "Today we're celebrating the tangible"
+    },
+    {
+     "t": 739.04,
+     "text": "impacts of the governor's nationleading"
+    },
+    {
+     "t": 741.92,
+     "text": "water investments and New York's"
+    },
+    {
+     "t": 744.32,
+     "text": "historic $4.2 $2 billion environmental"
+    },
+    {
+     "t": 747.52,
+     "text": "bond act right here in Harlem. This is"
+    },
+    {
+     "t": 750.4,
+     "text": "what environmental leadership looks"
+    },
+    {
+     "t": 752.48,
+     "text": "like. Strengthening our infrastructure,"
+    },
+    {
+     "t": 757.2,
+     "text": "protecting our communities, and"
+    },
+    {
+     "t": 759.44,
+     "text": "delivering real results for New Yorkers."
+    },
+    {
+     "t": 763.04,
+     "text": "As storms continue to be more intense"
+    },
+    {
+     "t": 766.0,
+     "text": "and more frequent, we've come to"
+    },
+    {
+     "t": 768.32,
+     "text": "understand we can no longer afford to be"
+    },
+    {
+     "t": 771.04,
+     "text": "reactive. We must be proactive"
+    },
+    {
+     "t": 774.08,
+     "text": "and take action today to safeguard our"
+    },
+    {
+     "t": 776.8,
+     "text": "future. This project will mitigate local"
+    },
+    {
+     "t": 780.72,
+     "text": "localized flood risk."
+    },
+    {
+     "t": 783.36,
+     "text": "But it's also going to improve water"
+    },
+    {
+     "t": 785.44,
+     "text": "quality and help manage harmful algo"
+    },
+    {
+     "t": 787.68,
+     "text": "blooms, restore vital habitats,"
+    },
+    {
+     "t": 791.28,
+     "text": "conserve ga millions of gallons of"
+    },
+    {
+     "t": 794.56,
+     "text": "portable water, and help keep millions"
+    },
+    {
+     "t": 797.12,
+     "text": "of gallons of polluted storm water out"
+    },
+    {
+     "t": 800.16,
+     "text": "of the Harlem River."
+    },
+    {
+     "t": 802.4,
+     "text": "Projects of this scale, they don't"
+    },
+    {
+     "t": 804.88,
+     "text": "happen without careful planning and the"
+    },
+    {
+     "t": 807.04,
+     "text": "right investment. and go govern Governor"
+    },
+    {
+     "t": 809.2,
+     "text": "Hokll is making sure that significant"
+    },
+    {
+     "t": 811.6,
+     "text": "environmental projects can move from the"
+    },
+    {
+     "t": 814.4,
+     "text": "planning stage to progress on the"
+    },
+    {
+     "t": 816.56,
+     "text": "ground. The governor championed the"
+    },
+    {
+     "t": 819.2,
+     "text": "Clean Water, Clean Air and Green Jobs"
+    },
+    {
+     "t": 821.2,
+     "text": "Environmental Bond Act of 2022 to help"
+    },
+    {
+     "t": 824.48,
+     "text": "communities make the investments needed"
+    },
+    {
+     "t": 826.8,
+     "text": "to confront the impacts of intense"
+    },
+    {
+     "t": 828.96,
+     "text": "storms, protect clean air and water, and"
+    },
+    {
+     "t": 831.76,
+     "text": "build a more resilient future. EFC has"
+    },
+    {
+     "t": 835.12,
+     "text": "awarded more than $50 million dollars in"
+    },
+    {
+     "t": 838.08,
+     "text": "environmental bond act funding through"
+    },
+    {
+     "t": 840.4,
+     "text": "the green resiliency grants to five"
+    },
+    {
+     "t": 843.28,
+     "text": "projects in New York City, including the"
+    },
+    {
+     "t": 845.68,
+     "text": "project we're celebrating today. And a"
+    },
+    {
+     "t": 848.56,
+     "text": "week ago, last Monday, as the first"
+    },
+    {
+     "t": 851.6,
+     "text": "installment of our $3.75"
+    },
+    {
+     "t": 854.96,
+     "text": "billion clean water investment plan,"
+    },
+    {
+     "t": 858.24,
+     "text": "Governor Hokll announced 500 million,"
+    },
+    {
+     "t": 861.04,
+     "text": "half a billion dollars in state water"
+    },
+    {
+     "t": 863.68,
+     "text": "grants across the state, including a $25"
+    },
+    {
+     "t": 867.12,
+     "text": "million grant"
+    },
+    {
+     "t": 869.68,
+     "text": "uh to New York City for a water"
+    },
+    {
+     "t": 871.36,
+     "text": "infrastructure uh project that will help"
+    },
+    {
+     "t": 874.4,
+     "text": "protect the Hudson River. This funding"
+    },
+    {
+     "t": 877.52,
+     "text": "matters. It closes critical funding gaps"
+    },
+    {
+     "t": 880.72,
+     "text": "so that ambitious projects are more"
+    },
+    {
+     "t": 882.72,
+     "text": "affordable and it makes transformative"
+    },
+    {
+     "t": 885.36,
+     "text": "projects possible."
+    },
+    {
+     "t": 887.92,
+     "text": "Here in Central Park, the state's $10"
+    },
+    {
+     "t": 890.24,
+     "text": "million grant is helping to protect a"
+    },
+    {
+     "t": 893.12,
+     "text": "treasured public space while"
+    },
+    {
+     "t": 896.32,
+     "text": "strengthening flood resilience and"
+    },
+    {
+     "t": 898.72,
+     "text": "safeguarding the waters that connect us"
+    },
+    {
+     "t": 900.48,
+     "text": "all. And I want to thank all of you that"
+    },
+    {
+     "t": 903.04,
+     "text": "are here today that made this pop uh"
+    },
+    {
+     "t": 905.52,
+     "text": "possible. And thank you to Mayor Mdani,"
+    },
+    {
+     "t": 908.48,
+     "text": "Commissioner Garcia and DP, the um"
+    },
+    {
+     "t": 912.24,
+     "text": "Commissioner Shamura and New York City"
+    },
+    {
+     "t": 914.0,
+     "text": "Parks and the um Park Conservancy,"
+    },
+    {
+     "t": 918.08,
+     "text": "Central Park Conservancy, and all the"
+    },
+    {
+     "t": 920.0,
+     "text": "partners, city council that are here"
+    },
+    {
+     "t": 921.84,
+     "text": "today again and help to make this"
+    },
+    {
+     "t": 923.84,
+     "text": "project possible. Thank you."
+    },
+    {
+     "t": 929.68,
+     "text": ">> All right. Thank you so much, Moren, and"
+    },
+    {
+     "t": 931.68,
+     "text": "of course to Governor Hokll. It's great"
+    },
+    {
+     "t": 933.84,
+     "text": "to have a great state partner. Um, next,"
+    },
+    {
+     "t": 937.6,
+     "text": "please join me in bringing up Manhattan"
+    },
+    {
+     "t": 939.52,
+     "text": "B president Brad Hyman Seagull."
+    },
+    {
+     "t": 942.72,
+     "text": ">> Thank you."
+    },
+    {
+     "t": 944.08,
+     "text": ">> Thank you. Good morning. Good morning,"
+    },
+    {
+     "t": 945.92,
+     "text": "Brad Hman, Seagull, Manhattan B. Thank"
+    },
+    {
+     "t": 947.76,
+     "text": "you, Mr. Mayor, Madam Speaker,"
+    },
+    {
+     "t": 950.32,
+     "text": "commissioners, council members. Uh, I'd"
+    },
+    {
+     "t": 953.68,
+     "text": "like to shout out Shadik Mitchell, first"
+    },
+    {
+     "t": 956.0,
+     "text": "vice chair of community board 10, who is"
+    },
+    {
+     "t": 957.92,
+     "text": "here. Please give him a round of"
+    },
+    {
+     "t": 959.44,
+     "text": "applause. Um, and I know he and Council"
+    },
+    {
+     "t": 963.12,
+     "text": "Member Salam agree that investing in the"
+    },
+    {
+     "t": 966.08,
+     "text": "northern portion of Central Park is"
+    },
+    {
+     "t": 968.0,
+     "text": "crucial. And I'm very proud to have"
+    },
+    {
+     "t": 970.48,
+     "text": "committed a half million dollars toward"
+    },
+    {
+     "t": 972.72,
+     "text": "that effort. It's not just the water"
+    },
+    {
+     "t": 974.56,
+     "text": "that we're clearing up, but it's also"
+    },
+    {
+     "t": 976.8,
+     "text": "protecting some cultural institutions"
+    },
+    {
+     "t": 979.36,
+     "text": "across the street, including the Museum"
+    },
+    {
+     "t": 981.52,
+     "text": "of the City of New York and Musea"
+    },
+    {
+     "t": 983.36,
+     "text": "Delbario, which will be protected their"
+    },
+    {
+     "t": 986.64,
+     "text": "uh artifacts uh from this new storm"
+    },
+    {
+     "t": 989.36,
+     "text": "water uh resilience system. And the"
+    },
+    {
+     "t": 992.0,
+     "text": "enormity of this project is tremendous."
+    },
+    {
+     "t": 994.72,
+     "text": "And to help you visualize that, 200"
+    },
+    {
+     "t": 998.0,
+     "text": "Olympic size pools of water diverted"
+    },
+    {
+     "t": 1000.56,
+     "text": "from sewers per year. Imagine our mayor"
+    },
+    {
+     "t": 1004.32,
+     "text": "fully clothed jumping into 200 swimming"
+    },
+    {
+     "t": 1007.36,
+     "text": "pools."
+    },
+    {
+     "t": 1010.0,
+     "text": "It's significant. And I want to I want"
+    },
+    {
+     "t": 1012.16,
+     "text": "to thank all of our partners in"
+    },
+    {
+     "t": 1013.68,
+     "text": "government because um water is truly the"
+    },
+    {
+     "t": 1017.28,
+     "text": "essence of life and making it clear and"
+    },
+    {
+     "t": 1020.48,
+     "text": "clean and safe um is really a"
+    },
+    {
+     "t": 1022.8,
+     "text": "fundamental role of government. So,"
+    },
+    {
+     "t": 1024.08,
+     "text": "thank you so much."
+    },
+    {
+     "t": 1026.56,
+     "text": ">> Thank you so much, Brad. We'll look"
+    },
+    {
+     "t": 1028.32,
+     "text": "forward to the mayor jumping into 200"
+    },
+    {
+     "t": 1030.32,
+     "text": "new pools."
+    },
+    {
+     "t": 1032.64,
+     "text": "Um, okay. And now we have Council Member"
+    },
+    {
+     "t": 1034.72,
+     "text": "Gail Brewer. Please come to the podium."
+    },
+    {
+     "t": 1036.96,
+     "text": "Thank you so much for your leadership."
+    },
+    {
+     "t": 1040.88,
+     "text": "Thank you very much, Mr. Mayor. Luckily,"
+    },
+    {
+     "t": 1042.88,
+     "text": "this is a non-controversial project."
+    },
+    {
+     "t": 1044.96,
+     "text": "Congratulations."
+    },
+    {
+     "t": 1046.48,
+     "text": "And I also definitely want to thank uh"
+    },
+    {
+     "t": 1048.64,
+     "text": "Betsy Smith and everybody at the"
+    },
+    {
+     "t": 1050.32,
+     "text": "conservancy, Satique Mitchell, David"
+    },
+    {
+     "t": 1052.08,
+     "text": "Saltenstall, former intern, Mr. Mayor,"
+    },
+    {
+     "t": 1054.32,
+     "text": "just so you know, to add to the list. I"
+    },
+    {
+     "t": 1056.0,
+     "text": "want to be clear on that. Um, so I am"
+    },
+    {
+     "t": 1059.28,
+     "text": "ecstatic. I don't understand one bit of"
+    },
+    {
+     "t": 1061.2,
+     "text": "the engineering but it sounds very"
+    },
+    {
+     "t": 1062.8,
+     "text": "exciting. Um obviously we want to reduce"
+    },
+    {
+     "t": 1065.84,
+     "text": "the sewer over overflows in the park. We"
+    },
+    {
+     "t": 1068.88,
+     "text": "want uh not to have filtration systems"
+    },
+    {
+     "t": 1072.08,
+     "text": "for quoting but definitely here. We want"
+    },
+    {
+     "t": 1074.8,
+     "text": "to make sure that this doesn't look like"
+    },
+    {
+     "t": 1076.64,
+     "text": "I hate to say some other places where"
+    },
+    {
+     "t": 1078.4,
+     "text": "there's a lot of sedimentation not will"
+    },
+    {
+     "t": 1081.2,
+     "text": "will not be here and it will link water"
+    },
+    {
+     "t": 1084.0,
+     "text": "courses. It will make historic efforts"
+    },
+    {
+     "t": 1086.96,
+     "text": "and ongoing enhancements to make the"
+    },
+    {
+     "t": 1088.8,
+     "text": "system more sustainable, resilient, and"
+    },
+    {
+     "t": 1091.04,
+     "text": "healthier. Is it really to me it's very"
+    },
+    {
+     "t": 1093.52,
+     "text": "exciting to have this relationship"
+    },
+    {
+     "t": 1094.88,
+     "text": "between parks uh the uh uh CPC and DP"
+    },
+    {
+     "t": 1100.56,
+     "text": "and the issue is obviously by redoing"
+    },
+    {
+     "t": 1103.84,
+     "text": "the amazing work that was done to redo"
+    },
+    {
+     "t": 1106.64,
+     "text": "the Dana center and then to redo"
+    },
+    {
+     "t": 1109.92,
+     "text": "obviously D the Davis center that was"
+    },
+    {
+     "t": 1112.8,
+     "text": "controversial got through it and the"
+    },
+    {
+     "t": 1114.88,
+     "text": "fact of the matter is this will be"
+    },
+    {
+     "t": 1116.4,
+     "text": "adding to the amazing support for the"
+    },
+    {
+     "t": 1118.88,
+     "text": "northern part of the park. Um, we will"
+    },
+    {
+     "t": 1123.36,
+     "text": "have the new pumping, the filtration,"
+    },
+    {
+     "t": 1125.2,
+     "text": "the connecting piping, and that will"
+    },
+    {
+     "t": 1127.28,
+     "text": "reduce the need for fresh city water in"
+    },
+    {
+     "t": 1129.28,
+     "text": "the pool, the lock, and the mirror"
+    },
+    {
+     "t": 1130.64,
+     "text": "system. And so, I'm just here like"
+    },
+    {
+     "t": 1132.32,
+     "text": "everybody else to say, uh, other parts"
+    },
+    {
+     "t": 1134.56,
+     "text": "of the city are still dealing with the"
+    },
+    {
+     "t": 1136.24,
+     "text": "CSO, the combined sewage overflow, but"
+    },
+    {
+     "t": 1139.36,
+     "text": "that will not be a problem here. And"
+    },
+    {
+     "t": 1141.2,
+     "text": "maybe we can learn how it can be done"
+    },
+    {
+     "t": 1143.84,
+     "text": "elsewhere. Um, stabilize the shoreline"
+    },
+    {
+     "t": 1146.88,
+     "text": "edges to prevent erosion. The only issue"
+    },
+    {
+     "t": 1149.36,
+     "text": "when I came over, somebody was feeding"
+    },
+    {
+     "t": 1151.52,
+     "text": "the ducks. I don't know how you're going"
+    },
+    {
+     "t": 1153.2,
+     "text": "to stop that, Betsy. Thank you very"
+    },
+    {
+     "t": 1154.8,
+     "text": "much."
+    },
+    {
+     "t": 1158.08,
+     "text": "Thank you, council member. All right,"
+    },
+    {
+     "t": 1160.16,
+     "text": "we'll deal with uh this project for now"
+    },
+    {
+     "t": 1162.96,
+     "text": "and worry about the ducks in the future,"
+    },
+    {
+     "t": 1165.92,
+     "text": "but as we've heard from our"
+    },
+    {
+     "t": 1167.28,
+     "text": "distinguished speakers, thank you so"
+    },
+    {
+     "t": 1168.96,
+     "text": "much everyone. This project will deliver"
+    },
+    {
+     "t": 1171.36,
+     "text": "benefits to Central Park far beyond the"
+    },
+    {
+     "t": 1174.08,
+     "text": "work taking place underground. From DP's"
+    },
+    {
+     "t": 1176.8,
+     "text": "perspective, yes, this project is"
+    },
+    {
+     "t": 1178.72,
+     "text": "certainly about infrastructure, but it's"
+    },
+    {
+     "t": 1181.28,
+     "text": "also about people. It's about ensuring"
+    },
+    {
+     "t": 1183.36,
+     "text": "future generations can enjoy these"
+    },
+    {
+     "t": 1185.28,
+     "text": "spaces while making our city more"
+    },
+    {
+     "t": 1187.52,
+     "text": "resilient to climate change. By better"
+    },
+    {
+     "t": 1189.84,
+     "text": "managing water use and levels, we can"
+    },
+    {
+     "t": 1192.56,
+     "text": "capture storm water, ease pressure on"
+    },
+    {
+     "t": 1194.8,
+     "text": "local sewers, reduce combined sewer"
+    },
+    {
+     "t": 1197.36,
+     "text": "overflows, as mentioned, lower flood"
+    },
+    {
+     "t": 1199.76,
+     "text": "risk to the community, and of course,"
+    },
+    {
+     "t": 1201.84,
+     "text": "conserve clean drinking water. What"
+    },
+    {
+     "t": 1204.0,
+     "text": "makes this effort inspiring um to many"
+    },
+    {
+     "t": 1207.04,
+     "text": "of us especially as the daughter of an"
+    },
+    {
+     "t": 1208.88,
+     "text": "engineer is that it works with the"
+    },
+    {
+     "t": 1210.96,
+     "text": "landscape and vision by the visionary by"
+    },
+    {
+     "t": 1213.52,
+     "text": "Olmstead and Vox from years ago but it's"
+    },
+    {
+     "t": 1216.8,
+     "text": "adapting it to meet today's challenges"
+    },
+    {
+     "t": 1219.28,
+     "text": "and that's really what we need to do is"
+    },
+    {
+     "t": 1221.12,
+     "text": "keep adapting and delivering protections"
+    },
+    {
+     "t": 1223.6,
+     "text": "for future New Yorkers. This is the best"
+    },
+    {
+     "t": 1226.0,
+     "text": "kind of infrastructure unseen but still"
+    },
+    {
+     "t": 1228.48,
+     "text": "improving lives before major storms."
+    },
+    {
+     "t": 1231.28,
+     "text": "Water levels in Harlem Mir will be"
+    },
+    {
+     "t": 1233.28,
+     "text": "lowered to create storage capacity."
+    },
+    {
+     "t": 1235.76,
+     "text": "During storms, that space will absorb"
+    },
+    {
+     "t": 1238.08,
+     "text": "the rainfall instead of sending it into"
+    },
+    {
+     "t": 1240.24,
+     "text": "our sewers, easing the strain on the"
+    },
+    {
+     "t": 1242.72,
+     "text": "local communities. Equally important,"
+    },
+    {
+     "t": 1245.04,
+     "text": "the project reduces Central Park's"
+    },
+    {
+     "t": 1247.04,
+     "text": "reliance on the best water in the world,"
+    },
+    {
+     "t": 1249.92,
+     "text": "New York City's portable water supply."
+    },
+    {
+     "t": 1252.64,
+     "text": "The closed loop circulation, as you've"
+    },
+    {
+     "t": 1254.88,
+     "text": "heard, that system will also move among"
+    },
+    {
+     "t": 1258.08,
+     "text": "uh water among the mirror, the lock, and"
+    },
+    {
+     "t": 1260.32,
+     "text": "the pool, enhancing water quality and"
+    },
+    {
+     "t": 1263.2,
+     "text": "reducing algae blooms in hot weather. D"
+    },
+    {
+     "t": 1266.56,
+     "text": "is equally proud to contribute more than"
+    },
+    {
+     "t": 1268.8,
+     "text": "$14 million towards this $35 million"
+    },
+    {
+     "t": 1271.92,
+     "text": "investment, which will keep about $132"
+    },
+    {
+     "t": 1275.28,
+     "text": "million gallons of storm water out of"
+    },
+    {
+     "t": 1277.2,
+     "text": "local sewers while conserving an"
+    },
+    {
+     "t": 1279.36,
+     "text": "estimated 175 million gallons of water"
+    },
+    {
+     "t": 1282.88,
+     "text": "depicted more visually over here by our"
+    },
+    {
+     "t": 1285.44,
+     "text": "posters. Um, today's groundbreaking is a"
+    },
+    {
+     "t": 1289.12,
+     "text": "commitment to resiliency,"
+    },
+    {
+     "t": 1290.56,
+     "text": "sustainability, and stewardship, and to"
+    },
+    {
+     "t": 1293.04,
+     "text": "preserving one of New York City's most"
+    },
+    {
+     "t": 1294.96,
+     "text": "beloved public spaces for generations to"
+    },
+    {
+     "t": 1297.44,
+     "text": "come. I especially want to thank DP's"
+    },
+    {
+     "t": 1300.16,
+     "text": "team um, who helped with this"
+    },
+    {
+     "t": 1302.48,
+     "text": "partnership and their vision and some of"
+    },
+    {
+     "t": 1304.64,
+     "text": "the engineering. I really look forward"
+    },
+    {
+     "t": 1306.48,
+     "text": "to seeing the benefits of this project"
+    },
+    {
+     "t": 1308.88,
+     "text": "for many years ahead. Again, thank you"
+    },
+    {
+     "t": 1311.04,
+     "text": "to everyone, all of our partners, and"
+    },
+    {
+     "t": 1313.44,
+     "text": "all of you. Uh, thank you so much again."
+    },
+    {
+     "t": 1316.32,
+     "text": "Congratulations to everyone."
+    },
+    {
+     "t": 1319.52,
+     "text": "Um, and I will turn it back to the mayor"
+    },
+    {
+     "t": 1322.0,
+     "text": "now. Thank you everyone."
+    },
+    {
+     "t": 1323.44,
+     "text": ">> Thank you."
+    },
+    {
+     "t": 1324.88,
+     "text": ">> Thank you to our speakers."
+    },
+    {
+     "t": 1330.24,
+     "text": ">> The mayor will now take questions."
+    },
+    {
+     "t": 1333.44,
+     "text": ">> One minute."
+    },
+    {
+     "t": 1340.48,
+     "text": ">> Start with on topics and then we'll have"
+    },
+    {
+     "t": 1341.68,
+     "text": "time for off topics as well. Do you have"
+    },
+    {
+     "t": 1343.52,
+     "text": "any on topic questions about today's"
+    },
+    {
+     "t": 1344.96,
+     "text": "announcement?"
+    },
+    {
+     "t": 1346.96,
+     "text": ">> None. General city and state if you"
+    },
+    {
+     "t": 1348.72,
+     "text": "could just wait for the mic."
+    },
+    {
+     "t": 1354.24,
+     "text": ">> Hi, how you doing?"
+    },
+    {
+     "t": 1355.04,
+     "text": ">> How's it going?"
+    },
+    {
+     "t": 1355.92,
+     "text": ">> Um, first question, how long will this"
+    },
+    {
+     "t": 1359.12,
+     "text": "project take to implement? And second"
+    },
+    {
+     "t": 1361.84,
+     "text": "question, uh I'm sure I don't know if"
+    },
+    {
+     "t": 1363.84,
+     "text": "you saw FEMA announced um over the next"
+    },
+    {
+     "t": 1366.8,
+     "text": "6 months they will start shifting"
+    },
+    {
+     "t": 1368.88,
+     "text": "financial responsibility for uh disaster"
+    },
+    {
+     "t": 1371.52,
+     "text": "relief onto states. Uh what does that"
+    },
+    {
+     "t": 1373.84,
+     "text": "mean for New York City and does that"
+    },
+    {
+     "t": 1376.16,
+     "text": "kind of put pressure uh on projects such"
+    },
+    {
+     "t": 1378.96,
+     "text": "as this to accelerate or or to implement"
+    },
+    {
+     "t": 1381.44,
+     "text": "more projects?"
+    },
+    {
+     "t": 1383.12,
+     "text": ">> Just the last part of the question one"
+    },
+    {
+     "t": 1384.0,
+     "text": "more time."
+    },
+    {
+     "t": 1384.32,
+     "text": ">> Yeah. Does that put pressure on the city"
+    },
+    {
+     "t": 1385.92,
+     "text": "to implement more projects such as this"
+    },
+    {
+     "t": 1389.28,
+     "text": "um because of that shift of financial"
+    },
+    {
+     "t": 1391.44,
+     "text": "responsibility onto states? So, I'll"
+    },
+    {
+     "t": 1393.6,
+     "text": "I'll answer your first question and go"
+    },
+    {
+     "t": 1394.8,
+     "text": "into your second one. On on the first"
+    },
+    {
+     "t": 1396.24,
+     "text": "question, the estimated completion date"
+    },
+    {
+     "t": 1398.32,
+     "text": "is fall 2028 and we are incredibly"
+    },
+    {
+     "t": 1402.0,
+     "text": "excited about this project. Not only for"
+    },
+    {
+     "t": 1404.24,
+     "text": "all the reasons that you've heard, but"
+    },
+    {
+     "t": 1405.52,
+     "text": "also just to say very explicitly that"
+    },
+    {
+     "t": 1407.68,
+     "text": "the amount of rainfall the city is"
+    },
+    {
+     "t": 1409.44,
+     "text": "facing has only increased year after"
+    },
+    {
+     "t": 1411.68,
+     "text": "year. And that is something that's"
+    },
+    {
+     "t": 1412.88,
+     "text": "intensifying with the climate crisis."
+    },
+    {
+     "t": 1415.12,
+     "text": "And we know that our sewage system is"
+    },
+    {
+     "t": 1417.28,
+     "text": "built at best to be able to accommodate"
+    },
+    {
+     "t": 1419.68,
+     "text": "about 1.75 in of rainfall per hour. And"
+    },
+    {
+     "t": 1423.04,
+     "text": "what this kind of an innovation allows"
+    },
+    {
+     "t": 1425.76,
+     "text": "us to do is to keep a lot of what would"
+    },
+    {
+     "t": 1428.72,
+     "text": "otherwise be uh overflow water that"
+    },
+    {
+     "t": 1431.44,
+     "text": "would have to be managed by streets"
+    },
+    {
+     "t": 1433.12,
+     "text": "outside of Central Park to keep that"
+    },
+    {
+     "t": 1435.2,
+     "text": "from happening by lowering the amount of"
+    },
+    {
+     "t": 1437.04,
+     "text": "water here in in in these specific sets"
+    },
+    {
+     "t": 1439.6,
+     "text": "of of water bodies. Uh, and that's going"
+    },
+    {
+     "t": 1442.0,
+     "text": "to have a not only a significant impact"
+    },
+    {
+     "t": 1444.16,
+     "text": "for anyone who loves and comes through"
+    },
+    {
+     "t": 1445.6,
+     "text": "Central Park, but also those who happen"
+    },
+    {
+     "t": 1447.36,
+     "text": "to live around Central Park, especially"
+    },
+    {
+     "t": 1449.6,
+     "text": "in Harlem, East Harlem, um, and and the"
+    },
+    {
+     "t": 1452.8,
+     "text": "northernmost parts of the Upper East"
+    },
+    {
+     "t": 1454.16,
+     "text": "Side. To to your second question, this"
+    },
+    {
+     "t": 1457.2,
+     "text": "should be work that unites every level"
+    },
+    {
+     "t": 1459.2,
+     "text": "of government. And we are here today"
+    },
+    {
+     "t": 1461.68,
+     "text": "because of the generosity and the"
+    },
+    {
+     "t": 1463.84,
+     "text": "commitment of city, state, and private"
+    },
+    {
+     "t": 1466.96,
+     "text": "donors. We would love to see a future"
+    },
+    {
+     "t": 1468.88,
+     "text": "where the federal government is a"
+    },
+    {
+     "t": 1470.32,
+     "text": "partner in these kinds of works because"
+    },
+    {
+     "t": 1472.16,
+     "text": "this is what it means to take care of"
+    },
+    {
+     "t": 1473.84,
+     "text": "people who call this city home, call"
+    },
+    {
+     "t": 1475.44,
+     "text": "this country home. And any actions by"
+    },
+    {
+     "t": 1477.44,
+     "text": "FEMA looking to offload responsibility"
+    },
+    {
+     "t": 1480.32,
+     "text": "uh to to the state level is frankly"
+    },
+    {
+     "t": 1483.04,
+     "text": "something that is looking to offload the"
+    },
+    {
+     "t": 1484.72,
+     "text": "very responsibility that comes with with"
+    },
+    {
+     "t": 1486.56,
+     "text": "leading and uh FEMA as well as leading"
+    },
+    {
+     "t": 1489.12,
+     "text": "federal agencies as a whole."
+    },
+    {
+     "t": 1491.2,
+     "text": ">> Any other questions about today's"
+    },
+    {
+     "t": 1492.24,
+     "text": "announcement? Yes, Juliet,"
+    },
+    {
+     "t": 1494.24,
+     "text": ">> if you could just wait for the mic."
+    },
+    {
+     "t": 1495.36,
+     "text": "Thank you."
+    },
+    {
+     "t": 1502.0,
+     "text": "Good morning, Mr. Mayor."
+    },
+    {
+     "t": 1503.04,
+     "text": ">> Morning."
+    },
+    {
+     "t": 1503.52,
+     "text": ">> So, uh, to Gail Brewer's point, where"
+    },
+    {
+     "t": 1506.24,
+     "text": "else could this work? You know, there's"
+    },
+    {
+     "t": 1508.88,
+     "text": "flooding in the Rockaways every time"
+    },
+    {
+     "t": 1511.12,
+     "text": "across Cross Island Parkway, Northern"
+    },
+    {
+     "t": 1513.84,
+     "text": "Queens. These are areas that are"
+    },
+    {
+     "t": 1516.08,
+     "text": "perpetually flooding. Uh, does something"
+    },
+    {
+     "t": 1518.88,
+     "text": "like this work in those locations?"
+    },
+    {
+     "t": 1521.76,
+     "text": ">> So, we are excited about this project."
+    },
+    {
+     "t": 1524.16,
+     "text": "We're also excited about the prospect of"
+    },
+    {
+     "t": 1525.76,
+     "text": "bringing this kind of an approach"
+    },
+    {
+     "t": 1527.28,
+     "text": "elsewhere. We're going to be looking to"
+    },
+    {
+     "t": 1529.6,
+     "text": "see if there are any other opportunities"
+    },
+    {
+     "t": 1531.04,
+     "text": "to apply a similar model elsewhere"
+    },
+    {
+     "t": 1533.28,
+     "text": "across the the five buraus. What I will"
+    },
+    {
+     "t": 1535.2,
+     "text": "say is that the even if it is not the"
+    },
+    {
+     "t": 1537.68,
+     "text": "exact approach of this project, there"
+    },
+    {
+     "t": 1539.84,
+     "text": "are other projects that have similar"
+    },
+    {
+     "t": 1541.68,
+     "text": "intents. So for example, cloud burst"
+    },
+    {
+     "t": 1544.32,
+     "text": "technology is a technology that can"
+    },
+    {
+     "t": 1546.88,
+     "text": "absorb excess rainfall, hold it for 24"
+    },
+    {
+     "t": 1550.24,
+     "text": "to 48 hours, allow the sewage system to"
+    },
+    {
+     "t": 1553.04,
+     "text": "get to a place where it can handle that,"
+    },
+    {
+     "t": 1554.56,
+     "text": "and then release that rainfall."
+    },
+    {
+     "t": 1556.24,
+     "text": "Permeable pavement is something else"
+    },
+    {
+     "t": 1558.32,
+     "text": "that we're looking at. Uh basically any"
+    },
+    {
+     "t": 1561.92,
+     "text": "kind of an approach that can absorb"
+    },
+    {
+     "t": 1564.48,
+     "text": "excess rainfall and allow the city a"
+    },
+    {
+     "t": 1566.24,
+     "text": "moment to breathe. in Staten Island,"
+    },
+    {
+     "t": 1568.0,
+     "text": "blue belts have been incredibly uh"
+    },
+    {
+     "t": 1570.4,
+     "text": "effective at at combating some of this"
+    },
+    {
+     "t": 1572.64,
+     "text": "rainfall. So, we're going to be taking"
+    },
+    {
+     "t": 1573.84,
+     "text": "this approach across the city."
+    },
+    {
+     "t": 1576.96,
+     "text": ">> I think we're looking at anywhere where"
+    },
+    {
+     "t": 1579.36,
+     "text": "there is excess flooding that we can"
+    },
+    {
+     "t": 1581.04,
+     "text": "have an impact. And as you know, there"
+    },
+    {
+     "t": 1582.56,
+     "text": "is no shortage across our city. Um now"
+    },
+    {
+     "t": 1585.76,
+     "text": "that means in what's so exciting about"
+    },
+    {
+     "t": 1588.16,
+     "text": "this, I think outside you'll see a map"
+    },
+    {
+     "t": 1590.48,
+     "text": "that shows exactly where the flooding"
+    },
+    {
+     "t": 1592.56,
+     "text": "typically affects. We're talking about,"
+    },
+    {
+     "t": 1594.32,
+     "text": "I think, north of, I don't know, 90,"
+    },
+    {
+     "t": 1596.8,
+     "text": "95th Street on the east side going up to"
+    },
+    {
+     "t": 1599.68,
+     "text": "maybe about 120th or so over many"
+    },
+    {
+     "t": 1602.8,
+     "text": "different avenues. That's flooding that"
+    },
+    {
+     "t": 1605.2,
+     "text": "for too long people have just been"
+    },
+    {
+     "t": 1606.64,
+     "text": "forced to accept as if it's a part of"
+    },
+    {
+     "t": 1608.16,
+     "text": "life. But we can take these kind of"
+    },
+    {
+     "t": 1610.32,
+     "text": "approaches. And we know that, you know,"
+    },
+    {
+     "t": 1612.08,
+     "text": "these are approaches that were proposed"
+    },
+    {
+     "t": 1613.68,
+     "text": "hundreds of years ago. It's exciting"
+    },
+    {
+     "t": 1615.44,
+     "text": "that we are now the partners that are"
+    },
+    {
+     "t": 1617.28,
+     "text": "able to de deliver and implement this."
+    },
+    {
+     "t": 1619.76,
+     "text": ">> We'll take off topics, too. We'll go to"
+    },
+    {
+     "t": 1621.6,
+     "text": "Andrew from MC."
+    },
+    {
+     "t": 1623.04,
+     "text": ">> Mayor, good morning. How you doing? Two"
+    },
+    {
+     "t": 1624.88,
+     "text": "election related questions. One is so"
+    },
+    {
+     "t": 1627.44,
+     "text": "far turnout is not only way ahead of the"
+    },
+    {
+     "t": 1630.72,
+     "text": "2022 midterms, but even ahead of the"
+    },
+    {
+     "t": 1633.28,
+     "text": "mayoral election in New York City. I'm"
+    },
+    {
+     "t": 1635.68,
+     "text": "wondering what you ascribe that to. What"
+    },
+    {
+     "t": 1638.24,
+     "text": "is your sense from having voted and"
+    },
+    {
+     "t": 1640.08,
+     "text": "talked to people what you ascribe that"
+    },
+    {
+     "t": 1641.44,
+     "text": "to? And my second question is, are you"
+    },
+    {
+     "t": 1644.4,
+     "text": "surprised that at least thus far you"
+    },
+    {
+     "t": 1646.4,
+     "text": "haven't been used by Republicans beyond"
+    },
+    {
+     "t": 1649.2,
+     "text": "Bruce Blakeman? uh as more of a sort of"
+    },
+    {
+     "t": 1652.0,
+     "text": "boogeyman in the election that they've"
+    },
+    {
+     "t": 1654.56,
+     "text": "either decided not to do it, it's not"
+    },
+    {
+     "t": 1656.96,
+     "text": "working or or are you seeing it pretty"
+    },
+    {
+     "t": 1659.2,
+     "text": "much the way you expected there? So on"
+    },
+    {
+     "t": 1661.92,
+     "text": "the first, what I've heard from New"
+    },
+    {
+     "t": 1663.44,
+     "text": "Yorkers is an excitement to vote for"
+    },
+    {
+     "t": 1666.0,
+     "text": "something and when they're looking at"
+    },
+    {
+     "t": 1667.92,
+     "text": "this gubernatorial election, what"
+    },
+    {
+     "t": 1669.84,
+     "text": "they're seeing is that the governor has"
+    },
+    {
+     "t": 1671.6,
+     "text": "a clear record and a clear vision of"
+    },
+    {
+     "t": 1673.84,
+     "text": "making life more affordable in the"
+    },
+    {
+     "t": 1675.52,
+     "text": "nation's most expensive city. And Bruce"
+    },
+    {
+     "t": 1677.6,
+     "text": "Blakeman's vision is to work closer with"
+    },
+    {
+     "t": 1680.08,
+     "text": "ICE and to create a private militia in"
+    },
+    {
+     "t": 1681.76,
+     "text": "Nassau County. His vision is to look at"
+    },
+    {
+     "t": 1684.32,
+     "text": "HR1 cuts that could devastate up to"
+    },
+    {
+     "t": 1686.88,
+     "text": "900,000 New Yorkers and take them off"
+    },
+    {
+     "t": 1689.04,
+     "text": "their health insurance and say, \"I'll"
+    },
+    {
+     "t": 1690.72,
+     "text": "cut Medicaid by half and then say that"
+    },
+    {
+     "t": 1693.04,
+     "text": "on television and then go on to say that"
+    },
+    {
+     "t": 1695.04,
+     "text": "he never said it.\" So, it's it's a"
+    },
+    {
+     "t": 1696.48,
+     "text": "little bit of a confusing campaign uh in"
+    },
+    {
+     "t": 1698.96,
+     "text": "in terms of what Blakeman is putting"
+    },
+    {
+     "t": 1700.32,
+     "text": "forward. But New Yorkers across the five"
+    },
+    {
+     "t": 1702.8,
+     "text": "buraus, I've heard both in person with"
+    },
+    {
+     "t": 1704.96,
+     "text": "the governor, are excited about 2K."
+    },
+    {
+     "t": 1707.2,
+     "text": "They're excited about us finally working"
+    },
+    {
+     "t": 1709.76,
+     "text": "together where they haven't seen mayors"
+    },
+    {
+     "t": 1711.68,
+     "text": "and governors do that often in the past"
+    },
+    {
+     "t": 1713.52,
+     "text": "and to be able to deliver on common"
+    },
+    {
+     "t": 1714.96,
+     "text": "sense things even just like right here"
+    },
+    {
+     "t": 1716.4,
+     "text": "in Central Park. And to your second"
+    },
+    {
+     "t": 1718.4,
+     "text": "question, I think one of the reasons is"
+    },
+    {
+     "t": 1721.36,
+     "text": "that"
+    },
+    {
+     "t": 1722.88,
+     "text": "Republicans would prefer to not have to"
+    },
+    {
+     "t": 1724.96,
+     "text": "bring up a record of delivering free"
+    },
+    {
+     "t": 1727.2,
+     "text": "child care for 2-year-olds. They would"
+    },
+    {
+     "t": 1728.72,
+     "text": "prefer to not have to talk about holding"
+    },
+    {
+     "t": 1731.28,
+     "text": "Door Dash to account for $130 million"
+    },
+    {
+     "t": 1733.84,
+     "text": "and underpaying more than 260,000 uh"
+    },
+    {
+     "t": 1736.96,
+     "text": "employees. They would prefer to not have"
+    },
+    {
+     "t": 1738.96,
+     "text": "to talk about our ability to deliver on"
+    },
+    {
+     "t": 1741.2,
+     "text": "an ambitious agenda while also paving"
+    },
+    {
+     "t": 1743.36,
+     "text": "over 220,000 potholes at the same time."
+    },
+    {
+     "t": 1746.0,
+     "text": "And that's the choice that they've made."
+    },
+    {
+     "t": 1747.36,
+     "text": "And I don't blame them."
+    },
+    {
+     "t": 1749.68,
+     "text": ">> Okay, we'll go next to Bobby."
+    },
+    {
+     "t": 1752.96,
+     "text": ">> Hey, Mr. Mayor."
+    },
+    {
+     "t": 1753.68,
+     "text": ">> How's it going, Bobby?"
+    },
+    {
+     "t": 1754.4,
+     "text": ">> Good. Um, one one election related"
+    },
+    {
+     "t": 1756.48,
+     "text": "question, one non-election. Uh you've"
+    },
+    {
+     "t": 1758.08,
+     "text": "been spending a lot of time the last few"
+    },
+    {
+     "t": 1759.2,
+     "text": "days with Governor Hokll. Um I wonder if"
+    },
+    {
+     "t": 1762.32,
+     "text": "you think some of your supporters here"
+    },
+    {
+     "t": 1764.08,
+     "text": "in the city who are maybe DSA, maybe"
+    },
+    {
+     "t": 1766.16,
+     "text": "more left-leaning might come out and"
+    },
+    {
+     "t": 1768.56,
+     "text": "vote for the governor who maybe they've"
+    },
+    {
+     "t": 1769.84,
+     "text": "been skeptical of in the past because of"
+    },
+    {
+     "t": 1772.24,
+     "text": "her reluctance to raise taxes and some"
+    },
+    {
+     "t": 1774.4,
+     "text": "other issues. Do you think they might"
+    },
+    {
+     "t": 1776.32,
+     "text": "turn out and vote for her because of"
+    },
+    {
+     "t": 1778.8,
+     "text": "your urging where they may not have"
+    },
+    {
+     "t": 1781.04,
+     "text": "otherwise? And then um secondly, I just"
+    },
+    {
+     "t": 1782.96,
+     "text": "want to get your response to the rape in"
+    },
+    {
+     "t": 1784.88,
+     "text": "Central Park the other night, whether"
+    },
+    {
+     "t": 1786.64,
+     "text": "you think um that's part of the pattern,"
+    },
+    {
+     "t": 1788.56,
+     "text": "whether New Yorkers should feel unsafe"
+    },
+    {
+     "t": 1790.08,
+     "text": "in the park, um especially at night."
+    },
+    {
+     "t": 1792.24,
+     "text": ">> So, I think first and foremost, what"
+    },
+    {
+     "t": 1793.92,
+     "text": "happened to this survivor is horrific."
+    },
+    {
+     "t": 1796.96,
+     "text": "This is something that no one should"
+    },
+    {
+     "t": 1799.04,
+     "text": "have to endure. We know that every New"
+    },
+    {
+     "t": 1800.8,
+     "text": "Yorker should be able to walk anywhere"
+    },
+    {
+     "t": 1803.52,
+     "text": "in our city at any time of day and they"
+    },
+    {
+     "t": 1806.56,
+     "text": "should be safe. And anything less than"
+    },
+    {
+     "t": 1808.64,
+     "text": "that is not something that I will ever"
+    },
+    {
+     "t": 1810.08,
+     "text": "justify or accept. And so when it comes"
+    },
+    {
+     "t": 1812.88,
+     "text": "to this specific case, the NYPD is"
+    },
+    {
+     "t": 1815.2,
+     "text": "conducting an investigation into it. And"
+    },
+    {
+     "t": 1817.12,
+     "text": "our administration is working to ensure"
+    },
+    {
+     "t": 1818.72,
+     "text": "that the survivor has the support that"
+    },
+    {
+     "t": 1820.56,
+     "text": "she needs to navigate the next steps. We"
+    },
+    {
+     "t": 1822.96,
+     "text": "are going to continue to work with"
+    },
+    {
+     "t": 1824.48,
+     "text": "survivors at large as well as providers"
+    },
+    {
+     "t": 1826.08,
+     "text": "and city partners to strengthen"
+    },
+    {
+     "t": 1828.0,
+     "text": "prevention and address gaps in support"
+    },
+    {
+     "t": 1830.0,
+     "text": "and to also hold perpetrators of sexual"
+    },
+    {
+     "t": 1832.32,
+     "text": "assault accountable and to ensure that"
+    },
+    {
+     "t": 1834.72,
+     "text": "this is a city that puts survivors needs"
+    },
+    {
+     "t": 1836.56,
+     "text": "first. you should feel unsafe."
+    },
+    {
+     "t": 1839.52,
+     "text": ">> We are both proud of the fact that we"
+    },
+    {
+     "t": 1843.2,
+     "text": "are driving down crime overall across"
+    },
+    {
+     "t": 1845.04,
+     "text": "these five burrows and we will always"
+    },
+    {
+     "t": 1846.8,
+     "text": "say that any instance of crime is one"
+    },
+    {
+     "t": 1849.12,
+     "text": "too many and we have to be unrelenting"
+    },
+    {
+     "t": 1850.96,
+     "text": "in combating it. And to your first"
+    },
+    {
+     "t": 1854.4,
+     "text": "question, I think what what I've heard"
+    },
+    {
+     "t": 1856.88,
+     "text": "from many New Yorkers is an excitable"
+    },
+    {
+     "t": 1859.28,
+     "text": "excitement about the tangible things"
+    },
+    {
+     "t": 1861.2,
+     "text": "that the governor has delivered. A lot"
+    },
+    {
+     "t": 1863.6,
+     "text": "of times it feels like politics is"
+    },
+    {
+     "t": 1865.2,
+     "text": "something that has to be translated."
+    },
+    {
+     "t": 1866.88,
+     "text": "Sometimes it feels as if it's a hobby"
+    },
+    {
+     "t": 1868.72,
+     "text": "only some people can afford. And when"
+    },
+    {
+     "t": 1871.04,
+     "text": "the governor and I have walked together"
+    },
+    {
+     "t": 1872.8,
+     "text": "across the streets of of our city, what"
+    },
+    {
+     "t": 1875.28,
+     "text": "we hear time and again is excitement"
+    },
+    {
+     "t": 1877.36,
+     "text": "about 2K, excitement about child care."
+    },
+    {
+     "t": 1879.52,
+     "text": "We hear people who come up to us, we met"
+    },
+    {
+     "t": 1881.52,
+     "text": "uh a mother who told us that her son AJ"
+    },
+    {
+     "t": 1884.96,
+     "text": "being enrolled into 2K saved them $2,300"
+    },
+    {
+     "t": 1888.96,
+     "text": "a month. that before this program"
+    },
+    {
+     "t": 1890.8,
+     "text": "existed that they were sending their son"
+    },
+    {
+     "t": 1893.28,
+     "text": "to another state with their grandmother"
+    },
+    {
+     "t": 1895.44,
+     "text": "at 4:00 a.m. every morning so that they"
+    },
+    {
+     "t": 1897.6,
+     "text": "could find a deal that they could"
+    },
+    {
+     "t": 1898.72,
+     "text": "afford. That is what this kind of a"
+    },
+    {
+     "t": 1900.72,
+     "text": "politics has delivered for people. And"
+    },
+    {
+     "t": 1902.24,
+     "text": "that's why I think there's so much"
+    },
+    {
+     "t": 1903.44,
+     "text": "excitement about voting for not just the"
+    },
+    {
+     "t": 1907.04,
+     "text": "maintenance of this program, but rather"
+    },
+    {
+     "t": 1909.04,
+     "text": "as the governor has said it, the"
+    },
+    {
+     "t": 1910.16,
+     "text": "expansion of this program so that is"
+    },
+    {
+     "t": 1912.0,
+     "text": "universal child care for every single"
+    },
+    {
+     "t": 1913.68,
+     "text": "2-year-old across the city."
+    },
+    {
+     "t": 1915.28,
+     "text": ">> Okay, we have time for a few more. We'll"
+    },
+    {
+     "t": 1916.56,
+     "text": "go next to Josie."
+    },
+    {
+     "t": 1921.76,
+     "text": "Hi, Mayor."
+    },
+    {
+     "t": 1922.4,
+     "text": ">> Hi, Josie."
+    },
+    {
+     "t": 1923.28,
+     "text": ">> Um, I'm wondering similar early voting"
+    },
+    {
+     "t": 1925.76,
+     "text": "numbers. Do you see that as proof that"
+    },
+    {
+     "t": 1928.4,
+     "text": "your affordable agenda items are super"
+    },
+    {
+     "t": 1933.04,
+     "text": "popular and is that um fuel to push hope"
+    },
+    {
+     "t": 1937.68,
+     "text": "goal for tax hikes next year? And then I"
+    },
+    {
+     "t": 1941.36,
+     "text": "also have a question. In your remarks"
+    },
+    {
+     "t": 1943.2,
+     "text": "yesterday, you said that um unlike or"
+    },
+    {
+     "t": 1947.12,
+     "text": "let me find the quote. Sometimes there"
+    },
+    {
+     "t": 1949.84,
+     "text": "are political events that we have to go"
+    },
+    {
+     "t": 1952.08,
+     "text": "to and it's a little more difficult for"
+    },
+    {
+     "t": 1953.6,
+     "text": "me to be up on that stage. What exactly"
+    },
+    {
+     "t": 1955.68,
+     "text": "were you talking about there?"
+    },
+    {
+     "t": 1958.08,
+     "text": ">> Stream of consciousness comes at you"
+    },
+    {
+     "t": 1959.92,
+     "text": "fast. you know, um, like I I think what"
+    },
+    {
+     "t": 1962.72,
+     "text": "what I was referring to is is there are"
+    },
+    {
+     "t": 1964.48,
+     "text": "times where"
+    },
+    {
+     "t": 1966.32,
+     "text": "you"
+    },
+    {
+     "t": 1968.88,
+     "text": "you have to make a case and you know"
+    },
+    {
+     "t": 1970.64,
+     "text": "that you're going to have to really work"
+    },
+    {
+     "t": 1971.84,
+     "text": "to get people to that point. When it"
+    },
+    {
+     "t": 1974.56,
+     "text": "comes to the governor, when it comes to"
+    },
+    {
+     "t": 1976.24,
+     "text": "child care, you don't really have to"
+    },
+    {
+     "t": 1978.24,
+     "text": "make so much of a case because it makes"
+    },
+    {
+     "t": 1979.84,
+     "text": "itself. And that's what's been so"
+    },
+    {
+     "t": 1981.68,
+     "text": "exciting about working with the governor"
+    },
+    {
+     "t": 1983.68,
+     "text": "is that these are things that people can"
+    },
+    {
+     "t": 1986.24,
+     "text": "feel in their lives. The governor spoke"
+    },
+    {
+     "t": 1988.0,
+     "text": "about the fact that she was in the Bronx"
+    },
+    {
+     "t": 1990.56,
+     "text": "recently and uh a young man came up to"
+    },
+    {
+     "t": 1993.44,
+     "text": "her and said that he was going to move"
+    },
+    {
+     "t": 1994.88,
+     "text": "to Philadelphia until 2K was introduced"
+    },
+    {
+     "t": 1997.28,
+     "text": "and now his family is going to stay in"
+    },
+    {
+     "t": 1999.36,
+     "text": "the Bronx. And to me, that's that's what"
+    },
+    {
+     "t": 2001.12,
+     "text": "it's a reference to is that sometimes"
+    },
+    {
+     "t": 2003.52,
+     "text": "it's going stage by stage explaining how"
+    },
+    {
+     "t": 2005.84,
+     "text": "something relates to somebody's life."
+    },
+    {
+     "t": 2007.92,
+     "text": "And with this work, it really explains"
+    },
+    {
+     "t": 2010.16,
+     "text": "itself. Uh and and to your first"
+    },
+    {
+     "t": 2012.0,
+     "text": "question, I think that what we're seeing"
+    },
+    {
+     "t": 2015.6,
+     "text": "is there's often been a politics of"
+    },
+    {
+     "t": 2018.16,
+     "text": "opposition, a politics of rejecting, you"
+    },
+    {
+     "t": 2020.72,
+     "text": "know, let's say the the the cruelty that"
+    },
+    {
+     "t": 2022.88,
+     "text": "we're seeing come out of a lot of"
+    },
+    {
+     "t": 2023.84,
+     "text": "federal policies. We also need to have"
+    },
+    {
+     "t": 2026.64,
+     "text": "an affirmative vision alongside that."
+    },
+    {
+     "t": 2028.88,
+     "text": "It's not enough to just be an"
+    },
+    {
+     "t": 2030.56,
+     "text": "oppositional vision. And what I think is"
+    },
+    {
+     "t": 2032.56,
+     "text": "exciting so many New Yorkers is that"
+    },
+    {
+     "t": 2034.56,
+     "text": "they also have something to vote for."
+    },
+    {
+     "t": 2037.2,
+     "text": "And whether that's child care, whether"
+    },
+    {
+     "t": 2040.0,
+     "text": "that's actually a working relationship"
+    },
+    {
+     "t": 2041.84,
+     "text": "between the city and the state, or"
+    },
+    {
+     "t": 2043.92,
+     "text": "whether it's the fact that we are taking"
+    },
+    {
+     "t": 2046.8,
+     "text": "all the kinds of steps to make a"
+    },
+    {
+     "t": 2048.72,
+     "text": "difference on problems that have long"
+    },
+    {
+     "t": 2050.56,
+     "text": "just been accepted as New York City"
+    },
+    {
+     "t": 2051.92,
+     "text": "issues. I mean, just think about today's"
+    },
+    {
+     "t": 2053.44,
+     "text": "announcement. For too long, there's been"
+    },
+    {
+     "t": 2055.6,
+     "text": "a sense of it floods. That's what"
+    },
+    {
+     "t": 2058.24,
+     "text": "happens. And we don't want to accept"
+    },
+    {
+     "t": 2060.16,
+     "text": "that any longer. We want to have a"
+    },
+    {
+     "t": 2062.32,
+     "text": "relentless ambition in this city for how"
+    },
+    {
+     "t": 2064.24,
+     "text": "we can deliver the best possible city"
+    },
+    {
+     "t": 2065.76,
+     "text": "for New Yorkers. Part of that is taking"
+    },
+    {
+     "t": 2068.08,
+     "text": "aim at the very kinds of issues that"
+    },
+    {
+     "t": 2069.6,
+     "text": "have been rationalized and justified for"
+    },
+    {
+     "t": 2071.12,
+     "text": "far too long."
+    },
+    {
+     "t": 2073.36,
+     "text": ">> Victory too in Brazil. Does that mean uh"
+    },
+    {
+     "t": 2076.16,
+     "text": "you have more"
+    },
+    {
+     "t": 2078.56,
+     "text": "in this city or state? Uh, I'll tell you"
+    },
+    {
+     "t": 2081.12,
+     "text": "that yesterday when I was coming home,"
+    },
+    {
+     "t": 2083.28,
+     "text": "we we just got off the bridge and a"
+    },
+    {
+     "t": 2086.64,
+     "text": "number of New Yorkers streamed out of a"
+    },
+    {
+     "t": 2088.32,
+     "text": "bar and they were just chanting Lula's"
+    },
+    {
+     "t": 2090.24,
+     "text": "name. And I think it is indication of"
+    },
+    {
+     "t": 2092.32,
+     "text": "the fact that New Yorkers are excited."
+    },
+    {
+     "t": 2094.56,
+     "text": "across the five buraus. I can tell you"
+    },
+    {
+     "t": 2096.4,
+     "text": "that when I had the opportunity to sit"
+    },
+    {
+     "t": 2098.4,
+     "text": "down with President Lulu when he came"
+    },
+    {
+     "t": 2100.08,
+     "text": "for the UN General Assembly, I shared"
+    },
+    {
+     "t": 2102.56,
+     "text": "how much he has meant to so many across"
+    },
+    {
+     "t": 2105.76,
+     "text": "this city, across this country, across"
+    },
+    {
+     "t": 2107.28,
+     "text": "the world, frankly, and a real"
+    },
+    {
+     "t": 2109.76,
+     "text": "admiration for the tangible things that"
+    },
+    {
+     "t": 2112.96,
+     "text": "he has been able to deliver for working"
+    },
+    {
+     "t": 2114.64,
+     "text": "people. And we've seen in the time since"
+    },
+    {
+     "t": 2116.64,
+     "text": "that meeting, he's gone on to reduce the"
+    },
+    {
+     "t": 2119.28,
+     "text": "work week from 44 hours to 40 hours, to"
+    },
+    {
+     "t": 2121.76,
+     "text": "guarantee two days of rest for"
+    },
+    {
+     "t": 2123.84,
+     "text": "Brazilians without a pay cut. These are"
+    },
+    {
+     "t": 2125.68,
+     "text": "the kinds of things that working people"
+    },
+    {
+     "t": 2127.36,
+     "text": "everywhere uh are looking for. A life"
+    },
+    {
+     "t": 2129.52,
+     "text": "with more dignity, a life with more"
+    },
+    {
+     "t": 2131.04,
+     "text": "rest, a life with a little bit more room"
+    },
+    {
+     "t": 2133.68,
+     "text": "to breathe. And I think I've I I"
+    },
+    {
+     "t": 2136.0,
+     "text": "congratulate the president. And I think"
+    },
+    {
+     "t": 2137.92,
+     "text": "that it is a sign that the people united"
+    },
+    {
+     "t": 2140.56,
+     "text": "will never be defeated."
+    },
+    {
+     "t": 2142.08,
+     "text": ">> Okay, we have time for just one more."
+    },
+    {
+     "t": 2143.36,
+     "text": "We're going to go to Morgan"
+    },
+    {
+     "t": 2144.8,
+     "text": ">> just"
+    },
+    {
+     "t": 2147.6,
+     "text": ">> Hi, Mr. Mayor."
+    },
+    {
+     "t": 2148.24,
+     "text": ">> Hi, Morgan. How are you?"
+    },
+    {
+     "t": 2149.12,
+     "text": ">> I'm good, thank you. Um, so Politico has"
+    },
+    {
+     "t": 2151.2,
+     "text": "a story out today saying that uh some of"
+    },
+    {
+     "t": 2153.2,
+     "text": "your allies seem to expect something"
+    },
+    {
+     "t": 2155.68,
+     "text": "from this relationship with you and"
+    },
+    {
+     "t": 2157.76,
+     "text": "Governor Kathy Hokll, you helping her"
+    },
+    {
+     "t": 2159.36,
+     "text": "campaign and state senator Julia Salazar"
+    },
+    {
+     "t": 2162.16,
+     "text": "uh said, quote, \"It would be really"
+    },
+    {
+     "t": 2163.92,
+     "text": "reasonable for him to expect clear"
+    },
+    {
+     "t": 2165.68,
+     "text": "commitments from the governor, including"
+    },
+    {
+     "t": 2167.12,
+     "text": "a new commitment on new taxes for the"
+    },
+    {
+     "t": 2168.96,
+     "text": "rich.\" Do you agree with this? And are"
+    },
+    {
+     "t": 2171.12,
+     "text": "you expecting something from this"
+    },
+    {
+     "t": 2172.48,
+     "text": "relationship from the governor? And do"
+    },
+    {
+     "t": 2174.24,
+     "text": "you think your allies are expecting"
+    },
+    {
+     "t": 2175.6,
+     "text": "something from this? Thank you. I"
+    },
+    {
+     "t": 2177.52,
+     "text": ">> I'm expecting a continuation of a"
+    },
+    {
+     "t": 2179.84,
+     "text": "positive and productive working"
+    },
+    {
+     "t": 2181.04,
+     "text": "relationship with the governor. And it's"
+    },
+    {
+     "t": 2182.88,
+     "text": "a relationship that has been critical in"
+    },
+    {
+     "t": 2185.12,
+     "text": "delivering $1.2 billion to making"
+    },
+    {
+     "t": 2187.44,
+     "text": "universal childcare a reality on just"
+    },
+    {
+     "t": 2189.2,
+     "text": "the eth day of our administration. It's"
+    },
+    {
+     "t": 2191.2,
+     "text": "also a relationship that was critical"
+    },
+    {
+     "t": 2192.88,
+     "text": "where we saw the governor uh make clear"
+    },
+    {
+     "t": 2195.12,
+     "text": "just how much of a partner she is to our"
+    },
+    {
+     "t": 2196.72,
+     "text": "city when we were facing uh a 12 billion"
+    },
+    {
+     "t": 2199.68,
+     "text": "fiscal deficit and she made the kinds of"
+    },
+    {
+     "t": 2204.08,
+     "text": "moves and measures to really put our"
+    },
+    {
+     "t": 2205.68,
+     "text": "city back on firm financial footing and"
+    },
+    {
+     "t": 2207.76,
+     "text": "I'm excited for that relationship to"
+    },
+    {
+     "t": 2209.36,
+     "text": "continue. It's been one that's delivered"
+    },
+    {
+     "t": 2210.64,
+     "text": "for working-class New Yorkers and I'm"
+    },
+    {
+     "t": 2212.24,
+     "text": "confident it's going to keep delivering."
+    },
+    {
+     "t": 2213.76,
+     "text": ">> Thank you all."
+    },
+    {
+     "t": 2214.8,
+     "text": ">> Thank you everyone."
+    }
+   ]
   },
   {
    "link": "/youtube/1sIOL3D0DTg",
@@ -440437,7 +444415,10 @@
    "mayor_quotes": [],
    "has_mayor_quotes": false,
    "word_count": 10371,
-   "mayor_word_count": 5169
+   "mayor_word_count": 5169,
+   "youtube_url": "https://www.youtube.com/watch?v=iazY_UDQdck",
+   "youtube_video_id": "iazY_UDQdck",
+   "youtube_duration": 6075
   },
   {
    "link": "/youtube/CZc8ONfUuMg",
@@ -443727,9 +447708,9 @@
   }
  ],
  "youtube_coverage": {
-  "channel_videos": 295,
-  "covered": 285,
-  "listing_degraded": true,
+  "channel_videos": 297,
+  "covered": 287,
+  "listing_degraded": false,
   "unaccounted": [
    {
     "id": "sBUNuNmVGbs",
@@ -443782,12 +447763,11 @@
     "date": "20260218"
    }
   ],
-  "last_ingest": "2026-10-26",
-  "captions_enabled": false,
-  "rate_limited": false,
-  "listed_this_run": 15
+  "last_ingest": "2026-10-27",
+  "captions_enabled": true,
+  "rate_limited": false
  },
- "youtube_last_run": "2026-10-26T23:31:07Z",
+ "youtube_last_run": "2026-10-27T12:17:35Z",
  "external_last_run": "2026-10-26T23:24:55Z",
  "agencies_last_run": "2026-10-26T23:29:32Z"
 }
