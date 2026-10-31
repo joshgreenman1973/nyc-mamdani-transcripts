@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-30T23:19:19Z",
+ "generated_at": "2026-10-31T15:56:22Z",
  "from_date": "2026-01-01",
  "source": "https://www.nyc.gov/mayors-office/news/",
  "total": 1576,
@@ -20,9 +20,9 @@
   "nyc.gov": 965,
   "youtube": 181,
   "dot": 77,
+  "dca": 71,
   "nypd": 16,
   "doh": 61,
-  "dca": 71,
   "immigrants": 4,
   "dsny": 37,
   "fdny": 25,
@@ -462760,7 +462760,7 @@
   "rate_limited": false,
   "listed_this_run": 15
  },
- "youtube_last_run": "2026-10-30T23:24:47Z",
- "external_last_run": "2026-10-30T23:19:53Z",
+ "youtube_last_run": "2026-10-31T16:01:41Z",
+ "external_last_run": "2026-10-31T15:56:56Z",
  "agencies_last_run": "2026-10-30T23:24:40Z"
 }
