@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-10-31T15:56:22Z",
+ "generated_at": "2026-10-31T22:53:00Z",
  "from_date": "2026-01-01",
  "source": "https://www.nyc.gov/mayors-office/news/",
- "total": 1576,
+ "total": 1577,
  "type_counts": {
-  "other": 469,
+  "other": 470,
   "video": 181,
   "agency_release": 421,
   "press_conference": 165,
@@ -17,7 +17,7 @@
   "op_ed": 2
  },
  "source_counts": {
-  "nyc.gov": 965,
+  "nyc.gov": 966,
   "youtube": 181,
   "dot": 77,
   "dca": 71,
@@ -49,6 +49,23 @@
   "fdny": 36
  },
  "items": [
+  {
+   "link": "/mayors-office/news/2026/10/mayor-zohran-kwame-mamdani-releases-statement-on-javits-frimpong.html",
+   "url": "https://www.nyc.gov/mayors-office/news/2026/10/mayor-zohran-kwame-mamdani-releases-statement-on-javits-frimpong.html",
+   "title": "Mayor Zohran Kwame Mamdani Releases Statement on Javits Frimpong",
+   "date": "October 31, 2026",
+   "iso_date": "2026-10-31",
+   "type": "other",
+   "text": "NEW YORK – Today, Mayor Zohran Kwame Mamdani released the following statement:\n\r\n“The murder of a child is a pain no parent should have to endure, let alone from thousands of miles away.\n\r\n“Javits Frimpong’s mother deserves to say goodbye to her son in person. I just got off the phone with President Trump and he has agreed to grant her visa immediately. \n\r\n“All of New York City is mourning this tragedy.”\n\r\n###",
+   "word_count": 73,
+   "source": "nyc.gov",
+   "reliability": "official",
+   "speakers": [],
+   "mayor_quotes": [],
+   "mayor_text": "",
+   "mayor_word_count": 0,
+   "has_mayor_quotes": false
+  },
   {
    "link": "/mayors-office/news/2026/10/mayor-mamdani-announces-appointments-to-the-33-member-nonprofit-.html",
    "url": "https://www.nyc.gov/mayors-office/news/2026/10/mayor-mamdani-announces-appointments-to-the-33-member-nonprofit-.html",
@@ -459410,10 +459427,7 @@
    "mayor_quotes": [],
    "has_mayor_quotes": false,
    "word_count": 10371,
-   "mayor_word_count": 5169,
-   "youtube_url": "https://www.youtube.com/watch?v=iazY_UDQdck",
-   "youtube_video_id": "iazY_UDQdck",
-   "youtube_duration": 6075
+   "mayor_word_count": 5169
   },
   {
    "link": "/youtube/CZc8ONfUuMg",
@@ -462705,7 +462719,7 @@
  "youtube_coverage": {
   "channel_videos": 301,
   "covered": 291,
-  "listing_degraded": false,
+  "listing_degraded": true,
   "unaccounted": [
    {
     "id": "sBUNuNmVGbs",
@@ -462759,10 +462773,11 @@
    }
   ],
   "last_ingest": "2026-10-31",
-  "captions_enabled": true,
-  "rate_limited": false
+  "captions_enabled": false,
+  "rate_limited": false,
+  "listed_this_run": 15
  },
- "youtube_last_run": "2026-10-31T18:03:46Z",
- "external_last_run": "2026-10-31T15:56:56Z",
+ "youtube_last_run": "2026-10-31T22:58:16Z",
+ "external_last_run": "2026-10-31T22:53:33Z",
  "agencies_last_run": "2026-10-30T23:24:40Z"
 }
