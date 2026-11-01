@@ -1,24 +1,24 @@
 {
- "generated_at": "2026-10-31T22:53:00Z",
+ "generated_at": "2026-11-01T16:59:08Z",
  "from_date": "2026-01-01",
  "source": "https://www.nyc.gov/mayors-office/news/",
- "total": 1578,
+ "total": 1580,
  "type_counts": {
+  "executive_order": 161,
   "other": 470,
   "video": 182,
   "agency_release": 421,
   "press_conference": 165,
   "media_appearance": 84,
   "ceremony": 34,
-  "executive_order": 159,
   "statement": 18,
   "speech": 38,
   "crime_briefing": 5,
   "op_ed": 2
  },
  "source_counts": {
-  "nyc.gov": 966,
-  "youtube": 181,
+  "nyc.gov": 968,
+  "youtube": 182,
   "dot": 77,
   "dca": 71,
   "nypd": 16,
@@ -49,6 +49,40 @@
   "fdny": 36
  },
  "items": [
+  {
+   "link": "/mayors-office/news/2026/10/emergency-executive-order-no--1-60.html",
+   "url": "https://www.nyc.gov/mayors-office/news/2026/10/emergency-executive-order-no--1-60.html",
+   "title": "Emergency Executive Order No. 1.60",
+   "date": "November 01, 2026",
+   "iso_date": "2026-11-01",
+   "type": "executive_order",
+   "text": "Download Emergency Executive Order No. 1.60\n\r\nWHEREAS, pursuant to a state of emergency first declared by Emergency Executive Order No. 241, dated September 15, 2021, and subsequent orders extending such state of emergency, compliance by the Department of Correction (DOC) with various laws and regulations has not been required; and\n\r\nWHEREAS, such orders issued prior to January 5, 2026 did not provide or require a plan for actions that would enable DOC to come into compliance with applicable laws and regulations for which compliance is not required as a result of such orders; and\n\r\nWHEREAS, the state of emergency first declared in 2021 continues for the present pending the expedited development and implementation of such plan;\n\r\nNOW, THEREFORE, pursuant to the powers vested in me as Mayor of the City of New York, by the laws of the State of New York and the City of New York, including but not limited to the New York Executive Law, the New York City Charter and the Administrative Code of the City of New York, and the common law authority to protect the public in the event of an emergency, it is hereby ordered:\n\r\nSection 1. Section 2 of Emergency Executive Order No. 1.59, dated October 27, 2026, is hereby extended for five (5) days.\n\r\n§ 2. DOC, in consultation with the Law Department, shall regularly update the Mayor regarding additional suspensions that can be lapsed to comply with the implementation action plan developed pursuant to Section 2 of Emergency Executive Order 1, dated January 5, 2026, and with applicable laws and regulations that presently do not apply pursuant to Emergency Executive Orders.\n\r\n§ 3. This Emergency Executive Order shall take effect immediately and shall remain in effect for five (5) days unless it is terminated or modified at an earlier date.\n\r\n_________________________\n\r\n Zohran Kwame Mamdani\n\r\n Mayor",
+   "word_count": 305,
+   "source": "nyc.gov",
+   "reliability": "official",
+   "speakers": [],
+   "mayor_quotes": [],
+   "mayor_text": "",
+   "mayor_word_count": 0,
+   "has_mayor_quotes": false
+  },
+  {
+   "link": "/mayors-office/news/2026/10/emergency-executive-order-no--2-60.html",
+   "url": "https://www.nyc.gov/mayors-office/news/2026/10/emergency-executive-order-no--2-60.html",
+   "title": "Emergency Executive Order No. 2.60",
+   "date": "November 01, 2026",
+   "iso_date": "2026-11-01",
+   "type": "executive_order",
+   "text": "Download Emergency Executive Order No. 2.60\n\r\nWHEREAS, pursuant to a state of emergency first declared by Emergency Executive Order No. 224, dated October 7, 2022, and subsequent orders extending such state of emergency, the City has operated Humanitarian Emergency Response and Relief Centers to provide temporary housing in response to the substantial increase in new arrivals during recent years; and\n\r\nWHEREAS, such orders issued prior to January 5, 2026 did not provide or require a plan for actions that would be taken to eliminate the need for the suspensions and modifications of laws and rules effected by the orders; and\n\r\nWHEREAS, such state of emergency continues for the present pending the expedited development and implementation of such plan;\n\r\nNOW, THEREFORE, pursuant to the powers vested in me as Mayor of the City of New York, by the laws of the State of New York and the City of New York, including but not limited to the New York Executive Law, the New York City Charter and the Administrative Code of the City of New York, and the common law authority to protect the public in the event of an emergency:\n\r\nSection 1. Section 2 of Emergency Executive Order No. 2.59, dated October 27, 2026, is hereby extended for five (5) days.\n\r\n§ 2. The Department of Social Services and the Department of Homeless Services, in consultation with the Law Department, shall regularly update the Mayor on the implementation action plan and efforts to phase out the continued use of facilities that have been operated in reliance on the suspensions and modifications of laws and rules.\n\r\n§ 3. This Emergency Executive Order shall take effect immediately and shall remain in effect for five (5) days unless it is terminated or modified at an earlier date.\n\r\n_________________________\n\r\nZohran Kwame Mamdani\n\r\nMayor\n\r\n \n\r\n\r\n\r\nAPPENDIX\n\r\nList of laws and regulations for which suspension continues for any facility subject to this order, including any operated by or on behalf of DSS or DHS, and any other facility existing on the effective date of this order:\n\r\nSections 21-124, 21-309 and 21-312 of the Administrative Code. (EEO No. 886, dated November 19, 2025, § 3, para. (d), (g) and (h)(i))",
+   "word_count": 362,
+   "source": "nyc.gov",
+   "reliability": "official",
+   "speakers": [],
+   "mayor_quotes": [],
+   "mayor_text": "",
+   "mayor_word_count": 0,
+   "has_mayor_quotes": false
+  },
   {
    "link": "/mayors-office/news/2026/10/mayor-zohran-kwame-mamdani-releases-statement-on-javits-frimpong.html",
    "url": "https://www.nyc.gov/mayors-office/news/2026/10/mayor-zohran-kwame-mamdani-releases-statement-on-javits-frimpong.html",
@@ -460178,10 +460212,7 @@
    "mayor_quotes": [],
    "has_mayor_quotes": false,
    "word_count": 10371,
-   "mayor_word_count": 5169,
-   "youtube_url": "https://www.youtube.com/watch?v=iazY_UDQdck",
-   "youtube_video_id": "iazY_UDQdck",
-   "youtube_duration": 6075
+   "mayor_word_count": 5169
   },
   {
    "link": "/youtube/CZc8ONfUuMg",
@@ -463473,7 +463504,7 @@
  "youtube_coverage": {
   "channel_videos": 302,
   "covered": 292,
-  "listing_degraded": false,
+  "listing_degraded": true,
   "unaccounted": [
    {
     "id": "sBUNuNmVGbs",
@@ -463527,10 +463558,11 @@
    }
   ],
   "last_ingest": "2026-11-01",
-  "captions_enabled": true,
-  "rate_limited": false
+  "captions_enabled": false,
+  "rate_limited": false,
+  "listed_this_run": 15
  },
- "youtube_last_run": "2026-11-01T13:17:58Z",
- "external_last_run": "2026-10-31T22:53:33Z",
+ "youtube_last_run": "2026-11-01T17:04:23Z",
+ "external_last_run": "2026-11-01T16:59:42Z",
  "agencies_last_run": "2026-10-30T23:24:40Z"
 }
