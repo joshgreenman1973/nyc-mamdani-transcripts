@@ -12,7 +12,7 @@ widen it into a citywide search. Filter by source/agency, type and reliability.
 [nyc.gov/mayors-office/news](https://www.nyc.gov/mayors-office/news/); agency
 press releases from each agency's nyc.gov newsroom; plus NPR, WNYC and C-SPAN.
 See [METHODOLOGY.md](METHODOLOGY.md) for what's
-included, what's excluded, how items are classified, and how each agency is
+included, what's excluded, how items are classified and how each agency is
 crawled.
 
 ## Files

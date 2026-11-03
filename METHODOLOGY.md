@@ -1,7 +1,7 @@
 # Methodology
 
-This page exists so nothing about this archive is a black box. Every number,
-filter, and classification rule is described here.
+This page describes every number, filter and classification rule the archive
+uses.
 
 ## What this is
 
@@ -10,8 +10,7 @@ office on January 1, 2026. At its center is Mayor Zohran Kwame Mamdani's own
 public record — speeches, press conferences, prepared remarks and statements
 from the mayor's office, and his interviews. Around that it adds the
 **press releases of New York
-City's agencies**, so the same box searches the whole administration, not only
-the mayor's own events. Every item is dated on or after January 1, 2026, and is
+City's agencies**, so the same box searches the whole administration. Every item is dated on or after January 1, 2026, and is
 labeled by source, type and reliability.
 
 ## Source
@@ -79,15 +78,14 @@ reliability.
   Police Commissioner Tisch together" featured filter**, because a press release
   is not evidence the two were at the same event.
 - **City agencies** (press release) — the press releases of New York City's
-  *agencies* (as distinct from City Hall), so the archive is a citywide search,
-  not only the mayor's own events. The mayor's words remain the center: every
+  *agencies* (as distinct from City Hall), so the archive is a citywide search. The mayor's words remain the center: every
   agency release is scanned for quotes attributed to him, which surface under
   "Only the mayor's words," and the default views and featured filters stay
   mayor-focused. Agency releases are labeled **"press release — not a verbatim
   transcript,"** filterable individually under **Source / agency**, and kept
   out of the plain-language semantic index.
 
-  *How they're crawled.* Agency newsrooms run on an older CMS whose listing feed
+  *How they're crawled.* Agency newsrooms run on an older content management system whose listing feed
   resists headless scraping. `scrape_agencies.py` uses two strategies, configured
   in `agencies.json`:
   - **Numeric:** most newsrooms give each release a numeric, year-scoped URL id,
@@ -115,19 +113,19 @@ reliability.
   &amp; Worker Protection (DCWP), Children's Services (ACS), Citywide
   Administrative Services (DCAS)** (numeric), plus **Health (DOHMH), Homeless
   Services (DHS), Small Business Services (SBS), Taxi &amp; Limousine (TLC),
-  Immigrant Affairs (MOIA), and Media &amp; Entertainment (MOME)** (index), plus
+  Immigrant Affairs (MOIA) and Media &amp; Entertainment (MOME)** (index), plus
   **Transportation (DOT)** (legacy /html). This is an expanding set determined by
   a one-time discovery sweep of every city agency. Still out: a few agencies
   whose index pages are themselves JavaScript-rendered (e.g. HRA, Law, Finance,
   Investigation) and agencies on separate websites (Parks, Schools, NYCHA,
   Health + Hospitals) or outside the mayoral administration (Comptroller, Public
-  Advocate) — all noted rather than silently omitted.
+  Advocate).
 - **Curated seeds** — outside sources can't be fully auto-discovered (their
   search pages are JavaScript-rendered and bot-gated), so known appearances are
   listed in `external_sources.json`. Adding an entry there ingests it on the next
   refresh.
 
-We do not modify transcript text. Punctuation, spelling, and capitalization match
+We do not modify transcript text. Punctuation, spelling and capitalization match
 what each source published; auto-captions are labeled as such because they can
 contain transcription errors.
 
@@ -193,7 +191,7 @@ that failure apart from "the channel has nothing new," so the daily refresh
 reported success while adding nothing. Roughly three months of video went
 unindexed. It has been backfilled.
 
-Three checks now make a repeat visible rather than silent:
+Three checks now flag a repeat:
 
 1. The scraper reads every channel tab, not just `/videos`. `/streams` — where
    livestreamed press conferences land — holds most of the channel and had
@@ -207,7 +205,7 @@ Three checks now make a repeat visible rather than silent:
 Two limits remain. YouTube rate-limits caption requests, so a large backlog
 drains over several runs rather than one; affected videos are retried, never
 dropped. And videos with captions disabled cannot be transcribed at all — they
-stay listed as unaccounted rather than being quietly forgotten.
+stay listed as unaccounted.
 
 ## Search
 
@@ -243,9 +241,9 @@ surface relevant remarks even when they never use those words.
   topical signal is lost. Passages are then ranked by cosine similarity; the
   best-matching passage per document is shown.
 - Everything runs on your device. **No query ever leaves your browser**, there is
-  no server, no external search API, and no cost &mdash; the same reason the
+  no server, no external search API and no cost &mdash; the same reason the
   archive can stay a free, static page.
-- The type, date, and "only the mayor's words" filters still apply. Results below
+- The type, date and "only the mayor's words" filters still apply. Results below
   a minimum similarity are dropped, and the top 50 are shown, ranked by relevance.
 - Limitation: semantic relevance is approximate. It is good at finding passages
   that are *about* a topic, but for exact phrases or names, keyword mode is more
@@ -279,7 +277,7 @@ To avoid false positives, the filter **excludes**:
   communication with Commissioner Tisch," news recaps discussing something she
   said elsewhere, or appointment press releases that merely name her.
 
-Limitation: this is a transparent rule, not human curation. It can miss an event
+Limitation: this is a published rule, not human curation. It can miss an event
 where she was present but unnamed in the text, and the boundary between "present"
 and "discussed" is occasionally a judgment call. Each match links to its full
 source so you can confirm. As of the latest refresh it flags roughly a dozen
@@ -288,8 +286,8 @@ events from January 2026 onward.
 ## Trends &amp; themes
 
 The **Trends &amp; themes** tab summarizes *what* the mayor talks about and how
-that changes month to month. Like everything else here, the method is simple and
-fully published &mdash; no machine-learning model, no API, and nothing hidden.
+that changes month to month. The method is fully published and uses no
+machine-learning model or API.
 
 ### How items are tagged
 
@@ -332,7 +330,7 @@ version is in `build_topics.mjs` and `data/topics.json`.
 
 For each month, the digest lists that month's leading themes and shows **verbatim
 quotes from the mayor** under each. Quote selection is deterministic and
-extractive &mdash; we never paraphrase, summarize, or generate text:
+extractive &mdash; we never paraphrase, summarize or generate text:
 
 - Candidates are the mayor's attributed quotes inside press releases plus his own
   transcript turns, split into sentences and limited to a readable length
@@ -384,10 +382,10 @@ model or any paid service; it is plain word-counting you can reproduce.
   `build_topics.mjs`, and echoed in `topics.json` as `language.phrase_candidates`),
   seeded from the most common two-to-four-word sequences in his remarks plus his
   known refrains.
-- For each phrase we count its exact occurrences and, more tellingly, the number
+- For each phrase we count its exact occurrences and the number
   of **separate events** he used it in. A phrase is shown only if he used it
-  across at least **8 different events** (and at least 10 times total), so the
-  list reflects habits, not one memorable speech. Phrases are ordered by event
+  across at least **8 different events** (and at least 10 times total), so one
+  memorable speech can't put a phrase on the list. Phrases are ordered by event
   spread.
 - Each phrase shows a **verbatim example sentence** from his own words, linked to
   its source. Nothing is paraphrased.
@@ -399,8 +397,8 @@ across the whole administration (all types, all agencies). Because his quotes
 inside agency press releases count as his words, that search returns the same
 total shown on the card &mdash; e.g. "far too long" reads *44 events* and the
 search returns 44 items. The candidate list is deliberately conservative: a phrase
-he repeats that we didn't list simply won't appear, so treat the panel as a
-transparent sample of his rhetoric, not an exhaustive ranking.
+he repeats that we didn't list won't appear, so treat the panel as a
+sample of his rhetoric, not an exhaustive ranking.
 
 <a name="schedule"></a>
 
@@ -417,8 +415,7 @@ The "Public schedule" tab summarizes the mayor's announced public events.
   keyword-based event type, location (when an address is given), whether it is
   open or closed to press, whether the mayor takes questions, and whether it is
   streamed.
-- **Press access is read from the advisory's exact wording**, not lumped into
-  "open/closed." Each event is placed in one bucket by the strongest signal:
+- **Press access is read from the advisory's exact wording.** Each event is placed in one bucket by the strongest signal:
   *Open to all press* ("open to press" with no caveat); *RSVP / press-office
   clearance* ("media interested in attending must RSVP / register"); *Limited —
   space-constrained* ("space constraints," "does not guarantee entry," "cameras
@@ -432,7 +429,7 @@ The "Public schedule" tab summarizes the mayor's announced public events.
   morning of. Events can move or be cancelled; the mayor may add stops not on the
   public schedule. Treat this as the planned public calendar, not a confirmed log
   of what happened.
-- **Coverage is a growing sample, not a census.** The office does not issue an
+- **Coverage is a growing sample.** The office does not issue an
   advisory every day, and this archive currently holds the subset that have been
   processed — **not every day of the administration.** The on-page banner always
   states the exact date range and day count. Percentages (open to press, takes
@@ -478,7 +475,7 @@ rest of the site uses, and written to `data/qa.json`.
   = the host of a TV, radio or podcast appearance (including hits the scraper
   typed as press conferences whose titles name a station, e.g. "Mayor Mamdani
   on Bloomberg TV"). *Caller, audience or non-press host* = call-in listeners,
-  town-hall audiences, and the hosts of City Hall's own "Talk With the People"
+  town-hall audiences and the hosts of City Hall's own "Talk With the People"
   livestreams and forums (and the viewer questions they relay). These last are
   **hidden by default**, since they are not members of the press. In
   interviews the split is inferred: when one host clearly dominates (10+
@@ -583,7 +580,7 @@ in Spanish with an English summary.
 
 ## Reproducibility
 
-The scraper, frontend, and this document are all in
+The scraper, frontend and this document are all in
 [the project repository](https://github.com/joshgreenman1973/nyc-mamdani-transcripts).
 Anyone can re-run `python3 scrape.py` to regenerate the nyc.gov portion of
 `data/corpus.json` from scratch, using only the Python standard library &mdash;
@@ -596,7 +593,7 @@ regenerate the plain-language search vectors,
 run `npm install` then `node build_embeddings.mjs`, which writes
 `data/embeddings.json`. The embedding model downloads from a public model hub;
 no API key or paid service is involved. To regenerate the theme tags, trend
-matrix, and monthly digest, run `node build_topics.mjs`, which writes
+matrix and monthly digest, run `node build_topics.mjs`, which writes
 `data/topics.json` using only the Node standard library (no dependencies, no
 model, no API). The daily refresh job rebuilds the vectors and the topic trends
 automatically whenever the corpus changes.
