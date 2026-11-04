@@ -11,11 +11,21 @@ on:
 permissions:
   contents: write
 
+# One refresh at a time. A run that sat in GitHub's queue for hours used to start
+# alongside a newer one and lose the push race (Nov. 4, 2026).
+concurrency:
+  group: refresh-corpus
+  cancel-in-progress: false
+
 jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Scheduled runs otherwise check out the commit that existed when the
+          # run was queued, which can be hours stale. Build on the current tip.
+          ref: ${{ github.ref }}
 
       - uses: actions/setup-python@v5
         with:
