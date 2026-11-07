@@ -9923,7 +9923,7 @@
    "has_mayor_quotes": false,
    "youtube_url": "https://www.youtube.com/watch?v=o0O8QXQiLSo",
    "youtube_video_id": "o0O8QXQiLSo",
-   "youtube_duration": 0
+   "youtube_duration": 1250
   },
   {
    "link": "/site/dsny/news/26-044/no-trash-composting-recycling-collection-veterans-day-wednesday-november-11-2026",
@@ -470331,7 +470331,10 @@
    "mayor_quotes": [],
    "has_mayor_quotes": false,
    "word_count": 10371,
-   "mayor_word_count": 5169
+   "mayor_word_count": 5169,
+   "youtube_url": "https://www.youtube.com/watch?v=iazY_UDQdck",
+   "youtube_video_id": "iazY_UDQdck",
+   "youtube_duration": 6075
   },
   {
    "link": "/youtube/CZc8ONfUuMg",
@@ -473623,7 +473626,7 @@
  "youtube_coverage": {
   "channel_videos": 304,
   "covered": 294,
-  "listing_degraded": true,
+  "listing_degraded": false,
   "unaccounted": [
    {
     "id": "sBUNuNmVGbs",
@@ -473676,12 +473679,11 @@
     "date": "20260218"
    }
   ],
-  "last_ingest": "2026-11-06",
-  "captions_enabled": false,
-  "rate_limited": false,
-  "listed_this_run": 15
+  "last_ingest": "2026-11-07",
+  "captions_enabled": true,
+  "rate_limited": false
  },
- "youtube_last_run": "2026-11-07T12:22:32Z",
+ "youtube_last_run": "2026-11-07T13:17:31Z",
  "external_last_run": "2026-11-07T12:17:48Z",
  "agencies_last_run": "2026-11-05T18:33:27Z"
 }
