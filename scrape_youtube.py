@@ -40,6 +40,13 @@ CHANNEL_TABS = ("videos", "streams", "shorts")
 # metadata fetch gets blocked — so this is what keeps the daily run honest.
 CHANNEL_ID = "UClnI1zhyzv_BPb-VSHEtniw"
 CHANNEL_FEED = f"https://www.youtube.com/feeds/videos.xml?channel_id={CHANNEL_ID}"
+# The same 15 uploads, served from the channel's uploads playlist ("UU" + the
+# channel id minus "UC"). It is a separate endpoint on YouTube's side, and the
+# channel_id feed has been 404ing for stretches long enough to outlast four
+# retries (the 00:00 UTC runs of 2026-11-05, -06 and -07 all died this way), so
+# the retries alternate between the two.
+UPLOADS_FEED = f"https://www.youtube.com/feeds/videos.xml?playlist_id=UU{CHANNEL_ID[2:]}"
+FEED_URLS = (CHANNEL_FEED, UPLOADS_FEED)
 FROM_DATE = "20260101"  # YYYYMMDD format used by yt-dlp
 DATE_PROXIMITY_DAYS = 3
 JACCARD_THRESHOLD = 0.45
@@ -80,16 +87,21 @@ def fetch_feed_videos() -> list[dict]:
     # whole run (2026-10-06 01:00 UTC). Retry before giving up; if every try
     # fails, the empty return still trips main()'s fail-loud check.
     xml = None
-    for attempt in range(1, 5):
+    attempts = 6
+    for attempt in range(1, attempts + 1):
+        url = FEED_URLS[(attempt - 1) % len(FEED_URLS)]
+        which = "channel" if url == CHANNEL_FEED else "uploads-playlist"
         try:
-            req = urllib.request.Request(CHANNEL_FEED, headers={"User-Agent": "Mozilla/5.0"})
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
             with urllib.request.urlopen(req, timeout=60) as resp:
                 xml = resp.read().decode("utf-8", "replace")
+            if attempt > 1:
+                print(f"  {which} feed answered on attempt {attempt}/{attempts}.", file=sys.stderr)
             break
         except Exception as e:
-            print(f"  channel feed fetch failed (attempt {attempt}/4): {e}", file=sys.stderr)
-            if attempt < 4:
-                time.sleep(30 * attempt)
+            print(f"  {which} feed fetch failed (attempt {attempt}/{attempts}): {e}", file=sys.stderr)
+            if attempt < attempts:
+                time.sleep(min(30 * attempt, 90))
     if xml is None:
         return []
     rows: list[dict] = []
