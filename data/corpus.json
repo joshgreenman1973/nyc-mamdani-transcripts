@@ -334,7 +334,7 @@
    "has_mayor_quotes": false,
    "youtube_url": "https://www.youtube.com/watch?v=KWrEIMh4MCg",
    "youtube_video_id": "KWrEIMh4MCg",
-   "youtube_duration": 0
+   "youtube_duration": 2930
   },
   {
    "link": "/site/dcas/news/035-26/mayor-mamdani-breaks-ground-184-million-rebirth-chinatown-s-historic-70-mulberry-street",
@@ -15184,7 +15184,7 @@
    "has_mayor_quotes": false,
    "youtube_url": "https://www.youtube.com/watch?v=o0O8QXQiLSo",
    "youtube_video_id": "o0O8QXQiLSo",
-   "youtube_duration": 0
+   "youtube_duration": 1250
   },
   {
    "link": "/site/dsny/news/26-044/no-trash-composting-recycling-collection-veterans-day-wednesday-november-11-2026",
@@ -475615,7 +475615,10 @@
    "mayor_quotes": [],
    "has_mayor_quotes": false,
    "word_count": 10371,
-   "mayor_word_count": 5169
+   "mayor_word_count": 5169,
+   "youtube_url": "https://www.youtube.com/watch?v=iazY_UDQdck",
+   "youtube_video_id": "iazY_UDQdck",
+   "youtube_duration": 6075
   },
   {
    "link": "/youtube/CZc8ONfUuMg",
@@ -478905,9 +478908,9 @@
   }
  ],
  "youtube_coverage": {
-  "channel_videos": 306,
-  "covered": 295,
-  "listing_degraded": true,
+  "channel_videos": 307,
+  "covered": 296,
+  "listing_degraded": false,
   "unaccounted": [
    {
     "id": "m6mYJBaDQLw",
@@ -478965,12 +478968,11 @@
     "date": "20260218"
    }
   ],
-  "last_ingest": "2026-11-10",
-  "captions_enabled": false,
-  "rate_limited": false,
-  "listed_this_run": 15
+  "last_ingest": "2026-11-11",
+  "captions_enabled": true,
+  "rate_limited": false
  },
- "youtube_last_run": "2026-11-11T00:22:29Z",
+ "youtube_last_run": "2026-11-11T13:17:30Z",
  "external_last_run": "2026-11-11T00:17:21Z",
  "agencies_last_run": "2026-11-11T00:22:22Z"
 }
