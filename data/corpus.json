@@ -2,12 +2,12 @@
  "generated_at": "2026-11-17T02:39:45Z",
  "from_date": "2026-01-01",
  "source": "https://www.nyc.gov/mayors-office/news/",
- "total": 1639,
+ "total": 1640,
  "type_counts": {
   "other": 493,
   "executive_order": 167,
+  "video": 189,
   "agency_release": 432,
-  "video": 188,
   "press_conference": 172,
   "speech": 42,
   "ceremony": 35,
@@ -120,6 +120,209 @@
    "mayor_text": "The decisions made in our courts can change the course of a New Yorker’s life. That is why the people entrusted with serving on the bench must bring the highest standards of fairness, integrity and accountability to their work,",
    "mayor_word_count": 39,
    "has_mayor_quotes": true
+  },
+  {
+   "link": "/youtube/ECKvZepqp30",
+   "url": "https://www.youtube.com/watch?v=ECKvZepqp30",
+   "youtube_url": "https://www.youtube.com/watch?v=ECKvZepqp30",
+   "youtube_video_id": "ECKvZepqp30",
+   "youtube_duration": 102,
+   "title": "We are Disbanding the SRG",
+   "date": "November 16, 2026",
+   "iso_date": "2026-11-16",
+   "type": "video",
+   "source": "youtube",
+   "reliability": "auto",
+   "text": "During our campaign for mayor, I promised to disband the NYPD's strategic response group, known as the SRG. Today, we are keeping that promise. I am disbanding the SRG. SRG was tasked with both counterterrorism enforcement and protest response. Those are not the same, and they should be separated. Government has a responsibility to both protect New Yorkers constitutional rights and keep our communities safe. Those priorities are not in conflict. They are intertwined. That's why we are creating a community dialogue and deescalation division within the mayor's office of community safety to prepare for and respond to protests through dialogue and engagement. This will not be a uniform police unit. It'll be made up of civilians without weapons or arrest powers. A first amendment support team within the police department called FAST will also engage in dialogue and deescalation at protests as we build out the new [music] civilian division. FAST will remain as a liazison team while CL D takes the lead in engaging with New Yorkers. Trained officers can be called upon to come make arrests, including for those engaging in civil disobedience. We both know something about that. There will be no long guns, tear gas, kettling, [music] or pepper spray used as crowdcontrolled tactics during First Amendment activities. We're doing all of this while keeping NYPD headcount the same. These reforms accomplish the key changes called for by council member Oay's Curb Act, a bill I'm proud to support. Today is about more than disbanding [music] the SRG. We are building a new approach to public safety, one where all communities can trust that their safety and fundamental freedoms will be protected.",
+   "word_count": 277,
+   "speakers": [],
+   "mayor_quotes": [],
+   "mayor_text": "During our campaign for mayor, I promised to disband the NYPD's strategic response group, known as the SRG. Today, we are keeping that promise. I am disbanding the SRG. SRG was tasked with both counterterrorism enforcement and protest response. Those are not the same, and they should be separated. Government has a responsibility to both protect New Yorkers constitutional rights and keep our communities safe. Those priorities are not in conflict. They are intertwined. That's why we are creating a community dialogue and deescalation division within the mayor's office of community safety to prepare for and respond to protests through dialogue and engagement. This will not be a uniform police unit. It'll be made up of civilians without weapons or arrest powers. A first amendment support team within the police department called FAST will also engage in dialogue and deescalation at protests as we build out the new [music] civilian division. FAST will remain as a liazison team while CL D takes the lead in engaging with New Yorkers. Trained officers can be called upon to come make arrests, including for those engaging in civil disobedience. We both know something about that. There will be no long guns, tear gas, kettling, [music] or pepper spray used as crowdcontrolled tactics during First Amendment activities. We're doing all of this while keeping NYPD headcount the same. These reforms accomplish the key changes called for by council member Oay's Curb Act, a bill I'm proud to support. Today is about more than disbanding [music] the SRG. We are building a new approach to public safety, one where all communities can trust that their safety and fundamental freedoms will be protected.",
+   "mayor_word_count": 277,
+   "has_mayor_quotes": false,
+   "caption_source": "auto",
+   "video_segments": [
+    {
+     "t": 0.16,
+     "text": "During our campaign for mayor, I"
+    },
+    {
+     "t": 2.16,
+     "text": "promised to disband the NYPD's strategic"
+    },
+    {
+     "t": 4.8,
+     "text": "response group, known as the SRG. Today,"
+    },
+    {
+     "t": 8.64,
+     "text": "we are keeping that promise. I am"
+    },
+    {
+     "t": 10.56,
+     "text": "disbanding the SRG. SRG was tasked with"
+    },
+    {
+     "t": 13.44,
+     "text": "both counterterrorism enforcement and"
+    },
+    {
+     "t": 15.68,
+     "text": "protest response. Those are not the"
+    },
+    {
+     "t": 17.52,
+     "text": "same, and they should be separated."
+    },
+    {
+     "t": 23.04,
+     "text": "Government has a responsibility to both"
+    },
+    {
+     "t": 25.12,
+     "text": "protect New Yorkers constitutional"
+    },
+    {
+     "t": 26.88,
+     "text": "rights and keep our communities safe."
+    },
+    {
+     "t": 29.28,
+     "text": "Those priorities are not in conflict."
+    },
+    {
+     "t": 31.84,
+     "text": "They are intertwined. That's why we are"
+    },
+    {
+     "t": 34.08,
+     "text": "creating a community dialogue and"
+    },
+    {
+     "t": 35.68,
+     "text": "deescalation division within the mayor's"
+    },
+    {
+     "t": 37.76,
+     "text": "office of community safety to prepare"
+    },
+    {
+     "t": 39.6,
+     "text": "for and respond to protests through"
+    },
+    {
+     "t": 41.92,
+     "text": "dialogue and engagement. This will not"
+    },
+    {
+     "t": 43.6,
+     "text": "be a uniform police unit. It'll be made"
+    },
+    {
+     "t": 45.6,
+     "text": "up of civilians without weapons or"
+    },
+    {
+     "t": 47.28,
+     "text": "arrest powers. A first amendment support"
+    },
+    {
+     "t": 49.28,
+     "text": "team within the police department called"
+    },
+    {
+     "t": 51.04,
+     "text": "FAST will also engage in dialogue and"
+    },
+    {
+     "t": 53.2,
+     "text": "deescalation at protests as we build out"
+    },
+    {
+     "t": 55.36,
+     "text": "the new [music] civilian division. FAST"
+    },
+    {
+     "t": 57.2,
+     "text": "will remain as a liazison team while CL"
+    },
+    {
+     "t": 59.44,
+     "text": "D takes the lead in engaging with New"
+    },
+    {
+     "t": 60.88,
+     "text": "Yorkers. Trained officers can be called"
+    },
+    {
+     "t": 62.96,
+     "text": "upon to come make arrests, including for"
+    },
+    {
+     "t": 64.88,
+     "text": "those engaging in civil disobedience. We"
+    },
+    {
+     "t": 67.84,
+     "text": "both know something about that. There"
+    },
+    {
+     "t": 69.6,
+     "text": "will be no long guns, tear gas,"
+    },
+    {
+     "t": 71.76,
+     "text": "kettling, [music] or pepper spray used"
+    },
+    {
+     "t": 73.68,
+     "text": "as crowdcontrolled tactics during First"
+    },
+    {
+     "t": 75.92,
+     "text": "Amendment activities. We're doing all of"
+    },
+    {
+     "t": 77.92,
+     "text": "this while keeping NYPD headcount the"
+    },
+    {
+     "t": 80.24,
+     "text": "same. These reforms accomplish the key"
+    },
+    {
+     "t": 82.48,
+     "text": "changes called for by council member"
+    },
+    {
+     "t": 84.24,
+     "text": "Oay's Curb Act, a bill I'm proud to"
+    },
+    {
+     "t": 86.48,
+     "text": "support. Today is about more than"
+    },
+    {
+     "t": 88.24,
+     "text": "disbanding [music] the SRG. We are"
+    },
+    {
+     "t": 90.0,
+     "text": "building a new approach to public"
+    },
+    {
+     "t": 91.52,
+     "text": "safety, one where all communities can"
+    },
+    {
+     "t": 93.6,
+     "text": "trust that their safety and fundamental"
+    },
+    {
+     "t": 95.84,
+     "text": "freedoms will be protected."
+    }
+   ]
   },
   {
    "link": "/site/fdny/news/40-26/the-fdny-clergy-council-join-community-partners-prayer-vigil-victims-brooklyn-building",
@@ -12451,7 +12654,7 @@
    "has_mayor_quotes": false,
    "youtube_url": "https://www.youtube.com/watch?v=RRFY44pFZdg",
    "youtube_video_id": "RRFY44pFZdg",
-   "youtube_duration": 0
+   "youtube_duration": 3440
   },
   {
    "link": "/site/dca/news/078-26/dcwp-on-intro-891---prohibiting-surveillance-pricing",
@@ -12873,7 +13076,7 @@
    "has_mayor_quotes": false,
    "youtube_url": "https://www.youtube.com/watch?v=KWrEIMh4MCg",
    "youtube_video_id": "KWrEIMh4MCg",
-   "youtube_duration": 0
+   "youtube_duration": 2930
   },
   {
    "link": "/site/dcas/news/035-26/mayor-mamdani-breaks-ground-184-million-rebirth-chinatown-s-historic-70-mulberry-street",
@@ -27723,7 +27926,7 @@
    "has_mayor_quotes": false,
    "youtube_url": "https://www.youtube.com/watch?v=o0O8QXQiLSo",
    "youtube_video_id": "o0O8QXQiLSo",
-   "youtube_duration": 0
+   "youtube_duration": 1250
   },
   {
    "link": "/site/dsny/news/26-044/no-trash-composting-recycling-collection-veterans-day-wednesday-november-11-2026",
@@ -488154,7 +488357,10 @@
    "mayor_quotes": [],
    "has_mayor_quotes": false,
    "word_count": 10371,
-   "mayor_word_count": 5169
+   "mayor_word_count": 5169,
+   "youtube_url": "https://www.youtube.com/watch?v=iazY_UDQdck",
+   "youtube_video_id": "iazY_UDQdck",
+   "youtube_duration": 6075
   },
   {
    "link": "/youtube/CZc8ONfUuMg",
@@ -491444,9 +491650,9 @@
   }
  ],
  "youtube_coverage": {
-  "channel_videos": 312,
-  "covered": 301,
-  "listing_degraded": true,
+  "channel_videos": 313,
+  "covered": 302,
+  "listing_degraded": false,
   "unaccounted": [
    {
     "id": "m6mYJBaDQLw",
@@ -491504,12 +491710,11 @@
     "date": "20260218"
    }
   ],
-  "last_ingest": "2026-11-16",
-  "captions_enabled": false,
-  "rate_limited": false,
-  "listed_this_run": 15
+  "last_ingest": "2026-11-17",
+  "captions_enabled": true,
+  "rate_limited": false
  },
- "youtube_last_run": "2026-11-17T02:44:48Z",
+ "youtube_last_run": "2026-11-17T13:17:31Z",
  "external_last_run": "2026-11-17T02:40:18Z",
  "agencies_last_run": "2026-11-15T23:41:20Z"
 }
