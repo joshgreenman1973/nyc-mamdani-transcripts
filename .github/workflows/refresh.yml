@@ -55,6 +55,13 @@ jobs:
           node-version: "20"
 
       - name: Rebuild search vectors and topic trends if corpus changed
+        env:
+          # onnxruntime-node's install script fetches optional CUDA (GPU)
+          # binaries on Linux x64. Microsoft pulled the 1.21.0 GPU tarball
+          # from its release page, so that download now 404s and kills
+          # npm install (Nov. 18, 2026). The embeddings run on CPU; the GPU
+          # binaries were never used here.
+          ONNXRUNTIME_NODE_INSTALL_CUDA: skip
         run: |
           if git diff --quiet data/corpus.json; then
             echo "Corpus unchanged — skipping rebuild."
