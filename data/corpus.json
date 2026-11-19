@@ -2952,7 +2952,7 @@
    "has_mayor_quotes": false,
    "youtube_url": "https://www.youtube.com/watch?v=touohB4ScR0",
    "youtube_video_id": "touohB4ScR0",
-   "youtube_duration": 0
+   "youtube_duration": 1245
   },
   {
    "link": "/mayors-office/news/2026/11/transcript--mayor-mamdani-joins-governor-hochul-to-make-housing-.html",
@@ -15617,7 +15617,7 @@
    "has_mayor_quotes": false,
    "youtube_url": "https://www.youtube.com/watch?v=RRFY44pFZdg",
    "youtube_video_id": "RRFY44pFZdg",
-   "youtube_duration": 0
+   "youtube_duration": 3440
   },
   {
    "link": "/site/dca/news/078-26/dcwp-on-intro-891---prohibiting-surveillance-pricing",
@@ -16039,7 +16039,7 @@
    "has_mayor_quotes": false,
    "youtube_url": "https://www.youtube.com/watch?v=KWrEIMh4MCg",
    "youtube_video_id": "KWrEIMh4MCg",
-   "youtube_duration": 0
+   "youtube_duration": 2930
   },
   {
    "link": "/site/dcas/news/035-26/mayor-mamdani-breaks-ground-184-million-rebirth-chinatown-s-historic-70-mulberry-street",
@@ -30889,7 +30889,7 @@
    "has_mayor_quotes": false,
    "youtube_url": "https://www.youtube.com/watch?v=o0O8QXQiLSo",
    "youtube_video_id": "o0O8QXQiLSo",
-   "youtube_duration": 0
+   "youtube_duration": 1250
   },
   {
    "link": "/site/dsny/news/26-044/no-trash-composting-recycling-collection-veterans-day-wednesday-november-11-2026",
@@ -491325,7 +491325,10 @@
    "mayor_quotes": [],
    "has_mayor_quotes": false,
    "word_count": 10371,
-   "mayor_word_count": 5169
+   "mayor_word_count": 5169,
+   "youtube_url": "https://www.youtube.com/watch?v=iazY_UDQdck",
+   "youtube_video_id": "iazY_UDQdck",
+   "youtube_duration": 6075
   },
   {
    "link": "/youtube/CZc8ONfUuMg",
@@ -494617,7 +494620,7 @@
  "youtube_coverage": {
   "channel_videos": 315,
   "covered": 304,
-  "listing_degraded": true,
+  "listing_degraded": false,
   "unaccounted": [
    {
     "id": "m6mYJBaDQLw",
@@ -494675,12 +494678,11 @@
     "date": "20260218"
    }
   ],
-  "last_ingest": "2026-11-18",
-  "captions_enabled": false,
-  "rate_limited": false,
-  "listed_this_run": 15
+  "last_ingest": "2026-11-19",
+  "captions_enabled": true,
+  "rate_limited": false
  },
- "youtube_last_run": "2026-11-19T01:37:47Z",
+ "youtube_last_run": "2026-11-19T13:19:11Z",
  "external_last_run": "2026-11-19T01:32:43Z",
  "agencies_last_run": "2026-11-18T19:19:05Z"
 }
