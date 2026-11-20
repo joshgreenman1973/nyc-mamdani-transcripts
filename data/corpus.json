@@ -135,7 +135,7 @@
    "has_mayor_quotes": false,
    "youtube_url": "https://www.youtube.com/watch?v=VHZy0ob2-TA",
    "youtube_video_id": "VHZy0ob2-TA",
-   "youtube_duration": 0
+   "youtube_duration": 1180
   },
   {
    "link": "/mayors-office/news/2026/11/mayor-mamdani-launches-new-partnership-to-put-new-yorkers-to-wor.html",
@@ -888,7 +888,7 @@
    "has_mayor_quotes": false,
    "youtube_url": "https://www.youtube.com/watch?v=5eZrg-FCYQg",
    "youtube_video_id": "5eZrg-FCYQg",
-   "youtube_duration": 0
+   "youtube_duration": 1676
   },
   {
    "link": "/youtube/pvWPODwmU7g",
@@ -3135,7 +3135,7 @@
    "has_mayor_quotes": false,
    "youtube_url": "https://www.youtube.com/watch?v=touohB4ScR0",
    "youtube_video_id": "touohB4ScR0",
-   "youtube_duration": 0
+   "youtube_duration": 1245
   },
   {
    "link": "/mayors-office/news/2026/11/transcript--mayor-mamdani-joins-governor-hochul-to-make-housing-.html",
@@ -15800,7 +15800,7 @@
    "has_mayor_quotes": false,
    "youtube_url": "https://www.youtube.com/watch?v=RRFY44pFZdg",
    "youtube_video_id": "RRFY44pFZdg",
-   "youtube_duration": 0
+   "youtube_duration": 3440
   },
   {
    "link": "/site/dca/news/078-26/dcwp-on-intro-891---prohibiting-surveillance-pricing",
@@ -16222,7 +16222,7 @@
    "has_mayor_quotes": false,
    "youtube_url": "https://www.youtube.com/watch?v=KWrEIMh4MCg",
    "youtube_video_id": "KWrEIMh4MCg",
-   "youtube_duration": 0
+   "youtube_duration": 2930
   },
   {
    "link": "/site/dcas/news/035-26/mayor-mamdani-breaks-ground-184-million-rebirth-chinatown-s-historic-70-mulberry-street",
@@ -31072,7 +31072,7 @@
    "has_mayor_quotes": false,
    "youtube_url": "https://www.youtube.com/watch?v=o0O8QXQiLSo",
    "youtube_video_id": "o0O8QXQiLSo",
-   "youtube_duration": 0
+   "youtube_duration": 1250
   },
   {
    "link": "/site/dsny/news/26-044/no-trash-composting-recycling-collection-veterans-day-wednesday-november-11-2026",
@@ -494796,9 +494796,9 @@
   }
  ],
  "youtube_coverage": {
-  "channel_videos": 315,
-  "covered": 304,
-  "listing_degraded": true,
+  "channel_videos": 317,
+  "covered": 305,
+  "listing_degraded": false,
   "unaccounted": [
    {
     "id": "m6mYJBaDQLw",
@@ -494841,6 +494841,11 @@
     "date": "20260224"
    },
    {
+    "id": "qHl6fbSfL58",
+    "title": "Mayor Mamdani Holds a Press Conference to Make an Announcement About Rikers Island 2026-11-20 08:13",
+    "date": "20261120"
+   },
+   {
     "id": "6k8T9mmS_aQ",
     "title": "Cancelling a subscription shouldn't be this hard.",
     "date": "20261012"
@@ -494856,12 +494861,11 @@
     "date": "20260218"
    }
   ],
-  "last_ingest": "2026-11-19",
-  "captions_enabled": false,
-  "rate_limited": false,
-  "listed_this_run": 15
+  "last_ingest": "2026-11-20",
+  "captions_enabled": true,
+  "rate_limited": false
  },
- "youtube_last_run": "2026-11-20T01:33:54Z",
+ "youtube_last_run": "2026-11-20T13:19:21Z",
  "external_last_run": "2026-11-20T01:28:46Z",
  "agencies_last_run": "2026-11-20T01:33:48Z"
 }
