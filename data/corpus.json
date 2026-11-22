@@ -8416,7 +8416,7 @@
    "has_mayor_quotes": false,
    "youtube_url": "https://www.youtube.com/watch?v=VHZy0ob2-TA",
    "youtube_video_id": "VHZy0ob2-TA",
-   "youtube_duration": 0
+   "youtube_duration": 1180
   },
   {
    "link": "/site/dsny/news/26-046/no-trash-composting-recycling-collection-thanksgiving-day-thursday-november-26-2026",
@@ -9095,7 +9095,7 @@
    "has_mayor_quotes": false,
    "youtube_url": "https://www.youtube.com/watch?v=5eZrg-FCYQg",
    "youtube_video_id": "5eZrg-FCYQg",
-   "youtube_duration": 0
+   "youtube_duration": 1676
   },
   {
    "link": "/youtube/pvWPODwmU7g",
@@ -11342,7 +11342,7 @@
    "has_mayor_quotes": false,
    "youtube_url": "https://www.youtube.com/watch?v=touohB4ScR0",
    "youtube_video_id": "touohB4ScR0",
-   "youtube_duration": 0
+   "youtube_duration": 1245
   },
   {
    "link": "/mayors-office/news/2026/11/transcript--mayor-mamdani-joins-governor-hochul-to-make-housing-.html",
@@ -24007,7 +24007,7 @@
    "has_mayor_quotes": false,
    "youtube_url": "https://www.youtube.com/watch?v=RRFY44pFZdg",
    "youtube_video_id": "RRFY44pFZdg",
-   "youtube_duration": 0
+   "youtube_duration": 3440
   },
   {
    "link": "/site/dca/news/078-26/dcwp-on-intro-891---prohibiting-surveillance-pricing",
@@ -24429,7 +24429,7 @@
    "has_mayor_quotes": false,
    "youtube_url": "https://www.youtube.com/watch?v=KWrEIMh4MCg",
    "youtube_video_id": "KWrEIMh4MCg",
-   "youtube_duration": 0
+   "youtube_duration": 2930
   },
   {
    "link": "/site/dcas/news/035-26/mayor-mamdani-breaks-ground-184-million-rebirth-chinatown-s-historic-70-mulberry-street",
@@ -499715,7 +499715,10 @@
    "mayor_quotes": [],
    "has_mayor_quotes": false,
    "word_count": 10371,
-   "mayor_word_count": 5169
+   "mayor_word_count": 5169,
+   "youtube_url": "https://www.youtube.com/watch?v=iazY_UDQdck",
+   "youtube_video_id": "iazY_UDQdck",
+   "youtube_duration": 6075
   },
   {
    "link": "/youtube/CZc8ONfUuMg",
@@ -503007,7 +503010,7 @@
  "youtube_coverage": {
   "channel_videos": 318,
   "covered": 307,
-  "listing_degraded": true,
+  "listing_degraded": false,
   "unaccounted": [
    {
     "id": "m6mYJBaDQLw",
@@ -503065,12 +503068,11 @@
     "date": "20260218"
    }
   ],
-  "last_ingest": "2026-11-21",
-  "captions_enabled": false,
-  "rate_limited": false,
-  "listed_this_run": 15
+  "last_ingest": "2026-11-22",
+  "captions_enabled": true,
+  "rate_limited": false
  },
- "youtube_last_run": "2026-11-22T00:03:51Z",
+ "youtube_last_run": "2026-11-22T13:19:22Z",
  "external_last_run": "2026-11-21T23:59:05Z",
  "agencies_last_run": "2026-11-20T19:02:07Z"
 }
