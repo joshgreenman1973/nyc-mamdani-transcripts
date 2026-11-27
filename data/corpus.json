@@ -2,13 +2,13 @@
  "generated_at": "2026-11-27T02:29:11Z",
  "from_date": "2026-01-01",
  "source": "https://www.nyc.gov/mayors-office/news/",
- "total": 1696,
+ "total": 1698,
  "type_counts": {
   "agency_release": 444,
+  "video": 196,
   "other": 519,
   "statement": 19,
   "press_conference": 178,
-  "video": 194,
   "executive_order": 171,
   "ceremony": 36,
   "media_appearance": 86,
@@ -66,6 +66,157 @@
    "mayor_text": "",
    "mayor_word_count": 0,
    "has_mayor_quotes": false
+  },
+  {
+   "link": "/youtube/df5p8Ra6RLw",
+   "url": "https://www.youtube.com/watch?v=df5p8Ra6RLw",
+   "youtube_url": "https://www.youtube.com/watch?v=df5p8Ra6RLw",
+   "youtube_video_id": "df5p8Ra6RLw",
+   "youtube_duration": 89,
+   "title": "Stay safe during severe storms this Thanksgiving",
+   "date": "November 26, 2026",
+   "iso_date": "2026-11-26",
+   "type": "video",
+   "source": "youtube",
+   "reliability": "verified",
+   "text": "Good evening, New York. As we prepare to celebrate Thanksgiving with family and friends, a serious storm is headed our way. It'll begin Thursday afternoon, and continue into the evening. We're expecting damaging wind gusts of up to 65mph, coastal flooding, and heavy rain. We've been working in close coordination with Macy's, the NYPD, and agency partners, as this forecast has developed. Out of an abundance of caution, together, we've made the decision to postpone the Thanksgiving Day parade until Saturday. Here's what every New Yorker should know ahead of tomorrow's storm. If you're traveling, give yourself extra time. And remember: no destination is worth risking your safety. Never walk, bike, or drive through flooding. If winds pick up, get indoors. This wind is strong enough to knock down tree limbs and power lines. If you live in a basement apartment, or your home floods often, make a plan now. Move to higher ground before flooding starts. Know your exits and never enter or return to a flooded basement. And also: look out for one another. Check in on your neighbors and loved ones, especially anyone who might need some extra help staying safe. For emergency notifications, text NOTIFYNYC to 692-692. We know how much this holiday means to New Yorkers, but the most important thing is getting everyone through this storm safely and back with the people they love. Have a very happy Thanksgiving, New York City. We're excited to celebrate the parade with you on Saturday. Until then, stay safe, stay dry, and look out for one another.",
+   "word_count": 260,
+   "speakers": [],
+   "mayor_quotes": [],
+   "mayor_text": "Good evening, New York. As we prepare to celebrate Thanksgiving with family and friends, a serious storm is headed our way. It'll begin Thursday afternoon, and continue into the evening. We're expecting damaging wind gusts of up to 65mph, coastal flooding, and heavy rain. We've been working in close coordination with Macy's, the NYPD, and agency partners, as this forecast has developed. Out of an abundance of caution, together, we've made the decision to postpone the Thanksgiving Day parade until Saturday. Here's what every New Yorker should know ahead of tomorrow's storm. If you're traveling, give yourself extra time. And remember: no destination is worth risking your safety. Never walk, bike, or drive through flooding. If winds pick up, get indoors. This wind is strong enough to knock down tree limbs and power lines. If you live in a basement apartment, or your home floods often, make a plan now. Move to higher ground before flooding starts. Know your exits and never enter or return to a flooded basement. And also: look out for one another. Check in on your neighbors and loved ones, especially anyone who might need some extra help staying safe. For emergency notifications, text NOTIFYNYC to 692-692. We know how much this holiday means to New Yorkers, but the most important thing is getting everyone through this storm safely and back with the people they love. Have a very happy Thanksgiving, New York City. We're excited to celebrate the parade with you on Saturday. Until then, stay safe, stay dry, and look out for one another.",
+   "mayor_word_count": 260,
+   "has_mayor_quotes": false,
+   "caption_source": "manual",
+   "video_segments": [
+    {
+     "t": 0.08,
+     "text": "Good evening, New York."
+    },
+    {
+     "t": 1.46,
+     "text": "As we prepare to celebrate Thanksgiving with family and friends,"
+    },
+    {
+     "t": 4.34,
+     "text": "a serious storm is headed our way."
+    },
+    {
+     "t": 6.38,
+     "text": "It'll begin Thursday afternoon, and continue into the evening."
+    },
+    {
+     "t": 9.3,
+     "text": "We're expecting damaging wind gusts of up to 65mph,"
+    },
+    {
+     "t": 12.8,
+     "text": "coastal flooding, and heavy rain."
+    },
+    {
+     "t": 14.85,
+     "text": "We've been working in close coordination with Macy's, the NYPD, and agency partners,"
+    },
+    {
+     "t": 19.18,
+     "text": "as this forecast has developed."
+    },
+    {
+     "t": 20.6,
+     "text": "Out of an abundance of caution,"
+    },
+    {
+     "t": 21.94,
+     "text": "together, we've made the decision to postpone the Thanksgiving Day parade"
+    },
+    {
+     "t": 26.03,
+     "text": "until Saturday."
+    },
+    {
+     "t": 27.07,
+     "text": "Here's what every New Yorker should know ahead of tomorrow's storm."
+    },
+    {
+     "t": 30.24,
+     "text": "If you're traveling, give yourself extra time."
+    },
+    {
+     "t": 32.99,
+     "text": "And remember:"
+    },
+    {
+     "t": 33.78,
+     "text": "no destination is worth risking your safety."
+    },
+    {
+     "t": 36.45,
+     "text": "Never walk, bike, or drive through flooding."
+    },
+    {
+     "t": 39.79,
+     "text": "If winds pick up, get indoors."
+    },
+    {
+     "t": 42.21,
+     "text": "This wind is strong enough to knock down tree limbs and power lines."
+    },
+    {
+     "t": 45.63,
+     "text": "If you live in a basement apartment, or your home floods often, make a plan now."
+    },
+    {
+     "t": 50.09,
+     "text": "Move to higher ground before flooding starts."
+    },
+    {
+     "t": 53.05,
+     "text": "Know your exits and never enter or return to a flooded basement."
+    },
+    {
+     "t": 56.72,
+     "text": "And also: look out for one another."
+    },
+    {
+     "t": 58.73,
+     "text": "Check in on your neighbors and loved ones,"
+    },
+    {
+     "t": 60.48,
+     "text": "especially anyone who might need some extra help staying safe."
+    },
+    {
+     "t": 63.35,
+     "text": "For emergency notifications, text NOTIFYNYC to 692-692."
+    },
+    {
+     "t": 69.28,
+     "text": "We know how much this holiday means to New Yorkers,"
+    },
+    {
+     "t": 71.57,
+     "text": "but the most important thing is getting everyone through this storm safely"
+    },
+    {
+     "t": 75.45,
+     "text": "and back with the people they love."
+    },
+    {
+     "t": 77.24,
+     "text": "Have a very happy Thanksgiving, New York City."
+    },
+    {
+     "t": 79.5,
+     "text": "We're excited to celebrate the parade with you on Saturday."
+    },
+    {
+     "t": 82.04,
+     "text": "Until then, stay safe, stay dry,"
+    },
+    {
+     "t": 85.04,
+     "text": "and look out for one another."
+    }
+   ]
   },
   {
    "link": "/mayors-office/news/2026/11/mamdani-administration-and-city-legislative-partners-expand-rent.html",
@@ -381,7 +532,7 @@
    "has_mayor_quotes": false,
    "youtube_url": "https://www.youtube.com/watch?v=tKYb9XTqkWk",
    "youtube_video_id": "tKYb9XTqkWk",
-   "youtube_duration": 0
+   "youtube_duration": 1305
   },
   {
    "link": "/site/dsny/news/26-048/every-last-leftover-",
@@ -4930,6 +5081,4865 @@
    "mayor_text": "",
    "mayor_word_count": 0,
    "has_mayor_quotes": false
+  },
+  {
+   "link": "/youtube/wtXw_ZVjqhY",
+   "url": "https://www.youtube.com/watch?v=wtXw_ZVjqhY",
+   "youtube_url": "https://www.youtube.com/watch?v=wtXw_ZVjqhY",
+   "youtube_video_id": "wtXw_ZVjqhY",
+   "youtube_duration": 2489,
+   "title": "Mayor Mamdani Holds Press Conference to Make Transportation Announcement",
+   "date": "November 24, 2026",
+   "iso_date": "2026-11-24",
+   "type": "video",
+   "source": "youtube",
+   "reliability": "auto",
+   "text": "Good morning, Brooklyn. >> Good morning. >> [cheering] >> What a privilege it is to be here in Prospect Lefferts Gardens as we announce how we are making life more affordable for millions of New Yorkers citywide. And I want to I want to just take a moment to acknowledge a number of the leaders we have here with us today, both inside and outside of City Hall. We have our Deputy Mayor for Operations, Julia Curson, who's here with us. We have our DOT Commissioner, Mike Flynn, who's here with us. We have our City Council Speaker, Julie Menin, who's here with us. Our Transportation Chair and Majority Leader, Shauna Abreu, who's here with us. And I want to take a special moment here to acknowledge our Council Member, Lincoln Restler, who's here with us, who has helped to make this day possible with his advocacy for exactly this goal. And we want to thank Council Member Crystal Hudson for welcoming us to her district. [cheering] Our partners at Lyft. And we want to thank the advocates with us from Transportation Alternatives, Open Plans, to Streets PAC who have joined us today. Now, allow me for a moment to set the scene. It's a Friday evening in late June. You've just gotten home from work. The birds are singing, and a friend just texted you. Charlie XCX is playing a surprise sunset show at Nowadays. There's just one problem. The set starts in 41 minutes. It's in Ridgewood. And you live here. It's Prospect Lefferts Gardens. If you hopped on the train, it would take you into Manhattan. You would not arrive at the show for more than an hour. If you took the bus, you could bypass the extra borough, but you'd have to take the B43 to the B26, and you would not get there any faster. And if you decided to spend that money on a car, you might get there in under an hour, but you would have to deal with the rush hour traffic, not to mention how much it would cost you. And then you remember the one mode transit that allows you to feel the wind coursing through your hair, [laughter] where you literally cannot check your phone, where you can float down city streets without sweating through every piece of clothing that you have on. beautiful off-gray electric city bike. Now every day New Yorkers across our city rely on city bikes to get where they need to go. As they have expanded over the past decade and more, they have filled a critical transit gap, providing a fast and convenient way to get from one place to another, especially for those who call Brooklyn, Queens, and the Bronx home. As such, city bikes have become essentially a public good. Though they may be owned and operated in the private sector, they have become an integral part of our public transit system, helping hundreds of thousands of New Yorkers get to work, make it home in time for dinner, see their family and friends, or even get to nowadays with time to spare. But despite the pivotal role they now play in our city, we know that city bikes have become anything but affordable. For years, our city has encouraged millions of New Yorkers to bike more, expanding our network of protected bike lanes, legalize e-bikes, and helping Lyft to install docks in more neighborhoods. And yet, over those same years, the cost of riding a city bike has grown prohibitively expensive. The issue is twofold. First, the cost of a membership. Since city bikes launched in 2013, the membership cost has increased by more than 150%. Second, the cost of riding. Even after you've paid hundreds of dollars for a membership, the price of an e-bike itself continues to soar. Over just the past 6 years alone, the per minute e-bike rate for members has increased by 170% from 10 cents per minute to 27 cents per minute. This is not tenable. Every New Yorker, regardless of income, deserves to be able to access the transit that works for them. So it's time for the cost of electric city bikes to come down so that they can truly be a public good that exists as a key part of our public transit system. Today, as New York City's first mayor to ever log more than 3,000 miles on a city bike, as well as the first mayor to ever have to go on a multi-month biking hiatus because he tore his Achilles in a fit of 35-year-old non-stretching hubris, I am proud to announce that Citi Bike has come to an agreement with us here at City Hall through our partners at Lyft to ensure that New Yorkers are able to afford the transit they deserve. I want to take a moment to thank the Department of Transportation and the team at Lyft for their work to move this forward and for their commitment to lowering prices for riders across our city. And I also just want to take a moment again to acknowledge and thank Council Member Lincoln Restler who has been spearheading the call for more affordable e-bike rides across our city and without whom we would not have been able to get to this point. So thank you, Lincoln. Thank you, Mike. Thank you to every staff member for all of the work and the negotiations that went into this. In response to the high costs of both membership and rides, we are implementing a two-pronged solution. First, beginning immediately, all Citi Bike membership rates and fees will be frozen through May of 2029 when the city's contract with Lyft expires. Second, beginning on January 19th, all e-bike rides for members under 45 minutes will be capped at just $3.65. [cheering] That is $3.65 365 days a year. As Charlie would say in her hit song 365, when I'm on the city bike, yeah, I'm bumping that. [laughter] This cap will significantly reduce the cost of roughly 5 million rides taken by New Yorkers annually. And if this cap had been in place just last year alone, it would have saved New Yorkers $10,932,958. That is almost $11 million going back into NEW YORKERS POCKETS. [applause and cheering] WE KNOW HOWEVER THAT FOR MANY PEOPLE IN OUR CITY, the baseline cost of a membership stands in the way of accessing these affordable rides. It is simply too steep a financial burden for many a New Yorker. So for the more than two million NYC residents and SNAP recipients across our city, I want to remind you that you are eligible for capped rides through the reduced fare bike share program for just $5 per month. Today's announcement is a critical step towards making biking affordable for every New Yorker. And it's a part of our City Hall's larger goal to make life more affordable in every way we can for those who call our city home. And yet for so many New Yorkers, I know that it seems that everything is just getting more expensive all the time. It's like we're living Fat Joe's quote, yesterday's price is not today's price. We almost take it for granted that the price of services we rely on like city bikes will only continue to rise. But affordability from child care to groceries is not an unattainable goal. It is something we have shown is possible before. And it is something that we will continue to not only strive for but deliver in the months and years to come. So to all the city bikers out there, wear a helmet, have fun, get to that concert in time, and I will see you out there in a few months, inshallah. Thank you all. [applause] And with that, I am proud to hand it over to our Department of Transportation Commissioner, the one and only, Mike Flynn. >> [applause] >> Thank you, Mayor. Great to see everybody. I know we're going to see you back on a city bike one day soon and and when we do, uh we're going to have a bunch of great new bike lanes ready for you. So as the mayor so effectively illustrated, there's no better or more affordable way to get around the city than on a bike. No traffic, no waiting for the train, no set routes. Just get on and ride anywhere you'd like, taking in this beautiful city as you move from neighborhood to neighborhood. The cost of getting around New York City shouldn't be a burden on New Yorkers' wallets. That's why delivering safe and affordable transportation options is a key part of the Maimonides administration's affordability agenda. Owning a car in New York City will cost you more than $18,000 each year on average. We want to offer you a wealth of other options for a fraction of that cost. Fast and reliable buses, streets that feel safe enough for cyclists of all abilities, and one of the world's best, most expansive bike share systems that New Yorkers can afford. We're working hard on this goal. Just over the last few weeks, we've completed the transformative redesign of Flatbush Avenue north of Prospect Park, not far from here, >> Hey! >> [applause] >> where buses are flying. And we fixed the water main redesign of McGuinness Boulevard and Greenpoint. >> Hey! >> [cheering] >> Right around the corner from here, we're working with the Prospect Park Alliance to build fully separated bike lanes for New Yorkers to enjoy for generations to come. This is the type of infrastructure investments that make it possible for more New Yorkers to try riding a bike and can be used by all ages and skill levels. Today's announcement will leave more money in New Yorkers' pockets that they can spend a million better ways, like towards Thanksgiving dinner, gifts for their families this holiday season, or even concert tickets in Ridgewood. I'd like to thank the bike share team at Lyft for coming to the table, as well as the dedicated staff at New York City DOT who've been working tirelessly this year on delivering a more affordable city bike. And we look forward to much more to come. So now I'd like to call up Council Member Lincoln Restler, who's been a champion of making city bike more affordable. >> Woo hoo! Thank you so much, commissioner. >> [laughter] >> On February 24th, 2024, I sent a text message to my absolutely brilliant chief of staff Molly Haley. I've got an idea for a bill. Let's cap the price of a city bike ride at the same price as a bus or subway fare. A few months later we introduced the bill. For Halloween that year I dressed up as a city bike and we kept on organizing. [laughter] It was a great costume for the record. And we kept on organizing and pushing. And as that was going on Lyft kept raising city bike costs. Over the last six years we've seen city bike prices rise eight separate times. Now a 45-minute ride on a city on an e-bike is $12.15. But look around the world and we have the most expensive bike share program bar none. In Boston it's 4.50 for an e-bike ride for 45 minutes. In Tokyo it's 2.10. In London or LA it's a buck 75. But prices have been going up and up and up and people just thought there was nothing we could do about it until we got a mayor who rides a city bike. You know the mayor claimed 3,000 miles. I've done 74,000 miles. 7,400 miles, excuse me. That's like biking to LA and back. 5,600 trips. As the mayor said and as as Commissioner Flynn said it is the best way to get around New York City. But and while it's accessible while it's efficient while it's green it had become unaffordable. And I am incredibly impressed by the deal that Mayor Mcdani, Deputy Mayor Curson, Commissioner Flynn and the team negotiated with Lyft. This is a deal that makes that is a great deal for the taxpayers of New York City. We are getting to ride city bikes again affordably and in exchange allowing Lyft to put up more ads on their docks and no longer sharing revenue. That's a great deal for taxpayers. We are not providing a direct operating subsidy so they'll continue to run their own business. And Lyft deserves credit for stepping up and doing the right thing. This is a model public-private partnership that is going to lead to City Bike getting better and better and better in the years to come. And the best way to improve safety for cyclists on the streets of New York City is when more of us ride. The more cyclists there are, the safer our streets get. And by freezing City Bike memberships, by making longer bike rides affordable, we are actually going to dramatically increase the number of people that are cycling all across our city. In the last year, we saw the sharpest increase in City Bike ridership in the areas that are transit deserts. There was a 58% increase from 24 to 25 in City Bike utilization in the areas that don't have good subway access. City Bike has changed the way we think about that first and last mile of transportation. Unless you're in a boot or have other mobility challenges, it changes the way that we get to the subway. It dramatically speeds up our commutes. I really want to thank my colleagues in the council for their support for our legislation and for this effort. Council member and our chair of our transportation committee, Shaun Abreu, was deeply committed to this and I really appreciate it. Council member Crystal Hudson and I will often e-bike around from event to event together and is a great champion for City Bike and I really want to thank Speaker Menin who cared deeply about this issue and wanted to see City Bike become more affordable. But most of all, I want to thank the mayor for giving a damn about the affordability of our transit system, for actually doing the work to do something that folks didn't think was possible, making City Bike more affordable for all of us. So thank you so much. >> Mr. 7,000 I have to tell you, I don't want you to think that was too good. >> That that is impressive. Next up, really happy to invite up council speaker Julie Menin. >> [applause] >> Thank you so much, commissioner. What a great day for Brooklyn, but what a great day for our city. It's a beautiful day outside, but it's a beautiful day in New York with this phenomenal announcement. Thank you so much, Mr. Mayor, for your work on this. Thank you, commissioner. And and particularly thank you to my colleagues, council member Wrestler, our majority leader Sean Abreu, council member Hudson, whose district we're in. It's really a fantastic day. And I really want to thank Lyft for their leadership because this is a model of public-private partnership. So thank you so much for Lyft for working with the city to make this a reality. Before our residents relied on subways and buses and cars to get around, New York was a city of bikers. And it's so appropriate that we're here in this location because our first bicycle club began in 1880. But 14 years later, we opened up the country's first bike path right here in Brooklyn along Ocean Parkway. And clearly more than a century later, we are a city of bikers. It's a it's a tradition that we have made sure is a real reality. Biking enables tourists to learn about neighborhoods all across the city. It allows residents across Brooklyn and Queens to go on routes subways don't always stop at. So allowing us to traverse between Ridgewood, as the mayor said, and Jackson Heights, between Flatbush and Sunset Park. And look, this access and speed are one of the many benefits. But by lowering this price of city bike, it is going to return potentially thousands of dollars to New Yorkers. And that is money they can spend on rent. They can spend on childcare. They can spend on groceries and other vital things that they need. But there are other benefits as well. Their health benefits because studies show that when you exercise and biking is a great form of exercise, you can lower your risks of cancer, of diabetes, of heart disease. And that also saves the city money in terms of our healthcare costs. It's also great for the environment because it will save millions of pounds of carbon emissions each and every month. So that's what this announcement is all about. And also we want to make sure to mention that next Wednesday the council is going to hold an oversight hearing aimed at further improving our whole city bike network across the city and really working collaboratively DOT and we want to thank you commissioner for the great job that you're doing in that regard. And lastly, we are so thrilled also about Fair Fares because soon we've got our expansion of Fair Fares allowing an additional 340 thousand New Yorkers to have discounted bus, subway and paratransit. And so collectively we are just so thrilled about these different announcements. Thank you so much. >> [applause] >> Thank you so much speaker. Uh next up I'd like to welcome our great partner Council Majority Leader and Transportation Committee Chair Shaun Abreu. >> Good morning everybody. Christmas came early. Mr. Mayor, can I call you Santa? City Bike is a core part of our of how our city moves. Some days New Yorkers take over 200,000 rides rivaling the ridership of the PATH train. [laughter] It's time we treated it like the transportation option that it is and thanks to Mayor Adams it just got a whole lot more affordable. Come January the fare cap on Citi Bike members e-bike rides of 45 minutes or less will only cost 65 cents more than a subway ride and membership rates will be held for the remainder of the contract term. That's a big deal. Before this I wasn't a member and I may just now become a member very soon. In the city where everything costs more transportation will cost less. Affordability is accessibility and this agreement will keep money in New Yorkers' pockets. Riding in one of the city's new protected bike lanes like the mayor said with the wind in your hair should be an option for everyone. If the subway is packed or there's traffic Citi Bike is yet another way to get to where you're going. Thanks to the mayor and Commissioner Flyn, and to your negotiations with Lyft, the city is on strong footing now to secure an even better deal for the new contract in 2029. The fact that there are no subsidies being involved at this point also speaks to the power that the city had in leveraging this negotiations to get the best deal possible for New Yorkers. Mr. Mayor, the council will always be a partner on transit affordability and ensuring that we always always get the best possible deal for New Yorkers. Thank you very much for having me. >> Thank you, council member. Uh next up, a warm welcome to council member Crystal Hudson. >> [applause and cheering] >> Thank you. I want to share an anecdote uh from I think just a few months ago, but my chief of staff and I were commuting back to my district office in Fort Green from Times Square. And it was a beautiful day, and I said, let's take a city bike. He was not a member. I am a member. We drove uh sorry, rode from Times Square to Brooklyn. It cost me uh about $10 and it cost him over $35. And he said, don't ever make me do that again. [laughter] He's since become uh a member to save costs. Um but the reality is so many New Yorkers would opt out of taking a beautiful bike ride like that from borough to borough because of the cost. And now they don't have to do that. Now they can opt in. So thank you to Mayor Mombdani. Thank you to council member Lincoln Restler. Thank you to my colleagues in the council including the speaker and the majority leader. Thank you to the DOT commissioner. Thank you to transportation alternatives, all of the advocates, and of course also Yeah, clap it up for the advocates. And also of course to Lyft for um inking the deal and making sure that transit options become far more affordable for every New Yorker. Uh, $3.60 $3.65 cents for 365 days of the year is quite a deal. I encourage everyone to take a city bike ride if they haven't yet. Uh, make sure you bring your helmet, follow the rules of the road, and drive safely. Thank you. >> Hey. Thank you, Council Member. Uh, next up, uh, Transportation Alternatives Executive Director, Ben Furnas. >> [cheering] [applause] >> Good morning, everyone, and thank you so much, Mr. Mayor. Deputy Mayor Kirsten, uh, and for everyone here today, uh, I just want to give a huge round of applause to the thousands of people who signed our petition for $3 city bike. Raise your hand if you had a part in this. Um, this was not just a victory for of your leadership and Council Member Restler's leadership, the entire City Council, Deputy Mayor, uh, uh, uh, Transportation, uh, uh, Commissioner Mike Flynn, uh, but a huge win for affordability for all the people of New York City. So thank you so much for this. More people take a city bike ride today than fly through LaGuardia Airport. It's an incredibly core part of our transportation system. It's getting safer and ever and more affordable than ever before. Thank you so much. >> [cheering] [applause] >> Thank you all. Thank you to our speakers. We'll have time for on topics and off topics. We'll start first with on topics. We'll start with Max from Hellgate. If you could just wait for the microphone. Just one sec. >> Sir? T-shirt then. >> you. >> It's >> It's gorgeous. [laughter] >> It made sense when I was biking over here a little less when I've been sitting in the shade. So, um, anyway, so how did you do this? How How does this fit in with other approaches you've taken to tech companies that use city infrastructure like Uber and Amazon which have been a bit more confrontational and and definitely the city Council is you know about to take up some serious legislation there. Is this part of an overall press or strategy and what levers did you pull to make this happen? You know I reported a few months ago that Lyft had seen its profits uh drastically increased since the cap was lifted on uh e-bike rides. >> So first I just want to ask if every member of DOT staff can just come up here for a second. You guys can all come up here. [applause] Um to to any question of of how we did this the answer has to start with the negotiating team. And I really want to credit come on over come on over. Come up [cheering] here come up to the front come up to the front. Truly truly I want to thank Commissioner Polly I want to thank our DOT staff because this Christopher just give me like three minutes and I got you. Um we these are negotiations that continued through this weekend. And the reason that they were so critically important is that this will have a significant impact on New Yorkers' lives across the five boroughs. You've heard me and other people on this stage say that this will save New Yorkers close to $11 million. Again that's using the numbers of prices as they were last year. Now we know that we are incentivizing longer bike rides across New York City. And so we know the number of New Yorkers who will take up this option is going to skyrocket. And as you heard the speaker say that's critical on so many different ways. So the ways that we got this done first and foremost was having an incredible team here who've been working on this for such a long time. [applause] Um and then also is that we we have made an agreement with Lyft that will also make it easier for them to modernize the operations of this system and to reduce operating costs. You heard Council Member Wrestler speak to some of this. We're going to make it faster and easier to install electric charging stations. That'll begin with more than 130 stations in early 2027. We are also, as you heard the council member say, permitting Lyft to run advertising across all Citi Bike station display panels starting on January 1st of next year. And when it comes to revenue share, we're saying that the city will be paid whatever exceeds $5.25 million a year, and that threshold will be modified annually according to the consumer price index. And we're also informing Lyft that they do not have to reimburse us for lost parking meter revenue. All of this is critical because it does not require any additional money paid by the city, and yet it is delivering the kind of affordability that New Yorkers will not need us to translate for them. You know, you have heard so many people on this stage talk about how much money it cost them as a member to get from point A to point B. This is now going to cap that 45-minute ride at 365. Thank you, my friend. >> Thanks, Max. We'll go next to Sam from York One. >> And just before we go to Sam, are those the Richen brothers? Oh my god. How's it going, guys? It's been a long time. All the best. Ariel and Ezra, we all went to high school together. Amazing. >> [laughter] >> I missed you, mayor. >> Hi, how are you? >> Good, how are you? Um I'm just in layman's terms, you do you have a revenue sharing agreement with Lyft? Are you saying that you're giving up that revenue to make this happen? And also, have you talked about renewing the contract in 2029? Were there any, you know, I don't want to say threats, but you know, we're going to look at some other operators if you don't do this. It just seems like why couldn't this have been done earlier? >> I don't know why prior administrations did not do this. I think to be honest, it has felt like in our city for the last few years, there has not been a focus on delivering the kind of affordability that people can feel in their pockets and that also recognizing that recognizes biking as a critical form of public transit. And when it came to these negotiations, these were negotiations that were separate from conversations around the end of this contract. When it comes to that contract, we're exploring all options to bring more affordability to the system. I do want to credit Lyft as well as DOT for the good faith negotiations that brought us to this point. What these negotiations do is they ensure that it's easier for Lyft to operate the system. We're allowing them to advertise more on the panels of Citi Bikes and and on the docking stations and we're saying that the revenue share agreement starts at a higher threshold point. And in return for that, we are going to save New Yorkers at least $11 million and we believe it will be quite substantially more. >> We have a other on-topic questions. Yeah, we'll go next to Ethan from AMNY. >> Hi, Mr. Mayor. So, when you talk about making it easier with the electrification, how is that working exactly? What is the city doing to make it easier for Lyft? Is there a price tag attached to that? >> I'll just pass it over to our our team to give you additional details on that. >> Thanks. Yeah, so it's it's really about basically helping to grease the wheels and clear out the procedural roadblocks more or less. It's it's helping to get the approvals from Con Ed. Basically, it's you know, you need to install the conduit in the ground and things like that. So, it's about streamlining the process and kind of unleashing the potential to do this at a larger scale. >> This was a pilot that was started a few years ago. One of the first electrified Citi Bike docks was in our district in Greenpoint and it's kind of remarkable that our to make our bike system work, we have Lyft driving vans all around the city swapping out dead batteries. This changes that. So, now the docks when e-bikes are docked, they're connected to the grid and they automatically recharge, which saves uh Lyft operating dollars and is a much more environmentally efficient approach to maintaining and operating our city bike fleet. So by facilitating by the city and DOT working with Lyft to make that process easier and smoother, we have a much more environmentally efficient kind of city bike system. >> Thanks. We'll go next to Haley. Go ahead. >> Hi, Mr. Mayor. Hi, everyone. Good thank you. Um obviously this is a really wonderful thing for city bike members. I want to ask about non-members. Is that something you might be looking to leverage in the future um making prices for non-members making prices more affordable for non-members as well? >> Today around 82% of city bike users are members and one of the things that we've heard from New Yorkers who have not yet signed up to be members is their concern that the cost of membership continues to increase year after year. And so one of the reasons that we focused on going beyond the 365 for 365 was to freeze membership costs so that whether it be the majority leader Shaun Abreu or it be a New Yorker who's just you know tuning in right now that they realize that the price that they're looking at today is the price that it will be uh in the years to come and that that could actually deliver them some sense of stability. >> Okay, we have time for a few more on topic before we move on. We'll go to Streetsblog next. >> Hey, Mr. Mayor. How's it going? >> Good. Um >> Don't reset the meter. [laughter] Not today. >> I'll have to ask Gersh. Um you know you mentioned this will increase ridership a lot. Um you know a lot more people are going to ride over the bridges. Uh currently the stations can often be full and you know you can't find a place to dock. Did the city demand Lyft increase its service in any way like rebalancing bikes or any kind of other service improvements to kind of like meet this rise in ridership? >> So I think you you just heard it from the council member about the importance of of what we are delivering in terms of the ability for these bikes to be recharged without having to have uh city bike workers go across the city in a van to manually do it themselves. In in addition to that, we have been working with Lyft on increasing supply across the network. So last month, we announced the completion of a major expansion that added more than 230 stations and with them 3,700 docks across seven neighborhoods in the Bronx, Brooklyn, and Queens. And in early 2027 we're going to be delivering new charging stations that will also help to keep with growing demand. >> So there'll be an increase of docks and >> Increase of docks, uh uh an expediting of the process by which you recharge bikes uh thanks to the operating agreements that we've made. And I also think a reduce in anxiety, a reduction in anxiety for New Yorkers who have ended their ride and yet are then looking for a place to dock it and know that the price is going up. Now you have through 45 minutes to find that dock. >> Okay, I have time for one more on topic. Off topic? Okay, we'll go to Emma from The Times. >> Um hi Mr. Mayor. Um just clarifying the the art of this specific deal. Can you just um say precisely what Lyft is getting out of this in terms of subsidies and taxpayer funded benefits? >> What Lyft is getting out of this is the city's assistance in installing electric charging stations, beginning with more than 130 city bike charging stations in early next year. What they are also getting out of this is that starting January 1st of next year, they can run advertising across all city bike station display panels. And that when it comes to revenue share, they will only start to pay the city whatever exceeds $5.25 million a year. And that threshold will be modified annually in accordance with the Consumer Price Index. They will also no longer have to reimburse us for lost parking meter revenue. All of that is to say the city is not spending any additional dollars to deliver what will be close to $11 million at least in relief to New Yorkers. We are making it easier for Lyft to operate the system, and we are also allowing them to retain more revenue that comes from this system. >> Thank you to >> our speakers. Before we move to off topic, can we get another round of applause? We'll start with Henry from Pix. >> Hi Mayor, right here. >> Sir. >> Hey, I'm glad you avoided the surgery. I've been there and and this is better. >> the surgery's coming. >> Oh, it's coming. Oh my goodness. I'm sorry. I arrived. >> That's all right. It's coming Friday morning. >> Oh no. Okay. Well, good luck, sir. Um >> Thank you. I'm just just keep telling myself Jason Tatum did it. >> Yeah. >> Yeah. [laughter] Anything is possible. >> Um with the city's finances so inexplicably tied to Wall Street, um I'm wondering what you think of the volatility we've seen on Wall Street with AI, what you think about that volatility lately, and then what you think about Nvidia hiring back Jensen Huang this morning. >> I mean Uh on your first question, if you can just reset your first question, I got caught up in your second question. >> No, no. I I I'm just wondering I'm wondering what you think of the volatility on Wall Street with the city's finances being so inexplicably tied to it. >> I I do not think that working people across the country signed up for their pensions being tied to the question of Jensen Huang's fidelity to his marriage. And yet for many days, that had a massive impact. And what we're also talking about here, we're speaking about Mr. Huang, we're speaking about a divorce settlement that has been rumored to be around $81 billion. That would be the cost of providing universal child care for every three and four-year-old in the United States of America for an entire year. And a lot of this just brings to mind what Justice Brandeis said quite some time ago, which is that we can have democracy, we can have great wealth concentrated in the hands of a few, we cannot have both. And when you look at our stock market and you look at how disproportionately dependent it is on artificial intelligence related stocks, it cannot help but give you a sense of concern about just how how much this technology is now dominant, not just in terms of the discourse that we are having around it on a day-to day basis, but also the strength of the United States economy. >> Thanks, Henry. We'll go to Timmy next. >> Sir, Mr. Faciola. Judge Street Journal, how we doing? >> I'm good. Any more details you can share about Friday first off? What's going to happen? Who's going to be in charge when you go under? >> About Friday's surgery? Then I'm scared. [laughter] It'll be my first surgery. We will It's a great tune. We will We will be following the the legal order of operations. So it will be our first deputy mayor, Dean Fulehan, and then after Dean Fulehan is our deputy mayor of operations, Julia Kerson. >> Got you. And then second >> I'll be down from about probably 9:00 a.m. to 2:00 p.m. >> Then back at the desk at 3:00? >> Probably I'll probably be No, I'm going to be laid out for for a couple of days. >> Second, I wanted to ask you. Hakeem Jeffries over the weekend signaled that one of the first priorities on the issue of Israel Palestine is going to be restoring the the West Bank settlement sanctions of the Biden administration. It seems to be a return to the status quo as opposed to the sort of reimagination that you've ushered in and other politicians have. What do you want to see Democrats in Congress do on the question of Israel and Palestine now with this really big majority? >> I would like to see a sense of moral clarity and a validation of the importance of international law. And I think that it is a welcome step to bring forth sanctions on the settler enterprise that we are seeing ravage many Palestinians' lives and their livelihoods. And I think that we have to go beyond that to also address the fact that our nation has been funding the Israeli genocide of Palestinians to the tune of billions of dollars under a number of different administrations. And now is the time time to chart a different course. >> Thank you. We've got time for a few more. We'll go next to Hannah from the Post. >> Hi, Mayor. Good morning. >> Hi. How's it going? >> Good. How are you? >> Doing well. I'm yeah. >> All thanks to consideration. Um about the murder in Chinatown last week, could you, you know, share your thoughts on the fact that the prosecution had recommended that the assailant Alexander Florentino had asked for a $3,000 bail or a $9,000 bond for the petty larceny he had been arrested for the day prior before he murdered the victim. Do you think he should have been released on no bail as he was the day prior? >> I think that what happened in Chinatown is horrible. And it is an example of the importance that we have in delivering public safety to each and every New Yorker. And this case as well as a number of other cases are top of mind for our administration. >> But could you just, you know, answer based on the facts of the case the day prior, do you think the judge handled that correctly and, you know, granting him release without bail? >> I'll get back to you on the specifics of that. >> Thanks, Hannah. We're going to go take two more. We'll go next to Morgan from Fox. >> Hi, Mr. Mayor. >> Hi, Morgan. How's it going? >> I'm good. I hope you get better. That's tough to go through surgery. So first, there's the State Attorney General just announced that she is suing the federal government over a assisted housing or a new rule with HUD that prohibits assisted housing only if every member is a US citizen or an eligible immigrant. Just hoping you can react to State Attorney General James filing this lawsuit today. And then secondly, um there's supposed to be 40 to 50 mile per hour winds uh at the Thanksgiving Day parade and they're only supposed to be 34 miles per hour in order to fly the balloons. So just wondering if you guys have your eyes on that and who makes that final call if the wind is too high. Thank you. >> We most definitely have have our eyes on that. This is a cherished tradition in our city and I know it's one that Americans across the country look forward to. Uh so as we have any updates we'll be sure to share them with you. And on on your first question I would generally say that we are so thankful to have the attorney general as our attorney general in ensuring that we're holding everyone to account, whether it's federal policy or beyond that. And so any steps that she takes in that measure, those are steps that I support. >> Thank you. Last question will be Josie. >> Hi, Mayor Adams. >> How's it going? >> Good, thanks. Um so I actually had a transit-related question. >> Please. >> Um I know your DOT commissioner said something in his remarks about um fast buses. I'm wondering if the free part is still a big part of your agenda, especially going into a new session in Albany. And then I'm also wondering if there's any updates on the Delivery Protection Act. >> Yes. So I think um when it comes to the Delivery Protection Act, what we are speaking about is common sense safety legislation that addresses the fact that we've seen a 78% increase in injury-causing car crashes and 146% increase in truck-related crashes within a half mile of Amazon's last mile facilities. And at the same time, there's also a worker crisis at these facilities, a worker safety crisis specifically. Injury rates for workers at last mile facilities are more than three times the national average. And when it comes to Amazon, we have seen that with their delivery service partners in particular, they had a severe injury rate, which means that it is more than five times the national average. What this legislation would do would be to put in place some basic guard rails to regulate what is an expanding last mile industry that would then keep local residents and workers safe. And to see that the response to all of this from Jeff Bezos, a man worth more than 376 billion dollars, is threatening to raise prices on New Yorkers ordering paper towels or multivitamins for their children during a cost of living crisis, it is disappointing to say the least. Uh and then in your first question, uh I ran on on a commitment to doing everything that I could to make our buses fast and free. Those commitments continue to stand. We're doing everything in our power to make them fast and we will continue to endeavor to also make them free. >> Thank you all. That's all the time we have. >> Thank you everyone. >> Yeah, city by city by",
+   "word_count": 7243,
+   "speakers": [],
+   "mayor_quotes": [],
+   "mayor_text": "Good morning, Brooklyn. >> Good morning. >> [cheering] >> What a privilege it is to be here in Prospect Lefferts Gardens as we announce how we are making life more affordable for millions of New Yorkers citywide. And I want to I want to just take a moment to acknowledge a number of the leaders we have here with us today, both inside and outside of City Hall. We have our Deputy Mayor for Operations, Julia Curson, who's here with us. We have our DOT Commissioner, Mike Flynn, who's here with us. We have our City Council Speaker, Julie Menin, who's here with us. Our Transportation Chair and Majority Leader, Shauna Abreu, who's here with us. And I want to take a special moment here to acknowledge our Council Member, Lincoln Restler, who's here with us, who has helped to make this day possible with his advocacy for exactly this goal. And we want to thank Council Member Crystal Hudson for welcoming us to her district. [cheering] Our partners at Lyft. And we want to thank the advocates with us from Transportation Alternatives, Open Plans, to Streets PAC who have joined us today. Now, allow me for a moment to set the scene. It's a Friday evening in late June. You've just gotten home from work. The birds are singing, and a friend just texted you. Charlie XCX is playing a surprise sunset show at Nowadays. There's just one problem. The set starts in 41 minutes. It's in Ridgewood. And you live here. It's Prospect Lefferts Gardens. If you hopped on the train, it would take you into Manhattan. You would not arrive at the show for more than an hour. If you took the bus, you could bypass the extra borough, but you'd have to take the B43 to the B26, and you would not get there any faster. And if you decided to spend that money on a car, you might get there in under an hour, but you would have to deal with the rush hour traffic, not to mention how much it would cost you. And then you remember the one mode transit that allows you to feel the wind coursing through your hair, [laughter] where you literally cannot check your phone, where you can float down city streets without sweating through every piece of clothing that you have on. beautiful off-gray electric city bike. Now every day New Yorkers across our city rely on city bikes to get where they need to go. As they have expanded over the past decade and more, they have filled a critical transit gap, providing a fast and convenient way to get from one place to another, especially for those who call Brooklyn, Queens, and the Bronx home. As such, city bikes have become essentially a public good. Though they may be owned and operated in the private sector, they have become an integral part of our public transit system, helping hundreds of thousands of New Yorkers get to work, make it home in time for dinner, see their family and friends, or even get to nowadays with time to spare. But despite the pivotal role they now play in our city, we know that city bikes have become anything but affordable. For years, our city has encouraged millions of New Yorkers to bike more, expanding our network of protected bike lanes, legalize e-bikes, and helping Lyft to install docks in more neighborhoods. And yet, over those same years, the cost of riding a city bike has grown prohibitively expensive. The issue is twofold. First, the cost of a membership. Since city bikes launched in 2013, the membership cost has increased by more than 150%. Second, the cost of riding. Even after you've paid hundreds of dollars for a membership, the price of an e-bike itself continues to soar. Over just the past 6 years alone, the per minute e-bike rate for members has increased by 170% from 10 cents per minute to 27 cents per minute. This is not tenable. Every New Yorker, regardless of income, deserves to be able to access the transit that works for them. So it's time for the cost of electric city bikes to come down so that they can truly be a public good that exists as a key part of our public transit system. Today, as New York City's first mayor to ever log more than 3,000 miles on a city bike, as well as the first mayor to ever have to go on a multi-month biking hiatus because he tore his Achilles in a fit of 35-year-old non-stretching hubris, I am proud to announce that Citi Bike has come to an agreement with us here at City Hall through our partners at Lyft to ensure that New Yorkers are able to afford the transit they deserve. I want to take a moment to thank the Department of Transportation and the team at Lyft for their work to move this forward and for their commitment to lowering prices for riders across our city. And I also just want to take a moment again to acknowledge and thank Council Member Lincoln Restler who has been spearheading the call for more affordable e-bike rides across our city and without whom we would not have been able to get to this point. So thank you, Lincoln. Thank you, Mike. Thank you to every staff member for all of the work and the negotiations that went into this. In response to the high costs of both membership and rides, we are implementing a two-pronged solution. First, beginning immediately, all Citi Bike membership rates and fees will be frozen through May of 2029 when the city's contract with Lyft expires. Second, beginning on January 19th, all e-bike rides for members under 45 minutes will be capped at just $3.65. [cheering] That is $3.65 365 days a year. As Charlie would say in her hit song 365, when I'm on the city bike, yeah, I'm bumping that. [laughter] This cap will significantly reduce the cost of roughly 5 million rides taken by New Yorkers annually. And if this cap had been in place just last year alone, it would have saved New Yorkers $10,932,958. That is almost $11 million going back into NEW YORKERS POCKETS. [applause and cheering] WE KNOW HOWEVER THAT FOR MANY PEOPLE IN OUR CITY, the baseline cost of a membership stands in the way of accessing these affordable rides. It is simply too steep a financial burden for many a New Yorker. So for the more than two million NYC residents and SNAP recipients across our city, I want to remind you that you are eligible for capped rides through the reduced fare bike share program for just $5 per month. Today's announcement is a critical step towards making biking affordable for every New Yorker. And it's a part of our City Hall's larger goal to make life more affordable in every way we can for those who call our city home. And yet for so many New Yorkers, I know that it seems that everything is just getting more expensive all the time. It's like we're living Fat Joe's quote, yesterday's price is not today's price. We almost take it for granted that the price of services we rely on like city bikes will only continue to rise. But affordability from child care to groceries is not an unattainable goal. It is something we have shown is possible before. And it is something that we will continue to not only strive for but deliver in the months and years to come. So to all the city bikers out there, wear a helmet, have fun, get to that concert in time, and I will see you out there in a few months, inshallah. Thank you all. [applause] And with that, I am proud to hand it over to our Department of Transportation Commissioner, the one and only, Mike Flynn. >> [applause] >> Thank you, Mayor. Great to see everybody. I know we're going to see you back on a city bike one day soon and and when we do, uh we're going to have a bunch of great new bike lanes ready for you. So as the mayor so effectively illustrated, there's no better or more affordable way to get around the city than on a bike. No traffic, no waiting for the train, no set routes. Just get on and ride anywhere you'd like, taking in this beautiful city as you move from neighborhood to neighborhood. The cost of getting around New York City shouldn't be a burden on New Yorkers' wallets. That's why delivering safe and affordable transportation options is a key part of the Maimonides administration's affordability agenda. Owning a car in New York City will cost you more than $18,000 each year on average. We want to offer you a wealth of other options for a fraction of that cost. Fast and reliable buses, streets that feel safe enough for cyclists of all abilities, and one of the world's best, most expansive bike share systems that New Yorkers can afford. We're working hard on this goal. Just over the last few weeks, we've completed the transformative redesign of Flatbush Avenue north of Prospect Park, not far from here, >> Hey! >> [applause] >> where buses are flying. And we fixed the water main redesign of McGuinness Boulevard and Greenpoint. >> Hey! >> [cheering] >> Right around the corner from here, we're working with the Prospect Park Alliance to build fully separated bike lanes for New Yorkers to enjoy for generations to come. This is the type of infrastructure investments that make it possible for more New Yorkers to try riding a bike and can be used by all ages and skill levels. Today's announcement will leave more money in New Yorkers' pockets that they can spend a million better ways, like towards Thanksgiving dinner, gifts for their families this holiday season, or even concert tickets in Ridgewood. I'd like to thank the bike share team at Lyft for coming to the table, as well as the dedicated staff at New York City DOT who've been working tirelessly this year on delivering a more affordable city bike. And we look forward to much more to come. So now I'd like to call up Council Member Lincoln Restler, who's been a champion of making city bike more affordable. >> Woo hoo! Thank you so much, commissioner. >> [laughter] >> On February 24th, 2024, I sent a text message to my absolutely brilliant chief of staff Molly Haley. I've got an idea for a bill. Let's cap the price of a city bike ride at the same price as a bus or subway fare. A few months later we introduced the bill. For Halloween that year I dressed up as a city bike and we kept on organizing. [laughter] It was a great costume for the record. And we kept on organizing and pushing. And as that was going on Lyft kept raising city bike costs. Over the last six years we've seen city bike prices rise eight separate times. Now a 45-minute ride on a city on an e-bike is $12.15. But look around the world and we have the most expensive bike share program bar none. In Boston it's 4.50 for an e-bike ride for 45 minutes. In Tokyo it's 2.10. In London or LA it's a buck 75. But prices have been going up and up and up and people just thought there was nothing we could do about it until we got a mayor who rides a city bike. You know the mayor claimed 3,000 miles. I've done 74,000 miles. 7,400 miles, excuse me. That's like biking to LA and back. 5,600 trips. As the mayor said and as as Commissioner Flynn said it is the best way to get around New York City. But and while it's accessible while it's efficient while it's green it had become unaffordable. And I am incredibly impressed by the deal that Mayor Mcdani, Deputy Mayor Curson, Commissioner Flynn and the team negotiated with Lyft. This is a deal that makes that is a great deal for the taxpayers of New York City. We are getting to ride city bikes again affordably and in exchange allowing Lyft to put up more ads on their docks and no longer sharing revenue. That's a great deal for taxpayers. We are not providing a direct operating subsidy so they'll continue to run their own business. And Lyft deserves credit for stepping up and doing the right thing. This is a model public-private partnership that is going to lead to City Bike getting better and better and better in the years to come. And the best way to improve safety for cyclists on the streets of New York City is when more of us ride. The more cyclists there are, the safer our streets get. And by freezing City Bike memberships, by making longer bike rides affordable, we are actually going to dramatically increase the number of people that are cycling all across our city. In the last year, we saw the sharpest increase in City Bike ridership in the areas that are transit deserts. There was a 58% increase from 24 to 25 in City Bike utilization in the areas that don't have good subway access. City Bike has changed the way we think about that first and last mile of transportation. Unless you're in a boot or have other mobility challenges, it changes the way that we get to the subway. It dramatically speeds up our commutes. I really want to thank my colleagues in the council for their support for our legislation and for this effort. Council member and our chair of our transportation committee, Shaun Abreu, was deeply committed to this and I really appreciate it. Council member Crystal Hudson and I will often e-bike around from event to event together and is a great champion for City Bike and I really want to thank Speaker Menin who cared deeply about this issue and wanted to see City Bike become more affordable. But most of all, I want to thank the mayor for giving a damn about the affordability of our transit system, for actually doing the work to do something that folks didn't think was possible, making City Bike more affordable for all of us. So thank you so much. >> Mr. 7,000 I have to tell you, I don't want you to think that was too good. >> That that is impressive. Next up, really happy to invite up council speaker Julie Menin. >> [applause] >> Thank you so much, commissioner. What a great day for Brooklyn, but what a great day for our city. It's a beautiful day outside, but it's a beautiful day in New York with this phenomenal announcement. Thank you so much, Mr. Mayor, for your work on this. Thank you, commissioner. And and particularly thank you to my colleagues, council member Wrestler, our majority leader Sean Abreu, council member Hudson, whose district we're in. It's really a fantastic day. And I really want to thank Lyft for their leadership because this is a model of public-private partnership. So thank you so much for Lyft for working with the city to make this a reality. Before our residents relied on subways and buses and cars to get around, New York was a city of bikers. And it's so appropriate that we're here in this location because our first bicycle club began in 1880. But 14 years later, we opened up the country's first bike path right here in Brooklyn along Ocean Parkway. And clearly more than a century later, we are a city of bikers. It's a it's a tradition that we have made sure is a real reality. Biking enables tourists to learn about neighborhoods all across the city. It allows residents across Brooklyn and Queens to go on routes subways don't always stop at. So allowing us to traverse between Ridgewood, as the mayor said, and Jackson Heights, between Flatbush and Sunset Park. And look, this access and speed are one of the many benefits. But by lowering this price of city bike, it is going to return potentially thousands of dollars to New Yorkers. And that is money they can spend on rent. They can spend on childcare. They can spend on groceries and other vital things that they need. But there are other benefits as well. Their health benefits because studies show that when you exercise and biking is a great form of exercise, you can lower your risks of cancer, of diabetes, of heart disease. And that also saves the city money in terms of our healthcare costs. It's also great for the environment because it will save millions of pounds of carbon emissions each and every month. So that's what this announcement is all about. And also we want to make sure to mention that next Wednesday the council is going to hold an oversight hearing aimed at further improving our whole city bike network across the city and really working collaboratively DOT and we want to thank you commissioner for the great job that you're doing in that regard. And lastly, we are so thrilled also about Fair Fares because soon we've got our expansion of Fair Fares allowing an additional 340 thousand New Yorkers to have discounted bus, subway and paratransit. And so collectively we are just so thrilled about these different announcements. Thank you so much. >> [applause] >> Thank you so much speaker. Uh next up I'd like to welcome our great partner Council Majority Leader and Transportation Committee Chair Shaun Abreu. >> Good morning everybody. Christmas came early. Mr. Mayor, can I call you Santa? City Bike is a core part of our of how our city moves. Some days New Yorkers take over 200,000 rides rivaling the ridership of the PATH train. [laughter] It's time we treated it like the transportation option that it is and thanks to Mayor Adams it just got a whole lot more affordable. Come January the fare cap on Citi Bike members e-bike rides of 45 minutes or less will only cost 65 cents more than a subway ride and membership rates will be held for the remainder of the contract term. That's a big deal. Before this I wasn't a member and I may just now become a member very soon. In the city where everything costs more transportation will cost less. Affordability is accessibility and this agreement will keep money in New Yorkers' pockets. Riding in one of the city's new protected bike lanes like the mayor said with the wind in your hair should be an option for everyone. If the subway is packed or there's traffic Citi Bike is yet another way to get to where you're going. Thanks to the mayor and Commissioner Flyn, and to your negotiations with Lyft, the city is on strong footing now to secure an even better deal for the new contract in 2029. The fact that there are no subsidies being involved at this point also speaks to the power that the city had in leveraging this negotiations to get the best deal possible for New Yorkers. Mr. Mayor, the council will always be a partner on transit affordability and ensuring that we always always get the best possible deal for New Yorkers. Thank you very much for having me. >> Thank you, council member. Uh next up, a warm welcome to council member Crystal Hudson. >> [applause and cheering] >> Thank you. I want to share an anecdote uh from I think just a few months ago, but my chief of staff and I were commuting back to my district office in Fort Green from Times Square. And it was a beautiful day, and I said, let's take a city bike. He was not a member. I am a member. We drove uh sorry, rode from Times Square to Brooklyn. It cost me uh about $10 and it cost him over $35. And he said, don't ever make me do that again. [laughter] He's since become uh a member to save costs. Um but the reality is so many New Yorkers would opt out of taking a beautiful bike ride like that from borough to borough because of the cost. And now they don't have to do that. Now they can opt in. So thank you to Mayor Mombdani. Thank you to council member Lincoln Restler. Thank you to my colleagues in the council including the speaker and the majority leader. Thank you to the DOT commissioner. Thank you to transportation alternatives, all of the advocates, and of course also Yeah, clap it up for the advocates. And also of course to Lyft for um inking the deal and making sure that transit options become far more affordable for every New Yorker. Uh, $3.60 $3.65 cents for 365 days of the year is quite a deal. I encourage everyone to take a city bike ride if they haven't yet. Uh, make sure you bring your helmet, follow the rules of the road, and drive safely. Thank you. >> Hey. Thank you, Council Member. Uh, next up, uh, Transportation Alternatives Executive Director, Ben Furnas. >> [cheering] [applause] >> Good morning, everyone, and thank you so much, Mr. Mayor. Deputy Mayor Kirsten, uh, and for everyone here today, uh, I just want to give a huge round of applause to the thousands of people who signed our petition for $3 city bike. Raise your hand if you had a part in this. Um, this was not just a victory for of your leadership and Council Member Restler's leadership, the entire City Council, Deputy Mayor, uh, uh, uh, Transportation, uh, uh, Commissioner Mike Flynn, uh, but a huge win for affordability for all the people of New York City. So thank you so much for this. More people take a city bike ride today than fly through LaGuardia Airport. It's an incredibly core part of our transportation system. It's getting safer and ever and more affordable than ever before. Thank you so much. >> [cheering] [applause] >> Thank you all. Thank you to our speakers. We'll have time for on topics and off topics. We'll start first with on topics. We'll start with Max from Hellgate. If you could just wait for the microphone. Just one sec. >> Sir? T-shirt then. >> you. >> It's >> It's gorgeous. [laughter] >> It made sense when I was biking over here a little less when I've been sitting in the shade. So, um, anyway, so how did you do this? How How does this fit in with other approaches you've taken to tech companies that use city infrastructure like Uber and Amazon which have been a bit more confrontational and and definitely the city Council is you know about to take up some serious legislation there. Is this part of an overall press or strategy and what levers did you pull to make this happen? You know I reported a few months ago that Lyft had seen its profits uh drastically increased since the cap was lifted on uh e-bike rides. >> So first I just want to ask if every member of DOT staff can just come up here for a second. You guys can all come up here. [applause] Um to to any question of of how we did this the answer has to start with the negotiating team. And I really want to credit come on over come on over. Come up [cheering] here come up to the front come up to the front. Truly truly I want to thank Commissioner Polly I want to thank our DOT staff because this Christopher just give me like three minutes and I got you. Um we these are negotiations that continued through this weekend. And the reason that they were so critically important is that this will have a significant impact on New Yorkers' lives across the five boroughs. You've heard me and other people on this stage say that this will save New Yorkers close to $11 million. Again that's using the numbers of prices as they were last year. Now we know that we are incentivizing longer bike rides across New York City. And so we know the number of New Yorkers who will take up this option is going to skyrocket. And as you heard the speaker say that's critical on so many different ways. So the ways that we got this done first and foremost was having an incredible team here who've been working on this for such a long time. [applause] Um and then also is that we we have made an agreement with Lyft that will also make it easier for them to modernize the operations of this system and to reduce operating costs. You heard Council Member Wrestler speak to some of this. We're going to make it faster and easier to install electric charging stations. That'll begin with more than 130 stations in early 2027. We are also, as you heard the council member say, permitting Lyft to run advertising across all Citi Bike station display panels starting on January 1st of next year. And when it comes to revenue share, we're saying that the city will be paid whatever exceeds $5.25 million a year, and that threshold will be modified annually according to the consumer price index. And we're also informing Lyft that they do not have to reimburse us for lost parking meter revenue. All of this is critical because it does not require any additional money paid by the city, and yet it is delivering the kind of affordability that New Yorkers will not need us to translate for them. You know, you have heard so many people on this stage talk about how much money it cost them as a member to get from point A to point B. This is now going to cap that 45-minute ride at 365. Thank you, my friend. >> Thanks, Max. We'll go next to Sam from York One. >> And just before we go to Sam, are those the Richen brothers? Oh my god. How's it going, guys? It's been a long time. All the best. Ariel and Ezra, we all went to high school together. Amazing. >> [laughter] >> I missed you, mayor. >> Hi, how are you? >> Good, how are you? Um I'm just in layman's terms, you do you have a revenue sharing agreement with Lyft? Are you saying that you're giving up that revenue to make this happen? And also, have you talked about renewing the contract in 2029? Were there any, you know, I don't want to say threats, but you know, we're going to look at some other operators if you don't do this. It just seems like why couldn't this have been done earlier? >> I don't know why prior administrations did not do this. I think to be honest, it has felt like in our city for the last few years, there has not been a focus on delivering the kind of affordability that people can feel in their pockets and that also recognizing that recognizes biking as a critical form of public transit. And when it came to these negotiations, these were negotiations that were separate from conversations around the end of this contract. When it comes to that contract, we're exploring all options to bring more affordability to the system. I do want to credit Lyft as well as DOT for the good faith negotiations that brought us to this point. What these negotiations do is they ensure that it's easier for Lyft to operate the system. We're allowing them to advertise more on the panels of Citi Bikes and and on the docking stations and we're saying that the revenue share agreement starts at a higher threshold point. And in return for that, we are going to save New Yorkers at least $11 million and we believe it will be quite substantially more. >> We have a other on-topic questions. Yeah, we'll go next to Ethan from AMNY. >> Hi, Mr. Mayor. So, when you talk about making it easier with the electrification, how is that working exactly? What is the city doing to make it easier for Lyft? Is there a price tag attached to that? >> I'll just pass it over to our our team to give you additional details on that. >> Thanks. Yeah, so it's it's really about basically helping to grease the wheels and clear out the procedural roadblocks more or less. It's it's helping to get the approvals from Con Ed. Basically, it's you know, you need to install the conduit in the ground and things like that. So, it's about streamlining the process and kind of unleashing the potential to do this at a larger scale. >> This was a pilot that was started a few years ago. One of the first electrified Citi Bike docks was in our district in Greenpoint and it's kind of remarkable that our to make our bike system work, we have Lyft driving vans all around the city swapping out dead batteries. This changes that. So, now the docks when e-bikes are docked, they're connected to the grid and they automatically recharge, which saves uh Lyft operating dollars and is a much more environmentally efficient approach to maintaining and operating our city bike fleet. So by facilitating by the city and DOT working with Lyft to make that process easier and smoother, we have a much more environmentally efficient kind of city bike system. >> Thanks. We'll go next to Haley. Go ahead. >> Hi, Mr. Mayor. Hi, everyone. Good thank you. Um obviously this is a really wonderful thing for city bike members. I want to ask about non-members. Is that something you might be looking to leverage in the future um making prices for non-members making prices more affordable for non-members as well? >> Today around 82% of city bike users are members and one of the things that we've heard from New Yorkers who have not yet signed up to be members is their concern that the cost of membership continues to increase year after year. And so one of the reasons that we focused on going beyond the 365 for 365 was to freeze membership costs so that whether it be the majority leader Shaun Abreu or it be a New Yorker who's just you know tuning in right now that they realize that the price that they're looking at today is the price that it will be uh in the years to come and that that could actually deliver them some sense of stability. >> Okay, we have time for a few more on topic before we move on. We'll go to Streetsblog next. >> Hey, Mr. Mayor. How's it going? >> Good. Um >> Don't reset the meter. [laughter] Not today. >> I'll have to ask Gersh. Um you know you mentioned this will increase ridership a lot. Um you know a lot more people are going to ride over the bridges. Uh currently the stations can often be full and you know you can't find a place to dock. Did the city demand Lyft increase its service in any way like rebalancing bikes or any kind of other service improvements to kind of like meet this rise in ridership? >> So I think you you just heard it from the council member about the importance of of what we are delivering in terms of the ability for these bikes to be recharged without having to have uh city bike workers go across the city in a van to manually do it themselves. In in addition to that, we have been working with Lyft on increasing supply across the network. So last month, we announced the completion of a major expansion that added more than 230 stations and with them 3,700 docks across seven neighborhoods in the Bronx, Brooklyn, and Queens. And in early 2027 we're going to be delivering new charging stations that will also help to keep with growing demand. >> So there'll be an increase of docks and >> Increase of docks, uh uh an expediting of the process by which you recharge bikes uh thanks to the operating agreements that we've made. And I also think a reduce in anxiety, a reduction in anxiety for New Yorkers who have ended their ride and yet are then looking for a place to dock it and know that the price is going up. Now you have through 45 minutes to find that dock. >> Okay, I have time for one more on topic. Off topic? Okay, we'll go to Emma from The Times. >> Um hi Mr. Mayor. Um just clarifying the the art of this specific deal. Can you just um say precisely what Lyft is getting out of this in terms of subsidies and taxpayer funded benefits? >> What Lyft is getting out of this is the city's assistance in installing electric charging stations, beginning with more than 130 city bike charging stations in early next year. What they are also getting out of this is that starting January 1st of next year, they can run advertising across all city bike station display panels. And that when it comes to revenue share, they will only start to pay the city whatever exceeds $5.25 million a year. And that threshold will be modified annually in accordance with the Consumer Price Index. They will also no longer have to reimburse us for lost parking meter revenue. All of that is to say the city is not spending any additional dollars to deliver what will be close to $11 million at least in relief to New Yorkers. We are making it easier for Lyft to operate the system, and we are also allowing them to retain more revenue that comes from this system. >> Thank you to >> our speakers. Before we move to off topic, can we get another round of applause? We'll start with Henry from Pix. >> Hi Mayor, right here. >> Sir. >> Hey, I'm glad you avoided the surgery. I've been there and and this is better. >> the surgery's coming. >> Oh, it's coming. Oh my goodness. I'm sorry. I arrived. >> That's all right. It's coming Friday morning. >> Oh no. Okay. Well, good luck, sir. Um >> Thank you. I'm just just keep telling myself Jason Tatum did it. >> Yeah. >> Yeah. [laughter] Anything is possible. >> Um with the city's finances so inexplicably tied to Wall Street, um I'm wondering what you think of the volatility we've seen on Wall Street with AI, what you think about that volatility lately, and then what you think about Nvidia hiring back Jensen Huang this morning. >> I mean Uh on your first question, if you can just reset your first question, I got caught up in your second question. >> No, no. I I I'm just wondering I'm wondering what you think of the volatility on Wall Street with the city's finances being so inexplicably tied to it. >> I I do not think that working people across the country signed up for their pensions being tied to the question of Jensen Huang's fidelity to his marriage. And yet for many days, that had a massive impact. And what we're also talking about here, we're speaking about Mr. Huang, we're speaking about a divorce settlement that has been rumored to be around $81 billion. That would be the cost of providing universal child care for every three and four-year-old in the United States of America for an entire year. And a lot of this just brings to mind what Justice Brandeis said quite some time ago, which is that we can have democracy, we can have great wealth concentrated in the hands of a few, we cannot have both. And when you look at our stock market and you look at how disproportionately dependent it is on artificial intelligence related stocks, it cannot help but give you a sense of concern about just how how much this technology is now dominant, not just in terms of the discourse that we are having around it on a day-to day basis, but also the strength of the United States economy. >> Thanks, Henry. We'll go to Timmy next. >> Sir, Mr. Faciola. Judge Street Journal, how we doing? >> I'm good. Any more details you can share about Friday first off? What's going to happen? Who's going to be in charge when you go under? >> About Friday's surgery? Then I'm scared. [laughter] It'll be my first surgery. We will It's a great tune. We will We will be following the the legal order of operations. So it will be our first deputy mayor, Dean Fulehan, and then after Dean Fulehan is our deputy mayor of operations, Julia Kerson. >> Got you. And then second >> I'll be down from about probably 9:00 a.m. to 2:00 p.m. >> Then back at the desk at 3:00? >> Probably I'll probably be No, I'm going to be laid out for for a couple of days. >> Second, I wanted to ask you. Hakeem Jeffries over the weekend signaled that one of the first priorities on the issue of Israel Palestine is going to be restoring the the West Bank settlement sanctions of the Biden administration. It seems to be a return to the status quo as opposed to the sort of reimagination that you've ushered in and other politicians have. What do you want to see Democrats in Congress do on the question of Israel and Palestine now with this really big majority? >> I would like to see a sense of moral clarity and a validation of the importance of international law. And I think that it is a welcome step to bring forth sanctions on the settler enterprise that we are seeing ravage many Palestinians' lives and their livelihoods. And I think that we have to go beyond that to also address the fact that our nation has been funding the Israeli genocide of Palestinians to the tune of billions of dollars under a number of different administrations. And now is the time time to chart a different course. >> Thank you. We've got time for a few more. We'll go next to Hannah from the Post. >> Hi, Mayor. Good morning. >> Hi. How's it going? >> Good. How are you? >> Doing well. I'm yeah. >> All thanks to consideration. Um about the murder in Chinatown last week, could you, you know, share your thoughts on the fact that the prosecution had recommended that the assailant Alexander Florentino had asked for a $3,000 bail or a $9,000 bond for the petty larceny he had been arrested for the day prior before he murdered the victim. Do you think he should have been released on no bail as he was the day prior? >> I think that what happened in Chinatown is horrible. And it is an example of the importance that we have in delivering public safety to each and every New Yorker. And this case as well as a number of other cases are top of mind for our administration. >> But could you just, you know, answer based on the facts of the case the day prior, do you think the judge handled that correctly and, you know, granting him release without bail? >> I'll get back to you on the specifics of that. >> Thanks, Hannah. We're going to go take two more. We'll go next to Morgan from Fox. >> Hi, Mr. Mayor. >> Hi, Morgan. How's it going? >> I'm good. I hope you get better. That's tough to go through surgery. So first, there's the State Attorney General just announced that she is suing the federal government over a assisted housing or a new rule with HUD that prohibits assisted housing only if every member is a US citizen or an eligible immigrant. Just hoping you can react to State Attorney General James filing this lawsuit today. And then secondly, um there's supposed to be 40 to 50 mile per hour winds uh at the Thanksgiving Day parade and they're only supposed to be 34 miles per hour in order to fly the balloons. So just wondering if you guys have your eyes on that and who makes that final call if the wind is too high. Thank you. >> We most definitely have have our eyes on that. This is a cherished tradition in our city and I know it's one that Americans across the country look forward to. Uh so as we have any updates we'll be sure to share them with you. And on on your first question I would generally say that we are so thankful to have the attorney general as our attorney general in ensuring that we're holding everyone to account, whether it's federal policy or beyond that. And so any steps that she takes in that measure, those are steps that I support. >> Thank you. Last question will be Josie. >> Hi, Mayor Adams. >> How's it going? >> Good, thanks. Um so I actually had a transit-related question. >> Please. >> Um I know your DOT commissioner said something in his remarks about um fast buses. I'm wondering if the free part is still a big part of your agenda, especially going into a new session in Albany. And then I'm also wondering if there's any updates on the Delivery Protection Act. >> Yes. So I think um when it comes to the Delivery Protection Act, what we are speaking about is common sense safety legislation that addresses the fact that we've seen a 78% increase in injury-causing car crashes and 146% increase in truck-related crashes within a half mile of Amazon's last mile facilities. And at the same time, there's also a worker crisis at these facilities, a worker safety crisis specifically. Injury rates for workers at last mile facilities are more than three times the national average. And when it comes to Amazon, we have seen that with their delivery service partners in particular, they had a severe injury rate, which means that it is more than five times the national average. What this legislation would do would be to put in place some basic guard rails to regulate what is an expanding last mile industry that would then keep local residents and workers safe. And to see that the response to all of this from Jeff Bezos, a man worth more than 376 billion dollars, is threatening to raise prices on New Yorkers ordering paper towels or multivitamins for their children during a cost of living crisis, it is disappointing to say the least. Uh and then in your first question, uh I ran on on a commitment to doing everything that I could to make our buses fast and free. Those commitments continue to stand. We're doing everything in our power to make them fast and we will continue to endeavor to also make them free. >> Thank you all. That's all the time we have. >> Thank you everyone. >> Yeah, city by city by",
+   "mayor_word_count": 7243,
+   "has_mayor_quotes": false,
+   "caption_source": "auto",
+   "video_segments": [
+    {
+     "t": 1.0,
+     "text": "Good morning, Brooklyn."
+    },
+    {
+     "t": 2.2,
+     "text": ">> Good morning."
+    },
+    {
+     "t": 3.27,
+     "text": ">> [cheering]"
+    },
+    {
+     "t": 5.1,
+     "text": ">> What a privilege"
+    },
+    {
+     "t": 7.2,
+     "text": "it is to be here in Prospect Lefferts"
+    },
+    {
+     "t": 9.1,
+     "text": "Gardens as we announce how we are making"
+    },
+    {
+     "t": 12.6,
+     "text": "life more affordable for millions of New"
+    },
+    {
+     "t": 14.6,
+     "text": "Yorkers citywide."
+    },
+    {
+     "t": 16.5,
+     "text": "And I want to"
+    },
+    {
+     "t": 19.9,
+     "text": "I want to just take a moment to"
+    },
+    {
+     "t": 20.9,
+     "text": "acknowledge a number of the leaders we"
+    },
+    {
+     "t": 22.7,
+     "text": "have here with us today, both inside and"
+    },
+    {
+     "t": 25.1,
+     "text": "outside of City Hall. We have our Deputy"
+    },
+    {
+     "t": 27.5,
+     "text": "Mayor for Operations, Julia Curson,"
+    },
+    {
+     "t": 29.2,
+     "text": "who's here with us."
+    },
+    {
+     "t": 31.0,
+     "text": "We have our DOT Commissioner, Mike"
+    },
+    {
+     "t": 32.5,
+     "text": "Flynn, who's here with us."
+    },
+    {
+     "t": 34.4,
+     "text": "We have our City Council Speaker, Julie"
+    },
+    {
+     "t": 35.8,
+     "text": "Menin, who's here with us."
+    },
+    {
+     "t": 37.7,
+     "text": "Our Transportation Chair and Majority"
+    },
+    {
+     "t": 39.4,
+     "text": "Leader, Shauna Abreu, who's here with"
+    },
+    {
+     "t": 41.0,
+     "text": "us."
+    },
+    {
+     "t": 42.9,
+     "text": "And I want to take a special moment here"
+    },
+    {
+     "t": 44.6,
+     "text": "to acknowledge our Council Member,"
+    },
+    {
+     "t": 46.3,
+     "text": "Lincoln Restler, who's here with us,"
+    },
+    {
+     "t": 49.1,
+     "text": "who has helped to make this day possible"
+    },
+    {
+     "t": 51.4,
+     "text": "with his advocacy for exactly this goal."
+    },
+    {
+     "t": 54.1,
+     "text": "And we want to thank Council Member"
+    },
+    {
+     "t": 55.8,
+     "text": "Crystal Hudson for welcoming us to her"
+    },
+    {
+     "t": 57.4,
+     "text": "district. [cheering]"
+    },
+    {
+     "t": 59.7,
+     "text": "Our partners at Lyft."
+    },
+    {
+     "t": 61.8,
+     "text": "And we want to thank the advocates with"
+    },
+    {
+     "t": 63.5,
+     "text": "us from Transportation Alternatives,"
+    },
+    {
+     "t": 65.2,
+     "text": "Open Plans, to Streets PAC who have"
+    },
+    {
+     "t": 66.8,
+     "text": "joined us today."
+    },
+    {
+     "t": 70.3,
+     "text": "Now,"
+    },
+    {
+     "t": 71.5,
+     "text": "allow me for a moment to set the scene."
+    },
+    {
+     "t": 74.4,
+     "text": "It's a Friday evening in late June."
+    },
+    {
+     "t": 76.8,
+     "text": "You've just gotten home from work."
+    },
+    {
+     "t": 78.9,
+     "text": "The birds are singing,"
+    },
+    {
+     "t": 80.7,
+     "text": "and a friend just texted you."
+    },
+    {
+     "t": 82.8,
+     "text": "Charlie XCX is playing a surprise sunset"
+    },
+    {
+     "t": 85.7,
+     "text": "show at Nowadays."
+    },
+    {
+     "t": 87.4,
+     "text": "There's just one problem."
+    },
+    {
+     "t": 89.0,
+     "text": "The set starts in 41 minutes."
+    },
+    {
+     "t": 91.4,
+     "text": "It's in Ridgewood."
+    },
+    {
+     "t": 92.8,
+     "text": "And you live here."
+    },
+    {
+     "t": 94.2,
+     "text": "It's Prospect Lefferts Gardens."
+    },
+    {
+     "t": 96.6,
+     "text": "If you hopped on the train, it would"
+    },
+    {
+     "t": 97.6,
+     "text": "take you into Manhattan. You would not"
+    },
+    {
+     "t": 99.3,
+     "text": "arrive at the show for more than an"
+    },
+    {
+     "t": 100.5,
+     "text": "hour."
+    },
+    {
+     "t": 101.4,
+     "text": "If you took the bus, you could bypass"
+    },
+    {
+     "t": 103.1,
+     "text": "the extra borough, but you'd have to"
+    },
+    {
+     "t": 104.9,
+     "text": "take the B43 to the B26, and you would"
+    },
+    {
+     "t": 107.4,
+     "text": "not get there any faster."
+    },
+    {
+     "t": 109.3,
+     "text": "And if you decided to spend that money"
+    },
+    {
+     "t": 110.6,
+     "text": "on a car,"
+    },
+    {
+     "t": 111.8,
+     "text": "you might get there in under an hour,"
+    },
+    {
+     "t": 113.8,
+     "text": "but you would have to deal with the rush"
+    },
+    {
+     "t": 114.7,
+     "text": "hour traffic, not to mention how much it"
+    },
+    {
+     "t": 116.6,
+     "text": "would cost you."
+    },
+    {
+     "t": 118.0,
+     "text": "And then you remember"
+    },
+    {
+     "t": 119.5,
+     "text": "the one mode transit that allows you to"
+    },
+    {
+     "t": 121.79,
+     "text": "feel the wind coursing through your"
+    },
+    {
+     "t": 123.69,
+     "text": "hair, [laughter] where you literally"
+    },
+    {
+     "t": 125.49,
+     "text": "cannot check your phone,"
+    },
+    {
+     "t": 127.19,
+     "text": "where you can float down city streets"
+    },
+    {
+     "t": 128.79,
+     "text": "without sweating through every piece of"
+    },
+    {
+     "t": 130.59,
+     "text": "clothing that you have on."
+    },
+    {
+     "t": 132.39,
+     "text": "beautiful off-gray electric city bike."
+    },
+    {
+     "t": 136.69,
+     "text": "Now every day New Yorkers across our"
+    },
+    {
+     "t": 138.69,
+     "text": "city rely on city bikes to get where"
+    },
+    {
+     "t": 140.29,
+     "text": "they need to go."
+    },
+    {
+     "t": 141.59,
+     "text": "As they have expanded over the past"
+    },
+    {
+     "t": 142.89,
+     "text": "decade and more, they have filled a"
+    },
+    {
+     "t": 144.69,
+     "text": "critical transit gap, providing a fast"
+    },
+    {
+     "t": 147.49,
+     "text": "and convenient way to get from one place"
+    },
+    {
+     "t": 150.09,
+     "text": "to another,"
+    },
+    {
+     "t": 151.19,
+     "text": "especially for those who call Brooklyn,"
+    },
+    {
+     "t": 152.99,
+     "text": "Queens, and the Bronx home."
+    },
+    {
+     "t": 154.79,
+     "text": "As such, city bikes have become"
+    },
+    {
+     "t": 156.69,
+     "text": "essentially a public good."
+    },
+    {
+     "t": 158.69,
+     "text": "Though they may be owned and operated in"
+    },
+    {
+     "t": 160.19,
+     "text": "the private sector, they have become an"
+    },
+    {
+     "t": 161.89,
+     "text": "integral part of our public transit"
+    },
+    {
+     "t": 164.29,
+     "text": "system,"
+    },
+    {
+     "t": 165.29,
+     "text": "helping hundreds of thousands of New"
+    },
+    {
+     "t": 167.19,
+     "text": "Yorkers get to work, make it home in"
+    },
+    {
+     "t": 169.19,
+     "text": "time for dinner, see their family and"
+    },
+    {
+     "t": 170.89,
+     "text": "friends, or even get to nowadays with"
+    },
+    {
+     "t": 172.99,
+     "text": "time to spare."
+    },
+    {
+     "t": 174.29,
+     "text": "But despite the pivotal role they now"
+    },
+    {
+     "t": 175.69,
+     "text": "play in our city,"
+    },
+    {
+     "t": 177.19,
+     "text": "we know that city bikes have become"
+    },
+    {
+     "t": 178.49,
+     "text": "anything but affordable."
+    },
+    {
+     "t": 180.19,
+     "text": "For years, our city has encouraged"
+    },
+    {
+     "t": 182.39,
+     "text": "millions of New Yorkers to bike more,"
+    },
+    {
+     "t": 184.59,
+     "text": "expanding our network of protected bike"
+    },
+    {
+     "t": 186.49,
+     "text": "lanes, legalize e-bikes, and helping"
+    },
+    {
+     "t": 188.79,
+     "text": "Lyft to install docks in more"
+    },
+    {
+     "t": 190.09,
+     "text": "neighborhoods."
+    },
+    {
+     "t": 191.39,
+     "text": "And yet, over those same years, the cost"
+    },
+    {
+     "t": 193.69,
+     "text": "of riding a city bike has grown"
+    },
+    {
+     "t": 195.59,
+     "text": "prohibitively expensive."
+    },
+    {
+     "t": 197.69,
+     "text": "The issue is twofold. First, the cost of"
+    },
+    {
+     "t": 200.39,
+     "text": "a membership."
+    },
+    {
+     "t": 201.69,
+     "text": "Since city bikes launched in 2013, the"
+    },
+    {
+     "t": 203.49,
+     "text": "membership cost has increased by more"
+    },
+    {
+     "t": 205.09,
+     "text": "than 150%."
+    },
+    {
+     "t": 207.19,
+     "text": "Second, the cost of riding."
+    },
+    {
+     "t": 209.69,
+     "text": "Even after you've paid hundreds of"
+    },
+    {
+     "t": 211.39,
+     "text": "dollars for a membership, the price of"
+    },
+    {
+     "t": 213.19,
+     "text": "an e-bike itself continues to soar."
+    },
+    {
+     "t": 215.49,
+     "text": "Over just the past 6 years alone, the"
+    },
+    {
+     "t": 217.69,
+     "text": "per minute e-bike rate for members has"
+    },
+    {
+     "t": 219.59,
+     "text": "increased by 170%"
+    },
+    {
+     "t": 222.09,
+     "text": "from 10 cents per minute to 27 cents per"
+    },
+    {
+     "t": 224.59,
+     "text": "minute."
+    },
+    {
+     "t": 225.49,
+     "text": "This is not tenable."
+    },
+    {
+     "t": 226.79,
+     "text": "Every New Yorker, regardless of income,"
+    },
+    {
+     "t": 228.89,
+     "text": "deserves to be able to access the"
+    },
+    {
+     "t": 230.39,
+     "text": "transit that works for them."
+    },
+    {
+     "t": 232.09,
+     "text": "So it's time for the cost of electric"
+    },
+    {
+     "t": 234.09,
+     "text": "city bikes to come down"
+    },
+    {
+     "t": 235.89,
+     "text": "so that they can truly be a public good"
+    },
+    {
+     "t": 237.69,
+     "text": "that exists as a key part of our public"
+    },
+    {
+     "t": 240.09,
+     "text": "transit system."
+    },
+    {
+     "t": 241.59,
+     "text": "Today, as New York City's first mayor to"
+    },
+    {
+     "t": 244.19,
+     "text": "ever log more than 3,000 miles on a city"
+    },
+    {
+     "t": 246.09,
+     "text": "bike,"
+    },
+    {
+     "t": 247.49,
+     "text": "as well as the first mayor to ever have"
+    },
+    {
+     "t": 248.89,
+     "text": "to go on a multi-month biking hiatus"
+    },
+    {
+     "t": 250.89,
+     "text": "because he tore his Achilles in a fit of"
+    },
+    {
+     "t": 252.39,
+     "text": "35-year-old non-stretching hubris,"
+    },
+    {
+     "t": 255.19,
+     "text": "I am proud to announce that Citi Bike"
+    },
+    {
+     "t": 257.29,
+     "text": "has come to an agreement"
+    },
+    {
+     "t": 259.49,
+     "text": "with us here at City Hall through our"
+    },
+    {
+     "t": 260.99,
+     "text": "partners at Lyft"
+    },
+    {
+     "t": 262.49,
+     "text": "to ensure that New Yorkers are able to"
+    },
+    {
+     "t": 264.59,
+     "text": "afford the transit they deserve."
+    },
+    {
+     "t": 266.79,
+     "text": "I want to take a moment"
+    },
+    {
+     "t": 268.39,
+     "text": "to thank the Department of"
+    },
+    {
+     "t": 269.19,
+     "text": "Transportation and the team at Lyft for"
+    },
+    {
+     "t": 272.09,
+     "text": "their work to move this forward and for"
+    },
+    {
+     "t": 273.99,
+     "text": "their commitment to lowering prices for"
+    },
+    {
+     "t": 275.59,
+     "text": "riders across our city."
+    },
+    {
+     "t": 277.49,
+     "text": "And I also just want to take a moment"
+    },
+    {
+     "t": 278.89,
+     "text": "again to acknowledge and thank Council"
+    },
+    {
+     "t": 280.99,
+     "text": "Member Lincoln Restler"
+    },
+    {
+     "t": 282.49,
+     "text": "who has been spearheading the call for"
+    },
+    {
+     "t": 284.59,
+     "text": "more affordable e-bike rides across our"
+    },
+    {
+     "t": 286.49,
+     "text": "city and without whom we would not have"
+    },
+    {
+     "t": 289.09,
+     "text": "been able to get to this point. So thank"
+    },
+    {
+     "t": 290.59,
+     "text": "you, Lincoln."
+    },
+    {
+     "t": 291.79,
+     "text": "Thank you, Mike."
+    },
+    {
+     "t": 293.19,
+     "text": "Thank you to every staff member"
+    },
+    {
+     "t": 296.29,
+     "text": "for all of the work and the negotiations"
+    },
+    {
+     "t": 298.09,
+     "text": "that went into this."
+    },
+    {
+     "t": 299.99,
+     "text": "In response to the high costs of both"
+    },
+    {
+     "t": 301.99,
+     "text": "membership and rides, we are"
+    },
+    {
+     "t": 303.79,
+     "text": "implementing a two-pronged solution."
+    },
+    {
+     "t": 306.49,
+     "text": "First, beginning immediately, all Citi"
+    },
+    {
+     "t": 309.29,
+     "text": "Bike membership rates and fees will be"
+    },
+    {
+     "t": 310.89,
+     "text": "frozen through May of 2029 when the"
+    },
+    {
+     "t": 313.99,
+     "text": "city's contract with Lyft expires."
+    },
+    {
+     "t": 319.49,
+     "text": "Second, beginning on January 19th,"
+    },
+    {
+     "t": 322.69,
+     "text": "all e-bike rides for members under 45"
+    },
+    {
+     "t": 325.09,
+     "text": "minutes will be capped at just $3.65."
+    },
+    {
+     "t": 330.12,
+     "text": "[cheering]"
+    },
+    {
+     "t": 331.89,
+     "text": "That is $3.65"
+    },
+    {
+     "t": 334.19,
+     "text": "365 days a year."
+    },
+    {
+     "t": 337.09,
+     "text": "As Charlie would say in her hit song"
+    },
+    {
+     "t": 338.79,
+     "text": "365,"
+    },
+    {
+     "t": 340.29,
+     "text": "when I'm on the city bike, yeah, I'm"
+    },
+    {
+     "t": 342.69,
+     "text": "bumping that."
+    },
+    {
+     "t": 343.88,
+     "text": "[laughter]"
+    },
+    {
+     "t": 344.49,
+     "text": "This cap will significantly reduce the"
+    },
+    {
+     "t": 346.39,
+     "text": "cost of roughly 5 million rides taken by"
+    },
+    {
+     "t": 349.19,
+     "text": "New Yorkers annually."
+    },
+    {
+     "t": 351.29,
+     "text": "And if this cap had been in place just"
+    },
+    {
+     "t": 353.29,
+     "text": "last year alone, it would have saved New"
+    },
+    {
+     "t": 355.39,
+     "text": "Yorkers $10,932,958."
+    },
+    {
+     "t": 361.69,
+     "text": "That is almost $11 million"
+    },
+    {
+     "t": 363.99,
+     "text": "going back into NEW YORKERS POCKETS."
+    },
+    {
+     "t": 366.8,
+     "text": "[applause and cheering]"
+    },
+    {
+     "t": 370.69,
+     "text": "WE KNOW HOWEVER THAT FOR MANY PEOPLE IN"
+    },
+    {
+     "t": 372.3,
+     "text": "OUR CITY, the baseline cost of a"
+    },
+    {
+     "t": 374.0,
+     "text": "membership stands in the way of"
+    },
+    {
+     "t": 375.3,
+     "text": "accessing these affordable rides. It is"
+    },
+    {
+     "t": 377.3,
+     "text": "simply too steep a financial burden for"
+    },
+    {
+     "t": 379.3,
+     "text": "many a New Yorker."
+    },
+    {
+     "t": 380.5,
+     "text": "So for the more than two million NYC"
+    },
+    {
+     "t": 382.1,
+     "text": "residents and SNAP recipients across our"
+    },
+    {
+     "t": 384.5,
+     "text": "city, I want to remind you that you are"
+    },
+    {
+     "t": 386.5,
+     "text": "eligible for capped rides through the"
+    },
+    {
+     "t": 388.39,
+     "text": "reduced fare bike share program for just"
+    },
+    {
+     "t": 390.69,
+     "text": "$5 per month."
+    },
+    {
+     "t": 397.6,
+     "text": "Today's announcement is a critical step"
+    },
+    {
+     "t": 399.5,
+     "text": "towards making biking affordable for"
+    },
+    {
+     "t": 401.3,
+     "text": "every New Yorker."
+    },
+    {
+     "t": 402.39,
+     "text": "And it's a part of our City Hall's"
+    },
+    {
+     "t": 403.5,
+     "text": "larger goal to make life more affordable"
+    },
+    {
+     "t": 405.69,
+     "text": "in every way we can for those who call"
+    },
+    {
+     "t": 407.3,
+     "text": "our city home."
+    },
+    {
+     "t": 408.6,
+     "text": "And yet for so many New Yorkers, I know"
+    },
+    {
+     "t": 410.5,
+     "text": "that it seems that everything is just"
+    },
+    {
+     "t": 412.5,
+     "text": "getting more expensive all the time."
+    },
+    {
+     "t": 415.1,
+     "text": "It's like we're living Fat Joe's quote,"
+    },
+    {
+     "t": 417.39,
+     "text": "yesterday's price is not today's price."
+    },
+    {
+     "t": 420.3,
+     "text": "We almost take it for granted"
+    },
+    {
+     "t": 422.0,
+     "text": "that the price of services we rely on"
+    },
+    {
+     "t": 424.0,
+     "text": "like city bikes will only continue to"
+    },
+    {
+     "t": 426.0,
+     "text": "rise."
+    },
+    {
+     "t": 427.1,
+     "text": "But affordability"
+    },
+    {
+     "t": 428.5,
+     "text": "from child care to groceries is not an"
+    },
+    {
+     "t": 430.89,
+     "text": "unattainable goal."
+    },
+    {
+     "t": 432.3,
+     "text": "It is something we have shown is"
+    },
+    {
+     "t": 433.6,
+     "text": "possible before. And it is something"
+    },
+    {
+     "t": 435.69,
+     "text": "that we will continue to not only strive"
+    },
+    {
+     "t": 437.3,
+     "text": "for but deliver in the months and years"
+    },
+    {
+     "t": 440.19,
+     "text": "to come."
+    },
+    {
+     "t": 441.3,
+     "text": "So to all the city bikers out there,"
+    },
+    {
+     "t": 443.39,
+     "text": "wear a helmet,"
+    },
+    {
+     "t": 444.5,
+     "text": "have fun, get to that concert in time,"
+    },
+    {
+     "t": 447.19,
+     "text": "and I will see you out there in a few"
+    },
+    {
+     "t": 448.69,
+     "text": "months, inshallah."
+    },
+    {
+     "t": 450.69,
+     "text": "Thank you all."
+    },
+    {
+     "t": 451.95,
+     "text": "[applause]"
+    },
+    {
+     "t": 453.8,
+     "text": "And with that,"
+    },
+    {
+     "t": 455.5,
+     "text": "I am proud to hand it over"
+    },
+    {
+     "t": 458.19,
+     "text": "to our Department of Transportation"
+    },
+    {
+     "t": 459.69,
+     "text": "Commissioner, the one and only, Mike"
+    },
+    {
+     "t": 461.6,
+     "text": "Flynn."
+    },
+    {
+     "t": 463.09,
+     "text": ">> [applause]"
+    },
+    {
+     "t": 466.3,
+     "text": ">> Thank you, Mayor."
+    },
+    {
+     "t": 468.89,
+     "text": "Great to see everybody."
+    },
+    {
+     "t": 471.19,
+     "text": "I know we're going to see you back on a"
+    },
+    {
+     "t": 472.5,
+     "text": "city bike one day soon and and when we"
+    },
+    {
+     "t": 474.5,
+     "text": "do, uh we're going to have a bunch of"
+    },
+    {
+     "t": 476.1,
+     "text": "great new bike lanes ready for you."
+    },
+    {
+     "t": 478.8,
+     "text": "So as the mayor so effectively"
+    },
+    {
+     "t": 480.3,
+     "text": "illustrated, there's no better or more"
+    },
+    {
+     "t": 482.1,
+     "text": "affordable way to get around the city"
+    },
+    {
+     "t": 483.89,
+     "text": "than on a bike."
+    },
+    {
+     "t": 485.3,
+     "text": "No traffic, no waiting for the train, no"
+    },
+    {
+     "t": 488.0,
+     "text": "set routes. Just get on and ride"
+    },
+    {
+     "t": 490.3,
+     "text": "anywhere you'd like, taking in this"
+    },
+    {
+     "t": 492.1,
+     "text": "beautiful city as you move from"
+    },
+    {
+     "t": 493.7,
+     "text": "neighborhood to neighborhood."
+    },
+    {
+     "t": 495.6,
+     "text": "The cost of getting around New York City"
+    },
+    {
+     "t": 497.4,
+     "text": "shouldn't be a burden on New Yorkers'"
+    },
+    {
+     "t": 499.1,
+     "text": "wallets. That's why delivering safe and"
+    },
+    {
+     "t": 501.2,
+     "text": "affordable transportation options is a"
+    },
+    {
+     "t": 503.5,
+     "text": "key part of the Maimonides"
+    },
+    {
+     "t": 504.8,
+     "text": "administration's affordability agenda."
+    },
+    {
+     "t": 508.4,
+     "text": "Owning a car in New York City will cost"
+    },
+    {
+     "t": 510.2,
+     "text": "you more than $18,000"
+    },
+    {
+     "t": 512.6,
+     "text": "each year on average. We want to offer"
+    },
+    {
+     "t": 515.4,
+     "text": "you a wealth of other options for a"
+    },
+    {
+     "t": 517.0,
+     "text": "fraction of that cost. Fast and reliable"
+    },
+    {
+     "t": 519.6,
+     "text": "buses, streets that feel safe enough for"
+    },
+    {
+     "t": 522.1,
+     "text": "cyclists of all abilities, and one of"
+    },
+    {
+     "t": 524.3,
+     "text": "the world's best, most expansive bike"
+    },
+    {
+     "t": 526.3,
+     "text": "share systems that New Yorkers can"
+    },
+    {
+     "t": 528.2,
+     "text": "afford."
+    },
+    {
+     "t": 529.4,
+     "text": "We're working hard on this goal."
+    },
+    {
+     "t": 531.5,
+     "text": "Just over the last few weeks, we've"
+    },
+    {
+     "t": 533.1,
+     "text": "completed the transformative redesign of"
+    },
+    {
+     "t": 535.4,
+     "text": "Flatbush Avenue north of Prospect Park,"
+    },
+    {
+     "t": 537.6,
+     "text": "not far from here,"
+    },
+    {
+     "t": 538.8,
+     "text": ">> Hey!"
+    },
+    {
+     "t": 539.07,
+     "text": ">> [applause]"
+    },
+    {
+     "t": 539.5,
+     "text": ">> where buses are flying."
+    },
+    {
+     "t": 542.3,
+     "text": "And we fixed the water main redesign of"
+    },
+    {
+     "t": 544.1,
+     "text": "McGuinness Boulevard and Greenpoint."
+    },
+    {
+     "t": 545.7,
+     "text": ">> Hey!"
+    },
+    {
+     "t": 546.28,
+     "text": ">> [cheering]"
+    },
+    {
+     "t": 548.6,
+     "text": ">> Right around the corner from here, we're"
+    },
+    {
+     "t": 550.2,
+     "text": "working with the Prospect Park Alliance"
+    },
+    {
+     "t": 551.9,
+     "text": "to build fully separated bike lanes for"
+    },
+    {
+     "t": 553.8,
+     "text": "New Yorkers to enjoy for generations to"
+    },
+    {
+     "t": 556.2,
+     "text": "come."
+    },
+    {
+     "t": 557.3,
+     "text": "This is the type of infrastructure"
+    },
+    {
+     "t": 558.7,
+     "text": "investments that make it possible for"
+    },
+    {
+     "t": 560.5,
+     "text": "more New Yorkers to try riding a bike"
+    },
+    {
+     "t": 563.2,
+     "text": "and can be used by all ages and skill"
+    },
+    {
+     "t": 565.1,
+     "text": "levels."
+    },
+    {
+     "t": 566.3,
+     "text": "Today's announcement will leave more"
+    },
+    {
+     "t": 567.6,
+     "text": "money in New Yorkers' pockets that they"
+    },
+    {
+     "t": 569.2,
+     "text": "can spend a million better ways, like"
+    },
+    {
+     "t": 571.3,
+     "text": "towards Thanksgiving dinner, gifts for"
+    },
+    {
+     "t": 573.4,
+     "text": "their families this holiday season, or"
+    },
+    {
+     "t": 575.9,
+     "text": "even concert tickets in Ridgewood."
+    },
+    {
+     "t": 578.5,
+     "text": "I'd like to thank the bike share team at"
+    },
+    {
+     "t": 580.1,
+     "text": "Lyft for coming to the table, as well as"
+    },
+    {
+     "t": 582.0,
+     "text": "the dedicated staff at New York City DOT"
+    },
+    {
+     "t": 584.7,
+     "text": "who've been working tirelessly"
+    },
+    {
+     "t": 587.6,
+     "text": "this year on delivering a more"
+    },
+    {
+     "t": 589.6,
+     "text": "affordable city bike."
+    },
+    {
+     "t": 591.4,
+     "text": "And we look forward to much more to"
+    },
+    {
+     "t": 592.7,
+     "text": "come."
+    },
+    {
+     "t": 593.8,
+     "text": "So now I'd like to call up Council"
+    },
+    {
+     "t": 595.3,
+     "text": "Member Lincoln Restler, who's been a"
+    },
+    {
+     "t": 596.9,
+     "text": "champion of making city bike more"
+    },
+    {
+     "t": 598.6,
+     "text": "affordable."
+    },
+    {
+     "t": 599.5,
+     "text": ">> Woo hoo!"
+    },
+    {
+     "t": 602.4,
+     "text": "Thank you so much, commissioner."
+    },
+    {
+     "t": 603.92,
+     "text": ">> [laughter]"
+    },
+    {
+     "t": 607.2,
+     "text": ">> On February 24th, 2024,"
+    },
+    {
+     "t": 610.4,
+     "text": "I sent a text message to my absolutely"
+    },
+    {
+     "t": 612.8,
+     "text": "brilliant chief of staff Molly Haley."
+    },
+    {
+     "t": 615.2,
+     "text": "I've got an idea for a bill."
+    },
+    {
+     "t": 617.3,
+     "text": "Let's cap the price of a city bike ride"
+    },
+    {
+     "t": 619.3,
+     "text": "at the same price as a bus or subway"
+    },
+    {
+     "t": 621.1,
+     "text": "fare."
+    },
+    {
+     "t": 622.3,
+     "text": "A few months later we introduced the"
+    },
+    {
+     "t": 623.3,
+     "text": "bill."
+    },
+    {
+     "t": 624.3,
+     "text": "For Halloween that year I dressed up as"
+    },
+    {
+     "t": 625.6,
+     "text": "a city bike"
+    },
+    {
+     "t": 627.4,
+     "text": "and we kept on organizing. [laughter] It"
+    },
+    {
+     "t": 629.2,
+     "text": "was a great costume for the record."
+    },
+    {
+     "t": 631.6,
+     "text": "And we kept on organizing and pushing."
+    },
+    {
+     "t": 633.8,
+     "text": "And as that was going on"
+    },
+    {
+     "t": 635.9,
+     "text": "Lyft kept raising city bike costs."
+    },
+    {
+     "t": 638.9,
+     "text": "Over the last six years we've seen city"
+    },
+    {
+     "t": 640.6,
+     "text": "bike prices rise eight separate times."
+    },
+    {
+     "t": 644.8,
+     "text": "Now a 45-minute ride on a city on an"
+    },
+    {
+     "t": 647.0,
+     "text": "e-bike is $12.15."
+    },
+    {
+     "t": 650.7,
+     "text": "But look around the world and we have"
+    },
+    {
+     "t": 652.4,
+     "text": "the most expensive bike share program"
+    },
+    {
+     "t": 655.7,
+     "text": "bar none."
+    },
+    {
+     "t": 657.3,
+     "text": "In Boston it's 4.50 for an e-bike ride"
+    },
+    {
+     "t": 659.7,
+     "text": "for 45 minutes. In Tokyo it's 2.10. In"
+    },
+    {
+     "t": 662.7,
+     "text": "London or LA it's a buck 75."
+    },
+    {
+     "t": 666.8,
+     "text": "But prices have been going up and up and"
+    },
+    {
+     "t": 669.2,
+     "text": "up"
+    },
+    {
+     "t": 670.0,
+     "text": "and people just thought there was"
+    },
+    {
+     "t": 671.2,
+     "text": "nothing we could do about it"
+    },
+    {
+     "t": 673.1,
+     "text": "until we got a mayor who rides a city"
+    },
+    {
+     "t": 674.4,
+     "text": "bike."
+    },
+    {
+     "t": 676.9,
+     "text": "You know the mayor claimed 3,000 miles."
+    },
+    {
+     "t": 678.8,
+     "text": "I've done 74,000 miles. 7,400 miles,"
+    },
+    {
+     "t": 682.0,
+     "text": "excuse me. That's like biking to LA and"
+    },
+    {
+     "t": 684.6,
+     "text": "back. 5,600 trips."
+    },
+    {
+     "t": 686.8,
+     "text": "As the mayor said and as as Commissioner"
+    },
+    {
+     "t": 688.5,
+     "text": "Flynn said it is the best way to get"
+    },
+    {
+     "t": 690.6,
+     "text": "around New York City."
+    },
+    {
+     "t": 692.5,
+     "text": "But"
+    },
+    {
+     "t": 693.3,
+     "text": "and while it's accessible while it's"
+    },
+    {
+     "t": 695.4,
+     "text": "efficient"
+    },
+    {
+     "t": 696.7,
+     "text": "while it's green it had become"
+    },
+    {
+     "t": 698.8,
+     "text": "unaffordable."
+    },
+    {
+     "t": 700.8,
+     "text": "And I am incredibly impressed by the"
+    },
+    {
+     "t": 703.7,
+     "text": "deal that Mayor Mcdani, Deputy Mayor"
+    },
+    {
+     "t": 706.3,
+     "text": "Curson, Commissioner Flynn and the team"
+    },
+    {
+     "t": 708.0,
+     "text": "negotiated with Lyft."
+    },
+    {
+     "t": 710.6,
+     "text": "This is a deal"
+    },
+    {
+     "t": 712.0,
+     "text": "that makes that is a great deal for the"
+    },
+    {
+     "t": 714.3,
+     "text": "taxpayers of New York City."
+    },
+    {
+     "t": 716.2,
+     "text": "We are getting to ride city bikes again"
+    },
+    {
+     "t": 718.0,
+     "text": "affordably"
+    },
+    {
+     "t": 720.3,
+     "text": "and in exchange allowing Lyft to put up"
+    },
+    {
+     "t": 723.1,
+     "text": "more ads on their docks and no longer"
+    },
+    {
+     "t": 726.0,
+     "text": "sharing revenue."
+    },
+    {
+     "t": 727.5,
+     "text": "That's a great deal for taxpayers. We"
+    },
+    {
+     "t": 729.5,
+     "text": "are not providing a direct operating"
+    },
+    {
+     "t": 731.0,
+     "text": "subsidy so they'll continue to run their"
+    },
+    {
+     "t": 733.0,
+     "text": "own business. And Lyft deserves credit"
+    },
+    {
+     "t": 735.1,
+     "text": "for stepping up and doing the right"
+    },
+    {
+     "t": 736.3,
+     "text": "thing. This is a model public-private"
+    },
+    {
+     "t": 738.3,
+     "text": "partnership that is going to lead to"
+    },
+    {
+     "t": 740.1,
+     "text": "City Bike getting better and better and"
+    },
+    {
+     "t": 742.0,
+     "text": "better in the years to come."
+    },
+    {
+     "t": 744.0,
+     "text": "And the best way to improve safety for"
+    },
+    {
+     "t": 746.2,
+     "text": "cyclists on the streets of New York City"
+    },
+    {
+     "t": 748.1,
+     "text": "is when more of us ride. The more"
+    },
+    {
+     "t": 749.8,
+     "text": "cyclists there are, the safer our"
+    },
+    {
+     "t": 751.4,
+     "text": "streets get. And by freezing City Bike"
+    },
+    {
+     "t": 753.8,
+     "text": "memberships, by making longer bike rides"
+    },
+    {
+     "t": 756.1,
+     "text": "affordable, we are actually going to"
+    },
+    {
+     "t": 758.5,
+     "text": "dramatically increase the number of"
+    },
+    {
+     "t": 760.0,
+     "text": "people that are cycling all across our"
+    },
+    {
+     "t": 761.5,
+     "text": "city."
+    },
+    {
+     "t": 763.6,
+     "text": "In the last year, we saw the sharpest"
+    },
+    {
+     "t": 765.9,
+     "text": "increase in City Bike ridership in the"
+    },
+    {
+     "t": 768.1,
+     "text": "areas that are transit deserts. There"
+    },
+    {
+     "t": 769.8,
+     "text": "was a 58% increase from 24 to 25 in City"
+    },
+    {
+     "t": 773.5,
+     "text": "Bike utilization in the areas that don't"
+    },
+    {
+     "t": 775.3,
+     "text": "have good subway access."
+    },
+    {
+     "t": 777.1,
+     "text": "City Bike has changed the way we think"
+    },
+    {
+     "t": 778.5,
+     "text": "about that first and last mile of"
+    },
+    {
+     "t": 779.8,
+     "text": "transportation. Unless you're in a boot"
+    },
+    {
+     "t": 782.7,
+     "text": "or have other mobility challenges, it"
+    },
+    {
+     "t": 785.0,
+     "text": "changes the way that we get to the"
+    },
+    {
+     "t": 786.4,
+     "text": "subway. It dramatically speeds up our"
+    },
+    {
+     "t": 788.2,
+     "text": "commutes."
+    },
+    {
+     "t": 789.3,
+     "text": "I really want to thank my colleagues in"
+    },
+    {
+     "t": 790.7,
+     "text": "the council for their support for our"
+    },
+    {
+     "t": 793.3,
+     "text": "legislation and for this effort. Council"
+    },
+    {
+     "t": 795.5,
+     "text": "member and our chair of our"
+    },
+    {
+     "t": 796.5,
+     "text": "transportation committee, Shaun Abreu,"
+    },
+    {
+     "t": 798.3,
+     "text": "was deeply committed to this and I"
+    },
+    {
+     "t": 800.6,
+     "text": "really appreciate it."
+    },
+    {
+     "t": 803.1,
+     "text": "Council member Crystal Hudson and I will"
+    },
+    {
+     "t": 804.6,
+     "text": "often e-bike around from event to event"
+    },
+    {
+     "t": 806.8,
+     "text": "together and is a great champion for"
+    },
+    {
+     "t": 808.7,
+     "text": "City Bike and I really want to thank"
+    },
+    {
+     "t": 810.3,
+     "text": "Speaker Menin who cared deeply about"
+    },
+    {
+     "t": 811.9,
+     "text": "this issue and wanted to see City Bike"
+    },
+    {
+     "t": 813.4,
+     "text": "become more affordable. But most of all,"
+    },
+    {
+     "t": 815.8,
+     "text": "I want to thank the mayor for giving a"
+    },
+    {
+     "t": 817.9,
+     "text": "damn about the affordability of our"
+    },
+    {
+     "t": 819.3,
+     "text": "transit system, for actually doing the"
+    },
+    {
+     "t": 821.8,
+     "text": "work to do something that folks didn't"
+    },
+    {
+     "t": 823.6,
+     "text": "think was possible, making City Bike"
+    },
+    {
+     "t": 825.7,
+     "text": "more affordable for all of us. So thank"
+    },
+    {
+     "t": 827.4,
+     "text": "you so much."
+    },
+    {
+     "t": 831.1,
+     "text": ">> Mr. 7,000"
+    },
+    {
+     "t": 833.3,
+     "text": "I have to tell you, I don't want you to"
+    },
+    {
+     "t": 834.9,
+     "text": "think that was too good."
+    },
+    {
+     "t": 836.2,
+     "text": ">> That that is impressive."
+    },
+    {
+     "t": 838.7,
+     "text": "Next up, really happy to invite up"
+    },
+    {
+     "t": 841.6,
+     "text": "council speaker Julie Menin."
+    },
+    {
+     "t": 844.3,
+     "text": ">> [applause]"
+    },
+    {
+     "t": 845.8,
+     "text": ">> Thank you so much, commissioner. What a"
+    },
+    {
+     "t": 847.7,
+     "text": "great day for Brooklyn, but what a great"
+    },
+    {
+     "t": 849.8,
+     "text": "day for our city. It's a beautiful day"
+    },
+    {
+     "t": 851.9,
+     "text": "outside, but it's a beautiful day in New"
+    },
+    {
+     "t": 853.7,
+     "text": "York with this phenomenal announcement."
+    },
+    {
+     "t": 855.9,
+     "text": "Thank you so much, Mr. Mayor, for your"
+    },
+    {
+     "t": 857.7,
+     "text": "work on this. Thank you, commissioner."
+    },
+    {
+     "t": 860.1,
+     "text": "And and particularly thank you to my"
+    },
+    {
+     "t": 862.2,
+     "text": "colleagues, council member Wrestler, our"
+    },
+    {
+     "t": 865.3,
+     "text": "majority leader Sean Abreu, council"
+    },
+    {
+     "t": 867.8,
+     "text": "member Hudson, whose district we're in."
+    },
+    {
+     "t": 869.6,
+     "text": "It's really a fantastic day. And I"
+    },
+    {
+     "t": 871.6,
+     "text": "really want to thank Lyft for their"
+    },
+    {
+     "t": 873.4,
+     "text": "leadership because this is a model of"
+    },
+    {
+     "t": 876.0,
+     "text": "public-private partnership. So thank you"
+    },
+    {
+     "t": 878.0,
+     "text": "so much for Lyft for working with the"
+    },
+    {
+     "t": 880.7,
+     "text": "city to make this a reality. Before our"
+    },
+    {
+     "t": 883.6,
+     "text": "residents relied on subways and buses"
+    },
+    {
+     "t": 886.7,
+     "text": "and cars to get around, New York was a"
+    },
+    {
+     "t": 888.9,
+     "text": "city of bikers. And it's so appropriate"
+    },
+    {
+     "t": 891.7,
+     "text": "that we're here in this location because"
+    },
+    {
+     "t": 893.8,
+     "text": "our first bicycle club began in 1880."
+    },
+    {
+     "t": 896.8,
+     "text": "But 14 years later, we opened up the"
+    },
+    {
+     "t": 899.0,
+     "text": "country's first bike path right here in"
+    },
+    {
+     "t": 901.4,
+     "text": "Brooklyn along Ocean Parkway."
+    },
+    {
+     "t": 905.9,
+     "text": "And clearly more than a century later,"
+    },
+    {
+     "t": 908.6,
+     "text": "we are a city of bikers. It's a it's a"
+    },
+    {
+     "t": 911.2,
+     "text": "tradition that we have made sure is a"
+    },
+    {
+     "t": 913.7,
+     "text": "real reality. Biking enables tourists to"
+    },
+    {
+     "t": 916.6,
+     "text": "learn about neighborhoods all across the"
+    },
+    {
+     "t": 918.7,
+     "text": "city. It allows residents across"
+    },
+    {
+     "t": 921.0,
+     "text": "Brooklyn and Queens to go on routes"
+    },
+    {
+     "t": 922.7,
+     "text": "subways don't always stop at. So"
+    },
+    {
+     "t": 924.9,
+     "text": "allowing us to traverse between"
+    },
+    {
+     "t": 926.5,
+     "text": "Ridgewood, as the mayor said, and"
+    },
+    {
+     "t": 928.5,
+     "text": "Jackson Heights, between Flatbush and"
+    },
+    {
+     "t": 930.5,
+     "text": "Sunset Park. And look, this access and"
+    },
+    {
+     "t": 933.5,
+     "text": "speed are one of the many benefits. But"
+    },
+    {
+     "t": 935.5,
+     "text": "by lowering this price of city bike, it"
+    },
+    {
+     "t": 937.5,
+     "text": "is going to return potentially thousands"
+    },
+    {
+     "t": 939.5,
+     "text": "of dollars to New Yorkers. And that is"
+    },
+    {
+     "t": 942.1,
+     "text": "money they can spend on rent. They can"
+    },
+    {
+     "t": 944.1,
+     "text": "spend on childcare. They can spend on"
+    },
+    {
+     "t": 946.3,
+     "text": "groceries and other vital things that"
+    },
+    {
+     "t": 948.5,
+     "text": "they need. But there are other benefits"
+    },
+    {
+     "t": 950.6,
+     "text": "as well. Their health benefits because"
+    },
+    {
+     "t": 952.5,
+     "text": "studies show that when you exercise and"
+    },
+    {
+     "t": 955.3,
+     "text": "biking is a great form of exercise, you"
+    },
+    {
+     "t": 957.4,
+     "text": "can lower your risks of cancer, of"
+    },
+    {
+     "t": 959.7,
+     "text": "diabetes, of heart disease. And that"
+    },
+    {
+     "t": 962.1,
+     "text": "also saves the city money in terms of"
+    },
+    {
+     "t": 964.2,
+     "text": "our healthcare costs. It's also great"
+    },
+    {
+     "t": 966.3,
+     "text": "for the environment because it will save"
+    },
+    {
+     "t": 968.5,
+     "text": "millions of pounds of carbon emissions"
+    },
+    {
+     "t": 970.8,
+     "text": "each and every month. So that's what"
+    },
+    {
+     "t": 973.6,
+     "text": "this announcement is all about. And also"
+    },
+    {
+     "t": 976.7,
+     "text": "we want to make sure to mention that"
+    },
+    {
+     "t": 979.2,
+     "text": "next Wednesday the council is going to"
+    },
+    {
+     "t": 980.7,
+     "text": "hold an oversight hearing aimed at"
+    },
+    {
+     "t": 982.9,
+     "text": "further improving our whole city bike"
+    },
+    {
+     "t": 984.9,
+     "text": "network across the city and really"
+    },
+    {
+     "t": 986.9,
+     "text": "working collaboratively DOT and we want"
+    },
+    {
+     "t": 989.2,
+     "text": "to thank you commissioner for the great"
+    },
+    {
+     "t": 990.7,
+     "text": "job that you're doing in that regard."
+    },
+    {
+     "t": 992.7,
+     "text": "And lastly, we are so thrilled also"
+    },
+    {
+     "t": 995.3,
+     "text": "about Fair Fares because soon we've got"
+    },
+    {
+     "t": 998.0,
+     "text": "our expansion of Fair Fares allowing an"
+    },
+    {
+     "t": 1000.4,
+     "text": "additional 340"
+    },
+    {
+     "t": 1002.5,
+     "text": "thousand New Yorkers to have discounted"
+    },
+    {
+     "t": 1005.0,
+     "text": "bus, subway and paratransit. And so"
+    },
+    {
+     "t": 1007.6,
+     "text": "collectively we are just so thrilled"
+    },
+    {
+     "t": 1009.4,
+     "text": "about these different announcements."
+    },
+    {
+     "t": 1011.1,
+     "text": "Thank you so much."
+    },
+    {
+     "t": 1012.64,
+     "text": ">> [applause]"
+    },
+    {
+     "t": 1016.7,
+     "text": ">> Thank you so much speaker."
+    },
+    {
+     "t": 1018.6,
+     "text": "Uh next up I'd like to welcome our great"
+    },
+    {
+     "t": 1020.6,
+     "text": "partner Council Majority Leader and"
+    },
+    {
+     "t": 1022.7,
+     "text": "Transportation Committee Chair Shaun"
+    },
+    {
+     "t": 1024.4,
+     "text": "Abreu."
+    },
+    {
+     "t": 1028.8,
+     "text": ">> Good morning everybody. Christmas came"
+    },
+    {
+     "t": 1030.8,
+     "text": "early. Mr. Mayor, can I call you Santa?"
+    },
+    {
+     "t": 1034.2,
+     "text": "City Bike is a core part of our of how"
+    },
+    {
+     "t": 1036.5,
+     "text": "our city moves. Some days New Yorkers"
+    },
+    {
+     "t": 1039.3,
+     "text": "take over 200,000 rides rivaling the"
+    },
+    {
+     "t": 1042.5,
+     "text": "ridership of the PATH train."
+    },
+    {
+     "t": 1044.74,
+     "text": "[laughter]"
+    },
+    {
+     "t": 1045.6,
+     "text": "It's time we treated it like the"
+    },
+    {
+     "t": 1047.7,
+     "text": "transportation option that it is and"
+    },
+    {
+     "t": 1050.3,
+     "text": "thanks to Mayor Adams"
+    },
+    {
+     "t": 1052.0,
+     "text": "it just got a whole lot more affordable."
+    },
+    {
+     "t": 1054.8,
+     "text": "Come January the fare cap on Citi Bike"
+    },
+    {
+     "t": 1056.9,
+     "text": "members e-bike rides of 45 minutes or"
+    },
+    {
+     "t": 1059.5,
+     "text": "less will only cost 65 cents more than a"
+    },
+    {
+     "t": 1062.7,
+     "text": "subway ride and membership rates will be"
+    },
+    {
+     "t": 1065.4,
+     "text": "held for the remainder of the contract"
+    },
+    {
+     "t": 1067.2,
+     "text": "term."
+    },
+    {
+     "t": 1068.0,
+     "text": "That's a big deal. Before this I wasn't"
+    },
+    {
+     "t": 1071.3,
+     "text": "a member and I may just now become a"
+    },
+    {
+     "t": 1073.9,
+     "text": "member very soon."
+    },
+    {
+     "t": 1076.4,
+     "text": "In the city where everything costs more"
+    },
+    {
+     "t": 1079.3,
+     "text": "transportation will cost less."
+    },
+    {
+     "t": 1081.9,
+     "text": "Affordability is accessibility and this"
+    },
+    {
+     "t": 1083.8,
+     "text": "agreement will keep money in New"
+    },
+    {
+     "t": 1085.0,
+     "text": "Yorkers' pockets. Riding in one of the"
+    },
+    {
+     "t": 1087.5,
+     "text": "city's new protected bike lanes like the"
+    },
+    {
+     "t": 1089.6,
+     "text": "mayor said with the wind in your hair"
+    },
+    {
+     "t": 1091.7,
+     "text": "should be an option for everyone."
+    },
+    {
+     "t": 1094.0,
+     "text": "If the subway is packed or there's"
+    },
+    {
+     "t": 1095.7,
+     "text": "traffic Citi Bike is yet another way to"
+    },
+    {
+     "t": 1098.5,
+     "text": "get to where you're going."
+    },
+    {
+     "t": 1100.6,
+     "text": "Thanks to the mayor and Commissioner"
+    },
+    {
+     "t": 1102.2,
+     "text": "Flyn, and to your negotiations with"
+    },
+    {
+     "t": 1105.3,
+     "text": "Lyft, the city is on strong footing now"
+    },
+    {
+     "t": 1108.3,
+     "text": "to secure an even better deal for the"
+    },
+    {
+     "t": 1110.3,
+     "text": "new contract in 2029."
+    },
+    {
+     "t": 1112.6,
+     "text": "The fact that there are no subsidies"
+    },
+    {
+     "t": 1114.3,
+     "text": "being involved at this point also speaks"
+    },
+    {
+     "t": 1117.1,
+     "text": "to the power that the city had in"
+    },
+    {
+     "t": 1119.3,
+     "text": "leveraging this negotiations to get the"
+    },
+    {
+     "t": 1121.4,
+     "text": "best deal possible for New Yorkers."
+    },
+    {
+     "t": 1123.8,
+     "text": "Mr. Mayor, the council will always be a"
+    },
+    {
+     "t": 1125.5,
+     "text": "partner on transit affordability and"
+    },
+    {
+     "t": 1127.7,
+     "text": "ensuring that we always always get the"
+    },
+    {
+     "t": 1130.4,
+     "text": "best possible deal for New Yorkers."
+    },
+    {
+     "t": 1132.1,
+     "text": "Thank you very much for having me."
+    },
+    {
+     "t": 1139.0,
+     "text": ">> Thank you, council member. Uh next up, a"
+    },
+    {
+     "t": 1141.4,
+     "text": "warm welcome to council member Crystal"
+    },
+    {
+     "t": 1143.2,
+     "text": "Hudson."
+    },
+    {
+     "t": 1144.3,
+     "text": ">> [applause and cheering]"
+    },
+    {
+     "t": 1148.9,
+     "text": ">> Thank you. I want to share an anecdote"
+    },
+    {
+     "t": 1151.1,
+     "text": "uh from I think just a few months ago,"
+    },
+    {
+     "t": 1154.0,
+     "text": "but my chief of staff and I were"
+    },
+    {
+     "t": 1155.8,
+     "text": "commuting back to my district office in"
+    },
+    {
+     "t": 1157.6,
+     "text": "Fort Green from Times Square."
+    },
+    {
+     "t": 1160.1,
+     "text": "And it was a beautiful day, and I said,"
+    },
+    {
+     "t": 1162.1,
+     "text": "let's take a city bike. He was not a"
+    },
+    {
+     "t": 1164.4,
+     "text": "member. I am a member. We drove uh"
+    },
+    {
+     "t": 1167.2,
+     "text": "sorry, rode from Times Square to"
+    },
+    {
+     "t": 1169.8,
+     "text": "Brooklyn. It cost me uh about $10 and it"
+    },
+    {
+     "t": 1174.6,
+     "text": "cost him over $35."
+    },
+    {
+     "t": 1177.9,
+     "text": "And he said, don't ever make me do that"
+    },
+    {
+     "t": 1180.3,
+     "text": "again. [laughter]"
+    },
+    {
+     "t": 1182.6,
+     "text": "He's since become uh a member to save"
+    },
+    {
+     "t": 1185.8,
+     "text": "costs. Um but the reality is so many New"
+    },
+    {
+     "t": 1189.7,
+     "text": "Yorkers would opt out of taking a"
+    },
+    {
+     "t": 1192.0,
+     "text": "beautiful bike ride like that from"
+    },
+    {
+     "t": 1193.7,
+     "text": "borough to borough because of the cost."
+    },
+    {
+     "t": 1196.0,
+     "text": "And now they don't have to do that. Now"
+    },
+    {
+     "t": 1197.9,
+     "text": "they can opt in. So thank you to Mayor"
+    },
+    {
+     "t": 1200.0,
+     "text": "Mombdani. Thank you to council member"
+    },
+    {
+     "t": 1202.0,
+     "text": "Lincoln Restler. Thank you to my"
+    },
+    {
+     "t": 1203.5,
+     "text": "colleagues in the council including the"
+    },
+    {
+     "t": 1205.0,
+     "text": "speaker and the majority leader. Thank"
+    },
+    {
+     "t": 1206.9,
+     "text": "you to the DOT commissioner. Thank you"
+    },
+    {
+     "t": 1209.0,
+     "text": "to transportation alternatives, all of"
+    },
+    {
+     "t": 1210.8,
+     "text": "the advocates, and of course also Yeah,"
+    },
+    {
+     "t": 1213.3,
+     "text": "clap it up for the advocates."
+    },
+    {
+     "t": 1216.0,
+     "text": "And also of course to Lyft for um inking"
+    },
+    {
+     "t": 1220.3,
+     "text": "the deal and making sure that transit"
+    },
+    {
+     "t": 1223.11,
+     "text": "options become far more affordable for"
+    },
+    {
+     "t": 1226.01,
+     "text": "every New Yorker. Uh, $3.60 $3.65 cents"
+    },
+    {
+     "t": 1230.9,
+     "text": "for 365 days of the year is quite a"
+    },
+    {
+     "t": 1234.11,
+     "text": "deal. I encourage everyone to take a"
+    },
+    {
+     "t": 1236.31,
+     "text": "city bike ride if they haven't yet. Uh,"
+    },
+    {
+     "t": 1238.7,
+     "text": "make sure you bring your helmet, follow"
+    },
+    {
+     "t": 1240.61,
+     "text": "the rules of the road, and drive safely."
+    },
+    {
+     "t": 1242.61,
+     "text": "Thank you."
+    },
+    {
+     "t": 1243.31,
+     "text": ">> Hey."
+    },
+    {
+     "t": 1246.61,
+     "text": "Thank you, Council Member. Uh, next up,"
+    },
+    {
+     "t": 1249.61,
+     "text": "uh, Transportation Alternatives"
+    },
+    {
+     "t": 1250.9,
+     "text": "Executive Director, Ben Furnas."
+    },
+    {
+     "t": 1253.03,
+     "text": ">> [cheering]"
+    },
+    {
+     "t": 1253.68,
+     "text": "[applause]"
+    },
+    {
+     "t": 1255.2,
+     "text": ">> Good morning, everyone, and thank you so"
+    },
+    {
+     "t": 1256.61,
+     "text": "much, Mr. Mayor."
+    },
+    {
+     "t": 1258.31,
+     "text": "Deputy Mayor Kirsten,"
+    },
+    {
+     "t": 1260.2,
+     "text": "uh, and for everyone here today, uh, I"
+    },
+    {
+     "t": 1263.11,
+     "text": "just want to give a huge round of"
+    },
+    {
+     "t": 1264.7,
+     "text": "applause to the thousands of people who"
+    },
+    {
+     "t": 1266.61,
+     "text": "signed our petition for $3 city bike."
+    },
+    {
+     "t": 1269.61,
+     "text": "Raise your hand if you had a part in"
+    },
+    {
+     "t": 1271.2,
+     "text": "this."
+    },
+    {
+     "t": 1272.61,
+     "text": "Um,"
+    },
+    {
+     "t": 1273.7,
+     "text": "this was not just a victory for of your"
+    },
+    {
+     "t": 1276.31,
+     "text": "leadership and Council Member Restler's"
+    },
+    {
+     "t": 1277.9,
+     "text": "leadership, the entire City Council,"
+    },
+    {
+     "t": 1279.81,
+     "text": "Deputy Mayor, uh, uh,"
+    },
+    {
+     "t": 1282.31,
+     "text": "uh, Transportation, uh, uh, Commissioner"
+    },
+    {
+     "t": 1284.9,
+     "text": "Mike Flynn, uh, but a huge win for"
+    },
+    {
+     "t": 1287.31,
+     "text": "affordability for all the people of New"
+    },
+    {
+     "t": 1289.11,
+     "text": "York City. So thank you so much for"
+    },
+    {
+     "t": 1290.9,
+     "text": "this. More people take a city bike ride"
+    },
+    {
+     "t": 1293.01,
+     "text": "today than fly through LaGuardia"
+    },
+    {
+     "t": 1294.51,
+     "text": "Airport. It's an incredibly core part of"
+    },
+    {
+     "t": 1296.9,
+     "text": "our transportation system. It's getting"
+    },
+    {
+     "t": 1298.81,
+     "text": "safer and ever and more affordable than"
+    },
+    {
+     "t": 1300.9,
+     "text": "ever before. Thank you so much."
+    },
+    {
+     "t": 1304.77,
+     "text": ">> [cheering]"
+    },
+    {
+     "t": 1306.74,
+     "text": "[applause]"
+    },
+    {
+     "t": 1308.81,
+     "text": ">> Thank you all."
+    },
+    {
+     "t": 1311.4,
+     "text": "Thank you to our speakers. We'll have"
+    },
+    {
+     "t": 1312.81,
+     "text": "time for on topics and off topics. We'll"
+    },
+    {
+     "t": 1314.9,
+     "text": "start first with on topics. We'll start"
+    },
+    {
+     "t": 1316.61,
+     "text": "with Max from Hellgate. If you could"
+    },
+    {
+     "t": 1318.2,
+     "text": "just wait for the microphone."
+    },
+    {
+     "t": 1322.01,
+     "text": "Just one sec."
+    },
+    {
+     "t": 1323.4,
+     "text": ">> Sir?"
+    },
+    {
+     "t": 1327.2,
+     "text": "T-shirt then."
+    },
+    {
+     "t": 1328.01,
+     "text": ">> you."
+    },
+    {
+     "t": 1328.61,
+     "text": ">> It's"
+    },
+    {
+     "t": 1329.4,
+     "text": ">> It's gorgeous. [laughter]"
+    },
+    {
+     "t": 1330.11,
+     "text": ">> It made sense when I was biking over"
+    },
+    {
+     "t": 1331.4,
+     "text": "here a little less when I've been"
+    },
+    {
+     "t": 1332.51,
+     "text": "sitting in the shade. So, um, anyway,"
+    },
+    {
+     "t": 1335.81,
+     "text": "so how did you do this? How How does"
+    },
+    {
+     "t": 1337.2,
+     "text": "this fit in with other approaches you've"
+    },
+    {
+     "t": 1338.9,
+     "text": "taken to tech companies that use city"
+    },
+    {
+     "t": 1341.01,
+     "text": "infrastructure like Uber and Amazon"
+    },
+    {
+     "t": 1343.11,
+     "text": "which have been a bit more"
+    },
+    {
+     "t": 1343.9,
+     "text": "confrontational and and definitely the"
+    },
+    {
+     "t": 1345.7,
+     "text": "city Council is you know about to take"
+    },
+    {
+     "t": 1347.51,
+     "text": "up some serious legislation there. Is"
+    },
+    {
+     "t": 1349.41,
+     "text": "this part of an overall press or"
+    },
+    {
+     "t": 1350.91,
+     "text": "strategy and what levers did you pull to"
+    },
+    {
+     "t": 1354.01,
+     "text": "make this happen? You know I reported a"
+    },
+    {
+     "t": 1356.01,
+     "text": "few months ago that Lyft had seen its"
+    },
+    {
+     "t": 1357.91,
+     "text": "profits uh drastically increased since"
+    },
+    {
+     "t": 1360.51,
+     "text": "the cap was lifted on uh e-bike rides."
+    },
+    {
+     "t": 1363.31,
+     "text": ">> So first I just want to ask if every"
+    },
+    {
+     "t": 1365.51,
+     "text": "member of DOT staff can just come up"
+    },
+    {
+     "t": 1367.11,
+     "text": "here for a second."
+    },
+    {
+     "t": 1368.91,
+     "text": "You guys can all come up here."
+    },
+    {
+     "t": 1370.93,
+     "text": "[applause]"
+    },
+    {
+     "t": 1372.41,
+     "text": "Um"
+    },
+    {
+     "t": 1373.31,
+     "text": "to"
+    },
+    {
+     "t": 1375.21,
+     "text": "to any question of of how we did this"
+    },
+    {
+     "t": 1377.91,
+     "text": "the answer has to start with the"
+    },
+    {
+     "t": 1380.11,
+     "text": "negotiating team."
+    },
+    {
+     "t": 1381.81,
+     "text": "And I really want to credit come on over"
+    },
+    {
+     "t": 1383.81,
+     "text": "come on over."
+    },
+    {
+     "t": 1385.11,
+     "text": "Come up [cheering] here come up to the"
+    },
+    {
+     "t": 1386.21,
+     "text": "front come up to the front."
+    },
+    {
+     "t": 1390.31,
+     "text": "Truly truly I want to thank Commissioner"
+    },
+    {
+     "t": 1392.71,
+     "text": "Polly I want to thank our DOT staff"
+    },
+    {
+     "t": 1395.71,
+     "text": "because this"
+    },
+    {
+     "t": 1398.31,
+     "text": "Christopher just give me like three"
+    },
+    {
+     "t": 1399.31,
+     "text": "minutes and I got you."
+    },
+    {
+     "t": 1400.91,
+     "text": "Um"
+    },
+    {
+     "t": 1402.81,
+     "text": "we"
+    },
+    {
+     "t": 1403.91,
+     "text": "these are negotiations that continued"
+    },
+    {
+     "t": 1405.41,
+     "text": "through this weekend."
+    },
+    {
+     "t": 1407.21,
+     "text": "And the reason that they were so"
+    },
+    {
+     "t": 1409.11,
+     "text": "critically important is that this will"
+    },
+    {
+     "t": 1412.01,
+     "text": "have a significant impact on New"
+    },
+    {
+     "t": 1414.41,
+     "text": "Yorkers' lives across the five boroughs."
+    },
+    {
+     "t": 1416.31,
+     "text": "You've heard me and other people on this"
+    },
+    {
+     "t": 1418.01,
+     "text": "stage say that this will save New"
+    },
+    {
+     "t": 1419.71,
+     "text": "Yorkers"
+    },
+    {
+     "t": 1421.01,
+     "text": "close to $11 million."
+    },
+    {
+     "t": 1423.51,
+     "text": "Again that's using the numbers"
+    },
+    {
+     "t": 1427.41,
+     "text": "of prices as they were last year."
+    },
+    {
+     "t": 1430.31,
+     "text": "Now we know that we are incentivizing"
+    },
+    {
+     "t": 1433.01,
+     "text": "longer bike rides across New York City."
+    },
+    {
+     "t": 1435.21,
+     "text": "And so we know the number of New Yorkers"
+    },
+    {
+     "t": 1436.61,
+     "text": "who will take up this option is going to"
+    },
+    {
+     "t": 1439.01,
+     "text": "skyrocket. And as you heard the speaker"
+    },
+    {
+     "t": 1440.91,
+     "text": "say that's critical on so many different"
+    },
+    {
+     "t": 1442.71,
+     "text": "ways. So the ways that we got this done"
+    },
+    {
+     "t": 1444.51,
+     "text": "first and foremost was having an"
+    },
+    {
+     "t": 1445.51,
+     "text": "incredible team here who've been working"
+    },
+    {
+     "t": 1447.41,
+     "text": "on this for such a long time. [applause]"
+    },
+    {
+     "t": 1450.51,
+     "text": "Um and then also is that we we"
+    },
+    {
+     "t": 1454.51,
+     "text": "have made an agreement with Lyft that"
+    },
+    {
+     "t": 1455.91,
+     "text": "will also make it easier for them to"
+    },
+    {
+     "t": 1457.91,
+     "text": "modernize the operations of this system"
+    },
+    {
+     "t": 1460.91,
+     "text": "and to reduce operating costs. You heard"
+    },
+    {
+     "t": 1462.91,
+     "text": "Council Member Wrestler speak to some of"
+    },
+    {
+     "t": 1464.91,
+     "text": "this. We're going to make it faster and"
+    },
+    {
+     "t": 1466.61,
+     "text": "easier to install electric charging"
+    },
+    {
+     "t": 1468.61,
+     "text": "stations. That'll begin with more than"
+    },
+    {
+     "t": 1470.31,
+     "text": "130 stations in early 2027. We are also,"
+    },
+    {
+     "t": 1474.21,
+     "text": "as you heard the council member say,"
+    },
+    {
+     "t": 1475.51,
+     "text": "permitting Lyft to run advertising"
+    },
+    {
+     "t": 1478.51,
+     "text": "across all Citi Bike station display"
+    },
+    {
+     "t": 1480.51,
+     "text": "panels starting on January 1st of next"
+    },
+    {
+     "t": 1482.51,
+     "text": "year."
+    },
+    {
+     "t": 1483.31,
+     "text": "And when it comes to revenue share,"
+    },
+    {
+     "t": 1485.31,
+     "text": "we're saying that the city will be paid"
+    },
+    {
+     "t": 1487.11,
+     "text": "whatever exceeds $5.25 million a year,"
+    },
+    {
+     "t": 1490.11,
+     "text": "and that threshold will be modified"
+    },
+    {
+     "t": 1491.71,
+     "text": "annually according to the consumer price"
+    },
+    {
+     "t": 1493.41,
+     "text": "index."
+    },
+    {
+     "t": 1494.81,
+     "text": "And we're also informing Lyft that they"
+    },
+    {
+     "t": 1497.01,
+     "text": "do not have to reimburse us for"
+    },
+    {
+     "t": 1500.01,
+     "text": "lost parking meter revenue."
+    },
+    {
+     "t": 1502.71,
+     "text": "All of this is critical because it does"
+    },
+    {
+     "t": 1504.01,
+     "text": "not require any additional money paid by"
+    },
+    {
+     "t": 1506.81,
+     "text": "the city,"
+    },
+    {
+     "t": 1508.11,
+     "text": "and yet it is delivering the kind of"
+    },
+    {
+     "t": 1511.91,
+     "text": "affordability that New Yorkers will not"
+    },
+    {
+     "t": 1514.21,
+     "text": "need us to translate for them."
+    },
+    {
+     "t": 1516.21,
+     "text": "You know, you have heard so many people"
+    },
+    {
+     "t": 1517.51,
+     "text": "on this stage talk about how much money"
+    },
+    {
+     "t": 1519.71,
+     "text": "it cost them as a member"
+    },
+    {
+     "t": 1521.51,
+     "text": "to get from point A to point B. This is"
+    },
+    {
+     "t": 1524.11,
+     "text": "now going to cap that 45-minute ride at"
+    },
+    {
+     "t": 1526.51,
+     "text": "365."
+    },
+    {
+     "t": 1529.31,
+     "text": "Thank you, my friend."
+    },
+    {
+     "t": 1530.41,
+     "text": ">> Thanks, Max. We'll go next to Sam from"
+    },
+    {
+     "t": 1531.91,
+     "text": "York One."
+    },
+    {
+     "t": 1532.91,
+     "text": ">> And just before we go to Sam,"
+    },
+    {
+     "t": 1534.71,
+     "text": "are those the Richen brothers?"
+    },
+    {
+     "t": 1536.51,
+     "text": "Oh my god."
+    },
+    {
+     "t": 1538.01,
+     "text": "How's it going, guys?"
+    },
+    {
+     "t": 1539.71,
+     "text": "It's been a long time."
+    },
+    {
+     "t": 1541.11,
+     "text": "All the best."
+    },
+    {
+     "t": 1543.11,
+     "text": "Ariel and Ezra, we all went to high"
+    },
+    {
+     "t": 1544.41,
+     "text": "school together."
+    },
+    {
+     "t": 1545.91,
+     "text": "Amazing."
+    },
+    {
+     "t": 1549.75,
+     "text": ">> [laughter]"
+    },
+    {
+     "t": 1552.31,
+     "text": ">> I missed you, mayor."
+    },
+    {
+     "t": 1553.11,
+     "text": ">> Hi, how are you?"
+    },
+    {
+     "t": 1553.81,
+     "text": ">> Good, how are you? Um I'm just in"
+    },
+    {
+     "t": 1556.11,
+     "text": "layman's terms, you do you have a"
+    },
+    {
+     "t": 1558.31,
+     "text": "revenue sharing agreement with Lyft? Are"
+    },
+    {
+     "t": 1560.21,
+     "text": "you saying that you're giving up that"
+    },
+    {
+     "t": 1561.91,
+     "text": "revenue to make this happen? And also,"
+    },
+    {
+     "t": 1564.71,
+     "text": "have you talked about renewing the"
+    },
+    {
+     "t": 1566.81,
+     "text": "contract in 2029? Were there any, you"
+    },
+    {
+     "t": 1570.41,
+     "text": "know, I don't want to say threats, but"
+    },
+    {
+     "t": 1572.01,
+     "text": "you know, we're going to look at some"
+    },
+    {
+     "t": 1573.71,
+     "text": "other operators if you don't do this. It"
+    },
+    {
+     "t": 1576.31,
+     "text": "just seems like why couldn't this have"
+    },
+    {
+     "t": 1579.01,
+     "text": "been done earlier?"
+    },
+    {
+     "t": 1581.91,
+     "text": ">> I don't know"
+    },
+    {
+     "t": 1583.31,
+     "text": "why prior administrations did not do"
+    },
+    {
+     "t": 1585.01,
+     "text": "this. I think"
+    },
+    {
+     "t": 1587.11,
+     "text": "to be honest, it has felt like in our"
+    },
+    {
+     "t": 1589.01,
+     "text": "city for the last few years, there has"
+    },
+    {
+     "t": 1591.51,
+     "text": "not been"
+    },
+    {
+     "t": 1593.01,
+     "text": "a focus on delivering the kind of"
+    },
+    {
+     "t": 1594.61,
+     "text": "affordability that people can feel in"
+    },
+    {
+     "t": 1595.91,
+     "text": "their pockets"
+    },
+    {
+     "t": 1597.31,
+     "text": "and that also recognizing that"
+    },
+    {
+     "t": 1599.01,
+     "text": "recognizes biking as a critical form of"
+    },
+    {
+     "t": 1600.81,
+     "text": "public transit."
+    },
+    {
+     "t": 1602.21,
+     "text": "And when it came to these negotiations,"
+    },
+    {
+     "t": 1605.01,
+     "text": "these were negotiations that were"
+    },
+    {
+     "t": 1606.51,
+     "text": "separate from conversations around the"
+    },
+    {
+     "t": 1608.51,
+     "text": "end of this contract. When it comes to"
+    },
+    {
+     "t": 1610.51,
+     "text": "that contract, we're exploring all"
+    },
+    {
+     "t": 1612.11,
+     "text": "options to bring more affordability to"
+    },
+    {
+     "t": 1614.31,
+     "text": "the system. I do want to credit Lyft as"
+    },
+    {
+     "t": 1617.31,
+     "text": "well as DOT for the good faith"
+    },
+    {
+     "t": 1619.71,
+     "text": "negotiations that brought us to this"
+    },
+    {
+     "t": 1621.01,
+     "text": "point. What these negotiations do is"
+    },
+    {
+     "t": 1623.61,
+     "text": "they ensure that it's easier for Lyft to"
+    },
+    {
+     "t": 1625.51,
+     "text": "operate the system. We're allowing them"
+    },
+    {
+     "t": 1627.51,
+     "text": "to advertise more on the panels of Citi"
+    },
+    {
+     "t": 1629.41,
+     "text": "Bikes and and on the docking stations"
+    },
+    {
+     "t": 1631.71,
+     "text": "and we're saying that the revenue share"
+    },
+    {
+     "t": 1632.81,
+     "text": "agreement starts at a higher threshold"
+    },
+    {
+     "t": 1634.81,
+     "text": "point. And in return for that, we are"
+    },
+    {
+     "t": 1637.11,
+     "text": "going to save New Yorkers at least $11"
+    },
+    {
+     "t": 1638.71,
+     "text": "million and we believe it will be"
+    },
+    {
+     "t": 1640.71,
+     "text": "quite substantially more."
+    },
+    {
+     "t": 1642.51,
+     "text": ">> We have a other on-topic questions."
+    },
+    {
+     "t": 1644.11,
+     "text": "Yeah, we'll go next to Ethan from AMNY."
+    },
+    {
+     "t": 1649.61,
+     "text": ">> Hi, Mr. Mayor."
+    },
+    {
+     "t": 1650.91,
+     "text": "So, when you talk about making it easier"
+    },
+    {
+     "t": 1652.91,
+     "text": "with the electrification, how is that"
+    },
+    {
+     "t": 1655.01,
+     "text": "working exactly? What is the city doing"
+    },
+    {
+     "t": 1657.31,
+     "text": "to make it easier for Lyft? Is there a"
+    },
+    {
+     "t": 1659.31,
+     "text": "price tag attached to that?"
+    },
+    {
+     "t": 1661.61,
+     "text": ">> I'll just pass it over to our our team"
+    },
+    {
+     "t": 1663.41,
+     "text": "to give you additional details on that."
+    },
+    {
+     "t": 1666.61,
+     "text": ">> Thanks."
+    },
+    {
+     "t": 1668.21,
+     "text": "Yeah, so it's it's really about"
+    },
+    {
+     "t": 1670.91,
+     "text": "basically helping to grease the wheels"
+    },
+    {
+     "t": 1672.81,
+     "text": "and"
+    },
+    {
+     "t": 1674.91,
+     "text": "clear out the procedural roadblocks more"
+    },
+    {
+     "t": 1676.61,
+     "text": "or less. It's it's helping to get the"
+    },
+    {
+     "t": 1678.01,
+     "text": "approvals from Con Ed. Basically, it's"
+    },
+    {
+     "t": 1680.51,
+     "text": "you know, you need to install the"
+    },
+    {
+     "t": 1681.81,
+     "text": "conduit in the ground and things like"
+    },
+    {
+     "t": 1683.51,
+     "text": "that. So, it's about streamlining the"
+    },
+    {
+     "t": 1685.51,
+     "text": "process and kind of unleashing the"
+    },
+    {
+     "t": 1687.31,
+     "text": "potential to do this at a larger scale."
+    },
+    {
+     "t": 1692.81,
+     "text": ">> This was a pilot that was started a few"
+    },
+    {
+     "t": 1694.21,
+     "text": "years ago. One of the first electrified"
+    },
+    {
+     "t": 1695.71,
+     "text": "Citi Bike docks was in our district in"
+    },
+    {
+     "t": 1697.01,
+     "text": "Greenpoint and"
+    },
+    {
+     "t": 1699.11,
+     "text": "it's"
+    },
+    {
+     "t": 1700.31,
+     "text": "kind of remarkable that our to make our"
+    },
+    {
+     "t": 1702.71,
+     "text": "bike system work, we have Lyft driving"
+    },
+    {
+     "t": 1705.21,
+     "text": "vans all around the city swapping out"
+    },
+    {
+     "t": 1706.91,
+     "text": "dead batteries. This changes that. So,"
+    },
+    {
+     "t": 1709.21,
+     "text": "now the docks when e-bikes are docked,"
+    },
+    {
+     "t": 1711.61,
+     "text": "they're connected to the grid and they"
+    },
+    {
+     "t": 1712.81,
+     "text": "automatically recharge, which saves uh"
+    },
+    {
+     "t": 1715.61,
+     "text": "Lyft operating dollars and is a much"
+    },
+    {
+     "t": 1717.41,
+     "text": "more environmentally efficient approach"
+    },
+    {
+     "t": 1719.41,
+     "text": "to maintaining and operating our city"
+    },
+    {
+     "t": 1721.31,
+     "text": "bike fleet. So by facilitating by the"
+    },
+    {
+     "t": 1723.91,
+     "text": "city and DOT working with Lyft to make"
+    },
+    {
+     "t": 1725.81,
+     "text": "that process easier and smoother, we"
+    },
+    {
+     "t": 1727.71,
+     "text": "have a much more environmentally"
+    },
+    {
+     "t": 1729.21,
+     "text": "efficient kind of city bike system."
+    },
+    {
+     "t": 1731.71,
+     "text": ">> Thanks. We'll go next to Haley. Go"
+    },
+    {
+     "t": 1733.21,
+     "text": "ahead."
+    },
+    {
+     "t": 1734.61,
+     "text": ">> Hi, Mr. Mayor. Hi, everyone. Good thank"
+    },
+    {
+     "t": 1736.71,
+     "text": "you. Um obviously this is a really"
+    },
+    {
+     "t": 1739.11,
+     "text": "wonderful thing for city bike members. I"
+    },
+    {
+     "t": 1741.71,
+     "text": "want to ask about non-members. Is that"
+    },
+    {
+     "t": 1743.91,
+     "text": "something you might be looking to"
+    },
+    {
+     "t": 1745.01,
+     "text": "leverage in the future um making prices"
+    },
+    {
+     "t": 1747.51,
+     "text": "for non-members making prices more"
+    },
+    {
+     "t": 1749.71,
+     "text": "affordable for non-members as well?"
+    },
+    {
+     "t": 1753.21,
+     "text": ">> Today around 82% of city bike users are"
+    },
+    {
+     "t": 1756.11,
+     "text": "members and one of the things that we've"
+    },
+    {
+     "t": 1758.11,
+     "text": "heard from New Yorkers who have not yet"
+    },
+    {
+     "t": 1759.51,
+     "text": "signed up to be members is their concern"
+    },
+    {
+     "t": 1762.11,
+     "text": "that the cost of membership continues to"
+    },
+    {
+     "t": 1763.91,
+     "text": "increase year after year."
+    },
+    {
+     "t": 1765.91,
+     "text": "And so one of the reasons that we"
+    },
+    {
+     "t": 1767.21,
+     "text": "focused on going beyond the 365 for 365"
+    },
+    {
+     "t": 1771.31,
+     "text": "was to freeze membership costs so that"
+    },
+    {
+     "t": 1773.91,
+     "text": "whether it be the majority leader Shaun"
+    },
+    {
+     "t": 1775.01,
+     "text": "Abreu or it be a New Yorker who's just"
+    },
+    {
+     "t": 1777.71,
+     "text": "you know tuning in right now that they"
+    },
+    {
+     "t": 1779.81,
+     "text": "realize that the price that they're"
+    },
+    {
+     "t": 1781.21,
+     "text": "looking at today is the price that it"
+    },
+    {
+     "t": 1782.81,
+     "text": "will be uh in the years to come and that"
+    },
+    {
+     "t": 1785.31,
+     "text": "that could actually deliver them some"
+    },
+    {
+     "t": 1786.61,
+     "text": "sense of stability."
+    },
+    {
+     "t": 1788.01,
+     "text": ">> Okay, we have time for a few more on"
+    },
+    {
+     "t": 1789.11,
+     "text": "topic before we move on. We'll go to"
+    },
+    {
+     "t": 1790.21,
+     "text": "Streetsblog next."
+    },
+    {
+     "t": 1793.11,
+     "text": ">> Hey, Mr. Mayor. How's it going?"
+    },
+    {
+     "t": 1794.51,
+     "text": ">> Good. Um"
+    },
+    {
+     "t": 1795.31,
+     "text": ">> Don't reset the meter."
+    },
+    {
+     "t": 1796.68,
+     "text": "[laughter]"
+    },
+    {
+     "t": 1797.21,
+     "text": "Not today."
+    },
+    {
+     "t": 1798.11,
+     "text": ">> I'll have to ask Gersh. Um"
+    },
+    {
+     "t": 1801.11,
+     "text": "you know you mentioned this will"
+    },
+    {
+     "t": 1802.31,
+     "text": "increase ridership a lot. Um you know a"
+    },
+    {
+     "t": 1805.11,
+     "text": "lot more people are going to ride over"
+    },
+    {
+     "t": 1806.31,
+     "text": "the bridges. Uh currently the stations"
+    },
+    {
+     "t": 1808.91,
+     "text": "can often be full and you know you can't"
+    },
+    {
+     "t": 1810.41,
+     "text": "find a place to dock."
+    },
+    {
+     "t": 1811.91,
+     "text": "Did the city demand Lyft increase its"
+    },
+    {
+     "t": 1814.51,
+     "text": "service in any way like rebalancing"
+    },
+    {
+     "t": 1816.21,
+     "text": "bikes or any kind of other service"
+    },
+    {
+     "t": 1817.61,
+     "text": "improvements to kind of like meet this"
+    },
+    {
+     "t": 1819.11,
+     "text": "rise in ridership?"
+    },
+    {
+     "t": 1820.81,
+     "text": ">> So I think you you just heard it from"
+    },
+    {
+     "t": 1821.81,
+     "text": "the council member about"
+    },
+    {
+     "t": 1824.61,
+     "text": "the importance of of what we are"
+    },
+    {
+     "t": 1826.81,
+     "text": "delivering in terms of the ability for"
+    },
+    {
+     "t": 1828.41,
+     "text": "these bikes to be recharged without"
+    },
+    {
+     "t": 1830.21,
+     "text": "having to have uh city bike workers go"
+    },
+    {
+     "t": 1832.41,
+     "text": "across the city in a van to manually do"
+    },
+    {
+     "t": 1834.61,
+     "text": "it themselves. In in addition to that,"
+    },
+    {
+     "t": 1837.21,
+     "text": "we have been working with Lyft on"
+    },
+    {
+     "t": 1839.51,
+     "text": "increasing supply across the network. So"
+    },
+    {
+     "t": 1842.11,
+     "text": "last month, we announced the completion"
+    },
+    {
+     "t": 1844.01,
+     "text": "of a major expansion that added more"
+    },
+    {
+     "t": 1846.31,
+     "text": "than 230 stations and with them 3,700"
+    },
+    {
+     "t": 1849.71,
+     "text": "docks across seven neighborhoods in the"
+    },
+    {
+     "t": 1851.81,
+     "text": "Bronx, Brooklyn, and Queens. And in"
+    },
+    {
+     "t": 1854.31,
+     "text": "early 2027 we're going to be delivering"
+    },
+    {
+     "t": 1855.91,
+     "text": "new charging stations that will also"
+    },
+    {
+     "t": 1857.41,
+     "text": "help to keep with growing demand."
+    },
+    {
+     "t": 1859.51,
+     "text": ">> So there'll be an increase of docks and"
+    },
+    {
+     "t": 1861.21,
+     "text": ">> Increase of docks, uh uh an expediting"
+    },
+    {
+     "t": 1863.91,
+     "text": "of the process by which you recharge"
+    },
+    {
+     "t": 1865.31,
+     "text": "bikes uh thanks to the operating"
+    },
+    {
+     "t": 1867.21,
+     "text": "agreements that we've made. And I also"
+    },
+    {
+     "t": 1868.81,
+     "text": "think a reduce in anxiety, a reduction"
+    },
+    {
+     "t": 1870.71,
+     "text": "in anxiety for New Yorkers who have"
+    },
+    {
+     "t": 1872.91,
+     "text": "ended their ride"
+    },
+    {
+     "t": 1874.61,
+     "text": "and yet are then looking for a place to"
+    },
+    {
+     "t": 1876.11,
+     "text": "dock it and know that the price is going"
+    },
+    {
+     "t": 1877.81,
+     "text": "up. Now you have through 45 minutes to"
+    },
+    {
+     "t": 1880.11,
+     "text": "find that dock."
+    },
+    {
+     "t": 1881.51,
+     "text": ">> Okay, I have time for one more on topic."
+    },
+    {
+     "t": 1883.51,
+     "text": "Off topic? Okay, we'll go to Emma from"
+    },
+    {
+     "t": 1885.01,
+     "text": "The Times."
+    },
+    {
+     "t": 1891.41,
+     "text": ">> Um hi Mr. Mayor. Um just clarifying the"
+    },
+    {
+     "t": 1894.71,
+     "text": "the art of this specific deal. Can you"
+    },
+    {
+     "t": 1897.01,
+     "text": "just um say precisely what Lyft is"
+    },
+    {
+     "t": 1899.71,
+     "text": "getting out of this in terms of"
+    },
+    {
+     "t": 1901.01,
+     "text": "subsidies and taxpayer funded benefits?"
+    },
+    {
+     "t": 1904.41,
+     "text": ">> What Lyft is getting out of this is the"
+    },
+    {
+     "t": 1906.41,
+     "text": "city's assistance in installing electric"
+    },
+    {
+     "t": 1909.21,
+     "text": "charging stations, beginning with more"
+    },
+    {
+     "t": 1911.51,
+     "text": "than 130 city bike charging stations in"
+    },
+    {
+     "t": 1914.11,
+     "text": "early next year."
+    },
+    {
+     "t": 1915.81,
+     "text": "What they are also getting out of this"
+    },
+    {
+     "t": 1917.41,
+     "text": "is that starting January 1st of next"
+    },
+    {
+     "t": 1919.21,
+     "text": "year, they can run advertising across"
+    },
+    {
+     "t": 1921.41,
+     "text": "all city bike station display panels."
+    },
+    {
+     "t": 1924.21,
+     "text": "And that when it comes to revenue share,"
+    },
+    {
+     "t": 1926.31,
+     "text": "they will only start to pay the city"
+    },
+    {
+     "t": 1928.21,
+     "text": "whatever exceeds $5.25 million a year."
+    },
+    {
+     "t": 1931.71,
+     "text": "And that threshold will be modified"
+    },
+    {
+     "t": 1933.21,
+     "text": "annually in accordance with the Consumer"
+    },
+    {
+     "t": 1934.81,
+     "text": "Price Index. They will also no longer"
+    },
+    {
+     "t": 1936.71,
+     "text": "have to reimburse us for lost parking"
+    },
+    {
+     "t": 1938.91,
+     "text": "meter revenue."
+    },
+    {
+     "t": 1940.21,
+     "text": "All of that is to say the city is not"
+    },
+    {
+     "t": 1942.41,
+     "text": "spending any additional dollars to"
+    },
+    {
+     "t": 1945.21,
+     "text": "deliver what will be close to $11"
+    },
+    {
+     "t": 1947.81,
+     "text": "million at least in relief to New"
+    },
+    {
+     "t": 1950.31,
+     "text": "Yorkers. We are making it easier for"
+    },
+    {
+     "t": 1952.51,
+     "text": "Lyft to operate the system, and we are"
+    },
+    {
+     "t": 1954.61,
+     "text": "also allowing them to retain more"
+    },
+    {
+     "t": 1956.31,
+     "text": "revenue that comes from this system."
+    },
+    {
+     "t": 1959.51,
+     "text": ">> Thank you to"
+    },
+    {
+     "t": 1959.81,
+     "text": ">> our speakers. Before we move to off"
+    },
+    {
+     "t": 1961.11,
+     "text": "topic, can we get another round of"
+    },
+    {
+     "t": 1962.21,
+     "text": "applause?"
+    },
+    {
+     "t": 1967.51,
+     "text": "We'll start with Henry from Pix."
+    },
+    {
+     "t": 1979.01,
+     "text": ">> Hi Mayor, right here."
+    },
+    {
+     "t": 1980.01,
+     "text": ">> Sir."
+    },
+    {
+     "t": 1980.41,
+     "text": ">> Hey, I'm glad you avoided the surgery."
+    },
+    {
+     "t": 1981.81,
+     "text": "I've been there and and this is better."
+    },
+    {
+     "t": 1984.11,
+     "text": ">> the surgery's coming."
+    },
+    {
+     "t": 1985.11,
+     "text": ">> Oh, it's coming. Oh my goodness. I'm"
+    },
+    {
+     "t": 1986.81,
+     "text": "sorry. I arrived."
+    },
+    {
+     "t": 1988.01,
+     "text": ">> That's all right. It's coming Friday"
+    },
+    {
+     "t": 1989.11,
+     "text": "morning."
+    },
+    {
+     "t": 1989.81,
+     "text": ">> Oh no. Okay. Well, good luck, sir. Um"
+    },
+    {
+     "t": 1992.21,
+     "text": ">> Thank you. I'm just"
+    },
+    {
+     "t": 1993.71,
+     "text": "just keep telling myself Jason Tatum did"
+    },
+    {
+     "t": 1995.11,
+     "text": "it."
+    },
+    {
+     "t": 1995.41,
+     "text": ">> Yeah."
+    },
+    {
+     "t": 1995.91,
+     "text": ">> Yeah. [laughter]"
+    },
+    {
+     "t": 1997.11,
+     "text": "Anything is possible."
+    },
+    {
+     "t": 1998.41,
+     "text": ">> Um with the city's finances so"
+    },
+    {
+     "t": 2000.91,
+     "text": "inexplicably tied to Wall Street, um I'm"
+    },
+    {
+     "t": 2004.21,
+     "text": "wondering what you think of the"
+    },
+    {
+     "t": 2005.21,
+     "text": "volatility we've seen on Wall Street"
+    },
+    {
+     "t": 2006.91,
+     "text": "with AI, what you think about that"
+    },
+    {
+     "t": 2008.81,
+     "text": "volatility lately, and then what you"
+    },
+    {
+     "t": 2010.71,
+     "text": "think about Nvidia hiring back Jensen"
+    },
+    {
+     "t": 2013.51,
+     "text": "Huang this morning."
+    },
+    {
+     "t": 2017.41,
+     "text": ">> I mean"
+    },
+    {
+     "t": 2022.01,
+     "text": "Uh"
+    },
+    {
+     "t": 2023.51,
+     "text": "on your first question, if you can just"
+    },
+    {
+     "t": 2025.11,
+     "text": "reset your first question, I got caught"
+    },
+    {
+     "t": 2026.31,
+     "text": "up in your second question."
+    },
+    {
+     "t": 2027.31,
+     "text": ">> No, no. I I I'm just wondering I'm"
+    },
+    {
+     "t": 2029.51,
+     "text": "wondering what you think of the"
+    },
+    {
+     "t": 2031.01,
+     "text": "volatility on Wall Street with the"
+    },
+    {
+     "t": 2032.41,
+     "text": "city's finances being so inexplicably"
+    },
+    {
+     "t": 2034.11,
+     "text": "tied to it."
+    },
+    {
+     "t": 2034.91,
+     "text": ">> I"
+    },
+    {
+     "t": 2038.11,
+     "text": "I do not think that working people"
+    },
+    {
+     "t": 2040.11,
+     "text": "across the country signed up for their"
+    },
+    {
+     "t": 2042.31,
+     "text": "pensions being tied to the question of"
+    },
+    {
+     "t": 2045.71,
+     "text": "Jensen Huang's fidelity to his marriage."
+    },
+    {
+     "t": 2048.21,
+     "text": "And yet for many days, that had a"
+    },
+    {
+     "t": 2050.41,
+     "text": "massive impact."
+    },
+    {
+     "t": 2052.31,
+     "text": "And what we're also talking about here,"
+    },
+    {
+     "t": 2055.51,
+     "text": "we're speaking about Mr. Huang, we're"
+    },
+    {
+     "t": 2056.91,
+     "text": "speaking about a divorce settlement that"
+    },
+    {
+     "t": 2058.31,
+     "text": "has been rumored to be around $81"
+    },
+    {
+     "t": 2059.61,
+     "text": "billion."
+    },
+    {
+     "t": 2061.01,
+     "text": "That would be the cost of providing"
+    },
+    {
+     "t": 2062.21,
+     "text": "universal child care for every three and"
+    },
+    {
+     "t": 2063.81,
+     "text": "four-year-old in the United States of"
+    },
+    {
+     "t": 2065.01,
+     "text": "America for an entire year."
+    },
+    {
+     "t": 2067.21,
+     "text": "And a lot of this just brings to mind"
+    },
+    {
+     "t": 2068.91,
+     "text": "what Justice Brandeis said quite some"
+    },
+    {
+     "t": 2070.91,
+     "text": "time ago, which is that"
+    },
+    {
+     "t": 2073.21,
+     "text": "we can have democracy,"
+    },
+    {
+     "t": 2074.81,
+     "text": "we can have great wealth concentrated in"
+    },
+    {
+     "t": 2076.61,
+     "text": "the hands of a few, we cannot have both."
+    },
+    {
+     "t": 2079.71,
+     "text": "And when you look at our stock market"
+    },
+    {
+     "t": 2082.71,
+     "text": "and you look"
+    },
+    {
+     "t": 2084.01,
+     "text": "at how"
+    },
+    {
+     "t": 2087.81,
+     "text": "disproportionately dependent it is on"
+    },
+    {
+     "t": 2089.91,
+     "text": "artificial intelligence related stocks,"
+    },
+    {
+     "t": 2092.31,
+     "text": "it cannot"
+    },
+    {
+     "t": 2093.91,
+     "text": "help but give you a sense of concern"
+    },
+    {
+     "t": 2096.61,
+     "text": "about just how"
+    },
+    {
+     "t": 2099.51,
+     "text": "how much this technology is now"
+    },
+    {
+     "t": 2101.11,
+     "text": "dominant, not just in terms of the"
+    },
+    {
+     "t": 2103.61,
+     "text": "discourse that we are having around it"
+    },
+    {
+     "t": 2105.11,
+     "text": "on a day-to day basis, but also the"
+    },
+    {
+     "t": 2107.91,
+     "text": "strength of the United States economy."
+    },
+    {
+     "t": 2110.01,
+     "text": ">> Thanks, Henry. We'll go to Timmy next."
+    },
+    {
+     "t": 2114.31,
+     "text": ">> Sir, Mr. Faciola."
+    },
+    {
+     "t": 2117.71,
+     "text": "Judge Street Journal, how we doing?"
+    },
+    {
+     "t": 2119.11,
+     "text": ">> I'm good. Any more details you can share"
+    },
+    {
+     "t": 2121.41,
+     "text": "about Friday first off? What's going to"
+    },
+    {
+     "t": 2123.61,
+     "text": "happen? Who's going to be in charge when"
+    },
+    {
+     "t": 2124.61,
+     "text": "you go under?"
+    },
+    {
+     "t": 2125.71,
+     "text": ">> About Friday's surgery?"
+    },
+    {
+     "t": 2128.51,
+     "text": "Then I'm scared."
+    },
+    {
+     "t": 2130.74,
+     "text": "[laughter] It'll be my first surgery."
+    },
+    {
+     "t": 2133.91,
+     "text": "We will"
+    },
+    {
+     "t": 2135.61,
+     "text": "It's a great tune."
+    },
+    {
+     "t": 2137.71,
+     "text": "We will We will be following the the"
+    },
+    {
+     "t": 2139.51,
+     "text": "legal order of operations. So it will be"
+    },
+    {
+     "t": 2141.81,
+     "text": "our first deputy mayor, Dean Fulehan,"
+    },
+    {
+     "t": 2144.11,
+     "text": "and then after Dean Fulehan is our"
+    },
+    {
+     "t": 2145.71,
+     "text": "deputy mayor of operations, Julia"
+    },
+    {
+     "t": 2147.01,
+     "text": "Kerson."
+    },
+    {
+     "t": 2147.81,
+     "text": ">> Got you. And then second"
+    },
+    {
+     "t": 2148.71,
+     "text": ">> I'll be down from about probably 9:00"
+    },
+    {
+     "t": 2150.21,
+     "text": "a.m. to 2:00 p.m."
+    },
+    {
+     "t": 2151.61,
+     "text": ">> Then back at the desk at 3:00?"
+    },
+    {
+     "t": 2154.01,
+     "text": ">> Probably I'll probably be"
+    },
+    {
+     "t": 2155.91,
+     "text": "No, I'm going to be laid out for for a"
+    },
+    {
+     "t": 2157.51,
+     "text": "couple of days."
+    },
+    {
+     "t": 2158.61,
+     "text": ">> Second, I wanted to ask you. Hakeem"
+    },
+    {
+     "t": 2160.11,
+     "text": "Jeffries over the weekend signaled that"
+    },
+    {
+     "t": 2161.81,
+     "text": "one of the first priorities on the issue"
+    },
+    {
+     "t": 2163.71,
+     "text": "of Israel Palestine is going to be"
+    },
+    {
+     "t": 2165.31,
+     "text": "restoring the the West Bank settlement"
+    },
+    {
+     "t": 2167.61,
+     "text": "sanctions of the Biden administration."
+    },
+    {
+     "t": 2169.81,
+     "text": "It seems to be a return to the status"
+    },
+    {
+     "t": 2171.41,
+     "text": "quo as opposed to the sort of"
+    },
+    {
+     "t": 2172.91,
+     "text": "reimagination that you've ushered in and"
+    },
+    {
+     "t": 2174.81,
+     "text": "other politicians have. What do you want"
+    },
+    {
+     "t": 2176.31,
+     "text": "to see Democrats in Congress do on the"
+    },
+    {
+     "t": 2178.01,
+     "text": "question of Israel and Palestine now"
+    },
+    {
+     "t": 2179.41,
+     "text": "with this really big majority?"
+    },
+    {
+     "t": 2182.01,
+     "text": ">> I would like to see"
+    },
+    {
+     "t": 2183.91,
+     "text": "a sense of moral clarity"
+    },
+    {
+     "t": 2185.81,
+     "text": "and"
+    },
+    {
+     "t": 2187.01,
+     "text": "a validation of the importance of"
+    },
+    {
+     "t": 2188.41,
+     "text": "international law."
+    },
+    {
+     "t": 2190.01,
+     "text": "And I think that it is a welcome step to"
+    },
+    {
+     "t": 2192.91,
+     "text": "bring forth sanctions on"
+    },
+    {
+     "t": 2196.11,
+     "text": "the settler enterprise that we are"
+    },
+    {
+     "t": 2197.91,
+     "text": "seeing"
+    },
+    {
+     "t": 2199.71,
+     "text": "ravage many Palestinians' lives and"
+    },
+    {
+     "t": 2201.81,
+     "text": "their livelihoods. And I think that we"
+    },
+    {
+     "t": 2203.41,
+     "text": "have to go beyond that to also address"
+    },
+    {
+     "t": 2205.32,
+     "text": "the fact that our nation has been"
+    },
+    {
+     "t": 2208.02,
+     "text": "funding the Israeli genocide of"
+    },
+    {
+     "t": 2209.42,
+     "text": "Palestinians to the tune of billions of"
+    },
+    {
+     "t": 2211.62,
+     "text": "dollars under a number of different"
+    },
+    {
+     "t": 2213.82,
+     "text": "administrations. And now is the time"
+    },
+    {
+     "t": 2215.92,
+     "text": "time to chart a different course."
+    },
+    {
+     "t": 2218.02,
+     "text": ">> Thank you. We've got time for a few"
+    },
+    {
+     "t": 2219.02,
+     "text": "more. We'll go next to Hannah from the"
+    },
+    {
+     "t": 2220.22,
+     "text": "Post."
+    },
+    {
+     "t": 2224.02,
+     "text": ">> Hi, Mayor. Good morning."
+    },
+    {
+     "t": 2224.82,
+     "text": ">> Hi. How's it going?"
+    },
+    {
+     "t": 2225.72,
+     "text": ">> Good. How are you?"
+    },
+    {
+     "t": 2226.62,
+     "text": ">> Doing well. I'm yeah."
+    },
+    {
+     "t": 2228.52,
+     "text": ">> All thanks to consideration."
+    },
+    {
+     "t": 2230.32,
+     "text": "Um"
+    },
+    {
+     "t": 2231.62,
+     "text": "about the murder in Chinatown last week,"
+    },
+    {
+     "t": 2234.32,
+     "text": "could you, you know, share your thoughts"
+    },
+    {
+     "t": 2236.12,
+     "text": "on"
+    },
+    {
+     "t": 2237.12,
+     "text": "the fact that the prosecution had"
+    },
+    {
+     "t": 2238.62,
+     "text": "recommended that the assailant Alexander"
+    },
+    {
+     "t": 2241.12,
+     "text": "Florentino had asked for"
+    },
+    {
+     "t": 2243.32,
+     "text": "a $3,000 bail or a $9,000 bond for the"
+    },
+    {
+     "t": 2246.22,
+     "text": "petty larceny he had been arrested for"
+    },
+    {
+     "t": 2248.62,
+     "text": "the day prior before he murdered"
+    },
+    {
+     "t": 2250.82,
+     "text": "the victim. Do you think he should have"
+    },
+    {
+     "t": 2253.62,
+     "text": "been released on no bail as he was the"
+    },
+    {
+     "t": 2256.92,
+     "text": "day prior?"
+    },
+    {
+     "t": 2258.82,
+     "text": ">> I think that what happened in Chinatown"
+    },
+    {
+     "t": 2260.22,
+     "text": "is horrible."
+    },
+    {
+     "t": 2261.42,
+     "text": "And it is"
+    },
+    {
+     "t": 2263.72,
+     "text": "an example"
+    },
+    {
+     "t": 2265.12,
+     "text": "of the importance that we have in"
+    },
+    {
+     "t": 2267.62,
+     "text": "delivering public safety to each and"
+    },
+    {
+     "t": 2269.12,
+     "text": "every New Yorker."
+    },
+    {
+     "t": 2270.32,
+     "text": "And this case as well as a number of"
+    },
+    {
+     "t": 2271.82,
+     "text": "other cases are top of mind for our"
+    },
+    {
+     "t": 2273.12,
+     "text": "administration."
+    },
+    {
+     "t": 2274.22,
+     "text": ">> But could you just, you know, answer"
+    },
+    {
+     "t": 2276.72,
+     "text": "based on the facts of the case the day"
+    },
+    {
+     "t": 2278.12,
+     "text": "prior, do you think the judge handled"
+    },
+    {
+     "t": 2280.02,
+     "text": "that correctly and, you know, granting"
+    },
+    {
+     "t": 2282.12,
+     "text": "him"
+    },
+    {
+     "t": 2283.12,
+     "text": "release without bail?"
+    },
+    {
+     "t": 2284.52,
+     "text": ">> I'll get back to you on the specifics of"
+    },
+    {
+     "t": 2285.62,
+     "text": "that."
+    },
+    {
+     "t": 2286.22,
+     "text": ">> Thanks, Hannah. We're going to go take"
+    },
+    {
+     "t": 2287.22,
+     "text": "two more. We'll go next to Morgan from"
+    },
+    {
+     "t": 2288.62,
+     "text": "Fox."
+    },
+    {
+     "t": 2298.42,
+     "text": ">> Hi, Mr. Mayor."
+    },
+    {
+     "t": 2299.12,
+     "text": ">> Hi, Morgan. How's it going?"
+    },
+    {
+     "t": 2299.92,
+     "text": ">> I'm good. I hope you get better. That's"
+    },
+    {
+     "t": 2301.92,
+     "text": "tough to go through surgery."
+    },
+    {
+     "t": 2303.82,
+     "text": "So first, there's the State Attorney"
+    },
+    {
+     "t": 2306.82,
+     "text": "General just announced that she is suing"
+    },
+    {
+     "t": 2309.92,
+     "text": "the federal government over a assisted"
+    },
+    {
+     "t": 2312.72,
+     "text": "housing"
+    },
+    {
+     "t": 2314.32,
+     "text": "or a new rule with HUD that prohibits"
+    },
+    {
+     "t": 2318.12,
+     "text": "assisted housing only if every member is"
+    },
+    {
+     "t": 2320.02,
+     "text": "a US citizen or an eligible immigrant."
+    },
+    {
+     "t": 2321.82,
+     "text": "Just hoping you can react to State"
+    },
+    {
+     "t": 2323.12,
+     "text": "Attorney General James filing this"
+    },
+    {
+     "t": 2324.62,
+     "text": "lawsuit today. And then secondly, um"
+    },
+    {
+     "t": 2328.02,
+     "text": "there's supposed to be 40 to 50 mile per"
+    },
+    {
+     "t": 2330.02,
+     "text": "hour winds uh at the Thanksgiving Day"
+    },
+    {
+     "t": 2332.12,
+     "text": "parade and they're only supposed to be"
+    },
+    {
+     "t": 2334.42,
+     "text": "34 miles per hour in order to fly the"
+    },
+    {
+     "t": 2336.12,
+     "text": "balloons. So just wondering if you guys"
+    },
+    {
+     "t": 2338.32,
+     "text": "have your eyes on that and who makes"
+    },
+    {
+     "t": 2339.52,
+     "text": "that final call if the wind is too high."
+    },
+    {
+     "t": 2342.62,
+     "text": "Thank you."
+    },
+    {
+     "t": 2343.22,
+     "text": ">> We most definitely have have our eyes on"
+    },
+    {
+     "t": 2345.32,
+     "text": "that. This is a cherished tradition in"
+    },
+    {
+     "t": 2347.62,
+     "text": "our city and I know it's one that"
+    },
+    {
+     "t": 2349.42,
+     "text": "Americans across the country look"
+    },
+    {
+     "t": 2350.52,
+     "text": "forward to. Uh so as we have any updates"
+    },
+    {
+     "t": 2352.62,
+     "text": "we'll be sure to share them with you."
+    },
+    {
+     "t": 2353.92,
+     "text": "And on on your first question I would"
+    },
+    {
+     "t": 2356.32,
+     "text": "generally say that we are so thankful to"
+    },
+    {
+     "t": 2358.02,
+     "text": "have the attorney general as our"
+    },
+    {
+     "t": 2359.32,
+     "text": "attorney general in ensuring that we're"
+    },
+    {
+     "t": 2361.12,
+     "text": "holding everyone to account, whether"
+    },
+    {
+     "t": 2362.42,
+     "text": "it's federal policy or beyond that. And"
+    },
+    {
+     "t": 2364.52,
+     "text": "so any steps that she takes in that"
+    },
+    {
+     "t": 2365.92,
+     "text": "measure, those are steps that I support."
+    },
+    {
+     "t": 2368.02,
+     "text": ">> Thank you. Last question will be Josie."
+    },
+    {
+     "t": 2372.82,
+     "text": ">> Hi, Mayor Adams."
+    },
+    {
+     "t": 2373.52,
+     "text": ">> How's it going?"
+    },
+    {
+     "t": 2374.32,
+     "text": ">> Good, thanks. Um so I actually had a"
+    },
+    {
+     "t": 2376.72,
+     "text": "transit-related question."
+    },
+    {
+     "t": 2378.22,
+     "text": ">> Please."
+    },
+    {
+     "t": 2378.92,
+     "text": ">> Um"
+    },
+    {
+     "t": 2379.62,
+     "text": "I know your DOT commissioner said"
+    },
+    {
+     "t": 2381.72,
+     "text": "something in his remarks about um"
+    },
+    {
+     "t": 2385.52,
+     "text": "fast buses. I'm wondering if the free"
+    },
+    {
+     "t": 2388.12,
+     "text": "part is still a big part of your agenda,"
+    },
+    {
+     "t": 2389.92,
+     "text": "especially going into a new session in"
+    },
+    {
+     "t": 2392.22,
+     "text": "Albany. And then I'm also wondering if"
+    },
+    {
+     "t": 2394.12,
+     "text": "there's any updates on the Delivery"
+    },
+    {
+     "t": 2395.52,
+     "text": "Protection Act."
+    },
+    {
+     "t": 2397.22,
+     "text": ">> Yes. So I think um when it comes to the"
+    },
+    {
+     "t": 2399.32,
+     "text": "Delivery Protection Act, what we are"
+    },
+    {
+     "t": 2401.12,
+     "text": "speaking about is common sense safety"
+    },
+    {
+     "t": 2403.82,
+     "text": "legislation that addresses the fact that"
+    },
+    {
+     "t": 2405.92,
+     "text": "we've seen a 78% increase in"
+    },
+    {
+     "t": 2408.72,
+     "text": "injury-causing car crashes and 146%"
+    },
+    {
+     "t": 2411.82,
+     "text": "increase in truck-related crashes within"
+    },
+    {
+     "t": 2414.62,
+     "text": "a half mile of Amazon's last mile"
+    },
+    {
+     "t": 2417.32,
+     "text": "facilities. And at the same time,"
+    },
+    {
+     "t": 2419.32,
+     "text": "there's also a worker crisis at these"
+    },
+    {
+     "t": 2422.22,
+     "text": "facilities, a worker safety crisis"
+    },
+    {
+     "t": 2423.82,
+     "text": "specifically."
+    },
+    {
+     "t": 2425.02,
+     "text": "Injury rates for workers at last mile"
+    },
+    {
+     "t": 2426.72,
+     "text": "facilities are more than three times the"
+    },
+    {
+     "t": 2428.22,
+     "text": "national average. And when it comes to"
+    },
+    {
+     "t": 2430.52,
+     "text": "Amazon, we have seen that with their"
+    },
+    {
+     "t": 2432.52,
+     "text": "delivery service partners in particular,"
+    },
+    {
+     "t": 2434.32,
+     "text": "they had a severe injury rate, which"
+    },
+    {
+     "t": 2436.12,
+     "text": "means that it is more than five times"
+    },
+    {
+     "t": 2438.62,
+     "text": "the national average. What this"
+    },
+    {
+     "t": 2440.82,
+     "text": "legislation would do would be to put in"
+    },
+    {
+     "t": 2442.82,
+     "text": "place some basic guard rails to regulate"
+    },
+    {
+     "t": 2445.82,
+     "text": "what is an expanding last mile industry"
+    },
+    {
+     "t": 2448.32,
+     "text": "that would then keep local residents and"
+    },
+    {
+     "t": 2450.42,
+     "text": "workers safe. And to see that the"
+    },
+    {
+     "t": 2452.12,
+     "text": "response to all of this from Jeff Bezos,"
+    },
+    {
+     "t": 2455.32,
+     "text": "a man worth more than 376 billion"
+    },
+    {
+     "t": 2457.92,
+     "text": "dollars, is threatening to raise prices"
+    },
+    {
+     "t": 2460.22,
+     "text": "on New Yorkers ordering paper towels or"
+    },
+    {
+     "t": 2462.62,
+     "text": "multivitamins for their children during"
+    },
+    {
+     "t": 2464.42,
+     "text": "a cost of living crisis, it is"
+    },
+    {
+     "t": 2466.32,
+     "text": "disappointing to say the least. Uh and"
+    },
+    {
+     "t": 2468.52,
+     "text": "then in your first question, uh I ran on"
+    },
+    {
+     "t": 2471.62,
+     "text": "on a commitment to doing everything that"
+    },
+    {
+     "t": 2474.12,
+     "text": "I could to make our buses fast and free."
+    },
+    {
+     "t": 2476.72,
+     "text": "Those commitments continue to stand."
+    },
+    {
+     "t": 2478.62,
+     "text": "We're doing everything in our power to"
+    },
+    {
+     "t": 2480.02,
+     "text": "make them fast and we will continue to"
+    },
+    {
+     "t": 2481.82,
+     "text": "endeavor to also make them free."
+    },
+    {
+     "t": 2483.32,
+     "text": ">> Thank you all. That's all the time we"
+    },
+    {
+     "t": 2484.32,
+     "text": "have."
+    },
+    {
+     "t": 2484.82,
+     "text": ">> Thank you everyone."
+    },
+    {
+     "t": 2486.92,
+     "text": ">> Yeah, city by city by"
+    }
+   ]
   },
   {
    "link": "/mayors-office/news/2026/11/mayor-mamdani-and-lyft-cap-citi-bike-member-e-bike-fares-at--3-6.html",
@@ -13892,7 +18902,7 @@
    "has_mayor_quotes": false,
    "youtube_url": "https://www.youtube.com/watch?v=VHZy0ob2-TA",
    "youtube_video_id": "VHZy0ob2-TA",
-   "youtube_duration": 0
+   "youtube_duration": 1180
   },
   {
    "link": "/site/dsny/news/26-046/no-trash-composting-recycling-collection-thanksgiving-day-thursday-november-26-2026",
@@ -14571,7 +19581,7 @@
    "has_mayor_quotes": false,
    "youtube_url": "https://www.youtube.com/watch?v=5eZrg-FCYQg",
    "youtube_video_id": "5eZrg-FCYQg",
-   "youtube_duration": 0
+   "youtube_duration": 1676
   },
   {
    "link": "/youtube/pvWPODwmU7g",
@@ -16818,7 +21828,7 @@
    "has_mayor_quotes": false,
    "youtube_url": "https://www.youtube.com/watch?v=touohB4ScR0",
    "youtube_video_id": "touohB4ScR0",
-   "youtube_duration": 0
+   "youtube_duration": 1245
   },
   {
    "link": "/mayors-office/news/2026/11/transcript--mayor-mamdani-joins-governor-hochul-to-make-housing-.html",
@@ -29483,7 +34493,7 @@
    "has_mayor_quotes": false,
    "youtube_url": "https://www.youtube.com/watch?v=RRFY44pFZdg",
    "youtube_video_id": "RRFY44pFZdg",
-   "youtube_duration": 0
+   "youtube_duration": 3440
   },
   {
    "link": "/site/dca/news/078-26/dcwp-on-intro-891---prohibiting-surveillance-pricing",
@@ -29905,7 +34915,7 @@
    "has_mayor_quotes": false,
    "youtube_url": "https://www.youtube.com/watch?v=KWrEIMh4MCg",
    "youtube_video_id": "KWrEIMh4MCg",
-   "youtube_duration": 0
+   "youtube_duration": 2930
   },
   {
    "link": "/site/dcas/news/035-26/mayor-mamdani-breaks-ground-184-million-rebirth-chinatown-s-historic-70-mulberry-street",
@@ -505186,7 +510196,10 @@
    "mayor_quotes": [],
    "has_mayor_quotes": false,
    "word_count": 10371,
-   "mayor_word_count": 5169
+   "mayor_word_count": 5169,
+   "youtube_url": "https://www.youtube.com/watch?v=iazY_UDQdck",
+   "youtube_video_id": "iazY_UDQdck",
+   "youtube_duration": 6075
   },
   {
    "link": "/youtube/CZc8ONfUuMg",
@@ -508476,9 +513489,9 @@
   }
  ],
  "youtube_coverage": {
-  "channel_videos": 320,
-  "covered": 309,
-  "listing_degraded": true,
+  "channel_videos": 322,
+  "covered": 311,
+  "listing_degraded": false,
   "unaccounted": [
    {
     "id": "m6mYJBaDQLw",
@@ -508536,12 +513549,11 @@
     "date": "20260218"
    }
   ],
-  "last_ingest": "2026-11-24",
-  "captions_enabled": false,
-  "rate_limited": false,
-  "listed_this_run": 15
+  "last_ingest": "2026-11-27",
+  "captions_enabled": true,
+  "rate_limited": false
  },
- "youtube_last_run": "2026-11-27T02:34:56Z",
+ "youtube_last_run": "2026-11-27T13:41:45Z",
  "external_last_run": "2026-11-27T02:29:42Z",
  "agencies_last_run": "2026-11-25T20:26:45Z"
 }
